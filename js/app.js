@@ -132,17 +132,17 @@ const HeroSection = `
                         <div style="display: flex; gap: 10px; margin-bottom: 20px;">
                             <!-- Google Button -->
                             <button style="flex: 1; display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid #dadce0; border-radius: 8px; padding: 10px; cursor: pointer; transition: background 0.2s;" onclick="showToast('Google Sign-In simulated');" title="Continue with Google">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" style="width: 20px; height: 20px;">
+                                <img src="images/google-logo.svg" alt="Google" style="width: 20px; height: 20px;">
                             </button>
 
                             <!-- Microsoft Button -->
                             <button style="flex: 1; display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid #dadce0; border-radius: 8px; padding: 10px; cursor: pointer; transition: background 0.2s;" onclick="showToast('Microsoft Sign-In simulated');" title="Continue with Microsoft">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" style="width: 20px; height: 20px;">
+                                <img src="images/microsoft-logo.svg" alt="Microsoft" style="width: 20px; height: 20px;">
                             </button>
 
                             <!-- Apple Button -->
                             <button style="flex: 1; display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid #dadce0; border-radius: 8px; padding: 10px; cursor: pointer; transition: background 0.2s;" onclick="showToast('Apple Sign-In simulated');" title="Continue with Apple">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" style="width: 20px; height: 20px;">
+                                <img src="images/apple-logo.svg" alt="Apple" style="width: 20px; height: 20px;">
                             </button>
                         </div>
 
