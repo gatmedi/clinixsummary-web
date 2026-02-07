@@ -37,17 +37,19 @@ function updateDisplay(slider) {
 
     if (displayElement) {
         let value = parseInt(slider.value);
+        const loc = (typeof I18n !== 'undefined' && I18n.locale) || 'en';
         if (slider.id === 'annual-salary') {
-            displayElement.textContent = new Intl.NumberFormat('en-US', {
+            displayElement.textContent = new Intl.NumberFormat(loc, {
                 style: 'currency',
                 currency: 'USD',
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0
             }).format(value);
         } else if (slider.id === 'work-days') {
-            displayElement.textContent = `${value} Days`;
+            displayElement.textContent = `${value} ${t('calculator.days_unit', 'Days')}`;
         } else if (slider.id === 'num-clinicians') {
-            displayElement.textContent = `${value} Clinician${value > 1 ? 's' : ''}`;
+            const label = value > 1 ? t('calculator.clinician_plural', 'Clinicians') : t('calculator.clinician_singular', 'Clinician');
+            displayElement.textContent = `${value} ${label}`;
         }
     }
 }
@@ -84,17 +86,19 @@ function calculateSavings() {
     const totalAnnualMonetarySavings = individualAnnualMonetarySavings * numClinicians;
     const totalWorkDaysRegained = Math.round(totalAnnualHoursSaved / 8);
 
+    const loc = (typeof I18n !== 'undefined' && I18n.locale) || 'en';
     const formattedHours = totalAnnualHoursSaved.toFixed(0);
-    const formattedMonetarySavings = new Intl.NumberFormat('en-US', {
+    const formattedMonetarySavings = new Intl.NumberFormat(loc, {
         style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0
     }).format(totalAnnualMonetarySavings);
 
-    annualHoursElement.textContent = `${formattedHours} hrs`;
+    annualHoursElement.textContent = `${formattedHours} ${t('calculator.hours_unit', 'hrs')}`;
     monetarySavingsElement.textContent = formattedMonetarySavings;
 
     const hoursSubtext = annualHoursElement.nextElementSibling;
     if (hoursSubtext) {
-         hoursSubtext.textContent = `Equivalent to ${totalWorkDaysRegained} extra workdays regained across the team.`;
+         const subtextTemplate = t('calculator.workdays_subtext', 'Equivalent to {0} extra workdays regained across the team.');
+         hoursSubtext.textContent = subtextTemplate.replace('{0}', totalWorkDaysRegained);
     }
 
     updateDisplay(salaryInput);
@@ -453,9 +457,9 @@ function CliniciansPage() {
                         <h3 data-i18n="clinicians.relationship_title">Patient Relationship Restoration</h3>
                         <p data-i18n="clinicians.relationship_desc">Stop the documentation drain and restore true eye contact and engagement with your patients. With ambient AI, the computer fades into the background, and the therapeutic relationship comes to the foreground.</p>
                         <ul style="margin-top: 15px; font-size: 14px; color: var(--text-secondary);">
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">visibility</span> <span data-i18n="clinicians.relationship_b1">Zero screen time during the encounter.</span></li>
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">schedule</span> <span data-i18n="clinicians.relationship_b2">Reclaim 2+ hours per day for yourself or for clinical work.</span></li>
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">family_restroom</span> <span data-i18n="clinicians.relationship_b3">Reduce risk of burnout and enhance work-life balance.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">visibility</span> <span data-i18n="clinicians.relationship_b1">Zero screen time during the encounter.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">schedule</span> <span data-i18n="clinicians.relationship_b2">Reclaim 2+ hours per day for yourself or for clinical work.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">family_restroom</span> <span data-i18n="clinicians.relationship_b3">Reduce risk of burnout and enhance work-life balance.</span></li>
                         </ul>
                     </div>
                     <div class="text-group" style="border-bottom: none;">
@@ -463,9 +467,9 @@ function CliniciansPage() {
                         <h3 data-i18n="clinicians.revenue_title">Revenue Cycle Perfection</h3>
                         <p data-i18n="clinicians.revenue_desc">For solo practice, every dollar counts. Our AI is tuned to automatically suggest the most accurate and highest-fidelity ICD-10 and CPT codes based on the clinical narrative, reducing under-coding and claim denials.</p>
                         <ul style="margin-top: 15px; font-size: 14px; color: var(--text-secondary);">
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">attach_money</span> <span data-i18n="clinicians.revenue_b1">Maximize reimbursement accuracy.</span></li>
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">description</span> <span data-i18n="clinicians.revenue_b2">Instant, error-free claims submissions.</span></li>
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">shield</span> <span data-i18n="clinicians.revenue_b3">Audit-proof notes ready for any review.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">attach_money</span> <span data-i18n="clinicians.revenue_b1">Maximize reimbursement accuracy.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">description</span> <span data-i18n="clinicians.revenue_b2">Instant, error-free claims submissions.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">shield</span> <span data-i18n="clinicians.revenue_b3">Audit-proof notes ready for any review.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -524,9 +528,9 @@ function InsurersPage() {
                         <h3 data-i18n="insurers.doc_title">Meticulous Documentation for Audit Readiness</h3>
                         <p data-i18n="insurers.doc_desc">Our AI platform guarantees every record adheres to the highest level of clinical and regulatory rigor (ICD-10/CPT guidelines, medical necessity). This meticulousness directly translates into reduced ambiguity during claims processing.</p>
                         <ul style="margin-top: 15px; font-size: 14px; color: var(--text-secondary);">
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">fact_check</span> <span data-i18n="insurers.doc_b1">99% reduction in manual data entry errors.</span></li>
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">gavel</span> <span data-i18n="insurers.doc_b2">Built-in compliance engine for regulatory adherence.</span></li>
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">lock_reset</span> <span data-i18n="insurers.doc_b3">Enhanced audit trails for payor integrity programs.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">fact_check</span> <span data-i18n="insurers.doc_b1">99% reduction in manual data entry errors.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">gavel</span> <span data-i18n="insurers.doc_b2">Built-in compliance engine for regulatory adherence.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">lock_reset</span> <span data-i18n="insurers.doc_b3">Enhanced audit trails for payor integrity programs.</span></li>
                         </ul>
                     </div>
                     <div class="text-group" style="border-bottom: none;">
@@ -534,9 +538,9 @@ function InsurersPage() {
                         <h3 data-i18n="insurers.util_title">Utilization Management & Cost Reduction</h3>
                         <p data-i18n="insurers.util_desc">We streamline the information flow needed for Utilization Review and claims adjudication. Clear, structured SOAP notes allow for automated checks against medical policy criteria, cutting turnaround times and reducing administrative overhead.</p>
                         <ul style="margin-top: 15px; font-size: 14px; color: var(--text-secondary);">
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">payments</span> <span data-i18n="insurers.util_b1">15% faster claims processing.</span></li>
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">analytics</span> <span data-i18n="insurers.util_b2">Better insights into provider practice patterns.</span></li>
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">handshake</span> <span data-i18n="insurers.util_b3">Improved provider network satisfaction due to fewer queries.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">payments</span> <span data-i18n="insurers.util_b1">15% faster claims processing.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">analytics</span> <span data-i18n="insurers.util_b2">Better insights into provider practice patterns.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">handshake</span> <span data-i18n="insurers.util_b3">Improved provider network satisfaction due to fewer queries.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -661,9 +665,9 @@ function OrganizationsPage() {
                         <h3 data-i18n="orgs.tech_title">Technology: Ambient, dictation & inference in one platform</h3>
                         <p data-i18n="orgs.tech_desc">ClinixSummary combines ambient capture, quick dictation and advanced inference to fit every workflow. Our AI infers clinical meaning from natural conversations \u2013 deducing context without fabricating facts. Whether you need to document visits in real time or summarise notes afterwards, it adapts to you.</p>
                         <ul style="margin-top: 15px; font-size: 14px; color: var(--text-secondary);">
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">mic</span> <span data-i18n="orgs.ambient_b">**Ambient capture:** Hands\u2011free documentation without interrupting the patient encounter.</span></li>
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">keyboard_voice</span> <span data-i18n="orgs.dictation_b">**Rapid dictation:** Narrate your assessment and plan; our models will structure and code it.</span></li>
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">emoji_objects</span> <span data-i18n="orgs.inference_b">**Inference engine:** Models infer context from captured facts and clinician feedback \u2013 never fabricating information.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">mic</span> <span data-i18n="orgs.ambient_b">**Ambient capture:** Hands\u2011free documentation without interrupting the patient encounter.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">keyboard_voice</span> <span data-i18n="orgs.dictation_b">**Rapid dictation:** Narrate your assessment and plan; our models will structure and code it.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">emoji_objects</span> <span data-i18n="orgs.inference_b">**Inference engine:** Models infer context from captured facts and clinician feedback \u2013 never fabricating information.</span></li>
                         </ul>
                     </div>
                     <div class="text-group" style="border-bottom: none;">
@@ -671,9 +675,9 @@ function OrganizationsPage() {
                         <h3 data-i18n="orgs.results_title">Proven results: Quantified impact at scale</h3>
                         <p data-i18n="orgs.results_desc">Research and real-world deployments show that ambient AI scribes dramatically improve operations for healthcare organisations.</p>
                         <ul style="margin-top: 15px; font-size: 14px; color: var(--text-secondary);">
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">schedule</span> <span data-i18n="orgs.time_b">**2+ hours saved** per clinician.</span></li>
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">sentiment_satisfied</span> <span data-i18n="orgs.satisfaction_b">**Higher satisfaction scores** (Positive effect on patient interactions).</span></li>
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">payments</span> <span data-i18n="orgs.reimbursement_b">**Reduced denials** & faster reimbursement.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">schedule</span> <span data-i18n="orgs.time_b">**2+ hours saved** per clinician.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">sentiment_satisfied</span> <span data-i18n="orgs.satisfaction_b">**Higher satisfaction scores** (Positive effect on patient interactions).</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">payments</span> <span data-i18n="orgs.reimbursement_b">**Reduced denials** & faster reimbursement.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -756,7 +760,7 @@ function PublicationsPage() {
                     <div style="background: var(--bg-subtle); padding: 30px; border-radius: 12px; margin-top: 30px;">
                         <h4 style="font-weight: 700; font-size: 18px; margin-bottom: 15px;">Want to dig deeper into the research?</h4>
                         <p style="color: var(--text-secondary); margin-bottom: 20px;">We\u2019re happy to share full papers, aggregate metrics and connect you with researchers studying ambient AI scribes.</p>
-                    <div class="nav-actions" style="justify-content: flex-start; margin-left: 0;">
+                    <div class="nav-actions" style="justify-content: flex-start; margin-inline-start: 0;">
                         <a href="#" class="btn-primary" onclick="showToast('Publications requested.'); return false;">Request publications</a>
                         <a href="#contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
                     </div>
@@ -807,7 +811,7 @@ function NewsPage() {
                 <div style="background: var(--bg-subtle); padding: 30px; border-radius: 12px; margin-top: 60px; border: 1px solid var(--border-subtle);">
                     <h4 style="font-weight: 700; font-size: 18px; margin-bottom: 15px;" data-i18n="news.story_title">Want to share your story?</h4>
                     <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="news.story_desc">If you\u2019ve used ClinixSummary to transform your practice, we\u2019d love to highlight your success. Get in touch with our marketing team to be featured.</p>
-                    <div class="nav-actions" style="justify-content: flex-start; margin-left: 0;">
+                    <div class="nav-actions" style="justify-content: flex-start; margin-inline-start: 0;">
                         <a href="#" class="btn-primary" onclick="showToast('Story submission form activated.'); return false;" data-i18n="news.story_submit">Submit a story</a>
                         <a href="#contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
                     </div>
@@ -863,7 +867,7 @@ function BlogPage() {
                 <div style="background: var(--bg-subtle); padding: 30px; border-radius: 12px; margin-top: 60px; border: 1px solid var(--border-subtle);">
                     <h4 style="font-weight: 700; font-size: 18px; margin-bottom: 15px;">Join the conversation</h4>
                     <p style="color: var(--text-secondary); margin-bottom: 20px;">We welcome guest posts from clinicians, administrators and technologists. Share your insights and help shape the future of documentation.</p>
-                    <div class="nav-actions" style="justify-content: flex-start; margin-left: 0;">
+                    <div class="nav-actions" style="justify-content: flex-start; margin-inline-start: 0;">
                         <a href="#" class="btn-primary" onclick="showToast('Pitching post ideas.'); return false;">Pitch a post</a>
                         <a href="#contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
                     </div>
@@ -895,9 +899,9 @@ function StoryPage() {
                         <h3 data-i18n="story.different_title">What Makes Us Different: Clinician\u2011led, technology\u2011driven</h3>
                         <p data-i18n="story.different_desc">Unlike generic dictation software, ClinixSummary is built by clinicians for clinicians. Every decision we make is anchored in the realities of practice \u2013 from the need to code\u2011switch between languages, to the pressures of reimbursement, to the importance of seeing your patient, not your screen.</p>
                         <ul style="list-style: none; margin-top: 15px;">
-                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;"><span class="material-symbols-rounded" style="font-size: 18px; margin-right: 8px; color: var(--accent);">diversity_2</span> <span data-i18n="story.bullet1">**All clinicians welcome:** Doctors, dentists, therapists, midwives, vets \u2013 our models are tuned for your specialty.</span></li>
-                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;"><span class="material-symbols-rounded" style="font-size: 18px; margin-right: 8px; color: var(--accent);">change_circle</span> <span data-i18n="story.bullet2">**Kaizen mindset:** We ship improvements continuously, guided by your feedback. Good enough is never enough.</span></li>
-                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;"><span class="material-symbols-rounded" style="font-size: 18px; margin-right: 8px; color: var(--accent);">public</span> <span data-i18n="story.bullet3">**Global by design:** Our platform supports multiple languages, jurisdictional privacy laws and healthcare systems.</span></li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;"><span class="material-symbols-rounded" style="font-size: 18px; margin-inline-end: 8px; color: var(--accent);">diversity_2</span> <span data-i18n="story.bullet1">**All clinicians welcome:** Doctors, dentists, therapists, midwives, vets \u2013 our models are tuned for your specialty.</span></li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;"><span class="material-symbols-rounded" style="font-size: 18px; margin-inline-end: 8px; color: var(--accent);">change_circle</span> <span data-i18n="story.bullet2">**Kaizen mindset:** We ship improvements continuously, guided by your feedback. Good enough is never enough.</span></li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;"><span class="material-symbols-rounded" style="font-size: 18px; margin-inline-end: 8px; color: var(--accent);">public</span> <span data-i18n="story.bullet3">**Global by design:** Our platform supports multiple languages, jurisdictional privacy laws and healthcare systems.</span></li>
                         </ul>
                     </div>
                 </div>
