@@ -114,8 +114,6 @@ const I18n = (() => {
      * Call this after every router page render.
      */
     function translatePage() {
-        if (_locale === 'en') return; // English is already in the source HTML
-
         // textContent
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
