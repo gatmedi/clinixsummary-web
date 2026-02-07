@@ -1,0 +1,8 @@
+{
+  "en": { "label": "English",    "native": "English",    "dir": "ltr" },
+  "fr": { "label": "French",     "native": "Fran\u00e7ais",  "dir": "ltr" },
+  "es": { "label": "Spanish",    "native": "Espa\u00f1ol",   "dir": "ltr" },
+  "pt": { "label": "Portuguese", "native": "Portugu\u00eas", "dir": "ltr" },
+  "it": { "label": "Italian",    "native": "Italiano",  "dir": "ltr" },
+  "ar": { "label": "Arabic",     "native": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629", "dir": "rtl" }
+}
