@@ -79,10 +79,11 @@ a {
 .navbar-content {
     width: 100%;
     max-width: var(--page-width);
-    padding: 0 24px; /* Matches the page-width padding */
+    padding: 0 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 main {
@@ -126,6 +127,7 @@ main {
     display: flex;
     align-items: center;
     border-radius: 6px;
+    white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -220,14 +222,16 @@ main {
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-left: 16px; 
+    margin-left: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-right-group {
-    /* Adjusted for full-width navbar */
     display: flex;
     align-items: center;
     margin-left: auto;
+    min-width: 0;
 }
 
 .btn-text {
@@ -246,6 +250,7 @@ main {
     transition: background 0.2s;
     border: none;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .btn-primary:hover {
@@ -262,6 +267,7 @@ main {
     font-weight: 500;
     transition: all 0.2s;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .btn-outline:hover {
@@ -467,6 +473,7 @@ section {
     margin-top: 32px;
     padding-top: 24px;
     border-top: 1px solid var(--border-subtle);
+    flex-wrap: wrap;
 }
 
 .stat-item {
@@ -484,6 +491,7 @@ section {
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
 }
 
 /* Hero Image Styling */
@@ -1129,12 +1137,57 @@ footer {
     margin-right: 8px;
 }
 
+/* RTL block alignment: push max-width blocks to the right */
+[dir="rtl"] .section-header {
+    margin-left: auto;
+}
+
+[dir="rtl"] .section-copy {
+    margin-left: auto;
+}
+
+[dir="rtl"] .subpage-header {
+    margin-left: auto;
+    text-align: right;
+}
+
+[dir="rtl"] .hero-subtitle {
+    margin-left: auto;
+}
+
+/* Arabic: neutralize letter-spacing that breaks cursive joins */
+[dir="rtl"] .kicker {
+    letter-spacing: 0;
+}
+
+[dir="rtl"] .stat-label {
+    letter-spacing: 0;
+}
+
+[dir="rtl"] .result-label {
+    letter-spacing: 0;
+}
+
+[dir="rtl"] .beta-tag {
+    letter-spacing: 0;
+}
+
+[dir="rtl"] .lang-code {
+    letter-spacing: 0;
+}
+
+/* RTL: plan features and i18n banner */
 [dir="rtl"] .plan-features li {
     flex-direction: row-reverse;
 }
 
 [dir="rtl"] .i18n-banner {
     flex-direction: row-reverse;
+}
+
+/* RTL: text-group bullet items with inline icons */
+[dir="rtl"] .text-group ul li {
+    direction: rtl;
 }
 
 @media (max-width: 600px) {

@@ -151,7 +151,7 @@ const I18n = (() => {
         banner.id = 'i18n-english-banner';
         banner.className = 'i18n-banner';
         banner.innerHTML = `
-            <span class="material-symbols-rounded" style="font-size:18px;vertical-align:middle;margin-right:6px;">translate</span>
+            <span class="material-symbols-rounded" style="font-size:18px;vertical-align:middle;margin-inline-end:6px;">translate</span>
             ${t('banner.english_only')}
         `;
         const appContent = document.getElementById('app-content');
