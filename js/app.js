@@ -114,29 +114,9 @@ const HeroSection = `
                     <p class="hero-subtitle" data-i18n="hero.description">ClinixSummary turns every consultation into structured, billing\u2011ready documentation \u2013 in seconds \u2013 so you can reclaim your time for patients, not paperwork.</p>
 
                     <div style="margin-top: 32px; max-width: 400px; background: #fff; padding: 32px; border-radius: 16px; border: 1px solid var(--border-subtle); box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
-                        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-                            <button style="flex: 1; display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid #dadce0; border-radius: 8px; padding: 10px; cursor: pointer; transition: background 0.2s;" onclick="showToast('Google Sign-In simulated');" title="Continue with Google">
-                                <img src="images/google-logo.svg" alt="Google" style="width: 20px; height: 20px;">
-                            </button>
-                            <button style="flex: 1; display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid #dadce0; border-radius: 8px; padding: 10px; cursor: pointer; transition: background 0.2s;" onclick="showToast('Microsoft Sign-In simulated');" title="Continue with Microsoft">
-                                <img src="images/microsoft-logo.svg" alt="Microsoft" style="width: 20px; height: 20px;">
-                            </button>
-                            <button style="flex: 1; display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid #dadce0; border-radius: 8px; padding: 10px; cursor: pointer; transition: background 0.2s;" onclick="showToast('Apple Sign-In simulated');" title="Continue with Apple">
-                                <img src="images/apple-logo.svg" alt="Apple" style="width: 20px; height: 20px;">
-                            </button>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-                            <div style="flex: 1; height: 1px; background: #e0e0e0;"></div>
-                            <span style="font-size: 12px; color: #757575;" data-i18n="hero.or">or</span>
-                            <div style="flex: 1; height: 1px; background: #e0e0e0;"></div>
-                        </div>
-                        <div style="margin-bottom: 16px;">
-                            <input type="email" placeholder="Enter your email address" data-i18n-placeholder="hero.email_placeholder" style="width: 100%; padding: 12px 16px; border: 1px solid #dadce0; border-radius: 8px; font-size: 14px; outline: none; transition: border 0.2s;">
-                        </div>
-                        <button class="btn-primary" style="width: 100%; justify-content: center; border-radius: 8px; font-weight: 600; padding: 12px;" onclick="showToast('Email flow simulated'); return false;" data-i18n="hero.continue">Continue</button>
-                        <div style="text-align: center; margin-top: 16px; font-size: 12px; color: var(--text-secondary);">
-                            <span data-i18n="hero.privacy">By continuing, you acknowledge clinixSummary</span> <a href="#" style="color: var(--accent); font-weight: 500;" data-i18n="hero.privacy_link">Privacy Policy</a>.
-                        </div>
+                        <h3 style="font-family: var(--font-serif); font-size: 20px; margin-bottom: 12px;" data-i18n="hero.try_title">Try it now</h3>
+                        <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.5;" data-i18n="hero.try_desc">No sign-up required. Open the console and experience ClinixSummary with a free trial \u2013 start documenting in seconds.</p>
+                        <button class="btn-primary" style="width: 100%; justify-content: center; border-radius: 8px; font-weight: 600; padding: 12px;" onclick="showToast('Opening console...'); return false;" data-i18n="hero.try_cta">Go to Console</button>
                     </div>
 
                     <div class="hero-stats">
@@ -199,8 +179,8 @@ const CapabilitiesSection = `
         <div class="page-width">
             <div class="section-header">
                 <span class="kicker" data-i18n="capabilities.kicker">Capabilities</span>
-                <h2 class="section-title" data-i18n="capabilities.title">Specialist-grade documentation.</h2>
-                <p class="section-copy" data-i18n="capabilities.description">From primary care to orthopaedics, dermatology, paediatrics and beyond \u2013 ClinixSummary captures the nuance of real\u2011world medicine while standardising the structure for downstream workflows.</p>
+                <h2 class="section-title" data-i18n="capabilities.title">The gold standard for clinical documentation.</h2>
+                <p class="section-copy" data-i18n="capabilities.description">ClinixSummary sets the gold standard for clinical documentation. From primary care to orthopaedics, dermatology, paediatrics and beyond \u2013 we capture the nuance of real\u2011world medicine while standardising the structure for continuity of care, coding, and billing.</p>
             </div>
 
             <div class="grid-3">
@@ -245,7 +225,7 @@ const OutcomesSection = `
             <div class="section-header">
                 <span class="kicker" data-i18n="outcomes.kicker">Outcomes & benefits</span>
                 <h2 class="section-title" data-i18n="outcomes.title">Instant quantifiable impact</h2>
-                <p class="section-copy" data-i18n="outcomes.description">ClinixSummary has been designed as a benchmark that improves the patient encounter, slashes documentation time and boosts reimbursement accuracy.</p>
+                <p class="section-copy" data-i18n="outcomes.description">ClinixSummary delivers gold-standard documentation that improves the patient encounter, slashes documentation time and boosts reimbursement accuracy.</p>
             </div>
 
             <div class="grid-3">
@@ -349,7 +329,7 @@ const PricingSection = `
             <div class="section-header" style="text-align: center; margin-left: auto; margin-right: auto;">
                 <span class="kicker" data-i18n="pricing.kicker">Pricing</span>
                 <h2 class="section-title" data-i18n="pricing.title">Transparent plans for every practice.</h2>
-                <p class="section-copy" style="margin-left: auto; margin-right: auto;" data-i18n="pricing.description">Choose a plan aligned with your average daily post\u2011visit dictations. All plans include access to the same core AI engine \u2013 you only pay for usage.</p>
+                <p class="section-copy" style="margin-left: auto; margin-right: auto;" data-i18n="pricing.description">Choose a plan aligned with your encounters and documentation volume. All plans include access to the same core AI engine \u2013 you only pay for usage.</p>
                 <p class="section-copy" style="font-size: 14px; margin-top: 10px; color: var(--text-secondary);" data-i18n="pricing.billing_note">Billing in USD. Flexible annual contracts available for clinics, groups and hospitals.</p>
             </div>
 
@@ -380,7 +360,7 @@ const PricingSection = `
                         <li data-i18n="pricing.pilot_f4">Standard specialty access</li>
                         <li data-i18n="pricing.pilot_f5">Community support</li>
                     </ul>
-                    <button class="btn-outline" style="width: 100%;" onclick="showToast('Starting Pilot 900 trial.'); return false;" data-i18n="pricing.pilot_cta">Start Trial</button>
+                    <button class="btn-outline" style="width: 100%;" onclick="showToast('Subscribing to Pilot 900.'); return false;" data-i18n="pricing.pilot_cta">Subscribe</button>
                 </div>
 
                 <div class="pricing-card featured" style="border-color: #4b88d3;">
@@ -409,7 +389,7 @@ const PricingSection = `
                         <li data-i18n="pricing.pioneer_f4">All specialty access</li>
                         <li data-i18n="pricing.pioneer_f5">Email support</li>
                     </ul>
-                    <button class="btn-outline" style="width: 100%;" onclick="showToast('Starting Pioneer 1800 trial.'); return false;" data-i18n="pricing.pioneer_cta">Start Trial</button>
+                    <button class="btn-outline" style="width: 100%;" onclick="showToast('Subscribing to Pioneer 1800.'); return false;" data-i18n="pricing.pioneer_cta">Subscribe</button>
                 </div>
 
                 <div class="pricing-card hidden-plan" id="prolific-plan" style="display: none;">
@@ -431,10 +411,10 @@ const PricingSection = `
                     <div class="plan-price">Custom</div>
                     <p class="plan-period" data-i18n="pricing.enterprise_desc">volume\u2011based</p>
                     <ul class="plan-features">
-                        <li data-i18n="pricing.enterprise_f1">Unlimited scripts & users</li>
+                        <li data-i18n="pricing.enterprise_f1">Custom scripts & user counts</li>
                         <li data-i18n="pricing.enterprise_f2">Ambient mode & team workflows</li>
                         <li data-i18n="pricing.enterprise_f3">Multi\u2011language at scale</li>
-                        <li data-i18n="pricing.enterprise_f4">1\u2011click EMR / EHR transfer</li>
+                        <li data-i18n="pricing.enterprise_f4">Custom integrations and rollout support</li>
                         <li data-i18n="pricing.enterprise_f5">Dedicated success manager</li>
                     </ul>
                     <a href="#contact" class="btn-primary" style="width: 100%; text-align: center; background-color: var(--accent); color: var(--text-primary);" onclick="showToast('Contacting Sales for Enterprise.');" data-i18n="pricing.enterprise_cta">Contact sales</a>
@@ -679,11 +659,11 @@ function OrganizationsPage() {
                     <div class="text-group" style="border-bottom: none;">
                         <span class="material-symbols-rounded list-item-icon">model_training</span>
                         <h3 data-i18n="orgs.tech_title">Technology: Ambient, dictation & inference in one platform</h3>
-                        <p data-i18n="orgs.tech_desc">ClinixSummary combines ambient capture, quick dictation and advanced inference to fit every workflow. Whether you need to document visits in real time or summarise notes afterwards, our AI adapts to you.</p>
+                        <p data-i18n="orgs.tech_desc">ClinixSummary combines ambient capture, quick dictation and advanced inference to fit every workflow. Our AI infers clinical meaning from natural conversations \u2013 deducing context without fabricating facts. Whether you need to document visits in real time or summarise notes afterwards, it adapts to you.</p>
                         <ul style="margin-top: 15px; font-size: 14px; color: var(--text-secondary);">
                             <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">mic</span> <span data-i18n="orgs.ambient_b">**Ambient capture:** Hands\u2011free documentation without interrupting the patient encounter.</span></li>
                             <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">keyboard_voice</span> <span data-i18n="orgs.dictation_b">**Rapid dictation:** Narrate your assessment and plan; our models will structure and code it.</span></li>
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">emoji_objects</span> <span data-i18n="orgs.inference_b">**Inference engine:** Models infer context, fill in missing details, and continuously improve via feedback.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-right: 8px; color: var(--accent);">emoji_objects</span> <span data-i18n="orgs.inference_b">**Inference engine:** Models infer context from captured facts and clinician feedback \u2013 never fabricating information.</span></li>
                         </ul>
                     </div>
                     <div class="text-group" style="border-bottom: none;">
