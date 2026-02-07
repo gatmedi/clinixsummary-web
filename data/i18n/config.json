@@ -1,0 +1,15 @@
+{
+  "defaultLocale": "en",
+  "fallbackLocale": "en",
+  "storageKey": "clinixsummary-lang",
+  "queryParam": "lang",
+  "nonTranslatedRoutes": [
+    "#publications",
+    "#security",
+    "#blog"
+  ],
+  "nonTranslatedBanner": {
+    "icon": "translate",
+    "key": "banner.english_only"
+  }
+}
