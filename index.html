@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClinixSummary – The AI Medical Scribe Foundation</title>
+    <meta name="description" content="ClinixSummary is the foundational AI architecture for clinical documentation, billing, and specialized medical assistance." />
+    <link rel="icon" type="image/png" href="images/logo-icon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="header-wrapper">
+        <header class="navbar">
+            <div class="navbar-content"> <!-- NEW CONTAINER FOR ALIGNMENT -->
+                <a href="#home" class="logo" id="home-link" style="gap: 8px;">
+                    <!-- Updated with image logo -->
+                    <img src="images/logo-wings.png" alt="ClinixSummary Logo" style="height: 32px; width: auto;"/>
+                    ClinixSummary
+                </a>
+
+                <div class="mobile-toggle material-symbols-rounded">menu</div>
+                
+                <div class="nav-right-group">
+                    <nav class="nav-menu">
+                        
+                        <!-- 1. Meet ClinixS (NOW TWO COLUMNS) -->
+                        <div class="nav-item">
+                            <div class="nav-link">Meet ClinixS <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown wide">
+                                
+                                <!-- Column 1: Core Architecture -->
+                                <div>
+                                    <div style="padding: 0 14px 8px; font-size:11px; font-weight:600; color:#999; text-transform:uppercase;">Core Architecture</div>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Meticulous Notes...'); return false;">
+                                        <span class="dropdown-title">Meticulous Notes</span>
+                                        <span class="dropdown-desc">Precise, detailed, well structured</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Proprietary Models...'); return false;">
+                                        <span class="dropdown-title">Proprietary Models</span>
+                                        <span class="dropdown-desc">Specialized medical language engines.</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Kai-zen...'); return false;">
+                                        <span class="dropdown-title">Kai-zen</span>
+                                        <span class="dropdown-desc">Continuous learning loop.</span>
+                                    </a>
+                                    <a href="#security" class="dropdown-item">
+                                        <span class="dropdown-title">Security</span>
+                                        <span class="dropdown-desc">HIPAA & GDPR Compliant.</span>
+                                    </a>
+                                </div>
+
+                                <!-- Column 2: Advanced Features & Compliance -->
+                                <div>
+                                    <div style="padding: 0 14px 8px; font-size:11px; font-weight:600; color:#999; text-transform:uppercase;">Features & Compliance</div>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Languages...'); return false;">
+                                        <span class="dropdown-title">Languages</span>
+                                        <span class="dropdown-desc">Multi-language support for global practice.</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Portfolio Builder...'); return false;">
+                                        <span class="dropdown-title">Portfolio Builder</span>
+                                        <span class="dropdown-desc">Portfolio builder for specialist registration</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Auto Ambient Dictate...'); return false;">
+                                        <span class="dropdown-title">Auto Ambient Dictate</span>
+                                        <span class="dropdown-desc">Auto detects ambient or dictation</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 2. Solutions -->
+                        <div class="nav-item">
+                            <div class="nav-link">Solutions <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown wide">
+                                <!-- Sector Column (Left) -->
+                                <div>
+                                    <div style="padding: 0 14px 8px; font-size:11px; font-weight:600; color:#999; text-transform:uppercase;">Sectors</div>
+                                    <a href="#clinicians" class="dropdown-item">
+                                        <span class="dropdown-title">For Clinicians</span>
+                                        <span class="dropdown-desc">Solo & Private Practice.</span>
+                                    </a>
+                                    <a href="#organizations" class="dropdown-item">
+                                        <span class="dropdown-title">For Organizations</span>
+                                        <span class="dropdown-desc">Hospitals & Health Systems.</span>
+                                    </a>
+                                    <a href="#insurers" class="dropdown-item">
+                                        <span class="dropdown-title">Insurers</span>
+                                        <span class="dropdown-desc">Sponsor networks for rapid adjudications</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <span class="dropdown-title">Government</span>
+                                        <span class="dropdown-desc">Public sector & federal.</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <span class="dropdown-title">Non-profit</span>
+                                        <span class="dropdown-desc">ClinixFoundation</span>
+                                    </a>
+                                </div>
+                                <!-- Use Case Column (Right) -->
+                                <div>
+                                    <div style="padding: 0 14px 8px; font-size:11px; font-weight:600; color:#999; text-transform:uppercase;">Use Cases</div>
+                                    <a href="#" class="dropdown-item">
+                                        <span class="dropdown-title">By Specialty</span>
+                                        <span class="dropdown-desc">40 + medical & allied health specialties & assist modules</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <span class="dropdown-title">Integrations</span>
+                                        <span class="dropdown-desc">1 click push to EHR & EMR</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Capabilities (UPDATED: Two column layout with 7+5 items) -->
+                        <div class="nav-item">
+                            <div class="nav-link">Capabilities <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown wide" style="min-width: 550px;">
+                                
+                                <!-- Column 1: Core Modules (7 items) -->
+                                <div>
+                                    <div style="padding: 0 14px 8px; font-size:11px; font-weight:600; color:#999; text-transform:uppercase;">Specialty & Allied Modules</div>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Medical...'); return false;">
+                                        <span class="dropdown-title">Medical</span>
+                                        <span class="dropdown-desc">All Specialities</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Dental...'); return false;">
+                                        <span class="dropdown-title">Dental</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Psychiatry...'); return false;">
+                                        <span class="dropdown-title">Psychiatry</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Psychology...'); return false;">
+                                        <span class="dropdown-title">Psychology</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Allied Health...'); return false;">
+                                        <span class="dropdown-title">Allied health</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Midwifery...'); return false;">
+                                        <span class="dropdown-title">Midwifery</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Veterinary Medicine...'); return false;">
+                                        <span class="dropdown-title">Veterinary Medicine</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Operational Notes...'); return false;">
+                                        <span class="dropdown-title">Operational Notes</span>
+                                        <span class="dropdown-desc">For surgeries and procedures</span>
+                                    </a>
+                                </div>
+                                
+                                <!-- Column 2: Workflow & Assist (5 items) -->
+                                <div>
+                                    <div style="padding: 0 14px 8px; font-size:11px; font-weight:600; color:#999; text-transform:uppercase;">Workflow & Assist Tools</div>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to CME Vault...'); return false;">
+                                        <span class="dropdown-title">CME Vault <span class="beta-tag">New</span></span>
+                                        <span class="dropdown-desc">Continous Medical Education certification</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Referrals...'); return false;">
+                                        <span class="dropdown-title">Referrals</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to ICD Coding...'); return false;">
+                                        <span class="dropdown-title">ICD Coding</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to CPD Coding...'); return false;">
+                                        <span class="dropdown-title">CPD Coding</span>
+                                    </a>
+                                    <div style="border-top: 1px solid var(--border-subtle); margin: 6px 0;"></div>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Radiology Assist...'); return false;">
+                                        <span class="dropdown-title">Radiology Assist <span class="beta-tag">Beta</span></span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Dermatology Assist...'); return false;">
+                                        <span class="dropdown-title">Dermatology Assist <span class="beta-tag">Beta</span></span>
+                                    </a>
+                                    <a href="#" class="dropdown-item" onclick="showToast('Navigating to Triage Assist...'); return false;">
+                                        <span class="dropdown-title">Triage Assist <span class="beta-tag">Beta</span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Learn (UPDATED FROM RESOURCES) -->
+                        <div class="nav-item">
+                            <div class="nav-link">Learn <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown">
+                                <a href="#publications" class="dropdown-item">
+                                    <span class="dropdown-title">Publications</span>
+                                    <span class="dropdown-desc">Peer-reviewed research.</span>
+                                </a>
+                                <a href="#" class="dropdown-item" onclick="showToast('Navigating to Whitepapers...'); return false;">
+                                    <span class="dropdown-title">Whitepapers</span>
+                                    <span class="dropdown-desc">Technical methodology.</span>
+                                </a>
+                                <a href="#" class="dropdown-item" onclick="showToast('Navigating to Case Studies...'); return false;"><span class="dropdown-title">Case Studies</span></a>
+                                <a href="#security" class="dropdown-item">
+                                    <span class="dropdown-title">Compliance</span>
+                                    <span class="dropdown-desc">Certifications & Reports.</span>
+                                </a>
+                                <div style="border-top: 1px solid var(--border-subtle); margin: 6px 0;"></div>
+                                <a href="#news" class="dropdown-item"><span class="dropdown-title">News & Events</span></a>
+                                <a href="#blog" class="dropdown-item"><span class="dropdown-title">Podcasts</span></a>
+                            </div>
+                        </div>
+                        
+                        <!-- 5. Pricing -->
+                        <div class="nav-item">
+                            <div class="nav-link">Pricing <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown">
+                                <a href="#roi-calculator" class="dropdown-item">
+                                    <span class="dropdown-title">ROI Calculator</span>
+                                    <span class="dropdown-desc">Calculate your savings.</span>
+                                </a>
+                                <div style="border-top: 1px solid var(--border-subtle); margin: 6px 0;"></div>
+                                <a href="#" class="dropdown-item" onclick="showToast('Navigating to Pilot 900...'); return false;"><span class="dropdown-title">Pilot 900</span></a>
+                                <a href="#" class="dropdown-item" onclick="showToast('Navigating to Pioneer 1800...'); return false;"><span class="dropdown-title">Pioneer 1800</span></a>
+                                <a href="#" class="dropdown-item" onclick="showToast('Navigating to Productive 3000...'); return false;"><span class="dropdown-title">Productive 3000</span></a>
+                                <a href="#" class="dropdown-item" onclick="showToast('Navigating to Prolific 6000...'); return false;"><span class="dropdown-title">Prolific 6000</span></a>
+                                <a href="#" class="dropdown-item" onclick="showToast('Navigating to Plan Enterprise...'); return false;">
+                                    <span class="dropdown-title">Plan Enterprise</span>
+                                    <span class="dropdown-desc">Custom volume licensing.</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </nav>
+
+                    <div class="nav-actions">
+                        <a href="#contact" class="btn-text" onclick="showToast('Contact sales form activated'); return false;">Contact Sales</a>
+                        <a href="#" class="btn-primary" onclick="showToast('Login simulated'); return false;">Try ClinixS</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <main id="app-content"></main>
+
+    <!-- QUALITY ASSURANCE STAMP -->
+    <div style="background: var(--bg-subtle); padding: 12px 0; font-size: 11px; text-align: center; color: var(--text-secondary); border-top: 1px solid var(--border-subtle);">
+        <div class="page-width">
+            Assured by Gacrux Quality Management System (G-QMS)
+        </div>
+    </div>
+
+    <footer>
+        <div class="page-width">
+            <div class="footer-layout">
+                
+                <div class="footer-brand-col">
+                    <div style="margin-bottom: 40px;">
+                        <a href="#home" style="color: #fff; font-size: 20px; font-weight: 500; display: flex; align-items: center; text-decoration: none; gap: 8px;">
+                            <!-- Updated with image logo (Work Version) -->
+                            <img 
+                                src="images/logo-footer.png" 
+                                alt="ClinixSummary Logo Work Version" 
+                                style="height: 32px; width: auto;"
+                            />
+                            ClinixSummary
+                        </a>
+                    </div>
+                    
+                    <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-end;">
+                        <h4 style="font-size: 14px; color: #fff; margin-bottom: 4px; letter-spacing: 0.05em;">BY GATMEDI</h4>
+                        <p style="font-size: 11px; color: rgba(255,255,255,0.5); margin-bottom: 16px;">© 2025 GATMEDI</p>
+                        <div class="social-icons">
+                            <a href="#">f</a>
+                            <a href="#">𝕏</a>
+                            <a href="#">in</a>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4>Meet ClinixS</h4>
+                        <ul>
+                            <li><a href="#">Proprietary Models</a></li>
+                            <li><a href="#">Clinix Foundation</a></li>
+                            <li><a href="#">Clinix Memory</a></li>
+                            <li><a href="#">Kai-zen</a></li>
+                            <!-- New Footer Items -->
+                            <li><a href="#">Languages</a></li>
+                            <li><a href="#">CME Vault</a></li>
+                            <li><a href="#">Portfolio Builder</a></li>
+                            <li><a href="#">Auto Ambient Dictate</a></li>
+                            <li><a href="#security">Security</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#story">Story</a></li>
+                            <li><a href="#publications">Publications</a></li>
+                            <li><a href="#">contact@clinixsummary.com</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#news">News & Events</a></li>
+                            <li><a href="#blog">Blog & Podcasts</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4>Solutions</h4>
+                        <ul>
+                            <li><a href="#clinicians">For Clinicians</a></li>
+                            <li><a href="#organizations">For Organizations</a></li>
+                            <li><a href="#insurers">Insurers</a></li>
+                            <li><a href="#">Government</a></li>
+                            <li><a href="#">Non-profit</a></li>
+                            <li><a href="#">By Specialty</a></li>
+                            <li><a href="#">Integrations</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h4>Models</h4>
+                        <ul>
+                            <li><a href="#">Medical</a></li>
+                            <li><a href="#">Dental</a></li>
+                            <li><a href="#">Psychiatry</a></li>
+                            <li><a href="#">Psychology</a></li>
+                            <li><a href="#">Occupational Therapy</a></li>
+                            <li><a href="#">Speech & Language</a></li>
+                            <li><a href="#">Physiotherapy</a></li>
+                            <li><a href="#">Midwifery</a></li>
+                            <li><a href="#">Nutritional Therapy</a></li>
+                            <li><a href="#">Veterinary Medicine</a></li>
+                            <li><a href="#">Radiology assist Beta</a></li>
+                            <li><a href="#">Dermatology assist Beta</a></li>
+                            <li><a href="#">Triage assist Beta</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4>Capabilities</h4>
+                        <ul>
+                            <li><a href="#">Medical</a></li>
+                            <li><a href="#">Dental</a></li>
+                            <li><a href="#">Psychiatry</a></li>
+                            <li><a href="#">Psychology</a></li>
+                            <li><a href="#">Allied health</a></li>
+                            <li><a href="#">Midwifery</a></li>
+                            <li><a href="#">Veterinary Medicine</a></li>
+                            <li><a href="#">Operational Notes</a></li>
+                            <li><a href="#">CME Vault</a></li>
+                            <li><a href="#">Referrals</a></li>
+                            <li><a href="#">ICD Coding</a></li>
+                            <li><a href="#">CPD Coding</a></li>
+                            <li><a href="#">Radiology Assist Beta</a></li>
+                            <li><a href="#">Dermatology Assist Beta</a></li>
+                            <li><a href="#">Triage Assist Beta</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h4>Learn</h4>
+                        <ul>
+                            <li><a href="#publications">Publications</a></li>
+                            <li><a href="#">Whitepapers</a></li>
+                            <li><a href="#">Case Studies</a></li>
+                            <li><a href="#security">Compliance</a></li>
+                            <li><a href="#news">News & Events</a></li>
+                            <li><a href="#blog">Podcasts</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4>Pricing</h4>
+                        <ul>
+                            <li><a href="#roi-calculator">ROI Calculator</a></li>
+                            <li><a href="#">Pilot 900</a></li>
+                            <li><a href="#">Pioneer 1800</a></li>
+                            <li><a href="#">Productive 3000</a></li>
+                            <li><a href="#">Prolific 6000</a></li>
+                            <li><a href="#">Plan Enterprise</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4>Terms & policies</h4>
+                        <ul>
+                            <li><a href="#">Privacy choices</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of service: enterprise</a></li>
+                            <li><a href="#">Usage Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h4>Help & security</h4>
+                        <ul>
+                            <li><a href="#">Availability</a></li>
+                            <li><a href="#">Status</a></li>
+                            <li><a href="#">Support center</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <div id="toast" class="toast"></div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
