@@ -1,0 +1,556 @@
+// --- Capability / Specialty Pages ---
+
+/**
+ * Helper: creates a standard capability subpage from a configuration object.
+ *
+ * @param {Object} config
+ * @param {string} config.kicker       - Small label above the title
+ * @param {string} config.title        - Main page heading
+ * @param {string} config.description  - Introductory paragraph
+ * @param {Array}  config.features     - [{icon, title, desc}, ...]
+ * @param {string} [config.extraContent] - Additional HTML injected after the
+ *                                         feature grid and before the CTA
+ * @returns {string} Full subpage HTML
+ */
+function createCapabilityPage(config) {
+    const featureCards = config.features
+        .map(
+            (f) => `
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">${f.icon}</div>
+                    <h3>${f.title}</h3>
+                    <p>${f.desc}</p>
+                </div>`
+        )
+        .join('');
+
+    const gridClass =
+        config.features.length <= 3 ? 'grid-3' :
+        config.features.length === 4 ? 'grid-4' : 'grid-3';
+
+    return `
+        <section class="subpage-container">
+            <div class="page-width">
+                <div class="subpage-header">
+                    <span class="kicker">${config.kicker}</span>
+                    <h2 class="subpage-title">${config.title}</h2>
+                    <p class="subpage-copy">${config.description}</p>
+                </div>
+
+                <div class="${gridClass}" style="margin-bottom: 60px;">
+                    ${featureCards}
+                </div>
+
+                ${config.extraContent || ''}
+
+                <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
+                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;">${config.ctaTitle || 'Ready to transform your documentation?'}</h2>
+                    <div class="nav-actions" style="justify-content: center;">
+                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('${config.ctaToast || 'Starting free trial...'}'); return false;">${config.ctaLabel || 'Start Free Trial'}</a>
+                        <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+// ---------------------------------------------------------------------------
+// 1. Medical Specialties
+// ---------------------------------------------------------------------------
+
+function CapMedicalPage() {
+    return createCapabilityPage({
+        kicker: 'Medical Specialties',
+        title: 'All Medical Specialties. One Platform.',
+        description:
+            'ClinixSummary supports 40+ specialties \u2014 from primary care to cardiology, neurology, orthopaedics, dermatology, paediatrics and beyond. Every module is fine\u2011tuned for the terminology, workflows and documentation standards that define your discipline.',
+        features: [
+            {
+                icon: 'tune',
+                title: 'Specialty-Tuned Models',
+                desc: 'Each specialty runs on a dedicated model layer trained on de\u2011identified clinical data specific to that discipline \u2014 ensuring the right terminology, structure and clinical nuance every time.',
+            },
+            {
+                icon: 'description',
+                title: 'Structured SOAP Notes',
+                desc: 'Automatically generate fully structured SOAP notes that match the conventions of your specialty. Subjective, Objective, Assessment and Plan sections are populated with clinically relevant detail.',
+            },
+            {
+                icon: 'medical_information',
+                title: 'ICD-10 & CPT Coding',
+                desc: 'Our AI maps clinical narratives to the most accurate ICD\u201110 and CPT codes, reducing under\u2011coding and claim denials while supporting cleaner revenue cycles.',
+            },
+            {
+                icon: 'output',
+                title: 'Multi-format Output',
+                desc: 'Export documentation as SOAP notes, referral letters, patient instructions or custom templates \u2014 formatted and ready for your EHR, fax or patient portal.',
+            },
+        ],
+        extraContent: `
+            <div class="subpage-header" style="margin-top: 20px;">
+                <span class="kicker">Breadth & Depth</span>
+                <h3 class="section-title">One engine. Dozens of specialties.</h3>
+                <p class="section-copy">Whether you practise family medicine, cardiology, gastroenterology, pulmonology, endocrinology, rheumatology, nephrology, haematology, oncology, ENT, urology, ophthalmology, emergency medicine, or any other discipline \u2014 ClinixSummary adapts to your clinical language and documentation requirements.</p>
+            </div>
+        `,
+        ctaTitle: 'Start documenting smarter across every specialty.',
+        ctaToast: 'Starting free trial for medical specialties.',
+        ctaLabel: 'Start Free Trial',
+    });
+}
+
+// ---------------------------------------------------------------------------
+// 2. Dental
+// ---------------------------------------------------------------------------
+
+function CapDentalPage() {
+    return createCapabilityPage({
+        kicker: 'Dental',
+        title: 'Dental Documentation, Reimagined.',
+        description:
+            'ClinixSummary understands dentistry. From restorative procedures and endodontics to periodontal assessments, our AI captures the clinical detail that matters \u2014 so you can focus on the patient in the chair, not the keyboard.',
+        features: [
+            {
+                icon: 'dentistry',
+                title: 'Dental Terminology Recognition',
+                desc: 'Our models are trained on dental\u2011specific vocabulary \u2014 tooth numbering systems, surface notations, materials and procedural terminology \u2014 ensuring notes are precise and profession\u2011accurate.',
+            },
+            {
+                icon: 'assignment',
+                title: 'Treatment Planning Notes',
+                desc: 'Automatically generate structured treatment plans from your clinical narrative, including phased procedures, material selections and patient\u2011facing explanations.',
+            },
+            {
+                icon: 'monitor_heart',
+                title: 'Periodontal Documentation',
+                desc: 'Capture pocket depths, bleeding indices, recession and mobility assessments in structured formats that integrate seamlessly with periodontal charting workflows.',
+            },
+            {
+                icon: 'receipt_long',
+                title: 'Insurance-Ready Codes',
+                desc: 'Map clinical narratives to CDT and insurance\u2011ready codes, reducing claim rejections and accelerating reimbursement for your dental practice.',
+            },
+        ],
+        ctaTitle: 'Modernise your dental documentation today.',
+        ctaToast: 'Starting free trial for dental.',
+        ctaLabel: 'Start Free Trial',
+    });
+}
+
+// ---------------------------------------------------------------------------
+// 3. Psychiatry
+// ---------------------------------------------------------------------------
+
+function CapPsychiatryPage() {
+    return createCapabilityPage({
+        kicker: 'Psychiatry',
+        title: 'Psychiatry Documentation That Understands Context.',
+        description:
+            'Psychiatric encounters are nuanced, longitudinal and deeply contextual. ClinixSummary\u2019s psychiatry module is designed to capture the subtlety of mental health consultations \u2014 from initial assessments to ongoing medication management \u2014 without disrupting the therapeutic alliance.',
+        features: [
+            {
+                icon: 'psychology',
+                title: 'Mental Status Exam Capture',
+                desc: 'Automatically structure MSE findings \u2014 appearance, behaviour, mood, affect, thought process, thought content, cognition and insight \u2014 from your natural clinical conversation.',
+            },
+            {
+                icon: 'timeline',
+                title: 'Longitudinal Progress Notes',
+                desc: 'Track symptom trajectories, treatment responses and functional changes across sessions with structured progress notes that build a coherent clinical picture over time.',
+            },
+            {
+                icon: 'medication',
+                title: 'Medication Management',
+                desc: 'Document medication changes, titration schedules, side\u2011effect monitoring and rationale for prescribing decisions in a clear, auditable format.',
+            },
+            {
+                icon: 'shield',
+                title: 'Risk Assessment Documentation',
+                desc: 'Capture and structure risk assessments including suicidality screens, safety planning and protective factors \u2014 ensuring thorough, defensible documentation.',
+            },
+        ],
+        ctaTitle: 'Document with the depth psychiatry demands.',
+        ctaToast: 'Starting free trial for psychiatry.',
+        ctaLabel: 'Start Free Trial',
+    });
+}
+
+// ---------------------------------------------------------------------------
+// 4. Psychology
+// ---------------------------------------------------------------------------
+
+function CapPsychologyPage() {
+    return createCapabilityPage({
+        kicker: 'Psychology',
+        title: 'Psychology Notes Built for Clinical Depth.',
+        description:
+            'Psychology documentation requires precision without sacrificing the richness of clinical observation. ClinixSummary helps psychologists produce thorough session notes, assessment reports and outcome tracking \u2014 all while preserving the confidentiality that underpins therapeutic work.',
+        features: [
+            {
+                icon: 'edit_note',
+                title: 'Session Notes',
+                desc: 'Generate structured session notes that capture presenting concerns, interventions used, client responses and session themes \u2014 without requiring you to type during the session.',
+            },
+            {
+                icon: 'assessment',
+                title: 'Assessment Documentation',
+                desc: 'Produce comprehensive psychometric and clinical assessment reports with structured findings, diagnostic impressions and evidence\u2011based recommendations.',
+            },
+            {
+                icon: 'trending_up',
+                title: 'Treatment Outcome Tracking',
+                desc: 'Track therapeutic goals, outcome measures and progress across sessions with structured data that supports clinical decision\u2011making and payer requirements.',
+            },
+            {
+                icon: 'lock',
+                title: 'Confidentiality-First Design',
+                desc: 'Built with psychotherapy\u2019s strict privacy standards in mind. Ephemeral audio processing, encrypted storage and granular access controls protect sensitive client information.',
+            },
+        ],
+        ctaTitle: 'Elevate your psychology documentation.',
+        ctaToast: 'Starting free trial for psychology.',
+        ctaLabel: 'Start Free Trial',
+    });
+}
+
+// ---------------------------------------------------------------------------
+// 5. Allied Health (detailed page \u2014 custom layout, not using helper)
+// ---------------------------------------------------------------------------
+
+function CapAlliedHealthPage() {
+    return `
+        <section class="subpage-container">
+            <div class="page-width">
+                <div class="subpage-header">
+                    <span class="kicker">Allied Health</span>
+                    <h2 class="subpage-title">Purpose-Built Documentation for Allied Health Professionals.</h2>
+                    <p class="subpage-copy">Allied health documentation is fundamentally different from physician notes \u2014 different terminology, assessment frameworks, outcome measures and regulatory expectations. ClinixSummary has dedicated modules for each allied health discipline, so your notes reflect the way you actually practise.</p>
+                </div>
+
+                <!-- Differentiator callout -->
+                <div style="background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 32px; margin-bottom: 60px;">
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent); flex-shrink: 0;">difference</span>
+                        <div>
+                            <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Why generic scribe tools fall short</h3>
+                            <p style="color: var(--text-secondary); line-height: 1.7;">Most AI scribes are designed around the physician encounter. Allied health professionals use distinct clinical reasoning models, discipline\u2011specific assessment tools and outcome measures that generic systems simply miss. ClinixSummary\u2019s allied health modules are trained on real\u2011world physiotherapy, occupational therapy and speech &amp; language therapy documentation \u2014 capturing the data points that matter to your profession.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Physiotherapy -->
+                <div class="subpage-header">
+                    <span class="kicker">Physiotherapy</span>
+                    <h3 class="section-title">Move from assessment to plan in seconds.</h3>
+                    <p class="section-copy">ClinixSummary\u2019s physiotherapy module captures ROM measurements, strength grades, functional tests and special tests from your clinical narrative, then structures them into treatment plans and progress notes that meet payer and regulatory standards.</p>
+                </div>
+
+                <div class="grid-4" style="margin-bottom: 60px;">
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">straighten</div>
+                        <h3>ROM & Strength</h3>
+                        <p>Capture range\u2011of\u2011motion measurements and manual muscle testing grades in structured, comparable formats across sessions.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">exercise</div>
+                        <h3>Functional Tests</h3>
+                        <p>Document special tests, functional outcome measures and standardised assessment scores with automatic scoring context.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">assignment</div>
+                        <h3>Treatment Plans</h3>
+                        <p>Generate goal\u2011oriented treatment plans with short\u2011term and long\u2011term objectives, modalities, frequency and expected timelines.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">trending_up</div>
+                        <h3>Progress Notes</h3>
+                        <p>Track patient progress against baseline measurements with structured progress notes that clearly demonstrate clinical change.</p>
+                    </div>
+                </div>
+
+                <!-- Occupational Therapy -->
+                <div class="subpage-header">
+                    <span class="kicker">Occupational Therapy</span>
+                    <h3 class="section-title">Document function, not just impairment.</h3>
+                    <p class="section-copy">Occupational therapy is centred on function and participation. Our OT module captures functional assessments, ADL evaluations and goal\u2011oriented planning in the language and frameworks that occupational therapists actually use.</p>
+                </div>
+
+                <div class="grid-3" style="margin-bottom: 60px;">
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">accessibility_new</div>
+                        <h3>Functional Assessments</h3>
+                        <p>Capture upper\u2011limb function, cognitive assessments, sensory evaluations and standardised OT outcome measures in structured formats.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">home_health</div>
+                        <h3>ADL Evaluations</h3>
+                        <p>Document activities of daily living performance, independence levels and assistive device requirements with consistent, measurable descriptors.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">target</div>
+                        <h3>Goal-Oriented Planning</h3>
+                        <p>Generate client\u2011centred, occupation\u2011based goals with measurable criteria, timeframes and intervention strategies aligned to OT practice frameworks.</p>
+                    </div>
+                </div>
+
+                <!-- Speech & Language Therapy -->
+                <div class="subpage-header">
+                    <span class="kicker">Speech &amp; Language Therapy</span>
+                    <h3 class="section-title">Capture every dimension of communication care.</h3>
+                    <p class="section-copy">From articulation and fluency to voice, language and swallowing disorders, ClinixSummary\u2019s SLT module recognises the full breadth of speech &amp; language therapy terminology and generates documentation that reflects your clinical expertise.</p>
+                </div>
+
+                <div class="grid-3" style="margin-bottom: 60px;">
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">record_voice_over</div>
+                        <h3>Speech Assessment</h3>
+                        <p>Document articulation inventories, phonological processes, fluency profiles and voice quality assessments in structured, standardised formats.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">spellcheck</div>
+                        <h3>SLT Terminology</h3>
+                        <p>Our models are trained on speech &amp; language therapy\u2011specific vocabulary \u2014 from CAPE\u2011V parameters to FOIS levels \u2014 so your notes use the right clinical language.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">local_dining</div>
+                        <h3>Dysphagia Documentation</h3>
+                        <p>Capture IDDSI levels, swallowing assessment findings, aspiration risk factors and diet texture recommendations with clinical precision.</p>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
+                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;">Start documenting with purpose-built allied health modules.</h2>
+                    <div class="nav-actions" style="justify-content: center;">
+                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Starting free trial for allied health.'); return false;">Start Free Trial</a>
+                        <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+// ---------------------------------------------------------------------------
+// 6. Midwifery
+// ---------------------------------------------------------------------------
+
+function CapMidwiferyPage() {
+    return createCapabilityPage({
+        kicker: 'Midwifery',
+        title: 'Midwifery Documentation for Every Stage of Care.',
+        description:
+            'Midwifery care spans the full continuum \u2014 from the first antenatal visit through labour, birth and postnatal recovery. ClinixSummary\u2019s midwifery module captures the clinical detail unique to each stage, supporting continuity of care and woman\u2011centred documentation.',
+        features: [
+            {
+                icon: 'pregnant_woman',
+                title: 'Antenatal Documentation',
+                desc: 'Capture gestational assessments, risk screening, fundal height measurements, fetal monitoring and birth planning discussions in structured, visit\u2011by\u2011visit records.',
+            },
+            {
+                icon: 'monitor_heart',
+                title: 'Intrapartum Notes',
+                desc: 'Document labour progress, partogram data, interventions, delivery details and neonatal observations in real time or immediately post\u2011delivery.',
+            },
+            {
+                icon: 'child_care',
+                title: 'Postnatal Care Records',
+                desc: 'Generate structured postnatal assessments covering maternal recovery, feeding support, neonatal checks and mental health screening.',
+            },
+            {
+                icon: 'handshake',
+                title: 'Continuity of Care',
+                desc: 'Maintain a coherent clinical narrative across the full maternity journey, ensuring that every midwife who picks up the record has the context they need.',
+            },
+        ],
+        ctaTitle: 'Simplify midwifery documentation across the care continuum.',
+        ctaToast: 'Starting free trial for midwifery.',
+        ctaLabel: 'Start Free Trial',
+    });
+}
+
+// ---------------------------------------------------------------------------
+// 7. Veterinary Medicine
+// ---------------------------------------------------------------------------
+
+function CapVetPage() {
+    return createCapabilityPage({
+        kicker: 'Veterinary Medicine',
+        title: 'Veterinary Documentation, Purpose-Built.',
+        description:
+            'Veterinary medicine demands documentation that accounts for species\u2011specific anatomy, pharmacology and clinical workflows. ClinixSummary\u2019s veterinary module is purpose\u2011built for companion animal, equine and mixed practices \u2014 so your records are as precise as your care.',
+        features: [
+            {
+                icon: 'pets',
+                title: 'Species-Specific Terminology',
+                desc: 'Our models recognise species\u2011specific anatomy, breed predispositions, dosing conventions and diagnostic terminology for canine, feline, equine and exotic patients.',
+            },
+            {
+                icon: 'vaccines',
+                title: 'Treatment & Procedure Notes',
+                desc: 'Automatically generate structured surgical reports, anaesthesia records, treatment notes and discharge summaries tailored to veterinary practice standards.',
+            },
+            {
+                icon: 'forum',
+                title: 'Client Communication',
+                desc: 'Produce client\u2011facing summaries, treatment estimates and post\u2011visit instructions in plain language \u2014 improving compliance and client satisfaction.',
+            },
+            {
+                icon: 'inventory_2',
+                title: 'Practice Management Ready',
+                desc: 'Export notes in formats compatible with major veterinary practice management systems, streamlining record\u2011keeping and billing workflows.',
+            },
+        ],
+        ctaTitle: 'Upgrade your veterinary documentation today.',
+        ctaToast: 'Starting free trial for veterinary.',
+        ctaLabel: 'Start Free Trial',
+    });
+}
+
+// ---------------------------------------------------------------------------
+// 8. Operative Notes
+// ---------------------------------------------------------------------------
+
+function CapOperativePage() {
+    return createCapabilityPage({
+        kicker: 'Operative Notes',
+        title: 'Operative & Procedural Notes. Automatically.',
+        description:
+            'Surgical documentation is time\u2011critical and detail\u2011intensive. ClinixSummary captures operative narration \u2014 whether dictated during or immediately after a procedure \u2014 and transforms it into structured operative reports that meet regulatory and billing requirements.',
+        features: [
+            {
+                icon: 'mic',
+                title: 'Surgical Narration Capture',
+                desc: 'Dictate your operative narrative naturally. Our models parse surgical terminology, anatomical references, instrument names and technique descriptions with high fidelity.',
+            },
+            {
+                icon: 'summarize',
+                title: 'Structured Operative Reports',
+                desc: 'Automatically structure findings, procedure steps, specimens, complications and post\u2011operative orders into compliant operative report formats.',
+            },
+            {
+                icon: 'draft',
+                title: 'Procedure-Specific Templates',
+                desc: 'Leverage procedure\u2011specific templates for common surgeries \u2014 from laparoscopic cholecystectomy to total joint replacement \u2014 pre\u2011populated with expected fields.',
+            },
+            {
+                icon: 'receipt_long',
+                title: 'Billing-Ready Documentation',
+                desc: 'Generate documentation that supports accurate CPT coding and medical necessity justification, reducing post\u2011operative billing delays.',
+            },
+        ],
+        extraContent: `
+            <div style="background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 32px; margin-top: 20px;">
+                <div style="display: flex; align-items: flex-start; gap: 16px;">
+                    <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent); flex-shrink: 0;">headphones</span>
+                    <div>
+                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Auto Ambient Dictate \u2014 Operative Mode</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">ClinixSummary\u2019s Auto Ambient Dictate feature includes a dedicated operative mode that automatically detects surgical narration, distinguishes it from team communication and background noise, and begins structured documentation capture without manual activation. Dictate naturally while you operate \u2014 your report is waiting when you\u2019re done.</p>
+                    </div>
+                </div>
+            </div>
+        `,
+        ctaTitle: 'Automate your operative documentation workflow.',
+        ctaToast: 'Starting free trial for operative notes.',
+        ctaLabel: 'Start Free Trial',
+    });
+}
+
+// ---------------------------------------------------------------------------
+// 9. Billing Assistance (detailed page \u2014 custom layout, not using helper)
+// ---------------------------------------------------------------------------
+
+function BillingAssistPage() {
+    return `
+        <section class="subpage-container">
+            <div class="page-width">
+                <div class="subpage-header">
+                    <span class="kicker">Billing Assistance</span>
+                    <h2 class="subpage-title">Intelligent Billing Assistance for Healthcare Organisations.</h2>
+                    <p class="subpage-copy">ClinixSummary\u2019s Billing Assistance module \u2014 available exclusively for organisation and enterprise accounts \u2014 captures the clinical activities, procedures and services performed during every encounter and maps them to your organisation\u2019s own CPT code library. The result: fewer coding errors, eliminated missed charges and faster claims submission.</p>
+                </div>
+
+                <!-- Enterprise badge -->
+                <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(59,197,214,0.1); border: 1px solid rgba(59,197,214,0.3); border-radius: 8px; padding: 10px 20px; margin-bottom: 48px;">
+                    <span class="material-symbols-rounded" style="font-size: 20px; color: var(--accent);">verified</span>
+                    <span style="font-size: 14px; font-weight: 600; color: var(--text-primary);">Organisation & Enterprise Feature</span>
+                </div>
+
+                <!-- How it works -->
+                <div class="subpage-header">
+                    <span class="kicker">How It Works</span>
+                    <h3 class="section-title">From encounter to suggested codes in seconds.</h3>
+                    <p class="section-copy">During each encounter, ClinixSummary identifies billable activities from the clinical narrative and cross\u2011references them against your organisation\u2019s CPT code library. Suggested codes are presented for clinician review \u2014 never submitted as final billing without human approval.</p>
+                </div>
+
+                <div class="grid-4" style="margin-bottom: 60px;">
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">mic</div>
+                        <h3>Capture</h3>
+                        <p>Clinical activities, procedures and services are identified in real time from the consultation narrative or post\u2011visit dictation.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">sync_alt</div>
+                        <h3>Map</h3>
+                        <p>Identified activities are mapped to your organisation\u2019s own CPT code library, respecting your internal coding policies and payer contracts.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">checklist</div>
+                        <h3>Suggest</h3>
+                        <p>A set of suggested codes is generated for the clinician or coding team to review, approve or adjust before submission.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">send</div>
+                        <h3>Submit</h3>
+                        <p>Approved codes flow into your existing billing pipeline, reducing turnaround time and improving first\u2011pass claim acceptance rates.</p>
+                    </div>
+                </div>
+
+                <!-- Key benefits -->
+                <div class="subpage-header">
+                    <span class="kicker">Key Benefits</span>
+                    <h3 class="section-title">Measurable impact on your revenue cycle.</h3>
+                </div>
+
+                <div class="grid-3" style="margin-bottom: 60px;">
+                    <div class="text-group" style="border-bottom: none;">
+                        <span class="material-symbols-rounded list-item-icon">bug_report</span>
+                        <h3>Reduce Coding Errors</h3>
+                        <p>Automated code suggestions eliminate transposition errors, incorrect modifiers and mismatched diagnosis\u2011procedure pairings that cause claim rejections.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <span class="material-symbols-rounded list-item-icon">money_off</span>
+                        <h3>Eliminate Missed Charges</h3>
+                        <p>Every billable activity captured during the encounter is surfaced for review, ensuring that no legitimate charge goes unsubmitted \u2014 a common source of revenue leakage.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <span class="material-symbols-rounded list-item-icon">speed</span>
+                        <h3>Accelerate Claims</h3>
+                        <p>Faster, more accurate code generation shortens the revenue cycle from encounter to payment, improving cash flow and reducing administrative overhead.</p>
+                    </div>
+                </div>
+
+                <!-- Important clarification -->
+                <div style="background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 32px; margin-bottom: 20px;">
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent); flex-shrink: 0;">info</span>
+                        <div>
+                            <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Suggested codes, not final submissions</h3>
+                            <p style="color: var(--text-secondary); line-height: 1.7;">Billing Assistance generates <strong>suggested codes for review</strong>. All codes require clinician or coding team approval before they become part of a billing submission. This human\u2011in\u2011the\u2011loop design ensures accuracy, compliance and accountability at every step.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
+                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;">Learn more about Billing Assistance for your organisation.</h2>
+                    <div class="nav-actions" style="justify-content: center;">
+                        <a href="#contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Requesting Billing Assistance information.'); return false;">Request Information</a>
+                        <a href="#organizations" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Enterprise Plans</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+}
