@@ -1,16 +1,3 @@
-// --- Pricing Toggle Logic ---
-function toggleMorePlans() {
-    const hiddenPlans = document.querySelectorAll('.hidden-plan');
-    const button = document.getElementById('toggle-plans-btn');
-    const isHidden = hiddenPlans.length > 0 && hiddenPlans[0].style.display === 'none';
-
-    hiddenPlans.forEach(plan => {
-        plan.style.display = isHidden ? 'flex' : 'none';
-    });
-
-    button.textContent = isHidden ? t('pricing.hide_plans', 'Hide Additional Plans') : t('pricing.see_more', 'See 3 More Plans');
-}
-
 document.addEventListener('DOMContentLoaded', async () => {
     // Initialize i18n first, then start router
     await I18n.init();
@@ -334,21 +321,21 @@ const PricingSection = `
                 <span class="kicker" data-i18n="pricing.kicker">Pricing</span>
                 <h2 class="section-title" data-i18n="pricing.title">Transparent plans for every practice.</h2>
                 <p class="section-copy" style="margin-left: auto; margin-right: auto;" data-i18n="pricing.description">Choose a plan aligned with your encounters and documentation volume. All plans include access to the same core AI engine \u2013 you only pay for usage.</p>
-                <p class="section-copy" style="font-size: 14px; margin-top: 10px; color: var(--text-secondary);" data-i18n="pricing.billing_note">Billing in USD. Flexible annual contracts available for clinics, groups and hospitals.</p>
+                <div style="margin-top: 20px; padding: 12px 24px; background: rgba(59, 197, 214, 0.1); border-radius: 8px; display: inline-block;">
+                    <span style="font-size: 15px; font-weight: 600; color: var(--text-primary);" data-i18n="pricing.credit_explainer">1 credit = 10 minutes of audio documentation</span>
+                </div>
             </div>
 
-            <div class="grid-4" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
 
                 <div class="pricing-card">
                     <div class="plan-name">Forever Free</div>
                     <div class="plan-price">$0 <span>/mo</span></div>
-                    <p class="plan-period" data-i18n="pricing.free_desc">Explore the workflow.</p>
+                    <p class="plan-period" data-i18n="pricing.free_credits">50 credits / month</p>
                     <ul class="plan-features">
                         <li data-i18n="pricing.free_f1">Full access to the console</li>
-                        <li data-i18n="pricing.free_f2">50 scripts / month</li>
                         <li data-i18n="pricing.free_f3">No credit card required</li>
                         <li style="color: var(--text-secondary); opacity: 0.7;" data-i18n="pricing.free_f4">Limited specialty access</li>
-                        <li style="color: var(--text-secondary); opacity: 0.7;" data-i18n="pricing.free_f5">Basic support</li>
                     </ul>
                     <button class="btn-outline" style="width: 100%;" onclick="showToast('Get started with Free plan!'); return false;" data-i18n="pricing.free_cta">Get Started</button>
                 </div>
@@ -356,77 +343,63 @@ const PricingSection = `
                 <div class="pricing-card">
                     <div class="plan-name">Pilot 900</div>
                     <div class="plan-price">$9.99 <span>/mo</span></div>
-                    <p class="plan-period" data-i18n="pricing.pilot_desc">For light users.</p>
+                    <p class="plan-period" data-i18n="pricing.pilot_credits">75 credits / month</p>
                     <ul class="plan-features">
-                        <li data-i18n="pricing.pilot_f1">75 scripts / month (900 / year)</li>
-                        <li data-i18n="pricing.pilot_f2">6\u2011month rollover</li>
-                        <li data-i18n="pricing.pilot_f3">Pause or cancel anytime</li>
+                        <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
                         <li data-i18n="pricing.pilot_f4">Standard specialty access</li>
                         <li data-i18n="pricing.pilot_f5">Community support</li>
                     </ul>
                     <button class="btn-outline" style="width: 100%;" onclick="showToast('Subscribing to Pilot 900.'); return false;" data-i18n="pricing.pilot_cta">Subscribe</button>
                 </div>
 
-                <div class="pricing-card featured" style="border-color: #4b88d3;">
-                    <div style="margin-bottom: 8px;"><span class="beta-tag" style="background: #E8F5FF; color: #4b88d3; font-weight: 700;" data-i18n="pricing.most_popular">Most Popular</span></div>
-                    <div class="plan-name">Productive 3000</div>
-                    <div class="plan-price">$29.99 <span>/mo</span></div>
-                    <p class="plan-period" data-i18n="pricing.productive_desc">The clinician favorite.</p>
-                    <ul class="plan-features">
-                        <li data-i18n="pricing.productive_f1">250 scripts / month (3,000 / year)</li>
-                        <li data-i18n="pricing.productive_f2">12\u2011month rollover</li>
-                        <li data-i18n="pricing.productive_f3">Priority product feedback loop</li>
-                        <li data-i18n="pricing.productive_f4">All specialty access</li>
-                        <li data-i18n="pricing.productive_f5">Priority email support</li>
-                    </ul>
-                    <button class="btn-primary" style="width: 100%;" onclick="showToast('Subscribing to Productive 3000.'); return false;" data-i18n="pricing.productive_cta">Subscribe</button>
-                </div>
-
-                <div class="pricing-card hidden-plan" id="pioneer-plan" style="display: none;">
+                <div class="pricing-card">
                     <div class="plan-name">Pioneer 1800</div>
                     <div class="plan-price">$18.99 <span>/mo</span></div>
-                    <p class="plan-period" data-i18n="pricing.pioneer_desc">For private practitioners.</p>
+                    <p class="plan-period" data-i18n="pricing.pioneer_credits">150 credits / month</p>
                     <ul class="plan-features">
-                        <li data-i18n="pricing.pioneer_f1">150 scripts / month (1,800 / year)</li>
-                        <li data-i18n="pricing.pioneer_f2">6\u2011month rollover</li>
-                        <li data-i18n="pricing.pioneer_f3">Pause or cancel anytime</li>
+                        <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
                         <li data-i18n="pricing.pioneer_f4">All specialty access</li>
                         <li data-i18n="pricing.pioneer_f5">Email support</li>
                     </ul>
                     <button class="btn-outline" style="width: 100%;" onclick="showToast('Subscribing to Pioneer 1800.'); return false;" data-i18n="pricing.pioneer_cta">Subscribe</button>
                 </div>
 
-                <div class="pricing-card hidden-plan" id="prolific-plan" style="display: none;">
+                <div class="pricing-card featured" style="border-color: #4b88d3;">
+                    <div style="margin-bottom: 8px;"><span class="beta-tag" style="background: #E8F5FF; color: #4b88d3; font-weight: 700;" data-i18n="pricing.most_popular">Most Popular</span></div>
+                    <div class="plan-name">Productive 3000</div>
+                    <div class="plan-price">$29.99 <span>/mo</span></div>
+                    <p class="plan-period" data-i18n="pricing.productive_credits">250 credits / month</p>
+                    <ul class="plan-features">
+                        <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
+                        <li data-i18n="pricing.productive_f4">All specialty access</li>
+                        <li data-i18n="pricing.productive_f5">Priority email support</li>
+                    </ul>
+                    <button class="btn-primary" style="width: 100%;" onclick="showToast('Subscribing to Productive 3000.'); return false;" data-i18n="pricing.productive_cta">Subscribe</button>
+                </div>
+
+                <div class="pricing-card">
                     <div class="plan-name">Prolific 6000</div>
                     <div class="plan-price">$49.99 <span>/mo</span></div>
-                    <p class="plan-period" data-i18n="pricing.prolific_desc">For high-volume groups.</p>
+                    <p class="plan-period" data-i18n="pricing.prolific_credits">500 credits / month</p>
                     <ul class="plan-features">
-                        <li data-i18n="pricing.prolific_f1">500 scripts / month (6,000 / year)</li>
-                        <li data-i18n="pricing.prolific_f2">12\u2011month rollover</li>
-                        <li data-i18n="pricing.prolific_f3">Dedicated API access</li>
+                        <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
                         <li data-i18n="pricing.prolific_f4">All specialty access</li>
-                        <li data-i18n="pricing.prolific_f5">Phone & email support</li>
+                        <li data-i18n="pricing.prolific_f3">Dedicated API access</li>
                     </ul>
                     <button class="btn-outline" style="width: 100%;" onclick="showToast('Subscribing to Prolific 6000.'); return false;" data-i18n="pricing.prolific_cta">Subscribe</button>
                 </div>
 
-                <div class="pricing-card hidden-plan" id="enterprise-plan" style="display: none;">
+                <div class="pricing-card">
                     <div class="plan-name">Plan Enterprise</div>
                     <div class="plan-price">Custom</div>
-                    <p class="plan-period" data-i18n="pricing.enterprise_desc">volume\u2011based</p>
+                    <p class="plan-period" data-i18n="pricing.enterprise_credits">Custom credits</p>
                     <ul class="plan-features">
-                        <li data-i18n="pricing.enterprise_f1">Custom scripts & user counts</li>
-                        <li data-i18n="pricing.enterprise_f2">Ambient mode & team workflows</li>
-                        <li data-i18n="pricing.enterprise_f3">Multi\u2011language at scale</li>
                         <li data-i18n="pricing.enterprise_f4">Custom integrations and rollout support</li>
                         <li data-i18n="pricing.enterprise_f5">Dedicated success manager</li>
+                        <li data-i18n="pricing.enterprise_f2">Ambient mode & team workflows</li>
                     </ul>
                     <a href="#contact" class="btn-primary" style="width: 100%; text-align: center; background-color: var(--accent); color: var(--text-primary);" onclick="showToast('Contacting Sales for Enterprise.');" data-i18n="pricing.enterprise_cta">Contact sales</a>
                 </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 30px;">
-                <button id="toggle-plans-btn" class="btn-outline" onclick="toggleMorePlans()" style="color: var(--text-primary); border-color: var(--border-subtle);" data-i18n="pricing.see_more">See 3 More Plans</button>
             </div>
 
             <div style="text-align: center; margin-top: 40px; font-size: 14px; color: var(--text-secondary);" data-i18n="pricing.enterprise_question">
