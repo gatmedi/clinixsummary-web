@@ -72,6 +72,10 @@
                                         <span class="dropdown-title" data-i18n="dropdown.auto_ambient">Auto Ambient Dictate</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.auto_ambient_desc">Auto detects ambient or dictation</span>
                                     </a>
+                                    <a href="#clinix-foundation" class="dropdown-item">
+                                        <span class="dropdown-title">Clinix Foundation</span>
+                                        <span class="dropdown-desc">Non-profit global health initiative.</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -218,11 +222,11 @@
                                     <span class="dropdown-desc" data-i18n="dropdown.roi_calculator_desc">Calculate your savings.</span>
                                 </a>
                                 <div style="border-top: 1px solid var(--border-subtle); margin: 6px 0;"></div>
-                                <a href="#" class="dropdown-item" onclick="showToast('Navigating to Pilot 900...'); return false;"><span class="dropdown-title">Pilot 900</span></a>
-                                <a href="#" class="dropdown-item" onclick="showToast('Navigating to Pioneer 1800...'); return false;"><span class="dropdown-title">Pioneer 1800</span></a>
-                                <a href="#" class="dropdown-item" onclick="showToast('Navigating to Productive 3000...'); return false;"><span class="dropdown-title">Productive 3000</span></a>
-                                <a href="#" class="dropdown-item" onclick="showToast('Navigating to Prolific 6000...'); return false;"><span class="dropdown-title">Prolific 6000</span></a>
-                                <a href="#" class="dropdown-item" onclick="showToast('Navigating to Plan Enterprise...'); return false;">
+                                <a href="#pricing" class="dropdown-item"><span class="dropdown-title">Pilot 900</span></a>
+                                <a href="#pricing" class="dropdown-item"><span class="dropdown-title">Pioneer 1800</span></a>
+                                <a href="#pricing" class="dropdown-item"><span class="dropdown-title">Productive 3000</span></a>
+                                <a href="#pricing" class="dropdown-item"><span class="dropdown-title">Prolific 6000</span></a>
+                                <a href="#pricing" class="dropdown-item">
                                     <span class="dropdown-title">Plan Enterprise</span>
                                     <span class="dropdown-desc" data-i18n="dropdown.plan_enterprise_desc">Custom volume licensing.</span>
                                 </a>
@@ -285,10 +289,10 @@
                         <h4 data-i18n="nav.meet_clinixs">Meet ClinixSummary</h4>
                         <ul>
                             <li><a href="#proprietary-models" data-i18n="dropdown.proprietary_models">Proprietary Models</a></li>
+                            <li><a href="#meticulous-notes" data-i18n="dropdown.meticulous_notes">Meticulous Notes</a></li>
                             <li><a href="#clinix-foundation">Clinix Foundation</a></li>
                             <li><a href="#kaizen" data-i18n="dropdown.kaizen">Kai-zen</a></li>
                             <li><a href="#languages" data-i18n="dropdown.languages">Languages</a></li>
-                            <li><a href="#cme-vault" data-i18n="dropdown.cme_vault">CME/CPD Vault</a></li>
                             <li><a href="#portfolio-builder" data-i18n="dropdown.portfolio_builder">Portfolio Builder</a></li>
                             <li><a href="#auto-ambient" data-i18n="dropdown.auto_ambient">Auto Ambient Dictate</a></li>
                             <li><a href="#security" data-i18n="dropdown.security">Security</a></li>
@@ -299,7 +303,7 @@
                         <ul>
                             <li><a href="#story" data-i18n="footer.story">Story</a></li>
                             <li><a href="#publications" data-i18n="dropdown.publications">Publications</a></li>
-                            <li><a href="#">contact@clinixsummary.com</a></li>
+                            <li><a href="mailto:contact@clinixsummary.ai">contact@clinixsummary.ai</a></li>
                             <li><a href="#" data-i18n="footer.careers">Careers</a></li>
                             <li><a href="#news" data-i18n="dropdown.news_events">News & Events</a></li>
                             <li><a href="#blog" data-i18n="footer.blog_podcasts">Blog & Podcasts</a></li>
@@ -316,26 +320,8 @@
                             <li><a href="#insurers" data-i18n="dropdown.insurers">Insurers</a></li>
                             <li><a href="#government" data-i18n="dropdown.government">Government</a></li>
                             <li><a href="#nonprofit" data-i18n="dropdown.nonprofit">Non-profit</a></li>
-                            <li><a href="#" data-i18n="dropdown.by_specialty">By Specialty</a></li>
+                            <li><a href="#" onclick="showToast('Coming soon...'); return false;" data-i18n="dropdown.by_specialty">By Specialty</a></li>
                             <li><a href="#integrations" data-i18n="dropdown.integrations">Integrations</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-group">
-                        <h4 data-i18n="footer.models">Models</h4>
-                        <ul>
-                            <li><a href="#" data-i18n="dropdown.medical">Medical</a></li>
-                            <li><a href="#" data-i18n="dropdown.dental">Dental</a></li>
-                            <li><a href="#" data-i18n="dropdown.psychiatry">Psychiatry</a></li>
-                            <li><a href="#" data-i18n="dropdown.psychology">Psychology</a></li>
-                            <li><a href="#" data-i18n="footer.occ_therapy">Occupational Therapy</a></li>
-                            <li><a href="#" data-i18n="footer.speech_lang">Speech & Language</a></li>
-                            <li><a href="#" data-i18n="footer.physio">Physiotherapy</a></li>
-                            <li><a href="#" data-i18n="dropdown.midwifery">Midwifery</a></li>
-                            <li><a href="#" data-i18n="footer.nutritional">Nutritional Therapy</a></li>
-                            <li><a href="#" data-i18n="dropdown.vet_medicine">Veterinary Medicine</a></li>
-                            <li><a href="#"><span data-i18n="dropdown.radiology_assist">Radiology assist</span> Beta</a></li>
-                            <li><a href="#"><span data-i18n="dropdown.dermatology_assist">Dermatology assist</span> Beta</a></li>
-                            <li><a href="#"><span data-i18n="dropdown.triage_assist">Triage assist</span> Beta</a></li>
                         </ul>
                     </div>
                 </div>
@@ -348,15 +334,18 @@
                             <li><a href="#cap-dental" data-i18n="dropdown.dental">Dental</a></li>
                             <li><a href="#cap-psychiatry" data-i18n="dropdown.psychiatry">Psychiatry</a></li>
                             <li><a href="#cap-psychology" data-i18n="dropdown.psychology">Psychology</a></li>
-                            <li><a href="#cap-allied-health" data-i18n="dropdown.allied_health">Allied health</a></li>
+                            <li><a href="#cap-allied-health" data-i18n="footer.occ_therapy">Occupational Therapy</a></li>
+                            <li><a href="#cap-allied-health" data-i18n="footer.speech_lang">Speech &amp; Language</a></li>
+                            <li><a href="#cap-allied-health" data-i18n="footer.physio">Physiotherapy</a></li>
+                            <li><a href="#cap-allied-health" data-i18n="footer.nutritional">Nutritional Therapy</a></li>
                             <li><a href="#cap-midwifery" data-i18n="dropdown.midwifery">Midwifery</a></li>
                             <li><a href="#cap-vet" data-i18n="dropdown.vet_medicine">Veterinary Medicine</a></li>
                             <li><a href="#cap-operative" data-i18n="dropdown.operational_notes">Operational Notes</a></li>
                             <li><a href="#cme-vault" data-i18n="dropdown.cme_vault">CME/CPD Vault</a></li>
                             <li><a href="#billing-assist" data-i18n="dropdown.billing_assist">Billing Assistance</a></li>
-                            <li><a href="#"><span data-i18n="dropdown.radiology_assist">Radiology Assist</span> Beta</a></li>
-                            <li><a href="#"><span data-i18n="dropdown.dermatology_assist">Dermatology Assist</span> Beta</a></li>
-                            <li><a href="#"><span data-i18n="dropdown.triage_assist">Triage Assist</span> Beta</a></li>
+                            <li><a href="#" onclick="showToast('Coming soon...'); return false;"><span data-i18n="dropdown.radiology_assist">Radiology Assist</span> Beta</a></li>
+                            <li><a href="#" onclick="showToast('Coming soon...'); return false;"><span data-i18n="dropdown.dermatology_assist">Dermatology Assist</span> Beta</a></li>
+                            <li><a href="#" onclick="showToast('Coming soon...'); return false;"><span data-i18n="dropdown.triage_assist">Triage Assist</span> Beta</a></li>
                         </ul>
                     </div>
                     <div class="footer-group">
@@ -377,11 +366,11 @@
                         <h4 data-i18n="nav.pricing">Pricing</h4>
                         <ul>
                             <li><a href="#roi-calculator" data-i18n="dropdown.roi_calculator">ROI Calculator</a></li>
-                            <li><a href="#">Pilot 900</a></li>
-                            <li><a href="#">Pioneer 1800</a></li>
-                            <li><a href="#">Productive 3000</a></li>
-                            <li><a href="#">Prolific 6000</a></li>
-                            <li><a href="#">Plan Enterprise</a></li>
+                            <li><a href="#pricing">Pilot 900</a></li>
+                            <li><a href="#pricing">Pioneer 1800</a></li>
+                            <li><a href="#pricing">Productive 3000</a></li>
+                            <li><a href="#pricing">Prolific 6000</a></li>
+                            <li><a href="#pricing">Plan Enterprise</a></li>
                         </ul>
                     </div>
                 </div>
