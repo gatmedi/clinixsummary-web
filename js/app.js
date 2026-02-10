@@ -132,6 +132,7 @@ const routes = {
     '#blog':               PodcastsPage,
 
     // Other
+    '#careers':            CareersPage,
     '#story':              StoryPage,
     '#roi-calculator':     HomePage,
 };

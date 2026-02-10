@@ -92,6 +92,147 @@ function SecurityPage() {
     `;
 }
 
+function CareersPage() {
+    const jobs = [
+        {
+            title: 'Machine Learning Engineer — Medical NLP',
+            team: 'AI & Models',
+            location: 'Remote (Global)',
+            type: 'Full-time',
+            icon: 'model_training',
+            description: 'Design, train and deploy the proprietary clinical language models that power ClinixSummary. You will work with medical transcription datasets, fine-tune transformer architectures for specialty-specific documentation, and push the accuracy boundaries of real-time ambient speech recognition.',
+            requirements: [
+                'Experience with transformer architectures and fine-tuning LLMs',
+                'Strong background in NLP, speech recognition or medical informatics',
+                'Proficiency in Python, PyTorch or JAX',
+                'Familiarity with healthcare data standards (HL7, FHIR) is a plus'
+            ]
+        },
+        {
+            title: 'Clinical Informatics Specialist',
+            team: 'Clinical Quality',
+            location: 'Remote (Global)',
+            type: 'Full-time',
+            icon: 'clinical_notes',
+            description: 'Bridge the gap between clinical practice and AI engineering. You will define documentation standards across 40+ specialties, design QA review workflows for Clinix QM, and ensure every model output meets the bar clinicians expect — from SOAP notes to operative reports.',
+            requirements: [
+                'Clinical background (MD, RN, PA, allied health or equivalent)',
+                'Experience with clinical documentation standards and EHR workflows',
+                'Strong analytical skills and attention to clinical detail',
+                'Comfort working cross-functionally with engineering teams'
+            ]
+        },
+        {
+            title: 'Full-Stack Software Engineer',
+            team: 'Platform Engineering',
+            location: 'Remote (Global)',
+            type: 'Full-time',
+            icon: 'code',
+            description: 'Build and scale the web platform, real-time audio pipelines, and API layer that clinicians depend on daily. You will ship features across the console, integrations framework, and billing engine while keeping the system fast, secure and reliable at scale.',
+            requirements: [
+                'Strong JavaScript/TypeScript and modern framework experience',
+                'Backend proficiency in Node.js, Python or Go',
+                'Experience with real-time systems, WebSockets or audio streaming',
+                'Understanding of HIPAA-compliant infrastructure and cloud security'
+            ]
+        },
+        {
+            title: 'Product Manager — Healthcare AI',
+            team: 'Product',
+            location: 'Remote (Global)',
+            type: 'Full-time',
+            icon: 'assignment',
+            description: 'Own the product roadmap from clinician feedback to shipped feature. You will prioritise across specialty modules, integrations and workflow tools, run discovery with healthcare organisations, and ensure every release moves the needle on documentation time saved.',
+            requirements: [
+                'Product management experience in health-tech or SaaS',
+                'Ability to translate clinical needs into clear product specifications',
+                'Data-driven decision making with strong prioritisation skills',
+                'Excellent communication across technical and clinical stakeholders'
+            ]
+        },
+        {
+            title: 'Clinical Linguist — Multi-language Models',
+            team: 'AI & Models',
+            location: 'Remote (Global)',
+            type: 'Full-time / Contract',
+            icon: 'translate',
+            description: 'Expand ClinixSummary\'s language capabilities by developing medical terminology datasets, validating translations of clinical templates, and training code-switching models that handle real-world multilingual consultations across our supported language pairs.',
+            requirements: [
+                'Degree in linguistics, computational linguistics or translation studies',
+                'Fluency in 2+ languages with medical terminology knowledge',
+                'Experience with corpus annotation, lexicography or NLP data pipelines',
+                'Healthcare or life-sciences domain experience preferred'
+            ]
+        }
+    ];
+
+    return \`
+        <section class="subpage-container">
+            <div class="page-width">
+                <div class="subpage-header">
+                    <span class="kicker">Join Us</span>
+                    <h2 class="subpage-title">Build the future of clinical documentation.</h2>
+                    <p class="subpage-copy">ClinixSummary is a small, global team of clinicians, engineers and designers on a mission to give healthcare professionals their time back. We work remotely, ship weekly, and believe the best ideas come from people who care deeply about the problem.</p>
+                </div>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; justify-content: center;">
+                    <div style="background: var(--bg-subtle); padding: 10px 20px; border-radius: 8px; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+                        <span class="material-symbols-rounded" style="font-size: 18px; color: var(--accent);">public</span>
+                        Remote-first, global team
+                    </div>
+                    <div style="background: var(--bg-subtle); padding: 10px 20px; border-radius: 8px; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+                        <span class="material-symbols-rounded" style="font-size: 18px; color: var(--accent);">rocket_launch</span>
+                        Ship weekly, learn daily
+                    </div>
+                    <div style="background: var(--bg-subtle); padding: 10px 20px; border-radius: 8px; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+                        <span class="material-symbols-rounded" style="font-size: 18px; color: var(--accent);">favorite</span>
+                        Healthcare impact at scale
+                    </div>
+                </div>
+
+                <h3 class="section-title" style="margin-bottom: 32px;">Open positions</h3>
+
+                \${jobs.map(job => \`
+                    <div style="border: 1px solid var(--border-subtle); border-radius: 12px; padding: 32px; margin-bottom: 20px; transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.06)'" onmouseout="this.style.boxShadow='none'">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 16px;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent);">\${job.icon}</span>
+                                <div>
+                                    <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 4px;">\${job.title}</h4>
+                                    <div style="display: flex; gap: 16px; font-size: 13px; color: var(--text-secondary);">
+                                        <span>\${job.team}</span>
+                                        <span>\${job.location}</span>
+                                        <span>\${job.type}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="mailto:careers@clinixsummary.ai?subject=Application: \${encodeURIComponent(job.title)}" class="btn-primary" style="font-size: 13px; padding: 8px 20px; white-space: nowrap;">Apply now</a>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-bottom: 16px; line-height: 1.6;">\${job.description}</p>
+                        <div>
+                            <h5 style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #999; margin-bottom: 8px;">Requirements</h5>
+                            <ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 6px;">
+                                \${job.requirements.map(req => \`
+                                    <li style="display: flex; align-items: flex-start; gap: 8px; font-size: 14px; color: var(--text-secondary);">
+                                        <span class="material-symbols-rounded" style="font-size: 16px; color: var(--accent); margin-top: 2px;">check_circle</span>
+                                        \${req}
+                                    </li>
+                                \`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                \`).join('')}
+
+                <div style="background: var(--bg-subtle); padding: 32px; border-radius: 12px; margin-top: 40px; text-align: center; border: 1px solid var(--border-subtle);">
+                    <h4 style="font-weight: 700; font-size: 20px; margin-bottom: 12px;">Don\u2019t see the right role?</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">We\u2019re always looking for talented people who are passionate about healthcare and technology. Send us your CV and tell us how you\u2019d like to contribute.</p>
+                    <a href="mailto:careers@clinixsummary.ai?subject=General Application" class="btn-outline">Send open application</a>
+                </div>
+            </div>
+        </section>
+    \`;
+}
+
 function StoryPage() {
     return `
         <section class="subpage-container">
