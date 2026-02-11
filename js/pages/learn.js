@@ -99,32 +99,44 @@ function WhitepapersPage() {
         {
             title: 'ClinixSummary Architecture: A Technical Overview',
             desc: 'System architecture, model pipeline, audio processing, NLP layers, and output generation. A comprehensive look at how ClinixSummary transforms clinical audio into structured documentation.',
-            icon: 'architecture'
+            icon: 'architecture',
+            date: 'March 2025',
+            pdf: 'docs/whitepapers/clinixsummary-architecture-overview-2025.pdf'
         },
         {
             title: 'Clinical Model Training Methodology',
             desc: 'Data sourcing from de-identified sources, training pipeline, specialty-specific fine-tuning, evaluation metrics, and quality assurance processes.',
-            icon: 'model_training'
+            icon: 'model_training',
+            date: 'April 2025',
+            pdf: 'docs/whitepapers/clinical-model-training-methodology-2025.pdf'
         },
         {
             title: 'Integration Framework: Connecting to EHR/EMR Systems',
             desc: 'API specifications, data formats, FHIR compatibility, and deployment models (cloud/hybrid) for seamless EHR integration.',
-            icon: 'integration_instructions'
+            icon: 'integration_instructions',
+            date: 'May 2025',
+            pdf: 'docs/whitepapers/integration-framework-ehr-emr-2025.pdf'
         },
         {
             title: 'Security & Compliance Technical Specification',
             desc: 'Encryption standards, access controls, audit logging, and HIPAA/GDPR technical implementation details for compliance officers and CTOs.',
-            icon: 'security'
+            icon: 'security',
+            date: 'June 2025',
+            pdf: 'docs/whitepapers/security-compliance-specification-2025.pdf'
         },
         {
             title: 'Quality Management System (QMS): How Clinix QM Works',
             desc: 'The QA review process, feedback incorporation, model versioning, output monitoring, and continuous improvement protocols.',
-            icon: 'verified'
+            icon: 'verified',
+            date: 'July 2025',
+            pdf: 'docs/whitepapers/quality-management-system-qms-2025.pdf'
         },
         {
             title: 'Ambient Audio Processing: From Sound to Structured Note',
             desc: 'How raw audio becomes a structured clinical document \u2014 speaker diarisation, medical NER, section classification, and note assembly.',
-            icon: 'graphic_eq'
+            icon: 'graphic_eq',
+            date: 'August 2025',
+            pdf: 'docs/whitepapers/ambient-audio-processing-2025.pdf'
         }
     ];
 
@@ -132,8 +144,9 @@ function WhitepapersPage() {
         <div class="card" style="display: flex; flex-direction: column;">
             <div class="card-icon material-symbols-rounded">${w.icon}</div>
             <h3>${w.title}</h3>
+            <p style="color: var(--text-secondary); font-size: 12px; margin-bottom: 8px;">${w.date}</p>
             <p style="flex-grow: 1;">${w.desc}</p>
-            <button class="btn-outline" style="margin-top: 16px; width: 100%;" onclick="showToast('White paper coming soon.'); return false;">Download PDF</button>
+            <a href="${w.pdf}" target="_blank" class="btn-outline" style="margin-top: 16px; width: 100%; text-align: center; text-decoration: none; display: block;">View PDF</a>
         </div>
     `).join('');
 
