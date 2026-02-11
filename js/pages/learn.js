@@ -4,58 +4,80 @@ function PublicationsPage() {
     const publications = [
         {
             title: 'Setting the Gold Standard: Why Standardised Clinical Documentation Is the Future',
-            desc: 'As healthcare globalises, documentation must be standardised. Just as aviation and nuclear industries adopted standardised documentation to reduce errors and save lives, medicine must follow. ClinixSummary is building that standard \u2014 consistent method from one clinician to the next, across borders.',
-            icon: 'auto_stories'
+            desc: 'As healthcare globalises, documentation must be standardised. Just as aviation and nuclear industries adopted standardised documentation to reduce errors and save lives, medicine must follow.',
+            icon: 'auto_stories',
+            date: 'January 2025',
+            pdf: 'docs/publications/standardised-clinical-documentation-2025.pdf'
         },
         {
             title: 'The Burnout Crisis: How AI Scribes Restore Clinical Joy',
             desc: 'Evidence on clinician burnout driven by documentation burden. How ambient AI documentation reduces cognitive load and gives clinicians back 2+ hours per day.',
-            icon: 'sentiment_satisfied'
+            icon: 'sentiment_satisfied',
+            date: 'February 2025',
+            pdf: 'docs/publications/burnout-crisis-ai-scribes-2025.pdf'
         },
         {
             title: 'Contextual Reasoning in Clinical AI: Beyond Transcription',
             desc: 'Deep dive into how ClinixSummary\u2019s models infer clinical meaning from natural conversation \u2014 not just transcribe words, but understand clinical intent.',
-            icon: 'psychology'
+            icon: 'psychology',
+            date: 'March 2025',
+            pdf: 'docs/publications/contextual-reasoning-clinical-ai-2025.pdf'
         },
         {
             title: 'Multilingual Clinical Documentation: Bridging Language Barriers in Global Healthcare',
             desc: 'How ClinixSummary handles multilingual consultations, code-switching, and documentation across 6 languages. Real-world use cases from Dubai to Montreal.',
-            icon: 'translate'
+            icon: 'translate',
+            date: 'April 2025',
+            pdf: 'docs/publications/multilingual-clinical-documentation-2025.pdf'
         },
         {
             title: 'Privacy by Design: Building Clinical AI Without Compromising Patient Data',
             desc: 'Our approach to training on de-identified data, HIPAA/GDPR compliance, and why proprietary models are inherently more secure than generic LLM wrappers.',
-            icon: 'shield'
+            icon: 'shield',
+            date: 'May 2025',
+            pdf: 'docs/publications/privacy-by-design-clinical-ai-2025.pdf'
         },
         {
             title: 'Allied Health Documentation: Why One Model Doesn\u2019t Fit All',
             desc: 'How physiotherapy, occupational therapy, and speech & language therapy each require fundamentally different documentation models \u2014 and why ClinixSummary built dedicated modules.',
-            icon: 'accessibility_new'
+            icon: 'accessibility_new',
+            date: 'June 2025',
+            pdf: 'docs/publications/allied-health-documentation-2025.pdf'
         },
         {
             title: 'The Economics of AI Scribes: ROI Analysis for Healthcare Organizations',
             desc: 'Hard numbers on cost savings, productivity gains, reimbursement improvements, and reduced coding errors when deploying AI documentation at scale.',
-            icon: 'payments'
+            icon: 'payments',
+            date: 'July 2025',
+            pdf: 'docs/publications/economics-of-ai-scribes-roi-2025.pdf'
         },
         {
             title: 'From Ambient to Operative: Auto-Detection of Clinical Documentation Modes',
             desc: 'Technical overview of how ClinixSummary automatically detects whether audio is ambient consultation, post-visit dictation, or operative narration \u2014 and adapts accordingly.',
-            icon: 'graphic_eq'
+            icon: 'graphic_eq',
+            date: 'August 2025',
+            pdf: 'docs/publications/auto-detection-documentation-modes-2025.pdf'
         },
         {
             title: 'Kai-zen in Healthcare AI: The Case for Continuous Model Improvement',
             desc: 'Why static AI models fail in medicine, and how ClinixSummary\u2019s weekly update cycle and clinician feedback loop produce consistently improving outputs.',
-            icon: 'change_circle'
+            icon: 'change_circle',
+            date: 'September 2025',
+            pdf: 'docs/publications/kaizen-continuous-model-improvement-2025.pdf'
         },
         {
             title: 'ICD-10 and CPT Coding Accuracy: How AI Reduces Claim Denials',
             desc: 'Data on coding errors in manual documentation vs. AI-assisted documentation. How contextual understanding improves coding accuracy and reimbursement.',
-            icon: 'medical_information'
+            icon: 'medical_information',
+            date: 'October 2025',
+            pdf: 'docs/publications/icd10-cpt-coding-accuracy-2025.pdf'
         },
         {
             title: 'The Future of Medical Education: Integrating CME/CPD into the Documentation Workflow',
             desc: 'How the CME/CPD Vault turns routine clinical documentation into learning opportunities, and the potential to earn continuing education credits through practice.',
-            icon: 'school'
+            icon: 'school',
+            date: 'November 2025',
+            pdf: 'docs/publications/cme-cpd-documentation-workflow-2025.pdf'
         }
     ];
 
@@ -63,8 +85,9 @@ function PublicationsPage() {
         <div class="card" style="display: flex; flex-direction: column;">
             <div class="card-icon material-symbols-rounded">${p.icon}</div>
             <h3>${p.title}</h3>
+            <p style="color: var(--text-secondary); font-size: 12px; margin-bottom: 8px;">${p.date}</p>
             <p style="flex-grow: 1;">${p.desc}</p>
-            <button class="btn-outline" style="margin-top: 16px; width: 100%;" onclick="showToast('PDF coming soon.'); return false;">Download PDF</button>
+            <a href="${p.pdf}" target="_blank" class="btn-outline" style="margin-top: 16px; width: 100%; text-align: center; text-decoration: none; display: block;">View PDF</a>
         </div>
     `).join('');
 

@@ -220,10 +220,10 @@ main {
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
     margin-left: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
 }
 
 .nav-right-group {
