@@ -6,64 +6,15 @@ function PublicationsPage() {
             title: 'Setting the Gold Standard: Why Standardised Clinical Documentation Is the Future',
             desc: 'As healthcare globalises, documentation must be standardised. Just as aviation and nuclear industries adopted standardised documentation to reduce errors and save lives, medicine must follow.',
             icon: 'auto_stories',
-            date: 'January 2025',
+            date: 'January 2026',
             pdf: 'docs/publications/standardised-clinical-documentation-2025.pdf'
         },
         {
-            title: 'The Burnout Crisis: How AI Scribes Restore Clinical Joy',
-            desc: 'Evidence on clinician burnout driven by documentation burden. How ambient AI documentation reduces cognitive load and gives clinicians back 2+ hours per day.',
-            icon: 'sentiment_satisfied',
-            date: 'February 2025',
-            pdf: 'docs/publications/burnout-crisis-ai-scribes-2025.pdf'
-        },
-        {
-            title: 'Contextual Reasoning in Clinical AI: Beyond Transcription',
-            desc: 'Deep dive into how ClinixSummary\u2019s models infer clinical meaning from natural conversation \u2014 not just transcribe words, but understand clinical intent.',
-            icon: 'psychology',
-            date: 'March 2025',
-            pdf: 'docs/publications/contextual-reasoning-clinical-ai-2025.pdf'
-        },
-        {
-            title: 'Multilingual Clinical Documentation: Bridging Language Barriers in Global Healthcare',
-            desc: 'How ClinixSummary handles multilingual consultations, code-switching, and documentation across 6 languages. Real-world use cases from Dubai to Montreal.',
-            icon: 'translate',
-            date: 'April 2025',
-            pdf: 'docs/publications/multilingual-clinical-documentation-2025.pdf'
-        },
-        {
-            title: 'Privacy by Design: Building Clinical AI Without Compromising Patient Data',
-            desc: 'Our approach to training on de-identified data, HIPAA/GDPR compliance, and why proprietary models are inherently more secure than generic LLM wrappers.',
-            icon: 'shield',
-            date: 'May 2025',
-            pdf: 'docs/publications/privacy-by-design-clinical-ai-2025.pdf'
-        },
-        {
-            title: 'Allied Health Documentation: Why One Model Doesn\u2019t Fit All',
-            desc: 'How physiotherapy, occupational therapy, and speech & language therapy each require fundamentally different documentation models \u2014 and why ClinixSummary built dedicated modules.',
-            icon: 'accessibility_new',
-            date: 'June 2025',
-            pdf: 'docs/publications/allied-health-documentation-2025.pdf'
-        },
-        {
-            title: 'The Economics of AI Scribes: ROI Analysis for Healthcare Organizations',
-            desc: 'Hard numbers on cost savings, productivity gains, reimbursement improvements, and reduced coding errors when deploying AI documentation at scale.',
-            icon: 'payments',
-            date: 'July 2025',
-            pdf: 'docs/publications/economics-of-ai-scribes-roi-2025.pdf'
-        },
-        {
-            title: 'From Ambient to Operative: Auto-Detection of Clinical Documentation Modes',
-            desc: 'Technical overview of how ClinixSummary automatically detects whether audio is ambient consultation, post-visit dictation, or operative narration \u2014 and adapts accordingly.',
-            icon: 'graphic_eq',
-            date: 'August 2025',
-            pdf: 'docs/publications/auto-detection-documentation-modes-2025.pdf'
-        },
-        {
-            title: 'Kai-zen in Healthcare AI: The Case for Continuous Model Improvement',
-            desc: 'Why static AI models fail in medicine, and how ClinixSummary\u2019s weekly update cycle and clinician feedback loop produce consistently improving outputs.',
-            icon: 'change_circle',
-            date: 'September 2025',
-            pdf: 'docs/publications/kaizen-continuous-model-improvement-2025.pdf'
+            title: 'The Future of Medical Education: Integrating CME/CPD into the Documentation Workflow',
+            desc: 'How the CME/CPD Vault turns routine clinical documentation into learning opportunities, and the potential to earn continuing education credits through practice.',
+            icon: 'school',
+            date: 'November 2025',
+            pdf: 'docs/publications/cme-cpd-documentation-workflow-2025.pdf'
         },
         {
             title: 'ICD-10 and CPT Coding Accuracy: How AI Reduces Claim Denials',
@@ -73,11 +24,60 @@ function PublicationsPage() {
             pdf: 'docs/publications/icd10-cpt-coding-accuracy-2025.pdf'
         },
         {
-            title: 'The Future of Medical Education: Integrating CME/CPD into the Documentation Workflow',
-            desc: 'How the CME/CPD Vault turns routine clinical documentation into learning opportunities, and the potential to earn continuing education credits through practice.',
-            icon: 'school',
-            date: 'November 2025',
-            pdf: 'docs/publications/cme-cpd-documentation-workflow-2025.pdf'
+            title: 'Kai-zen in Healthcare AI: The Case for Continuous Model Improvement',
+            desc: 'Why static AI models fail in medicine, and how ClinixSummary\u2019s weekly update cycle and clinician feedback loop produce consistently improving outputs.',
+            icon: 'change_circle',
+            date: 'September 2025',
+            pdf: 'docs/publications/kaizen-continuous-model-improvement-2025.pdf'
+        },
+        {
+            title: 'From Ambient to Operative: Auto-Detection of Clinical Documentation Modes',
+            desc: 'Technical overview of how ClinixSummary automatically detects whether audio is ambient consultation, post-visit dictation, or operative narration \u2014 and adapts accordingly.',
+            icon: 'graphic_eq',
+            date: 'August 2025',
+            pdf: 'docs/publications/auto-detection-documentation-modes-2025.pdf'
+        },
+        {
+            title: 'The Economics of AI Scribes: ROI Analysis for Healthcare Organizations',
+            desc: 'Hard numbers on cost savings, productivity gains, reimbursement improvements, and reduced coding errors when deploying AI documentation at scale.',
+            icon: 'payments',
+            date: 'July 2025',
+            pdf: 'docs/publications/economics-of-ai-scribes-roi-2025.pdf'
+        },
+        {
+            title: 'Allied Health Documentation: Why One Model Doesn\u2019t Fit All',
+            desc: 'How physiotherapy, occupational therapy, and speech & language therapy each require fundamentally different documentation models \u2014 and why ClinixSummary built dedicated modules.',
+            icon: 'accessibility_new',
+            date: 'June 2025',
+            pdf: 'docs/publications/allied-health-documentation-2025.pdf'
+        },
+        {
+            title: 'Privacy by Design: Building Clinical AI Without Compromising Patient Data',
+            desc: 'Our approach to training on de-identified data, HIPAA/GDPR compliance, and why proprietary models are inherently more secure than generic LLM wrappers.',
+            icon: 'shield',
+            date: 'May 2025',
+            pdf: 'docs/publications/privacy-by-design-clinical-ai-2025.pdf'
+        },
+        {
+            title: 'Multilingual Clinical Documentation: Bridging Language Barriers in Global Healthcare',
+            desc: 'How ClinixSummary handles multilingual consultations, code-switching, and documentation across 6 languages. Real-world use cases from Dubai to Montreal.',
+            icon: 'translate',
+            date: 'April 2025',
+            pdf: 'docs/publications/multilingual-clinical-documentation-2025.pdf'
+        },
+        {
+            title: 'Contextual Reasoning in Clinical AI: Beyond Transcription',
+            desc: 'Deep dive into how ClinixSummary\u2019s models infer clinical meaning from natural conversation \u2014 not just transcribe words, but understand clinical intent.',
+            icon: 'psychology',
+            date: 'March 2025',
+            pdf: 'docs/publications/contextual-reasoning-clinical-ai-2025.pdf'
+        },
+        {
+            title: 'The Burnout Crisis: How AI Scribes Restore Clinical Joy',
+            desc: 'Evidence on clinician burnout driven by documentation burden. How ambient AI documentation reduces cognitive load and gives clinicians back 2+ hours per day.',
+            icon: 'sentiment_satisfied',
+            date: 'February 2025',
+            pdf: 'docs/publications/burnout-crisis-ai-scribes-2025.pdf'
         }
     ];
 
@@ -120,32 +120,11 @@ function PublicationsPage() {
 function WhitepapersPage() {
     const whitepapers = [
         {
-            title: 'ClinixSummary Architecture: A Technical Overview',
-            desc: 'System architecture, model pipeline, audio processing, NLP layers, and output generation. A comprehensive look at how ClinixSummary transforms clinical audio into structured documentation.',
-            icon: 'architecture',
-            date: 'March 2025',
-            pdf: 'docs/whitepapers/clinixsummary-architecture-overview-2025.pdf'
-        },
-        {
-            title: 'Clinical Model Training Methodology',
-            desc: 'Data sourcing from de-identified sources, training pipeline, specialty-specific fine-tuning, evaluation metrics, and quality assurance processes.',
-            icon: 'model_training',
-            date: 'April 2025',
-            pdf: 'docs/whitepapers/clinical-model-training-methodology-2025.pdf'
-        },
-        {
-            title: 'Integration Framework: Connecting to EHR/EMR Systems',
-            desc: 'API specifications, data formats, FHIR compatibility, and deployment models (cloud/hybrid) for seamless EHR integration.',
-            icon: 'integration_instructions',
-            date: 'May 2025',
-            pdf: 'docs/whitepapers/integration-framework-ehr-emr-2025.pdf'
-        },
-        {
-            title: 'Security & Compliance Technical Specification',
-            desc: 'Encryption standards, access controls, audit logging, and HIPAA/GDPR technical implementation details for compliance officers and CTOs.',
-            icon: 'security',
-            date: 'June 2025',
-            pdf: 'docs/whitepapers/security-compliance-specification-2025.pdf'
+            title: 'Ambient Audio Processing: From Sound to Structured Note',
+            desc: 'How raw audio becomes a structured clinical document \u2014 speaker diarisation, medical NER, section classification, and note assembly.',
+            icon: 'graphic_eq',
+            date: 'August 2025',
+            pdf: 'docs/whitepapers/ambient-audio-processing-2025.pdf'
         },
         {
             title: 'Quality Management System (QMS): How Clinix QM Works',
@@ -155,11 +134,32 @@ function WhitepapersPage() {
             pdf: 'docs/whitepapers/quality-management-system-qms-2025.pdf'
         },
         {
-            title: 'Ambient Audio Processing: From Sound to Structured Note',
-            desc: 'How raw audio becomes a structured clinical document \u2014 speaker diarisation, medical NER, section classification, and note assembly.',
-            icon: 'graphic_eq',
-            date: 'August 2025',
-            pdf: 'docs/whitepapers/ambient-audio-processing-2025.pdf'
+            title: 'Security & Compliance Technical Specification',
+            desc: 'Encryption standards, access controls, audit logging, and HIPAA/GDPR technical implementation details for compliance officers and CTOs.',
+            icon: 'security',
+            date: 'June 2025',
+            pdf: 'docs/whitepapers/security-compliance-specification-2025.pdf'
+        },
+        {
+            title: 'Integration Framework: Connecting to EHR/EMR Systems',
+            desc: 'API specifications, data formats, FHIR compatibility, and deployment models (cloud/hybrid) for seamless EHR integration.',
+            icon: 'integration_instructions',
+            date: 'May 2025',
+            pdf: 'docs/whitepapers/integration-framework-ehr-emr-2025.pdf'
+        },
+        {
+            title: 'Clinical Model Training Methodology',
+            desc: 'Data sourcing from de-identified sources, training pipeline, specialty-specific fine-tuning, evaluation metrics, and quality assurance processes.',
+            icon: 'model_training',
+            date: 'April 2025',
+            pdf: 'docs/whitepapers/clinical-model-training-methodology-2025.pdf'
+        },
+        {
+            title: 'ClinixSummary Architecture: A Technical Overview',
+            desc: 'System architecture, model pipeline, audio processing, NLP layers, and output generation. A comprehensive look at how ClinixSummary transforms clinical audio into structured documentation.',
+            icon: 'architecture',
+            date: 'March 2025',
+            pdf: 'docs/whitepapers/clinixsummary-architecture-overview-2025.pdf'
         }
     ];
 
