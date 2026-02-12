@@ -236,7 +236,7 @@ const PricingSection = `
                 <div class="pricing-card">
                     <div class="plan-name">Forever Free</div>
                     <div class="plan-price">$0 <span>/mo</span></div>
-                    <p class="plan-period" data-i18n="pricing.free_credits">50 credits / month</p>
+                    <p class="plan-period" data-i18n="pricing.free_credits">25 credits / month</p>
                     <ul class="plan-features">
                         <li data-i18n="pricing.free_f1">Full access to the console</li>
                         <li data-i18n="pricing.free_f3">No credit card required</li>
@@ -268,51 +268,78 @@ const PricingSection = `
                     </ul>
                     <button class="btn-outline" style="width: 100%;" onclick="showToast('Subscribing to Pioneer 1800.'); return false;" data-i18n="pricing.pioneer_cta">Subscribe</button>
                 </div>
+            </div>
 
-                <div class="pricing-card featured" style="border-color: #4b88d3;">
-                    <div style="margin-bottom: 8px;"><span class="beta-tag" style="background: #E8F5FF; color: #4b88d3; font-weight: 700;" data-i18n="pricing.most_popular">Most Popular</span></div>
-                    <div class="plan-name">Productive 3000</div>
-                    <div class="plan-price">$29.99 <span>/mo</span></div>
-                    <p class="plan-period" data-i18n="pricing.productive_credits">250 credits / month</p>
-                    <ul class="plan-features">
-                        <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
-                        <li data-i18n="pricing.productive_f4">All specialty access</li>
-                        <li data-i18n="pricing.productive_f5">Priority email support</li>
-                    </ul>
-                    <button class="btn-primary" style="width: 100%;" onclick="showToast('Subscribing to Productive 3000.'); return false;" data-i18n="pricing.productive_cta">Subscribe</button>
-                </div>
+            <div id="pricing-expanded" style="display: none;">
+                <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top: 24px;">
 
-                <div class="pricing-card">
-                    <div class="plan-name">Prolific 6000</div>
-                    <div class="plan-price">$49.99 <span>/mo</span></div>
-                    <p class="plan-period" data-i18n="pricing.prolific_credits">500 credits / month</p>
-                    <ul class="plan-features">
-                        <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
-                        <li data-i18n="pricing.prolific_f4">All specialty access</li>
-                        <li data-i18n="pricing.prolific_f3">Dedicated API access</li>
-                    </ul>
-                    <button class="btn-outline" style="width: 100%;" onclick="showToast('Subscribing to Prolific 6000.'); return false;" data-i18n="pricing.prolific_cta">Subscribe</button>
-                </div>
+                    <div class="pricing-card featured" style="border-color: #4b88d3;">
+                        <div style="margin-bottom: 8px;"><span class="beta-tag" style="background: #E8F5FF; color: #4b88d3; font-weight: 700;" data-i18n="pricing.most_popular">Most Popular</span></div>
+                        <div class="plan-name">Productive 3000</div>
+                        <div class="plan-price">$29.99 <span>/mo</span></div>
+                        <p class="plan-period" data-i18n="pricing.productive_credits">250 credits / month</p>
+                        <ul class="plan-features">
+                            <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
+                            <li data-i18n="pricing.productive_f4">All specialty access</li>
+                            <li data-i18n="pricing.productive_f5">Priority email support</li>
+                        </ul>
+                        <button class="btn-primary" style="width: 100%;" onclick="showToast('Subscribing to Productive 3000.'); return false;" data-i18n="pricing.productive_cta">Subscribe</button>
+                    </div>
 
-                <div class="pricing-card">
-                    <div class="plan-name">Plan Enterprise</div>
-                    <div class="plan-price">Custom</div>
-                    <p class="plan-period" data-i18n="pricing.enterprise_credits">Custom credits</p>
-                    <ul class="plan-features">
-                        <li data-i18n="pricing.enterprise_f4">Custom integrations and rollout support</li>
-                        <li data-i18n="pricing.enterprise_f5">Dedicated success manager</li>
-                        <li data-i18n="pricing.enterprise_f2">Ambient mode & team workflows</li>
-                    </ul>
-                    <a href="#contact" class="btn-primary" style="width: 100%; text-align: center; background-color: var(--accent); color: var(--text-primary);" onclick="setTimeout(function(){ var sel = document.getElementById('contact-topic'); if(sel) sel.value='Enterprise Licensing'; }, 200);" data-i18n="pricing.enterprise_cta">Contact sales</a>
+                    <div class="pricing-card">
+                        <div class="plan-name">Prolific 6000</div>
+                        <div class="plan-price">$49.99 <span>/mo</span></div>
+                        <p class="plan-period" data-i18n="pricing.prolific_credits">500 credits / month</p>
+                        <ul class="plan-features">
+                            <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
+                            <li data-i18n="pricing.prolific_f4">All specialty access</li>
+                            <li data-i18n="pricing.prolific_f3">Dedicated API access</li>
+                        </ul>
+                        <button class="btn-outline" style="width: 100%;" onclick="showToast('Subscribing to Prolific 6000.'); return false;" data-i18n="pricing.prolific_cta">Subscribe</button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="plan-name">Plan Enterprise</div>
+                        <div class="plan-price">Custom</div>
+                        <p class="plan-period" data-i18n="pricing.enterprise_credits">Custom credits</p>
+                        <ul class="plan-features">
+                            <li data-i18n="pricing.enterprise_f4">Custom integrations and rollout support</li>
+                            <li data-i18n="pricing.enterprise_f5">Dedicated success manager</li>
+                            <li data-i18n="pricing.enterprise_f2">Ambient mode & team workflows</li>
+                        </ul>
+                        <a href="#contact" class="btn-primary" style="width: 100%; text-align: center; background-color: var(--accent); color: var(--text-primary);" onclick="setTimeout(function(){ var sel = document.getElementById('contact-topic'); if(sel) sel.value='Enterprise Licensing'; }, 200);" data-i18n="pricing.enterprise_cta">Contact sales</a>
+                    </div>
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 40px; font-size: 14px; color: var(--text-secondary);" data-i18n="pricing.enterprise_question">
+            <div style="text-align: center; margin-top: 32px;">
+                <button id="pricing-toggle" class="btn-outline" style="padding: 12px 32px; font-size: 15px; display: inline-flex; align-items: center; gap: 8px;" onclick="togglePricingPlans()">
+                    <span id="pricing-toggle-text" data-i18n="pricing.see_all_plans">See all plans</span>
+                    <span id="pricing-toggle-icon" class="material-symbols-rounded" style="font-size: 20px; transition: transform 0.3s;">expand_more</span>
+                </button>
+            </div>
+
+            <div style="text-align: center; margin-top: 24px; font-size: 14px; color: var(--text-secondary);" data-i18n="pricing.enterprise_question">
                 Looking for Enterprise or Organizational licensing?
             </div>
         </div>
     </section>
 `;
+
+function togglePricingPlans() {
+    var expanded = document.getElementById('pricing-expanded');
+    var text = document.getElementById('pricing-toggle-text');
+    var icon = document.getElementById('pricing-toggle-icon');
+    if (expanded.style.display === 'none') {
+        expanded.style.display = 'block';
+        text.textContent = typeof t === 'function' ? t('pricing.show_fewer_plans', 'Show fewer plans') : 'Show fewer plans';
+        icon.style.transform = 'rotate(180deg)';
+    } else {
+        expanded.style.display = 'none';
+        text.textContent = typeof t === 'function' ? t('pricing.see_all_plans', 'See all plans') : 'See all plans';
+        icon.style.transform = 'rotate(0deg)';
+    }
+}
 
 function HomePage() {
     return HeroSection + CoreArchitectureSection + CalculatorSection + CapabilitiesSection + OutcomesSection + PricingSection;
