@@ -121,6 +121,13 @@ const I18n = (() => {
             if (val && val !== key) el.textContent = val;
         });
 
+        // innerHTML (for elements containing markup like <strong>, <a>)
+        document.querySelectorAll('[data-i18n-html]').forEach(el => {
+            const key = el.getAttribute('data-i18n-html');
+            const val = t(key);
+            if (val && val !== key) el.innerHTML = val;
+        });
+
         // placeholders
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
             const key = el.getAttribute('data-i18n-placeholder');

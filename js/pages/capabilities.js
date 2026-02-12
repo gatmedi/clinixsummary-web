@@ -93,9 +93,9 @@ function CapMedicalPage() {
         ],
         extraContent: `
             <div class="subpage-header" style="margin-top: 20px;">
-                <span class="kicker">Breadth & Depth</span>
-                <h3 class="section-title">One engine. Dozens of specialties.</h3>
-                <p class="section-copy">Whether you practise family medicine, cardiology, gastroenterology, pulmonology, endocrinology, rheumatology, nephrology, haematology, oncology, ENT, urology, ophthalmology, emergency medicine, or any other discipline \u2014 ClinixSummary adapts to your clinical language and documentation requirements.</p>
+                <span class="kicker" data-i18n="cap_medical.extra_kicker">Breadth & Depth</span>
+                <h3 class="section-title" data-i18n="cap_medical.extra_title">One engine. Dozens of specialties.</h3>
+                <p class="section-copy" data-i18n="cap_medical.extra_desc">Whether you practise family medicine, cardiology, gastroenterology, pulmonology, endocrinology, rheumatology, nephrology, haematology, oncology, ENT, urology, ophthalmology, emergency medicine, or any other discipline \u2014 ClinixSummary adapts to your clinical language and documentation requirements.</p>
             </div>
         `,
         ctaTitle: 'Start documenting smarter across every specialty.',
@@ -230,9 +230,9 @@ function CapAlliedHealthPage() {
         <section class="subpage-container">
             <div class="page-width">
                 <div class="subpage-header">
-                    <span class="kicker">Allied Health</span>
-                    <h2 class="subpage-title">Purpose-Built Documentation for Allied Health Professionals.</h2>
-                    <p class="subpage-copy">Allied health documentation is fundamentally different from physician notes \u2014 different terminology, assessment frameworks, outcome measures and regulatory expectations. ClinixSummary has dedicated modules for each allied health discipline, so your notes reflect the way you actually practise.</p>
+                    <span class="kicker" data-i18n="allied.kicker">Allied Health</span>
+                    <h2 class="subpage-title" data-i18n="allied.title">Purpose-Built Documentation for Allied Health Professionals.</h2>
+                    <p class="subpage-copy" data-i18n="allied.desc">Allied health documentation is fundamentally different from physician notes \u2014 different terminology, assessment frameworks, outcome measures and regulatory expectations. ClinixSummary has dedicated modules for each allied health discipline, so your notes reflect the way you actually practise.</p>
                 </div>
 
                 <!-- Differentiator callout -->
@@ -240,98 +240,98 @@ function CapAlliedHealthPage() {
                     <div style="display: flex; align-items: flex-start; gap: 16px;">
                         <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent); flex-shrink: 0;">difference</span>
                         <div>
-                            <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Why generic scribe tools fall short</h3>
-                            <p style="color: var(--text-secondary); line-height: 1.7;">Most AI scribes are designed around the physician encounter. Allied health professionals use distinct clinical reasoning models, discipline\u2011specific assessment tools and outcome measures that generic systems simply miss. ClinixSummary\u2019s allied health modules are trained on real\u2011world physiotherapy, occupational therapy and speech &amp; language therapy documentation \u2014 capturing the data points that matter to your profession.</p>
+                            <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;" data-i18n="allied.callout_title">Why generic scribe tools fall short</h3>
+                            <p style="color: var(--text-secondary); line-height: 1.7;" data-i18n="allied.callout_desc">Most AI scribes are designed around the physician encounter. Allied health professionals use distinct clinical reasoning models, discipline\u2011specific assessment tools and outcome measures that generic systems simply miss. ClinixSummary\u2019s allied health modules are trained on real\u2011world physiotherapy, occupational therapy and speech &amp; language therapy documentation \u2014 capturing the data points that matter to your profession.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Physiotherapy -->
                 <div class="subpage-header">
-                    <span class="kicker">Physiotherapy</span>
-                    <h3 class="section-title">Move from assessment to plan in seconds.</h3>
-                    <p class="section-copy">ClinixSummary\u2019s physiotherapy module captures ROM measurements, strength grades, functional tests and special tests from your clinical narrative, then structures them into treatment plans and progress notes that meet payer and regulatory standards.</p>
+                    <span class="kicker" data-i18n="allied.physio_kicker">Physiotherapy</span>
+                    <h3 class="section-title" data-i18n="allied.physio_title">Move from assessment to plan in seconds.</h3>
+                    <p class="section-copy" data-i18n="allied.physio_desc">ClinixSummary\u2019s physiotherapy module captures ROM measurements, strength grades, functional tests and special tests from your clinical narrative, then structures them into treatment plans and progress notes that meet payer and regulatory standards.</p>
                 </div>
 
                 <div class="grid-4" style="margin-bottom: 60px;">
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">straighten</div>
-                        <h3>ROM & Strength</h3>
-                        <p>Capture range\u2011of\u2011motion measurements and manual muscle testing grades in structured, comparable formats across sessions.</p>
+                        <h3 data-i18n="allied.physio_f1_title">ROM & Strength</h3>
+                        <p data-i18n="allied.physio_f1_desc">Capture range\u2011of\u2011motion measurements and manual muscle testing grades in structured, comparable formats across sessions.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">exercise</div>
-                        <h3>Functional Tests</h3>
-                        <p>Document special tests, functional outcome measures and standardised assessment scores with automatic scoring context.</p>
+                        <h3 data-i18n="allied.physio_f2_title">Functional Tests</h3>
+                        <p data-i18n="allied.physio_f2_desc">Document special tests, functional outcome measures and standardised assessment scores with automatic scoring context.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">assignment</div>
-                        <h3>Treatment Plans</h3>
-                        <p>Generate goal\u2011oriented treatment plans with short\u2011term and long\u2011term objectives, modalities, frequency and expected timelines.</p>
+                        <h3 data-i18n="allied.physio_f3_title">Treatment Plans</h3>
+                        <p data-i18n="allied.physio_f3_desc">Generate goal\u2011oriented treatment plans with short\u2011term and long\u2011term objectives, modalities, frequency and expected timelines.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">trending_up</div>
-                        <h3>Progress Notes</h3>
-                        <p>Track patient progress against baseline measurements with structured progress notes that clearly demonstrate clinical change.</p>
+                        <h3 data-i18n="allied.physio_f4_title">Progress Notes</h3>
+                        <p data-i18n="allied.physio_f4_desc">Track patient progress against baseline measurements with structured progress notes that clearly demonstrate clinical change.</p>
                     </div>
                 </div>
 
                 <!-- Occupational Therapy -->
                 <div class="subpage-header">
-                    <span class="kicker">Occupational Therapy</span>
-                    <h3 class="section-title">Document function, not just impairment.</h3>
-                    <p class="section-copy">Occupational therapy is centred on function and participation. Our OT module captures functional assessments, ADL evaluations and goal\u2011oriented planning in the language and frameworks that occupational therapists actually use.</p>
+                    <span class="kicker" data-i18n="allied.ot_kicker">Occupational Therapy</span>
+                    <h3 class="section-title" data-i18n="allied.ot_title">Document function, not just impairment.</h3>
+                    <p class="section-copy" data-i18n="allied.ot_desc">Occupational therapy is centred on function and participation. Our OT module captures functional assessments, ADL evaluations and goal\u2011oriented planning in the language and frameworks that occupational therapists actually use.</p>
                 </div>
 
                 <div class="grid-3" style="margin-bottom: 60px;">
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">accessibility_new</div>
-                        <h3>Functional Assessments</h3>
-                        <p>Capture upper\u2011limb function, cognitive assessments, sensory evaluations and standardised OT outcome measures in structured formats.</p>
+                        <h3 data-i18n="allied.ot_f1_title">Functional Assessments</h3>
+                        <p data-i18n="allied.ot_f1_desc">Capture upper\u2011limb function, cognitive assessments, sensory evaluations and standardised OT outcome measures in structured formats.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">home_health</div>
-                        <h3>ADL Evaluations</h3>
-                        <p>Document activities of daily living performance, independence levels and assistive device requirements with consistent, measurable descriptors.</p>
+                        <h3 data-i18n="allied.ot_f2_title">ADL Evaluations</h3>
+                        <p data-i18n="allied.ot_f2_desc">Document activities of daily living performance, independence levels and assistive device requirements with consistent, measurable descriptors.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">target</div>
-                        <h3>Goal-Oriented Planning</h3>
-                        <p>Generate client\u2011centred, occupation\u2011based goals with measurable criteria, timeframes and intervention strategies aligned to OT practice frameworks.</p>
+                        <h3 data-i18n="allied.ot_f3_title">Goal-Oriented Planning</h3>
+                        <p data-i18n="allied.ot_f3_desc">Generate client\u2011centred, occupation\u2011based goals with measurable criteria, timeframes and intervention strategies aligned to OT practice frameworks.</p>
                     </div>
                 </div>
 
                 <!-- Speech & Language Therapy -->
                 <div class="subpage-header">
-                    <span class="kicker">Speech &amp; Language Therapy</span>
-                    <h3 class="section-title">Capture every dimension of communication care.</h3>
-                    <p class="section-copy">From articulation and fluency to voice, language and swallowing disorders, ClinixSummary\u2019s SLT module recognises the full breadth of speech &amp; language therapy terminology and generates documentation that reflects your clinical expertise.</p>
+                    <span class="kicker" data-i18n="allied.slt_kicker">Speech &amp; Language Therapy</span>
+                    <h3 class="section-title" data-i18n="allied.slt_title">Capture every dimension of communication care.</h3>
+                    <p class="section-copy" data-i18n="allied.slt_desc">From articulation and fluency to voice, language and swallowing disorders, ClinixSummary\u2019s SLT module recognises the full breadth of speech &amp; language therapy terminology and generates documentation that reflects your clinical expertise.</p>
                 </div>
 
                 <div class="grid-3" style="margin-bottom: 60px;">
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">record_voice_over</div>
-                        <h3>Speech Assessment</h3>
-                        <p>Document articulation inventories, phonological processes, fluency profiles and voice quality assessments in structured, standardised formats.</p>
+                        <h3 data-i18n="allied.slt_f1_title">Speech Assessment</h3>
+                        <p data-i18n="allied.slt_f1_desc">Document articulation inventories, phonological processes, fluency profiles and voice quality assessments in structured, standardised formats.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">spellcheck</div>
-                        <h3>SLT Terminology</h3>
-                        <p>Our models are trained on speech &amp; language therapy\u2011specific vocabulary \u2014 from CAPE\u2011V parameters to FOIS levels \u2014 so your notes use the right clinical language.</p>
+                        <h3 data-i18n="allied.slt_f2_title">SLT Terminology</h3>
+                        <p data-i18n="allied.slt_f2_desc">Our models are trained on speech &amp; language therapy\u2011specific vocabulary \u2014 from CAPE\u2011V parameters to FOIS levels \u2014 so your notes use the right clinical language.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">local_dining</div>
-                        <h3>Dysphagia Documentation</h3>
-                        <p>Capture IDDSI levels, swallowing assessment findings, aspiration risk factors and diet texture recommendations with clinical precision.</p>
+                        <h3 data-i18n="allied.slt_f3_title">Dysphagia Documentation</h3>
+                        <p data-i18n="allied.slt_f3_desc">Capture IDDSI levels, swallowing assessment findings, aspiration risk factors and diet texture recommendations with clinical precision.</p>
                     </div>
                 </div>
 
                 <!-- CTA -->
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
-                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;">Start documenting with purpose-built allied health modules.</h2>
+                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="allied.cta_title">Start documenting with purpose-built allied health modules.</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Starting free trial for allied health.'); return false;">Start Free Trial</a>
-                        <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Contact Sales</a>
+                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Starting free trial for allied health.'); return false;" data-i18n="allied.cta_label">Start Free Trial</a>
+                        <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="common.contact_us">Contact Sales</a>
                     </div>
                 </div>
             </div>
@@ -455,8 +455,8 @@ function CapOperativePage() {
                 <div style="display: flex; align-items: flex-start; gap: 16px;">
                     <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent); flex-shrink: 0;">headphones</span>
                     <div>
-                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Auto Ambient Dictate \u2014 Operative Mode</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.7;">ClinixSummary\u2019s Auto Ambient Dictate feature includes a dedicated operative mode that automatically detects surgical narration, distinguishes it from team communication and background noise, and begins structured documentation capture without manual activation. Dictate naturally while you operate \u2014 your report is waiting when you\u2019re done.</p>
+                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;" data-i18n="cap_operative.extra_title">Auto Ambient Dictate \u2014 Operative Mode</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7;" data-i18n="cap_operative.extra_desc">ClinixSummary\u2019s Auto Ambient Dictate feature includes a dedicated operative mode that automatically detects surgical narration, distinguishes it from team communication and background noise, and begins structured documentation capture without manual activation. Dictate naturally while you operate \u2014 your report is waiting when you\u2019re done.</p>
                     </div>
                 </div>
             </div>
@@ -476,68 +476,68 @@ function BillingAssistPage() {
         <section class="subpage-container">
             <div class="page-width">
                 <div class="subpage-header">
-                    <span class="kicker">Billing Assistance</span>
-                    <h2 class="subpage-title">Intelligent Billing Assistance for Healthcare Organisations.</h2>
-                    <p class="subpage-copy">ClinixSummary\u2019s Billing Assistance module \u2014 available exclusively for organisation and enterprise accounts \u2014 captures the clinical activities, procedures and services performed during every encounter and maps them to your organisation\u2019s own CPT code library. The result: fewer coding errors, eliminated missed charges and faster claims submission.</p>
+                    <span class="kicker" data-i18n="billing.kicker">Billing Assistance</span>
+                    <h2 class="subpage-title" data-i18n="billing.title">Intelligent Billing Assistance for Healthcare Organisations.</h2>
+                    <p class="subpage-copy" data-i18n="billing.desc">ClinixSummary\u2019s Billing Assistance module \u2014 available exclusively for organisation and enterprise accounts \u2014 captures the clinical activities, procedures and services performed during every encounter and maps them to your organisation\u2019s own CPT code library. The result: fewer coding errors, eliminated missed charges and faster claims submission.</p>
                 </div>
 
                 <!-- Enterprise badge -->
                 <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(59,197,214,0.1); border: 1px solid rgba(59,197,214,0.3); border-radius: 8px; padding: 10px 20px; margin-bottom: 48px;">
                     <span class="material-symbols-rounded" style="font-size: 20px; color: var(--accent);">verified</span>
-                    <span style="font-size: 14px; font-weight: 600; color: var(--text-primary);">Organisation & Enterprise Feature</span>
+                    <span style="font-size: 14px; font-weight: 600; color: var(--text-primary);" data-i18n="billing.badge">Organisation & Enterprise Feature</span>
                 </div>
 
                 <!-- How it works -->
                 <div class="subpage-header">
-                    <span class="kicker" data-i18n="cap_medical.extra_kicker">How It Works</span>
-                    <h3 class="section-title">From encounter to suggested codes in seconds.</h3>
-                    <p class="section-copy">During each encounter, ClinixSummary identifies billable activities from the clinical narrative and cross\u2011references them against your organisation\u2019s CPT code library. Suggested codes are presented for clinician review \u2014 never submitted as final billing without human approval.</p>
+                    <span class="kicker" data-i18n="billing.how_kicker">How It Works</span>
+                    <h3 class="section-title" data-i18n="billing.how_title">From encounter to suggested codes in seconds.</h3>
+                    <p class="section-copy" data-i18n="billing.how_desc">During each encounter, ClinixSummary identifies billable activities from the clinical narrative and cross\u2011references them against your organisation\u2019s CPT code library. Suggested codes are presented for clinician review \u2014 never submitted as final billing without human approval.</p>
                 </div>
 
                 <div class="grid-4" style="margin-bottom: 60px;">
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">mic</div>
-                        <h3>Capture</h3>
-                        <p>Clinical activities, procedures and services are identified in real time from the consultation narrative or post\u2011visit dictation.</p>
+                        <h3 data-i18n="billing.step1_title">Capture</h3>
+                        <p data-i18n="billing.step1_desc">Clinical activities, procedures and services are identified in real time from the consultation narrative or post\u2011visit dictation.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">sync_alt</div>
-                        <h3>Map</h3>
-                        <p>Identified activities are mapped to your organisation\u2019s own CPT code library, respecting your internal coding policies and payer contracts.</p>
+                        <h3 data-i18n="billing.step2_title">Map</h3>
+                        <p data-i18n="billing.step2_desc">Identified activities are mapped to your organisation\u2019s own CPT code library, respecting your internal coding policies and payer contracts.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">checklist</div>
-                        <h3>Suggest</h3>
-                        <p>A set of suggested codes is generated for the clinician or coding team to review, approve or adjust before submission.</p>
+                        <h3 data-i18n="billing.step3_title">Suggest</h3>
+                        <p data-i18n="billing.step3_desc">A set of suggested codes is generated for the clinician or coding team to review, approve or adjust before submission.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">send</div>
-                        <h3>Submit</h3>
-                        <p>Approved codes flow into your existing billing pipeline, reducing turnaround time and improving first\u2011pass claim acceptance rates.</p>
+                        <h3 data-i18n="billing.step4_title">Submit</h3>
+                        <p data-i18n="billing.step4_desc">Approved codes flow into your existing billing pipeline, reducing turnaround time and improving first\u2011pass claim acceptance rates.</p>
                     </div>
                 </div>
 
                 <!-- Key benefits -->
                 <div class="subpage-header">
-                    <span class="kicker">Key Benefits</span>
-                    <h3 class="section-title">Measurable impact on your revenue cycle.</h3>
+                    <span class="kicker" data-i18n="billing.benefits_kicker">Key Benefits</span>
+                    <h3 class="section-title" data-i18n="billing.benefits_title">Measurable impact on your revenue cycle.</h3>
                 </div>
 
                 <div class="grid-3" style="margin-bottom: 60px;">
                     <div class="text-group" style="border-bottom: none;">
                         <span class="material-symbols-rounded list-item-icon">bug_report</span>
-                        <h3>Reduce Coding Errors</h3>
-                        <p>Automated code suggestions eliminate transposition errors, incorrect modifiers and mismatched diagnosis\u2011procedure pairings that cause claim rejections.</p>
+                        <h3 data-i18n="billing.benefit1_title">Reduce Coding Errors</h3>
+                        <p data-i18n="billing.benefit1_desc">Automated code suggestions eliminate transposition errors, incorrect modifiers and mismatched diagnosis\u2011procedure pairings that cause claim rejections.</p>
                     </div>
                     <div class="text-group" style="border-bottom: none;">
                         <span class="material-symbols-rounded list-item-icon">money_off</span>
-                        <h3>Eliminate Missed Charges</h3>
-                        <p>Every billable activity captured during the encounter is surfaced for review, ensuring that no legitimate charge goes unsubmitted \u2014 a common source of revenue leakage.</p>
+                        <h3 data-i18n="billing.benefit2_title">Eliminate Missed Charges</h3>
+                        <p data-i18n="billing.benefit2_desc">Every billable activity captured during the encounter is surfaced for review, ensuring that no legitimate charge goes unsubmitted \u2014 a common source of revenue leakage.</p>
                     </div>
                     <div class="text-group" style="border-bottom: none;">
                         <span class="material-symbols-rounded list-item-icon">speed</span>
-                        <h3>Accelerate Claims</h3>
-                        <p>Faster, more accurate code generation shortens the revenue cycle from encounter to payment, improving cash flow and reducing administrative overhead.</p>
+                        <h3 data-i18n="billing.benefit3_title">Accelerate Claims</h3>
+                        <p data-i18n="billing.benefit3_desc">Faster, more accurate code generation shortens the revenue cycle from encounter to payment, improving cash flow and reducing administrative overhead.</p>
                     </div>
                 </div>
 
@@ -546,18 +546,18 @@ function BillingAssistPage() {
                     <div style="display: flex; align-items: flex-start; gap: 16px;">
                         <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent); flex-shrink: 0;">info</span>
                         <div>
-                            <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Suggested codes, not final submissions</h3>
-                            <p style="color: var(--text-secondary); line-height: 1.7;">Billing Assistance generates <strong>suggested codes for review</strong>. All codes require clinician or coding team approval before they become part of a billing submission. This human\u2011in\u2011the\u2011loop design ensures accuracy, compliance and accountability at every step.</p>
+                            <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;" data-i18n="billing.clarification_title">Suggested codes, not final submissions</h3>
+                            <p style="color: var(--text-secondary); line-height: 1.7;" data-i18n="billing.clarification_desc">Billing Assistance generates <strong>suggested codes for review</strong>. All codes require clinician or coding team approval before they become part of a billing submission. This human\u2011in\u2011the\u2011loop design ensures accuracy, compliance and accountability at every step.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- CTA -->
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
-                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;">Learn more about Billing Assistance for your organisation.</h2>
+                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="billing.cta_title">Learn more about Billing Assistance for your organisation.</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Requesting Billing Assistance information.'); return false;">Request Information</a>
-                        <a href="#organizations" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Enterprise Plans</a>
+                        <a href="#contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Requesting Billing Assistance information.'); return false;" data-i18n="billing.cta_label">Request Information</a>
+                        <a href="#organizations" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="billing.cta_secondary">Enterprise Plans</a>
                     </div>
                 </div>
             </div>
@@ -603,32 +603,32 @@ function CapPatientLeafletPage() {
                 <div style="display: flex; align-items: flex-start; gap: 16px;">
                     <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent); flex-shrink: 0;">toggle_on</span>
                     <div>
-                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">How It Works</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.7;">When you enable the Patient Information Leaflet option before or during a consultation, ClinixSummary appends a patient-facing summary to the end of your clinical note. The summary is generated from the same encounter data but rewritten for a non-clinical audience. You review and approve the summary before handing it to the patient \u2014 ensuring accuracy and personalisation.</p>
+                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;" data-i18n="cap_leaflet.extra_how_title">How It Works</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7;" data-i18n="cap_leaflet.extra_how_desc">When you enable the Patient Information Leaflet option before or during a consultation, ClinixSummary appends a patient-facing summary to the end of your clinical note. The summary is generated from the same encounter data but rewritten for a non-clinical audience. You review and approve the summary before handing it to the patient \u2014 ensuring accuracy and personalisation.</p>
                     </div>
                 </div>
             </div>
 
             <div class="subpage-header" style="margin-top: 60px;">
                 <span class="kicker" data-i18n="cap_leaflet.extra_kicker">Benefits</span>
-                <h3 class="section-title">Better-informed patients, better outcomes.</h3>
+                <h3 class="section-title" data-i18n="cap_leaflet.extra_title">Better-informed patients, better outcomes.</h3>
             </div>
 
             <div class="grid-3" style="margin-bottom: 20px;">
                 <div class="text-group" style="border-bottom: none;">
                     <span class="material-symbols-rounded list-item-icon">sentiment_satisfied</span>
-                    <h3>Improved Patient Satisfaction</h3>
-                    <p>Patients who receive written summaries of their visit report higher satisfaction, better understanding of their condition, and greater confidence in their care plan.</p>
+                    <h3 data-i18n="cap_leaflet.benefit1_title">Improved Patient Satisfaction</h3>
+                    <p data-i18n="cap_leaflet.benefit1_desc">Patients who receive written summaries of their visit report higher satisfaction, better understanding of their condition, and greater confidence in their care plan.</p>
                 </div>
                 <div class="text-group" style="border-bottom: none;">
                     <span class="material-symbols-rounded list-item-icon">medication</span>
-                    <h3>Better Treatment Adherence</h3>
-                    <p>Research shows that patients who receive written discharge instructions are significantly more likely to follow treatment plans, take medications correctly and attend follow-up appointments.</p>
+                    <h3 data-i18n="cap_leaflet.benefit2_title">Better Treatment Adherence</h3>
+                    <p data-i18n="cap_leaflet.benefit2_desc">Research shows that patients who receive written discharge instructions are significantly more likely to follow treatment plans, take medications correctly and attend follow-up appointments.</p>
                 </div>
                 <div class="text-group" style="border-bottom: none;">
                     <span class="material-symbols-rounded list-item-icon">reduce_capacity</span>
-                    <h3>Fewer Follow-up Calls</h3>
-                    <p>Clear, written information reduces the volume of \u201cWhat did the doctor say?\u201d calls to your front desk, freeing staff time and reducing administrative burden.</p>
+                    <h3 data-i18n="cap_leaflet.benefit3_title">Fewer Follow-up Calls</h3>
+                    <p data-i18n="cap_leaflet.benefit3_desc">Clear, written information reduces the volume of \u201cWhat did the doctor say?\u201d calls to your front desk, freeing staff time and reducing administrative burden.</p>
                 </div>
             </div>
         `,
@@ -676,8 +676,8 @@ function ReferralsPage() {
                 <div style="display: flex; align-items: flex-start; gap: 16px;">
                     <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent); flex-shrink: 0;">info</span>
                     <div>
-                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Part of the Clinical Note Workflow</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.7;">Referrals are generated as part of the clinical note \u2014 not as a separate step. This means the referral letter is always contextually accurate and up to date with the encounter that triggered it. The referral is appended to the end of your note and can be exported independently as a PDF or integrated directly into your EHR referral workflow.</p>
+                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;" data-i18n="referrals_page.extra_title">Part of the Clinical Note Workflow</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7;" data-i18n="referrals_page.extra_desc">Referrals are generated as part of the clinical note \u2014 not as a separate step. This means the referral letter is always contextually accurate and up to date with the encounter that triggered it. The referral is appended to the end of your note and can be exported independently as a PDF or integrated directly into your EHR referral workflow.</p>
                     </div>
                 </div>
             </div>
@@ -724,24 +724,24 @@ function ICDCodingPage() {
         extraContent: `
             <div class="subpage-header" style="margin-top: 20px;">
                 <span class="kicker" data-i18n="icd_page.extra_kicker">Impact</span>
-                <h3 class="section-title">Measurable improvements in coding accuracy.</h3>
+                <h3 class="section-title" data-i18n="icd_page.extra_title">Measurable improvements in coding accuracy.</h3>
             </div>
 
             <div class="grid-3" style="margin-bottom: 20px;">
                 <div class="text-group" style="border-bottom: none;">
                     <span class="material-symbols-rounded list-item-icon">trending_down</span>
-                    <h3>Fewer Claim Denials</h3>
-                    <p>Accurate, specific codes reduce the mismatches and errors that trigger claim rejections, improving first-pass acceptance rates and reducing rework.</p>
+                    <h3 data-i18n="icd_page.impact1_title">Fewer Claim Denials</h3>
+                    <p data-i18n="icd_page.impact1_desc">Accurate, specific codes reduce the mismatches and errors that trigger claim rejections, improving first-pass acceptance rates and reducing rework.</p>
                 </div>
                 <div class="text-group" style="border-bottom: none;">
                     <span class="material-symbols-rounded list-item-icon">attach_money</span>
-                    <h3>Reduced Revenue Leakage</h3>
-                    <p>Under-coding costs practices thousands annually. ClinixSummary captures the full clinical picture, ensuring that all documented conditions are properly coded.</p>
+                    <h3 data-i18n="icd_page.impact2_title">Reduced Revenue Leakage</h3>
+                    <p data-i18n="icd_page.impact2_desc">Under-coding costs practices thousands annually. ClinixSummary captures the full clinical picture, ensuring that all documented conditions are properly coded.</p>
                 </div>
                 <div class="text-group" style="border-bottom: none;">
                     <span class="material-symbols-rounded list-item-icon">analytics</span>
-                    <h3>Better Analytics</h3>
-                    <p>Consistent, accurate coding improves population health analytics, quality reporting and benchmarking across your practice or health system.</p>
+                    <h3 data-i18n="icd_page.impact3_title">Better Analytics</h3>
+                    <p data-i18n="icd_page.impact3_desc">Consistent, accurate coding improves population health analytics, quality reporting and benchmarking across your practice or health system.</p>
                 </div>
             </div>
         `,
