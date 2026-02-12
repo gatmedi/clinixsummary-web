@@ -514,9 +514,10 @@
     "cert_desc": "Des processus de certification continus et des audits par des tiers garantissent que ClinixSummary respecte et depasse les referentiels de securite et de conformite du secteur de la sante.",
     "transcript_desc": "Retention courte / controle par l'utilisateur",
     "deletion_desc": "Export et suppression definitive a tout moment",
-    "resources_desc": "Telechargez notre notice de confidentialite patient imprimable a afficher dans votre salle d'attente ou votre cabinet. Elle explique le fonctionnement de la documentation par IA, le traitement des enregistrements et rassure les patients sur la protection de leur vie privee.",
+    "resources_desc": "Imprimez notre dépliant de confidentialité patient dans n'importe quelle langue et affichez-le dans votre salle d'attente ou votre cabinet. Il explique le fonctionnement de la documentation IA, ce qui arrive à l'enregistrement, et rassure les patients sur leur vie privée.",
     "leaflet_title": "Avis de confidentialite patient - Feuillet imprimable",
-    "leaflet_desc": "Feuillet A4 recto expliquant l'utilisation des enregistrements, le chiffrement, la suppression des donnees et les droits des patients. Concu pour les murs du cabinet et les salles d'attente."
+    "leaflet_desc": "Disponible en 6 langues. Conçu pour les murs de cabinet et les salles d'attente.",
+    "leaflet_open": "Ouvrir le dépliant"
   },
   "contact": {
     "kicker": "Contactez-nous",
@@ -1123,5 +1124,31 @@
   "meet_languages": {
     "kicker": "Langues et multilinguisme",
     "title": "Documentation multilingue pour une pratique internationale."
+  },
+  "leaflet": {
+    "page_title": "Avis de confidentialité patient",
+    "subtitle": "Un dépliant imprimable pour votre salle d'attente ou votre cabinet.",
+    "lang_label": "Choisir la langue :",
+    "print_btn": "Imprimer / Enregistrer en PDF",
+    "heading": "De meilleurs soins grâce à une technologie avancée",
+    "intro": "Votre clinicien utilise ClinixSummary — un système de documentation par intelligence artificielle — pour améliorer la qualité de vos soins. Au lieu de saisir des notes pendant votre rendez-vous, votre clinicien peut vous accorder toute son attention.",
+    "how_title": "Comment ça fonctionne",
+    "how_desc": "Pendant votre consultation, le système écoute la conversation et convertit l'audio en texte. À partir de ce texte, un résumé clinique est généré pour votre dossier médical. Votre clinicien examine et approuve ensuite le résumé avant qu'il ne soit ajouté à votre dossier.",
+    "no_playback_title": "L'enregistrement ne peut jamais être réécoute",
+    "no_playback_desc": "L'audio est définitivement supprimé dès que votre note clinique est créée. Il ne peut être ni rejoué, ni récupéré, ni consulté par quiconque — jamais. Votre clinicien n'entend ni ne voit l'enregistrement original ni la transcription — uniquement la note finale approuvée.",
+    "secure_title": "Vos informations sont privées et sécurisées",
+    "secure_desc": "Toutes les données sont chiffrées aux normes les plus élevées et traitées dans un système privé et sécurisé. Les données de votre consultation ne sont jamais partagées avec des tiers ou des services externes.",
+    "review_title": "Votre clinicien vérifie tout",
+    "review_desc": "L'IA crée un brouillon de note à partir de la conversation. Votre clinicien examine et approuve toujours le document final avant qu'il ne fasse partie de votre dossier médical.",
+    "optout_title": "Vous gardez toujours le contrôle",
+    "optout_desc": "Si vous préférez que le système ne soit pas utilisé pendant votre visite, informez simplement votre clinicien. Vos soins ne seront en aucun cas affectés.",
+    "quote": "Cette technologie n'a qu'un seul objectif : donner à votre clinicien plus de temps pour se concentrer sur ce qui compte le plus — vous.",
+    "badge_hipaa": "Conforme HIPAA",
+    "badge_gdpr": "Conforme RGPD",
+    "badge_soc2": "SOC 2 Type II",
+    "badge_iso": "ISO 27001",
+    "footer_questions": "Des questions ? Demandez à votre clinicien ou visitez :",
+    "footer_copy": "© 2026 GATMEDI Ltd. Tous droits réservés. ClinixSummary est un produit de GATMEDI.",
+    "all_languages": "Disponible dans toutes les langues"
   }
 }

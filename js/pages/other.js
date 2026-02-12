@@ -86,15 +86,24 @@ function SecurityPage() {
                     <p class="section-copy" data-i18n="security.resources_desc">Download our printable patient privacy leaflet to display in your waiting room or consultation area. It explains how AI documentation works, what happens to the recording, and reassures patients about their privacy.</p>
                 </div>
 
-                <div style="background: var(--bg-subtle); padding: 30px; border-radius: 12px; margin-bottom: 60px; border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
-                    <span class="material-symbols-rounded" style="font-size: 48px; color: var(--accent);">description</span>
-                    <div style="flex: 1; min-width: 250px;">
-                        <h4 style="font-weight: 700; font-size: 16px; margin-bottom: 6px;" data-i18n="security.leaflet_title">Patient Privacy Notice \u2014 Printable Leaflet</h4>
-                        <p style="color: var(--text-secondary); font-size: 14px; margin: 0;" data-i18n="security.leaflet_desc">A4 single-sided leaflet explaining recording usage, encryption, data deletion, and patient rights. Designed for clinic walls and waiting rooms.</p>
+                <div style="background: var(--bg-subtle); padding: 30px; border-radius: 12px; margin-bottom: 60px; border: 1px solid var(--border-subtle);">
+                    <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px;">
+                        <span class="material-symbols-rounded" style="font-size: 48px; color: var(--accent);">description</span>
+                        <div style="flex: 1; min-width: 250px;">
+                            <h4 style="font-weight: 700; font-size: 16px; margin-bottom: 6px;" data-i18n="security.leaflet_title">Patient Privacy Notice \u2014 Printable Leaflet</h4>
+                            <p style="color: var(--text-secondary); font-size: 14px; margin: 0;" data-i18n="security.leaflet_desc">Available in 6 languages. Designed for clinic walls and waiting rooms.</p>
+                        </div>
                     </div>
-                    <a href="docs/resources/patient-privacy-notice.pdf" target="_blank" class="btn-primary" style="text-decoration: none; white-space: nowrap;">
-                        <span class="material-symbols-rounded" style="font-size: 18px; vertical-align: middle; margin-right: 4px;">download</span> Download PDF
-                    </a>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <a href="#leaflet" class="btn-primary" style="text-decoration: none; white-space: nowrap; font-size: 14px;">
+                            <span class="material-symbols-rounded" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">print</span> English
+                        </a>
+                        <a href="#leaflet" onclick="setTimeout(()=>{const b=document.querySelector('[data-leaflet-lang=fr]');if(b)b.click();},200)" class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Français</a>
+                        <a href="#leaflet" onclick="setTimeout(()=>{const b=document.querySelector('[data-leaflet-lang=es]');if(b)b.click();},200)" class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Español</a>
+                        <a href="#leaflet" onclick="setTimeout(()=>{const b=document.querySelector('[data-leaflet-lang=pt]');if(b)b.click();},200)" class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Português</a>
+                        <a href="#leaflet" onclick="setTimeout(()=>{const b=document.querySelector('[data-leaflet-lang=it]');if(b)b.click();},200)" class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Italiano</a>
+                        <a href="#leaflet" onclick="setTimeout(()=>{const b=document.querySelector('[data-leaflet-lang=ar]');if(b)b.click();},200)" class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">العربية</a>
+                    </div>
                 </div>
 
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
@@ -686,4 +695,140 @@ function StoryPage() {
             </div>
         </section>
     `;
+}
+
+function LeafletPage() {
+    const langs = [
+        { code: 'en', native: 'English' },
+        { code: 'fr', native: 'Français' },
+        { code: 'es', native: 'Español' },
+        { code: 'pt', native: 'Português' },
+        { code: 'it', native: 'Italiano' },
+        { code: 'ar', native: 'العربية' }
+    ];
+
+    const langBtns = langs.map(l =>
+        `<button class="leaflet-lang-btn" data-leaflet-lang="${l.code}">${l.native}</button>`
+    ).join('');
+
+    return `
+        <!-- Screen-only toolbar -->
+        <div class="leaflet-toolbar no-print">
+            <div class="page-width" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                    <span style="font-size: 14px; font-weight: 600; color: var(--text-secondary);" data-i18n="leaflet.lang_label">Select language:</span>
+                    <div class="leaflet-lang-group">${langBtns}</div>
+                </div>
+                <button class="btn-primary leaflet-print-btn" onclick="window.print()">
+                    <span class="material-symbols-rounded" style="font-size: 18px; vertical-align: middle; margin-right: 4px;">print</span>
+                    <span data-i18n="leaflet.print_btn">Print / Save as PDF</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Printable leaflet -->
+        <div class="leaflet-page">
+            <div class="leaflet-inner">
+                <!-- Header -->
+                <div class="leaflet-header">
+                    <div class="leaflet-logo">
+                        <img src="images/logo-wings.png" alt="ClinixSummary" class="leaflet-logo-img">
+                        <div>
+                            <div class="leaflet-brand">ClinixSummary</div>
+                            <div class="leaflet-tagline">AI-Powered Clinical Documentation</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Title block -->
+                <div class="leaflet-title-block">
+                    <h1 class="leaflet-heading" data-i18n="leaflet.heading">Better Care Through Advanced Technology</h1>
+                    <p class="leaflet-intro" data-i18n="leaflet.intro">Your clinician uses ClinixSummary — an advanced AI documentation system — to improve the quality of your care. Instead of typing notes during your appointment, your clinician can give you their full attention.</p>
+                </div>
+
+                <!-- Points -->
+                <div class="leaflet-points">
+                    <div class="leaflet-point">
+                        <span class="material-symbols-rounded leaflet-icon">mic</span>
+                        <div>
+                            <h3 data-i18n="leaflet.how_title">How it works</h3>
+                            <p data-i18n="leaflet.how_desc">During your consultation, the system listens to the conversation and converts the audio into text. From that text, a clinical summary is generated for your medical record. Your clinician then reviews and approves the summary before it is added to your record.</p>
+                        </div>
+                    </div>
+                    <div class="leaflet-point">
+                        <span class="material-symbols-rounded leaflet-icon">block</span>
+                        <div>
+                            <h3 data-i18n="leaflet.no_playback_title">The recording can never be played back</h3>
+                            <p data-i18n="leaflet.no_playback_desc">The audio is permanently deleted the moment your clinical note is created. It cannot be replayed, retrieved, or accessed by anyone — ever. Your clinician does not hear or see the original recording or the transcription — only the final approved note.</p>
+                        </div>
+                    </div>
+                    <div class="leaflet-point">
+                        <span class="material-symbols-rounded leaflet-icon">lock</span>
+                        <div>
+                            <h3 data-i18n="leaflet.secure_title">Your information is private and secure</h3>
+                            <p data-i18n="leaflet.secure_desc">All data is encrypted to the highest standards and processed within a private, secure system. Your consultation data is never shared with third parties or external services.</p>
+                        </div>
+                    </div>
+                    <div class="leaflet-point">
+                        <span class="material-symbols-rounded leaflet-icon">verified_user</span>
+                        <div>
+                            <h3 data-i18n="leaflet.review_title">Your clinician reviews everything</h3>
+                            <p data-i18n="leaflet.review_desc">The AI creates a draft note from the conversation. Your clinician always reviews and approves the final document before it becomes part of your medical record.</p>
+                        </div>
+                    </div>
+                    <div class="leaflet-point">
+                        <span class="material-symbols-rounded leaflet-icon">handshake</span>
+                        <div>
+                            <h3 data-i18n="leaflet.optout_title">You are always in control</h3>
+                            <p data-i18n="leaflet.optout_desc">If you would prefer that the system is not used during your visit, simply let your clinician know. Your care will not be affected in any way.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote -->
+                <div class="leaflet-quote">
+                    <p data-i18n="leaflet.quote">This technology exists for one reason — to give your clinician more time to focus on what matters most: you.</p>
+                </div>
+
+                <!-- Compliance badges -->
+                <div class="leaflet-badges">
+                    <span class="leaflet-badge" data-i18n="leaflet.badge_hipaa">HIPAA Compliant</span>
+                    <span class="leaflet-badge" data-i18n="leaflet.badge_gdpr">GDPR Compliant</span>
+                    <span class="leaflet-badge" data-i18n="leaflet.badge_soc2">SOC 2 Type II</span>
+                    <span class="leaflet-badge" data-i18n="leaflet.badge_iso">ISO 27001</span>
+                </div>
+
+                <!-- Footer -->
+                <div class="leaflet-footer">
+                    <p data-i18n="leaflet.footer_questions">Questions? Please ask your clinician or visit:</p>
+                    <a href="https://clinixsummary.ai" class="leaflet-url">clinixsummary.ai</a>
+                    <p class="leaflet-copy" data-i18n="leaflet.footer_copy">© 2026 GATMEDI Ltd. All rights reserved. ClinixSummary is a product of GATMEDI.</p>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+/* Leaflet language switcher — runs after page render */
+function initLeafletLangSwitcher() {
+    const btns = document.querySelectorAll('.leaflet-lang-btn');
+    if (!btns.length) return;
+
+    // Highlight current language
+    const currentLang = (typeof I18n !== 'undefined') ? I18n.locale : 'en';
+    btns.forEach(b => {
+        b.classList.toggle('active', b.dataset.leafletLang === currentLang);
+        b.addEventListener('click', () => {
+            const lang = b.dataset.leafletLang;
+            if (typeof I18n !== 'undefined') {
+                I18n.switchLanguage(lang);
+            }
+            // After re-render, re-highlight
+            setTimeout(() => {
+                document.querySelectorAll('.leaflet-lang-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.leafletLang === lang);
+                });
+            }, 100);
+        });
+    });
 }
