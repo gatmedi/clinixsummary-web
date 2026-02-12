@@ -514,9 +514,10 @@
     "cert_desc": "Processos contínuos de certificação e auditorias de terceiros garantem que o ClinixSummary atenda e supere os padrões de segurança e conformidade do setor de saúde.",
     "transcript_desc": "Retenção curta / controlada pelo usuário",
     "deletion_desc": "Exportação e exclusão permanente a qualquer momento",
-    "resources_desc": "Baixe nosso folheto imprimível de privacidade do paciente para exibir na sua sala de espera ou área de consulta. Ele explica como a documentação por IA funciona, o que acontece com a gravação e tranquiliza os pacientes sobre sua privacidade.",
+    "resources_desc": "Imprima o nosso folheto de privacidade do paciente em qualquer idioma e exiba-o na sua sala de espera ou consultório. Explica como funciona a documentação com IA, o que acontece com a gravação, e tranquiliza os pacientes sobre a sua privacidade.",
     "leaflet_title": "Aviso de Privacidade do Paciente — Folheto Imprimível",
-    "leaflet_desc": "Folheto A4 de página única explicando o uso da gravação, criptografia, exclusão de dados e direitos do paciente. Projetado para paredes de clínicas e salas de espera."
+    "leaflet_desc": "Disponível em 6 idiomas. Concebido para paredes de consultórios e salas de espera.",
+    "leaflet_open": "Abrir folheto"
   },
   "contact": {
     "kicker": "Entre em contacto",
@@ -1121,5 +1122,31 @@
     "cta_title": "Saiba mais sobre a Assistência de Faturamento para sua organização.",
     "cta_label": "Solicitar Informações",
     "cta_secondary": "Planos Empresariais"
+  },
+  "leaflet": {
+    "page_title": "Aviso de privacidade do paciente",
+    "subtitle": "Um folheto imprimível para a sua sala de espera ou consultório.",
+    "lang_label": "Selecionar idioma:",
+    "print_btn": "Imprimir / Guardar como PDF",
+    "heading": "Melhor cuidado através de tecnologia avançada",
+    "intro": "O seu médico utiliza o ClinixSummary — um sistema avançado de documentação com inteligência artificial — para melhorar a qualidade dos seus cuidados. Em vez de escrever notas durante a sua consulta, o seu médico pode dedicar-lhe toda a sua atenção.",
+    "how_title": "Como funciona",
+    "how_desc": "Durante a sua consulta, o sistema ouve a conversa e converte o áudio em texto. A partir desse texto, é gerado um resumo clínico para o seu registo médico. O seu médico revê e aprova o resumo antes de o adicionar ao seu processo.",
+    "no_playback_title": "A gravação nunca pode ser reproduzida",
+    "no_playback_desc": "O áudio é eliminado permanentemente no momento em que a sua nota clínica é criada. Não pode ser reproduzido, recuperado ou acedido por ninguém — nunca. O seu médico não ouve nem vê a gravação original nem a transcrição — apenas a nota final aprovada.",
+    "secure_title": "A sua informação é privada e segura",
+    "secure_desc": "Todos os dados são encriptados com os mais elevados padrões e processados num sistema privado e seguro. Os dados da sua consulta nunca são partilhados com terceiros ou serviços externos.",
+    "review_title": "O seu médico revê tudo",
+    "review_desc": "A IA cria um rascunho de nota a partir da conversa. O seu médico revê e aprova sempre o documento final antes de este fazer parte do seu registo médico.",
+    "optout_title": "Tem sempre o controlo",
+    "optout_desc": "Se preferir que o sistema não seja utilizado durante a sua visita, basta informar o seu médico. Os seus cuidados não serão afetados de forma alguma.",
+    "quote": "Esta tecnologia existe por uma única razão — dar ao seu médico mais tempo para se concentrar no que mais importa: você.",
+    "badge_hipaa": "Conforme HIPAA",
+    "badge_gdpr": "Conforme RGPD",
+    "badge_soc2": "SOC 2 Type II",
+    "badge_iso": "ISO 27001",
+    "footer_questions": "Perguntas? Fale com o seu médico ou visite:",
+    "footer_copy": "© 2026 GATMEDI Ltd. Todos os direitos reservados. ClinixSummary é um produto da GATMEDI.",
+    "all_languages": "Disponível em todos os idiomas"
   }
 }

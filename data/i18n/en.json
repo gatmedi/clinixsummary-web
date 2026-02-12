@@ -488,9 +488,10 @@
     "cert_desc": "Ongoing certification processes and third-party audits ensure ClinixSummary meets and exceeds healthcare industry security and compliance benchmarks.",
     "transcript_desc": "Short retention / user‑controlled",
     "deletion_desc": "Export & permanent erase at any time",
-    "resources_desc": "Download our printable patient privacy leaflet to display in your waiting room or consultation area. It explains how AI documentation works, what happens to the recording, and reassures patients about their privacy.",
+    "resources_desc": "Print our patient privacy leaflet in any language and display it in your waiting room or consultation area. It explains how AI documentation works, what happens to the recording, and reassures patients about their privacy.",
     "leaflet_title": "Patient Privacy Notice — Printable Leaflet",
-    "leaflet_desc": "A4 single-sided leaflet explaining recording usage, encryption, data deletion, and patient rights. Designed for clinic walls and waiting rooms."
+    "leaflet_desc": "Available in 6 languages. Designed for clinic walls and waiting rooms.",
+    "leaflet_open": "Open Leaflet"
   },
   "contact": {
     "kicker": "Get in Touch",
@@ -1087,5 +1088,31 @@
     "cta_title": "Learn more about Billing Assistance for your organisation.",
     "cta_label": "Request Information",
     "cta_secondary": "Enterprise Plans"
+  },
+  "leaflet": {
+    "page_title": "Patient Privacy Notice",
+    "subtitle": "A printable leaflet for your waiting room or consultation area.",
+    "lang_label": "Select language:",
+    "print_btn": "Print / Save as PDF",
+    "heading": "Better Care Through Advanced Technology",
+    "intro": "Your clinician uses ClinixSummary — an advanced AI documentation system — to improve the quality of your care. Instead of typing notes during your appointment, your clinician can give you their full attention.",
+    "how_title": "How it works",
+    "how_desc": "During your consultation, the system listens to the conversation and converts the audio into text. From that text, a clinical summary is generated for your medical record. Your clinician then reviews and approves the summary before it is added to your record.",
+    "no_playback_title": "The recording can never be played back",
+    "no_playback_desc": "The audio is permanently deleted the moment your clinical note is created. It cannot be replayed, retrieved, or accessed by anyone — ever. Your clinician does not hear or see the original recording or the transcription — only the final approved note.",
+    "secure_title": "Your information is private and secure",
+    "secure_desc": "All data is encrypted to the highest standards and processed within a private, secure system. Your consultation data is never shared with third parties or external services.",
+    "review_title": "Your clinician reviews everything",
+    "review_desc": "The AI creates a draft note from the conversation. Your clinician always reviews and approves the final document before it becomes part of your medical record.",
+    "optout_title": "You are always in control",
+    "optout_desc": "If you would prefer that the system is not used during your visit, simply let your clinician know. Your care will not be affected in any way.",
+    "quote": "This technology exists for one reason — to give your clinician more time to focus on what matters most: you.",
+    "badge_hipaa": "HIPAA Compliant",
+    "badge_gdpr": "GDPR Compliant",
+    "badge_soc2": "SOC 2 Type II",
+    "badge_iso": "ISO 27001",
+    "footer_questions": "Questions? Please ask your clinician or visit:",
+    "footer_copy": "© 2026 GATMEDI Ltd. All rights reserved. ClinixSummary is a product of GATMEDI.",
+    "all_languages": "Available in all languages"
   }
 }

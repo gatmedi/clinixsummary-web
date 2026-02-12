@@ -142,6 +142,7 @@ const routes = {
     '#privacy-choices':    PrivacyChoicesPage,
     '#terms-enterprise':   TermsEnterprisePage,
     '#usage-policy':       UsagePolicyPage,
+    '#leaflet':            LeafletPage,
     '#roi-calculator':     HomePage,
 };
 
@@ -171,6 +172,10 @@ function router() {
 
         if (hash === '#home' || hash === '#pricing' || hash === '#roi-calculator') {
             setTimeout(calculateSavings, 10);
+        }
+
+        if (hash === '#leaflet') {
+            setTimeout(initLeafletLangSwitcher, 10);
         }
     } else {
         APP_CONTENT.innerHTML = '<h2>404 Page Not Found</h2>';
