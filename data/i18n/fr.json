@@ -263,7 +263,16 @@
     "global_desc": "Fonctionne dans plusieurs langues et juridictions.",
     "cta_title": "Prêt à tester ClinixSummary dans votre organisation ?",
     "cta_signin": "Se connecter au portail entreprise",
-    "cta_sales": "Parler à notre équipe commerciale"
+    "cta_sales": "Parler à notre équipe commerciale",
+    "billing_title": "Assistance à la facturation au niveau de l’organisation.",
+    "activity_title": "Capture d’activité",
+    "activity_desc": "Capture les procédures, services et activités cliniques réalisés lors des consultations.",
+    "mapping_title": "Mappage de codes",
+    "mapping_desc": "Correspond à la bibliothèque de codes CPT spécifique de votre organisation pour une facturation précise.",
+    "claims_title": "Réclamations plus rapides",
+    "claims_desc": "Élimine les frais manqués et réduit le délai de soumission des réclamations.",
+    "team_title": "Gestion d’équipe",
+    "team_desc": "Déploiement multi-praticiens avec tableaux de bord d’équipe et analyses d’utilisation."
   },
   "insurers": {
     "kicker": "Pour les assureurs et les organismes payeurs",
@@ -309,7 +318,14 @@
     "may_desc": "Nous sommes ravis d'annoncer le succès de notre levée de fonds Série A menée par des investisseurs de référence dans le secteur de la santé. Ce capital financera l'expansion vers de nouvelles spécialités, renforcera notre cadre de conformité et développera notre équipe de réussite client.",
     "story_title": "Vous souhaitez partager votre expérience ?",
     "story_desc": "Si vous avez utilisé ClinixSummary pour transformer votre pratique, nous serions ravis de mettre en avant votre réussite. Contactez notre équipe marketing pour être mis en avant.",
-    "story_submit": "Soumettre un témoignage"
+    "story_submit": "Soumettre un témoignage",
+    "q1_2026_title": "Expansion linguistique : arabe avec prise en charge RTL complète",
+    "q4_2025a_title": "Lancement de l’initiative Clinix Foundation",
+    "q4_2025b_title": "Lancement du coffre CME/DPC",
+    "q3_2025a_title": "Demande d’enregistrement de dispositif médical au Royaume-Uni",
+    "q3_2025b_title": "Modules de santé paramédicale publiés",
+    "q2_2025_title": "Mises à jour des modules : couverture élargie des spécialités",
+    "q1_2025_title": "Lancement de la plateforme ClinixSummary"
   },
   "story": {
     "kicker": "Notre mission",
@@ -354,7 +370,9 @@
     "get_started": "Commencer",
     "new_badge": "Nouveau",
     "beta_badge": "Bêta",
-    "qms_stamp": "Garanti par le système de management de la qualité Clinix (Clinix QM)"
+    "qms_stamp": "Garanti par le système de management de la qualité Clinix (Clinix QM)",
+    "legal": "Mentions légales",
+    "contact_sales": "Contacter le service commercial"
   },
   "banner": {
     "english_only": "Ce contenu est disponible en anglais uniquement.",
@@ -362,5 +380,166 @@
   },
   "lang": {
     "label": "Langue"
+  },
+  "government": {
+    "kicker": "Secteur public et santé fédérale",
+    "title": "Documentation clinique pour les systèmes de santé publics.",
+    "description": "ClinixSummary répond aux exigences rigoureuses de la documentation des systèmes de santé publics. Des hôpitaux militaires aux systèmes de santé publique, nous fournissons une documentation clinique conforme, efficace et standardisée à grande échelle.",
+    "compliance_title": "Normes de conformité gouvernementales",
+    "compliance_desc": "Les systèmes de santé publics ont des exigences documentaires uniques. ClinixSummary est conçu pour répondre aux mandats de sécurité, de conformité et d’accessibilité de niveau gouvernemental tout en réduisant la charge administrative des praticiens du secteur public.",
+    "public_title": "Conçu pour la santé publique",
+    "public_desc": "Qu’il s’agisse d’un hôpital militaire, d’un établissement médical des armées ou d’un système de santé publique, ClinixSummary s’adapte aux flux de travail et aux exigences de rapport propres à la santé publique.",
+    "security_title": "Sécurité entreprise",
+    "security_desc": "Chiffrement de niveau gouvernemental, contrôles d’accès basés sur les rôles et journaux d’audit complets conçus pour les environnements de sécurité les plus exigeants.",
+    "deploy_title": "Déploiement à grande échelle",
+    "deploy_desc": "Infrastructure éprouvée pour un déploiement simultané auprès de centaines de praticiens avec gestion et surveillance centralisées.",
+    "manager_title": "Responsable dédié à la réussite",
+    "manager_desc": "Un point de contact dédié pour assurer le déploiement, la formation et l’optimisation continue au sein de votre système de santé publique.",
+    "cta_title": "Prêt à moderniser la documentation de la santé publique ?",
+    "cta_button": "Demander une consultation gouvernementale"
+  },
+  "nonprofit": {
+    "kicker": "Pour les organisations à but non lucratif",
+    "title": "L’IA au service de la documentation dans le secteur non lucratif.",
+    "description": "Les organisations de santé à but non lucratif font face aux mêmes défis documentaires que les prestataires commerciaux — souvent avec moins de ressources. ClinixSummary propose des tarifs spéciaux et un accompagnement dédié aux organisations éligibles, ainsi qu’un accès gratuit via la Clinix Foundation pour celles servant des communautés défavorisées.",
+    "pricing_title": "Tarifs spéciaux pour le non-lucratif",
+    "pricing_desc": "Nous croyons que chaque praticien mérite d’accéder à des outils réduisant la charge documentaire, quel que soit le modèle de financement. Les organisations de santé à but non lucratif éligibles bénéficient d’un accès à tarif réduit à l’ensemble des fonctionnalités de ClinixSummary.",
+    "foundation_title": "Clinix Foundation",
+    "community_title": "Centres de santé communautaires",
+    "community_desc": "Accompagnez vos praticiens avec des outils de documentation IA qui libèrent du temps pour les patients et les communautés qui en ont le plus besoin.",
+    "ngo_title": "Établissements médicaux ONG",
+    "ngo_desc": "Les cliniques et hôpitaux gérés par des ONG en contexte humanitaire peuvent demander un accès gratuit via le programme Clinix Foundation.",
+    "teaching_title": "Enseignement et formation",
+    "teaching_desc": "Les hôpitaux universitaires et centres de formation à but non lucratif bénéficient d’outils documentaires qui aident les stagiaires à acquérir les bonnes pratiques de documentation clinique.",
+    "cta_title": "Découvrez nos tarifs non lucratif ou postulez pour la Clinix Foundation.",
+    "cta_foundation": "Postuler à la Clinix Foundation",
+    "cta_pricing": "Demander un tarif non lucratif"
+  },
+  "integrations": {
+    "kicker": "Fonctionnalité organisation",
+    "title": "Intégration fluide dans vos systèmes DSE et DME.",
+    "description": "ClinixSummary s'intègre directement dans les systèmes DSE et DME web de votre organisation. Adaptée à vos flux de travail, notre couche d'intégration garantit que la documentation générée par l'IA s'insère de manière fluide dans votre infrastructure clinique existante.",
+    "badge": "Cette fonctionnalité est réservée aux plans organisation et entreprise.",
+    "tailored_title": "Adapté à vos systèmes",
+    "support_title": "Accompagnement sur mesure",
+    "sync_title": "Synchronisation bidirectionnelle",
+    "pipeline_title": "Pipeline de données sécurisé",
+    "deploy_title": "Déploiement flexible",
+    "cta_title": "Prêt à intégrer ClinixSummary dans vos systèmes ?",
+    "cta_button": "Contactez notre équipe d’intégration",
+    "cta_learn": "Découvrir les plans entreprise"
+  },
+  "security": {
+    "kicker": "Sécurité, conformité et SMQ",
+    "title": "Protection de la vie privée des patients par défaut.",
+    "encryption_title": "Chiffrement de bout en bout",
+    "ephemeral_title": "Audio éphémère et contrôle des données",
+    "compliance_title": "Conformité HIPAA et RGPD",
+    "deidentified_title": "Données d’entraînement anonymisées",
+    "qms_kicker": "Système de management de la qualité Clinix",
+    "qms_title": "Clinix QM : la qualité à chaque niveau.",
+    "qa_title": "Revues d’assurance qualité clinique",
+    "rbac_title": "Contrôles d’accès basés sur les rôles",
+    "cert_title": "Certifications de conformité",
+    "data_kicker": "Vos données, vos règles",
+    "data_title": "Suppression immédiate et contrôle granulaire.",
+    "audio_title": "Conservation audio",
+    "audio_desc": "Supprimé après la génération de la note",
+    "transcript_title": "Stockage des transcriptions",
+    "deletion_title": "Suppression par l’utilisateur",
+    "audit_title": "Journaux d’audit",
+    "audit_desc": "Journaux d’activité complets pour la gouvernance",
+    "resources_kicker": "Ressources cliniques",
+    "resources_title": "Avis de confidentialité patient pour votre cabinet.",
+    "cta_title": "Prêt à sécuriser votre flux de documentation ?"
+  },
+  "contact": {
+    "kicker": "Contactez-nous",
+    "channels_title": "Canaux de contact",
+    "general_label": "Renseignements généraux",
+    "enterprise_label": "Entreprises et organisations",
+    "careers_label": "Carrières",
+    "privacy_label": "Vie privée et protection des données",
+    "security_label": "Sécurité",
+    "follow_title": "Suivez-nous",
+    "form_title": "Envoyez-nous un message",
+    "name_label": "Nom complet *",
+    "email_label": "Adresse e-mail *",
+    "org_label": "Organisation",
+    "topic_label": "Sujet",
+    "message_label": "Message *",
+    "send_button": "Envoyer le message"
+  },
+  "careers": {
+    "kicker": "Rejoignez-nous",
+    "title": "Construisez l’avenir de la documentation clinique.",
+    "open_positions": "Postes ouverts",
+    "no_role_title": "Vous ne trouvez pas le poste idéal ?",
+    "open_application": "Envoyer une candidature spontanée"
+  },
+  "privacy_policy": {
+    "title": "Politique de confidentialité"
+  },
+  "privacy_choices": {
+    "title": "Choix de confidentialité"
+  },
+  "terms_enterprise": {
+    "title": "Conditions d’utilisation : Entreprise"
+  },
+  "usage_policy": {
+    "title": "Politique d’utilisation"
+  },
+  "podcasts": {
+    "kicker": "Podcasts",
+    "title": "Podcasts ClinixSummary",
+    "coming_soon": "Bientôt disponible",
+    "preview_kicker": "Aperçu",
+    "preview_title": "Ce qui vous attend",
+    "ep1_title": "Épisode 1 : Pourquoi nous avons créé ClinixSummary",
+    "ep2_title": "Épisode 2 : La crise de l’épuisement des praticiens — et ce que l’IA peut y faire",
+    "ep3_title": "Épisode 3 : Vers le monde — médecine et documentation multilingues",
+    "cta_title": "Restez informé"
+  },
+  "models": {
+    "kicker": "Modèles cliniques propriétaires",
+    "title": "Le moteur derrière chaque note."
+  },
+  "notes": {
+    "kicker": "Notes méticuleuses",
+    "title": "Une documentation aux plus hauts standards."
+  },
+  "meet_kaizen": {
+    "kicker": "Amélioration continue"
+  },
+  "meet_languages": {
+    "kicker": "Langues et multilinguisme"
+  },
+  "portfolio": {
+    "kicker": "Créateur de portfolio"
+  },
+  "ambient": {
+    "kicker": "Mode ambiant automatique"
+  },
+  "cme": {
+    "kicker": "Coffre CME/DPC"
+  },
+  "foundation": {
+    "kicker": "Clinix Foundation"
+  },
+  "cap_medical": {
+    "extra_kicker": "Comment ça marche",
+    "extra_title": "Modules ajustés par spécialité."
+  },
+  "cap_operative": {
+    "extra_kicker": "Intégration"
+  },
+  "cap_leaflet": {
+    "extra_kicker": "Avantages"
+  },
+  "referrals_page": {
+    "extra_kicker": "Flux de travail"
+  },
+  "icd_page": {
+    "extra_kicker": "Impact"
   }
 }

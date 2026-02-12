@@ -251,7 +251,16 @@
     "global_desc": "Works in multiple languages & jurisdictions.",
     "cta_title": "Ready to pilot ClinixSummary in your organisation?",
     "cta_signin": "Sign in to enterprise portal",
-    "cta_sales": "Speak to our sales team"
+    "cta_sales": "Speak to our sales team",
+    "billing_title": "Organisation-level billing assistance.",
+    "activity_title": "Activity Capture",
+    "activity_desc": "Captures procedures, services, and clinical activities performed during encounters.",
+    "mapping_title": "Code Mapping",
+    "mapping_desc": "Maps to your organisation's specific CPT code library for accurate billing.",
+    "claims_title": "Faster Claims",
+    "claims_desc": "Eliminates missed charges and reduces time to claim submission.",
+    "team_title": "Team Management",
+    "team_desc": "Multi-clinician deployment with team dashboards and usage analytics."
   },
   "insurers": {
     "kicker": "For Insurance & Payer Organizations",
@@ -297,7 +306,14 @@
     "may_desc": "We’re excited to announce a successful Series A financing round led by leading healthcare investors. The capital will fuel expansion into new specialties, bolster our compliance framework and scale our customer success team.",
     "story_title": "Want to share your story?",
     "story_desc": "If you’ve used ClinixSummary to transform your practice, we’d love to highlight your success. Get in touch with our marketing team to be featured.",
-    "story_submit": "Submit a story"
+    "story_submit": "Submit a story",
+    "q1_2026_title": "Language Expansion: Arabic with Full RTL Support",
+    "q4_2025a_title": "Clinix Foundation Initiative Launched",
+    "q4_2025b_title": "CME/CPD Vault Launch",
+    "q3_2025a_title": "UK Medical Device Registration Application",
+    "q3_2025b_title": "Allied Health Modules Released",
+    "q2_2025_title": "Module Updates: Expanded Specialty Coverage",
+    "q1_2025_title": "ClinixSummary Platform Launch"
   },
   "story": {
     "kicker": "Our Mission",
@@ -342,7 +358,9 @@
     "get_started": "Get Started",
     "new_badge": "New",
     "beta_badge": "Beta",
-    "qms_stamp": "Assured by Clinix Quality Management System (Clinix QM)"
+    "qms_stamp": "Assured by Clinix Quality Management System (Clinix QM)",
+    "legal": "Legal",
+    "contact_sales": "Contact Sales"
   },
   "banner": {
     "english_only": "This content is available in English only.",
@@ -350,5 +368,166 @@
   },
   "lang": {
     "label": "Language"
+  },
+  "government": {
+    "kicker": "Public Sector & Federal Healthcare",
+    "title": "Clinical Documentation for Government Healthcare Systems.",
+    "description": "ClinixSummary meets the rigorous documentation standards of government healthcare. From VA hospitals and military medicine to public health systems, we deliver compliant, efficient, and standardised clinical documentation at scale.",
+    "compliance_title": "Government Compliance Standards",
+    "compliance_desc": "Federal healthcare systems have unique documentation requirements. ClinixSummary is designed to meet government-grade security, compliance, and accessibility mandates while reducing the administrative burden on public sector clinicians.",
+    "public_title": "Purpose-Built for Public Health",
+    "public_desc": "Whether it's a VA hospital, a military medical facility, or a county public health system, ClinixSummary adapts to the workflows and reporting requirements unique to government-funded healthcare delivery.",
+    "security_title": "Enterprise Security",
+    "security_desc": "Government-grade encryption, role-based access controls, and comprehensive audit trails designed for the most demanding security environments.",
+    "deploy_title": "Large-Scale Deployment",
+    "deploy_desc": "Proven infrastructure for deploying across hundreds of clinicians simultaneously with centralised management and monitoring.",
+    "manager_title": "Dedicated Success Manager",
+    "manager_desc": "A dedicated point of contact to ensure successful rollout, training, and ongoing optimisation within your public health system.",
+    "cta_title": "Ready to modernise government healthcare documentation?",
+    "cta_button": "Request a Government Consultation"
+  },
+  "nonprofit": {
+    "kicker": "For Non-profit Organisations",
+    "title": "Empowering Non-profit Healthcare with AI Documentation.",
+    "description": "Non-profit healthcare organisations face the same documentation challenges as commercial providers — often with fewer resources. ClinixSummary offers special pricing and dedicated support for qualifying non-profit organisations, and free access through the Clinix Foundation for those serving underserved communities.",
+    "pricing_title": "Special Pricing for Non-profits",
+    "pricing_desc": "We believe every clinician deserves access to tools that reduce documentation burden, regardless of the organisation's funding model. Qualifying non-profit healthcare organisations receive discounted access to ClinixSummary's full suite of features.",
+    "foundation_title": "Clinix Foundation",
+    "community_title": "Community Health Centres",
+    "community_desc": "Support your clinicians with AI documentation tools that free up time for the patients and communities that need it most.",
+    "ngo_title": "NGO Medical Facilities",
+    "ngo_desc": "NGO-operated clinics and hospitals in humanitarian settings can apply for free access through the Clinix Foundation programme.",
+    "teaching_title": "Teaching & Training",
+    "teaching_desc": "Non-profit teaching hospitals and training centres benefit from documentation tools that help trainees learn proper clinical documentation practices.",
+    "cta_title": "Explore non-profit pricing or apply for Clinix Foundation access.",
+    "cta_foundation": "Apply for Clinix Foundation",
+    "cta_pricing": "Request Non-profit Pricing"
+  },
+  "integrations": {
+    "kicker": "Organisation Feature",
+    "title": "Seamless Integration into Your EHR & EMR Systems.",
+    "description": "ClinixSummary integrates directly into your organisation's web-based EHR and EMR systems. Tailored to your specific workflows, our integration layer ensures that AI-generated documentation flows seamlessly into your existing clinical infrastructure.",
+    "badge": "This feature is available for organisation and enterprise plans only.",
+    "tailored_title": "Tailored to Your Systems",
+    "support_title": "Custom Integration Support",
+    "sync_title": "Bi-directional Sync",
+    "pipeline_title": "Secure Data Pipeline",
+    "deploy_title": "Flexible Deployment",
+    "cta_title": "Ready to integrate ClinixSummary into your systems?",
+    "cta_button": "Talk to Our Integration Team",
+    "cta_learn": "Learn About Enterprise Plans"
+  },
+  "security": {
+    "kicker": "Security, Compliance & QMS",
+    "title": "Protecting patient privacy by default.",
+    "encryption_title": "End‑to‑end encryption",
+    "ephemeral_title": "Ephemeral audio & data control",
+    "compliance_title": "HIPAA & GDPR compliance",
+    "deidentified_title": "De-identified training data",
+    "qms_kicker": "Clinix Quality Management System",
+    "qms_title": "Clinix QM: Quality at every layer.",
+    "qa_title": "Clinical QA Reviews",
+    "rbac_title": "Role-Based Access Controls",
+    "cert_title": "Compliance Certifications",
+    "data_kicker": "Your Data, Your Rules",
+    "data_title": "Immediate deletion & granular control.",
+    "audio_title": "Audio retention",
+    "audio_desc": "Deleted after note generation",
+    "transcript_title": "Transcript storage",
+    "deletion_title": "User deletion",
+    "audit_title": "Audit trails",
+    "audit_desc": "Full activity logs for governance",
+    "resources_kicker": "Clinic Resources",
+    "resources_title": "Patient privacy notice for your practice.",
+    "cta_title": "Ready to secure your documentation workflow?"
+  },
+  "contact": {
+    "kicker": "Get in Touch",
+    "channels_title": "Contact channels",
+    "general_label": "General enquiries",
+    "enterprise_label": "Enterprise & organisations",
+    "careers_label": "Careers",
+    "privacy_label": "Privacy & data protection",
+    "security_label": "Security",
+    "follow_title": "Follow us",
+    "form_title": "Send us a message",
+    "name_label": "Full Name *",
+    "email_label": "Email Address *",
+    "org_label": "Organisation",
+    "topic_label": "Topic",
+    "message_label": "Message *",
+    "send_button": "Send Message"
+  },
+  "careers": {
+    "kicker": "Join Us",
+    "title": "Build the future of clinical documentation.",
+    "open_positions": "Open positions",
+    "no_role_title": "Don’t see the right role?",
+    "open_application": "Send open application"
+  },
+  "privacy_policy": {
+    "title": "Privacy Policy"
+  },
+  "privacy_choices": {
+    "title": "Privacy Choices"
+  },
+  "terms_enterprise": {
+    "title": "Terms of Service: Enterprise"
+  },
+  "usage_policy": {
+    "title": "Usage Policy"
+  },
+  "podcasts": {
+    "kicker": "Podcasts",
+    "title": "ClinixSummary Podcasts",
+    "coming_soon": "Coming Soon",
+    "preview_kicker": "Preview",
+    "preview_title": "What’s coming",
+    "ep1_title": "Episode 1: Why We Built ClinixSummary",
+    "ep2_title": "Episode 2: The Clinician Burnout Crisis — And What AI Can Do About It",
+    "ep3_title": "Episode 3: Going Global — Multilingual Medicine and Documentation",
+    "cta_title": "Stay in the loop"
+  },
+  "models": {
+    "kicker": "Proprietary Clinical Models",
+    "title": "The Engine Behind Every Note."
+  },
+  "notes": {
+    "kicker": "Meticulous Notes",
+    "title": "Documentation That Meets the Highest Standard."
+  },
+  "meet_kaizen": {
+    "kicker": "Continuous Improvement"
+  },
+  "meet_languages": {
+    "kicker": "Languages & Multilingual"
+  },
+  "portfolio": {
+    "kicker": "Portfolio Builder"
+  },
+  "ambient": {
+    "kicker": "Auto-Ambient Mode"
+  },
+  "cme": {
+    "kicker": "CME/CPD Vault"
+  },
+  "foundation": {
+    "kicker": "Clinix Foundation"
+  },
+  "cap_medical": {
+    "extra_kicker": "How It Works",
+    "extra_title": "Specialty-tuned modules."
+  },
+  "cap_operative": {
+    "extra_kicker": "Integration"
+  },
+  "cap_leaflet": {
+    "extra_kicker": "Benefits"
+  },
+  "referrals_page": {
+    "extra_kicker": "Workflow"
+  },
+  "icd_page": {
+    "extra_kicker": "Impact"
   }
 }

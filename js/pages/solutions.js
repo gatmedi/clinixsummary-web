@@ -174,26 +174,26 @@ function OrganizationsPage() {
 
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="orgs.billing_kicker">Billing Capture</span>
-                    <h3 class="section-title">Organisation-level billing assistance.</h3>
+                    <h3 class="section-title" data-i18n="orgs.billing_title">Organisation-level billing assistance.</h3>
                     <p class="section-copy">ClinixSummary captures what was done during each encounter and maps it to your organisation's own CPT code library. Reduce coding errors, eliminate missed charges, and speed up claims \u2014 all tailored to your specific billing workflows.</p>
                 </div>
 
                 <div class="grid-4" style="margin-bottom: 60px;">
                     <div class="text-group" style="border: none;">
-                        <h4 style="font-weight: 600; font-size: 16px;"><span class="material-symbols-rounded list-item-icon" style="font-size: 20px;">receipt_long</span> Activity Capture</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary);">Captures procedures, services, and clinical activities performed during encounters.</p>
+                        <h4 style="font-weight: 600; font-size: 16px;"><span class="material-symbols-rounded list-item-icon" style="font-size: 20px;">receipt_long</span> <span data-i18n="orgs.activity_title">Activity Capture</span></h4>
+                        <p style="font-size: 13px; color: var(--text-secondary);" data-i18n="orgs.activity_desc">Captures procedures, services, and clinical activities performed during encounters.</p>
                     </div>
                     <div class="text-group" style="border: none;">
-                        <h4 style="font-weight: 600; font-size: 16px;"><span class="material-symbols-rounded list-item-icon" style="font-size: 20px;">map</span> Code Mapping</h4>
+                        <h4 style="font-weight: 600; font-size: 16px;"><span class="material-symbols-rounded list-item-icon" style="font-size: 20px;">map</span> <span data-i18n="orgs.mapping_title">Code Mapping</span></h4>
                         <p style="font-size: 13px; color: var(--text-secondary);">Maps to your organisation's specific CPT code library for accurate billing.</p>
                     </div>
                     <div class="text-group" style="border: none;">
-                        <h4 style="font-weight: 600; font-size: 16px;"><span class="material-symbols-rounded list-item-icon" style="font-size: 20px;">speed</span> Faster Claims</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary);">Eliminates missed charges and reduces time to claim submission.</p>
+                        <h4 style="font-weight: 600; font-size: 16px;"><span class="material-symbols-rounded list-item-icon" style="font-size: 20px;">speed</span> <span data-i18n="orgs.claims_title">Faster Claims</span></h4>
+                        <p style="font-size: 13px; color: var(--text-secondary);" data-i18n="orgs.claims_desc">Eliminates missed charges and reduces time to claim submission.</p>
                     </div>
                     <div class="text-group" style="border: none;">
-                        <h4 style="font-weight: 600; font-size: 16px;"><span class="material-symbols-rounded list-item-icon" style="font-size: 20px;">group</span> Team Management</h4>
-                        <p style="font-size: 13px; color: var(--text-secondary);">Multi-clinician deployment with team dashboards and usage analytics.</p>
+                        <h4 style="font-weight: 600; font-size: 16px;"><span class="material-symbols-rounded list-item-icon" style="font-size: 20px;">group</span> <span data-i18n="orgs.team_title">Team Management</span></h4>
+                        <p style="font-size: 13px; color: var(--text-secondary);" data-i18n="orgs.team_desc">Multi-clinician deployment with team dashboards and usage analytics.</p>
                     </div>
                 </div>
 
@@ -238,16 +238,16 @@ function GovernmentPage() {
         <section class="subpage-container">
             <div class="page-width">
                 <div class="subpage-header">
-                    <span class="kicker">Public Sector & Federal Healthcare</span>
-                    <h2 class="subpage-title">Clinical Documentation for Government Healthcare Systems.</h2>
-                    <p class="subpage-copy">ClinixSummary meets the rigorous documentation standards of government healthcare. From VA hospitals and military medicine to public health systems, we deliver compliant, efficient, and standardised clinical documentation at scale.</p>
+                    <span class="kicker" data-i18n="government.kicker">Public Sector & Federal Healthcare</span>
+                    <h2 class="subpage-title" data-i18n="government.title">Clinical Documentation for Government Healthcare Systems.</h2>
+                    <p class="subpage-copy" data-i18n="government.description">ClinixSummary meets the rigorous documentation standards of government healthcare. From VA hospitals and military medicine to public health systems, we deliver compliant, efficient, and standardised clinical documentation at scale.</p>
                 </div>
 
                 <div class="grid-2" style="margin-bottom: 60px;">
                     <div class="text-group" style="border-bottom: none;">
                         <span class="material-symbols-rounded list-item-icon">account_balance</span>
-                        <h3>Government Compliance Standards</h3>
-                        <p>Federal healthcare systems have unique documentation requirements. ClinixSummary is designed to meet government-grade security, compliance, and accessibility mandates while reducing the administrative burden on public sector clinicians.</p>
+                        <h3 data-i18n="government.compliance_title">Government Compliance Standards</h3>
+                        <p data-i18n="government.compliance_desc">Federal healthcare systems have unique documentation requirements. ClinixSummary is designed to meet government-grade security, compliance, and accessibility mandates while reducing the administrative burden on public sector clinicians.</p>
                         <ul style="margin-top: 15px; font-size: 14px;">
                             <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">verified_user</span> HIPAA, GDPR, and FedRAMP-aligned security</li>
                             <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">description</span> Standardised documentation across departments</li>
@@ -256,8 +256,8 @@ function GovernmentPage() {
                     </div>
                     <div class="text-group" style="border-bottom: none;">
                         <span class="material-symbols-rounded list-item-icon">local_hospital</span>
-                        <h3>Purpose-Built for Public Health</h3>
-                        <p>Whether it's a VA hospital, a military medical facility, or a county public health system, ClinixSummary adapts to the workflows and reporting requirements unique to government-funded healthcare delivery.</p>
+                        <h3 data-i18n="government.public_title">Purpose-Built for Public Health</h3>
+                        <p data-i18n="government.public_desc">Whether it's a VA hospital, a military medical facility, or a county public health system, ClinixSummary adapts to the workflows and reporting requirements unique to government-funded healthcare delivery.</p>
                         <ul style="margin-top: 15px; font-size: 14px;">
                             <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">military_tech</span> VA hospitals and military medicine</li>
                             <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">public</span> Public health systems and community clinics</li>
@@ -269,25 +269,25 @@ function GovernmentPage() {
                 <div class="grid-3">
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">shield</div>
-                        <h3>Enterprise Security</h3>
-                        <p>Government-grade encryption, role-based access controls, and comprehensive audit trails designed for the most demanding security environments.</p>
+                        <h3 data-i18n="government.security_title">Enterprise Security</h3>
+                        <p data-i18n="government.security_desc">Government-grade encryption, role-based access controls, and comprehensive audit trails designed for the most demanding security environments.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">groups</div>
-                        <h3>Large-Scale Deployment</h3>
-                        <p>Proven infrastructure for deploying across hundreds of clinicians simultaneously with centralised management and monitoring.</p>
+                        <h3 data-i18n="government.deploy_title">Large-Scale Deployment</h3>
+                        <p data-i18n="government.deploy_desc">Proven infrastructure for deploying across hundreds of clinicians simultaneously with centralised management and monitoring.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">support_agent</div>
-                        <h3>Dedicated Success Manager</h3>
-                        <p>A dedicated point of contact to ensure successful rollout, training, and ongoing optimisation within your public health system.</p>
+                        <h3 data-i18n="government.manager_title">Dedicated Success Manager</h3>
+                        <p data-i18n="government.manager_desc">A dedicated point of contact to ensure successful rollout, training, and ongoing optimisation within your public health system.</p>
                     </div>
                 </div>
 
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
-                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;">Ready to modernise government healthcare documentation?</h2>
+                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="government.cta_title">Ready to modernise government healthcare documentation?</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Contacting government sales team.'); return false;">Request a Government Consultation</a>
+                        <a href="#contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Contacting government sales team.'); return false;" data-i18n="government.cta_button">Request a Government Consultation</a>
                     </div>
                 </div>
             </div>
@@ -300,20 +300,20 @@ function NonprofitPage() {
         <section class="subpage-container">
             <div class="page-width">
                 <div class="subpage-header">
-                    <span class="kicker">For Non-profit Organisations</span>
-                    <h2 class="subpage-title">Empowering Non-profit Healthcare with AI Documentation.</h2>
-                    <p class="subpage-copy">Non-profit healthcare organisations face the same documentation challenges as commercial providers \u2014 often with fewer resources. ClinixSummary offers special pricing and dedicated support for qualifying non-profit organisations, and free access through the Clinix Foundation for those serving underserved communities.</p>
+                    <span class="kicker" data-i18n="nonprofit.kicker">For Non-profit Organisations</span>
+                    <h2 class="subpage-title" data-i18n="nonprofit.title">Empowering Non-profit Healthcare with AI Documentation.</h2>
+                    <p class="subpage-copy" data-i18n="nonprofit.description">Non-profit healthcare organisations face the same documentation challenges as commercial providers \u2014 often with fewer resources. ClinixSummary offers special pricing and dedicated support for qualifying non-profit organisations, and free access through the Clinix Foundation for those serving underserved communities.</p>
                 </div>
 
                 <div class="grid-2" style="margin-bottom: 60px;">
                     <div class="text-group" style="border-bottom: none;">
                         <span class="material-symbols-rounded list-item-icon">volunteer_activism</span>
-                        <h3>Special Pricing for Non-profits</h3>
-                        <p>We believe every clinician deserves access to tools that reduce documentation burden, regardless of the organisation's funding model. Qualifying non-profit healthcare organisations receive discounted access to ClinixSummary's full suite of features.</p>
+                        <h3 data-i18n="nonprofit.pricing_title">Special Pricing for Non-profits</h3>
+                        <p data-i18n="nonprofit.pricing_desc">We believe every clinician deserves access to tools that reduce documentation burden, regardless of the organisation's funding model. Qualifying non-profit healthcare organisations receive discounted access to ClinixSummary's full suite of features.</p>
                     </div>
                     <div class="text-group" style="border-bottom: none;">
                         <span class="material-symbols-rounded list-item-icon">favorite</span>
-                        <h3>Clinix Foundation</h3>
+                        <h3 data-i18n="nonprofit.foundation_title">Clinix Foundation</h3>
                         <p>Through the <a href="#clinix-foundation" style="color: var(--accent); text-decoration: underline;">Clinix Foundation</a>, we provide completely free access to ClinixSummary for clinics and practices operating in relief areas and underserved communities. Our goal is to ensure that documentation burden is never a barrier to delivering quality care.</p>
                     </div>
                 </div>
@@ -321,26 +321,26 @@ function NonprofitPage() {
                 <div class="grid-3">
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">diversity_3</div>
-                        <h3>Community Health Centres</h3>
-                        <p>Support your clinicians with AI documentation tools that free up time for the patients and communities that need it most.</p>
+                        <h3 data-i18n="nonprofit.community_title">Community Health Centres</h3>
+                        <p data-i18n="nonprofit.community_desc">Support your clinicians with AI documentation tools that free up time for the patients and communities that need it most.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">public</div>
-                        <h3>NGO Medical Facilities</h3>
-                        <p>NGO-operated clinics and hospitals in humanitarian settings can apply for free access through the Clinix Foundation programme.</p>
+                        <h3 data-i18n="nonprofit.ngo_title">NGO Medical Facilities</h3>
+                        <p data-i18n="nonprofit.ngo_desc">NGO-operated clinics and hospitals in humanitarian settings can apply for free access through the Clinix Foundation programme.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">school</div>
-                        <h3>Teaching & Training</h3>
-                        <p>Non-profit teaching hospitals and training centres benefit from documentation tools that help trainees learn proper clinical documentation practices.</p>
+                        <h3 data-i18n="nonprofit.teaching_title">Teaching & Training</h3>
+                        <p data-i18n="nonprofit.teaching_desc">Non-profit teaching hospitals and training centres benefit from documentation tools that help trainees learn proper clinical documentation practices.</p>
                     </div>
                 </div>
 
                 <div style="background: var(--bg-subtle); color: var(--text-primary); text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px; border: 1px solid var(--border-subtle);">
-                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;">Explore non-profit pricing or apply for Clinix Foundation access.</h2>
+                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="nonprofit.cta_title">Explore non-profit pricing or apply for Clinix Foundation access.</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#clinix-foundation" class="btn-primary" style="background: var(--text-primary); color: white;">Apply for Clinix Foundation</a>
-                        <a href="#contact" class="btn-outline" style="border-color: var(--text-primary); color: var(--text-primary);" onclick="showToast('Requesting non-profit pricing.'); return false;">Request Non-profit Pricing</a>
+                        <a href="#clinix-foundation" class="btn-primary" style="background: var(--text-primary); color: white;" data-i18n="nonprofit.cta_foundation">Apply for Clinix Foundation</a>
+                        <a href="#contact" class="btn-outline" style="border-color: var(--text-primary); color: var(--text-primary);" onclick="showToast('Requesting non-profit pricing.'); return false;" data-i18n="nonprofit.cta_pricing">Request Non-profit Pricing</a>
                     </div>
                 </div>
             </div>
@@ -353,19 +353,19 @@ function IntegrationsPage() {
         <section class="subpage-container">
             <div class="page-width">
                 <div class="subpage-header">
-                    <span class="kicker">Organisation Feature</span>
-                    <h2 class="subpage-title">Seamless Integration into Your EHR & EMR Systems.</h2>
-                    <p class="subpage-copy">ClinixSummary integrates directly into your organisation's web-based EHR and EMR systems. Tailored to your specific workflows, our integration layer ensures that AI-generated documentation flows seamlessly into your existing clinical infrastructure.</p>
+                    <span class="kicker" data-i18n="integrations.kicker">Organisation Feature</span>
+                    <h2 class="subpage-title" data-i18n="integrations.title">Seamless Integration into Your EHR & EMR Systems.</h2>
+                    <p class="subpage-copy" data-i18n="integrations.description">ClinixSummary integrates directly into your organisation's web-based EHR and EMR systems. Tailored to your specific workflows, our integration layer ensures that AI-generated documentation flows seamlessly into your existing clinical infrastructure.</p>
                 </div>
 
                 <div style="margin-bottom: 40px; padding: 16px 24px; background: rgba(59, 197, 214, 0.1); border-radius: 8px; display: inline-block;">
-                    <span style="font-size: 14px; font-weight: 600; color: var(--text-primary);">This feature is available for organisation and enterprise plans only.</span>
+                    <span style="font-size: 14px; font-weight: 600; color: var(--text-primary);" data-i18n="integrations.badge">This feature is available for organisation and enterprise plans only.</span>
                 </div>
 
                 <div class="grid-2" style="margin-bottom: 60px;">
                     <div class="text-group" style="border-bottom: none;">
                         <span class="material-symbols-rounded list-item-icon">integration_instructions</span>
-                        <h3>Tailored to Your Systems</h3>
+                        <h3 data-i18n="integrations.tailored_title">Tailored to Your Systems</h3>
                         <p>Every organisation has unique EHR/EMR configurations. Our integration team works directly with your IT department to build custom connectors that match your existing workflows \u2014 no disruption, no rip-and-replace.</p>
                         <ul style="margin-top: 15px; font-size: 14px;">
                             <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">api</span> RESTful API access for enterprise customers</li>
@@ -375,7 +375,7 @@ function IntegrationsPage() {
                     </div>
                     <div class="text-group" style="border-bottom: none;">
                         <span class="material-symbols-rounded list-item-icon">support_agent</span>
-                        <h3>Custom Integration Support</h3>
+                        <h3 data-i18n="integrations.support_title">Custom Integration Support</h3>
                         <p>Our dedicated integration team handles the technical complexity so your clinicians don't have to. From initial scoping to production deployment, we provide end-to-end support for a smooth integration experience.</p>
                         <ul style="margin-top: 15px; font-size: 14px;">
                             <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">engineering</span> Dedicated integration engineer assigned</li>
@@ -388,26 +388,26 @@ function IntegrationsPage() {
                 <div class="grid-3">
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">sync</div>
-                        <h3>Bi-directional Sync</h3>
+                        <h3 data-i18n="integrations.sync_title">Bi-directional Sync</h3>
                         <p>Pull patient context from your EHR and push completed documentation back \u2014 in real time or batch mode.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">security</div>
-                        <h3>Secure Data Pipeline</h3>
+                        <h3 data-i18n="integrations.pipeline_title">Secure Data Pipeline</h3>
                         <p>All integration traffic is encrypted end-to-end with TLS 1.2+ and follows HIPAA-compliant data handling protocols.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">dashboard_customize</div>
-                        <h3>Flexible Deployment</h3>
+                        <h3 data-i18n="integrations.deploy_title">Flexible Deployment</h3>
                         <p>Choose the deployment model that fits your infrastructure: fully cloud-hosted, hybrid, or on-premise.</p>
                     </div>
                 </div>
 
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
-                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;">Ready to integrate ClinixSummary into your systems?</h2>
+                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="integrations.cta_title">Ready to integrate ClinixSummary into your systems?</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Contacting integration team.'); return false;">Talk to Our Integration Team</a>
-                        <a href="#organizations" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Learn About Enterprise Plans</a>
+                        <a href="#contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Contacting integration team.'); return false;" data-i18n="integrations.cta_button">Talk to Our Integration Team</a>
+                        <a href="#organizations" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="integrations.cta_learn">Learn About Enterprise Plans</a>
                     </div>
                 </div>
             </div>
