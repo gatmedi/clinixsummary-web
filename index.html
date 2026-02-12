@@ -111,7 +111,7 @@
                                 <!-- Use Case Column (Right) -->
                                 <div>
                                     <div style="padding: 0 14px 8px; font-size:11px; font-weight:600; color:#999; text-transform:uppercase;" data-i18n="dropdown.use_cases">Use Cases</div>
-                                    <a href="#" class="dropdown-item" onclick="showToast('Coming soon...'); return false;">
+                                    <a href="#cap-medical" class="dropdown-item">
                                         <span class="dropdown-title" data-i18n="dropdown.by_specialty">By Specialty</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.by_specialty_desc">40 + medical & allied health specialties & assist modules</span>
                                     </a>
@@ -170,20 +170,23 @@
                                         <span class="dropdown-title" data-i18n="dropdown.billing_assist">Billing Assistance</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.billing_assist_desc">Organizations only</span>
                                     </a>
-                                    <a href="#" class="dropdown-item" onclick="showToast('Coming soon...'); return false;">
+                                    <a href="#referrals" class="dropdown-item">
                                         <span class="dropdown-title" data-i18n="dropdown.referrals">Referrals</span>
                                     </a>
-                                    <a href="#" class="dropdown-item" onclick="showToast('Coming soon...'); return false;">
+                                    <a href="#icd-coding" class="dropdown-item">
                                         <span class="dropdown-title" data-i18n="dropdown.icd_coding">ICD Coding</span>
                                     </a>
+                                    <a href="#cap-patient-leaflet" class="dropdown-item">
+                                        <span class="dropdown-title">Patient Information Leaflet</span>
+                                    </a>
                                     <div style="border-top: 1px solid var(--border-subtle); margin: 6px 0;"></div>
-                                    <a href="#" class="dropdown-item" onclick="showToast('Coming soon...'); return false;">
+                                    <a href="#" class="dropdown-item" onclick="showToast('In beta \u2014 feedback welcome.'); return false;">
                                         <span class="dropdown-title"><span data-i18n="dropdown.radiology_assist">Radiology Assist</span> <span class="beta-tag" data-i18n="common.beta_badge">Beta</span></span>
                                     </a>
-                                    <a href="#" class="dropdown-item" onclick="showToast('Coming soon...'); return false;">
+                                    <a href="#" class="dropdown-item" onclick="showToast('In beta \u2014 feedback welcome.'); return false;">
                                         <span class="dropdown-title"><span data-i18n="dropdown.dermatology_assist">Dermatology Assist</span> <span class="beta-tag" data-i18n="common.beta_badge">Beta</span></span>
                                     </a>
-                                    <a href="#" class="dropdown-item" onclick="showToast('Coming soon...'); return false;">
+                                    <a href="#" class="dropdown-item" onclick="showToast('In beta \u2014 feedback welcome.'); return false;">
                                         <span class="dropdown-title"><span data-i18n="dropdown.triage_assist">Triage Assist</span> <span class="beta-tag" data-i18n="common.beta_badge">Beta</span></span>
                                     </a>
                                 </div>
@@ -202,7 +205,7 @@
                                     <span class="dropdown-title" data-i18n="dropdown.whitepapers">Whitepapers</span>
                                     <span class="dropdown-desc" data-i18n="dropdown.whitepapers_desc">Technical methodology.</span>
                                 </a>
-                                <a href="#" class="dropdown-item" onclick="showToast('Coming soon...'); return false;"><span class="dropdown-title" data-i18n="dropdown.case_studies">Case Studies</span></a>
+                                <a href="#case-studies" class="dropdown-item"><span class="dropdown-title" data-i18n="dropdown.case_studies">Case Studies</span></a>
                                 <a href="#security" class="dropdown-item">
                                     <span class="dropdown-title" data-i18n="dropdown.compliance">Compliance</span>
                                     <span class="dropdown-desc" data-i18n="dropdown.compliance_desc">Certifications & Reports.</span>
@@ -277,10 +280,10 @@
                         <h4 style="font-size: 14px; color: #fff; margin-bottom: 4px; letter-spacing: 0.05em;">BY GATMEDI</h4>
                         <p style="font-size: 11px; color: rgba(255,255,255,0.5); margin-bottom: 16px;">&copy; 2025 GATMEDI</p>
                         <div class="social-icons">
-                            <a href="#">f</a>
-                            <a href="#">&#x1D54F;</a>
-                            <a href="#">in</a>
-                            </div>
+                            <a href="https://www.facebook.com/clinixsummary" target="_blank" rel="noopener">f</a>
+                            <a href="https://x.com/clinixsummary" target="_blank" rel="noopener">&#x1D54F;</a>
+                            <a href="https://www.linkedin.com/company/clinixsummary" target="_blank" rel="noopener">in</a>
+                        </div>
                     </div>
                 </div>
 
@@ -306,7 +309,7 @@
                             <li><a href="mailto:contact@clinixsummary.ai">contact@clinixsummary.ai</a></li>
                             <li><a href="#careers" data-i18n="footer.careers">Careers</a></li>
                             <li><a href="#news" data-i18n="dropdown.news_events">News & Events</a></li>
-                            <li><a href="#blog" data-i18n="footer.blog_podcasts">Blog & Podcasts</a></li>
+                            <li><a href="#blog" data-i18n="dropdown.podcasts">Podcasts</a></li>
                         </ul>
                     </div>
                 </div>
@@ -320,7 +323,7 @@
                             <li><a href="#insurers" data-i18n="dropdown.insurers">Insurers</a></li>
                             <li><a href="#government" data-i18n="dropdown.government">Government</a></li>
                             <li><a href="#nonprofit" data-i18n="dropdown.nonprofit">Non-profit</a></li>
-                            <li><a href="#" onclick="showToast('Coming soon...'); return false;" data-i18n="dropdown.by_specialty">By Specialty</a></li>
+                            <li><a href="#cap-medical" data-i18n="dropdown.by_specialty">By Specialty</a></li>
                             <li><a href="#integrations" data-i18n="dropdown.integrations">Integrations</a></li>
                         </ul>
                     </div>
@@ -343,9 +346,12 @@
                             <li><a href="#cap-operative" data-i18n="dropdown.operational_notes">Operational Notes</a></li>
                             <li><a href="#cme-vault" data-i18n="dropdown.cme_vault">CME/CPD Vault</a></li>
                             <li><a href="#billing-assist" data-i18n="dropdown.billing_assist">Billing Assistance</a></li>
-                            <li><a href="#" onclick="showToast('Coming soon...'); return false;"><span data-i18n="dropdown.radiology_assist">Radiology Assist</span> Beta</a></li>
-                            <li><a href="#" onclick="showToast('Coming soon...'); return false;"><span data-i18n="dropdown.dermatology_assist">Dermatology Assist</span> Beta</a></li>
-                            <li><a href="#" onclick="showToast('Coming soon...'); return false;"><span data-i18n="dropdown.triage_assist">Triage Assist</span> Beta</a></li>
+                            <li><a href="#referrals" data-i18n="dropdown.referrals">Referrals</a></li>
+                            <li><a href="#icd-coding" data-i18n="dropdown.icd_coding">ICD Coding</a></li>
+                            <li><a href="#cap-patient-leaflet">Patient Information Leaflet</a></li>
+                            <li><a href="#" onclick="showToast('In beta \u2014 feedback welcome.'); return false;"><span data-i18n="dropdown.radiology_assist">Radiology Assist</span> Beta</a></li>
+                            <li><a href="#" onclick="showToast('In beta \u2014 feedback welcome.'); return false;"><span data-i18n="dropdown.dermatology_assist">Dermatology Assist</span> Beta</a></li>
+                            <li><a href="#" onclick="showToast('In beta \u2014 feedback welcome.'); return false;"><span data-i18n="dropdown.triage_assist">Triage Assist</span> Beta</a></li>
                         </ul>
                     </div>
                     <div class="footer-group">
@@ -353,7 +359,7 @@
                         <ul>
                             <li><a href="#publications" data-i18n="dropdown.publications">Publications</a></li>
                             <li><a href="#whitepapers" data-i18n="dropdown.whitepapers">Whitepapers</a></li>
-                            <li><a href="#" onclick="showToast('Coming soon...'); return false;" data-i18n="dropdown.case_studies">Case Studies</a></li>
+                            <li><a href="#case-studies" data-i18n="dropdown.case_studies">Case Studies</a></li>
                             <li><a href="#security" data-i18n="dropdown.compliance">Compliance</a></li>
                             <li><a href="#news" data-i18n="dropdown.news_events">News & Events</a></li>
                             <li><a href="#blog" data-i18n="dropdown.podcasts">Podcasts</a></li>
@@ -379,18 +385,18 @@
                     <div class="footer-group">
                         <h4 data-i18n="footer.terms_policies">Terms & policies</h4>
                         <ul>
-                            <li><a href="#" data-i18n="footer.privacy_choices">Privacy choices</a></li>
-                            <li><a href="#" data-i18n="footer.privacy_policy">Privacy Policy</a></li>
-                            <li><a href="#" data-i18n="footer.terms_enterprise">Terms of service: enterprise</a></li>
-                            <li><a href="#" data-i18n="footer.usage_policy">Usage Policy</a></li>
+                            <li><a href="#privacy-choices" data-i18n="footer.privacy_choices">Privacy choices</a></li>
+                            <li><a href="#privacy-policy" data-i18n="footer.privacy_policy">Privacy Policy</a></li>
+                            <li><a href="#terms-enterprise" data-i18n="footer.terms_enterprise">Terms of service: enterprise</a></li>
+                            <li><a href="#usage-policy" data-i18n="footer.usage_policy">Usage Policy</a></li>
                         </ul>
                     </div>
                     <div class="footer-group">
                         <h4 data-i18n="footer.help_security">Help & security</h4>
                         <ul>
-                            <li><a href="#" data-i18n="footer.availability">Availability</a></li>
-                            <li><a href="#" data-i18n="footer.status">Status</a></li>
-                            <li><a href="#" data-i18n="footer.support_center">Support center</a></li>
+                            <li><a href="#security" data-i18n="footer.availability">Availability</a></li>
+                            <li><a href="#security" data-i18n="footer.status">Status</a></li>
+                            <li><a href="#contact" data-i18n="footer.support_center">Support center</a></li>
                         </ul>
                     </div>
                 </div>

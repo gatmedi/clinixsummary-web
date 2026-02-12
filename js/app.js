@@ -124,16 +124,24 @@ const routes = {
     '#cap-vet':            CapVetPage,
     '#cap-operative':      CapOperativePage,
     '#billing-assist':     BillingAssistPage,
+    '#cap-patient-leaflet': CapPatientLeafletPage,
+    '#referrals':          ReferralsPage,
+    '#icd-coding':         ICDCodingPage,
 
     // Learn
     '#publications':       PublicationsPage,
     '#whitepapers':        WhitepapersPage,
+    '#case-studies':       CaseStudiesPage,
     '#news':               NewsPage,
     '#blog':               PodcastsPage,
 
     // Other
     '#careers':            CareersPage,
     '#story':              StoryPage,
+    '#privacy-policy':     PrivacyPolicyPage,
+    '#privacy-choices':    PrivacyChoicesPage,
+    '#terms-enterprise':   TermsEnterprisePage,
+    '#usage-policy':       UsagePolicyPage,
     '#roi-calculator':     HomePage,
 };
 

@@ -28,6 +28,14 @@
     "#cap-vet",
     "#cap-operative",
     "#billing-assist",
+    "#cap-patient-leaflet",
+    "#referrals",
+    "#icd-coding",
+    "#case-studies",
+    "#privacy-policy",
+    "#privacy-choices",
+    "#terms-enterprise",
+    "#usage-policy",
     "#careers"
   ],
   "nonTranslatedBanner": {
