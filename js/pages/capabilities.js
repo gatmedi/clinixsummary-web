@@ -554,3 +554,186 @@ function BillingAssistPage() {
         </section>
     `;
 }
+
+// ---------------------------------------------------------------------------
+// 10. Patient Information Leaflet / Summary
+// ---------------------------------------------------------------------------
+
+function CapPatientLeafletPage() {
+    return createCapabilityPage({
+        kicker: 'Patient Information Leaflet',
+        title: 'Patient-Friendly Summaries at the Point of Care.',
+        description:
+            'ClinixSummary can generate a patient-facing summary section at the end of every clinical note \u2014 written in plain, layman\u2019s terms. Patients leave with a clear understanding of their diagnosis, treatment plan and next steps, improving adherence and satisfaction.',
+        features: [
+            {
+                icon: 'description',
+                title: 'Layman\u2019s Language Output',
+                desc: 'Translates clinical terminology into clear, easy-to-understand language. Medical jargon is replaced with plain explanations that patients and their families can act on confidently.',
+            },
+            {
+                icon: 'checklist',
+                title: 'Structured Patient Handout',
+                desc: 'Each summary includes: what was discussed, the diagnosis in simple terms, the treatment plan, medications prescribed, warning signs to watch for, and when to follow up.',
+            },
+            {
+                icon: 'translate',
+                title: 'Multilingual Support',
+                desc: 'Patient summaries can be generated in any of ClinixSummary\u2019s supported languages, ensuring patients receive information in the language they are most comfortable with.',
+            },
+            {
+                icon: 'print',
+                title: 'Printable & Shareable',
+                desc: 'Patient leaflets are formatted for easy printing at the point of care or can be exported as PDF and shared digitally via patient portals or messaging systems.',
+            },
+        ],
+        extraContent: `
+            <div style="background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 32px; margin-top: 20px;">
+                <div style="display: flex; align-items: flex-start; gap: 16px;">
+                    <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent); flex-shrink: 0;">toggle_on</span>
+                    <div>
+                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">How It Works</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">When you enable the Patient Information Leaflet option before or during a consultation, ClinixSummary appends a patient-facing summary to the end of your clinical note. The summary is generated from the same encounter data but rewritten for a non-clinical audience. You review and approve the summary before handing it to the patient \u2014 ensuring accuracy and personalisation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subpage-header" style="margin-top: 60px;">
+                <span class="kicker">Benefits</span>
+                <h3 class="section-title">Better-informed patients, better outcomes.</h3>
+            </div>
+
+            <div class="grid-3" style="margin-bottom: 20px;">
+                <div class="text-group" style="border-bottom: none;">
+                    <span class="material-symbols-rounded list-item-icon">sentiment_satisfied</span>
+                    <h3>Improved Patient Satisfaction</h3>
+                    <p>Patients who receive written summaries of their visit report higher satisfaction, better understanding of their condition, and greater confidence in their care plan.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <span class="material-symbols-rounded list-item-icon">medication</span>
+                    <h3>Better Treatment Adherence</h3>
+                    <p>Research shows that patients who receive written discharge instructions are significantly more likely to follow treatment plans, take medications correctly and attend follow-up appointments.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <span class="material-symbols-rounded list-item-icon">reduce_capacity</span>
+                    <h3>Fewer Follow-up Calls</h3>
+                    <p>Clear, written information reduces the volume of \u201cWhat did the doctor say?\u201d calls to your front desk, freeing staff time and reducing administrative burden.</p>
+                </div>
+            </div>
+        `,
+        ctaTitle: 'Give your patients clarity at every visit.',
+        ctaToast: 'Starting free trial with Patient Information Leaflet.',
+        ctaLabel: 'Start Free Trial',
+    });
+}
+
+// ---------------------------------------------------------------------------
+// 11. Referrals
+// ---------------------------------------------------------------------------
+
+function ReferralsPage() {
+    return createCapabilityPage({
+        kicker: 'Referrals Module',
+        title: 'Automated Referral Letters from Your Clinical Note.',
+        description:
+            'When you select \u201cAdd Referral\u201d during a consultation, ClinixSummary generates a pertinent, structured referral letter to the requested specialty \u2014 directly from the clinical encounter. No separate dictation, no copy-pasting, no delays.',
+        features: [
+            {
+                icon: 'send',
+                title: 'One-Click Referral Generation',
+                desc: 'Select \u201cAdd Referral\u201d and choose the target specialty. ClinixSummary extracts the relevant clinical details from the encounter and composes a structured referral letter automatically.',
+            },
+            {
+                icon: 'clinical_notes',
+                title: 'Clinically Pertinent Content',
+                desc: 'Referral letters include presenting complaint, relevant history, examination findings, investigations, working diagnosis and the specific clinical question for the specialist \u2014 drawn directly from the consultation.',
+            },
+            {
+                icon: 'tune',
+                title: 'Specialty-Aware Formatting',
+                desc: 'The referral format adapts to the target specialty. A cardiology referral emphasises cardiac history, ECG findings and risk factors; a psychiatric referral prioritises mental status, medication history and safety assessment.',
+            },
+            {
+                icon: 'edit_note',
+                title: 'Review & Customise',
+                desc: 'Every generated referral is presented for your review before finalisation. Add personal notes, adjust urgency, or modify any section before exporting or sending.',
+            },
+        ],
+        extraContent: `
+            <div style="background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 32px; margin-top: 20px;">
+                <div style="display: flex; align-items: flex-start; gap: 16px;">
+                    <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent); flex-shrink: 0;">info</span>
+                    <div>
+                        <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Part of the Clinical Note Workflow</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">Referrals are generated as part of the clinical note \u2014 not as a separate step. This means the referral letter is always contextually accurate and up to date with the encounter that triggered it. The referral is appended to the end of your note and can be exported independently as a PDF or integrated directly into your EHR referral workflow.</p>
+                    </div>
+                </div>
+            </div>
+        `,
+        ctaTitle: 'Eliminate referral bottlenecks in your practice.',
+        ctaToast: 'Starting free trial with Referrals module.',
+        ctaLabel: 'Start Free Trial',
+    });
+}
+
+// ---------------------------------------------------------------------------
+// 12. ICD-10 Coding
+// ---------------------------------------------------------------------------
+
+function ICDCodingPage() {
+    return createCapabilityPage({
+        kicker: 'ICD-10 Coding',
+        title: 'Accurate ICD-10 Coding from Every Encounter.',
+        description:
+            'ClinixSummary\u2019s ICD-10 coding module analyses the clinical narrative in real time and generates accurate diagnostic codes \u2014 reducing under-coding, eliminating errors and supporting cleaner claims submission.',
+        features: [
+            {
+                icon: 'medical_information',
+                title: 'Context-Driven Code Selection',
+                desc: 'Our models don\u2019t just match keywords to codes. They understand clinical context \u2014 differentiating between a history of a condition and an active diagnosis, primary vs. secondary diagnoses, and laterality.',
+            },
+            {
+                icon: 'verified',
+                title: 'High-Specificity Coding',
+                desc: 'ClinixSummary targets the highest appropriate specificity level, capturing the detail that payers require and reducing the \u201cunspecified\u201d codes that trigger claim queries and denials.',
+            },
+            {
+                icon: 'checklist',
+                title: 'Clinician Review & Approval',
+                desc: 'All suggested codes are presented for clinician review before submission. The human-in-the-loop design ensures accuracy, compliance and accountability at every step.',
+            },
+            {
+                icon: 'speed',
+                title: 'Faster Claims Submission',
+                desc: 'Accurate, same-day coding accelerates the revenue cycle from encounter to payment \u2014 reducing coding backlog, claim rejections and days in accounts receivable.',
+            },
+        ],
+        extraContent: `
+            <div class="subpage-header" style="margin-top: 20px;">
+                <span class="kicker">Impact</span>
+                <h3 class="section-title">Measurable improvements in coding accuracy.</h3>
+            </div>
+
+            <div class="grid-3" style="margin-bottom: 20px;">
+                <div class="text-group" style="border-bottom: none;">
+                    <span class="material-symbols-rounded list-item-icon">trending_down</span>
+                    <h3>Fewer Claim Denials</h3>
+                    <p>Accurate, specific codes reduce the mismatches and errors that trigger claim rejections, improving first-pass acceptance rates and reducing rework.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <span class="material-symbols-rounded list-item-icon">attach_money</span>
+                    <h3>Reduced Revenue Leakage</h3>
+                    <p>Under-coding costs practices thousands annually. ClinixSummary captures the full clinical picture, ensuring that all documented conditions are properly coded.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <span class="material-symbols-rounded list-item-icon">analytics</span>
+                    <h3>Better Analytics</h3>
+                    <p>Consistent, accurate coding improves population health analytics, quality reporting and benchmarking across your practice or health system.</p>
+                </div>
+            </div>
+        `,
+        ctaTitle: 'Start coding with confidence.',
+        ctaToast: 'Starting free trial with ICD-10 coding.',
+        ctaLabel: 'Start Free Trial',
+    });
+}

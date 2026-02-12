@@ -266,6 +266,164 @@ function NewsPage() {
     `;
 }
 
+function CaseStudiesPage() {
+    const caseStudies = [
+        {
+            title: 'Documentation Time & Encounter Efficiency: A 12-Week Multi-Specialty Study',
+            icon: 'timer',
+            setting: 'Multi-specialty clinic \u2014 18 clinicians',
+            period: '12 weeks',
+            challenge: 'Clinicians were spending an average of 16 minutes per encounter on documentation, with an additional 45 minutes of \u201cpajama time\u201d after hours. Patient throughput was limited by documentation bottleneck, and clinician satisfaction scores were declining.',
+            outcome: 'After deploying ClinixSummary, average documentation time dropped to 3 minutes per encounter \u2014 an 81% reduction. Clinicians reported reclaiming an average of 2.1 hours per day previously spent on documentation. After-hours documentation was virtually eliminated, with 94% of notes completed before the clinician left the exam room.',
+            metrics: [
+                { label: 'Documentation time reduction', value: '81%' },
+                { label: 'Hours reclaimed per clinician per day', value: '2.1 hrs' },
+                { label: 'Same-day note completion rate', value: '94%' },
+            ]
+        },
+        {
+            title: 'Billing Capture Before & After: Primary Care Group Practice',
+            icon: 'request_quote',
+            setting: 'Primary care group \u2014 8 physicians',
+            period: '6 months (3 months pre, 3 months post)',
+            challenge: 'The practice was experiencing significant revenue leakage from missed charges. Manual coding was inconsistent, and clinicians frequently under-coded encounters due to time pressure. An internal audit estimated 12\u201318% of billable services were going uncaptured.',
+            outcome: 'With ClinixSummary\u2019s Billing Assistance module, charge capture improved by 30% in the first month. Over the full 3-month post-deployment period, the practice saw a sustained 26% improvement in charge capture accuracy, translating to an additional $47,000 in monthly revenue across the group.',
+            metrics: [
+                { label: 'Charge capture improvement (month 1)', value: '30%' },
+                { label: 'Sustained improvement (3-month avg)', value: '26%' },
+                { label: 'Additional monthly revenue', value: '$47K' },
+            ]
+        },
+        {
+            title: 'Billing Capture Before & After: Emergency Department',
+            icon: 'payments',
+            setting: 'Community hospital ED \u2014 22 physicians',
+            period: '8 months (4 months pre, 4 months post)',
+            challenge: 'Emergency department documentation was frequently incomplete, leading to under-coding of critical care time, procedures and supplies. Claim denial rates averaged 14%, and charge capture reviews identified an estimated $180,000 in annual revenue leakage from documentation gaps alone.',
+            outcome: 'ClinixSummary\u2019s real-time charge capture identified billable procedures, supplies and critical care time directly from encounter audio. Claim denial rates dropped from 14% to 5.2%, and total charge capture increased by 22%. The ED recovered an estimated $210,000 in previously lost annual revenue.',
+            metrics: [
+                { label: 'Claim denial rate reduction', value: '14% \u2192 5.2%' },
+                { label: 'Total charge capture increase', value: '22%' },
+                { label: 'Annual revenue recovered', value: '$210K' },
+            ]
+        },
+        {
+            title: 'Patient Satisfaction: The Impact of Clinician Presence',
+            icon: 'sentiment_satisfied',
+            setting: 'Family medicine practice \u2014 6 clinicians',
+            period: '4 months',
+            challenge: 'Patient satisfaction surveys consistently flagged that clinicians spent too much time looking at the computer during consultations. Patients reported feeling \u201crushed\u201d and \u201cunheard\u201d. The practice\u2019s Press Ganey scores for \u201ctime spent with provider\u201d ranked in the 35th percentile.',
+            outcome: 'After adopting ClinixSummary\u2019s ambient documentation, clinicians could maintain eye contact and verbalise their clinical reasoning during the encounter. Patient satisfaction scores for \u201ctime spent with provider\u201d improved from the 35th to the 78th percentile. 82% of patients reported that their clinician \u201cspent more time talking to them\u201d, and unsolicited positive feedback increased by 40%.',
+            metrics: [
+                { label: 'Patient satisfaction percentile', value: '35th \u2192 78th' },
+                { label: 'Patients reporting more clinician engagement', value: '82%' },
+                { label: 'Increase in positive patient feedback', value: '40%' },
+            ]
+        },
+        {
+            title: 'Multi-Specialty Deployment: Large Health System Rollout',
+            icon: 'corporate_fare',
+            setting: 'Regional health system \u2014 4 hospitals, 120+ clinicians',
+            period: '6 months phased rollout',
+            challenge: 'The health system needed a single documentation platform that could serve cardiology, orthopaedics, general surgery, internal medicine, paediatrics and psychiatry. Existing solutions required separate configurations per department, creating training burden and inconsistent documentation quality.',
+            outcome: 'ClinixSummary\u2019s specialty-tuned models were deployed across all six departments using a phased rollout. Each department required no specialty-specific configuration beyond selecting the appropriate module. Documentation consistency scores (measured by internal QA audits) improved from 68% to 91% across all departments. Clinician adoption reached 89% within 8 weeks, and the system reduced the organisation\u2019s reliance on outsourced transcription by 95%.',
+            metrics: [
+                { label: 'Documentation consistency score', value: '68% \u2192 91%' },
+                { label: 'Clinician adoption (8 weeks)', value: '89%' },
+                { label: 'Reduction in outsourced transcription', value: '95%' },
+            ]
+        },
+        {
+            title: 'Multilingual Practice: Breaking Language Barriers in Documentation',
+            icon: 'translate',
+            setting: 'Urban multispecialty clinic \u2014 12 clinicians, 4 languages',
+            period: '5 months',
+            challenge: 'The clinic served a diverse patient population where consultations regularly switched between English, Spanish, French and Arabic. Clinicians were forced to document exclusively in English, losing clinical nuance from non-English portions of encounters. Bilingual staff spent additional time translating and re-documenting.',
+            outcome: 'ClinixSummary\u2019s multilingual models processed code-switching naturally, capturing clinical content in whatever language it was spoken and generating structured notes in the clinician\u2019s preferred output language. Documentation accuracy for bilingual encounters improved from 72% to 94%. The clinic eliminated the need for dedicated documentation translators, saving 15 staff hours per week.',
+            metrics: [
+                { label: 'Bilingual documentation accuracy', value: '72% \u2192 94%' },
+                { label: 'Staff hours saved per week', value: '15 hrs' },
+                { label: 'Languages supported in practice', value: '4' },
+            ]
+        },
+        {
+            title: 'Allied Health: Physiotherapy Practice Transformation',
+            icon: 'exercise',
+            setting: 'Physiotherapy practice \u2014 5 therapists',
+            period: '3 months',
+            challenge: 'Physiotherapists spent 20\u201325 minutes per patient on documentation, manually recording ROM measurements, functional test scores, treatment plans and progress notes. The documentation burden meant therapists could only see 8\u20139 patients per day, and notes were often completed hours after the session.',
+            outcome: 'ClinixSummary\u2019s allied health module captured ROM, strength grades, functional tests and treatment goals directly from session narration. Documentation time dropped to 4 minutes per patient. Therapists increased patient throughput to 11\u201312 per day without extending working hours. All notes were completed before the next patient entered the room.',
+            metrics: [
+                { label: 'Documentation time per patient', value: '22 min \u2192 4 min' },
+                { label: 'Daily patient throughput increase', value: '33%' },
+                { label: 'Same-session note completion', value: '100%' },
+            ]
+        }
+    ];
+
+    const studyCards = caseStudies.map(s => {
+        const metricItems = s.metrics.map(m => `
+            <div style="text-align: center;">
+                <div style="font-size: 24px; font-weight: 700; color: var(--accent); font-family: var(--font-serif);">${m.value}</div>
+                <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">${m.label}</div>
+            </div>
+        `).join('');
+
+        return `
+            <div style="border: 1px solid var(--border-subtle); border-radius: 12px; padding: 36px; margin-bottom: 24px; background: var(--bg-surface);">
+                <div style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 20px;">
+                    <span class="material-symbols-rounded" style="font-size: 32px; color: var(--accent); flex-shrink: 0;">${s.icon}</span>
+                    <div>
+                        <h3 style="font-family: var(--font-serif); font-size: 20px; font-weight: 700; margin-bottom: 8px;">${s.title}</h3>
+                        <div style="display: flex; gap: 16px; font-size: 13px; color: var(--text-secondary); flex-wrap: wrap;">
+                            <span><strong>Setting:</strong> ${s.setting}</span>
+                            <span><strong>Period:</strong> ${s.period}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px;">
+                    <div>
+                        <h4 style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #999; margin-bottom: 8px;">Challenge</h4>
+                        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">${s.challenge}</p>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #999; margin-bottom: 8px;">Outcome</h4>
+                        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">${s.outcome}</p>
+                    </div>
+                </div>
+
+                <div style="background: var(--bg-subtle); border-radius: 8px; padding: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+                    ${metricItems}
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    return `
+        <section class="subpage-container">
+            <div class="page-width">
+                <div class="subpage-header">
+                    <span class="kicker">Case Studies</span>
+                    <h2 class="subpage-title">Real results from real practices.</h2>
+                    <p class="subpage-copy">See how clinicians and organisations across specialties and settings are using ClinixSummary to transform documentation workflows, improve billing accuracy and enhance patient care.</p>
+                </div>
+
+                ${studyCards}
+
+                <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
+                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;">Ready to write your own success story?</h2>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Join practices worldwide that have transformed their documentation workflow with ClinixSummary.</p>
+                    <div class="nav-actions" style="justify-content: center;">
+                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Starting free trial...'); return false;">Start Free Trial</a>
+                        <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
 function PodcastsPage() {
     return `
         <section class="subpage-container">
