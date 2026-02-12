@@ -80,6 +80,23 @@ function SecurityPage() {
                     </div>
                 </div>
 
+                <div class="subpage-header" style="margin-top: 60px;">
+                    <span class="kicker">Clinic Resources</span>
+                    <h3 class="section-title">Patient privacy notice for your practice.</h3>
+                    <p class="section-copy">Download our printable patient privacy leaflet to display in your waiting room or consultation area. It explains how AI documentation works, what happens to the recording, and reassures patients about their privacy.</p>
+                </div>
+
+                <div style="background: var(--bg-subtle); padding: 30px; border-radius: 12px; margin-bottom: 60px; border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+                    <span class="material-symbols-rounded" style="font-size: 48px; color: var(--accent);">description</span>
+                    <div style="flex: 1; min-width: 250px;">
+                        <h4 style="font-weight: 700; font-size: 16px; margin-bottom: 6px;">Patient Privacy Notice \u2014 Printable Leaflet</h4>
+                        <p style="color: var(--text-secondary); font-size: 14px; margin: 0;">A4 single-sided leaflet explaining recording usage, encryption, data deletion, and patient rights. Designed for clinic walls and waiting rooms.</p>
+                    </div>
+                    <a href="docs/resources/patient-privacy-notice.pdf" target="_blank" class="btn-primary" style="text-decoration: none; white-space: nowrap;">
+                        <span class="material-symbols-rounded" style="font-size: 18px; vertical-align: middle; margin-right: 4px;">download</span> Download PDF
+                    </a>
+                </div>
+
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
                     <h2 style="font-family: var(--font-serif); font-size: 36px; margin-bottom: 20px;">Ready to secure your documentation workflow?</h2>
                     <div class="nav-actions" style="justify-content: center;">
