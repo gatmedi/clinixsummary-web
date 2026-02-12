@@ -7,7 +7,7 @@ function SecurityPage() {
                 <div class="subpage-header">
                     <span class="kicker">Security, Compliance & QMS</span>
                     <h2 class="subpage-title">Protecting patient privacy by default.</h2>
-                    <p class="subpage-copy">Safeguarding patient data is non\u2011negotiable. ClinixSummary employs industry\u2011standard encryption, strict access controls and short retention policies to give you confidence that your practice and your patients are protected.</p>
+                    <p class="subpage-copy">Safeguarding patient data is non\u2011negotiable. ClinixSummary employs industry\u2011standard encryption, strict access controls and immediate audio deletion to give you confidence that your practice and your patients are protected.</p>
                 </div>
 
                 <div class="grid-2">
@@ -19,7 +19,7 @@ function SecurityPage() {
                     <div class="text-group">
                         <span class="material-symbols-rounded list-item-icon">cleaning_services</span>
                         <h3>Ephemeral audio & data control</h3>
-                        <p>We never store audio recordings long\u2011term. Once your note is generated, recordings are deleted automatically and you remain in control of your transcripts, which you can remove at any time.</p>
+                        <p>We never store audio recordings. Once your note is generated, recordings are immediately and permanently deleted. You remain in control of your transcripts, which you can remove at any time.</p>
                     </div>
                     <div class="text-group">
                         <span class="material-symbols-rounded list-item-icon">gavel</span>
@@ -59,7 +59,7 @@ function SecurityPage() {
 
                 <div class="subpage-header" style="margin-top: 60px;">
                     <span class="kicker">Your Data, Your Rules</span>
-                    <h3 class="section-title">Short retention & granular control.</h3>
+                    <h3 class="section-title">Immediate deletion & granular control.</h3>
                     <div class="grid-4" style="margin-top: 30px;">
                         <div class="text-group" style="border: none;">
                             <h4 style="font-weight: 600; font-size: 16px;">Audio retention</h4>

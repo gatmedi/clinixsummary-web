@@ -599,9 +599,9 @@ def pub05_privacy():
         'medical literature, clinical guidelines, and synthetic data validated by clinicians.')
     pdf.sub_heading('3.3 Ephemeral Audio Processing')
     pdf.body_text(
-        'Audio recordings are encrypted immediately upon capture, processed in secure memory, and deleted '
-        'automatically after note generation. Maximum audio retention is 24 hours, after which '
-        'cryptographic erasure ensures irrecoverable deletion.')
+        'Audio recordings are encrypted immediately upon capture and processed in secure memory. '
+        'Once the clinical note has been generated, the audio recording is immediately and permanently '
+        'deleted via cryptographic erasure. No audio is ever stored beyond note generation.')
     pdf.sub_heading('3.4 Data Sovereignty')
     pdf.body_text(
         'ClinixSummary offers geographic data residency (US, EU, UK, AU) ensuring that patient data '

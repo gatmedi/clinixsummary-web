@@ -522,9 +522,9 @@ def generate_leaflet():
         ('Your recording is encrypted immediately',
          'From the moment audio capture begins, all data is encrypted using industry-standard '
          'AES-256 encryption \u2014 the same level used by banks and governments.'),
-        ('Audio is automatically deleted within 24 hours',
-         'After your clinical note has been generated, the audio recording is permanently '
-         'and irrecoverably deleted. No audio is stored long-term.'),
+        ('Audio is deleted immediately after your note is created',
+         'Once your clinical note has been generated, the audio recording is permanently '
+         'and irrecoverably deleted. No audio is ever stored.'),
         ('Your data is never shared with third parties',
          'Your consultation data is processed entirely within ClinixSummary\u2019s secure infrastructure. '
          'It is never sent to external AI services or shared with anyone outside your care team.'),
