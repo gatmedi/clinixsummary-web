@@ -10,6 +10,13 @@ function PublicationsPage() {
             pdf: 'docs/publications/standardised-clinical-documentation-2025.pdf'
         },
         {
+            title: 'Automated Charge Capture: How AI Documentation Closes the Revenue Gap',
+            desc: 'How ClinixSummary identifies billable procedures, supplies, and interventions from clinical encounters \u2014 reducing charge leakage and improving revenue integrity. Pilot data shows 30% improvement in charge capture.',
+            icon: 'request_quote',
+            date: 'December 2025',
+            pdf: 'docs/publications/automated-charge-capture-2025.pdf'
+        },
+        {
             title: 'The Future of Medical Education: Integrating CME/CPD into the Documentation Workflow',
             desc: 'How the CME/CPD Vault turns routine clinical documentation into learning opportunities, and the potential to earn continuing education credits through practice.',
             icon: 'school',
@@ -24,7 +31,7 @@ function PublicationsPage() {
             pdf: 'docs/publications/icd10-cpt-coding-accuracy-2025.pdf'
         },
         {
-            title: 'Kai-zen in Healthcare AI: The Case for Continuous Model Improvement',
+            title: 'Kai-zen (\u6539\u5584) in Healthcare AI: The Case for Continuous Model Improvement',
             desc: 'Why static AI models fail in medicine, and how ClinixSummary\u2019s weekly update cycle and clinician feedback loop produce consistently improving outputs.',
             icon: 'change_circle',
             date: 'September 2025',
