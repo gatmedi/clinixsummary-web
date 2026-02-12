@@ -520,6 +520,132 @@ function UsagePolicyPage() {
     `;
 }
 
+function ContactPage() {
+    return `
+        <section class="subpage-container">
+            <div class="page-width">
+                <div class="subpage-header">
+                    <span class="kicker">Get in Touch</span>
+                    <h2 class="subpage-title">Let\u2019s talk about your documentation needs.</h2>
+                    <p class="subpage-copy">Whether you\u2019re a solo clinician exploring AI documentation or a health system looking for enterprise deployment, we\u2019re here to help.</p>
+                </div>
+
+                <div id="contact" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: flex-start;">
+                    <div>
+                        <h3 style="font-family: var(--font-serif); font-size: 24px; margin-bottom: 24px;">Contact channels</h3>
+
+                        <div style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 40px;">
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent);">mail</span>
+                                <div>
+                                    <div style="font-weight: 600; font-size: 15px;">General enquiries</div>
+                                    <a href="mailto:contact@clinixsummary.ai" style="font-size: 14px; color: var(--accent);">contact@clinixsummary.ai</a>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent);">corporate_fare</span>
+                                <div>
+                                    <div style="font-weight: 600; font-size: 15px;">Enterprise & organisations</div>
+                                    <a href="mailto:enterprise@clinixsummary.ai" style="font-size: 14px; color: var(--accent);">enterprise@clinixsummary.ai</a>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent);">work</span>
+                                <div>
+                                    <div style="font-weight: 600; font-size: 15px;">Careers</div>
+                                    <a href="mailto:careers@clinixsummary.ai" style="font-size: 14px; color: var(--accent);">careers@clinixsummary.ai</a>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent);">shield</span>
+                                <div>
+                                    <div style="font-weight: 600; font-size: 15px;">Privacy & data protection</div>
+                                    <a href="mailto:privacy@clinixsummary.ai" style="font-size: 14px; color: var(--accent);">privacy@clinixsummary.ai</a>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent);">security</span>
+                                <div>
+                                    <div style="font-weight: 600; font-size: 15px;">Security</div>
+                                    <a href="mailto:security@clinixsummary.ai" style="font-size: 14px; color: var(--accent);">security@clinixsummary.ai</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="background: var(--bg-subtle); padding: 24px; border-radius: 12px; border: 1px solid var(--border-subtle);">
+                            <h4 style="font-weight: 700; margin-bottom: 8px;">Follow us</h4>
+                            <div style="display: flex; gap: 16px; margin-top: 12px;">
+                                <a href="https://www.facebook.com/clinixsummary" target="_blank" rel="noopener" style="color: var(--text-primary); font-size: 14px; display: flex; align-items: center; gap: 6px;"><span style="font-weight: 700;">f</span> Facebook</a>
+                                <a href="https://x.com/clinixsummary" target="_blank" rel="noopener" style="color: var(--text-primary); font-size: 14px; display: flex; align-items: center; gap: 6px;"><span style="font-weight: 700;">&#x1D54F;</span> X</a>
+                                <a href="https://www.linkedin.com/company/clinixsummary" target="_blank" rel="noopener" style="color: var(--text-primary); font-size: 14px; display: flex; align-items: center; gap: 6px;"><span style="font-weight: 700;">in</span> LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 16px; padding: 36px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
+                        <h3 style="font-family: var(--font-serif); font-size: 22px; margin-bottom: 24px;">Send us a message</h3>
+                        <form id="contact-form" onsubmit="submitContactForm(event)">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name *</label>
+                                <input type="text" id="contact-name" name="name" required placeholder="Dr. Jane Smith">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email Address *</label>
+                                <input type="email" id="contact-email" name="email" required placeholder="jane.smith@clinic.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-org">Organisation</label>
+                                <input type="text" id="contact-org" name="organization" placeholder="Hospital / Practice name">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-topic">Topic</label>
+                                <select id="contact-topic" name="topic">
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Enterprise Licensing">Enterprise Licensing</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Partnership">Partnership</option>
+                                    <option value="Billing & Pricing">Billing & Pricing</option>
+                                    <option value="Integration Support">Integration Support</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message *</label>
+                                <textarea id="contact-message" name="message" required rows="4" placeholder="Tell us about your documentation needs..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" style="width: 100%; text-align: center; justify-content: center; padding: 14px; font-size: 15px; font-weight: 600;">
+                                Send Message
+                            </button>
+                            <p style="font-size: 12px; color: var(--text-secondary); margin-top: 12px; text-align: center;">This will open your email client with the form details pre-filled.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function submitContactForm(event) {
+    event.preventDefault();
+    var name = document.getElementById('contact-name').value;
+    var email = document.getElementById('contact-email').value;
+    var org = document.getElementById('contact-org').value;
+    var topic = document.getElementById('contact-topic').value;
+    var message = document.getElementById('contact-message').value;
+
+    var recipient = (topic === 'Enterprise Licensing') ? 'enterprise@clinixsummary.ai' : 'contact@clinixsummary.ai';
+    var subject = encodeURIComponent('[ClinixSummary] ' + topic);
+    var body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Organisation: ' + (org || 'N/A') + '\n' +
+        'Topic: ' + topic + '\n\n' +
+        'Message:\n' + message
+    );
+
+    window.location.href = 'mailto:' + recipient + '?subject=' + subject + '&body=' + body;
+    showToast('Opening your email client...');
+}
+
 function StoryPage() {
     return `
         <section class="subpage-container">

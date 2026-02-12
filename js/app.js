@@ -92,7 +92,7 @@ const routes = {
     // Home
     '#home':               HomePage,
     '#pricing':            HomePage,
-    '#contact':            HomePage,
+    '#contact':            ContactPage,
     '':                    HomePage,
 
     // Meet ClinixSummary
@@ -160,7 +160,7 @@ function router() {
 
         window.scrollTo(0, 0);
 
-        if (hash === '#pricing' || hash === '#contact' || hash === '#roi-calculator') {
+        if (hash === '#pricing' || hash === '#roi-calculator') {
              setTimeout(() => {
                 const target = document.querySelector(hash);
                 if (target) {

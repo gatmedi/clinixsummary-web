@@ -982,7 +982,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    #contact > .page-width > div {
+    #contact {
         grid-template-columns: 1fr !important;
         gap: 40px !important;
     }
