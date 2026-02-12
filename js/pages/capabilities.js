@@ -13,13 +13,16 @@
  * @returns {string} Full subpage HTML
  */
 function createCapabilityPage(config) {
+    const ns = config.ns;
+    const d = (key) => ns ? ` data-i18n="${ns}.${key}"` : '';
+
     const featureCards = config.features
         .map(
-            (f) => `
+            (f, idx) => `
                 <div class="card">
                     <div class="card-icon material-symbols-rounded">${f.icon}</div>
-                    <h3>${f.title}</h3>
-                    <p>${f.desc}</p>
+                    <h3${d('f' + (idx+1) + '_title')}>${f.title}</h3>
+                    <p${d('f' + (idx+1) + '_desc')}>${f.desc}</p>
                 </div>`
         )
         .join('');
@@ -32,9 +35,9 @@ function createCapabilityPage(config) {
         <section class="subpage-container">
             <div class="page-width">
                 <div class="subpage-header">
-                    <span class="kicker">${config.kicker}</span>
-                    <h2 class="subpage-title">${config.title}</h2>
-                    <p class="subpage-copy">${config.description}</p>
+                    <span class="kicker"${d('kicker')}>${config.kicker}</span>
+                    <h2 class="subpage-title"${d('title')}>${config.title}</h2>
+                    <p class="subpage-copy"${d('description')}>${config.description}</p>
                 </div>
 
                 <div class="${gridClass}" style="margin-bottom: 60px;">
@@ -44,10 +47,10 @@ function createCapabilityPage(config) {
                 ${config.extraContent || ''}
 
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
-                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;">${config.ctaTitle || 'Ready to transform your documentation?'}</h2>
+                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;"${d('cta_title')}>${config.ctaTitle || 'Ready to transform your documentation?'}</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('${config.ctaToast || 'Starting free trial...'}'); return false;">${config.ctaLabel || 'Start Free Trial'}</a>
-                        <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Contact Sales</a>
+                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('${config.ctaToast || 'Starting free trial...'}'); return false;"${d('cta_label')}>${config.ctaLabel || 'Start Free Trial'}</a>
+                        <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="common.contact_us">Contact Sales</a>
                     </div>
                 </div>
             </div>
@@ -61,6 +64,7 @@ function createCapabilityPage(config) {
 
 function CapMedicalPage() {
     return createCapabilityPage({
+        ns: 'cap_medical',
         kicker: 'Medical Specialties',
         title: 'All Medical Specialties. One Platform.',
         description:
@@ -106,6 +110,7 @@ function CapMedicalPage() {
 
 function CapDentalPage() {
     return createCapabilityPage({
+        ns: 'cap_dental',
         kicker: 'Dental',
         title: 'Dental Documentation, Reimagined.',
         description:
@@ -144,6 +149,7 @@ function CapDentalPage() {
 
 function CapPsychiatryPage() {
     return createCapabilityPage({
+        ns: 'cap_psychiatry',
         kicker: 'Psychiatry',
         title: 'Psychiatry Documentation That Understands Context.',
         description:
@@ -182,6 +188,7 @@ function CapPsychiatryPage() {
 
 function CapPsychologyPage() {
     return createCapabilityPage({
+        ns: 'cap_psychology',
         kicker: 'Psychology',
         title: 'Psychology Notes Built for Clinical Depth.',
         description:
@@ -338,6 +345,7 @@ function CapAlliedHealthPage() {
 
 function CapMidwiferyPage() {
     return createCapabilityPage({
+        ns: 'cap_midwifery',
         kicker: 'Midwifery',
         title: 'Midwifery Documentation for Every Stage of Care.',
         description:
@@ -376,6 +384,7 @@ function CapMidwiferyPage() {
 
 function CapVetPage() {
     return createCapabilityPage({
+        ns: 'cap_vet',
         kicker: 'Veterinary Medicine',
         title: 'Veterinary Documentation, Purpose-Built.',
         description:
@@ -414,6 +423,7 @@ function CapVetPage() {
 
 function CapOperativePage() {
     return createCapabilityPage({
+        ns: 'cap_operative',
         kicker: 'Operative Notes',
         title: 'Operative & Procedural Notes. Automatically.',
         description:
@@ -479,7 +489,7 @@ function BillingAssistPage() {
 
                 <!-- How it works -->
                 <div class="subpage-header">
-                    <span class="kicker">How It Works</span>
+                    <span class="kicker" data-i18n="cap_medical.extra_kicker">How It Works</span>
                     <h3 class="section-title">From encounter to suggested codes in seconds.</h3>
                     <p class="section-copy">During each encounter, ClinixSummary identifies billable activities from the clinical narrative and cross\u2011references them against your organisation\u2019s CPT code library. Suggested codes are presented for clinician review \u2014 never submitted as final billing without human approval.</p>
                 </div>
@@ -561,6 +571,7 @@ function BillingAssistPage() {
 
 function CapPatientLeafletPage() {
     return createCapabilityPage({
+        ns: 'cap_leaflet',
         kicker: 'Patient Information Leaflet',
         title: 'Patient-Friendly Summaries at the Point of Care.',
         description:
@@ -599,7 +610,7 @@ function CapPatientLeafletPage() {
             </div>
 
             <div class="subpage-header" style="margin-top: 60px;">
-                <span class="kicker">Benefits</span>
+                <span class="kicker" data-i18n="cap_leaflet.extra_kicker">Benefits</span>
                 <h3 class="section-title">Better-informed patients, better outcomes.</h3>
             </div>
 
@@ -633,6 +644,7 @@ function CapPatientLeafletPage() {
 
 function ReferralsPage() {
     return createCapabilityPage({
+        ns: 'referrals_page',
         kicker: 'Referrals Module',
         title: 'Automated Referral Letters from Your Clinical Note.',
         description:
@@ -682,6 +694,7 @@ function ReferralsPage() {
 
 function ICDCodingPage() {
     return createCapabilityPage({
+        ns: 'icd_page',
         kicker: 'ICD-10 Coding',
         title: 'Accurate ICD-10 Coding from Every Encounter.',
         description:
@@ -710,7 +723,7 @@ function ICDCodingPage() {
         ],
         extraContent: `
             <div class="subpage-header" style="margin-top: 20px;">
-                <span class="kicker">Impact</span>
+                <span class="kicker" data-i18n="icd_page.extra_kicker">Impact</span>
                 <h3 class="section-title">Measurable improvements in coding accuracy.</h3>
             </div>
 

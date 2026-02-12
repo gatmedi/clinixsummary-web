@@ -5,8 +5,8 @@ function SecurityPage() {
         <section class="subpage-container">
             <div class="page-width">
                 <div class="subpage-header">
-                    <span class="kicker">Security, Compliance & QMS</span>
-                    <h2 class="subpage-title">Protecting patient privacy by default.</h2>
+                    <span class="kicker" data-i18n="security.kicker">Security, Compliance & QMS</span>
+                    <h2 class="subpage-title" data-i18n="security.title">Protecting patient privacy by default.</h2>
                     <p class="subpage-copy">Safeguarding patient data is non\u2011negotiable. ClinixSummary employs industry\u2011standard encryption, strict access controls and immediate audio deletion to give you confidence that your practice and your patients are protected.</p>
                 </div>
 
@@ -18,71 +18,71 @@ function SecurityPage() {
                     </div>
                     <div class="text-group">
                         <span class="material-symbols-rounded list-item-icon">cleaning_services</span>
-                        <h3>Ephemeral audio & data control</h3>
+                        <h3 data-i18n="security.ephemeral_title">Ephemeral audio & data control</h3>
                         <p>We never store audio recordings. Once your note is generated, recordings are immediately and permanently deleted. You remain in control of your transcripts, which you can remove at any time.</p>
                     </div>
                     <div class="text-group">
                         <span class="material-symbols-rounded list-item-icon">gavel</span>
-                        <h3>HIPAA & GDPR compliance</h3>
+                        <h3 data-i18n="security.compliance_title">HIPAA & GDPR compliance</h3>
                         <p>ClinixSummary meets the requirements of HIPAA, GDPR, PIPEDA/PHIPA, CCPA and other global privacy regulations. We sign Business Associate Agreements (BAAs) and maintain full regulatory alignment.</p>
                     </div>
                     <div class="text-group">
                         <span class="material-symbols-rounded list-item-icon">auto_fix</span>
-                        <h3>De-identified training data</h3>
+                        <h3 data-i18n="security.deidentified_title">De-identified training data</h3>
                         <p>Our models are fine\u2011tuned on anonymised, de-identified, non\u2011PHI data and run inference on secure infrastructure. We never use your transcripts to train customer\u2011facing models.</p>
                     </div>
                 </div>
 
                 <div class="subpage-header" style="margin-top: 60px;">
-                    <span class="kicker">Clinix Quality Management System</span>
-                    <h3 class="section-title">Clinix QM: Quality at every layer.</h3>
+                    <span class="kicker" data-i18n="security.qms_kicker">Clinix Quality Management System</span>
+                    <h3 class="section-title" data-i18n="security.qms_title">Clinix QM: Quality at every layer.</h3>
                     <p class="section-copy">The Clinix Quality Management System (Clinix QM) ensures that every output meets clinical standards through systematic review, feedback loops, and continuous improvement protocols.</p>
                 </div>
 
                 <div class="grid-3" style="margin-bottom: 40px;">
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">fact_check</div>
-                        <h3>Clinical QA Reviews</h3>
+                        <h3 data-i18n="security.qa_title">Clinical QA Reviews</h3>
                         <p>Dedicated quality assurance team conducts regular manual reviews of model outputs against clinical documentation standards, ensuring accuracy and completeness.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">admin_panel_settings</div>
-                        <h3>Role-Based Access Controls</h3>
+                        <h3 data-i18n="security.rbac_title">Role-Based Access Controls</h3>
                         <p>Fine-grained permission systems ensure that only authorised personnel can access patient data, with full audit trails for every action taken in the system.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">verified</div>
-                        <h3>Compliance Certifications</h3>
+                        <h3 data-i18n="security.cert_title">Compliance Certifications</h3>
                         <p>Ongoing certification processes and third-party audits ensure ClinixSummary meets and exceeds healthcare industry security and compliance benchmarks.</p>
                     </div>
                 </div>
 
                 <div class="subpage-header" style="margin-top: 60px;">
-                    <span class="kicker">Your Data, Your Rules</span>
-                    <h3 class="section-title">Immediate deletion & granular control.</h3>
+                    <span class="kicker" data-i18n="security.data_kicker">Your Data, Your Rules</span>
+                    <h3 class="section-title" data-i18n="security.data_title">Immediate deletion & granular control.</h3>
                     <div class="grid-4" style="margin-top: 30px;">
                         <div class="text-group" style="border: none;">
-                            <h4 style="font-weight: 600; font-size: 16px;">Audio retention</h4>
-                            <p>Deleted after note generation</p>
+                            <h4 style="font-weight: 600; font-size: 16px;" data-i18n="security.audio_title">Audio retention</h4>
+                            <p data-i18n="security.audio_desc">Deleted after note generation</p>
                         </div>
                         <div class="text-group" style="border: none;">
-                            <h4 style="font-weight: 600; font-size: 16px;">Transcript storage</h4>
+                            <h4 style="font-weight: 600; font-size: 16px;" data-i18n="security.transcript_title">Transcript storage</h4>
                             <p>Short retention / user\u2011controlled</p>
                         </div>
                         <div class="text-group" style="border: none;">
-                            <h4 style="font-weight: 600; font-size: 16px;">User deletion</h4>
+                            <h4 style="font-weight: 600; font-size: 16px;" data-i18n="security.deletion_title">User deletion</h4>
                             <p>Export & permanent erase at any time</p>
                         </div>
                         <div class="text-group" style="border: none;">
-                            <h4 style="font-weight: 600; font-size: 16px;">Audit trails</h4>
-                            <p>Full activity logs for governance</p>
+                            <h4 style="font-weight: 600; font-size: 16px;" data-i18n="security.audit_title">Audit trails</h4>
+                            <p data-i18n="security.audit_desc">Full activity logs for governance</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="subpage-header" style="margin-top: 60px;">
-                    <span class="kicker">Clinic Resources</span>
-                    <h3 class="section-title">Patient privacy notice for your practice.</h3>
+                    <span class="kicker" data-i18n="security.resources_kicker">Clinic Resources</span>
+                    <h3 class="section-title" data-i18n="security.resources_title">Patient privacy notice for your practice.</h3>
                     <p class="section-copy">Download our printable patient privacy leaflet to display in your waiting room or consultation area. It explains how AI documentation works, what happens to the recording, and reassures patients about their privacy.</p>
                 </div>
 
@@ -98,7 +98,7 @@ function SecurityPage() {
                 </div>
 
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
-                    <h2 style="font-family: var(--font-serif); font-size: 36px; margin-bottom: 20px;">Ready to secure your documentation workflow?</h2>
+                    <h2 style="font-family: var(--font-serif); font-size: 36px; margin-bottom: 20px;" data-i18n="security.cta_title">Ready to secure your documentation workflow?</h2>
                     <div class="nav-actions" style="justify-content: center;">
                         <a href="#" class="btn-primary" style="background: #fff; color: var(--text-primary);" onclick="showToast('Trial started!'); return false;" data-i18n="common.start_trial">Start free trial</a>
                         <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="common.contact_us">Contact our team</a>
@@ -214,8 +214,8 @@ function CareersPage() {
 
     return '<section class="subpage-container"><div class="page-width">'
         + '<div class="subpage-header">'
-        + '<span class="kicker">Join Us</span>'
-        + '<h2 class="subpage-title">Build the future of clinical documentation.</h2>'
+        + '<span class="kicker" data-i18n="careers.kicker">Join Us</span>'
+        + '<h2 class="subpage-title" data-i18n="careers.title">Build the future of clinical documentation.</h2>'
         + '<p class="subpage-copy">ClinixSummary is a small, global team of clinicians, engineers and designers on a mission to give healthcare professionals their time back. We work remotely, ship weekly, and believe the best ideas come from people who care deeply about the problem.</p>'
         + '</div>'
         + '<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; justify-content: center;">'
@@ -226,12 +226,12 @@ function CareersPage() {
         + '<div style="background: var(--bg-subtle); padding: 10px 20px; border-radius: 8px; font-size: 14px; display: flex; align-items: center; gap: 8px;">'
         + '<span class="material-symbols-rounded" style="font-size: 18px; color: var(--accent);">favorite</span> Healthcare impact at scale</div>'
         + '</div>'
-        + '<h3 class="section-title" style="margin-bottom: 32px;">Open positions</h3>'
+        + '<h3 class="section-title" style="margin-bottom: 32px;" data-i18n="careers.open_positions">Open positions</h3>'
         + jobCards
         + '<div style="background: var(--bg-subtle); padding: 32px; border-radius: 12px; margin-top: 40px; text-align: center; border: 1px solid var(--border-subtle);">'
-        + '<h4 style="font-weight: 700; font-size: 20px; margin-bottom: 12px;">Don\u2019t see the right role?</h4>'
+        + '<h4 style="font-weight: 700; font-size: 20px; margin-bottom: 12px;" data-i18n="careers.no_role_title">Don’t see the right role?</h4>'
         + '<p style="color: var(--text-secondary); margin-bottom: 20px;">We\u2019re always looking for talented people who are passionate about healthcare and technology. Send us your CV and tell us how you\u2019d like to contribute.</p>'
-        + '<a href="mailto:careers@clinixsummary.ai?subject=General Application" class="btn-outline">Send open application</a>'
+        + '<a href="mailto:careers@clinixsummary.ai?subject=General Application" class="btn-outline" data-i18n="careers.open_application">Send open application</a>'
         + '</div>'
         + '</div></section>';
 }
@@ -241,8 +241,8 @@ function PrivacyPolicyPage() {
         <section class="subpage-container">
             <div class="page-width">
                 <div class="subpage-header">
-                    <span class="kicker">Legal</span>
-                    <h2 class="subpage-title">Privacy Policy</h2>
+                    <span class="kicker" data-i18n="common.legal">Legal</span>
+                    <h2 class="subpage-title" data-i18n="privacy_policy.title">Privacy Policy</h2>
                     <p class="subpage-copy">Last updated: 1 January 2026. This Privacy Policy explains how GATMEDI Ltd (\u201cClinixSummary\u201d, \u201cwe\u201d, \u201cour\u201d, \u201cus\u201d) collects, uses, discloses and safeguards personal information when you use our platform and services.</p>
                 </div>
 
@@ -324,8 +324,8 @@ function PrivacyChoicesPage() {
         <section class="subpage-container">
             <div class="page-width">
                 <div class="subpage-header">
-                    <span class="kicker">Legal</span>
-                    <h2 class="subpage-title">Privacy Choices</h2>
+                    <span class="kicker" data-i18n="common.legal">Legal</span>
+                    <h2 class="subpage-title" data-i18n="privacy_choices.title">Privacy Choices</h2>
                     <p class="subpage-copy">You have control over how your data is collected and used. This page explains the privacy choices available to you as a ClinixSummary user.</p>
                 </div>
 
@@ -382,8 +382,8 @@ function TermsEnterprisePage() {
         <section class="subpage-container">
             <div class="page-width">
                 <div class="subpage-header">
-                    <span class="kicker">Legal</span>
-                    <h2 class="subpage-title">Terms of Service: Enterprise</h2>
+                    <span class="kicker" data-i18n="common.legal">Legal</span>
+                    <h2 class="subpage-title" data-i18n="terms_enterprise.title">Terms of Service: Enterprise</h2>
                     <p class="subpage-copy">Last updated: 1 January 2026. These Enterprise Terms of Service (\u201cTerms\u201d) govern the use of ClinixSummary by organisations, health systems and enterprise accounts.</p>
                 </div>
 
@@ -459,8 +459,8 @@ function UsagePolicyPage() {
         <section class="subpage-container">
             <div class="page-width">
                 <div class="subpage-header">
-                    <span class="kicker">Legal</span>
-                    <h2 class="subpage-title">Usage Policy</h2>
+                    <span class="kicker" data-i18n="common.legal">Legal</span>
+                    <h2 class="subpage-title" data-i18n="usage_policy.title">Usage Policy</h2>
                     <p class="subpage-copy">Last updated: 1 January 2026. This Usage Policy sets out the acceptable and prohibited uses of the ClinixSummary platform and services.</p>
                 </div>
 
@@ -525,55 +525,55 @@ function ContactPage() {
         <section class="subpage-container">
             <div class="page-width">
                 <div class="subpage-header">
-                    <span class="kicker">Get in Touch</span>
+                    <span class="kicker" data-i18n="contact.kicker">Get in Touch</span>
                     <h2 class="subpage-title">Let\u2019s talk about your documentation needs.</h2>
                     <p class="subpage-copy">Whether you\u2019re a solo clinician exploring AI documentation or a health system looking for enterprise deployment, we\u2019re here to help.</p>
                 </div>
 
                 <div id="contact" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: flex-start;">
                     <div>
-                        <h3 style="font-family: var(--font-serif); font-size: 24px; margin-bottom: 24px;">Contact channels</h3>
+                        <h3 style="font-family: var(--font-serif); font-size: 24px; margin-bottom: 24px;" data-i18n="contact.channels_title">Contact channels</h3>
 
                         <div style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 40px;">
                             <div style="display: flex; align-items: center; gap: 14px;">
                                 <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent);">mail</span>
                                 <div>
-                                    <div style="font-weight: 600; font-size: 15px;">General enquiries</div>
+                                    <div style="font-weight: 600; font-size: 15px;" data-i18n="contact.general_label">General enquiries</div>
                                     <a href="mailto:contact@clinixsummary.ai" style="font-size: 14px; color: var(--accent);">contact@clinixsummary.ai</a>
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center; gap: 14px;">
                                 <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent);">corporate_fare</span>
                                 <div>
-                                    <div style="font-weight: 600; font-size: 15px;">Enterprise & organisations</div>
+                                    <div style="font-weight: 600; font-size: 15px;" data-i18n="contact.enterprise_label">Enterprise & organisations</div>
                                     <a href="mailto:enterprise@clinixsummary.ai" style="font-size: 14px; color: var(--accent);">enterprise@clinixsummary.ai</a>
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center; gap: 14px;">
                                 <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent);">work</span>
                                 <div>
-                                    <div style="font-weight: 600; font-size: 15px;">Careers</div>
+                                    <div style="font-weight: 600; font-size: 15px;" data-i18n="contact.careers_label">Careers</div>
                                     <a href="mailto:careers@clinixsummary.ai" style="font-size: 14px; color: var(--accent);">careers@clinixsummary.ai</a>
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center; gap: 14px;">
                                 <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent);">shield</span>
                                 <div>
-                                    <div style="font-weight: 600; font-size: 15px;">Privacy & data protection</div>
+                                    <div style="font-weight: 600; font-size: 15px;" data-i18n="contact.privacy_label">Privacy & data protection</div>
                                     <a href="mailto:privacy@clinixsummary.ai" style="font-size: 14px; color: var(--accent);">privacy@clinixsummary.ai</a>
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center; gap: 14px;">
                                 <span class="material-symbols-rounded" style="font-size: 28px; color: var(--accent);">security</span>
                                 <div>
-                                    <div style="font-weight: 600; font-size: 15px;">Security</div>
+                                    <div style="font-weight: 600; font-size: 15px;" data-i18n="contact.security_label">Security</div>
                                     <a href="mailto:security@clinixsummary.ai" style="font-size: 14px; color: var(--accent);">security@clinixsummary.ai</a>
                                 </div>
                             </div>
                         </div>
 
                         <div style="background: var(--bg-subtle); padding: 24px; border-radius: 12px; border: 1px solid var(--border-subtle);">
-                            <h4 style="font-weight: 700; margin-bottom: 8px;">Follow us</h4>
+                            <h4 style="font-weight: 700; margin-bottom: 8px;" data-i18n="contact.follow_title">Follow us</h4>
                             <div style="display: flex; gap: 16px; margin-top: 12px;">
                                 <a href="https://www.facebook.com/clinixsummary" target="_blank" rel="noopener" style="color: var(--text-primary); font-size: 14px; display: flex; align-items: center; gap: 6px;"><span style="font-weight: 700;">f</span> Facebook</a>
                                 <a href="https://x.com/clinixsummary" target="_blank" rel="noopener" style="color: var(--text-primary); font-size: 14px; display: flex; align-items: center; gap: 6px;"><span style="font-weight: 700;">&#x1D54F;</span> X</a>
@@ -583,22 +583,22 @@ function ContactPage() {
                     </div>
 
                     <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 16px; padding: 36px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
-                        <h3 style="font-family: var(--font-serif); font-size: 22px; margin-bottom: 24px;">Send us a message</h3>
+                        <h3 style="font-family: var(--font-serif); font-size: 22px; margin-bottom: 24px;" data-i18n="contact.form_title">Send us a message</h3>
                         <form id="contact-form" onsubmit="submitContactForm(event)">
                             <div class="form-group">
-                                <label for="contact-name">Full Name *</label>
+                                <label for="contact-name" data-i18n="contact.name_label">Full Name *</label>
                                 <input type="text" id="contact-name" name="name" required placeholder="Dr. Jane Smith">
                             </div>
                             <div class="form-group">
-                                <label for="contact-email">Email Address *</label>
+                                <label for="contact-email" data-i18n="contact.email_label">Email Address *</label>
                                 <input type="email" id="contact-email" name="email" required placeholder="jane.smith@clinic.com">
                             </div>
                             <div class="form-group">
-                                <label for="contact-org">Organisation</label>
+                                <label for="contact-org" data-i18n="contact.org_label">Organisation</label>
                                 <input type="text" id="contact-org" name="organization" placeholder="Hospital / Practice name">
                             </div>
                             <div class="form-group">
-                                <label for="contact-topic">Topic</label>
+                                <label for="contact-topic" data-i18n="contact.topic_label">Topic</label>
                                 <select id="contact-topic" name="topic">
                                     <option value="General Inquiry">General Inquiry</option>
                                     <option value="Enterprise Licensing">Enterprise Licensing</option>
@@ -609,7 +609,7 @@ function ContactPage() {
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="contact-message">Message *</label>
+                                <label for="contact-message" data-i18n="contact.message_label">Message *</label>
                                 <textarea id="contact-message" name="message" required rows="4" placeholder="Tell us about your documentation needs..."></textarea>
                             </div>
                             <button type="submit" class="btn-primary" style="width: 100%; text-align: center; justify-content: center; padding: 14px; font-size: 15px; font-weight: 600;">

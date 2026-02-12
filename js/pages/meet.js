@@ -17,7 +17,7 @@ function ProprietaryModelsPage() {
 
                 <!-- Header -->
                 <div class="subpage-header">
-                    <span class="kicker">Proprietary Clinical Models</span>
+                    <span class="kicker" data-i18n="models.kicker">Proprietary Clinical Models</span>
                     <h2 class="subpage-title">The most clinically fine-tuned AI models in healthcare documentation.</h2>
                     <p class="subpage-copy">ClinixSummary is powered by proprietary large language models built exclusively for clinical documentation. Trained on hundreds of thousands of hours of de-identified clinical audio spanning 40+ specialties and allied health, these models do not guess — they understand.</p>
                 </div>
@@ -180,7 +180,7 @@ function MeticulousNotesPage() {
 
                 <!-- Header -->
                 <div class="subpage-header">
-                    <span class="kicker">Meticulous Notes</span>
+                    <span class="kicker" data-i18n="notes.kicker">Meticulous Notes</span>
                     <h2 class="subpage-title">Clinical documentation that meets the highest standard — every time.</h2>
                     <p class="subpage-copy">ClinixSummary does not produce drafts. Every note is clinically precise, perfectly structured, and audit-ready from the moment it is generated. Three pillars underpin every document we produce.</p>
                 </div>
@@ -432,7 +432,7 @@ function PortfolioBuilderPage() {
 
                 <!-- Header -->
                 <div class="subpage-header">
-                    <span class="kicker">Portfolio Builder</span>
+                    <span class="kicker" data-i18n="portfolio.kicker">Portfolio Builder</span>
                     <h2 class="subpage-title">Structured case logs for credentialing, registration, and revalidation.</h2>
                     <p class="subpage-copy">ClinixSummary's Portfolio Builder transforms your documented clinical encounters into structured case logs that meet the requirements of specialty training programmes, medical registration bodies, and revalidation frameworks. Documentation you are already generating becomes credentialing evidence — automatically.</p>
                 </div>
@@ -672,7 +672,7 @@ function ClinixFoundationPage() {
 
                 <!-- Header -->
                 <div class="subpage-header">
-                    <span class="kicker">Clinix Foundation</span>
+                    <span class="kicker" data-i18n="foundation.kicker">Clinix Foundation</span>
                     <h2 class="subpage-title">Free clinical documentation for those who need it most.</h2>
                     <p class="subpage-copy">The Clinix Foundation is ClinixSummary's initiative to provide free access to our full clinical documentation platform for clinics operating in relief areas, underserved communities, and resource-limited settings. Because documentation burden should never be a barrier to delivering care where it is needed most.</p>
                 </div>

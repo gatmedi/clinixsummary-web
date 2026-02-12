@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "ClinixSummary \u2013 The AI Medical Scribe Foundation",
+    "title": "ClinixSummary – The AI Medical Scribe Foundation",
     "description": "ClinixSummary is the foundational AI architecture for clinical documentation, billing, and specialized medical assistance."
   },
   "nav": {
@@ -83,9 +83,9 @@
   "hero": {
     "kicker": "AI medical scribe for modern clinicians",
     "title": "Voice in. Meticulous notes out.",
-    "description": "ClinixSummary turns every consultation into structured, billing\u2011ready documentation \u2013 in seconds \u2013 so you can reclaim your time for patients, not paperwork.",
+    "description": "ClinixSummary turns every consultation into structured, billing‑ready documentation – in seconds – so you can reclaim your time for patients, not paperwork.",
     "try_title": "Try it now",
-    "try_desc": "No sign-up required. Open the console and experience ClinixSummary with a free trial \u2013 start documenting in seconds.",
+    "try_desc": "No sign-up required. Open the console and experience ClinixSummary with a free trial – start documenting in seconds.",
     "try_cta": "Go to Console",
     "stat_time": "2+ hrs",
     "stat_time_label": "Saved daily",
@@ -97,7 +97,7 @@
   "core": {
     "kicker": "The Core AI Architecture",
     "title": "Built on Kaizen & Contextual Reasoning.",
-    "description": "Inspired by Kaizen (\u201cchange for the better\u201d), ClinixSummary is continuously refined through careful clinical review and quality assurance. During each session, our modules uses contextual reasoning to generate structured notes that fit the specialty and the encounter.",
+    "description": "Inspired by Kaizen (“change for the better”), ClinixSummary is continuously refined through careful clinical review and quality assurance. During each session, our modules uses contextual reasoning to generate structured notes that fit the specialty and the encounter.",
     "llm_title": "Clinical LLMs (The Core)",
     "llm_desc": "Fine-tuned on vast amounts of de-identified clinical data to ensure surgical precision and terminology accuracy across all medical specialties and complex clinical narratives.",
     "efficiency_title": "Built-in Efficiency",
@@ -106,15 +106,15 @@
   "capabilities": {
     "kicker": "Capabilities",
     "title": "The gold standard for clinical documentation.",
-    "description": "ClinixSummary sets the gold standard for clinical documentation. From primary care to orthopaedics, dermatology, paediatrics and beyond \u2013 we capture the nuance of real\u2011world medicine while standardising the structure for continuity of care, coding, and billing.",
-    "transcription_title": "Clinical\u2011grade transcription",
-    "transcription_desc": "High\u2011accuracy recognition of medical terminology, acronyms and abbreviations \u2013 even with accents and real\u2011world background noise.",
+    "description": "ClinixSummary sets the gold standard for clinical documentation. From primary care to orthopaedics, dermatology, paediatrics and beyond – we capture the nuance of real‑world medicine while standardising the structure for continuity of care, coding, and billing.",
+    "transcription_title": "Clinical‑grade transcription",
+    "transcription_desc": "High‑accuracy recognition of medical terminology, acronyms and abbreviations – even with accents and real‑world background noise.",
     "notes_title": "Structured notes & letters",
-    "notes_desc": "Outputs ready\u2011to\u2011paste or push: notes, referral letters and patient instructions in seconds.",
-    "coding_title": "ICD\u201110 & CPT coding",
+    "notes_desc": "Outputs ready‑to‑paste or push: notes, referral letters and patient instructions in seconds.",
+    "coding_title": "ICD‑10 & CPT coding",
     "coding_desc": "Generate codes that support cleaner claims, fewer queries and better analytics.",
-    "ambient_title": "Ambient & post\u2011visit capture",
-    "ambient_desc": "Record consultations ambiently or via quick dictation \u2013 whichever suits your consultation best.",
+    "ambient_title": "Ambient & post‑visit capture",
+    "ambient_desc": "Record consultations ambiently or via quick dictation – whichever suits your consultation best.",
     "reasoning_title": "Contextual Reasoning Engine",
     "reasoning_desc": "Our advanced modules infers context and ensures clinically useful, billable documentation at the point of care including differential diagnosis.",
     "legal_title": "Medical legal & reimbursement ready",
@@ -134,7 +134,7 @@
   "calculator": {
     "kicker": "Value Projection",
     "title": "Calculate your annual ROI.",
-    "description": "See exactly how much time and money ClinixSummary saves you based on your practice\u2019s metrics.",
+    "description": "See exactly how much time and money ClinixSummary saves you based on your practice’s metrics.",
     "billing_note": "Billing in USD. Flexible annual contracts available for clinics, groups and hospitals.",
     "salary_label": "Median Annual Salary per Clinician (USD)",
     "clinicians_label": "Number of Clinicians",
@@ -161,7 +161,7 @@
   "pricing": {
     "kicker": "Pricing",
     "title": "Transparent plans for every practice.",
-    "description": "Choose a plan aligned with your encounters and documentation volume. All plans include access to the same core AI engine \u2013 you only pay for usage.",
+    "description": "Choose a plan aligned with your encounters and documentation volume. All plans include access to the same core AI engine – you only pay for usage.",
     "credit_explainer": "1 credit = 10 minutes of audio documentation",
     "cancel_anytime": "Cancel anytime",
     "free_credits": "25 credits / month",
@@ -211,7 +211,7 @@
     "revenue_b3": "Audit-proof notes ready for any review.",
     "efficiency_kicker": "Personalized Efficiency",
     "efficiency_title": "One-touch integration with your EHR and style.",
-    "efficiency_desc": "ClinixSummary adapts to you\u2014not the other way around. Our Clinix Memory\u2122 ensures that your unique abbreviations, preferences, and note structure are learned and applied consistently across every single document.",
+    "efficiency_desc": "ClinixSummary adapts to you—not the other way around. Our Clinix Memory™ ensures that your unique abbreviations, preferences, and note structure are learned and applied consistently across every single document.",
     "adaptive_title": "Adaptive Formatting",
     "adaptive_desc": "Learns and applies your preferred SOAP, narrative, or specialized template.",
     "hipaa_title": "HIPAA & GDPR Safe",
@@ -227,31 +227,40 @@
   "orgs": {
     "kicker": "For Organisations",
     "title": "Unlock productivity & satisfaction across your practice.",
-    "description": "ClinixSummary delivers measurable outcomes for clinics, groups and health systems. Our fine\u2011tuned AI saves hours per clinician, boosts patient satisfaction and reduces denied claims \u2013 all while integrating seamlessly into your existing workflows.",
+    "description": "ClinixSummary delivers measurable outcomes for clinics, groups and health systems. Our fine‑tuned AI saves hours per clinician, boosts patient satisfaction and reduces denied claims – all while integrating seamlessly into your existing workflows.",
     "tech_title": "Technology: Ambient, dictation & inference in one platform",
-    "tech_desc": "ClinixSummary combines ambient capture, quick dictation and advanced inference to fit every workflow. Our AI infers clinical meaning from natural conversations \u2013 deducing context without fabricating facts. Whether you need to document visits in real time or summarise notes afterwards, it adapts to you.",
-    "ambient_b": "**Ambient capture:** Hands\u2011free documentation without interrupting the patient encounter.",
-    "dictation_b": "**Rapid dictation:** Narrate your assessment and plan; our models will structure and code it.",
-    "inference_b": "**Inference engine:** Models infer context from captured facts and clinician feedback \u2013 never fabricating information.",
+    "tech_desc": "ClinixSummary combines ambient capture, quick dictation and advanced inference to fit every workflow. Our AI infers clinical meaning from natural conversations – deducing context without fabricating facts. Whether you need to document visits in real time or summarise notes afterwards, it adapts to you.",
+    "ambient_b": "Ambient capture: Hands‑free documentation without interrupting the patient encounter.",
+    "dictation_b": "Rapid dictation: Narrate your assessment and plan; our models will structure and code it.",
+    "inference_b": "Inference engine: Models infer context from captured facts and clinician feedback – never fabricating information.",
     "results_title": "Proven results: Quantified impact at scale",
     "results_desc": "Research and real-world deployments show that ambient AI scribes dramatically improve operations for healthcare organisations.",
-    "time_b": "**2+ hours saved** per clinician.",
-    "satisfaction_b": "**Higher satisfaction scores** (Positive effect on patient interactions).",
-    "reimbursement_b": "**Reduced denials** & faster reimbursement.",
+    "time_b": "2+ hours saved per clinician.",
+    "satisfaction_b": "Higher satisfaction scores (Positive effect on patient interactions).",
+    "reimbursement_b": "Reduced denials & faster reimbursement.",
     "why_kicker": "Why Choose Us",
     "why_title": "Built for enterprise healthcare.",
-    "why_desc": "ClinixSummary isn\u2019t just a transcription tool \u2013 it\u2019s an enterprise platform built to meet the needs of multi\u2011site clinics, hospital networks and payer organisations.",
+    "why_desc": "ClinixSummary isn’t just a transcription tool – it’s an enterprise platform built to meet the needs of multi‑site clinics, hospital networks and payer organisations.",
     "sso_title": "SSO & RBAC",
-    "sso_desc": "Seamless sign\u2011in & fine\u2011grained permissions.",
+    "sso_desc": "Seamless sign‑in & fine‑grained permissions.",
     "audit_title": "Audit trails",
     "audit_desc": "Full activity logs for governance.",
-    "multi_title": "Multi\u2011disciplinary",
+    "multi_title": "Multi‑disciplinary",
     "multi_desc": "Supports medical, dental, allied & veterinary teams.",
     "global_title": "Global availability",
     "global_desc": "Works in multiple languages & jurisdictions.",
     "cta_title": "Ready to pilot ClinixSummary in your organisation?",
     "cta_signin": "Sign in to enterprise portal",
-    "cta_sales": "Speak to our sales team"
+    "cta_sales": "Speak to our sales team",
+    "billing_title": "Organisation-level billing assistance.",
+    "activity_title": "Activity Capture",
+    "activity_desc": "Captures procedures, services, and clinical activities performed during encounters.",
+    "mapping_title": "Code Mapping",
+    "mapping_desc": "Maps to your organisation's specific CPT code library for accurate billing.",
+    "claims_title": "Faster Claims",
+    "claims_desc": "Eliminates missed charges and reduces time to claim submission.",
+    "team_title": "Team Management",
+    "team_desc": "Multi-clinician deployment with team dashboards and usage analytics."
   },
   "insurers": {
     "kicker": "For Insurance & Payer Organizations",
@@ -286,33 +295,40 @@
     "title": "Latest news & product updates.",
     "description": "Follow our journey as we expand into new specialties, roll out advanced modules and share major company milestones.",
     "oct_title": "ClinixSummary launches Radiology Assist",
-    "oct_desc": "Our new Radiology Assist module harnesses specialised AI to generate structured radiology summaries with diagnostic impressions and follow\u2011up recommendations. Built in partnership with board\u2011certified radiologists, it streamlines workflow while preserving interpretive nuance.",
+    "oct_desc": "Our new Radiology Assist module harnesses specialised AI to generate structured radiology summaries with diagnostic impressions and follow‑up recommendations. Built in partnership with board‑certified radiologists, it streamlines workflow while preserving interpretive nuance.",
     "sep_title": "Dermatology Assist now available",
-    "sep_desc": "The Dermatology Assist module leverages fine\u2011tuned models trained on dermatologic terminology to create concise notes and patient instructions. Clinicians can dictate skin findings in natural language and receive structured assessments and plans in seconds.",
+    "sep_desc": "The Dermatology Assist module leverages fine‑tuned models trained on dermatologic terminology to create concise notes and patient instructions. Clinicians can dictate skin findings in natural language and receive structured assessments and plans in seconds.",
     "aug_title": "ClinixSummary wins innovation award",
-    "aug_desc": "We\u2019re honoured to have been recognised at the Healthcare AI Innovator Awards for our contributions to ambient documentation and clinician wellbeing. The judges highlighted our evidence\u2011driven approach and commitment to privacy\u2011first design.",
+    "aug_desc": "We’re honoured to have been recognised at the Healthcare AI Innovator Awards for our contributions to ambient documentation and clinician wellbeing. The judges highlighted our evidence‑driven approach and commitment to privacy‑first design.",
     "jun_title": "Strategic partnership with GlobalHealth Systems",
-    "jun_desc": "ClinixSummary has partnered with GlobalHealth Systems to deploy our AI scribe across their network of 200 hospitals. Together we\u2019re transforming documentation workflows and elevating patient experience worldwide.",
+    "jun_desc": "ClinixSummary has partnered with GlobalHealth Systems to deploy our AI scribe across their network of 200 hospitals. Together we’re transforming documentation workflows and elevating patient experience worldwide.",
     "may_title": "Series A funding to accelerate R&D",
-    "may_desc": "We\u2019re excited to announce a successful Series A financing round led by leading healthcare investors. The capital will fuel expansion into new specialties, bolster our compliance framework and scale our customer success team.",
+    "may_desc": "We’re excited to announce a successful Series A financing round led by leading healthcare investors. The capital will fuel expansion into new specialties, bolster our compliance framework and scale our customer success team.",
     "story_title": "Want to share your story?",
-    "story_desc": "If you\u2019ve used ClinixSummary to transform your practice, we\u2019d love to highlight your success. Get in touch with our marketing team to be featured.",
-    "story_submit": "Submit a story"
+    "story_desc": "If you’ve used ClinixSummary to transform your practice, we’d love to highlight your success. Get in touch with our marketing team to be featured.",
+    "story_submit": "Submit a story",
+    "q1_2026_title": "Language Expansion: Arabic with Full RTL Support",
+    "q4_2025a_title": "Clinix Foundation Initiative Launched",
+    "q4_2025b_title": "CME/CPD Vault Launch",
+    "q3_2025a_title": "UK Medical Device Registration Application",
+    "q3_2025b_title": "Allied Health Modules Released",
+    "q2_2025_title": "Module Updates: Expanded Specialty Coverage",
+    "q1_2025_title": "ClinixSummary Platform Launch"
   },
   "story": {
     "kicker": "Our Mission",
     "title": "Putting clinicians & patients first.",
-    "description": "ClinixSummary exists to let healthcare professionals devote their full attention to those who matter most \u2013 their patients. We believe that documentation should empower care, not hinder it.",
+    "description": "ClinixSummary exists to let healthcare professionals devote their full attention to those who matter most – their patients. We believe that documentation should empower care, not hinder it.",
     "journey_title": "Our Journey: From a single idea to a platform for all",
     "journey_p1": "ClinixSummary started as a project by practicing physicians frustrated with the time they spent typing instead of talking. Working nights and weekends, we built an AI scribe that could reliably capture the nuance of clinical conversations. When colleagues in dentistry, psychology and veterinary medicine asked if they could use it, we realised the need extended far beyond doctors.",
-    "journey_p2": "Today, our team spans clinicians, engineers and designers. We serve practices across medicine, dentistry, behavioural health, allied health and veterinary care. Our journey is defined by one constant: Kaizen \u2013 the Japanese principle of continuous improvement. We listen to feedback, ship updates weekly and never stop striving to make documentation invisible.",
-    "different_title": "What Makes Us Different: Clinician\u2011led, technology\u2011driven",
-    "different_desc": "Unlike generic dictation software, ClinixSummary is built by clinicians for clinicians. Every decision we make is anchored in the realities of practice \u2013 from the need to code\u2011switch between languages, to the pressures of reimbursement, to the importance of seeing your patient, not your screen.",
-    "bullet1": "**All clinicians welcome:** Doctors, dentists, therapists, midwives, vets \u2013 our models are tuned for your specialty.",
-    "bullet2": "**Kaizen mindset:** We ship improvements continuously, guided by your feedback. Good enough is never enough.",
-    "bullet3": "**Global by design:** Our platform supports multiple languages, jurisdictional privacy laws and healthcare systems.",
+    "journey_p2": "Today, our team spans clinicians, engineers and designers. We serve practices across medicine, dentistry, behavioural health, allied health and veterinary care. Our journey is defined by one constant: Kaizen – the Japanese principle of continuous improvement. We listen to feedback, ship updates weekly and never stop striving to make documentation invisible.",
+    "different_title": "What Makes Us Different: Clinician‑led, technology‑driven",
+    "different_desc": "Unlike generic dictation software, ClinixSummary is built by clinicians for clinicians. Every decision we make is anchored in the realities of practice – from the need to code‑switch between languages, to the pressures of reimbursement, to the importance of seeing your patient, not your screen.",
+    "bullet1": "All clinicians welcome: Doctors, dentists, therapists, midwives, vets – our models are tuned for your specialty.",
+    "bullet2": "Kaizen mindset: We ship improvements continuously, guided by your feedback. Good enough is never enough.",
+    "bullet3": "Global by design: Our platform supports multiple languages, jurisdictional privacy laws and healthcare systems.",
     "cta_title": "Join us on the journey",
-    "cta_desc": "Whether you\u2019re a clinician, a clinic manager or a healthcare innovator, we invite you to be part of our mission to simplify documentation for all.",
+    "cta_desc": "Whether you’re a clinician, a clinic manager or a healthcare innovator, we invite you to be part of our mission to simplify documentation for all.",
     "cta_trial": "Start free trial"
   },
   "footer": {
@@ -342,7 +358,9 @@
     "get_started": "Get Started",
     "new_badge": "New",
     "beta_badge": "Beta",
-    "qms_stamp": "Assured by Clinix Quality Management System (Clinix QM)"
+    "qms_stamp": "Assured by Clinix Quality Management System (Clinix QM)",
+    "legal": "Legal",
+    "contact_sales": "Contact Sales"
   },
   "banner": {
     "english_only": "This content is available in English only.",
@@ -350,5 +368,166 @@
   },
   "lang": {
     "label": "Language"
+  },
+  "government": {
+    "kicker": "Public Sector & Federal Healthcare",
+    "title": "Clinical Documentation for Government Healthcare Systems.",
+    "description": "ClinixSummary meets the rigorous documentation standards of government healthcare. From VA hospitals and military medicine to public health systems, we deliver compliant, efficient, and standardised clinical documentation at scale.",
+    "compliance_title": "Government Compliance Standards",
+    "compliance_desc": "Federal healthcare systems have unique documentation requirements. ClinixSummary is designed to meet government-grade security, compliance, and accessibility mandates while reducing the administrative burden on public sector clinicians.",
+    "public_title": "Purpose-Built for Public Health",
+    "public_desc": "Whether it's a VA hospital, a military medical facility, or a county public health system, ClinixSummary adapts to the workflows and reporting requirements unique to government-funded healthcare delivery.",
+    "security_title": "Enterprise Security",
+    "security_desc": "Government-grade encryption, role-based access controls, and comprehensive audit trails designed for the most demanding security environments.",
+    "deploy_title": "Large-Scale Deployment",
+    "deploy_desc": "Proven infrastructure for deploying across hundreds of clinicians simultaneously with centralised management and monitoring.",
+    "manager_title": "Dedicated Success Manager",
+    "manager_desc": "A dedicated point of contact to ensure successful rollout, training, and ongoing optimisation within your public health system.",
+    "cta_title": "Ready to modernise government healthcare documentation?",
+    "cta_button": "Request a Government Consultation"
+  },
+  "nonprofit": {
+    "kicker": "For Non-profit Organisations",
+    "title": "Empowering Non-profit Healthcare with AI Documentation.",
+    "description": "Non-profit healthcare organisations face the same documentation challenges as commercial providers — often with fewer resources. ClinixSummary offers special pricing and dedicated support for qualifying non-profit organisations, and free access through the Clinix Foundation for those serving underserved communities.",
+    "pricing_title": "Special Pricing for Non-profits",
+    "pricing_desc": "We believe every clinician deserves access to tools that reduce documentation burden, regardless of the organisation's funding model. Qualifying non-profit healthcare organisations receive discounted access to ClinixSummary's full suite of features.",
+    "foundation_title": "Clinix Foundation",
+    "community_title": "Community Health Centres",
+    "community_desc": "Support your clinicians with AI documentation tools that free up time for the patients and communities that need it most.",
+    "ngo_title": "NGO Medical Facilities",
+    "ngo_desc": "NGO-operated clinics and hospitals in humanitarian settings can apply for free access through the Clinix Foundation programme.",
+    "teaching_title": "Teaching & Training",
+    "teaching_desc": "Non-profit teaching hospitals and training centres benefit from documentation tools that help trainees learn proper clinical documentation practices.",
+    "cta_title": "Explore non-profit pricing or apply for Clinix Foundation access.",
+    "cta_foundation": "Apply for Clinix Foundation",
+    "cta_pricing": "Request Non-profit Pricing"
+  },
+  "integrations": {
+    "kicker": "Organisation Feature",
+    "title": "Seamless Integration into Your EHR & EMR Systems.",
+    "description": "ClinixSummary integrates directly into your organisation's web-based EHR and EMR systems. Tailored to your specific workflows, our integration layer ensures that AI-generated documentation flows seamlessly into your existing clinical infrastructure.",
+    "badge": "This feature is available for organisation and enterprise plans only.",
+    "tailored_title": "Tailored to Your Systems",
+    "support_title": "Custom Integration Support",
+    "sync_title": "Bi-directional Sync",
+    "pipeline_title": "Secure Data Pipeline",
+    "deploy_title": "Flexible Deployment",
+    "cta_title": "Ready to integrate ClinixSummary into your systems?",
+    "cta_button": "Talk to Our Integration Team",
+    "cta_learn": "Learn About Enterprise Plans"
+  },
+  "security": {
+    "kicker": "Security, Compliance & QMS",
+    "title": "Protecting patient privacy by default.",
+    "encryption_title": "End‑to‑end encryption",
+    "ephemeral_title": "Ephemeral audio & data control",
+    "compliance_title": "HIPAA & GDPR compliance",
+    "deidentified_title": "De-identified training data",
+    "qms_kicker": "Clinix Quality Management System",
+    "qms_title": "Clinix QM: Quality at every layer.",
+    "qa_title": "Clinical QA Reviews",
+    "rbac_title": "Role-Based Access Controls",
+    "cert_title": "Compliance Certifications",
+    "data_kicker": "Your Data, Your Rules",
+    "data_title": "Immediate deletion & granular control.",
+    "audio_title": "Audio retention",
+    "audio_desc": "Deleted after note generation",
+    "transcript_title": "Transcript storage",
+    "deletion_title": "User deletion",
+    "audit_title": "Audit trails",
+    "audit_desc": "Full activity logs for governance",
+    "resources_kicker": "Clinic Resources",
+    "resources_title": "Patient privacy notice for your practice.",
+    "cta_title": "Ready to secure your documentation workflow?"
+  },
+  "contact": {
+    "kicker": "Get in Touch",
+    "channels_title": "Contact channels",
+    "general_label": "General enquiries",
+    "enterprise_label": "Enterprise & organisations",
+    "careers_label": "Careers",
+    "privacy_label": "Privacy & data protection",
+    "security_label": "Security",
+    "follow_title": "Follow us",
+    "form_title": "Send us a message",
+    "name_label": "Full Name *",
+    "email_label": "Email Address *",
+    "org_label": "Organisation",
+    "topic_label": "Topic",
+    "message_label": "Message *",
+    "send_button": "Send Message"
+  },
+  "careers": {
+    "kicker": "Join Us",
+    "title": "Build the future of clinical documentation.",
+    "open_positions": "Open positions",
+    "no_role_title": "Don’t see the right role?",
+    "open_application": "Send open application"
+  },
+  "privacy_policy": {
+    "title": "Privacy Policy"
+  },
+  "privacy_choices": {
+    "title": "Privacy Choices"
+  },
+  "terms_enterprise": {
+    "title": "Terms of Service: Enterprise"
+  },
+  "usage_policy": {
+    "title": "Usage Policy"
+  },
+  "podcasts": {
+    "kicker": "Podcasts",
+    "title": "ClinixSummary Podcasts",
+    "coming_soon": "Coming Soon",
+    "preview_kicker": "Preview",
+    "preview_title": "What’s coming",
+    "ep1_title": "Episode 1: Why We Built ClinixSummary",
+    "ep2_title": "Episode 2: The Clinician Burnout Crisis — And What AI Can Do About It",
+    "ep3_title": "Episode 3: Going Global — Multilingual Medicine and Documentation",
+    "cta_title": "Stay in the loop"
+  },
+  "models": {
+    "kicker": "Proprietary Clinical Models",
+    "title": "The Engine Behind Every Note."
+  },
+  "notes": {
+    "kicker": "Meticulous Notes",
+    "title": "Documentation That Meets the Highest Standard."
+  },
+  "meet_kaizen": {
+    "kicker": "Continuous Improvement"
+  },
+  "meet_languages": {
+    "kicker": "Languages & Multilingual"
+  },
+  "portfolio": {
+    "kicker": "Portfolio Builder"
+  },
+  "ambient": {
+    "kicker": "Auto-Ambient Mode"
+  },
+  "cme": {
+    "kicker": "CME/CPD Vault"
+  },
+  "foundation": {
+    "kicker": "Clinix Foundation"
+  },
+  "cap_medical": {
+    "extra_kicker": "How It Works",
+    "extra_title": "Specialty-tuned modules."
+  },
+  "cap_operative": {
+    "extra_kicker": "Integration"
+  },
+  "cap_leaflet": {
+    "extra_kicker": "Benefits"
+  },
+  "referrals_page": {
+    "extra_kicker": "Workflow"
+  },
+  "icd_page": {
+    "extra_kicker": "Impact"
   }
 }
