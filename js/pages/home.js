@@ -314,7 +314,7 @@ const PricingSection = `
 
             <div style="text-align: center; margin-top: 32px;">
                 <button id="pricing-toggle" class="btn-outline" style="padding: 12px 32px; font-size: 15px; display: inline-flex; align-items: center; gap: 8px;" onclick="togglePricingPlans()">
-                    <span id="pricing-toggle-text">See all plans</span>
+                    <span id="pricing-toggle-text" data-i18n="pricing.see_all_plans">See all plans</span>
                     <span id="pricing-toggle-icon" class="material-symbols-rounded" style="font-size: 20px; transition: transform 0.3s;">expand_more</span>
                 </button>
             </div>
@@ -332,11 +332,11 @@ function togglePricingPlans() {
     var icon = document.getElementById('pricing-toggle-icon');
     if (expanded.style.display === 'none') {
         expanded.style.display = 'block';
-        text.textContent = 'Show fewer plans';
+        text.textContent = typeof t === 'function' ? t('pricing.show_fewer_plans', 'Show fewer plans') : 'Show fewer plans';
         icon.style.transform = 'rotate(180deg)';
     } else {
         expanded.style.display = 'none';
-        text.textContent = 'See all plans';
+        text.textContent = typeof t === 'function' ? t('pricing.see_all_plans', 'See all plans') : 'See all plans';
         icon.style.transform = 'rotate(0deg)';
     }
 }

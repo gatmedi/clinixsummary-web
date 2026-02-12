@@ -62,6 +62,7 @@
     "billing_assist_desc": "Organizations only",
     "referrals": "Referrals",
     "icd_coding": "ICD Coding",
+    "patient_leaflet": "Patient Information Leaflet",
     "cpd_coding": "CPD Coding",
     "radiology_assist": "Radiology Assist",
     "dermatology_assist": "Dermatology Assist",
@@ -190,7 +191,9 @@
     "enterprise_f4": "Custom integrations and rollout support",
     "enterprise_f5": "Dedicated success manager",
     "enterprise_cta": "Contact sales",
-    "enterprise_question": "Looking for Enterprise or Organizational licensing?"
+    "enterprise_question": "Looking for Enterprise or Organizational licensing?",
+    "see_all_plans": "See all plans",
+    "show_fewer_plans": "Show fewer plans"
   },
   "clinicians": {
     "kicker": "For Private & Solo Practice",
