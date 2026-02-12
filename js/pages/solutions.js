@@ -175,7 +175,7 @@ function OrganizationsPage() {
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="orgs.billing_kicker">Billing Capture</span>
                     <h3 class="section-title" data-i18n="orgs.billing_title">Organisation-level billing assistance.</h3>
-                    <p class="section-copy">ClinixSummary captures what was done during each encounter and maps it to your organisation's own CPT code library. Reduce coding errors, eliminate missed charges, and speed up claims \u2014 all tailored to your specific billing workflows.</p>
+                    <p class="section-copy" data-i18n="orgs.billing_desc">ClinixSummary captures what was done during each encounter and maps it to your organisation's own CPT code library. Reduce coding errors, eliminate missed charges, and speed up claims \u2014 all tailored to your specific billing workflows.</p>
                 </div>
 
                 <div class="grid-4" style="margin-bottom: 60px;">
@@ -185,7 +185,7 @@ function OrganizationsPage() {
                     </div>
                     <div class="text-group" style="border: none;">
                         <h4 style="font-weight: 600; font-size: 16px;"><span class="material-symbols-rounded list-item-icon" style="font-size: 20px;">map</span> <span data-i18n="orgs.mapping_title">Code Mapping</span></h4>
-                        <p style="font-size: 13px; color: var(--text-secondary);">Maps to your organisation's specific CPT code library for accurate billing.</p>
+                        <p style="font-size: 13px; color: var(--text-secondary);" data-i18n="orgs.mapping_desc">Maps to your organisation's specific CPT code library for accurate billing.</p>
                     </div>
                     <div class="text-group" style="border: none;">
                         <h4 style="font-weight: 600; font-size: 16px;"><span class="material-symbols-rounded list-item-icon" style="font-size: 20px;">speed</span> <span data-i18n="orgs.claims_title">Faster Claims</span></h4>
@@ -249,9 +249,9 @@ function GovernmentPage() {
                         <h3 data-i18n="government.compliance_title">Government Compliance Standards</h3>
                         <p data-i18n="government.compliance_desc">Federal healthcare systems have unique documentation requirements. ClinixSummary is designed to meet government-grade security, compliance, and accessibility mandates while reducing the administrative burden on public sector clinicians.</p>
                         <ul style="margin-top: 15px; font-size: 14px;">
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">verified_user</span> HIPAA, GDPR, and FedRAMP-aligned security</li>
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">description</span> Standardised documentation across departments</li>
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">fact_check</span> Audit-ready records for government oversight</li>
+                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">verified_user</span> <span data-i18n="government.compliance_b1">HIPAA, GDPR, and FedRAMP-aligned security</span></li>
+                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">description</span> <span data-i18n="government.compliance_b2">Standardised documentation across departments</span></li>
+                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">fact_check</span> <span data-i18n="government.compliance_b3">Audit-ready records for government oversight</span></li>
                         </ul>
                     </div>
                     <div class="text-group" style="border-bottom: none;">
@@ -259,9 +259,9 @@ function GovernmentPage() {
                         <h3 data-i18n="government.public_title">Purpose-Built for Public Health</h3>
                         <p data-i18n="government.public_desc">Whether it's a VA hospital, a military medical facility, or a county public health system, ClinixSummary adapts to the workflows and reporting requirements unique to government-funded healthcare delivery.</p>
                         <ul style="margin-top: 15px; font-size: 14px;">
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">military_tech</span> VA hospitals and military medicine</li>
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">public</span> Public health systems and community clinics</li>
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">analytics</span> Population health reporting and analytics</li>
+                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">military_tech</span> <span data-i18n="government.public_b1">VA hospitals and military medicine</span></li>
+                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">public</span> <span data-i18n="government.public_b2">Public health systems and community clinics</span></li>
+                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">analytics</span> <span data-i18n="government.public_b3">Population health reporting and analytics</span></li>
                         </ul>
                     </div>
                 </div>
@@ -314,7 +314,7 @@ function NonprofitPage() {
                     <div class="text-group" style="border-bottom: none;">
                         <span class="material-symbols-rounded list-item-icon">favorite</span>
                         <h3 data-i18n="nonprofit.foundation_title">Clinix Foundation</h3>
-                        <p>Through the <a href="#clinix-foundation" style="color: var(--accent); text-decoration: underline;">Clinix Foundation</a>, we provide completely free access to ClinixSummary for clinics and practices operating in relief areas and underserved communities. Our goal is to ensure that documentation burden is never a barrier to delivering quality care.</p>
+                        <p data-i18n="nonprofit.foundation_desc">Through the <a href="#clinix-foundation" style="color: var(--accent); text-decoration: underline;">Clinix Foundation</a>, we provide completely free access to ClinixSummary for clinics and practices operating in relief areas and underserved communities. Our goal is to ensure that documentation burden is never a barrier to delivering quality care.</p>
                     </div>
                 </div>
 
@@ -366,21 +366,21 @@ function IntegrationsPage() {
                     <div class="text-group" style="border-bottom: none;">
                         <span class="material-symbols-rounded list-item-icon">integration_instructions</span>
                         <h3 data-i18n="integrations.tailored_title">Tailored to Your Systems</h3>
-                        <p>Every organisation has unique EHR/EMR configurations. Our integration team works directly with your IT department to build custom connectors that match your existing workflows \u2014 no disruption, no rip-and-replace.</p>
+                        <p data-i18n="integrations.tailored_desc">Every organisation has unique EHR/EMR configurations. Our integration team works directly with your IT department to build custom connectors that match your existing workflows \u2014 no disruption, no rip-and-replace.</p>
                         <ul style="margin-top: 15px; font-size: 14px;">
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">api</span> RESTful API access for enterprise customers</li>
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">data_object</span> FHIR-compatible data formats</li>
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">cloud</span> Cloud, hybrid, and on-premise deployment options</li>
+                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">api</span> <span data-i18n="integrations.tailored_b1">RESTful API access for enterprise customers</span></li>
+                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">data_object</span> <span data-i18n="integrations.tailored_b2">FHIR-compatible data formats</span></li>
+                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">cloud</span> <span data-i18n="integrations.tailored_b3">Cloud, hybrid, and on-premise deployment options</span></li>
                         </ul>
                     </div>
                     <div class="text-group" style="border-bottom: none;">
                         <span class="material-symbols-rounded list-item-icon">support_agent</span>
                         <h3 data-i18n="integrations.support_title">Custom Integration Support</h3>
-                        <p>Our dedicated integration team handles the technical complexity so your clinicians don't have to. From initial scoping to production deployment, we provide end-to-end support for a smooth integration experience.</p>
+                        <p data-i18n="integrations.support_desc">Our dedicated integration team handles the technical complexity so your clinicians don't have to. From initial scoping to production deployment, we provide end-to-end support for a smooth integration experience.</p>
                         <ul style="margin-top: 15px; font-size: 14px;">
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">engineering</span> Dedicated integration engineer assigned</li>
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">bug_report</span> Comprehensive testing and validation</li>
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">headset_mic</span> Ongoing support and maintenance</li>
+                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">engineering</span> <span data-i18n="integrations.support_b1">Dedicated integration engineer assigned</span></li>
+                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">bug_report</span> <span data-i18n="integrations.support_b2">Comprehensive testing and validation</span></li>
+                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">headset_mic</span> <span data-i18n="integrations.support_b3">Ongoing support and maintenance</span></li>
                         </ul>
                     </div>
                 </div>
@@ -389,17 +389,17 @@ function IntegrationsPage() {
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">sync</div>
                         <h3 data-i18n="integrations.sync_title">Bi-directional Sync</h3>
-                        <p>Pull patient context from your EHR and push completed documentation back \u2014 in real time or batch mode.</p>
+                        <p data-i18n="integrations.sync_desc">Pull patient context from your EHR and push completed documentation back \u2014 in real time or batch mode.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">security</div>
                         <h3 data-i18n="integrations.pipeline_title">Secure Data Pipeline</h3>
-                        <p>All integration traffic is encrypted end-to-end with TLS 1.2+ and follows HIPAA-compliant data handling protocols.</p>
+                        <p data-i18n="integrations.pipeline_desc">All integration traffic is encrypted end-to-end with TLS 1.2+ and follows HIPAA-compliant data handling protocols.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">dashboard_customize</div>
                         <h3 data-i18n="integrations.deploy_title">Flexible Deployment</h3>
-                        <p>Choose the deployment model that fits your infrastructure: fully cloud-hosted, hybrid, or on-premise.</p>
+                        <p data-i18n="integrations.deploy_desc">Choose the deployment model that fits your infrastructure: fully cloud-hosted, hybrid, or on-premise.</p>
                     </div>
                 </div>
 

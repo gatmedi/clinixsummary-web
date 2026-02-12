@@ -217,39 +217,39 @@ function NewsPage() {
 
                 <div style="max-width: 800px;">
                     <div class="text-group">
-                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;">Q1 2026</span>
+                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q1_2026_kicker">Q1 2026</span>
                         <h3 data-i18n="news.q1_2026_title">Language Expansion: Arabic with Full RTL Support</h3>
-                        <p>ClinixSummary now supports Arabic with complete right-to-left interface and documentation support, joining English, French, Spanish, Portuguese, and Italian. This milestone extends our reach to clinicians across the Middle East and North Africa.</p>
+                        <p data-i18n="news.q1_2026_desc">ClinixSummary now supports Arabic with complete right-to-left interface and documentation support, joining English, French, Spanish, Portuguese, and Italian. This milestone extends our reach to clinicians across the Middle East and North Africa.</p>
                     </div>
                     <div class="text-group">
-                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;">Q4 2025</span>
+                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q4_2025_kicker">Q4 2025</span>
                         <h3 data-i18n="news.q4_2025a_title">Clinix Foundation Initiative Launched</h3>
-                        <p>We\u2019re proud to announce the Clinix Foundation \u2014 our programme providing free ClinixSummary access to clinics and practices in relief areas and underserved communities. Applications are now open for humanitarian relief clinics, rural health centres, and NGO-operated medical facilities.</p>
+                        <p data-i18n="news.q4_2025a_desc">We\u2019re proud to announce the Clinix Foundation \u2014 our programme providing free ClinixSummary access to clinics and practices in relief areas and underserved communities. Applications are now open for humanitarian relief clinics, rural health centres, and NGO-operated medical facilities.</p>
                     </div>
                     <div class="text-group">
-                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;">Q4 2025</span>
+                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q4_2025_kicker">Q4 2025</span>
                         <h3 data-i18n="news.q4_2025b_title">CME/CPD Vault Launch</h3>
-                        <p>The CME/CPD Vault is now live, integrating continuing medical education directly into the documentation workflow. Clinicians can now track learning hours and earn credits from their documented clinical encounters.</p>
+                        <p data-i18n="news.q4_2025b_desc">The CME/CPD Vault is now live, integrating continuing medical education directly into the documentation workflow. Clinicians can now track learning hours and earn credits from their documented clinical encounters.</p>
                     </div>
                     <div class="text-group">
-                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;">Q3 2025</span>
+                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q3_2025_kicker">Q3 2025</span>
                         <h3 data-i18n="news.q3_2025a_title">UK Medical Device Registration Application</h3>
-                        <p>ClinixSummary has formally applied for medical device registration in the United Kingdom, demonstrating our commitment to regulatory compliance and clinical safety standards. This marks an important step in our journey toward full regulatory recognition.</p>
+                        <p data-i18n="news.q3_2025a_desc">ClinixSummary has formally applied for medical device registration in the United Kingdom, demonstrating our commitment to regulatory compliance and clinical safety standards. This marks an important step in our journey toward full regulatory recognition.</p>
                     </div>
                     <div class="text-group">
-                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;">Q3 2025</span>
+                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q3_2025_kicker">Q3 2025</span>
                         <h3 data-i18n="news.q3_2025b_title">Allied Health Modules Released</h3>
-                        <p>New dedicated modules for Physiotherapy, Occupational Therapy, and Speech & Language Therapy are now available. Each module features discipline-specific documentation patterns, terminology, and assessment frameworks.</p>
+                        <p data-i18n="news.q3_2025b_desc">New dedicated modules for Physiotherapy, Occupational Therapy, and Speech & Language Therapy are now available. Each module features discipline-specific documentation patterns, terminology, and assessment frameworks.</p>
                     </div>
                     <div class="text-group">
-                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;">Q2 2025</span>
+                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q2_2025_kicker">Q2 2025</span>
                         <h3 data-i18n="news.q2_2025_title">Module Updates: Expanded Specialty Coverage</h3>
-                        <p>Ongoing updates to our specialty modules have expanded coverage to 40+ medical specialties with improved accuracy, expanded terminology recognition, and enhanced language support across all modules.</p>
+                        <p data-i18n="news.q2_2025_desc">Ongoing updates to our specialty modules have expanded coverage to 40+ medical specialties with improved accuracy, expanded terminology recognition, and enhanced language support across all modules.</p>
                     </div>
                     <div class="text-group">
-                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;">Q1 2025</span>
+                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q1_2025_kicker">Q1 2025</span>
                         <h3 data-i18n="news.q1_2025_title">ClinixSummary Platform Launch</h3>
-                        <p>ClinixSummary officially launches as a comprehensive AI medical scribe platform, offering ambient and dictation-based clinical documentation across multiple medical specialties with HIPAA and GDPR compliance from day one.</p>
+                        <p data-i18n="news.q1_2025_desc">ClinixSummary officially launches as a comprehensive AI medical scribe platform, offering ambient and dictation-based clinical documentation across multiple medical specialties with HIPAA and GDPR compliance from day one.</p>
                     </div>
                 </div>
 
@@ -431,14 +431,14 @@ function PodcastsPage() {
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="podcasts.kicker">Podcasts</span>
                     <h2 class="subpage-title" data-i18n="podcasts.title">ClinixSummary Podcasts</h2>
-                    <p class="subpage-copy">Conversations with clinicians, health tech leaders, and the team building the future of clinical documentation.</p>
+                    <p class="subpage-copy" data-i18n="podcasts.desc">Conversations with clinicians, health tech leaders, and the team building the future of clinical documentation.</p>
                 </div>
 
                 <div style="text-align: center; padding: 60px 40px; background: var(--bg-subtle); border-radius: 12px; border: 1px solid var(--border-subtle); margin-bottom: 60px;">
                     <span class="material-symbols-rounded" style="font-size: 64px; color: var(--accent); margin-bottom: 20px; display: block;">podcasts</span>
                     <h3 style="font-family: var(--font-serif); font-size: 28px; margin-bottom: 16px;" data-i18n="podcasts.coming_soon">Coming Soon</h3>
-                    <p style="font-size: 17px; color: var(--text-secondary); max-width: 600px; margin: 0 auto 30px;">We\u2019re preparing our first season of podcasts. Subscribe to be notified when episodes launch.</p>
-                    <button class="btn-primary" onclick="showToast('Subscribed! We\\'ll notify you when episodes launch.'); return false;">Subscribe / Get Notified</button>
+                    <p style="font-size: 17px; color: var(--text-secondary); max-width: 600px; margin: 0 auto 30px;" data-i18n="podcasts.coming_soon_desc">We\u2019re preparing our first season of podcasts. Subscribe to be notified when episodes launch.</p>
+                    <button class="btn-primary" onclick="showToast('Subscribed! We\\'ll notify you when episodes launch.'); return false;" data-i18n="podcasts.subscribe_btn">Subscribe / Get Notified</button>
                 </div>
 
                 <div class="subpage-header">
@@ -450,28 +450,28 @@ function PodcastsPage() {
                     <div class="card" style="opacity: 0.7;">
                         <div class="card-icon material-symbols-rounded">mic</div>
                         <h3 data-i18n="podcasts.ep1_title">Episode 1: Why We Built ClinixSummary</h3>
-                        <p>The founding story \u2014 practicing physicians frustrated with documentation burden, building an AI scribe from nights and weekends to a platform serving clinicians worldwide.</p>
-                        <span class="beta-tag" style="margin-top: 12px;">Coming Soon</span>
+                        <p data-i18n="podcasts.ep1_desc">The founding story \u2014 practicing physicians frustrated with documentation burden, building an AI scribe from nights and weekends to a platform serving clinicians worldwide.</p>
+                        <span class="beta-tag" style="margin-top: 12px;" data-i18n="podcasts.coming_soon_badge">Coming Soon</span>
                     </div>
                     <div class="card" style="opacity: 0.7;">
                         <div class="card-icon material-symbols-rounded">sentiment_dissatisfied</div>
                         <h3 data-i18n="podcasts.ep2_title">Episode 2: The Clinician Burnout Crisis \u2014 And What AI Can Do About It</h3>
-                        <p>Evidence on documentation-driven burnout, how ambient AI changes the equation, and perspectives from clinicians who\u2019ve made the switch.</p>
-                        <span class="beta-tag" style="margin-top: 12px;">Coming Soon</span>
+                        <p data-i18n="podcasts.ep2_desc">Evidence on documentation-driven burnout, how ambient AI changes the equation, and perspectives from clinicians who\u2019ve made the switch.</p>
+                        <span class="beta-tag" style="margin-top: 12px;" data-i18n="podcasts.coming_soon_badge">Coming Soon</span>
                     </div>
                     <div class="card" style="opacity: 0.7;">
                         <div class="card-icon material-symbols-rounded">translate</div>
                         <h3 data-i18n="podcasts.ep3_title">Episode 3: Going Global \u2014 Multilingual Medicine and Documentation</h3>
-                        <p>How real-world clinical consultations cross language boundaries, and how ClinixSummary handles multilingual documentation naturally.</p>
-                        <span class="beta-tag" style="margin-top: 12px;">Coming Soon</span>
+                        <p data-i18n="podcasts.ep3_desc">How real-world clinical consultations cross language boundaries, and how ClinixSummary handles multilingual documentation naturally.</p>
+                        <span class="beta-tag" style="margin-top: 12px;" data-i18n="podcasts.coming_soon_badge">Coming Soon</span>
                     </div>
                 </div>
 
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="podcasts.cta_title">Stay in the loop</h2>
-                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Be the first to know when new episodes drop.</p>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;" data-i18n="podcasts.cta_desc">Be the first to know when new episodes drop.</p>
                     <div class="nav-actions" style="justify-content: center;">
-                        <button class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Subscribed! We\\'ll notify you when episodes launch.'); return false;">Subscribe / Get Notified</button>
+                        <button class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Subscribed! We\\'ll notify you when episodes launch.'); return false;" data-i18n="podcasts.subscribe_btn">Subscribe / Get Notified</button>
                     </div>
                 </div>
             </div>
