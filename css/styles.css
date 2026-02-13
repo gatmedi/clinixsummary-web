@@ -18,6 +18,19 @@
     --page-width: 1400px; /* Increased from 1100px to reduce white space on large screens */
 }
 
+/* Arabic typography — Noto Naskh Arabic */
+[lang="ar"] {
+    --font-serif: 'Noto Naskh Arabic', serif;
+    --font-sans: 'Noto Naskh Arabic', sans-serif;
+}
+
+/* Leaflet-only Arabic (when site is in a different language) */
+.leaflet-page[dir="rtl"] {
+    --font-serif: 'Noto Naskh Arabic', serif;
+    --font-sans: 'Noto Naskh Arabic', sans-serif;
+    font-family: 'Noto Naskh Arabic', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
