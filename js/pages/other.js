@@ -814,21 +814,52 @@ function initLeafletLangSwitcher() {
     const btns = document.querySelectorAll('.leaflet-lang-btn');
     if (!btns.length) return;
 
+    const dictCache = {};
+    const siteLang = (typeof I18n !== 'undefined') ? I18n.locale : 'en';
+
     // Highlight current language
-    const currentLang = (typeof I18n !== 'undefined') ? I18n.locale : 'en';
-    btns.forEach(b => {
-        b.classList.toggle('active', b.dataset.leafletLang === currentLang);
-        b.addEventListener('click', () => {
-            const lang = b.dataset.leafletLang;
-            if (typeof I18n !== 'undefined') {
-                I18n.switchLanguage(lang);
+    btns.forEach(b => b.classList.toggle('active', b.dataset.leafletLang === siteLang));
+
+    function resolve(obj, dotKey) {
+        return dotKey.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : undefined), obj);
+    }
+
+    async function switchLeafletLang(code) {
+        // Load dictionary if not cached
+        if (!dictCache[code]) {
+            try {
+                const resp = await fetch('data/i18n/' + code + '.json');
+                dictCache[code] = await resp.json();
+            } catch (e) {
+                console.error('Failed to load ' + code + ' translations');
+                return;
             }
-            // After re-render, re-highlight
-            setTimeout(() => {
-                document.querySelectorAll('.leaflet-lang-btn').forEach(btn => {
-                    btn.classList.toggle('active', btn.dataset.leafletLang === lang);
-                });
-            }, 100);
+        }
+
+        const dict = dictCache[code];
+        const leaflet = document.querySelector('.leaflet-page');
+        if (!leaflet) return;
+
+        // Apply RTL/LTR to leaflet only (not the whole page)
+        leaflet.setAttribute('dir', code === 'ar' ? 'rtl' : 'ltr');
+
+        // Translate all data-i18n elements within the leaflet
+        leaflet.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const val = resolve(dict, key);
+            if (val) el.textContent = val;
         });
+
+        // Update active button state
+        document.querySelectorAll('.leaflet-lang-btn').forEach(b =>
+            b.classList.toggle('active', b.dataset.leafletLang === code)
+        );
+
+        // Brief delay for DOM repaint, then print
+        setTimeout(() => window.print(), 150);
+    }
+
+    btns.forEach(b => {
+        b.addEventListener('click', () => switchLeafletLang(b.dataset.leafletLang));
     });
 }
