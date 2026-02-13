@@ -18,19 +18,6 @@
     --page-width: 1400px; /* Increased from 1100px to reduce white space on large screens */
 }
 
-/* Arabic typography — Noto Naskh Arabic */
-[lang="ar"] {
-    --font-serif: 'Noto Naskh Arabic', serif;
-    --font-sans: 'Noto Naskh Arabic', sans-serif;
-}
-
-/* Leaflet-only Arabic (when site is in a different language) */
-.leaflet-page[dir="rtl"] {
-    --font-serif: 'Noto Naskh Arabic', serif;
-    --font-sans: 'Noto Naskh Arabic', sans-serif;
-    font-family: 'Noto Naskh Arabic', sans-serif;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -1192,6 +1179,20 @@ footer {
 
 [dir="rtl"] .section-header {
     text-align: right;
+    margin-left: auto;
+}
+
+[dir="rtl"] .section-copy {
+    margin-left: auto;
+}
+
+[dir="rtl"] .subpage-header {
+    margin-left: auto;
+    text-align: right;
+}
+
+[dir="rtl"] .hero-subtitle {
+    margin-left: auto;
 }
 
 [dir="rtl"] .dropdown {
@@ -1214,45 +1215,6 @@ footer {
     margin-right: 8px;
 }
 
-/* RTL block alignment: push max-width blocks to the right */
-[dir="rtl"] .section-header {
-    margin-left: auto;
-}
-
-[dir="rtl"] .section-copy {
-    margin-left: auto;
-}
-
-[dir="rtl"] .subpage-header {
-    margin-left: auto;
-    text-align: right;
-}
-
-[dir="rtl"] .hero-subtitle {
-    margin-left: auto;
-}
-
-/* Arabic: neutralize letter-spacing that breaks cursive joins */
-[dir="rtl"] .kicker {
-    letter-spacing: 0;
-}
-
-[dir="rtl"] .stat-label {
-    letter-spacing: 0;
-}
-
-[dir="rtl"] .result-label {
-    letter-spacing: 0;
-}
-
-[dir="rtl"] .beta-tag {
-    letter-spacing: 0;
-}
-
-[dir="rtl"] .lang-code {
-    letter-spacing: 0;
-}
-
 /* RTL: plan features and i18n banner */
 [dir="rtl"] .plan-features li {
     flex-direction: row-reverse;
@@ -1267,6 +1229,23 @@ footer {
     direction: rtl;
 }
 
+/* RTL: form select dropdown arrow */
+[dir="rtl"] .form-group select {
+    background-position: left 12px center;
+    padding-right: 14px;
+    padding-left: 32px;
+}
+
+/* RTL: toast notification centering */
+[dir="rtl"] .toast {
+    left: auto;
+    right: 50%;
+    transform: translateX(50%) translateY(20px);
+}
+[dir="rtl"] .toast.show {
+    transform: translateX(50%) translateY(0);
+}
+
 @media (max-width: 600px) {
     [dir="rtl"] .footer-brand-col {
         align-items: flex-end;
@@ -1274,8 +1253,189 @@ footer {
 }
 
 /* ═══════════════════════════════════════════════════════
-   Leaflet Page — Screen & Print Styles
+   ARABIC TYPOGRAPHY & LAYOUT
+   Based on Al Arabiya / Al Jazeera patterns,
+   UAE Design System, W3C Arabic Layout Requirements.
    ═══════════════════════════════════════════════════════ */
+
+/* ── Core: font family + base adjustments ──────────── */
+[lang="ar"] {
+    --font-serif: 'Noto Naskh Arabic', serif;
+    --font-sans: 'Noto Naskh Arabic', sans-serif;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+/* Arabic text appears ~20% smaller than Latin at same px.
+   Bump base body and increase line-height for readability. */
+[lang="ar"] body {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* ── Letter-spacing: MUST be 0 for Arabic connected script.
+   Any positive or negative value breaks cursive joins. ── */
+[dir="rtl"] .hero h1,
+[dir="rtl"] .logo,
+[dir="rtl"] .kicker,
+[dir="rtl"] .stat-label,
+[dir="rtl"] .result-label,
+[dir="rtl"] .beta-tag,
+[dir="rtl"] .lang-code,
+[dir="rtl"] .leaflet-tagline,
+[dir="rtl"] .leaflet-badge,
+[dir="rtl"] .subpage-title,
+[dir="rtl"] .section-title,
+[dir="rtl"] .section-copy,
+[dir="rtl"] .text-group h3 {
+    letter-spacing: 0;
+}
+
+/* ── text-transform: uppercase doesn't exist in Arabic ── */
+[dir="rtl"] .kicker,
+[dir="rtl"] .stat-label {
+    text-transform: none;
+}
+
+/* ── Headings: Arabic needs more vertical breathing room ── */
+[dir="rtl"] .hero h1 {
+    font-size: 48px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+[dir="rtl"] .subpage-title {
+    font-size: 40px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+[dir="rtl"] .section-title {
+    font-size: 34px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+[dir="rtl"] .text-group h3 {
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+/* ── Body copy: generous line-height for Arabic script ── */
+[dir="rtl"] .hero-subtitle {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+[dir="rtl"] .subpage-copy {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+[dir="rtl"] .section-copy {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* ── Cards, text groups, pricing ────────────────────── */
+[dir="rtl"] .card p,
+[dir="rtl"] .text-group p,
+[dir="rtl"] .pricing-card p {
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+[dir="rtl"] .card h3 {
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* ── Kicker: larger for Arabic legibility ───────────── */
+[dir="rtl"] .kicker {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ── Navigation: Arabic font sizing ─────────────────── */
+[dir="rtl"] .nav-link {
+    font-size: 15px;
+}
+
+[dir="rtl"] .dropdown-item-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+[dir="rtl"] .dropdown-label {
+    font-size: 12px;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+/* ── Pricing cards ──────────────────────────────────── */
+[dir="rtl"] .plan-name {
+    letter-spacing: 0;
+}
+
+[dir="rtl"] .plan-price {
+    letter-spacing: 0;
+}
+
+/* ── Footer ─────────────────────────────────────────── */
+[dir="rtl"] .footer-heading {
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+/* ── Buttons: Arabic text in buttons ────────────────── */
+[dir="rtl"] .btn-primary,
+[dir="rtl"] .btn-outline {
+    letter-spacing: 0;
+    font-size: 15px;
+}
+
+/* ── Calculator / ROI section ───────────────────────── */
+[dir="rtl"] .result-value {
+    letter-spacing: 0;
+}
+
+/* ── Leaflet standalone Arabic ──────────────────────── */
+.leaflet-page[dir="rtl"] {
+    --font-serif: 'Noto Naskh Arabic', serif;
+    --font-sans: 'Noto Naskh Arabic', sans-serif;
+    font-family: 'Noto Naskh Arabic', sans-serif;
+}
+
+.leaflet-page[dir="rtl"] .leaflet-heading {
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.leaflet-page[dir="rtl"] .leaflet-intro,
+.leaflet-page[dir="rtl"] .leaflet-point p {
+    line-height: 1.75;
+}
+
+.leaflet-page[dir="rtl"] .leaflet-point h3 {
+    font-weight: 700;
+}
+
+.leaflet-page[dir="rtl"] .leaflet-tagline,
+.leaflet-page[dir="rtl"] .leaflet-badge {
+    letter-spacing: 0;
+}
+
+/* RTL leaflet layout */
+[dir="rtl"] .leaflet-point,
+.leaflet-page[dir="rtl"] .leaflet-point {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+[dir="rtl"] .leaflet-logo,
+.leaflet-page[dir="rtl"] .leaflet-logo {
+    flex-direction: row-reverse;
+}
 
 .leaflet-toolbar {
     background: var(--bg-subtle);
@@ -1488,16 +1648,6 @@ footer {
     font-size: 10px !important;
     color: #999 !important;
     margin-top: 6px !important;
-}
-
-/* RTL adjustments */
-[dir="rtl"] .leaflet-point {
-    flex-direction: row-reverse;
-    text-align: right;
-}
-
-[dir="rtl"] .leaflet-logo {
-    flex-direction: row-reverse;
 }
 
 /* Mobile */
