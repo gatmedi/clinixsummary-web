@@ -215,7 +215,7 @@ function CareersPage() {
             + '</div>'
             + '<p style="color: var(--text-secondary); margin-bottom: 16px; line-height: 1.6;">' + job.description + '</p>'
             + '<div>'
-            + '<h5 style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #999; margin-bottom: 8px;">Requirements</h5>'
+            + '<h5 class="kicker" style="font-size: 13px; color: #999; margin-bottom: 8px;">Requirements</h5>'
             + '<ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 6px;">'
             + reqItems
             + '</ul></div></div>';
