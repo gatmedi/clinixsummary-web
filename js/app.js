@@ -174,9 +174,6 @@ function router() {
             setTimeout(calculateSavings, 10);
         }
 
-        if (hash === '#leaflet') {
-            setTimeout(initLeafletLangSwitcher, 10);
-        }
     } else {
         APP_CONTENT.innerHTML = '<h2>404 Page Not Found</h2>';
     }
