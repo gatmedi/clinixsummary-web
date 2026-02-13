@@ -18,6 +18,19 @@
     --page-width: 1400px; /* Increased from 1100px to reduce white space on large screens */
 }
 
+/* Arabic typography — Noto Naskh Arabic */
+[lang="ar"] {
+    --font-serif: 'Noto Naskh Arabic', serif;
+    --font-sans: 'Noto Naskh Arabic', sans-serif;
+}
+
+/* Leaflet-only Arabic (when site is in a different language) */
+.leaflet-page[dir="rtl"] {
+    --font-serif: 'Noto Naskh Arabic', serif;
+    --font-sans: 'Noto Naskh Arabic', sans-serif;
+    font-family: 'Noto Naskh Arabic', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -1501,7 +1514,7 @@ footer {
 }
 
 /* ═══════════════════════════════════════════════════════
-   Print Styles
+   Print Styles — Single A4 page
    ═══════════════════════════════════════════════════════ */
 @media print {
     /* Hide everything except the leaflet */
@@ -1521,6 +1534,11 @@ footer {
         background: #fff;
     }
 
+    #app-content {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
     .leaflet-page {
         max-width: none;
         border: none;
@@ -1530,22 +1548,116 @@ footer {
         page-break-inside: avoid;
     }
 
+    /* Tight spacing to fit single A4 page */
     .leaflet-inner {
-        padding: 28px 36px 24px;
+        padding: 20px 28px 16px;
     }
 
-    .leaflet-heading {
-        font-size: 24px;
+    .leaflet-header {
+        margin-bottom: 14px;
+        padding-bottom: 10px;
+    }
+
+    .leaflet-logo-img {
+        height: 30px;
+    }
+
+    .leaflet-brand {
+        font-size: 18px;
+    }
+
+    .leaflet-tagline {
+        font-size: 10px;
     }
 
     .leaflet-title-block {
+        padding: 16px 20px;
+        margin-bottom: 14px;
+        border-radius: 6px;
+    }
+
+    .leaflet-heading {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+
+    .leaflet-intro {
+        font-size: 11.5px;
+        line-height: 1.45;
+    }
+
+    .leaflet-points {
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+
+    .leaflet-point {
+        gap: 10px;
+    }
+
+    .leaflet-icon {
+        font-size: 22px;
+    }
+
+    .leaflet-point h3 {
+        font-size: 12.5px;
+        margin-bottom: 1px;
+    }
+
+    .leaflet-point p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .leaflet-quote {
+        padding: 10px 16px;
+        margin-bottom: 12px;
+    }
+
+    .leaflet-quote p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .leaflet-badges {
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+
+    .leaflet-badge {
+        font-size: 9.5px;
+        padding: 4px 12px;
+    }
+
+    .leaflet-footer {
+        padding-top: 8px;
+    }
+
+    .leaflet-footer p {
+        font-size: 10px;
+    }
+
+    .leaflet-url {
+        font-size: 13px;
+        margin: 2px 0 4px;
+    }
+
+    .leaflet-copy {
+        font-size: 8px !important;
+        margin-top: 4px !important;
+    }
+
+    /* Preserve colors in print */
+    .leaflet-title-block {
         background: #f0fafb !important;
+        border-inline-start-color: #3BC5D6 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 
     .leaflet-quote {
         background: #f5f5f3 !important;
+        border-inline-start-color: #3BC5D6 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
@@ -1557,37 +1669,25 @@ footer {
     }
 
     .leaflet-icon {
-        color: var(--accent) !important;
+        color: #3BC5D6 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 
     .leaflet-header {
-        border-bottom-color: var(--accent) !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-
-    .leaflet-title-block {
-        border-inline-start-color: var(--accent) !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-
-    .leaflet-quote {
-        border-inline-start-color: var(--accent) !important;
+        border-bottom-color: #3BC5D6 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 
     .leaflet-url {
-        color: var(--accent) !important;
+        color: #3BC5D6 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 
     @page {
         size: A4;
-        margin: 12mm;
+        margin: 10mm 12mm;
     }
 }
