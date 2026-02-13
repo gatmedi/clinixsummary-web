@@ -558,18 +558,6 @@ section {
     }
 }
 
-@media (max-width: 600px) {
-    .footer-layout {
-        grid-template-columns: 1fr 1fr;
-    }
-    .footer-brand-col {
-        grid-column: span 2;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 32px;
-    }
-}
-
 /* ---------------------------------------------------------
    SAVINGS CALCULATOR STYLES
    --------------------------------------------------------- */
@@ -1246,12 +1234,6 @@ footer {
     transform: translateX(50%) translateY(0);
 }
 
-@media (max-width: 600px) {
-    [dir="rtl"] .footer-brand-col {
-        align-items: flex-end;
-    }
-}
-
 /* ═══════════════════════════════════════════════════════
    ARABIC TYPOGRAPHY & LAYOUT
    Based on Al Arabiya / Al Jazeera patterns,
@@ -1660,6 +1642,489 @@ footer {
     }
     .leaflet-title-block {
         padding: 20px;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE RESPONSIVE — 768px (tablets & phones)
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* ── Phase 1: Mobile Navigation ───────────────────── */
+    .mobile-toggle {
+        display: block;
+        font-size: 28px;
+        color: var(--text-primary);
+        z-index: 10;
+    }
+
+    .nav-right-group {
+        display: none;
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        background: var(--bg-paper);
+        border-top: 1px solid var(--border-subtle);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        padding: 12px 16px 20px;
+        max-height: calc(100vh - var(--nav-height));
+        overflow-y: auto;
+        z-index: 999;
+    }
+
+    .nav-right-group.mobile-open {
+        display: flex;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-item {
+        height: auto;
+        flex-direction: column;
+        border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        width: 100%;
+        justify-content: space-between;
+        padding: 14px 4px;
+        height: auto;
+        font-size: 15px;
+    }
+
+    /* Hide dropdowns by default on mobile */
+    .nav-item .dropdown {
+        position: static;
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        overflow: hidden;
+        transform: none;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+        min-width: 0;
+        background: var(--bg-subtle);
+        transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.2s ease;
+    }
+
+    /* Override hover behaviour on mobile */
+    .nav-item:hover .dropdown {
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        transform: none;
+    }
+
+    /* Show dropdown when accordion is open */
+    .nav-item.mobile-dropdown-open .dropdown {
+        opacity: 1;
+        visibility: visible;
+        max-height: 600px;
+        padding: 8px 4px;
+        border-radius: 8px;
+        margin-bottom: 4px;
+    }
+
+    /* Wide dropdowns become single column on mobile */
+    .dropdown.wide {
+        display: flex;
+        flex-direction: column;
+        min-width: 0 !important;
+    }
+
+    .dropdown-item {
+        padding: 10px 12px;
+    }
+
+    /* Rotate chevron when open */
+    .nav-item.mobile-dropdown-open > .nav-link .material-symbols-rounded:last-child {
+        transform: rotate(180deg);
+    }
+
+    .nav-link .material-symbols-rounded:last-child {
+        transition: transform 0.2s;
+    }
+
+    /* Nav actions below menu items */
+    .nav-actions {
+        margin-left: 0;
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid var(--border-subtle);
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .nav-actions .btn-primary,
+    .nav-actions .btn-outline {
+        flex: 1;
+        text-align: center;
+        min-width: 120px;
+    }
+
+    /* Language switcher in mobile menu */
+    .lang-switcher {
+        margin-left: 0;
+        margin-top: 8px;
+        align-self: flex-start;
+    }
+
+    /* ── Phase 2: Typography Scaling ─────────────────── */
+    .hero h1 {
+        font-size: 32px;
+        letter-spacing: -0.02em;
+    }
+
+    .subpage-title {
+        font-size: 30px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .subpage-copy {
+        font-size: 16px;
+    }
+
+    .section-copy {
+        font-size: 15px;
+    }
+
+    .plan-price {
+        font-size: 28px;
+    }
+
+    .text-group h3 {
+        font-size: 19px;
+    }
+
+    .slider-display {
+        font-size: 20px;
+    }
+
+    .result-value {
+        font-size: 26px;
+    }
+
+    /* ── Phase 3: Spacing & Layout ───────────────────── */
+    section {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 36px;
+    }
+
+    .subpage-container {
+        padding: 40px 0 60px;
+    }
+
+    .subpage-header {
+        margin-bottom: 36px;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .pricing-card {
+        padding: 24px;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 16px;
+    }
+
+    .calculator-container {
+        padding: 24px;
+        gap: 24px;
+    }
+
+    .calculator-results {
+        padding: 24px;
+    }
+
+    .text-group {
+        padding: 22px 0;
+    }
+
+    /* ── Phase 4: Hero Section ───────────────────────── */
+    .hero {
+        padding: 24px 0 20px;
+    }
+
+    .hero-layout {
+        gap: 32px;
+    }
+
+    .hero-image-container {
+        height: 260px;
+    }
+
+    .hero-image-wrapper {
+        width: 100%;
+        min-height: 260px;
+    }
+
+    .hero-stats {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .stat-value {
+        font-size: 20px;
+    }
+
+    /* ── Phase 6: Component Fixes ────────────────────── */
+    /* Prevent iOS zoom on input focus */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px;
+    }
+
+    /* Leaflet toolbar responsive */
+    .leaflet-lang-group {
+        justify-content: center;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE RESPONSIVE — 480px (small phones)
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+
+    /* ── Phase 2: Typography further reduction ───────── */
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .subpage-title {
+        font-size: 26px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    /* ── Phase 3: Tighter spacing ────────────────────── */
+    section {
+        padding: 48px 0;
+    }
+
+    .page-width {
+        padding: 0 16px;
+    }
+
+    .navbar-content {
+        padding: 0 16px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .pricing-card {
+        padding: 20px;
+    }
+
+    .subpage-container {
+        padding: 32px 0 48px;
+    }
+
+    .calculator-container {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .calculator-results {
+        padding: 20px;
+    }
+
+    .result-value {
+        font-size: 24px;
+    }
+
+    /* ── Phase 4: Hero further reduction ─────────────── */
+    .hero-image-container {
+        height: 220px;
+    }
+
+    .hero-image-wrapper {
+        min-height: 220px;
+    }
+
+    .hero-layout {
+        gap: 24px;
+    }
+
+    .hero-stats {
+        gap: 16px;
+    }
+
+    .stat-value {
+        font-size: 18px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+    }
+
+    /* ── Phase 5: Footer single column ───────────────── */
+    .footer-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .footer-brand-col {
+        grid-column: span 1;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 24px;
+    }
+
+    .footer-brand-col > div:nth-child(2) {
+        display: block;
+    }
+
+    footer {
+        padding: 60px 0 40px;
+    }
+
+    .footer-group h4 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .footer-col-stack {
+        gap: 20px;
+    }
+
+    /* ── Phase 6: Full-width buttons ─────────────────── */
+    .nav-actions .btn-primary,
+    .nav-actions .btn-outline {
+        width: 100%;
+    }
+
+    .lang-dropdown {
+        min-width: 140px;
+    }
+
+    /* Leaflet inner tight */
+    .leaflet-inner {
+        padding: 20px 16px 16px;
+    }
+
+    .leaflet-heading {
+        font-size: 20px;
+    }
+
+    .leaflet-title-block {
+        padding: 16px;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════
+   Phase 7: RTL MOBILE ADJUSTMENTS
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+    /* Arabic typography mobile: scale down from Arabic base sizes */
+    [dir="rtl"] .hero h1 {
+        font-size: 30px;
+        line-height: 1.35;
+    }
+
+    [dir="rtl"] .subpage-title {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+
+    [dir="rtl"] .section-title {
+        font-size: 26px;
+        line-height: 1.45;
+    }
+
+    [dir="rtl"] .hero-subtitle {
+        font-size: 16px;
+    }
+
+    [dir="rtl"] .subpage-copy {
+        font-size: 16px;
+    }
+
+    /* RTL nav mobile: text alignment */
+    [dir="rtl"] .nav-right-group {
+        margin-right: 0;
+    }
+
+    [dir="rtl"] .nav-link {
+        text-align: right;
+    }
+
+    [dir="rtl"] .nav-actions {
+        margin-right: 0;
+    }
+
+    [dir="rtl"] .lang-switcher {
+        margin-right: 0;
+        align-self: flex-end;
+    }
+
+    /* RTL hero stats center on mobile */
+    [dir="rtl"] .hero-stats {
+        justify-content: center;
+    }
+
+    /* RTL footer */
+    [dir="rtl"] .footer-brand-col {
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    [dir="rtl"] .hero h1 {
+        font-size: 26px;
+    }
+
+    [dir="rtl"] .subpage-title {
+        font-size: 24px;
+    }
+
+    [dir="rtl"] .section-title {
+        font-size: 22px;
+    }
+
+    [dir="rtl"] .footer-brand-col {
+        align-items: flex-end;
     }
 }
 
