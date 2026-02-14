@@ -266,6 +266,7 @@ a {
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-subtle);
     z-index: 1000;
+    overflow: hidden;
     /* ALIGNMENT: We center the inner container of the navbar */
     display: flex;
     align-items: center;
@@ -296,13 +297,17 @@ main {
 
 .logo-symbol {
     height: 34px;
-    width: auto;
+    width: 34px;
+    max-height: 34px;
+    object-fit: contain;
     flex-shrink: 0;
 }
 
 .logo-wordmark {
     height: 32px;
     width: auto;
+    max-height: 32px;
+    object-fit: contain;
     filter: invert(1);
     flex-shrink: 0;
 }
@@ -1911,10 +1916,13 @@ footer {
 
     .logo-symbol {
         height: 30px;
+        width: 30px;
+        max-height: 30px;
     }
 
     .logo-wordmark {
         height: 26px;
+        max-height: 26px;
     }
 
     .nav-menu {
@@ -2189,10 +2197,13 @@ footer {
 
     .logo-symbol {
         height: 28px;
+        width: 28px;
+        max-height: 28px;
     }
 
     .logo-wordmark {
         height: 24px;
+        max-height: 24px;
     }
 
     .card {
