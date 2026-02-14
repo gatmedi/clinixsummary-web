@@ -692,6 +692,172 @@ function ReferralsPage() {
 // 12. ICD-10 Coding
 // ---------------------------------------------------------------------------
 
+// ---------------------------------------------------------------------------
+// 13. Radiology Assist (Beta)
+// ---------------------------------------------------------------------------
+
+function RadiologyAssistPage() {
+    return `
+        <section class="subpage-container">
+            <div class="page-width">
+                <div class="subpage-header">
+                    <span class="kicker">Radiology Assist</span>
+                    <h2 class="subpage-title">AI-Assisted Radiology Report Generation.</h2>
+                    <p class="subpage-copy">ClinixSummary\u2019s Radiology Assist module streamlines radiology documentation by generating structured, standards-compliant reports from imaging studies. From plain-film X\u2011rays to cross\u2011sectional imaging, Radiology Assist captures findings, impressions and recommendations in the language radiologists use \u2014 reducing turnaround times and improving report consistency.</p>
+                </div>
+
+                <div class="beta-notice">
+                    <span class="material-symbols-rounded">science</span>
+                    <span>Beta \u2014 This capability is currently in beta and under study</span>
+                </div>
+
+                <div class="grid-4" style="margin-bottom: 60px;">
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">description</div>
+                        <h3>Structured Reporting Templates</h3>
+                        <p>Generate radiology reports using structured templates aligned to ACR guidelines. Findings, impressions and recommendations are organised consistently across modalities and body regions.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">warning</div>
+                        <h3>Critical Findings Alerts</h3>
+                        <p>Automatically flag critical and unexpected findings within the report, ensuring that urgent observations are prominently documented and ready for immediate clinical communication.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">compare</div>
+                        <h3>Comparison with Prior Studies</h3>
+                        <p>Reference and compare findings against prior imaging studies in the clinical record, documenting interval changes, stability and progression with structured language.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">category</div>
+                        <h3>Classification Support</h3>
+                        <p>Support for standardised classification systems including BI\u2011RADS, TI\u2011RADS and Lung\u2011RADS, ensuring that reports include the appropriate category assignments and management recommendations.</p>
+                    </div>
+                </div>
+
+                <div class="cta-block">
+                    <h2>Interested in Radiology Assist? Join the beta.</h2>
+                    <div class="nav-actions">
+                        <a href="#contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);">Request Beta Access</a>
+                        <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+// ---------------------------------------------------------------------------
+// 14. Dermatology Assist (Beta)
+// ---------------------------------------------------------------------------
+
+function DermatologyAssistPage() {
+    return `
+        <section class="subpage-container">
+            <div class="page-width">
+                <div class="subpage-header">
+                    <span class="kicker">Dermatology Assist</span>
+                    <h2 class="subpage-title">AI-Assisted Dermatology Documentation.</h2>
+                    <p class="subpage-copy">ClinixSummary\u2019s Dermatology Assist module is designed for the unique documentation demands of dermatology practice. From lesion morphology descriptions to dermoscopy findings, treatment protocols and photographic documentation, Dermatology Assist ensures your clinical records are thorough, standardised and audit\u2011ready.</p>
+                </div>
+
+                <div class="beta-notice">
+                    <span class="material-symbols-rounded">science</span>
+                    <span>Beta \u2014 This capability is currently in beta and under study</span>
+                </div>
+
+                <div class="grid-4" style="margin-bottom: 60px;">
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">dermatology</div>
+                        <h3>Lesion Description Standardisation</h3>
+                        <p>Document lesion morphology using standardised dermatological terminology \u2014 type, shape, colour, distribution, size and anatomical location \u2014 ensuring consistent, comparable records across visits.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">search</div>
+                        <h3>Dermoscopy Finding Documentation</h3>
+                        <p>Capture dermoscopic patterns, structures and features using recognised dermatoscopy terminology, supporting clinical decision\u2011making and structured reporting for pigmented and non\u2011pigmented lesions.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">clinical_notes</div>
+                        <h3>Treatment Protocol Templates</h3>
+                        <p>Generate structured treatment plans for common dermatological conditions, including topical regimens, phototherapy protocols, procedural notes and biologic therapy documentation.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">photo_library</div>
+                        <h3>Photographic Documentation Indexing</h3>
+                        <p>Index and link clinical photographs to structured notes, enabling longitudinal visual tracking of lesion progression, treatment response and post\u2011procedural outcomes.</p>
+                    </div>
+                </div>
+
+                <div class="cta-block">
+                    <h2>Interested in Dermatology Assist? Join the beta.</h2>
+                    <div class="nav-actions">
+                        <a href="#contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);">Request Beta Access</a>
+                        <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+// ---------------------------------------------------------------------------
+// 15. Triage Assist (Beta)
+// ---------------------------------------------------------------------------
+
+function TriageAssistPage() {
+    return `
+        <section class="subpage-container">
+            <div class="page-width">
+                <div class="subpage-header">
+                    <span class="kicker">Triage Assist</span>
+                    <h2 class="subpage-title">AI-Assisted Clinical Triage Documentation.</h2>
+                    <p class="subpage-copy">ClinixSummary\u2019s Triage Assist module supports frontline clinical triage by generating structured, real\u2011time documentation of patient acuity assessments, chief complaints, vital sign trends and disposition decisions. Designed for emergency departments, urgent care centres and intake workflows where speed and accuracy are critical.</p>
+                </div>
+
+                <div class="beta-notice">
+                    <span class="material-symbols-rounded">science</span>
+                    <span>Beta \u2014 This capability is currently in beta and under study</span>
+                </div>
+
+                <div class="grid-4" style="margin-bottom: 60px;">
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">speed</div>
+                        <h3>Acuity Scoring Documentation</h3>
+                        <p>Document triage acuity levels using standardised scales (ESI, MTS, CTAS) with structured rationale, supporting consistent and defensible triage decisions across clinicians and shifts.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">category</div>
+                        <h3>Chief Complaint Categorisation</h3>
+                        <p>Automatically categorise and structure chief complaints from the patient narrative, mapping presenting symptoms to standardised complaint categories for consistent documentation and downstream analytics.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">monitor_heart</div>
+                        <h3>Vital Sign Trend Analysis</h3>
+                        <p>Capture and document vital sign measurements with contextual trend analysis, flagging clinically significant changes from baseline and highlighting values that fall outside normal parameters.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">swap_horiz</div>
+                        <h3>Disposition Recommendation Support</h3>
+                        <p>Generate structured disposition documentation including discharge, admission, transfer or observation recommendations with supporting clinical rationale drawn from the triage assessment.</p>
+                    </div>
+                </div>
+
+                <div class="cta-block">
+                    <h2>Interested in Triage Assist? Join the beta.</h2>
+                    <div class="nav-actions">
+                        <a href="#contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);">Request Beta Access</a>
+                        <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+// ---------------------------------------------------------------------------
+// 12. ICD-10 Coding
+// ---------------------------------------------------------------------------
+
 function ICDCodingPage() {
     return createCapabilityPage({
         ns: 'icd_page',

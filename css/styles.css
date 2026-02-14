@@ -38,6 +38,176 @@ a {
     transition: color 0.2s ease;
 }
 
+/* Accessibility: Focus styles */
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.nav-link:focus-visible,
+.dropdown-item:focus-visible,
+.btn-primary:focus-visible,
+.btn-outline:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--text-primary);
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 10000;
+    font-size: 14px;
+    border-radius: 0 0 8px 0;
+    transition: top 0.2s;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* Page Transitions */
+#app-content {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Compliance Badges */
+.compliance-badges {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.compliance-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: box-shadow 0.2s;
+}
+
+.compliance-badge:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.compliance-badge .material-symbols-rounded {
+    font-size: 28px;
+    color: var(--accent);
+}
+
+/* Beta Badge (for beta pages) */
+.beta-notice {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(59,197,214,0.1);
+    border: 1px solid rgba(59,197,214,0.3);
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-bottom: 48px;
+}
+
+.beta-notice .material-symbols-rounded {
+    font-size: 20px;
+    color: var(--accent);
+}
+
+.beta-notice span:last-child {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Dropdown Column Headers */
+.dropdown-col-header {
+    padding: 0 14px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+}
+
+/* CTA Block (dark) */
+.cta-block {
+    background: var(--text-primary);
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    border-radius: 12px;
+    margin-top: 60px;
+}
+
+.cta-block h2 {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.cta-block .nav-actions {
+    justify-content: center;
+}
+
+/* Data Grid (for security page quick stats) */
+.data-grid-item h4 {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Footer Contact Card */
+.footer-contact-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-contact-card:hover {
+    color: var(--accent);
+}
+
+.footer-contact-card .material-symbols-rounded {
+    font-size: 20px;
+    color: var(--accent);
+}
+
+/* Inline style extractions */
+.card-border {
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 20px;
+}
+
+.bg-subtle-box {
+    background: var(--bg-subtle);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-subtle);
+}
+
+.separator {
+    border-top: 1px solid var(--border-subtle);
+    margin: 6px 0;
+}
+
 /* Utility Classes */
 .grid-2 {
     display: grid;

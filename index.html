@@ -5,17 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ClinixSummary – The AI Medical Scribe Foundation</title>
     <meta name="description" content="ClinixSummary is the foundational AI architecture for clinical documentation, billing, and specialized medical assistance." />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ClinixSummary – The AI Medical Scribe Foundation" />
+    <meta property="og:description" content="ClinixSummary is the foundational AI architecture for clinical documentation, billing, and specialized medical assistance." />
+    <meta property="og:image" content="images/og-image.png" />
+    <meta property="og:url" content="https://clinixsummary.ai" />
+    <meta property="og:site_name" content="ClinixSummary" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ClinixSummary – The AI Medical Scribe Foundation" />
+    <meta name="twitter:description" content="AI-powered clinical documentation for modern clinicians." />
+    <meta name="twitter:image" content="images/og-image.png" />
+
     <link rel="icon" type="image/png" href="images/logo-icon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
 
     <link rel="stylesheet" href="css/styles.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ClinixSummary",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "AI-powered clinical documentation for modern clinicians. Voice in. Meticulous notes out.",
+      "url": "https://clinixsummary.ai",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "0",
+        "highPrice": "49.99",
+        "offerCount": "6"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "GATMEDI",
+        "url": "https://clinixsummary.ai"
+      }
+    }
+    </script>
 </head>
 <body>
+    <a href="#app-content" class="skip-link">Skip to content</a>
 
     <div class="header-wrapper">
         <header class="navbar">
@@ -26,32 +66,32 @@
                     ClinixSummary
                 </a>
 
-                <div class="mobile-toggle material-symbols-rounded">menu</div>
+                <div class="mobile-toggle material-symbols-rounded" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">menu</div>
 
                 <div class="nav-right-group">
-                    <nav class="nav-menu">
+                    <nav class="nav-menu" aria-label="Main navigation">
 
                         <!-- 1. Meet ClinixSummary (NOW TWO COLUMNS) -->
                         <div class="nav-item">
-                            <div class="nav-link"><span data-i18n="nav.meet_clinixs">Meet ClinixSummary</span> <span class="material-symbols-rounded">expand_more</span></div>
-                            <div class="dropdown wide">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.meet_clinixs">Meet ClinixSummary</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown wide" role="menu">
 
                                 <!-- Column 1: Core Architecture -->
                                 <div>
-                                    <div style="padding: 0 14px 8px; font-size:11px; font-weight:600; color:#999; text-transform:uppercase;" data-i18n="dropdown.core_arch">Core Architecture</div>
-                                    <a href="#meticulous-notes" class="dropdown-item">
+                                    <div class="dropdown-col-header" data-i18n="dropdown.core_arch">Core Architecture</div>
+                                    <a href="#meticulous-notes" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.meticulous_notes">Meticulous Notes</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.meticulous_notes_desc">Precise, detailed, well structured</span>
                                     </a>
-                                    <a href="#proprietary-models" class="dropdown-item">
+                                    <a href="#proprietary-models" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.proprietary_models">Proprietary Models</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.proprietary_models_desc">Specialized medical language engines.</span>
                                     </a>
-                                    <a href="#kaizen" class="dropdown-item">
+                                    <a href="#kaizen" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.kaizen">Kai-zen</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.kaizen_desc">Continuous learning loop.</span>
                                     </a>
-                                    <a href="#security" class="dropdown-item">
+                                    <a href="#security" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.security">Security</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.security_desc">HIPAA & GDPR Compliant.</span>
                                     </a>
@@ -59,22 +99,18 @@
 
                                 <!-- Column 2: Advanced Features & Compliance -->
                                 <div>
-                                    <div style="padding: 0 14px 8px; font-size:11px; font-weight:600; color:#999; text-transform:uppercase;" data-i18n="dropdown.features_compliance">Features & Compliance</div>
-                                    <a href="#languages" class="dropdown-item">
+                                    <div class="dropdown-col-header" data-i18n="dropdown.features_compliance">Features & Compliance</div>
+                                    <a href="#languages" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.languages">Languages</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.languages_desc">Multi-language support for global practice.</span>
                                     </a>
-                                    <a href="#portfolio-builder" class="dropdown-item">
-                                        <span class="dropdown-title" data-i18n="dropdown.portfolio_builder">Portfolio Builder</span>
-                                        <span class="dropdown-desc" data-i18n="dropdown.portfolio_builder_desc">Portfolio builder for specialist registration</span>
-                                    </a>
-                                    <a href="#auto-ambient" class="dropdown-item">
+                                    <a href="#auto-ambient" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.auto_ambient">Auto Ambient Dictate</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.auto_ambient_desc">Auto detects ambient or dictation</span>
                                     </a>
-                                    <a href="#clinix-foundation" class="dropdown-item">
-                                        <span class="dropdown-title">Clinix Foundation</span>
-                                        <span class="dropdown-desc">Non-profit global health initiative.</span>
+                                    <a href="#clinix-foundation" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.clinix_foundation">Clinix Foundation</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.clinix_foundation_desc">Non-profit global health initiative.</span>
                                     </a>
                                 </div>
                             </div>
@@ -82,40 +118,40 @@
 
                         <!-- 2. Solutions -->
                         <div class="nav-item">
-                            <div class="nav-link"><span data-i18n="nav.solutions">Solutions</span> <span class="material-symbols-rounded">expand_more</span></div>
-                            <div class="dropdown wide">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.solutions">Solutions</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown wide" role="menu">
                                 <!-- Sector Column (Left) -->
                                 <div>
-                                    <div style="padding: 0 14px 8px; font-size:11px; font-weight:600; color:#999; text-transform:uppercase;" data-i18n="dropdown.sectors">Sectors</div>
-                                    <a href="#clinicians" class="dropdown-item">
+                                    <div class="dropdown-col-header" data-i18n="dropdown.sectors">Sectors</div>
+                                    <a href="#clinicians" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.for_clinicians">For Clinicians</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.for_clinicians_desc">Solo & Private Practice.</span>
                                     </a>
-                                    <a href="#organizations" class="dropdown-item">
+                                    <a href="#organizations" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.for_orgs">For Organizations</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.for_orgs_desc">Hospitals & Health Systems.</span>
                                     </a>
-                                    <a href="#insurers" class="dropdown-item">
+                                    <a href="#insurers" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.insurers">Insurers</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.insurers_desc">Sponsor networks for rapid adjudications</span>
                                     </a>
-                                    <a href="#government" class="dropdown-item">
+                                    <a href="#government" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.government">Government</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.government_desc">Public sector & federal.</span>
                                     </a>
-                                    <a href="#nonprofit" class="dropdown-item">
+                                    <a href="#nonprofit" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.nonprofit">Non-profit</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.nonprofit_desc">ClinixFoundation</span>
                                     </a>
                                 </div>
                                 <!-- Use Case Column (Right) -->
                                 <div>
-                                    <div style="padding: 0 14px 8px; font-size:11px; font-weight:600; color:#999; text-transform:uppercase;" data-i18n="dropdown.use_cases">Use Cases</div>
-                                    <a href="#cap-medical" class="dropdown-item">
+                                    <div class="dropdown-col-header" data-i18n="dropdown.use_cases">Use Cases</div>
+                                    <a href="#cap-medical" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.by_specialty">By Specialty</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.by_specialty_desc">40 + medical & allied health specialties & assist modules</span>
                                     </a>
-                                    <a href="#integrations" class="dropdown-item">
+                                    <a href="#integrations" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.integrations">Integrations</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.integrations_desc">Flexible exports into EHR & EMR systems.</span>
                                     </a>
@@ -125,68 +161,71 @@
 
                         <!-- 3. Capabilities (UPDATED: Two column layout with 7+5 items) -->
                         <div class="nav-item">
-                            <div class="nav-link"><span data-i18n="nav.capabilities">Capabilities</span> <span class="material-symbols-rounded">expand_more</span></div>
-                            <div class="dropdown wide" style="min-width: 550px;">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.capabilities">Capabilities</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown wide" role="menu" style="min-width: 550px;">
 
                                 <!-- Column 1: Core Modules (8 items) -->
                                 <div>
-                                    <div style="padding: 0 14px 8px; font-size:11px; font-weight:600; color:#999; text-transform:uppercase;" data-i18n="dropdown.specialty_modules">Specialty & Allied Modules</div>
-                                    <a href="#cap-medical" class="dropdown-item">
+                                    <div class="dropdown-col-header" data-i18n="dropdown.specialty_modules">Specialty & Allied Modules</div>
+                                    <a href="#cap-medical" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.medical">Medical</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.medical_desc">All Specialities</span>
                                     </a>
-                                    <a href="#cap-dental" class="dropdown-item">
+                                    <a href="#cap-dental" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.dental">Dental</span>
                                     </a>
-                                    <a href="#cap-psychiatry" class="dropdown-item">
+                                    <a href="#cap-psychiatry" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.psychiatry">Psychiatry</span>
                                     </a>
-                                    <a href="#cap-psychology" class="dropdown-item">
+                                    <a href="#cap-psychology" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.psychology">Psychology</span>
                                     </a>
-                                    <a href="#cap-allied-health" class="dropdown-item">
+                                    <a href="#cap-allied-health" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.allied_health">Allied health</span>
                                     </a>
-                                    <a href="#cap-midwifery" class="dropdown-item">
+                                    <a href="#cap-midwifery" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.midwifery">Midwifery</span>
                                     </a>
-                                    <a href="#cap-vet" class="dropdown-item">
+                                    <a href="#cap-vet" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.vet_medicine">Veterinary Medicine</span>
                                     </a>
-                                    <a href="#cap-operative" class="dropdown-item">
+                                    <a href="#cap-operative" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.operational_notes">Operational Notes</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.operational_notes_desc">For surgeries and procedures</span>
                                     </a>
                                 </div>
 
-                                <!-- Column 2: Workflow & Assist (6 items) -->
+                                <!-- Column 2: Workflow & Assist Tools -->
                                 <div>
-                                    <div style="padding: 0 14px 8px; font-size:11px; font-weight:600; color:#999; text-transform:uppercase;" data-i18n="dropdown.workflow_tools">Workflow & Assist Tools</div>
-                                    <a href="#cme-vault" class="dropdown-item">
+                                    <div class="dropdown-col-header" data-i18n="dropdown.workflow_tools">Workflow & Assist Tools</div>
+                                    <a href="#portfolio-builder" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.portfolio_builder">Portfolio Builder</span>
+                                    </a>
+                                    <a href="#cme-vault" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title"><span data-i18n="dropdown.cme_vault">CME/CPD Vault</span> <span class="beta-tag" data-i18n="common.new_badge">New</span></span>
                                         <span class="dropdown-desc" data-i18n="dropdown.cme_vault_desc">Medical education and professional development.</span>
                                     </a>
-                                    <a href="#billing-assist" class="dropdown-item">
+                                    <a href="#billing-assist" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.billing_assist">Billing Assistance</span>
                                         <span class="dropdown-desc" data-i18n="dropdown.billing_assist_desc">Organizations only</span>
                                     </a>
-                                    <a href="#referrals" class="dropdown-item">
+                                    <a href="#referrals" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.referrals">Referrals</span>
                                     </a>
-                                    <a href="#icd-coding" class="dropdown-item">
+                                    <a href="#icd-coding" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.icd_coding">ICD Coding</span>
                                     </a>
-                                    <a href="#cap-patient-leaflet" class="dropdown-item">
+                                    <a href="#cap-patient-leaflet" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title" data-i18n="dropdown.patient_leaflet">Patient Information Leaflet</span>
                                     </a>
-                                    <div style="border-top: 1px solid var(--border-subtle); margin: 6px 0;"></div>
-                                    <a href="#" class="dropdown-item" onclick="showToast('In beta \u2014 feedback welcome.'); return false;">
+                                    <div class="separator"></div>
+                                    <a href="#radiology-assist" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title"><span data-i18n="dropdown.radiology_assist">Radiology Assist</span> <span class="beta-tag" data-i18n="common.beta_badge">Beta</span></span>
                                     </a>
-                                    <a href="#" class="dropdown-item" onclick="showToast('In beta \u2014 feedback welcome.'); return false;">
+                                    <a href="#dermatology-assist" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title"><span data-i18n="dropdown.dermatology_assist">Dermatology Assist</span> <span class="beta-tag" data-i18n="common.beta_badge">Beta</span></span>
                                     </a>
-                                    <a href="#" class="dropdown-item" onclick="showToast('In beta \u2014 feedback welcome.'); return false;">
+                                    <a href="#triage-assist" class="dropdown-item" role="menuitem">
                                         <span class="dropdown-title"><span data-i18n="dropdown.triage_assist">Triage Assist</span> <span class="beta-tag" data-i18n="common.beta_badge">Beta</span></span>
                                     </a>
                                 </div>
@@ -195,42 +234,42 @@
 
                         <!-- 4. Learn (UPDATED FROM RESOURCES) -->
                         <div class="nav-item">
-                            <div class="nav-link"><span data-i18n="nav.learn">Learn</span> <span class="material-symbols-rounded">expand_more</span></div>
-                            <div class="dropdown">
-                                <a href="#publications" class="dropdown-item">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.learn">Learn</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown" role="menu">
+                                <a href="#publications" class="dropdown-item" role="menuitem">
                                     <span class="dropdown-title" data-i18n="dropdown.publications">Publications</span>
                                     <span class="dropdown-desc" data-i18n="dropdown.publications_desc">Peer-reviewed research.</span>
                                 </a>
-                                <a href="#whitepapers" class="dropdown-item">
+                                <a href="#whitepapers" class="dropdown-item" role="menuitem">
                                     <span class="dropdown-title" data-i18n="dropdown.whitepapers">Whitepapers</span>
                                     <span class="dropdown-desc" data-i18n="dropdown.whitepapers_desc">Technical methodology.</span>
                                 </a>
-                                <a href="#case-studies" class="dropdown-item"><span class="dropdown-title" data-i18n="dropdown.case_studies">Case Studies</span></a>
-                                <a href="#security" class="dropdown-item">
+                                <a href="#case-studies" class="dropdown-item" role="menuitem"><span class="dropdown-title" data-i18n="dropdown.case_studies">Case Studies</span></a>
+                                <a href="#security" class="dropdown-item" role="menuitem">
                                     <span class="dropdown-title" data-i18n="dropdown.compliance">Compliance</span>
                                     <span class="dropdown-desc" data-i18n="dropdown.compliance_desc">Certifications & Reports.</span>
                                 </a>
-                                <div style="border-top: 1px solid var(--border-subtle); margin: 6px 0;"></div>
-                                <a href="#news" class="dropdown-item"><span class="dropdown-title" data-i18n="dropdown.news_events">News & Events</span></a>
-                                <a href="#blog" class="dropdown-item"><span class="dropdown-title" data-i18n="dropdown.podcasts">Podcasts</span></a>
+                                <div class="separator"></div>
+                                <a href="#news" class="dropdown-item" role="menuitem"><span class="dropdown-title" data-i18n="dropdown.news_events">News & Events</span></a>
+                                <a href="#blog" class="dropdown-item" role="menuitem"><span class="dropdown-title" data-i18n="dropdown.podcasts">Podcasts</span></a>
                             </div>
                         </div>
 
                         <!-- 5. Pricing -->
                         <div class="nav-item">
-                            <div class="nav-link"><span data-i18n="nav.pricing">Pricing</span> <span class="material-symbols-rounded">expand_more</span></div>
-                            <div class="dropdown">
-                                <a href="#roi-calculator" class="dropdown-item">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.pricing">Pricing</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown" role="menu">
+                                <a href="#pricing" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.see_pricing">See Pricing</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.see_pricing_desc">Plans from free to enterprise.</span>
+                                </a>
+                                <a href="#roi-calculator" class="dropdown-item" role="menuitem">
                                     <span class="dropdown-title" data-i18n="dropdown.roi_calculator">ROI Calculator</span>
                                     <span class="dropdown-desc" data-i18n="dropdown.roi_calculator_desc">Calculate your savings.</span>
                                 </a>
-                                <div style="border-top: 1px solid var(--border-subtle); margin: 6px 0;"></div>
-                                <a href="#pricing" class="dropdown-item"><span class="dropdown-title">Pilot 900</span></a>
-                                <a href="#pricing" class="dropdown-item"><span class="dropdown-title">Pioneer 1800</span></a>
-                                <a href="#pricing" class="dropdown-item"><span class="dropdown-title">Productive 3000</span></a>
-                                <a href="#pricing" class="dropdown-item"><span class="dropdown-title">Prolific 6000</span></a>
-                                <a href="#pricing" class="dropdown-item">
-                                    <span class="dropdown-title">Plan Enterprise</span>
+                                <div class="separator"></div>
+                                <a href="#contact" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.enterprise_contact">Enterprise</span>
                                     <span class="dropdown-desc" data-i18n="dropdown.plan_enterprise_desc">Custom volume licensing.</span>
                                 </a>
                             </div>
@@ -271,6 +310,7 @@
                                 src="images/logo-footer.png"
                                 alt="ClinixSummary Logo Work Version"
                                 style="height: 32px; width: auto;"
+                                loading="lazy"
                             />
                             ClinixSummary
                         </a>
@@ -278,7 +318,7 @@
 
                     <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-end;">
                         <h4 style="font-size: 14px; color: #fff; margin-bottom: 4px; letter-spacing: 0.05em;">BY GATMEDI</h4>
-                        <p style="font-size: 11px; color: rgba(255,255,255,0.5); margin-bottom: 16px;">&copy; 2025 GATMEDI</p>
+                        <p style="font-size: 11px; color: rgba(255,255,255,0.5); margin-bottom: 16px;">&copy; 2026 GATMEDI</p>
                         <div class="social-icons">
                             <a href="https://www.facebook.com/clinixsummary" target="_blank" rel="noopener">f</a>
                             <a href="https://x.com/clinixsummary" target="_blank" rel="noopener">&#x1D54F;</a>
@@ -293,7 +333,7 @@
                         <ul>
                             <li><a href="#proprietary-models" data-i18n="dropdown.proprietary_models">Proprietary Models</a></li>
                             <li><a href="#meticulous-notes" data-i18n="dropdown.meticulous_notes">Meticulous Notes</a></li>
-                            <li><a href="#clinix-foundation">Clinix Foundation</a></li>
+                            <li><a href="#clinix-foundation" data-i18n="dropdown.clinix_foundation">Clinix Foundation</a></li>
                             <li><a href="#kaizen" data-i18n="dropdown.kaizen">Kai-zen</a></li>
                             <li><a href="#languages" data-i18n="dropdown.languages">Languages</a></li>
                             <li><a href="#portfolio-builder" data-i18n="dropdown.portfolio_builder">Portfolio Builder</a></li>
@@ -306,7 +346,7 @@
                         <ul>
                             <li><a href="#story" data-i18n="footer.story">Story</a></li>
                             <li><a href="#publications" data-i18n="dropdown.publications">Publications</a></li>
-                            <li><a href="mailto:contact@clinixsummary.ai">contact@clinixsummary.ai</a></li>
+                            <li><a href="#contact" data-i18n="common.contact_us">Contact Us</a></li>
                             <li><a href="#careers" data-i18n="footer.careers">Careers</a></li>
                             <li><a href="#news" data-i18n="dropdown.news_events">News & Events</a></li>
                             <li><a href="#blog" data-i18n="dropdown.podcasts">Podcasts</a></li>
@@ -349,9 +389,9 @@
                             <li><a href="#referrals" data-i18n="dropdown.referrals">Referrals</a></li>
                             <li><a href="#icd-coding" data-i18n="dropdown.icd_coding">ICD Coding</a></li>
                             <li><a href="#cap-patient-leaflet" data-i18n="dropdown.patient_leaflet">Patient Information Leaflet</a></li>
-                            <li><a href="#" onclick="showToast('In beta \u2014 feedback welcome.'); return false;"><span data-i18n="dropdown.radiology_assist">Radiology Assist</span> Beta</a></li>
-                            <li><a href="#" onclick="showToast('In beta \u2014 feedback welcome.'); return false;"><span data-i18n="dropdown.dermatology_assist">Dermatology Assist</span> Beta</a></li>
-                            <li><a href="#" onclick="showToast('In beta \u2014 feedback welcome.'); return false;"><span data-i18n="dropdown.triage_assist">Triage Assist</span> Beta</a></li>
+                            <li><a href="#radiology-assist"><span data-i18n="dropdown.radiology_assist">Radiology Assist</span> Beta</a></li>
+                            <li><a href="#dermatology-assist"><span data-i18n="dropdown.dermatology_assist">Dermatology Assist</span> Beta</a></li>
+                            <li><a href="#triage-assist"><span data-i18n="dropdown.triage_assist">Triage Assist</span> Beta</a></li>
                         </ul>
                     </div>
                     <div class="footer-group">
@@ -371,12 +411,9 @@
                     <div class="footer-group">
                         <h4 data-i18n="nav.pricing">Pricing</h4>
                         <ul>
+                            <li><a href="#pricing" data-i18n="dropdown.see_pricing">See Pricing</a></li>
                             <li><a href="#roi-calculator" data-i18n="dropdown.roi_calculator">ROI Calculator</a></li>
-                            <li><a href="#pricing">Pilot 900</a></li>
-                            <li><a href="#pricing">Pioneer 1800</a></li>
-                            <li><a href="#pricing">Productive 3000</a></li>
-                            <li><a href="#pricing">Prolific 6000</a></li>
-                            <li><a href="#pricing">Plan Enterprise</a></li>
+                            <li><a href="#contact" data-i18n="dropdown.enterprise_contact">Enterprise</a></li>
                         </ul>
                     </div>
                 </div>
@@ -394,9 +431,10 @@
                     <div class="footer-group">
                         <h4 data-i18n="footer.help_security">Help & security</h4>
                         <ul>
-                            <li><a href="#security" data-i18n="footer.availability">Availability</a></li>
-                            <li><a href="#security" data-i18n="footer.status">Status</a></li>
-                            <li><a href="#contact" data-i18n="footer.support_center">Support center</a></li>
+                            <li><a href="#security" data-i18n="dropdown.compliance">Compliance</a></li>
+                            <li><a href="#security" data-i18n="footer.availability">System Status</a></li>
+                            <li><a href="#contact" data-i18n="footer.support_center">Support Center</a></li>
+                            <li><a href="#contact" data-i18n="common.contact_us">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
