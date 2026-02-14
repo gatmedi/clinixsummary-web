@@ -320,7 +320,7 @@ function CapAlliedHealthPage() {
                         <p data-i18n="allied.slt_f2_desc">Our models are trained on speech &amp; language therapy\u2011specific vocabulary \u2014 from CAPE\u2011V parameters to FOIS levels \u2014 so your notes use the right clinical language.</p>
                     </div>
                     <div class="card">
-                        <div class="card-icon material-symbols-rounded">local_dining</div>
+                        <div class="card-icon material-symbols-rounded">medication</div>
                         <h3 data-i18n="allied.slt_f3_title">Dysphagia Documentation</h3>
                         <p data-i18n="allied.slt_f3_desc">Capture IDDSI levels, swallowing assessment findings, aspiration risk factors and diet texture recommendations with clinical precision.</p>
                     </div>

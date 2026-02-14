@@ -82,7 +82,7 @@ function InsurersPage() {
 
                 <div class="grid-2" style="margin-bottom: 60px;">
                     <div class="text-group" style="border-bottom: none;">
-                        <span class="material-symbols-rounded list-item-icon">auto_fix_high</span>
+                        <span class="material-symbols-rounded list-item-icon">auto_awesome</span>
                         <h3 data-i18n="insurers.doc_title">Meticulous Documentation for Audit Readiness</h3>
                         <p data-i18n="insurers.doc_desc">Our AI platform guarantees every record adheres to the highest level of clinical and regulatory rigor (ICD-10/CPT guidelines, medical necessity). This meticulousness directly translates into reduced ambiguity during claims processing.</p>
                         <ul style="margin-top: 15px; font-size: 14px; color: var(--text-secondary);">
@@ -156,7 +156,7 @@ function OrganizationsPage() {
                         <p data-i18n="orgs.tech_desc">ClinixSummary combines ambient capture, quick dictation and advanced inference to fit every workflow. Our AI infers clinical meaning from natural conversations \u2013 deducing context without fabricating facts.</p>
                         <ul style="margin-top: 15px; font-size: 14px; color: var(--text-secondary);">
                             <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">mic</span> <span data-i18n="orgs.ambient_b">Ambient capture: Hands\u2011free documentation.</span></li>
-                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">keyboard_voice</span> <span data-i18n="orgs.dictation_b">Rapid dictation: Narrate your assessment and plan.</span></li>
+                            <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">record_voice_over</span> <span data-i18n="orgs.dictation_b">Rapid dictation: Narrate your assessment and plan.</span></li>
                             <li style="color: var(--text-primary);"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">emoji_objects</span> <span data-i18n="orgs.inference_b">Inference engine: Infers context from captured facts.</span></li>
                         </ul>
                     </div>
