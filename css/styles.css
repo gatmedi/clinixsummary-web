@@ -290,22 +290,22 @@ main {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
     flex-shrink: 0;
 }
 
 .logo-symbol {
-    height: 42px;
-    width: 42px;
-    max-height: 42px;
+    height: 46px;
+    width: 46px;
+    max-height: 46px;
     object-fit: contain;
     flex-shrink: 0;
 }
 
 .logo-wordmark {
-    height: 65px;
+    height: 78px;
     width: auto;
-    max-height: 65px;
+    max-height: 78px;
     object-fit: contain;
     filter: invert(1);
     flex-shrink: 0;
@@ -1916,14 +1916,14 @@ footer {
     }
 
     .logo-symbol {
-        height: 34px;
-        width: 34px;
-        max-height: 34px;
+        height: 38px;
+        width: 38px;
+        max-height: 38px;
     }
 
     .logo-wordmark {
-        height: 52px;
-        max-height: 52px;
+        height: 64px;
+        max-height: 64px;
     }
 
     .nav-menu {
@@ -2197,14 +2197,14 @@ footer {
     }
 
     .logo-symbol {
-        height: 30px;
-        width: 30px;
-        max-height: 30px;
+        height: 34px;
+        width: 34px;
+        max-height: 34px;
     }
 
     .logo-wordmark {
-        height: 44px;
-        max-height: 44px;
+        height: 54px;
+        max-height: 54px;
     }
 
     .card {
