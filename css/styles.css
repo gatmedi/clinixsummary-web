@@ -279,25 +279,33 @@ a {
     padding: 0 24px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 48px;
 }
 
 main {
-    padding-top: var(--nav-height); 
+    padding-top: var(--nav-height);
     min-height: 80vh;
 }
 
 .logo {
-    font-family: var(--font-serif);
-    font-weight: 700;
-    font-size: 20px;
-    letter-spacing: -0.02em;
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0;
 }
 
-/* REMOVED: .logo-mark CSS block */
+.logo-symbol {
+    height: 34px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.logo-wordmark {
+    height: 32px;
+    width: auto;
+    filter: invert(1);
+    flex-shrink: 0;
+}
 
 /* Desktop Menu */
 .nav-menu {
@@ -428,6 +436,7 @@ main {
     align-items: center;
     margin-left: auto;
     min-width: 0;
+    flex-shrink: 1;
 }
 
 .btn-text {
@@ -473,6 +482,7 @@ main {
 .mobile-toggle {
     display: none;
     cursor: pointer;
+    margin-left: auto;
 }
 
 /* ---------------------------------------------------------
@@ -1039,6 +1049,21 @@ footer {
     align-items: flex-start;
 }
 
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.footer-logo .logo-wordmark {
+    filter: none; /* White wordmark on dark footer — no invert needed */
+}
+
+.footer-symbol {
+    filter: brightness(0) invert(1); /* Make dark wings icon white for dark footer */
+}
+
 .footer-col-stack {
     display: flex;
     flex-direction: column;
@@ -1321,6 +1346,11 @@ footer {
 }
 
 [dir="rtl"] .nav-right-group {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+[dir="rtl"] .mobile-toggle {
     margin-left: 0;
     margin-right: auto;
 }
@@ -1875,6 +1905,18 @@ footer {
         display: flex;
     }
 
+    .navbar-content {
+        gap: 0; /* Reset gap on mobile — nav is in dropdown, no horizontal gap needed */
+    }
+
+    .logo-symbol {
+        height: 30px;
+    }
+
+    .logo-wordmark {
+        height: 26px;
+    }
+
     .nav-menu {
         flex-direction: column;
         gap: 0;
@@ -2142,6 +2184,15 @@ footer {
 
     .navbar-content {
         padding: 0 16px;
+        gap: 16px;
+    }
+
+    .logo-symbol {
+        height: 28px;
+    }
+
+    .logo-wordmark {
+        height: 24px;
     }
 
     .card {
