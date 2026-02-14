@@ -525,7 +525,7 @@ function AutoAmbientPage() {
                         <p data-i18n="ambient.ambient_desc">Live conversation capture during the patient encounter. The system detects multi-speaker dialogue, identifies clinician and patient voices, and generates a structured clinical note from the natural flow of conversation. Hands-free, eyes-free — the technology disappears into the background so the therapeutic relationship stays in the foreground.</p>
                     </div>
                     <div class="card">
-                        <div class="card-icon material-symbols-rounded">keyboard_voice</div>
+                        <div class="card-icon material-symbols-rounded">record_voice_over</div>
                         <h3 data-i18n="ambient.dictation_title">Dictation Mode</h3>
                         <p data-i18n="ambient.dictation_desc">Post-visit single-speaker documentation. When the system detects a single clinician voice narrating clinical findings, it switches to dictation processing — optimised for the structured, information-dense speech patterns of post-encounter dictation. Assessment, plan, and coding are generated instantly.</p>
                     </div>

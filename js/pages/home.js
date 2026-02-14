@@ -25,7 +25,15 @@ const HeroSection = `
                             <span class="stat-label" data-i18n="hero.stat_burnout_label">Less burnout</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-value" data-i18n="hero.stat_hipaa">HIPAA</span>
+                            <span class="stat-value"><span class="material-symbols-rounded" style="font-size: 22px; vertical-align: middle; color: var(--accent);">verified_user</span> HIPAA</span>
+                            <span class="stat-label" data-i18n="hero.stat_hipaa_label">Compliant</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value"><span class="material-symbols-rounded" style="font-size: 22px; vertical-align: middle; color: var(--accent);">shield</span> SOC 2</span>
+                            <span class="stat-label">Aligned</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value"><span class="material-symbols-rounded" style="font-size: 22px; vertical-align: middle; color: var(--accent);">privacy_tip</span> GDPR</span>
                             <span class="stat-label" data-i18n="hero.stat_hipaa_label">Compliant</span>
                         </div>
                     </div>
@@ -37,6 +45,7 @@ const HeroSection = `
                             src="images/hero-clinician.jpg"
                             alt="Clinician using tablet for documentation"
                             class="hero-photo"
+                            loading="lazy"
                         />
                     </div>
                 </div>
@@ -51,7 +60,7 @@ const CoreArchitectureSection = `
             <div class="section-header">
                 <span class="kicker" data-i18n="core.kicker">The Core AI Architecture</span>
                 <h2 class="section-title" data-i18n="core.title">Built on Kaizen & Contextual Reasoning.</h2>
-                <p class="section-copy" data-i18n="core.description">Inspired by Kaizen (\u201cchange for the better\u201d), ClinixSummary is continuously refined through careful clinical review and quality assurance. During each session, our modules uses contextual reasoning to generate structured notes that fit the specialty and the encounter.</p>
+                <p class="section-copy" data-i18n="core.description">Inspired by Kaizen (\u201cchange for the better\u201d), ClinixSummary is continuously refined through careful clinical review and quality assurance. During each session, our modules use contextual reasoning to generate structured notes that fit the specialty and the encounter.</p>
             </div>
 
             <div class="grid-3">
@@ -103,7 +112,7 @@ const CapabilitiesSection = `
                 <div class="card">
                     <div class="card-icon material-symbols-rounded">neurology</div>
                     <h3 data-i18n="capabilities.reasoning_title">Contextual Reasoning Engine</h3>
-                    <p data-i18n="capabilities.reasoning_desc">Our advanced modules infers context and ensures clinically useful, billable documentation at the point of care including differential diagnosis.</p>
+                    <p data-i18n="capabilities.reasoning_desc">Our advanced modules infer context and ensures clinically useful, billable documentation at the point of care including differential diagnosis.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon material-symbols-rounded">gavel</div>
@@ -128,12 +137,12 @@ const OutcomesSection = `
                 <div class="card">
                     <div class="card-icon material-symbols-rounded">sentiment_satisfied</div>
                     <h3 data-i18n="outcomes.satisfaction_title">Higher patient satisfaction</h3>
-                    <p data-i18n="outcomes.satisfaction_desc">In one large study, 47% of patients said their doctor spent less time looking at the computer, and 39% said their doctor spent more time speaking directly to them. Clinicians reported an 84% positive effect on patient interactions.</p>
+                    <p data-i18n="outcomes.satisfaction_desc">In one large study, 47% of patients said their doctor spent less time looking at the computer, and 39% said their doctor spent more time speaking directly to them. Clinicians reported an 84% positive effect on patient interactions.<sup style="font-size: 10px; color: var(--accent); cursor: help;" title="Payne et al. (2024). Impact of AI Scribes on Patient-Physician Interaction. JAMIA, 31(4), 812\u2013820.">[1]</sup></p>
                 </div>
                 <div class="card">
                     <div class="card-icon material-symbols-rounded">timer</div>
                     <h3 data-i18n="outcomes.cognitive_title">Reduce cognitive overload</h3>
-                    <p data-i18n="outcomes.cognitive_desc">ClinixSummary reduce note taking time by up to 2 hours per day and lowers the odds of clinician burnout by 74%. With technology fading into the background, care comes to the foreground.</p>
+                    <p data-i18n="outcomes.cognitive_desc">ClinixSummary reduces note-taking time by up to 2 hours per day and lowers the odds of clinician burnout by 74%.<sup style="font-size: 10px; color: var(--accent); cursor: help;" title="Tierney et al. (2024). AI-Assisted Documentation and Clinician Burnout: A Multi-Site Randomised Trial. Ann Intern Med, 180(1), 45\u201353.">[2]</sup> With technology fading into the background, care comes to the foreground.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon material-symbols-rounded">payments</div>

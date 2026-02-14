@@ -127,6 +127,9 @@ const routes = {
     '#cap-patient-leaflet': CapPatientLeafletPage,
     '#referrals':          ReferralsPage,
     '#icd-coding':         ICDCodingPage,
+    '#radiology-assist':   RadiologyAssistPage,
+    '#dermatology-assist': DermatologyAssistPage,
+    '#triage-assist':      TriageAssistPage,
 
     // Learn
     '#publications':       PublicationsPage,
@@ -151,6 +154,11 @@ function router() {
     const pageFn = routes[hash];
 
     if (pageFn) {
+        // Page transition: re-trigger fadeIn animation
+        APP_CONTENT.style.animation = 'none';
+        APP_CONTENT.offsetHeight; // force reflow
+        APP_CONTENT.style.animation = '';
+
         APP_CONTENT.innerHTML = pageFn();
 
         // Apply i18n translations to the newly rendered content
@@ -213,11 +221,13 @@ const navbarContent = document.querySelector('.navbar-content');
 function closeMobileMenu() {
     navRightGroup.classList.remove('mobile-open');
     mobileToggle.textContent = 'menu';
+    mobileToggle.setAttribute('aria-expanded', 'false');
 }
 
 function toggleMobileMenu() {
     const isOpen = navRightGroup.classList.toggle('mobile-open');
     mobileToggle.textContent = isOpen ? 'close' : 'menu';
+    mobileToggle.setAttribute('aria-expanded', String(isOpen));
 }
 
 mobileToggle.addEventListener('click', toggleMobileMenu);
@@ -247,6 +257,7 @@ document.querySelectorAll('.nav-item > .nav-link').forEach(link => {
             if (item !== navItem) item.classList.remove('mobile-dropdown-open');
         });
         navItem.classList.toggle('mobile-dropdown-open');
+        link.setAttribute('aria-expanded', String(navItem.classList.contains('mobile-dropdown-open')));
     });
 });
 

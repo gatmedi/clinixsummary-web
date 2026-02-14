@@ -6,7 +6,10 @@
   "nonTranslatedRoutes": [
     "#publications",
     "#whitepapers",
-    "#case-studies"
+    "#case-studies",
+    "#radiology-assist",
+    "#dermatology-assist",
+    "#triage-assist"
   ],
   "nonTranslatedBanner": {
     "icon": "translate",
