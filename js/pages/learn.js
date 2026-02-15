@@ -3,81 +3,43 @@
 function PublicationsPage() {
     const publications = [
         {
-            title: 'Optimisation de la Documentation Clinique par IA dans les Syst\u00e8mes de Sant\u00e9 Francophones',
-            desc: 'Comment l\u2019intelligence artificielle transforme la documentation clinique dans les \u00e9tablissements de sant\u00e9 francophones \u2014 de la France au Qu\u00e9bec, de la Belgique \u00e0 l\u2019Afrique de l\u2019Ouest.',
-            icon: 'language',
-            date: 'February 2026',
-            lang: 'FR',
-            pdf: 'docs/publications/fr-documentation-clinique-ia-2026.pdf'
-        },
-        {
-            title: 'Documentaci\u00f3n Cl\u00ednica con IA en la Transformaci\u00f3n Digital de Am\u00e9rica Latina',
-            desc: 'C\u00f3mo la inteligencia artificial est\u00e1 transformando la documentaci\u00f3n cl\u00ednica en los sistemas de salud de Am\u00e9rica Latina \u2014 desde M\u00e9xico hasta Argentina.',
-            icon: 'language',
+            title: 'Terminolog\u00eda M\u00e9dica Estandarizada y Codificaci\u00f3n CIE-10 en Sistemas de Salud Hispanohablantes',
+            desc: 'C\u00f3mo la IA aborda la estandarizaci\u00f3n terminol\u00f3gica y la codificaci\u00f3n CIE-10 en m\u00e1s de 20 pa\u00edses hispanohablantes \u2014 donde un mismo concepto cl\u00ednico recibe nombres distintos.',
+            icon: 'spellcheck',
             date: 'February 2026',
             lang: 'ES',
-            pdf: 'docs/publications/es-documentacion-clinica-ia-latam-2026.pdf'
-        },
-        {
-            title: 'Documenta\u00e7\u00e3o Cl\u00ednica por IA no Sistema \u00danico de Sa\u00fade Brasileiro',
-            desc: 'Como a intelig\u00eancia artificial pode transformar a documenta\u00e7\u00e3o cl\u00ednica no maior sistema p\u00fablico de sa\u00fade do mundo \u2014 o SUS brasileiro.',
-            icon: 'language',
-            date: 'February 2026',
-            lang: 'PT',
-            pdf: 'docs/publications/pt-documentacao-clinica-sus-2026.pdf'
-        },
-        {
-            title: '\u0627\u0644\u062a\u0648\u062b\u064a\u0642 \u0627\u0644\u0633\u0631\u064a\u0631\u064a \u0627\u0644\u0630\u0643\u064a \u0641\u064a \u0645\u0646\u0638\u0648\u0645\u0629 \u0627\u0644\u0631\u0639\u0627\u064a\u0629 \u0627\u0644\u0635\u062d\u064a\u0629 \u0627\u0644\u062e\u0644\u064a\u062c\u064a\u0629',
-            desc: 'Intelligent Clinical Documentation in Gulf Healthcare Systems \u2014 How AI is transforming clinical documentation across the GCC.',
-            icon: 'language',
-            date: 'February 2026',
-            lang: 'AR',
-            pdf: 'docs/publications/ar-clinical-documentation-gulf-2026.pdf'
+            pdf: 'docs/publications/es-terminologia-codificacion-cie10-2026.pdf'
         },
         {
             title: 'Documentazione Clinica Automatizzata nel Servizio Sanitario Nazionale Italiano',
             desc: 'Come l\u2019intelligenza artificiale pu\u00f2 trasformare la documentazione clinica nel SSN italiano \u2014 tra liste d\u2019attesa, carenza di personale e Fascicolo Sanitario Elettronico.',
             icon: 'language',
-            date: 'March 2026',
+            date: 'January 2026',
             lang: 'IT',
             pdf: 'docs/publications/it-documentazione-clinica-ssn-2026.pdf'
-        },
-        {
-            title: 'Cadre de Conformit\u00e9 RGPD pour la Documentation Clinique Automatis\u00e9e',
-            desc: 'Analyse approfondie des exigences du RGPD appliqu\u00e9es \u00e0 la documentation clinique par IA \u2014 obligations du responsable de traitement, AIPD, droits des patients et r\u00f4le de la CNIL.',
-            icon: 'policy',
-            date: 'March 2026',
-            lang: 'FR',
-            pdf: 'docs/publications/fr-conformite-rgpd-documentation-2026.pdf'
-        },
-        {
-            title: 'Terminolog\u00eda M\u00e9dica Estandarizada y Codificaci\u00f3n CIE-10 en Sistemas de Salud Hispanohablantes',
-            desc: 'C\u00f3mo la IA aborda la estandarizaci\u00f3n terminol\u00f3gica y la codificaci\u00f3n CIE-10 en m\u00e1s de 20 pa\u00edses hispanohablantes \u2014 donde un mismo concepto cl\u00ednico recibe nombres distintos.',
-            icon: 'spellcheck',
-            date: 'March 2026',
-            lang: 'ES',
-            pdf: 'docs/publications/es-terminologia-codificacion-cie10-2026.pdf'
-        },
-        {
-            title: '\u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a \u0648\u0645\u0639\u0627\u0644\u062c\u0629 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0637\u0628\u064a\u0629',
-            desc: 'AI and Arabic Medical Language Processing \u2014 morphological complexity, dialect handling, and code-switching in Gulf, Egyptian, Levantine, and Maghrebi clinical settings.',
-            icon: 'neurology',
-            date: 'March 2026',
-            lang: 'AR',
-            pdf: 'docs/publications/ar-arabic-nlp-medical-2026.pdf'
         },
         {
             title: 'Setting the Gold Standard: Why Standardised Clinical Documentation Is the Future',
             desc: 'As healthcare globalises, documentation must be standardised. Just as aviation and nuclear industries adopted standardised documentation to reduce errors and save lives, medicine must follow.',
             icon: 'auto_stories',
             date: 'January 2026',
+            lang: 'EN',
             pdf: 'docs/publications/standardised-clinical-documentation-2025.pdf'
+        },
+        {
+            title: '\u0627\u0644\u062a\u0648\u062b\u064a\u0642 \u0627\u0644\u0633\u0631\u064a\u0631\u064a \u0627\u0644\u0630\u0643\u064a \u0641\u064a \u0645\u0646\u0638\u0648\u0645\u0629 \u0627\u0644\u0631\u0639\u0627\u064a\u0629 \u0627\u0644\u0635\u062d\u064a\u0629 \u0627\u0644\u062e\u0644\u064a\u062c\u064a\u0629',
+            desc: 'Intelligent Clinical Documentation in Gulf Healthcare Systems \u2014 How AI is transforming clinical documentation across the GCC.',
+            icon: 'language',
+            date: 'December 2025',
+            lang: 'AR',
+            pdf: 'docs/publications/ar-clinical-documentation-gulf-2026.pdf'
         },
         {
             title: 'Automated Charge Capture: How AI Documentation Closes the Revenue Gap',
             desc: 'How ClinixSummary identifies billable procedures, supplies, and interventions from clinical encounters \u2014 reducing charge leakage and improving revenue integrity. Pilot data shows 30% improvement in charge capture.',
             icon: 'request_quote',
             date: 'December 2025',
+            lang: 'EN',
             pdf: 'docs/publications/automated-charge-capture-2025.pdf'
         },
         {
@@ -85,13 +47,23 @@ function PublicationsPage() {
             desc: 'How the CME/CPD Vault turns routine clinical documentation into learning opportunities, and the potential to earn continuing education credits through practice.',
             icon: 'school',
             date: 'November 2025',
+            lang: 'EN',
             pdf: 'docs/publications/cme-cpd-documentation-workflow-2025.pdf'
+        },
+        {
+            title: 'Documenta\u00e7\u00e3o Cl\u00ednica por IA no Sistema \u00danico de Sa\u00fade Brasileiro',
+            desc: 'Como a intelig\u00eancia artificial pode transformar a documenta\u00e7\u00e3o cl\u00ednica no maior sistema p\u00fablico de sa\u00fade do mundo \u2014 o SUS brasileiro.',
+            icon: 'language',
+            date: 'October 2025',
+            lang: 'PT',
+            pdf: 'docs/publications/pt-documentacao-clinica-sus-2026.pdf'
         },
         {
             title: 'ICD-10 and CPT Coding Accuracy: How AI Reduces Claim Denials',
             desc: 'Data on coding errors in manual documentation vs. AI-assisted documentation. How contextual understanding improves coding accuracy and reimbursement.',
             icon: 'medical_information',
             date: 'October 2025',
+            lang: 'EN',
             pdf: 'docs/publications/icd10-cpt-coding-accuracy-2025.pdf'
         },
         {
@@ -99,13 +71,23 @@ function PublicationsPage() {
             desc: 'Why static AI models fail in medicine, and how ClinixSummary\u2019s weekly update cycle and clinician feedback loop produce consistently improving outputs.',
             icon: 'change_circle',
             date: 'September 2025',
+            lang: 'EN',
             pdf: 'docs/publications/kaizen-continuous-model-improvement-2025.pdf'
+        },
+        {
+            title: 'Documentaci\u00f3n Cl\u00ednica con IA en la Transformaci\u00f3n Digital de Am\u00e9rica Latina',
+            desc: 'C\u00f3mo la inteligencia artificial est\u00e1 transformando la documentaci\u00f3n cl\u00ednica en los sistemas de salud de Am\u00e9rica Latina \u2014 desde M\u00e9xico hasta Argentina.',
+            icon: 'language',
+            date: 'August 2025',
+            lang: 'ES',
+            pdf: 'docs/publications/es-documentacion-clinica-ia-latam-2026.pdf'
         },
         {
             title: 'From Ambient to Operative: Auto-Detection of Clinical Documentation Modes',
             desc: 'Technical overview of how ClinixSummary automatically detects whether audio is ambient consultation, post-visit dictation, or operative narration \u2014 and adapts accordingly.',
             icon: 'graphic_eq',
             date: 'August 2025',
+            lang: 'EN',
             pdf: 'docs/publications/auto-detection-documentation-modes-2025.pdf'
         },
         {
@@ -113,13 +95,23 @@ function PublicationsPage() {
             desc: 'Hard numbers on cost savings, productivity gains, reimbursement improvements, and reduced coding errors when deploying AI documentation at scale.',
             icon: 'payments',
             date: 'July 2025',
+            lang: 'EN',
             pdf: 'docs/publications/economics-of-ai-scribes-roi-2025.pdf'
+        },
+        {
+            title: 'Optimisation de la Documentation Clinique par IA dans les Syst\u00e8mes de Sant\u00e9 Francophones',
+            desc: 'Comment l\u2019intelligence artificielle transforme la documentation clinique dans les \u00e9tablissements de sant\u00e9 francophones \u2014 de la France au Qu\u00e9bec, de la Belgique \u00e0 l\u2019Afrique de l\u2019Ouest.',
+            icon: 'language',
+            date: 'June 2025',
+            lang: 'FR',
+            pdf: 'docs/publications/fr-documentation-clinique-ia-2026.pdf'
         },
         {
             title: 'Allied Health Documentation: Why One Model Doesn\u2019t Fit All',
             desc: 'How physiotherapy, occupational therapy, and speech & language therapy each require fundamentally different documentation models \u2014 and why ClinixSummary built dedicated modules.',
             icon: 'accessibility_new',
             date: 'June 2025',
+            lang: 'EN',
             pdf: 'docs/publications/allied-health-documentation-2025.pdf'
         },
         {
@@ -127,6 +119,7 @@ function PublicationsPage() {
             desc: 'Our approach to training on de-identified data, HIPAA/GDPR compliance, and why proprietary models are inherently more secure than generic LLM wrappers.',
             icon: 'shield',
             date: 'May 2025',
+            lang: 'EN',
             pdf: 'docs/publications/privacy-by-design-clinical-ai-2025.pdf'
         },
         {
@@ -134,6 +127,7 @@ function PublicationsPage() {
             desc: 'How ClinixSummary handles multilingual consultations, code-switching, and documentation across 6 languages. Real-world use cases from Dubai to Montreal.',
             icon: 'translate',
             date: 'April 2025',
+            lang: 'EN',
             pdf: 'docs/publications/multilingual-clinical-documentation-2025.pdf'
         },
         {
@@ -141,6 +135,7 @@ function PublicationsPage() {
             desc: 'Deep dive into how ClinixSummary\u2019s models infer clinical meaning from natural conversation \u2014 not just transcribe words, but understand clinical intent.',
             icon: 'psychology',
             date: 'March 2025',
+            lang: 'EN',
             pdf: 'docs/publications/contextual-reasoning-clinical-ai-2025.pdf'
         },
         {
@@ -148,6 +143,7 @@ function PublicationsPage() {
             desc: 'Evidence on clinician burnout driven by documentation burden. How ambient AI documentation reduces cognitive load and gives clinicians back 2+ hours per day.',
             icon: 'sentiment_satisfied',
             date: 'February 2025',
+            lang: 'EN',
             pdf: 'docs/publications/burnout-crisis-ai-scribes-2025.pdf'
         }
     ];
@@ -194,10 +190,27 @@ function PublicationsPage() {
 function WhitepapersPage() {
     const whitepapers = [
         {
+            title: '\u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a \u0648\u0645\u0639\u0627\u0644\u062c\u0629 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0637\u0628\u064a\u0629',
+            desc: 'AI and Arabic Medical Language Processing \u2014 morphological complexity, dialect handling, and code-switching in Gulf, Egyptian, Levantine, and Maghrebi clinical settings.',
+            icon: 'neurology',
+            date: 'November 2025',
+            lang: 'AR',
+            pdf: 'docs/whitepapers/ar-arabic-nlp-medical-2026.pdf'
+        },
+        {
+            title: 'Cadre de Conformit\u00e9 RGPD pour la Documentation Clinique Automatis\u00e9e',
+            desc: 'Analyse approfondie des exigences du RGPD appliqu\u00e9es \u00e0 la documentation clinique par IA \u2014 obligations du responsable de traitement, AIPD, droits des patients et r\u00f4le de la CNIL.',
+            icon: 'policy',
+            date: 'September 2025',
+            lang: 'FR',
+            pdf: 'docs/whitepapers/fr-conformite-rgpd-documentation-2026.pdf'
+        },
+        {
             title: 'Ambient Audio Processing: From Sound to Structured Note',
             desc: 'How raw audio becomes a structured clinical document \u2014 speaker diarisation, medical NER, section classification, and note assembly.',
             icon: 'graphic_eq',
             date: 'August 2025',
+            lang: 'EN',
             pdf: 'docs/whitepapers/ambient-audio-processing-2025.pdf'
         },
         {
@@ -205,6 +218,7 @@ function WhitepapersPage() {
             desc: 'The QA review process, feedback incorporation, model versioning, output monitoring, and continuous improvement protocols.',
             icon: 'verified',
             date: 'July 2025',
+            lang: 'EN',
             pdf: 'docs/whitepapers/quality-management-system-qms-2025.pdf'
         },
         {
@@ -212,6 +226,7 @@ function WhitepapersPage() {
             desc: 'Encryption standards, access controls, audit logging, and HIPAA/GDPR technical implementation details for compliance officers and CTOs.',
             icon: 'security',
             date: 'June 2025',
+            lang: 'EN',
             pdf: 'docs/whitepapers/security-compliance-specification-2025.pdf'
         },
         {
@@ -219,6 +234,7 @@ function WhitepapersPage() {
             desc: 'API specifications, data formats, FHIR compatibility, and deployment models (cloud/hybrid) for seamless EHR integration.',
             icon: 'integration_instructions',
             date: 'May 2025',
+            lang: 'EN',
             pdf: 'docs/whitepapers/integration-framework-ehr-emr-2025.pdf'
         },
         {
@@ -226,6 +242,7 @@ function WhitepapersPage() {
             desc: 'Data sourcing from de-identified sources, training pipeline, specialty-specific fine-tuning, evaluation metrics, and quality assurance processes.',
             icon: 'model_training',
             date: 'April 2025',
+            lang: 'EN',
             pdf: 'docs/whitepapers/clinical-model-training-methodology-2025.pdf'
         },
         {
@@ -233,14 +250,18 @@ function WhitepapersPage() {
             desc: 'System architecture, model pipeline, audio processing, NLP layers, and output generation. A comprehensive look at how ClinixSummary transforms clinical audio into structured documentation.',
             icon: 'architecture',
             date: 'March 2025',
+            lang: 'EN',
             pdf: 'docs/whitepapers/clinixsummary-architecture-overview-2025.pdf'
         }
     ];
 
     const wpCards = whitepapers.map(w => `
         <div class="card" style="display: flex; flex-direction: column;">
-            <div class="card-icon material-symbols-rounded">${w.icon}</div>
-            <h3>${w.title}</h3>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div class="card-icon material-symbols-rounded" style="margin-bottom: 0;">${w.icon}</div>
+                ${w.lang ? `<span style="background: var(--accent); color: #fff; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; letter-spacing: 0.05em;">${w.lang}</span>` : ''}
+            </div>
+            <h3 style="margin-top: 12px;"${w.lang === 'AR' ? ' dir="rtl"' : ''}>${w.title}</h3>
             <p style="color: var(--text-secondary); font-size: 12px; margin-bottom: 8px;">${w.date}</p>
             <p style="flex-grow: 1;">${w.desc}</p>
             <a href="${w.pdf}" target="_blank" class="btn-outline" style="margin-top: 16px; width: 100%; text-align: center; text-decoration: none; display: block;">View PDF</a>
