@@ -35,6 +35,38 @@ function PublicationsPage() {
             pdf: 'docs/publications/ar-clinical-documentation-gulf-2026.pdf'
         },
         {
+            title: 'Documentazione Clinica Automatizzata nel Servizio Sanitario Nazionale Italiano',
+            desc: 'Come l\u2019intelligenza artificiale pu\u00f2 trasformare la documentazione clinica nel SSN italiano \u2014 tra liste d\u2019attesa, carenza di personale e Fascicolo Sanitario Elettronico.',
+            icon: 'language',
+            date: 'March 2026',
+            lang: 'IT',
+            pdf: 'docs/publications/it-documentazione-clinica-ssn-2026.pdf'
+        },
+        {
+            title: 'Cadre de Conformit\u00e9 RGPD pour la Documentation Clinique Automatis\u00e9e',
+            desc: 'Analyse approfondie des exigences du RGPD appliqu\u00e9es \u00e0 la documentation clinique par IA \u2014 obligations du responsable de traitement, AIPD, droits des patients et r\u00f4le de la CNIL.',
+            icon: 'policy',
+            date: 'March 2026',
+            lang: 'FR',
+            pdf: 'docs/publications/fr-conformite-rgpd-documentation-2026.pdf'
+        },
+        {
+            title: 'Terminolog\u00eda M\u00e9dica Estandarizada y Codificaci\u00f3n CIE-10 en Sistemas de Salud Hispanohablantes',
+            desc: 'C\u00f3mo la IA aborda la estandarizaci\u00f3n terminol\u00f3gica y la codificaci\u00f3n CIE-10 en m\u00e1s de 20 pa\u00edses hispanohablantes \u2014 donde un mismo concepto cl\u00ednico recibe nombres distintos.',
+            icon: 'spellcheck',
+            date: 'March 2026',
+            lang: 'ES',
+            pdf: 'docs/publications/es-terminologia-codificacion-cie10-2026.pdf'
+        },
+        {
+            title: '\u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a \u0648\u0645\u0639\u0627\u0644\u062c\u0629 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0637\u0628\u064a\u0629',
+            desc: 'AI and Arabic Medical Language Processing \u2014 morphological complexity, dialect handling, and code-switching in Gulf, Egyptian, Levantine, and Maghrebi clinical settings.',
+            icon: 'neurology',
+            date: 'March 2026',
+            lang: 'AR',
+            pdf: 'docs/publications/ar-arabic-nlp-medical-2026.pdf'
+        },
+        {
             title: 'Setting the Gold Standard: Why Standardised Clinical Documentation Is the Future',
             desc: 'As healthcare globalises, documentation must be standardised. Just as aviation and nuclear industries adopted standardised documentation to reduce errors and save lives, medicine must follow.',
             icon: 'auto_stories',
