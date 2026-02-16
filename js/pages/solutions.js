@@ -33,12 +33,6 @@ function CliniciansPage() {
                     </div>
                 </div>
 
-                <div class="subpage-header">
-                    <span class="kicker" data-i18n="clinicians.efficiency_kicker">Personalized Efficiency</span>
-                    <h3 class="section-title" data-i18n="clinicians.efficiency_title">One-touch integration with your EHR and style.</h3>
-                    <p class="section-copy" data-i18n="clinicians.efficiency_desc">ClinixSummary adapts to you\u2014not the other way around. Your unique abbreviations, preferences, and note structure are learned and applied consistently across every single document.</p>
-                </div>
-
                 <div class="grid-4">
                     <div class="text-group" style="border: none;">
                         <h4 style="font-weight: 600; font-size: 16px;"><span class="material-symbols-rounded list-item-icon" style="font-size: 20px;">tune</span> <span data-i18n="clinicians.adaptive_title">Adaptive Formatting</span></h4>
