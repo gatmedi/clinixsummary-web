@@ -374,16 +374,16 @@ main {
 /* MEGA MENU DROPDOWNS */
 .dropdown {
     position: absolute;
-    top: calc(100% - 10px);
+    top: calc(100% + 8px);
     left: 50%;
-    transform: translateX(-50%) translateY(10px);
+    transform: translateX(-50%);
     background: var(--bg-surface);
     border: 1px solid var(--border-subtle);
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.2s ease;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
     min-width: 240px;
     padding: 12px;
     z-index: 100;
@@ -400,20 +400,20 @@ main {
     gap: 12px;
 }
 
-/* Invisible bridge above dropdown to prevent hover gap when moving cursor slowly */
+/* Invisible bridge above dropdown to maintain hover continuity across the gap */
 .dropdown::before {
     content: '';
     position: absolute;
-    top: -20px;
+    top: -10px;
     left: 0;
     right: 0;
-    height: 20px;
+    height: 10px;
 }
 
 .nav-item:hover .dropdown {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%);
 }
 
 .dropdown-item {
@@ -1445,11 +1445,11 @@ footer {
 [dir="rtl"] .dropdown {
     left: auto;
     right: 50%;
-    transform: translateX(50%) translateY(10px);
+    transform: translateX(50%);
 }
 
 [dir="rtl"] .nav-item:hover .dropdown {
-    transform: translateX(50%) translateY(0);
+    transform: translateX(50%);
 }
 
 [dir="rtl"] .lang-dropdown {
