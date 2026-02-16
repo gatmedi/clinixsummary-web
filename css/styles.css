@@ -792,6 +792,9 @@ section {
         height: 100%;
         min-height: 0;
     }
+    .hero-image-wrapper .hero-photo {
+        object-position: top;
+    }
     .hero-stats {
         justify-content: center;
     }
