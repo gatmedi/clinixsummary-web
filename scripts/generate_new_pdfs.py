@@ -76,11 +76,11 @@ class PubPDF(FPDF):
         self.ln(4)
         self.set_font('Liberation', 'B', 24)
         self.set_text_color(*DARK)
-        self.multi_cell(0, 11, self.pub_title)
+        self.multi_cell(0, 11, self.pub_title, align='L')
         self.ln(4)
         self.set_font('Liberation', '', 12)
         self.set_text_color(80, 80, 80)
-        self.multi_cell(0, 7, subtitle)
+        self.multi_cell(0, 7, subtitle, align='L')
         self.ln(12)
         self.set_fill_color(242, 242, 240)
         self.set_font('Liberation', '', 9)
@@ -292,7 +292,6 @@ def generate_kaizen():
         'Continuous improvement is not a feature \u2014 it is a design philosophy that recognises the '
         'dynamic nature of medicine. ClinixSummary\u2019s Kai-zen approach ensures that the system gets '
         'better every week, driven by the collective intelligence of the clinicians who use it.')
-    pdf.info_box('For quality metrics and improvement trends, contact: quality@clinixsummary.ai')
 
     pdf.output(os.path.join(PUB_DIR, 'kaizen-continuous-model-improvement-2025.pdf'))
     print('  [OK] PUB-2025-009 Kai-zen (\u6539\u5584) - updated title')
@@ -440,8 +439,6 @@ def generate_charge_capture():
         'the revenue gap closes. ClinixSummary\u2019s automated charge capture module delivers measurable '
         'financial impact from day one \u2014 capturing revenue that was earned through patient care but '
         'previously lost to manual processes.')
-    pdf.info_box(
-        'For a charge capture analysis or pilot programme discussion, contact: sales@clinixsummary.ai')
 
     pdf.output(os.path.join(PUB_DIR, 'automated-charge-capture-2025.pdf'))
     print('  [OK] PUB-2025-012 Automated Charge Capture')
