@@ -7,6 +7,22 @@
     src: url('../fonts/material-symbols-rounded.woff2') format('woff2');
 }
 
+/* Parastoo — Arabic/Persian body font (self-hosted) */
+@font-face {
+    font-family: 'Parastoo';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/Parastoo.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Parastoo';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/Parastoo-Bold.woff2') format('woff2');
+}
+
 .material-symbols-rounded {
     font-family: 'Material Symbols Rounded';
     font-weight: normal;
@@ -382,6 +398,16 @@ main {
     grid-template-columns: 1fr 1fr;
     display: grid;
     gap: 12px;
+}
+
+/* Invisible bridge above dropdown to prevent hover gap when moving cursor slowly */
+.dropdown::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
 }
 
 .nav-item:hover .dropdown {
@@ -1475,10 +1501,25 @@ footer {
 
 /* ── Core: font family + base adjustments ──────────── */
 [lang="ar"] {
-    --font-serif: 'Noto Naskh Arabic', serif;
-    --font-sans: 'Noto Naskh Arabic', sans-serif;
+    --font-serif: 'Tajawal', sans-serif;
+    --font-sans: 'Parastoo', 'Tajawal', sans-serif;
     word-break: normal;
     overflow-wrap: break-word;
+}
+
+/* Arabic headings use Tajawal (modern, clean) */
+[lang="ar"] h1, [lang="ar"] h2, [lang="ar"] h3, [lang="ar"] h4,
+[lang="ar"] .subpage-title,
+[lang="ar"] .section-title,
+[lang="ar"] .kicker,
+[lang="ar"] .hero h1,
+[lang="ar"] .nav-link,
+[lang="ar"] .dropdown-title,
+[lang="ar"] .btn-primary,
+[lang="ar"] .btn-outline,
+[lang="ar"] .plan-name,
+[lang="ar"] .plan-price {
+    font-family: 'Tajawal', sans-serif;
 }
 
 /* Arabic text appears ~20% smaller than Latin at same px.
@@ -2026,6 +2067,28 @@ footer {
         margin-left: 0;
         margin-top: 8px;
         align-self: flex-start;
+        position: relative;
+    }
+
+    /* On mobile, render language dropdown in normal flow instead of absolute */
+    .lang-switcher .lang-dropdown {
+        position: static;
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        overflow: hidden;
+        transform: none;
+        box-shadow: none;
+        border: 1px solid var(--border-subtle);
+        margin-top: 4px;
+        transition: max-height 0.25s ease, opacity 0.2s ease;
+    }
+
+    .lang-switcher.open .lang-dropdown {
+        opacity: 1;
+        visibility: visible;
+        max-height: 400px;
+        transform: none;
     }
 
     /* ── Phase 2: Typography Scaling ─────────────────── */

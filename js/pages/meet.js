@@ -375,7 +375,7 @@ function LanguagesPage() {
                     <div class="card">
                         <div class="card-icon material-symbols-rounded">translate</div>
                         <h3 data-i18n="lang.ar_title">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577; (Arabic)</h3>
-                        <p data-i18n="lang.ar_desc">Complete right-to-left support with full Arabic medical terminology. Handles Modern Standard Arabic and Gulf dialect clinical speech, including mixed Arabic-English medical terminology common in Gulf healthcare settings.</p>
+                        <p dir="rtl" style="font-family: 'Parastoo', 'Tajawal', sans-serif;" data-i18n="lang.ar_desc">Complete right-to-left support with full Arabic medical terminology. Handles Modern Standard Arabic and Gulf dialect clinical speech, including mixed Arabic-English medical terminology common in Gulf healthcare settings.</p>
                     </div>
                 </div>
 
@@ -399,11 +399,15 @@ function LanguagesPage() {
                     </div>
                 </div>
 
-                <div style="background: var(--bg-subtle); padding: 28px 32px; border-radius: 12px; margin-bottom: 60px; border: 1px solid var(--border-subtle);">
-                    <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin: 0;">
-                        <span class="material-symbols-rounded" style="font-size: 20px; vertical-align: middle; margin-inline-end: 8px; color: var(--accent);">auto_awesome</span>
-                        <strong style="color: var(--text-primary);">No mode switching needed.</strong> ClinixSummary automatically detects language changes within a single session. Speak naturally in any supported language — or mix them freely — and receive a coherent, clinically accurate note.
-                    </p>
+                <div style="background: linear-gradient(135deg, rgba(59,197,214,0.08) 0%, rgba(59,197,214,0.03) 100%); padding: 32px 36px; border-radius: 14px; margin-bottom: 60px; border: 2px solid var(--accent); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -40px; right: -40px; width: 120px; height: 120px; background: rgba(59,197,214,0.06); border-radius: 50%;"></div>
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <span class="material-symbols-rounded" style="font-size: 32px; color: var(--accent); flex-shrink: 0; margin-top: 2px;">auto_awesome</span>
+                        <div>
+                            <h4 style="font-size: 18px; font-weight: 700; color: var(--text-primary); margin: 0 0 8px;" data-i18n="lang.auto_detect_title">Automatic Language Detection</h4>
+                            <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin: 0;" data-i18n="lang.auto_detect_desc">No mode switching needed. ClinixSummary automatically detects language changes within a single session. Speak naturally in any supported language — or mix them freely — and receive a coherent, clinically accurate note.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- CTA Banner -->

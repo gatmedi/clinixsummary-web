@@ -9,7 +9,7 @@
     "capabilities": "القدرات",
     "learn": "المعرفة",
     "pricing": "الأسعار",
-    "go_to_console": "انتقل إلى لوحة التحكم"
+    "go_to_console": "افتح لوحة التحكم"
   },
   "dropdown": {
     "core_arch": "البنية الأساسية",
@@ -234,9 +234,6 @@
     "revenue_b1": "تعظيم دقة التعويضات.",
     "revenue_b2": "تقديم مطالبات فوري وخالٍ من الأخطاء.",
     "revenue_b3": "ملاحظات جاهزة للتدقيق وصامدة أمام التدقيق.",
-    "efficiency_kicker": "كفاءة مخصصة",
-    "efficiency_title": "تكامل بلمسة واحدة مع نظام السجل الصحي الإلكتروني وأسلوبك.",
-    "efficiency_desc": "يتكيّف ClinixSummary معك – وليس العكس. تضمن ذاكرة Clinix Memory™ أن اختصاراتك وتفضيلاتك وبنية ملاحظاتك الفريدة يتم تعلّمها وتطبيقها بثبات عبر كل مستند.",
     "adaptive_title": "تنسيق تكيّفي",
     "adaptive_desc": "يتعلم ويطبّق قالب SOAP أو السردي أو المتخصص المفضّل لديك.",
     "hipaa_title": "آمن وفق HIPAA و GDPR",
@@ -414,13 +411,13 @@
     "desc": "يدعم ClinixSummary التوثيق السريري بست لغات — بما في ذلك دعم كامل للعربية من اليمين لليسار. لكن دعم اللغة أكثر من مجرد ترجمة. تفهم نماذجنا كيف يتحدث الأطباء فعلياً: مزج اللغات، والتبديل في منتصف الجملة، واستخدام مصطلحات من تقاليد لغوية متعددة في مقابلة واحدة.",
     "dubai_desc": "يستقبل طبيب في دبي مريضاً بالعربية، ويناقش التاريخ السريري بالإنجليزية، وينتقل إلى الفرنسية عندما ينضم أحد أفراد الأسرة للاستشارة. يلتقط ClinixSummary المقابلة بأكملها بسلاسة، وينتج ملاحظة سريرية موحدة دون حدود لغوية.",
     "dubai_title": "دبي: الإنجليزية والعربية والفرنسية في زيارة واحدة",
-    "en_desc": "دعم كامل لجميع الأصناف — الإنجليزية الأمريكية والبريطانية والأسترالية والجنوب أفريقية والهندية والكاريبية. يُفهم المصطلحات الطبية والتعبيرات العامية والاختصارات الإقليمية جميعها.",
+    "en_desc": "Full support across all varieties — American, British, Australian, South African, Indian, and Caribbean English. Medical terminology, colloquialisms, and regional abbreviations are all understood.",
     "en_title": "English",
-    "es_desc": "الإسبانية اللاتينية والأوروبية مع تغطية كاملة للمصطلحات الطبية. يتعامل مع الاختلافات الإقليمية في اللغة السريرية من مكسيكو سيتي إلى مدريد إلى بوينس آيرس.",
+    "es_desc": "Español latinoamericano y europeo con cobertura completa de terminología médica. Gestiona las variaciones regionales del lenguaje clínico desde Ciudad de México hasta Madrid y Buenos Aires.",
     "es_title": "Español",
-    "fr_desc": "مصطلحات سريرية للفرنسية الأوروبية والكندية وغرب أفريقيا. يدعم المفردات الطبية الفريدة وأعراف التوثيق المستخدمة عبر أنظمة الرعاية الصحية الفرنكوفونية.",
+    "fr_desc": "Terminologie clinique complète pour le français métropolitain, canadien et ouest-africain. Prise en charge du vocabulaire médical, des conventions de documentation et des particularités linguistiques propres à chaque système de santé francophone.",
     "fr_title": "Français",
-    "it_desc": "مفردات سريرية إيطالية كاملة مع دعم لمعايير توثيق الخدمة الصحية الوطنية (SSN) وأعراف المصطلحات الطبية الإيطالية.",
+    "it_desc": "Vocabolario clinico italiano completo con supporto per gli standard documentali del SSN (Servizio Sanitario Nazionale) e le convenzioni terminologiche mediche italiane.",
     "it_title": "Italiano",
     "kicker": "اللغات",
     "montreal_desc": "يتنقل طبيب عام في مونتريال بين الإنجليزية والفرنسية في منتصف الجملة — نمط طبيعي في بيئات الرعاية الصحية ثنائية اللغة. تتعرف نماذجنا على التبديل اللغوي فوراً، وتحافظ على الدقة السريرية عبر اللغتين دون الحاجة لأن يتوقف الطبيب أو يختار وضع لغة.",
@@ -428,9 +425,11 @@
     "multi_desc": "يتنقل الأطباء حول العالم بين اللغات خلال مقابلة مريض واحدة. يتعامل ClinixSummary مع هذا بشكل طبيعي — بلا تبديل للأوضاع، بلا أزرار اختيار اللغة، بلا مقاطعة لسير العمل السريري.",
     "multi_kicker": "التقاط الاستشارة متعددة اللغات",
     "multi_title": "الاستشارات الحقيقية ليست أحادية اللغة.",
-    "pt_desc": "البرتغالية البرازيلية والأوروبية مع مصطلحات سريرية مضبوطة للأنظمة الطبية المتميزة ومتطلبات التوثيق وأعراف تسمية الأدوية في كل منطقة.",
+    "pt_desc": "Português brasileiro e europeu com terminologia clínica ajustada para os distintos sistemas médicos, requisitos de documentação e convenções de nomenclatura farmacêutica de cada região.",
     "pt_title": "Português",
-    "title": "ست لغات. دعم كامل للكتابة من اليمين لليسار. استشارات متعددة اللغات حقيقية."
+    "title": "ست لغات. دعم كامل للكتابة من اليمين لليسار. استشارات متعددة اللغات حقيقية.",
+    "auto_detect_title": "كشف تلقائي للغة",
+    "auto_detect_desc": "لا حاجة لتبديل الوضع. يكتشف ClinixSummary تغييرات اللغة تلقائياً خلال الجلسة الواحدة. تحدّث بشكل طبيعي بأي لغة مدعومة — أو امزج بينها بحرية — واحصل على ملاحظة سريرية متماسكة ودقيقة."
   },
   "government": {
     "kicker": "القطاع العام والرعاية الصحية الحكومية",
