@@ -101,7 +101,6 @@ const routes = {
     '#kaizen':             KaizenPage,
     '#security':           SecurityPage,
     '#languages':          LanguagesPage,
-    '#portfolio-builder':  PortfolioBuilderPage,
     '#auto-ambient':       AutoAmbientPage,
     '#cme-vault':          CMEVaultPage,
     '#clinix-foundation':  ClinixFoundationPage,

@@ -24,8 +24,6 @@
     "features_compliance": "Funcionalidades e Conformidade",
     "languages": "Idiomas",
     "languages_desc": "Suporte multilíngue para práticas globais.",
-    "portfolio_builder": "Construtor de Portfólio",
-    "portfolio_builder_desc": "Construtor de portfólio para registro de especialistas",
     "auto_ambient": "Ditado Automático Ambiental",
     "auto_ambient_desc": "Detecta automaticamente modo ambiental ou ditado",
     "sectors": "Setores",
@@ -756,28 +754,6 @@
   },
   "meet_languages": {
     "kicker": "Idiomas e multilinguismo"
-  },
-  "portfolio": {
-    "kicker": "Construtor de portfólio",
-    "title": "Registros de casos estruturados para credenciamento, registro e revalidação.",
-    "desc": "O Construtor de Portfólio do ClinixSummary transforma seus atendimentos clínicos documentados em registros de casos estruturados que atendem aos requisitos de programas de formação em especialidades, órgãos de registro médico e estruturas de revalidação. A documentação que você já produz se torna evidência de credenciamento — automaticamente.",
-    "logs_title": "Registros de Casos Estruturados",
-    "logs_desc": "Cada atendimento documentado é automaticamente categorizado por especialidade, tipo de procedimento, nível de complexidade e domínio clínico. Os registros de casos se acumulam ao longo do tempo, fornecendo um registro abrangente da sua experiência clínica que está sempre atualizado e pronto para envio.",
-    "exports_title": "Exportações Prontas para Credenciamento",
-    "exports_desc": "Exporte seu portfólio em formatos aceitos pelos principais órgãos de registro e organizações de credenciamento. Campos de dados estruturados, contagens de casos por categoria e registros de procedimentos são formatados para atender aos requisitos específicos do seu órgão regulador — economizando horas de compilação manual.",
-    "training_title": "Portfólios de Formação e Especialidade",
-    "training_desc": "Residentes e médicos em formação podem construir seus portfólios de especialidade enquanto trabalham. Supervisores podem revisar a composição de casos, identificar lacunas na exposição clínica e assinar competências — tudo na mesma plataforma usada para documentação diária.",
-    "stage_kicker": "Construído para Cada Etapa",
-    "stage_title": "Da formação à revalidação.",
-    "stage_desc": "Seja você um residente construindo seu primeiro portfólio, um especialista se preparando para revalidação, ou um chefe de departamento acompanhando as competências da equipe — o Construtor de Portfólio se adapta às suas necessidades.",
-    "registration_title": "Registro e Licenciamento",
-    "registration_desc": "Compile a evidência de casos necessária para registro inicial, transferências interjurisdicionais e solicitações de escopo de prática. O Construtor de Portfólio compreende os requisitos de documentação dos principais conselhos médicos e órgãos reguladores.",
-    "revalidation_title": "Revalidação e Avaliação",
-    "revalidation_desc": "Quando chegar o momento da revalidação, seu portfólio já estará pronto. Resumos de atividade clínica, relatórios de diversidade de casos e registros de prática reflexiva são gerados a partir da documentação que você produz todos os dias — sem correria de última hora para compilar evidências.",
-    "cta_title": "Construa seu portfólio enquanto trabalha.",
-    "cta_desc": "Cada consulta documentada com o ClinixSummary se torna um ativo de credenciamento. Comece a construir seu portfólio hoje.",
-    "cta_primary": "Começar a Construir Seu Portfólio",
-    "cta_secondary": "Falar com um Especialista"
   },
   "ambient": {
     "kicker": "Modo ambiental automático",

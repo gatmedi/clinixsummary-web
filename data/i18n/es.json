@@ -24,8 +24,6 @@
     "features_compliance": "Funcionalidades y Cumplimiento",
     "languages": "Idiomas",
     "languages_desc": "Soporte multilingüe para la práctica global.",
-    "portfolio_builder": "Generador de Portafolio",
-    "portfolio_builder_desc": "Generador de portafolio para registro de especialistas",
     "auto_ambient": "Dictado Ambiental Automático",
     "auto_ambient_desc": "Detecta automáticamente el modo ambiental o dictado",
     "sectors": "Sectores",
@@ -756,28 +754,6 @@
   },
   "meet_languages": {
     "kicker": "Idiomas y multilingüismo"
-  },
-  "portfolio": {
-    "kicker": "Constructor de portafolio",
-    "title": "Registros de casos estructurados para credenciales, registro y revalidación.",
-    "desc": "El Generador de Portafolio de ClinixSummary transforma sus encuentros clínicos documentados en registros de casos estructurados que cumplen los requisitos de programas de formación especializada, organismos de registro médico y marcos de revalidación. La documentación que ya genera se convierte automáticamente en evidencia para credenciales.",
-    "logs_title": "Registros de casos estructurados",
-    "logs_desc": "Cada encuentro documentado se categoriza automáticamente por especialidad, tipo de procedimiento, nivel de complejidad y dominio clínico. Los registros de casos se acumulan con el tiempo, proporcionando un registro integral de su experiencia clínica que siempre está actualizado y listo para su presentación.",
-    "exports_title": "Exportaciones listas para credenciales",
-    "exports_desc": "Exporte su portafolio en formatos aceptados por los principales organismos de registro y organizaciones de credenciales. Los campos de datos estructurados, los recuentos de casos por categoría y los registros de procedimientos se formatean para cumplir los requisitos específicos de su organismo regulador — ahorrando horas de compilación manual.",
-    "training_title": "Portafolios de formación y especialidad",
-    "training_desc": "Los residentes y médicos en formación pueden construir sus portafolios de especialidad mientras trabajan. Los supervisores pueden revisar la casuística, identificar brechas en la exposición clínica y firmar competencias — todo dentro de la misma plataforma utilizada para la documentación diaria.",
-    "stage_kicker": "Construido para cada etapa",
-    "stage_title": "Desde la formación hasta la revalidación.",
-    "stage_desc": "Ya sea un residente construyendo su primer portafolio, un especialista preparándose para la revalidación o un jefe de departamento supervisando las competencias del equipo — el Generador de Portafolio se adapta a sus necesidades.",
-    "registration_title": "Registro y licenciamiento",
-    "registration_desc": "Compile la evidencia de casos necesaria para el registro inicial, transferencias interjurisdiccionales y solicitudes de alcance de práctica. El Generador de Portafolio comprende los requisitos de documentación de las principales juntas médicas y organismos reguladores.",
-    "revalidation_title": "Revalidación y evaluación",
-    "revalidation_desc": "Cuando llega la revalidación, su portafolio ya está construido. Los resúmenes de actividad clínica, informes de diversidad de casos y registros de práctica reflexiva se generan a partir de la documentación que produce cada día — sin la urgencia de última hora para compilar evidencia.",
-    "cta_title": "Construya su portafolio mientras trabaja.",
-    "cta_desc": "Cada consulta documentada con ClinixSummary se convierte en un activo de credenciales. Comience a construir su portafolio hoy.",
-    "cta_primary": "Comenzar a construir su portafolio",
-    "cta_secondary": "Hablar con un especialista"
   },
   "ambient": {
     "kicker": "Modo ambiental automático",
