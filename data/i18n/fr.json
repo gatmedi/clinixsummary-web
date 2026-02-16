@@ -392,7 +392,8 @@
     "beta_badge": "Bêta",
     "qms_stamp": "Garanti par le système de management de la qualité Clinix (Clinix QM)",
     "legal": "Mentions légales",
-    "contact_sales": "Contacter le service commercial"
+    "contact_sales": "Contacter le service commercial",
+    "beta_notice": "B\u00eata \u2014 Cette fonctionnalit\u00e9 est actuellement en version b\u00eata et en cours d\u2019\u00e9valuation"
   },
   "banner": {
     "english_only": "Ce contenu est disponible en anglais uniquement.",
@@ -1100,8 +1101,53 @@
     "kicker": "Langues et multilinguisme",
     "title": "Documentation multilingue pour une pratique internationale."
   },
+  "radiology_assist_page": {
+    "kicker": "Assistance radiologie",
+    "title": "G\u00e9n\u00e9ration de comptes rendus radiologiques assist\u00e9e par IA.",
+    "description": "Le module Assistance radiologie de ClinixSummary simplifie la documentation radiologique en g\u00e9n\u00e9rant des comptes rendus structur\u00e9s et conformes aux normes \u00e0 partir des examens d\u2019imagerie. De la radiographie conventionnelle \u00e0 l\u2019imagerie en coupe, l\u2019Assistance radiologie saisit les constatations, conclusions et recommandations dans le langage des radiologues \u2014 r\u00e9duisant les d\u00e9lais de rendu et am\u00e9liorant l\u2019homog\u00e9n\u00e9it\u00e9 des comptes rendus.",
+    "f1_title": "Mod\u00e8les de comptes rendus structur\u00e9s",
+    "f1_desc": "G\u00e9n\u00e9rez des comptes rendus radiologiques \u00e0 l\u2019aide de mod\u00e8les structur\u00e9s conformes aux recommandations de l\u2019ACR. Constatations, conclusions et recommandations sont organis\u00e9es de mani\u00e8re coh\u00e9rente selon les modalit\u00e9s et les r\u00e9gions anatomiques.",
+    "f2_title": "Alertes de r\u00e9sultats critiques",
+    "f2_desc": "Signalement automatique des r\u00e9sultats critiques et inattendus dans le compte rendu, garantissant que les observations urgentes sont document\u00e9es de mani\u00e8re visible et pr\u00eates \u00e0 \u00eatre communiqu\u00e9es imm\u00e9diatement \u00e0 l\u2019\u00e9quipe clinique.",
+    "f3_title": "Comparaison avec les examens ant\u00e9rieurs",
+    "f3_desc": "R\u00e9f\u00e9rencement et comparaison des constatations avec les examens d\u2019imagerie ant\u00e9rieurs du dossier clinique, documentant les modifications intervallaires, la stabilit\u00e9 et l\u2019\u00e9volution avec un langage structur\u00e9.",
+    "f4_title": "Prise en charge des syst\u00e8mes de classification",
+    "f4_desc": "Prise en charge des syst\u00e8mes de classification standardis\u00e9s dont BI\u2011RADS, TI\u2011RADS et Lung\u2011RADS, garantissant que les comptes rendus int\u00e8grent les cat\u00e9gories appropri\u00e9es et les recommandations de prise en charge.",
+    "cta_title": "L\u2019Assistance radiologie vous int\u00e9resse\u00a0? Rejoignez le programme b\u00eata.",
+    "cta_label": "Demander un acc\u00e8s b\u00eata"
+  },
+  "dermatology_assist_page": {
+    "kicker": "Assistance dermatologie",
+    "title": "Documentation dermatologique assist\u00e9e par IA.",
+    "description": "Le module Assistance dermatologie de ClinixSummary est con\u00e7u pour r\u00e9pondre aux exigences sp\u00e9cifiques de la documentation en dermatologie. De la description morphologique des l\u00e9sions aux r\u00e9sultats de dermoscopie, en passant par les protocoles th\u00e9rapeutiques et la documentation photographique, l\u2019Assistance dermatologie garantit des dossiers cliniques complets, standardis\u00e9s et conformes aux exigences d\u2019audit.",
+    "f1_title": "Standardisation de la description des l\u00e9sions",
+    "f1_desc": "Documentez la morphologie des l\u00e9sions avec une terminologie dermatologique standardis\u00e9e \u2014 type, forme, couleur, distribution, taille et localisation anatomique \u2014 pour des dossiers coh\u00e9rents et comparables d\u2019une consultation \u00e0 l\u2019autre.",
+    "f2_title": "Documentation des r\u00e9sultats dermoscopiques",
+    "f2_desc": "Saisissez les motifs, structures et caract\u00e9ristiques dermoscopiques \u00e0 l\u2019aide d\u2019une terminologie reconnue, en appui \u00e0 la d\u00e9cision clinique et \u00e0 l\u2019\u00e9laboration de comptes rendus structur\u00e9s pour les l\u00e9sions pigment\u00e9es et non pigment\u00e9es.",
+    "f3_title": "Mod\u00e8les de protocoles th\u00e9rapeutiques",
+    "f3_desc": "G\u00e9n\u00e9rez des plans de traitement structur\u00e9s pour les affections dermatologiques courantes, incluant les protocoles topiques, la phototh\u00e9rapie, les notes op\u00e9ratoires et la documentation des bioth\u00e9rapies.",
+    "f4_title": "Indexation de la documentation photographique",
+    "f4_desc": "Indexez et associez les photographies cliniques aux notes structur\u00e9es, permettant un suivi visuel longitudinal de l\u2019\u00e9volution des l\u00e9sions, de la r\u00e9ponse au traitement et des r\u00e9sultats post-interventionnels.",
+    "cta_title": "L\u2019Assistance dermatologie vous int\u00e9resse\u00a0? Rejoignez le programme b\u00eata.",
+    "cta_label": "Demander un acc\u00e8s b\u00eata"
+  },
+  "triage_assist_page": {
+    "kicker": "Assistance triage",
+    "title": "Documentation du triage clinique assist\u00e9e par IA.",
+    "description": "Le module Assistance triage de ClinixSummary accompagne les \u00e9quipes de premi\u00e8re ligne en g\u00e9n\u00e9rant une documentation structur\u00e9e en temps r\u00e9el des \u00e9valuations de gravit\u00e9, des motifs de consultation, des tendances des constantes vitales et des d\u00e9cisions d\u2019orientation. Con\u00e7u pour les services d\u2019urgences, les centres de soins non programm\u00e9s et les circuits d\u2019admission o\u00f9 rapidit\u00e9 et pr\u00e9cision sont essentielles.",
+    "f1_title": "Documentation des scores de gravit\u00e9",
+    "f1_desc": "Documentez les niveaux de gravit\u00e9 du triage \u00e0 l\u2019aide d\u2019\u00e9chelles standardis\u00e9es (ESI, MTS, CTAS) avec une justification structur\u00e9e, pour des d\u00e9cisions de triage coh\u00e9rentes et tra\u00e7ables entre les praticiens et les \u00e9quipes.",
+    "f2_title": "Cat\u00e9gorisation du motif de consultation",
+    "f2_desc": "Cat\u00e9gorisation et structuration automatiques des motifs de consultation \u00e0 partir du r\u00e9cit du patient, reliant les sympt\u00f4mes pr\u00e9sent\u00e9s \u00e0 des cat\u00e9gories standardis\u00e9es pour une documentation homog\u00e8ne et des analyses en aval.",
+    "f3_title": "Analyse des tendances des constantes vitales",
+    "f3_desc": "Saisissez et documentez les mesures des constantes vitales avec une analyse contextuelle des tendances, signalant les variations cliniquement significatives et les valeurs en dehors des param\u00e8tres normaux.",
+    "f4_title": "Aide \u00e0 la d\u00e9cision d\u2019orientation",
+    "f4_desc": "G\u00e9n\u00e9rez une documentation structur\u00e9e d\u2019orientation incluant les recommandations de sortie, d\u2019hospitalisation, de transfert ou de surveillance, avec une justification clinique issue de l\u2019\u00e9valuation de triage.",
+    "cta_title": "L\u2019Assistance triage vous int\u00e9resse\u00a0? Rejoignez le programme b\u00eata.",
+    "cta_label": "Demander un acc\u00e8s b\u00eata"
+  },
   "leaflet": {
-    "page_title": "Avis de confidentialité patient",
+    "page_title": "Avis de confidentialit\u00e9 patient",
     "subtitle": "Un dépliant imprimable pour votre salle d'attente ou votre cabinet.",
     "lang_label": "Choisir la langue :",
     "print_btn": "Imprimer / Enregistrer en PDF",

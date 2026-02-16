@@ -372,7 +372,8 @@
     "beta_badge": "Beta",
     "qms_stamp": "Assured by Clinix Quality Management System (Clinix QM)",
     "legal": "Legal",
-    "contact_sales": "Contact Sales"
+    "contact_sales": "Contact Sales",
+    "beta_notice": "Beta \u2014 This capability is currently in beta and under study"
   },
   "banner": {
     "english_only": "This content is available in English only.",
@@ -1068,6 +1069,51 @@
     "cta_title": "Learn more about Billing Assistance for your organisation.",
     "cta_label": "Request Information",
     "cta_secondary": "Enterprise Plans"
+  },
+  "radiology_assist_page": {
+    "kicker": "Radiology Assist",
+    "title": "AI-Assisted Radiology Report Generation.",
+    "description": "ClinixSummary\u2019s Radiology Assist module streamlines radiology documentation by generating structured, standards-compliant reports from imaging studies. From plain-film X\u2011rays to cross\u2011sectional imaging, Radiology Assist captures findings, impressions and recommendations in the language radiologists use \u2014 reducing turnaround times and improving report consistency.",
+    "f1_title": "Structured Reporting Templates",
+    "f1_desc": "Generate radiology reports using structured templates aligned to ACR guidelines. Findings, impressions and recommendations are organised consistently across modalities and body regions.",
+    "f2_title": "Critical Findings Alerts",
+    "f2_desc": "Automatically flag critical and unexpected findings within the report, ensuring that urgent observations are prominently documented and ready for immediate clinical communication.",
+    "f3_title": "Comparison with Prior Studies",
+    "f3_desc": "Reference and compare findings against prior imaging studies in the clinical record, documenting interval changes, stability and progression with structured language.",
+    "f4_title": "Classification Support",
+    "f4_desc": "Support for standardised classification systems including BI\u2011RADS, TI\u2011RADS and Lung\u2011RADS, ensuring that reports include the appropriate category assignments and management recommendations.",
+    "cta_title": "Interested in Radiology Assist? Join the beta.",
+    "cta_label": "Request Beta Access"
+  },
+  "dermatology_assist_page": {
+    "kicker": "Dermatology Assist",
+    "title": "AI-Assisted Dermatology Documentation.",
+    "description": "ClinixSummary\u2019s Dermatology Assist module is designed for the unique documentation demands of dermatology practice. From lesion morphology descriptions to dermoscopy findings, treatment protocols and photographic documentation, Dermatology Assist ensures your clinical records are thorough, standardised and audit\u2011ready.",
+    "f1_title": "Lesion Description Standardisation",
+    "f1_desc": "Document lesion morphology using standardised dermatological terminology \u2014 type, shape, colour, distribution, size and anatomical location \u2014 ensuring consistent, comparable records across visits.",
+    "f2_title": "Dermoscopy Finding Documentation",
+    "f2_desc": "Capture dermoscopic patterns, structures and features using recognised dermatoscopy terminology, supporting clinical decision\u2011making and structured reporting for pigmented and non\u2011pigmented lesions.",
+    "f3_title": "Treatment Protocol Templates",
+    "f3_desc": "Generate structured treatment plans for common dermatological conditions, including topical regimens, phototherapy protocols, procedural notes and biologic therapy documentation.",
+    "f4_title": "Photographic Documentation Indexing",
+    "f4_desc": "Index and link clinical photographs to structured notes, enabling longitudinal visual tracking of lesion progression, treatment response and post\u2011procedural outcomes.",
+    "cta_title": "Interested in Dermatology Assist? Join the beta.",
+    "cta_label": "Request Beta Access"
+  },
+  "triage_assist_page": {
+    "kicker": "Triage Assist",
+    "title": "AI-Assisted Clinical Triage Documentation.",
+    "description": "ClinixSummary\u2019s Triage Assist module supports frontline clinical triage by generating structured, real\u2011time documentation of patient acuity assessments, chief complaints, vital sign trends and disposition decisions. Designed for emergency departments, urgent care centres and intake workflows where speed and accuracy are critical.",
+    "f1_title": "Acuity Scoring Documentation",
+    "f1_desc": "Document triage acuity levels using standardised scales (ESI, MTS, CTAS) with structured rationale, supporting consistent and defensible triage decisions across clinicians and shifts.",
+    "f2_title": "Chief Complaint Categorisation",
+    "f2_desc": "Automatically categorise and structure chief complaints from the patient narrative, mapping presenting symptoms to standardised complaint categories for consistent documentation and downstream analytics.",
+    "f3_title": "Vital Sign Trend Analysis",
+    "f3_desc": "Capture and document vital sign measurements with contextual trend analysis, flagging clinically significant changes from baseline and highlighting values that fall outside normal parameters.",
+    "f4_title": "Disposition Recommendation Support",
+    "f4_desc": "Generate structured disposition documentation including discharge, admission, transfer or observation recommendations with supporting clinical rationale drawn from the triage assessment.",
+    "cta_title": "Interested in Triage Assist? Join the beta.",
+    "cta_label": "Request Beta Access"
   },
   "leaflet": {
     "page_title": "Patient Privacy Notice",

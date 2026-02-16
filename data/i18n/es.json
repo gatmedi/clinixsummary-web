@@ -392,7 +392,8 @@
     "beta_badge": "Beta",
     "qms_stamp": "Avalado por Clinix Quality Management System (Clinix QM)",
     "legal": "Legal",
-    "contact_sales": "Contactar ventas"
+    "contact_sales": "Contactar ventas",
+    "beta_notice": "Beta \u2014 Esta funcionalidad se encuentra actualmente en fase beta y en estudio"
   },
   "banner": {
     "english_only": "Este contenido está disponible solo en inglés.",
@@ -1097,6 +1098,51 @@
     "cta_title": "Conozca más sobre la Asistencia de Facturación para su organización.",
     "cta_label": "Solicitar información",
     "cta_secondary": "Planes empresariales"
+  },
+  "radiology_assist_page": {
+    "kicker": "Asistente de Radiolog\u00eda",
+    "title": "Generaci\u00f3n de informes radiol\u00f3gicos asistida por IA.",
+    "description": "El m\u00f3dulo Asistente de Radiolog\u00eda de ClinixSummary agiliza la documentaci\u00f3n radiol\u00f3gica generando informes estructurados y conformes a los est\u00e1ndares a partir de estudios de imagen. Desde radiograf\u00edas convencionales hasta im\u00e1genes en corte transversal, el Asistente de Radiolog\u00eda captura hallazgos, impresiones y recomendaciones en el lenguaje que utilizan los radi\u00f3logos \u2014 reduciendo los tiempos de entrega y mejorando la coherencia de los informes.",
+    "f1_title": "Plantillas de informes estructurados",
+    "f1_desc": "Genere informes radiol\u00f3gicos con plantillas estructuradas alineadas a las directrices del ACR. Hallazgos, impresiones y recomendaciones se organizan de forma coherente entre modalidades y regiones anat\u00f3micas.",
+    "f2_title": "Alertas de hallazgos cr\u00edticos",
+    "f2_desc": "Se\u00f1alizaci\u00f3n autom\u00e1tica de hallazgos cr\u00edticos e inesperados dentro del informe, garantizando que las observaciones urgentes queden documentadas de forma destacada y listas para la comunicaci\u00f3n cl\u00ednica inmediata.",
+    "f3_title": "Comparaci\u00f3n con estudios previos",
+    "f3_desc": "Referencia y comparaci\u00f3n de hallazgos con estudios de imagen previos del expediente cl\u00ednico, documentando cambios intervalares, estabilidad y progresi\u00f3n con lenguaje estructurado.",
+    "f4_title": "Soporte para sistemas de clasificaci\u00f3n",
+    "f4_desc": "Soporte para sistemas de clasificaci\u00f3n estandarizados como BI\u2011RADS, TI\u2011RADS y Lung\u2011RADS, asegurando que los informes incluyan las categor\u00edas apropiadas y las recomendaciones de seguimiento.",
+    "cta_title": "\u00bfLe interesa el Asistente de Radiolog\u00eda? \u00danase al programa beta.",
+    "cta_label": "Solicitar acceso beta"
+  },
+  "dermatology_assist_page": {
+    "kicker": "Asistente de Dermatolog\u00eda",
+    "title": "Documentaci\u00f3n dermatol\u00f3gica asistida por IA.",
+    "description": "El m\u00f3dulo Asistente de Dermatolog\u00eda de ClinixSummary est\u00e1 dise\u00f1ado para las exigencias espec\u00edficas de la documentaci\u00f3n en dermatolog\u00eda. Desde la descripci\u00f3n morfol\u00f3gica de lesiones hasta los hallazgos dermatosc\u00f3picos, protocolos de tratamiento y documentaci\u00f3n fotogr\u00e1fica, el Asistente de Dermatolog\u00eda garantiza registros cl\u00ednicos completos, estandarizados y listos para auditor\u00eda.",
+    "f1_title": "Estandarizaci\u00f3n de la descripci\u00f3n de lesiones",
+    "f1_desc": "Documente la morfolog\u00eda de lesiones con terminolog\u00eda dermatol\u00f3gica estandarizada \u2014 tipo, forma, color, distribuci\u00f3n, tama\u00f1o y localizaci\u00f3n anat\u00f3mica \u2014 para registros consistentes y comparables entre consultas.",
+    "f2_title": "Documentaci\u00f3n de hallazgos dermatosc\u00f3picos",
+    "f2_desc": "Registre patrones, estructuras y caracter\u00edsticas dermatosc\u00f3picas con terminolog\u00eda reconocida, apoyando la toma de decisiones cl\u00ednicas y la elaboraci\u00f3n de informes estructurados para lesiones pigmentadas y no pigmentadas.",
+    "f3_title": "Plantillas de protocolos de tratamiento",
+    "f3_desc": "Genere planes de tratamiento estructurados para condiciones dermatol\u00f3gicas frecuentes, incluyendo pautas t\u00f3picas, protocolos de fototerapia, notas de procedimientos y documentaci\u00f3n de terapia biol\u00f3gica.",
+    "f4_title": "Indexaci\u00f3n de documentaci\u00f3n fotogr\u00e1fica",
+    "f4_desc": "Indexe y vincule fotograf\u00edas cl\u00ednicas con notas estructuradas, permitiendo el seguimiento visual longitudinal de la evoluci\u00f3n de lesiones, respuesta al tratamiento y resultados postprocedimiento.",
+    "cta_title": "\u00bfLe interesa el Asistente de Dermatolog\u00eda? \u00danase al programa beta.",
+    "cta_label": "Solicitar acceso beta"
+  },
+  "triage_assist_page": {
+    "kicker": "Asistente de Triaje",
+    "title": "Documentaci\u00f3n de triaje cl\u00ednico asistida por IA.",
+    "description": "El m\u00f3dulo Asistente de Triaje de ClinixSummary apoya a los equipos de primera l\u00ednea con documentaci\u00f3n estructurada en tiempo real de evaluaciones de gravedad, motivos de consulta, tendencias de signos vitales y decisiones de disposici\u00f3n. Dise\u00f1ado para servicios de urgencias, centros de atenci\u00f3n inmediata y circuitos de admisi\u00f3n donde la rapidez y la precisi\u00f3n son fundamentales.",
+    "f1_title": "Documentaci\u00f3n de escalas de gravedad",
+    "f1_desc": "Documente los niveles de gravedad del triaje con escalas estandarizadas (ESI, MTS, CTAS) y justificaci\u00f3n estructurada, favoreciendo decisiones de triaje coherentes y fundamentadas entre profesionales y turnos.",
+    "f2_title": "Categorizaci\u00f3n del motivo de consulta",
+    "f2_desc": "Categorizaci\u00f3n y estructuraci\u00f3n autom\u00e1tica de los motivos de consulta a partir del relato del paciente, vinculando los s\u00edntomas de presentaci\u00f3n con categor\u00edas estandarizadas para documentaci\u00f3n consistente y an\u00e1lisis posterior.",
+    "f3_title": "An\u00e1lisis de tendencias de signos vitales",
+    "f3_desc": "Registre y documente las mediciones de signos vitales con an\u00e1lisis contextual de tendencias, se\u00f1alando cambios cl\u00ednicamente significativos y valores fuera de los par\u00e1metros normales.",
+    "f4_title": "Apoyo a recomendaciones de disposici\u00f3n",
+    "f4_desc": "Genere documentaci\u00f3n estructurada de disposici\u00f3n incluyendo recomendaciones de alta, ingreso, traslado u observaci\u00f3n con fundamentaci\u00f3n cl\u00ednica derivada de la evaluaci\u00f3n de triaje.",
+    "cta_title": "\u00bfLe interesa el Asistente de Triaje? \u00danase al programa beta.",
+    "cta_label": "Solicitar acceso beta"
   },
   "leaflet": {
     "page_title": "Aviso de privacidad del paciente",
