@@ -392,7 +392,8 @@
     "beta_badge": "Beta",
     "qms_stamp": "Garantito dal Clinix Quality Management System (Clinix QM)",
     "legal": "Legale",
-    "contact_sales": "Contatta il commerciale"
+    "contact_sales": "Contatta il commerciale",
+    "beta_notice": "Beta \u2014 Questa funzionalit\u00e0 \u00e8 attualmente in fase beta e in corso di valutazione"
   },
   "banner": {
     "english_only": "Questo contenuto è disponibile solo in inglese.",
@@ -1097,6 +1098,51 @@
   },
   "meet_languages": {
     "kicker": "Lingue e multilinguismo"
+  },
+  "radiology_assist_page": {
+    "kicker": "Assistente radiologico",
+    "title": "Generazione di referti radiologici assistita dall\u2019IA.",
+    "description": "Il modulo Assistente radiologico di ClinixSummary semplifica la documentazione radiologica generando referti strutturati e conformi agli standard a partire dagli esami di imaging. Dalla radiografia convenzionale alla diagnostica per immagini in sezione, l\u2019Assistente radiologico rileva reperti, conclusioni e raccomandazioni nel linguaggio dei radiologi \u2014 riducendo i tempi di refertazione e migliorando l\u2019uniformit\u00e0 dei referti.",
+    "f1_title": "Modelli di referti strutturati",
+    "f1_desc": "Generate referti radiologici con modelli strutturati conformi alle linee guida ACR. Reperti, conclusioni e raccomandazioni sono organizzati in modo coerente tra le diverse modalit\u00e0 e regioni anatomiche.",
+    "f2_title": "Avvisi per reperti critici",
+    "f2_desc": "Segnalazione automatica dei reperti critici e inattesi all\u2019interno del referto, assicurando che le osservazioni urgenti siano documentate in evidenza e pronte per la comunicazione clinica immediata.",
+    "f3_title": "Confronto con esami precedenti",
+    "f3_desc": "Riferimento e confronto dei reperti con esami di imaging precedenti nel fascicolo clinico, documentando le variazioni intercorse, la stabilit\u00e0 e la progressione con un linguaggio strutturato.",
+    "f4_title": "Supporto ai sistemi di classificazione",
+    "f4_desc": "Supporto per i sistemi di classificazione standardizzati tra cui BI\u2011RADS, TI\u2011RADS e Lung\u2011RADS, garantendo che i referti includano le appropriate assegnazioni di categoria e le raccomandazioni di gestione.",
+    "cta_title": "Interessati all\u2019Assistente radiologico? Unitevi al programma beta.",
+    "cta_label": "Richiedi accesso beta"
+  },
+  "dermatology_assist_page": {
+    "kicker": "Assistente dermatologico",
+    "title": "Documentazione dermatologica assistita dall\u2019IA.",
+    "description": "Il modulo Assistente dermatologico di ClinixSummary \u00e8 progettato per le esigenze specifiche della documentazione in dermatologia. Dalla descrizione morfologica delle lesioni ai reperti dermoscopici, dai protocolli terapeutici alla documentazione fotografica, l\u2019Assistente dermatologico garantisce cartelle cliniche complete, standardizzate e pronte per la revisione.",
+    "f1_title": "Standardizzazione della descrizione delle lesioni",
+    "f1_desc": "Documentate la morfologia delle lesioni con terminologia dermatologica standardizzata \u2014 tipo, forma, colore, distribuzione, dimensione e localizzazione anatomica \u2014 per cartelle coerenti e confrontabili tra le visite.",
+    "f2_title": "Documentazione dei reperti dermoscopici",
+    "f2_desc": "Registrate pattern, strutture e caratteristiche dermoscopiche con terminologia riconosciuta, a supporto delle decisioni cliniche e della refertazione strutturata per lesioni pigmentate e non pigmentate.",
+    "f3_title": "Modelli di protocolli terapeutici",
+    "f3_desc": "Generate piani di trattamento strutturati per le patologie dermatologiche comuni, inclusi schemi topici, protocolli di fototerapia, note procedurali e documentazione delle terapie biologiche.",
+    "f4_title": "Indicizzazione della documentazione fotografica",
+    "f4_desc": "Indicizzate e collegate le fotografie cliniche alle note strutturate, consentendo il monitoraggio visivo longitudinale dell\u2019evoluzione delle lesioni, della risposta al trattamento e degli esiti post-procedurali.",
+    "cta_title": "Interessati all\u2019Assistente dermatologico? Unitevi al programma beta.",
+    "cta_label": "Richiedi accesso beta"
+  },
+  "triage_assist_page": {
+    "kicker": "Assistente al triage",
+    "title": "Documentazione del triage clinico assistita dall\u2019IA.",
+    "description": "Il modulo Assistente al triage di ClinixSummary supporta i team di prima linea con documentazione strutturata in tempo reale delle valutazioni di gravit\u00e0, dei motivi di accesso, delle tendenze dei parametri vitali e delle decisioni di disposizione. Progettato per i pronto soccorso, i centri di cure urgenti e i flussi di accettazione dove rapidit\u00e0 e precisione sono fondamentali.",
+    "f1_title": "Documentazione dei punteggi di gravit\u00e0",
+    "f1_desc": "Documentate i livelli di gravit\u00e0 del triage con scale standardizzate (ESI, MTS, CTAS) e motivazione strutturata, a supporto di decisioni di triage coerenti e verificabili tra operatori e turni.",
+    "f2_title": "Categorizzazione del motivo di accesso",
+    "f2_desc": "Categorizzazione e strutturazione automatica dei motivi di accesso dal racconto del paziente, collegando i sintomi presentati a categorie standardizzate per una documentazione coerente e analisi successive.",
+    "f3_title": "Analisi delle tendenze dei parametri vitali",
+    "f3_desc": "Registrate e documentate le misurazioni dei parametri vitali con analisi contestuale delle tendenze, segnalando variazioni clinicamente significative e valori al di fuori dei parametri normali.",
+    "f4_title": "Supporto alle raccomandazioni di disposizione",
+    "f4_desc": "Generate documentazione strutturata di disposizione con raccomandazioni di dimissione, ricovero, trasferimento o osservazione, supportate da motivazione clinica derivata dalla valutazione di triage.",
+    "cta_title": "Interessati all\u2019Assistente al triage? Unitevi al programma beta.",
+    "cta_label": "Richiedi accesso beta"
   },
   "leaflet": {
     "page_title": "Informativa sulla privacy del paziente",
