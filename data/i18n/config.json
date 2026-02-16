@@ -4,12 +4,7 @@
   "storageKey": "clinixsummary-lang",
   "queryParam": "lang",
   "nonTranslatedRoutes": [
-    "#publications",
-    "#whitepapers",
-    "#case-studies",
-    "#radiology-assist",
-    "#dermatology-assist",
-    "#triage-assist"
+    "#case-studies"
   ],
   "nonTranslatedBanner": {
     "icon": "translate",
