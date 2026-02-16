@@ -427,87 +427,8 @@ function LanguagesPage() {
 
 
 // ---------------------------------------------------------------------------
-// 5. PortfolioBuilderPage
 // ---------------------------------------------------------------------------
-function PortfolioBuilderPage() {
-    return `
-        <section class="subpage-container">
-            <div class="page-width">
-
-                <!-- Header -->
-                <div class="subpage-header">
-                    <span class="kicker" data-i18n="portfolio.kicker">Portfolio Builder</span>
-                    <h2 class="subpage-title" data-i18n="portfolio.title">Structured case logs for credentialing, registration, and revalidation.</h2>
-                    <p class="subpage-copy" data-i18n="portfolio.desc">ClinixSummary's Portfolio Builder transforms your documented clinical encounters into structured case logs that meet the requirements of specialty training programmes, medical registration bodies, and revalidation frameworks. Documentation you are already generating becomes credentialing evidence — automatically.</p>
-                </div>
-
-                <!-- Features -->
-                <div class="grid-3" style="margin-bottom: 60px;">
-                    <div class="card">
-                        <div class="card-icon material-symbols-rounded">folder_open</div>
-                        <h3 data-i18n="portfolio.logs_title">Structured Case Logs</h3>
-                        <p data-i18n="portfolio.logs_desc">Every documented encounter is automatically categorised by specialty, procedure type, complexity level, and clinical domain. Case logs accumulate over time, providing a comprehensive record of your clinical experience that is always up to date and ready for submission.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon material-symbols-rounded">workspace_premium</div>
-                        <h3 data-i18n="portfolio.exports_title">Credentialing-Ready Exports</h3>
-                        <p data-i18n="portfolio.exports_desc">Export your portfolio in formats accepted by major registration bodies and credentialing organisations. Structured data fields, case counts by category, and procedure logs are formatted to meet the specific requirements of your regulatory body — saving hours of manual compilation.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon material-symbols-rounded">school</div>
-                        <h3 data-i18n="portfolio.training_title">Training & Specialty Portfolios</h3>
-                        <p data-i18n="portfolio.training_desc">Trainees and registrars can build their specialty portfolios as they work. Supervisors can review case mix, identify gaps in clinical exposure, and sign off on competencies — all within the same platform used for daily documentation.</p>
-                    </div>
-                </div>
-
-                <!-- Detail Section -->
-                <div class="subpage-header">
-                    <span class="kicker" data-i18n="portfolio.stage_kicker">Built for Every Stage</span>
-                    <h3 class="section-title" data-i18n="portfolio.stage_title">From training through revalidation.</h3>
-                    <p class="section-copy" data-i18n="portfolio.stage_desc">Whether you are a trainee building your first portfolio, a specialist preparing for revalidation, or a department head tracking team competencies — Portfolio Builder adapts to your needs.</p>
-                </div>
-
-                <div class="grid-2" style="margin-bottom: 60px;">
-                    <div class="text-group" style="border-bottom: none;">
-                        <span class="material-symbols-rounded list-item-icon">badge</span>
-                        <h3 data-i18n="portfolio.registration_title">Registration & Licensing</h3>
-                        <p data-i18n="portfolio.registration_desc">Compile the case evidence needed for initial registration, inter-jurisdictional transfers, and scope-of-practice applications. Portfolio Builder understands the documentation requirements of major medical boards and regulatory bodies.</p>
-                        <ul style="margin-top: 15px; font-size: 14px;">
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">checklist</span> Automated case counting by category and complexity</li>
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">download</span> One-click export in regulatory-compliant formats</li>
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">history</span> Longitudinal tracking across your entire career</li>
-                        </ul>
-                    </div>
-                    <div class="text-group" style="border-bottom: none;">
-                        <span class="material-symbols-rounded list-item-icon">autorenew</span>
-                        <h3 data-i18n="portfolio.revalidation_title">Revalidation & Appraisal</h3>
-                        <p data-i18n="portfolio.revalidation_desc">When revalidation comes around, your portfolio is already built. Clinical activity summaries, case diversity reports, and reflective practice logs are generated from the documentation you produce every day — no last-minute scramble to compile evidence.</p>
-                        <ul style="margin-top: 15px; font-size: 14px;">
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">insights</span> Case mix analysis and diversity reports</li>
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">edit_note</span> Integrated reflective practice templates</li>
-                            <li style="color: var(--text-primary); margin-bottom: 8px;"><span class="material-symbols-rounded" style="font-size: 16px; margin-inline-end: 8px; color: var(--accent);">supervisor_account</span> Supervisor review and sign-off workflows</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- CTA Banner -->
-                <div style="background: var(--bg-subtle); color: var(--text-primary); text-align: center; padding: 48px 40px; border-radius: 12px; border: 1px solid var(--border-subtle);">
-                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 16px;" data-i18n="portfolio.cta_title">Build your portfolio while you work.</h2>
-                    <p style="color: var(--text-secondary); font-size: 16px; max-width: 520px; margin: 0 auto 28px;" data-i18n="portfolio.cta_desc">Every consultation documented with ClinixSummary becomes a credentialing asset. Start building your portfolio today.</p>
-                    <div class="nav-actions" style="justify-content: center;">
-                        <a href="#" class="btn-primary" style="background: var(--text-primary); color: white;" onclick="showToast('Setting up your Portfolio Builder...'); return false;" data-i18n="portfolio.cta_primary">Start Building Your Portfolio</a>
-                        <a href="#contact" class="btn-outline" style="border-color: var(--text-primary); color: var(--text-primary);" data-i18n="portfolio.cta_secondary">Speak to a Specialist</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    `;
-}
-
-
-// ---------------------------------------------------------------------------
-// 6. AutoAmbientPage
+// 5. AutoAmbientPage
 // ---------------------------------------------------------------------------
 function AutoAmbientPage() {
     return `
