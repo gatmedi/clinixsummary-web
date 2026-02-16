@@ -79,11 +79,11 @@ class PubPDF(FPDF):
         self.ln(4)
         self.set_font('Liberation', 'B', 24)
         self.set_text_color(*DARK)
-        self.multi_cell(0, 11, self.pub_title)
+        self.multi_cell(0, 11, self.pub_title, align='L')
         self.ln(4)
         self.set_font('Liberation', '', 12)
         self.set_text_color(80, 80, 80)
-        self.multi_cell(0, 7, subtitle)
+        self.multi_cell(0, 7, subtitle, align='L')
         # Meta box
         self.ln(12)
         self.set_fill_color(242, 242, 240)
@@ -261,7 +261,6 @@ def pub01_gold_standard():
         'efficient, and data-driven healthcare. AI documentation systems like ClinixSummary represent the '
         'most practical path to achieving standardisation at scale, because they impose consistency at the '
         'point of generation rather than requiring behavioural change from already-overburdened clinicians.')
-    pdf.info_box('For further discussion on documentation standardisation initiatives, contact: research@clinixsummary.ai')
 
     pdf.output(os.path.join(OUT_DIR, 'standardised-clinical-documentation-2025.pdf'))
     print('  [OK] PUB-2026-001 Gold Standard')
@@ -371,7 +370,6 @@ def pub02_burnout():
         'direct intervention available: they address the root cause by removing the documentation burden '
         'from the clinician\u2019s shoulders. The evidence shows that when you give clinicians back their '
         'time, you give them back their joy in practice.')
-    pdf.info_box('To discuss burnout reduction strategies using AI documentation, contact: research@clinixsummary.ai')
 
     pdf.output(os.path.join(OUT_DIR, 'burnout-crisis-ai-scribes-2025.pdf'))
     print('  [OK] PUB-2025-002 Burnout Crisis')
@@ -464,7 +462,6 @@ def pub03_contextual_reasoning():
         'reasoning. ClinixSummary\u2019s purpose-built clinical models understand not just what was said, but '
         'what it means clinically \u2014 and that distinction is what makes the difference between a transcript '
         'and a clinical note.')
-    pdf.info_box('For a technical demonstration of contextual reasoning capabilities, contact: demo@clinixsummary.ai')
 
     pdf.output(os.path.join(OUT_DIR, 'contextual-reasoning-clinical-ai-2025.pdf'))
     print('  [OK] PUB-2025-003 Contextual Reasoning')
@@ -548,7 +545,6 @@ def pub04_multilingual():
         'healthcare. ClinixSummary\u2019s native multilingual capability, including real-time code-switching, '
         'enables clinicians worldwide to document naturally in the languages they and their patients '
         'actually speak.')
-    pdf.info_box('For multilingual capability demonstrations, contact: demo@clinixsummary.ai')
 
     pdf.output(os.path.join(OUT_DIR, 'multilingual-clinical-documentation-2025.pdf'))
     print('  [OK] PUB-2025-004 Multilingual')
@@ -633,7 +629,6 @@ def pub05_privacy():
         'model architecture ensures that patient data remains under the healthcare organisation\u2019s control '
         'at all times, with no reliance on third-party AI providers. This is the standard that healthcare '
         'AI should meet.')
-    pdf.info_box('To discuss privacy architecture in detail or request a security review, contact: security@clinixsummary.ai')
 
     pdf.output(os.path.join(OUT_DIR, 'privacy-by-design-clinical-ai-2025.pdf'))
     print('  [OK] PUB-2025-005 Privacy by Design')
@@ -718,7 +713,6 @@ def pub06_allied_health():
         'Allied health professionals deserve documentation tools built for their disciplines, not adapted '
         'from medical models. ClinixSummary\u2019s commitment to dedicated allied health modules reflects our '
         'belief that every clinician\u2019s documentation needs matter \u2014 not just those of physicians and surgeons.')
-    pdf.info_box('For allied health module demonstrations, contact: demo@clinixsummary.ai')
 
     pdf.output(os.path.join(OUT_DIR, 'allied-health-documentation-2025.pdf'))
     print('  [OK] PUB-2025-006 Allied Health')
@@ -806,9 +800,6 @@ def pub07_economics():
         'The ROI of AI documentation is compelling by any measure. The financial case alone \u2014 time '
         'savings, throughput gains, coding accuracy, and retention \u2014 justifies adoption. The human '
         'case \u2014 restored clinical joy, better patient relationships, reduced burnout \u2014 makes it imperative.')
-    pdf.info_box(
-        'For a customised ROI analysis for your organisation, visit the ROI Calculator at '
-        'clinixsummary.ai or contact: sales@clinixsummary.ai')
 
     pdf.output(os.path.join(OUT_DIR, 'economics-of-ai-scribes-roi-2025.pdf'))
     print('  [OK] PUB-2025-007 Economics')
@@ -891,7 +882,6 @@ def pub08_auto_detection():
         'Auto-detection of documentation modes eliminates a friction point that other systems impose on '
         'clinicians. By adapting automatically to how the clinician is working, ClinixSummary ensures '
         'that the documentation system serves the clinician \u2014 not the other way around.')
-    pdf.info_box('For technical details on mode detection, contact: technical@clinixsummary.ai')
 
     pdf.output(os.path.join(OUT_DIR, 'auto-detection-documentation-modes-2025.pdf'))
     print('  [OK] PUB-2025-008 Auto-Detection')
@@ -967,7 +957,6 @@ def pub09_kaizen():
         'Continuous improvement is not a feature \u2014 it is a design philosophy that recognises the '
         'dynamic nature of medicine. ClinixSummary\u2019s Kai-zen approach ensures that the system gets '
         'better every week, driven by the collective intelligence of the clinicians who use it.')
-    pdf.info_box('For quality metrics and improvement trends, contact: quality@clinixsummary.ai')
 
     pdf.output(os.path.join(OUT_DIR, 'kaizen-continuous-model-improvement-2025.pdf'))
     print('  [OK] PUB-2025-009 Kai-zen')
@@ -1057,7 +1046,6 @@ def pub10_icd10_cpt():
         'are documented completely and with appropriate specificity, coding accuracy follows naturally. '
         'ClinixSummary addresses coding at the source \u2014 by producing documentation that consistently '
         'captures the clinical detail coders need.')
-    pdf.info_box('For coding accuracy analysis and deployment case studies, contact: sales@clinixsummary.ai')
 
     pdf.output(os.path.join(OUT_DIR, 'icd10-cpt-coding-accuracy-2025.pdf'))
     print('  [OK] PUB-2025-010 ICD-10/CPT')
@@ -1151,9 +1139,6 @@ def pub11_cme_cpd():
         'Every documented case contributes to the clinician\u2019s professional growth. Documentation stops '
         'being a burden and becomes a catalyst for continuous improvement \u2014 for both the AI system and '
         'the clinician using it.')
-    pdf.info_box(
-        'To learn more about the CME/CPD Vault or explore accreditation partnerships, contact: '
-        'cme@clinixsummary.ai')
 
     pdf.output(os.path.join(OUT_DIR, 'cme-cpd-documentation-workflow-2025.pdf'))
     print('  [OK] PUB-2025-011 CME/CPD')
