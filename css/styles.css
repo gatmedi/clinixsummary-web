@@ -374,7 +374,7 @@ main {
 /* MEGA MENU DROPDOWNS */
 .dropdown {
     position: absolute;
-    top: calc(var(--nav-height) - 10px);
+    top: calc(100% - 10px);
     left: 50%;
     transform: translateX(-50%) translateY(10px);
     background: var(--bg-surface);
