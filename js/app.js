@@ -26,10 +26,12 @@ function updateDisplay(slider) {
                 maximumFractionDigits: 0
             }).format(value);
         } else if (slider.id === 'work-days') {
-            displayElement.textContent = `${value} ${t('calculator.days_unit', 'Days')}`;
+            const nf = new Intl.NumberFormat(loc);
+            displayElement.textContent = `${nf.format(value)} ${t('calculator.days_unit', 'Days')}`;
         } else if (slider.id === 'num-clinicians') {
+            const nf = new Intl.NumberFormat(loc);
             const label = value > 1 ? t('calculator.clinician_plural', 'Clinicians') : t('calculator.clinician_singular', 'Clinician');
-            displayElement.textContent = `${value} ${label}`;
+            displayElement.textContent = `${nf.format(value)} ${label}`;
         }
     }
 }
@@ -67,7 +69,8 @@ function calculateSavings() {
     const totalWorkDaysRegained = Math.round(totalAnnualHoursSaved / 8);
 
     const loc = (typeof I18n !== 'undefined' && I18n.locale) || 'en';
-    const formattedHours = totalAnnualHoursSaved.toFixed(0);
+    const nf = new Intl.NumberFormat(loc);
+    const formattedHours = nf.format(Math.round(totalAnnualHoursSaved));
     const formattedMonetarySavings = new Intl.NumberFormat(loc, {
         style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0
     }).format(totalAnnualMonetarySavings);
@@ -78,7 +81,7 @@ function calculateSavings() {
     const hoursSubtext = annualHoursElement.nextElementSibling;
     if (hoursSubtext) {
          const subtextTemplate = t('calculator.workdays_subtext', 'Equivalent to {0} extra workdays regained across the team.');
-         hoursSubtext.textContent = subtextTemplate.replace('{0}', totalWorkDaysRegained);
+         hoursSubtext.textContent = subtextTemplate.replace('{0}', nf.format(totalWorkDaysRegained));
     }
 
     updateDisplay(salaryInput);
