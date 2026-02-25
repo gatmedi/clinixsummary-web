@@ -18,18 +18,19 @@ function updateDisplay(slider) {
     if (displayElement) {
         let value = parseInt(slider.value);
         const loc = (typeof I18n !== 'undefined' && I18n.locale) || 'en';
+        const intlLoc = loc === 'ar' ? 'ar-u-nu-arab' : loc;
         if (slider.id === 'annual-salary') {
-            displayElement.textContent = new Intl.NumberFormat(loc, {
+            displayElement.textContent = new Intl.NumberFormat(intlLoc, {
                 style: 'currency',
                 currency: 'USD',
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0
             }).format(value);
         } else if (slider.id === 'work-days') {
-            const nf = new Intl.NumberFormat(loc);
+            const nf = new Intl.NumberFormat(intlLoc);
             displayElement.textContent = `${nf.format(value)} ${t('calculator.days_unit', 'Days')}`;
         } else if (slider.id === 'num-clinicians') {
-            const nf = new Intl.NumberFormat(loc);
+            const nf = new Intl.NumberFormat(intlLoc);
             const label = value > 1 ? t('calculator.clinician_plural', 'Clinicians') : t('calculator.clinician_singular', 'Clinician');
             displayElement.textContent = `${nf.format(value)} ${label}`;
         }
@@ -69,9 +70,10 @@ function calculateSavings() {
     const totalWorkDaysRegained = Math.round(totalAnnualHoursSaved / 8);
 
     const loc = (typeof I18n !== 'undefined' && I18n.locale) || 'en';
-    const nf = new Intl.NumberFormat(loc);
+    const intlLoc = loc === 'ar' ? 'ar-u-nu-arab' : loc;
+    const nf = new Intl.NumberFormat(intlLoc);
     const formattedHours = nf.format(Math.round(totalAnnualHoursSaved));
-    const formattedMonetarySavings = new Intl.NumberFormat(loc, {
+    const formattedMonetarySavings = new Intl.NumberFormat(intlLoc, {
         style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0
     }).format(totalAnnualMonetarySavings);
 
