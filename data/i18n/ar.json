@@ -90,7 +90,8 @@
     "stat_burnout": "٧٤٪",
     "stat_burnout_label": "إرهاق أقل",
     "stat_hipaa": "HIPAA",
-    "stat_hipaa_label": "متوافق"
+    "stat_hipaa_label": "متوافق",
+    "stat_soc2_label": "مطابق"
   },
   "core": {
     "kicker": "البنية الأساسية للذكاء الاصطناعي",
@@ -216,7 +217,14 @@
     "productive_credits": "٢٥٠ رصيدا / شهريا",
     "prolific_credits": "٥٠٠ رصيدا / شهريا",
     "see_all_plans": "عرض جميع الخطط",
-    "show_fewer_plans": "عرض خطط أقل"
+    "show_fewer_plans": "عرض خطط أقل",
+    "per_month": "/شهريا",
+    "free_price": "$٠",
+    "pilot_price": "$٩٫٩٩",
+    "pioneer_price": "$١٨٫٩٩",
+    "productive_price": "$٢٩٫٩٩",
+    "prolific_price": "$٤٩٫٩٩",
+    "custom_price": "مخصص"
   },
   "clinicians": {
     "kicker": "للممارسة الخاصة والفردية",
@@ -515,7 +523,10 @@
     "rbac_desc": "تضمن أنظمة الصلاحيات الدقيقة أن الموظفين المخولين فقط يمكنهم الوصول إلى بيانات المرضى، مع مسارات تدقيق كاملة لكل إجراء يتخذ في النظام.",
     "resources_desc": "اطبع نشرة خصوصية المريض بأي لغة واعرضها في غرفة الانتظار أو عيادتك. تشرح كيفية عمل التوثيق بالذكاء الاصطناعي، وما يحدث للتسجيل، وتطمئن المرضى بشأن خصوصيتهم.",
     "transcript_desc": "احتفاظ قصير / يتحكم فيه المستخدم",
-    "leaflet_open": "فتح النشرة"
+    "leaflet_open": "فتح النشرة",
+    "badge_compliant": "متوافق",
+    "badge_aligned": "مطابق",
+    "badge_encryption": "تشفير"
   },
   "contact": {
     "kicker": "تواصلوا معنا",

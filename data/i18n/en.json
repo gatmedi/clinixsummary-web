@@ -95,7 +95,8 @@
     "stat_burnout": "74%",
     "stat_burnout_label": "Less burnout",
     "stat_hipaa": "HIPAA",
-    "stat_hipaa_label": "Compliant"
+    "stat_hipaa_label": "Compliant",
+    "stat_soc2_label": "Aligned"
   },
   "core": {
     "kicker": "The Core AI Architecture",
@@ -196,7 +197,14 @@
     "enterprise_cta": "Contact sales",
     "enterprise_question": "Looking for Enterprise or Organizational licensing?",
     "see_all_plans": "See all plans",
-    "show_fewer_plans": "Show fewer plans"
+    "show_fewer_plans": "Show fewer plans",
+    "per_month": "/mo",
+    "free_price": "$0",
+    "pilot_price": "$9.99",
+    "pioneer_price": "$18.99",
+    "productive_price": "$29.99",
+    "prolific_price": "$49.99",
+    "custom_price": "Custom"
   },
   "clinicians": {
     "kicker": "For Private & Solo Practice",
@@ -494,7 +502,10 @@
     "resources_desc": "Print our patient privacy leaflet in any language and display it in your waiting room or consultation area. It explains how AI documentation works, what happens to the recording, and reassures patients about their privacy.",
     "leaflet_title": "Patient Privacy Notice — Printable Leaflet",
     "leaflet_desc": "Available in 6 languages. Designed for clinic walls and waiting rooms.",
-    "leaflet_open": "Open Leaflet"
+    "leaflet_open": "Open Leaflet",
+    "badge_compliant": "Compliant",
+    "badge_aligned": "Aligned",
+    "badge_encryption": "Encryption"
   },
   "contact": {
     "kicker": "Get in Touch",

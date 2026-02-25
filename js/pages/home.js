@@ -30,7 +30,7 @@ const HeroSection = `
                         </div>
                         <div class="stat-item">
                             <span class="stat-value"><span class="material-symbols-rounded" style="font-size: 22px; vertical-align: middle; color: var(--accent);">shield</span> SOC 2</span>
-                            <span class="stat-label">Aligned</span>
+                            <span class="stat-label" data-i18n="hero.stat_soc2_label">Aligned</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-value"><span class="material-symbols-rounded" style="font-size: 22px; vertical-align: middle; color: var(--accent);">privacy_tip</span> GDPR</span>
@@ -244,7 +244,7 @@ const PricingSection = `
 
                 <div class="pricing-card">
                     <div class="plan-name">Forever Free</div>
-                    <div class="plan-price">$0 <span>/mo</span></div>
+                    <div class="plan-price"><span data-i18n="pricing.free_price">$0</span> <span data-i18n="pricing.per_month">/mo</span></div>
                     <p class="plan-period" data-i18n="pricing.free_credits">25 credits / month</p>
                     <ul class="plan-features">
                         <li data-i18n="pricing.free_f1">Full access to the console</li>
@@ -256,7 +256,7 @@ const PricingSection = `
 
                 <div class="pricing-card">
                     <div class="plan-name">Pilot 900</div>
-                    <div class="plan-price">$9.99 <span>/mo</span></div>
+                    <div class="plan-price"><span data-i18n="pricing.pilot_price">$9.99</span> <span data-i18n="pricing.per_month">/mo</span></div>
                     <p class="plan-period" data-i18n="pricing.pilot_credits">75 credits / month</p>
                     <ul class="plan-features">
                         <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
@@ -268,7 +268,7 @@ const PricingSection = `
 
                 <div class="pricing-card">
                     <div class="plan-name">Pioneer 1800</div>
-                    <div class="plan-price">$18.99 <span>/mo</span></div>
+                    <div class="plan-price"><span data-i18n="pricing.pioneer_price">$18.99</span> <span data-i18n="pricing.per_month">/mo</span></div>
                     <p class="plan-period" data-i18n="pricing.pioneer_credits">150 credits / month</p>
                     <ul class="plan-features">
                         <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
@@ -285,7 +285,7 @@ const PricingSection = `
                     <div class="pricing-card featured" style="border-color: #4b88d3;">
                         <div style="margin-bottom: 8px;"><span class="beta-tag" style="background: #E8F5FF; color: #4b88d3; font-weight: 700;" data-i18n="pricing.most_popular">Most Popular</span></div>
                         <div class="plan-name">Productive 3000</div>
-                        <div class="plan-price">$29.99 <span>/mo</span></div>
+                        <div class="plan-price"><span data-i18n="pricing.productive_price">$29.99</span> <span data-i18n="pricing.per_month">/mo</span></div>
                         <p class="plan-period" data-i18n="pricing.productive_credits">250 credits / month</p>
                         <ul class="plan-features">
                             <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
@@ -297,7 +297,7 @@ const PricingSection = `
 
                     <div class="pricing-card">
                         <div class="plan-name">Prolific 6000</div>
-                        <div class="plan-price">$49.99 <span>/mo</span></div>
+                        <div class="plan-price"><span data-i18n="pricing.prolific_price">$49.99</span> <span data-i18n="pricing.per_month">/mo</span></div>
                         <p class="plan-period" data-i18n="pricing.prolific_credits">500 credits / month</p>
                         <ul class="plan-features">
                             <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
@@ -309,7 +309,7 @@ const PricingSection = `
 
                     <div class="pricing-card">
                         <div class="plan-name">Plan Enterprise</div>
-                        <div class="plan-price">Custom</div>
+                        <div class="plan-price" data-i18n="pricing.custom_price">Custom</div>
                         <p class="plan-period" data-i18n="pricing.enterprise_credits">Custom credits</p>
                         <ul class="plan-features">
                             <li data-i18n="pricing.enterprise_f4">Custom integrations and rollout support</li>
