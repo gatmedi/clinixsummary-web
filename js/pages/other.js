@@ -15,28 +15,28 @@ function SecurityPage() {
                         <span class="material-symbols-rounded">verified_user</span>
                         <div>
                             <div style="font-size: 15px;">HIPAA</div>
-                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;">Compliant</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_compliant">Compliant</div>
                         </div>
                     </div>
                     <div class="compliance-badge">
                         <span class="material-symbols-rounded">shield</span>
                         <div>
                             <div style="font-size: 15px;">SOC 2</div>
-                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;">Aligned</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_aligned">Aligned</div>
                         </div>
                     </div>
                     <div class="compliance-badge">
                         <span class="material-symbols-rounded">privacy_tip</span>
                         <div>
                             <div style="font-size: 15px;">GDPR</div>
-                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;">Compliant</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_compliant">Compliant</div>
                         </div>
                     </div>
                     <div class="compliance-badge">
                         <span class="material-symbols-rounded">encrypted</span>
                         <div>
                             <div style="font-size: 15px;">AES-256</div>
-                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;">Encryption</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_encryption">Encryption</div>
                         </div>
                     </div>
                 </div>
