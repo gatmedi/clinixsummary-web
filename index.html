@@ -29,6 +29,9 @@
 
     <link rel="stylesheet" href="css/styles.css">
 
+    <!-- Deployment-aware base path (GitHub Pages subpath vs production root) -->
+    <script>window.BASEPATH=location.hostname==='gatmedi.github.io'?'/clinixsummary-web':'';</script>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -54,8 +57,8 @@
     </script>
 </head>
 <body>
-    <!-- GitHub Pages SPA redirect handler -->
-    <script>!function(){var r=sessionStorage.getItem('spa-redirect');if(r){sessionStorage.removeItem('spa-redirect');history.replaceState(null,'',r)}}();</script>
+    <!-- GitHub Pages SPA redirect handler — replays the path saved by 404.html -->
+    <script>!function(){var r=sessionStorage.getItem('spa-redirect');if(r){sessionStorage.removeItem('spa-redirect');history.replaceState(null,'',r);}}();</script>
 
     <a href="#app-content" class="skip-link">Skip to content</a>
 

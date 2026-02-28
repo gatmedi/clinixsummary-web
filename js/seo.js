@@ -11,7 +11,8 @@
 
 const SEO = (() => {
     const SITE = 'ClinixSummary';
-    const ORIGIN = 'https://clinixsummary.ai';
+    // Derive origin from deployment context so canonical/OG URLs match the live host
+    const ORIGIN = window.location.origin + (window.BASEPATH || '');
 
     // Map every SPA route to its i18n title/description keys.
     // titleKey  → resolved via t(); shown as "{title} – ClinixSummary"

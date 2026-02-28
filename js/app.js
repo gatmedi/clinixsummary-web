@@ -91,6 +91,13 @@ function calculateSavings() {
     updateDisplay(numCliniciansInput);
 }
 
+// --- Path helpers (GitHub Pages subpath awareness) ---
+function stripBase(pathname) {
+    const bp = window.BASEPATH || '';
+    const raw = pathname || '/';
+    return (bp && raw.startsWith(bp)) ? (raw.slice(bp.length) || '/') : raw;
+}
+
 // --- Router Implementation ---
 
 const routes = {
@@ -155,7 +162,7 @@ const routes = {
 };
 
 function router() {
-    const path = window.location.pathname || '/';
+    const path = stripBase(window.location.pathname);
     const pageFn = routes[path];
 
     if (pageFn) {
@@ -294,8 +301,9 @@ document.addEventListener('click', (e) => {
     // Don't intercept if modifier keys are pressed
     if (e.metaKey || e.ctrlKey || e.shiftKey) return;
     e.preventDefault();
-    if (href !== location.pathname) {
-        history.pushState(null, '', href);
+    const bp = window.BASEPATH || '';
+    if (href !== stripBase(location.pathname)) {
+        history.pushState(null, '', bp + href);
         router();
     }
     closeMobileMenu();
