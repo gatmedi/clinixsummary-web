@@ -62,7 +62,7 @@ function createCapabilityPage(config) {
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;"${d('cta_title')}>${config.ctaTitle || 'Ready to transform your documentation?'}</h2>
                     <div class="nav-actions" style="justify-content: center;">
                         ${ctaPrimary}
-                        <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="common.contact_sales">Contact Sales</a>
+                        <a href="/contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="common.contact_sales">Contact Sales</a>
                     </div>
                 </div>
             </div>
@@ -343,7 +343,7 @@ function CapAlliedHealthPage() {
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="allied.cta_title">Start documenting with purpose-built allied health modules.</h2>
                     <div class="nav-actions" style="justify-content: center;">
                         <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Starting free trial for allied health.'); return false;" data-i18n="allied.cta_label">Start Free Trial</a>
-                        <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="common.contact_us">Contact Sales</a>
+                        <a href="/contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="common.contact_us">Contact Sales</a>
                     </div>
                 </div>
             </div>
@@ -568,8 +568,8 @@ function BillingAssistPage() {
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="billing.cta_title">Learn more about Billing Assistance for your organisation.</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Requesting Billing Assistance information.'); return false;" data-i18n="billing.cta_label">Request Information</a>
-                        <a href="#organizations" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="billing.cta_secondary">Enterprise Plans</a>
+                        <a href="/contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Requesting Billing Assistance information.'); return false;" data-i18n="billing.cta_label">Request Information</a>
+                        <a href="/organizations" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="billing.cta_secondary">Enterprise Plans</a>
                     </div>
                 </div>
             </div>

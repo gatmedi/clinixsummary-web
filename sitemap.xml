@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://clinixsummary.ai/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/security</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/pricing</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/contact</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Meet ClinixSummary -->
+  <url><loc>https://clinixsummary.ai/meticulous-notes</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/proprietary-models</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/kaizen</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/languages</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/auto-ambient</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/cme-vault</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/clinix-foundation</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Solutions -->
+  <url><loc>https://clinixsummary.ai/clinicians</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/organizations</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/insurers</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/government</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/nonprofit</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/integrations</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Capabilities -->
+  <url><loc>https://clinixsummary.ai/cap-medical</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/cap-dental</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/cap-psychiatry</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/cap-psychology</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/cap-allied-health</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/cap-midwifery</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/cap-vet</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/cap-operative</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/billing-assist</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/cap-patient-leaflet</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/referrals</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/icd-coding</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/radiology-assist</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/dermatology-assist</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/triage-assist</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Learn -->
+  <url><loc>https://clinixsummary.ai/publications</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/whitepapers</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/case-studies</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/news</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
+
+  <!-- Company -->
+  <url><loc>https://clinixsummary.ai/story</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/careers</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Legal -->
+  <url><loc>https://clinixsummary.ai/privacy-policy</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/privacy-choices</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/terms-enterprise</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/usage-policy</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/baa.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/dpa.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+</urlset>

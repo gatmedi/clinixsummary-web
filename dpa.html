@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Processing Agreement (DPA) – ClinixSummary</title>
+    <meta name="description" content="ClinixSummary GDPR Data Processing Agreement (DPA) governing the processing of personal data in connection with clinical documentation services." />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <link rel="icon" type="image/png" href="images/logo-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .legal-page {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+        }
+        .legal-page h1 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        .legal-page .doc-meta {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .legal-page h2 {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+        .legal-page h3 {
+            font-family: var(--font-sans);
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        .legal-page p,
+        .legal-page li {
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+        .legal-page ul, .legal-page ol {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+        .legal-page li {
+            margin-bottom: 6px;
+        }
+        .legal-page .section-number {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        .legal-page strong {
+            color: var(--text-primary);
+        }
+        .legal-page .preamble {
+            background: var(--bg-subtle);
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+            border-left: 3px solid var(--accent);
+        }
+        .legal-page .preamble p {
+            margin-bottom: 8px;
+        }
+        .legal-page .signature-block {
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .legal-page .signature-block .party h3 {
+            margin-top: 0;
+            margin-bottom: 24px;
+        }
+        .legal-page .signature-block .sig-line {
+            border-top: 1px solid var(--text-secondary);
+            padding-top: 6px;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .legal-page .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+        .legal-page .back-link:hover {
+            color: var(--accent-hover);
+        }
+        .legal-page .annex {
+            background: var(--bg-subtle);
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+        .legal-page .annex h3 {
+            margin-top: 0;
+        }
+        .legal-page table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.9rem;
+        }
+        .legal-page table th,
+        .legal-page table td {
+            padding: 10px 14px;
+            text-align: left;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+        }
+        .legal-page table th {
+            background: var(--bg-subtle);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            .legal-page { padding: 100px 16px 60px; }
+            .legal-page h1 { font-size: 1.5rem; }
+            .legal-page .signature-block { grid-template-columns: 1fr; }
+            .legal-page table { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="legal-page">
+    <a href="index.html" class="back-link">&larr; Back to ClinixSummary</a>
+
+    <h1>Data Processing Agreement</h1>
+    <div class="doc-meta">
+        <strong>Effective Date:</strong> [Date]<br>
+        <strong>Last Updated:</strong> February 2026<br>
+        <strong>Document Reference:</strong> GATMEDI-DPA-2026-001
+    </div>
+
+    <div class="preamble">
+        <p>This Data Processing Agreement ("<strong>DPA</strong>") is entered into by and between:</p>
+        <p><strong>Data Controller:</strong> The entity identified as the Customer in the applicable Services Agreement ("<strong>Controller</strong>"); and</p>
+        <p><strong>Data Processor:</strong> <strong>GATMEDI Ltd</strong>, a company incorporated in England and Wales (Company No. [number]), trading as "<strong>ClinixSummary</strong>," with its registered office at [registered address] ("<strong>Processor</strong>").</p>
+        <p>This DPA supplements and forms part of the Services Agreement (the "<strong>Agreement</strong>") between the Parties under which Processor provides AI-powered clinical documentation services to or on behalf of Controller.</p>
+        <p>This DPA is entered into pursuant to Article 28 of the UK General Data Protection Regulation ("<strong>UK GDPR</strong>") as incorporated into UK law by the Data Protection Act 2018 ("<strong>DPA 2018</strong>"), and Article 28 of Regulation (EU) 2016/679 (the "<strong>EU GDPR</strong>"), as applicable (collectively, "<strong>Data Protection Law</strong>").</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 1: DEFINITIONS -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">1.</span> Definitions</h2>
+
+    <p>In this DPA, unless the context otherwise requires:</p>
+
+    <h3>1.1</h3>
+    <p>"<strong>Applicable Data Protection Law</strong>" means all data protection and privacy legislation applicable to the processing of Personal Data under this DPA, including: (a) the UK GDPR and the DPA 2018; (b) the EU GDPR; (c) the Swiss Federal Act on Data Protection (FADP); and (d) any applicable national implementing legislation, in each case as amended, replaced, or superseded from time to time.</p>
+
+    <h3>1.2</h3>
+    <p>"<strong>Controller</strong>," "<strong>Processor</strong>," "<strong>Data Subject</strong>," "<strong>Personal Data</strong>," "<strong>Processing</strong>" (and "<strong>Process</strong>"), "<strong>Personal Data Breach</strong>," "<strong>Special Category Data</strong>," and "<strong>Supervisory Authority</strong>" shall have the meanings given to them in the Applicable Data Protection Law.</p>
+
+    <h3>1.3</h3>
+    <p>"<strong>Approved Addendum</strong>" means the UK International Data Transfer Addendum to the EU Commission Standard Contractual Clauses, issued by the Information Commissioner under section 119A(1) of the DPA 2018, as may be revised from time to time.</p>
+
+    <h3>1.4</h3>
+    <p>"<strong>Approved SCCs</strong>" or "<strong>Standard Contractual Clauses</strong>" means the standard contractual clauses for the transfer of personal data to processors established in third countries, as approved by the European Commission by Implementing Decision (EU) 2021/914 of 4 June 2021.</p>
+
+    <h3>1.5</h3>
+    <p>"<strong>Services</strong>" means the AI-powered clinical documentation services provided by Processor to Controller under the Agreement.</p>
+
+    <h3>1.6</h3>
+    <p>"<strong>Sub-processor</strong>" means any third party appointed by Processor (or by any Sub-processor of Processor) to Process Personal Data on behalf of Controller in connection with this DPA.</p>
+
+    <h3>1.7</h3>
+    <p>"<strong>UK IDTA</strong>" means the International Data Transfer Agreement issued by the Information Commissioner's Office under section 119A(1) of the DPA 2018.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 2: SCOPE AND PURPOSE OF PROCESSING -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">2.</span> Scope and Purpose of Processing</h2>
+
+    <h3>2.1 Scope</h3>
+    <p>This DPA applies to the Processing of Personal Data by Processor on behalf of Controller in connection with the provision of the Services under the Agreement. The details of the Processing are set out in Annex 1 to this DPA.</p>
+
+    <h3>2.2 Purpose of Processing</h3>
+    <p>Processor shall Process Personal Data solely for the following purposes:</p>
+    <ul>
+        <li>Providing the AI-powered clinical documentation Services as described in the Agreement;</li>
+        <li>Real-time processing of clinical encounter audio for the purpose of generating clinical documentation (audio is processed ephemerally and immediately deleted upon note generation);</li>
+        <li>Generation, storage, and management of AI-produced clinical notes, summaries, and documentation;</li>
+        <li>Technical support, maintenance, and improvement of the Services (using only de-identified or anonymised data for any improvement activities);</li>
+        <li>Compliance with legal and regulatory obligations applicable to the Processor.</li>
+    </ul>
+
+    <h3>2.3 Processor's Role</h3>
+    <p>Controller determines the purposes and means of the Processing of Personal Data. Processor shall Process Personal Data only on documented instructions from Controller, including with respect to transfers of Personal Data to a third country, unless required to do so by applicable law, in which case Processor shall inform Controller of that legal requirement before Processing, unless that law prohibits such information on important grounds of public interest (Article 28(3)(a) UK GDPR / EU GDPR).</p>
+
+    <h3>2.4 Prohibited Processing</h3>
+    <p>Processor shall not:</p>
+    <ul>
+        <li>Process Personal Data for any purpose other than as described in this DPA and the Agreement;</li>
+        <li>Use Personal Data (including clinical audio, transcriptions, or notes) to train, fine-tune, or improve any general-purpose or third-party artificial intelligence or machine learning models;</li>
+        <li>Sell, rent, or otherwise commercially exploit Personal Data;</li>
+        <li>Process Personal Data for profiling or automated decision-making that produces legal effects or similarly significant effects on Data Subjects, unless expressly instructed by Controller.</li>
+    </ul>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 3: TYPES OF PERSONAL DATA AND DATA SUBJECTS -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">3.</span> Types of Personal Data and Data Subject Categories</h2>
+
+    <h3>3.1 Categories of Data Subjects</h3>
+    <p>Personal Data Processed under this DPA relates to the following categories of Data Subjects:</p>
+    <ul>
+        <li><strong>Patients:</strong> Individuals who are the subject of clinical encounters documented using the Services;</li>
+        <li><strong>Healthcare Providers:</strong> Clinicians, physicians, nurses, and other healthcare professionals who use the Services;</li>
+        <li><strong>Clinical Staff:</strong> Administrative and support staff whose information may be included in clinical documentation.</li>
+    </ul>
+
+    <h3>3.2 Types of Personal Data</h3>
+    <p>The following types of Personal Data may be Processed:</p>
+    <ul>
+        <li>Patient identifying information (names, dates of birth, contact details, patient identifiers);</li>
+        <li>Healthcare provider identifying information (names, professional identifiers, credentials);</li>
+        <li>Account and authentication data (email addresses, login credentials);</li>
+        <li>Usage data and platform interaction logs.</li>
+    </ul>
+
+    <h3>3.3 Special Categories of Personal Data</h3>
+    <p>The following Special Categories of Personal Data (Article 9 UK GDPR / EU GDPR) may be Processed:</p>
+    <ul>
+        <li><strong>Health data:</strong> Clinical encounter audio (temporary; immediately deleted after processing), medical histories, diagnoses, symptoms, treatment plans, medication information, clinical observations, assessment findings, and AI-generated clinical notes;</li>
+        <li><strong>Biometric data:</strong> Voice recordings of clinical encounters (temporary; processed ephemerally for transcription purposes only, immediately and irrecoverably deleted upon completion of note generation);</li>
+        <li><strong>Genetic data:</strong> Only to the extent included in clinical encounter discussions and resulting documentation.</li>
+    </ul>
+    <p>The Processing of Special Category Data is carried out under the conditions set out in Article 9(2)(h) of the UK GDPR / EU GDPR (provision of healthcare and management of health systems) and, where applicable, the DPA 2018 Schedule 1, Condition 2. Controller warrants that it has established a lawful basis under Article 6 and an applicable condition under Article 9 for the Processing of Special Category Data.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 4: DURATION OF PROCESSING -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">4.</span> Duration of Processing</h2>
+
+    <h3>4.1 Duration</h3>
+    <p>Processor shall Process Personal Data for the duration of the Agreement, unless otherwise agreed in writing or required by Applicable Data Protection Law.</p>
+
+    <h3>4.2 Audio Data Retention</h3>
+    <p>Clinical encounter audio is processed in real-time and is immediately and irrecoverably deleted upon completion of note generation. No audio recordings are stored at rest. The retention period for audio data is therefore limited to the duration of the active processing session only (typically seconds to minutes).</p>
+
+    <h3>4.3 Clinical Documentation Retention</h3>
+    <p>AI-generated clinical notes and documentation are retained for the duration of the Agreement and subject to the deletion and return provisions in Section 12.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 5: CONTROLLER OBLIGATIONS -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">5.</span> Controller Obligations</h2>
+
+    <h3>5.1 Lawful Basis</h3>
+    <p>Controller warrants and represents that:</p>
+    <ul>
+        <li>It has established and will maintain a valid lawful basis under Article 6 of the Applicable Data Protection Law for the Processing of Personal Data by Processor;</li>
+        <li>It has established and will maintain a valid condition under Article 9 of the Applicable Data Protection Law for the Processing of Special Category Data (health data) by Processor;</li>
+        <li>It has complied with all applicable transparency and notification requirements, including providing appropriate privacy notices to Data Subjects;</li>
+        <li>Where consent is relied upon, valid consent has been obtained and documented.</li>
+    </ul>
+
+    <h3>5.2 Instructions</h3>
+    <p>Controller shall ensure that its Processing instructions to Processor comply with Applicable Data Protection Law. Controller acknowledges that the Agreement (including this DPA) constitutes Controller's complete and final documented instructions to Processor in relation to the Processing of Personal Data, and any additional or alternative instructions shall require prior written agreement.</p>
+
+    <h3>5.3 Data Accuracy</h3>
+    <p>Controller is responsible for ensuring the accuracy and quality of Personal Data provided to Processor and for promptly notifying Processor of any corrections or updates required.</p>
+
+    <h3>5.4 Data Protection Impact Assessment</h3>
+    <p>Controller is responsible for conducting a Data Protection Impact Assessment ("<strong>DPIA</strong>") where required by Applicable Data Protection Law. Processor shall provide reasonable assistance to Controller in conducting such assessment, to the extent Processor's assistance is necessary and relates to the Processing activities carried out by Processor.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 6: PROCESSOR OBLIGATIONS -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">6.</span> Processor Obligations</h2>
+
+    <h3>6.1 Processing on Instructions</h3>
+    <p>Processor shall Process Personal Data only on documented instructions from Controller, as set out in this DPA and the Agreement, unless required to do so by applicable law. If Processor believes that an instruction from Controller infringes Applicable Data Protection Law, Processor shall promptly inform Controller.</p>
+
+    <h3>6.2 Confidentiality</h3>
+    <p>Processor shall ensure that all personnel authorised to Process Personal Data:</p>
+    <ul>
+        <li>Have committed themselves to confidentiality or are under an appropriate statutory obligation of confidentiality;</li>
+        <li>Have received appropriate training on data protection and the handling of health data;</li>
+        <li>Process Personal Data only on instructions from Controller, unless required by applicable law.</li>
+    </ul>
+
+    <h3>6.3 Records of Processing</h3>
+    <p>Processor shall maintain a record of all categories of Processing activities carried out on behalf of Controller, in accordance with Article 30(2) of the UK GDPR / EU GDPR, including:</p>
+    <ul>
+        <li>The name and contact details of the Processor and each Controller on whose behalf the Processor is acting;</li>
+        <li>The categories of Processing carried out on behalf of each Controller;</li>
+        <li>Where applicable, transfers of Personal Data to a third country, including the identification of the third country and the transfer mechanism relied upon;</li>
+        <li>A general description of the technical and organisational security measures.</li>
+    </ul>
+
+    <h3>6.4 Appointment of Data Protection Officer</h3>
+    <p>Processor has appointed a Data Protection Officer, who may be contacted at: <strong>dpo@clinixsummary.ai</strong></p>
+
+    <h3>6.5 Cooperation with Supervisory Authorities</h3>
+    <p>Processor shall cooperate, on request, with the Information Commissioner's Office (ICO), any EU/EEA Supervisory Authority, or any other competent data protection authority in the performance of its tasks.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 7: TECHNICAL AND ORGANISATIONAL MEASURES -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">7.</span> Technical and Organisational Measures</h2>
+
+    <p>Processor shall implement and maintain appropriate technical and organisational measures to ensure a level of security appropriate to the risk, taking into account the state of the art, the costs of implementation, the nature, scope, context, and purposes of Processing, and the risk of varying likelihood and severity for the rights and freedoms of Data Subjects, in accordance with Article 32 of the UK GDPR / EU GDPR. These measures are detailed in Annex 2 and include, at a minimum:</p>
+
+    <h3>7.1 Encryption and Pseudonymisation</h3>
+    <ul>
+        <li>All Personal Data encrypted at rest using AES-256 encryption;</li>
+        <li>All Personal Data encrypted in transit using TLS 1.2 or higher;</li>
+        <li>End-to-end encryption for audio transmission from capture device to processing server;</li>
+        <li>Pseudonymisation of Personal Data where feasible for processing operations.</li>
+    </ul>
+
+    <h3>7.2 Access Controls</h3>
+    <ul>
+        <li>Role-based access controls (RBAC) ensuring personnel access only the minimum Personal Data necessary for their function;</li>
+        <li>Multi-factor authentication (MFA) for all administrative access to systems containing Personal Data;</li>
+        <li>Unique user identification for all system access;</li>
+        <li>Automatic session timeouts and account lockout policies;</li>
+        <li>Regular access reviews (at least quarterly).</li>
+    </ul>
+
+    <h3>7.3 Data Integrity and Availability</h3>
+    <ul>
+        <li>Regular automated backups with encryption;</li>
+        <li>Disaster recovery and business continuity procedures with defined Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO);</li>
+        <li>Redundant infrastructure to ensure high availability;</li>
+        <li>Regular integrity checks on stored data.</li>
+    </ul>
+
+    <h3>7.4 Monitoring and Logging</h3>
+    <ul>
+        <li>Comprehensive audit logging of all access to systems containing Personal Data;</li>
+        <li>Intrusion detection and prevention systems;</li>
+        <li>Real-time security monitoring and alerting;</li>
+        <li>Audit logs retained for a minimum period consistent with applicable legal requirements.</li>
+    </ul>
+
+    <h3>7.5 Vulnerability Management</h3>
+    <ul>
+        <li>Regular vulnerability scanning and penetration testing (at least annually);</li>
+        <li>Timely application of security patches;</li>
+        <li>Secure software development lifecycle (SDLC) practices;</li>
+        <li>Dependency and third-party component security monitoring.</li>
+    </ul>
+
+    <h3>7.6 AI-Specific Measures</h3>
+    <ul>
+        <li>AI models are isolated from general-purpose models and do not retain patient-specific Personal Data after processing;</li>
+        <li>No Personal Data is used for training, fine-tuning, or improving AI models (model improvement uses only de-identified, anonymised, or aggregated data);</li>
+        <li>Clinical encounter audio is processed within ephemeral, encrypted processing environments and irrecoverably deleted upon completion of note generation;</li>
+        <li>AI outputs (generated clinical notes) are treated as Personal Data / Special Category Data and subject to all protections under this DPA;</li>
+        <li>Regular validation and bias testing of AI models to ensure accuracy and fairness;</li>
+        <li>Human review processes are available at Controller's discretion for AI-generated documentation;</li>
+        <li>Logging and auditability of AI processing decisions where relevant to Data Subject rights.</li>
+    </ul>
+
+    <h3>7.7 Personnel Measures</h3>
+    <ul>
+        <li>Background checks for employees with access to Personal Data (subject to applicable law);</li>
+        <li>Regular data protection and security awareness training;</li>
+        <li>Disciplinary procedures for data protection policy violations;</li>
+        <li>Principle of least privilege applied to all access rights.</li>
+    </ul>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 8: SUB-PROCESSOR MANAGEMENT -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">8.</span> Sub-processor Management</h2>
+
+    <h3>8.1 General Authorisation</h3>
+    <p>Controller provides Processor with general written authorisation to engage Sub-processors to Process Personal Data on behalf of Controller, subject to the conditions set out in this Section 8.</p>
+
+    <h3>8.2 Current Sub-processors</h3>
+    <p>A list of Processor's current Sub-processors is set out in Annex 3 and is also available at <strong>[URL to sub-processor list]</strong>. This list includes the name, location, and description of processing for each Sub-processor.</p>
+
+    <h3>8.3 Notification of Changes</h3>
+    <p>Processor shall notify Controller in writing at least <strong>thirty (30) days</strong> before engaging any new Sub-processor or replacing an existing Sub-processor, providing the name, location, and nature of Processing to be carried out by the proposed Sub-processor. Processor shall provide such notification by email to Controller's designated contact and/or by updating the Sub-processor list referenced in Section 8.2.</p>
+
+    <h3>8.4 Right to Object</h3>
+    <p>Controller may object to the appointment of a new or replacement Sub-processor by notifying Processor in writing within <strong>fourteen (14) days</strong> of receiving Processor's notification under Section 8.3. Such objection must be based on reasonable, data-protection-related grounds. If Controller objects, the Parties shall discuss the objection in good faith with a view to achieving a commercially reasonable resolution. If no resolution can be reached within thirty (30) days, Controller may terminate the affected Services (and this DPA with respect to those Services) without penalty by providing written notice to Processor.</p>
+
+    <h3>8.5 Sub-processor Contractual Requirements</h3>
+    <p>Processor shall:</p>
+    <ul>
+        <li>Enter into a written contract with each Sub-processor that imposes data protection obligations no less protective than those set out in this DPA, in accordance with Article 28(4) of the UK GDPR / EU GDPR;</li>
+        <li>Ensure that each Sub-processor provides sufficient guarantees to implement appropriate technical and organisational measures;</li>
+        <li>Remain fully liable to Controller for the acts and omissions of its Sub-processors in respect of the Processing of Personal Data.</li>
+    </ul>
+
+    <h3>8.6 Due Diligence</h3>
+    <p>Processor shall conduct appropriate due diligence on each Sub-processor before engagement, including verification of the Sub-processor's technical and organisational measures, data protection capabilities, and regulatory compliance, particularly with respect to Special Category Data.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 9: INTERNATIONAL DATA TRANSFERS -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">9.</span> International Data Transfers</h2>
+
+    <h3>9.1 General Restriction</h3>
+    <p>Processor shall not transfer Personal Data to a country outside the United Kingdom or the European Economic Area ("<strong>Restricted Transfer</strong>") unless:</p>
+    <ul>
+        <li>The transfer is to a country, territory, sector, or international organisation that has been recognised as providing an adequate level of data protection by the UK Secretary of State (for UK transfers) or the European Commission (for EU/EEA transfers); or</li>
+        <li>Appropriate safeguards have been put in place in accordance with Section 9.2.</li>
+    </ul>
+
+    <h3>9.2 Transfer Mechanisms</h3>
+    <p>Where a Restricted Transfer is necessary for the provision of the Services, Processor shall ensure that one of the following safeguards is in place:</p>
+    <ul>
+        <li><strong>For transfers from the UK:</strong> The UK International Data Transfer Agreement (UK IDTA) or the Approved Addendum (UK Addendum to the EU SCCs), as issued by the ICO under section 119A(1) of the DPA 2018;</li>
+        <li><strong>For transfers from the EU/EEA:</strong> The Approved SCCs (EU Standard Contractual Clauses) as approved by European Commission Implementing Decision (EU) 2021/914;</li>
+        <li>Any other transfer mechanism approved under Applicable Data Protection Law.</li>
+    </ul>
+
+    <h3>9.3 Transfer Impact Assessment</h3>
+    <p>Where Processor relies on Standard Contractual Clauses or the UK IDTA for a Restricted Transfer, Processor shall:</p>
+    <ul>
+        <li>Conduct and document a Transfer Impact Assessment ("<strong>TIA</strong>") / Transfer Risk Assessment ("<strong>TRA</strong>") evaluating the laws and practices of the destination country and their impact on the protection of the transferred Personal Data;</li>
+        <li>Implement supplementary measures where necessary to ensure the level of protection is not undermined;</li>
+        <li>Make the TIA / TRA available to Controller upon request.</li>
+    </ul>
+
+    <h3>9.4 Supplementary Measures</h3>
+    <p>Where required by a Transfer Impact Assessment, Processor shall implement appropriate supplementary measures, which may include:</p>
+    <ul>
+        <li>Additional encryption (including encryption where Processor does not hold the decryption key);</li>
+        <li>Pseudonymisation or anonymisation prior to transfer;</li>
+        <li>Contractual commitments regarding government access requests;</li>
+        <li>Data localisation or regional processing arrangements.</li>
+    </ul>
+
+    <h3>9.5 Incorporation of Transfer Clauses</h3>
+    <p>To the extent required, the Approved SCCs, the UK IDTA, and/or the Approved Addendum are incorporated into this DPA by reference. In the event of any conflict between this DPA and the incorporated transfer clauses, the transfer clauses shall prevail with respect to Restricted Transfers. The applicable Annexes to the Approved SCCs / UK IDTA are set out in Annexes 4 and 5 of this DPA.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 10: DATA SUBJECT RIGHTS -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">10.</span> Data Subject Rights</h2>
+
+    <h3>10.1 Assistance with Data Subject Requests</h3>
+    <p>Processor shall, taking into account the nature of the Processing, assist Controller by appropriate technical and organisational measures, insofar as this is possible, in fulfilling Controller's obligation to respond to requests from Data Subjects exercising their rights under Chapter III of the UK GDPR / EU GDPR, including:</p>
+    <ul>
+        <li><strong>Right of access</strong> (Article 15);</li>
+        <li><strong>Right to rectification</strong> (Article 16);</li>
+        <li><strong>Right to erasure</strong> ("right to be forgotten") (Article 17);</li>
+        <li><strong>Right to restriction of processing</strong> (Article 18);</li>
+        <li><strong>Right to data portability</strong> (Article 20);</li>
+        <li><strong>Right to object</strong> (Article 21);</li>
+        <li><strong>Rights related to automated decision-making and profiling</strong> (Article 22).</li>
+    </ul>
+
+    <h3>10.2 Notification of Requests</h3>
+    <p>If Processor receives a request directly from a Data Subject in relation to Personal Data Processed under this DPA, Processor shall promptly (and in any event within <strong>five (5) business days</strong>) notify Controller and shall not respond to the request directly unless instructed to do so by Controller or required by applicable law.</p>
+
+    <h3>10.3 Response Timeframe</h3>
+    <p>Processor shall provide the assistance referred to in Section 10.1 within a timeframe sufficient to enable Controller to comply with its obligations to respond to Data Subject requests within the applicable statutory timeframes (typically one month under the UK GDPR / EU GDPR).</p>
+
+    <h3>10.4 Data Export</h3>
+    <p>Processor shall provide Controller with the ability to export Personal Data in a structured, commonly used, and machine-readable format to facilitate the exercise of Data Subject rights, including the right to data portability.</p>
+
+    <h3>10.5 Audio Data</h3>
+    <p>The Parties acknowledge that clinical encounter audio is processed ephemerally and immediately deleted upon note generation. Accordingly, Data Subject rights (including access, portability, and erasure) cannot be exercised with respect to audio data once it has been deleted, and Processor shall not be required to retain audio data for the purpose of complying with Data Subject requests.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 11: PERSONAL DATA BREACH -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">11.</span> Personal Data Breach Notification</h2>
+
+    <h3>11.1 Notification Obligation</h3>
+    <p>Processor shall notify Controller without undue delay and in any event within <strong>forty-eight (48) hours</strong> after becoming aware of a Personal Data Breach affecting Personal Data Processed under this DPA, in accordance with Article 33(2) of the UK GDPR / EU GDPR.</p>
+
+    <h3>11.2 Content of Notification</h3>
+    <p>The notification shall include, to the extent available:</p>
+    <ul>
+        <li>A description of the nature of the Personal Data Breach, including the categories and approximate number of Data Subjects and Personal Data records concerned;</li>
+        <li>The name and contact details of the Data Protection Officer or other point of contact from whom further information can be obtained;</li>
+        <li>A description of the likely consequences of the Personal Data Breach;</li>
+        <li>A description of the measures taken or proposed to be taken to address the Personal Data Breach, including, where appropriate, measures to mitigate its possible adverse effects;</li>
+        <li>Where not all information is available at the time of notification, information shall be provided in phases without undue further delay.</li>
+    </ul>
+
+    <h3>11.3 Cooperation</h3>
+    <p>Processor shall cooperate with Controller and take commercially reasonable steps to assist Controller in:</p>
+    <ul>
+        <li>Investigating and remediating the Personal Data Breach;</li>
+        <li>Fulfilling Controller's obligation to notify the relevant Supervisory Authority under Article 33 of the UK GDPR / EU GDPR (within 72 hours of becoming aware);</li>
+        <li>Fulfilling Controller's obligation to communicate the Personal Data Breach to affected Data Subjects under Article 34 of the UK GDPR / EU GDPR, where required;</li>
+        <li>Conducting a Data Protection Impact Assessment related to the breach, where required.</li>
+    </ul>
+
+    <h3>11.4 Documentation</h3>
+    <p>Processor shall maintain a record of all Personal Data Breaches, including the facts relating to the breach, its effects, and the remedial action taken, in accordance with Article 33(5) of the UK GDPR / EU GDPR. This record shall be made available to Controller upon request.</p>
+
+    <h3>11.5 No Acknowledgment of Liability</h3>
+    <p>Processor's notification of a Personal Data Breach to Controller under this Section 11 shall not be construed as an acknowledgment of fault or liability by Processor.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 12: TERM, TERMINATION, AND DATA RETURN -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">12.</span> Term, Termination, and Data Return/Deletion</h2>
+
+    <h3>12.1 Term</h3>
+    <p>This DPA shall become effective on the Effective Date and shall remain in force for the duration of the Agreement. This DPA shall automatically terminate upon the expiration or termination of the Agreement, subject to Section 12.5.</p>
+
+    <h3>12.2 Return of Personal Data</h3>
+    <p>Upon termination or expiry of the Agreement, or upon Controller's written request, Processor shall:</p>
+    <ul>
+        <li>At Controller's election, return all Personal Data to Controller in a structured, commonly used, and machine-readable format, or securely delete all Personal Data;</li>
+        <li>Complete the return or deletion within <strong>thirty (30) days</strong> of termination, expiry, or receipt of Controller's written instruction;</li>
+        <li>Provide written certification of the deletion of Personal Data upon Controller's request.</li>
+    </ul>
+
+    <h3>12.3 Retention Exceptions</h3>
+    <p>Processor may retain Personal Data to the extent required by applicable law, provided that Processor:</p>
+    <ul>
+        <li>Limits such retention to only the Personal Data and duration required by law;</li>
+        <li>Continues to protect such Personal Data in accordance with this DPA;</li>
+        <li>Notifies Controller of the specific legal requirement and the data retained;</li>
+        <li>Deletes such Personal Data as soon as the legal retention period expires.</li>
+    </ul>
+
+    <h3>12.4 Audio Data</h3>
+    <p>The Parties acknowledge that clinical encounter audio is processed ephemerally and immediately deleted upon note generation as part of normal service operations. Accordingly, no audio recordings will exist at the time of termination, and the return or deletion obligations under this Section 12 shall apply only to clinical notes, documentation, and other Personal Data stored on the ClinixSummary platform.</p>
+
+    <h3>12.5 Survival</h3>
+    <p>The obligations of Processor under this Section 12 and under Sections 6, 7, 9, 10, and 11 shall survive the termination of this DPA with respect to any Personal Data retained by Processor.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 13: AUDIT RIGHTS -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">13.</span> Audit Rights</h2>
+
+    <h3>13.1 Audit Information</h3>
+    <p>Processor shall make available to Controller all information necessary to demonstrate compliance with the obligations set out in Article 28 of the UK GDPR / EU GDPR and this DPA, and shall allow for and contribute to audits, including inspections, conducted by Controller or an auditor mandated by Controller.</p>
+
+    <h3>13.2 Compliance Reports</h3>
+    <p>Upon Controller's reasonable written request (not more than once per calendar year, unless a Personal Data Breach has occurred), Processor shall provide Controller with a copy of its most recent:</p>
+    <ul>
+        <li>SOC 2 Type II audit report (or equivalent independent security assessment);</li>
+        <li>Penetration testing summary report;</li>
+        <li>Data protection compliance assessment;</li>
+        <li>Any applicable third-party certifications (e.g., ISO 27001, Cyber Essentials Plus).</li>
+    </ul>
+
+    <h3>13.3 On-Site Audits</h3>
+    <p>Controller may conduct or commission an on-site audit of Processor's compliance with this DPA, subject to the following conditions:</p>
+    <ul>
+        <li>Controller shall provide at least <strong>sixty (60) days'</strong> prior written notice;</li>
+        <li>The audit shall be conducted during normal business hours;</li>
+        <li>The audit shall not unreasonably interfere with Processor's business operations;</li>
+        <li>The auditor shall be bound by appropriate confidentiality obligations;</li>
+        <li>Controller shall bear the costs of the audit, unless the audit reveals a material non-compliance by Processor;</li>
+        <li>Audit scope shall be limited to the Processing activities relevant to this DPA.</li>
+    </ul>
+
+    <h3>13.4 Obligation to Inform</h3>
+    <p>Processor shall immediately inform Controller if, in Processor's opinion, an instruction from Controller infringes Applicable Data Protection Law. Processor shall also inform Controller if Processor is unable to comply with its obligations under this DPA due to a change in applicable law or supervisory authority guidance.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 14: LIABILITY AND INDEMNIFICATION -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">14.</span> Liability and Indemnification</h2>
+
+    <h3>14.1 Liability</h3>
+    <p>Each Party's liability under or in connection with this DPA shall be subject to the limitations and exclusions of liability set out in the Agreement, except that neither Party excludes or limits its liability for obligations arising directly from Applicable Data Protection Law that cannot be limited or excluded by contract.</p>
+
+    <h3>14.2 Indemnification</h3>
+    <p>Processor shall indemnify, defend, and hold harmless Controller from and against any and all claims, losses, liabilities, fines, penalties, costs, and expenses (including reasonable legal fees) arising out of or relating to:</p>
+    <ul>
+        <li>A breach of this DPA by Processor or its Sub-processors;</li>
+        <li>Any Processing of Personal Data by Processor that is not in accordance with Controller's documented instructions (unless required by applicable law);</li>
+        <li>Any regulatory fines or penalties imposed on Controller as a direct result of Processor's breach of this DPA or Applicable Data Protection Law.</li>
+    </ul>
+    <p>This indemnification is subject to Controller promptly notifying Processor of any claim, providing reasonable cooperation, and allowing Processor to control the defence (with Controller's approval of any settlement).</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 15: GENERAL PROVISIONS -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">15.</span> General Provisions</h2>
+
+    <h3>15.1 Precedence</h3>
+    <p>In the event of any conflict between this DPA and the Agreement, this DPA shall prevail with respect to the Processing of Personal Data. In the event of any conflict between this DPA and any incorporated Standard Contractual Clauses, UK IDTA, or Approved Addendum, the incorporated clauses shall prevail with respect to international data transfers.</p>
+
+    <h3>15.2 Amendment</h3>
+    <p>This DPA may not be modified or amended except in writing duly signed by authorised representatives of the Parties. Notwithstanding the foregoing, Processor may update the technical and organisational measures in Annex 2 from time to time, provided that such updates do not materially diminish the overall level of protection afforded to Personal Data.</p>
+
+    <h3>15.3 Severability</h3>
+    <p>If any provision of this DPA is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect, and the invalid or unenforceable provision shall be replaced with a valid and enforceable provision that achieves, to the greatest extent possible, the intent of the original provision.</p>
+
+    <h3>15.4 Governing Law</h3>
+    <p>This DPA shall be governed by and construed in accordance with the laws of England and Wales, without regard to conflict of law principles. The courts of England and Wales shall have exclusive jurisdiction in relation to any disputes arising out of or in connection with this DPA, without prejudice to the rights of Data Subjects to bring claims in their country of habitual residence.</p>
+
+    <h3>15.5 Notices</h3>
+    <p>All notices required or permitted under this DPA shall be in writing and shall be deemed given when delivered personally, sent by confirmed electronic mail, or sent by registered post (with acknowledgment of receipt) to the addresses specified in the Agreement or to such other address as a Party may designate by notice to the other Party.</p>
+
+    <h3>15.6 Entire Agreement</h3>
+    <p>This DPA, together with the Agreement and all Annexes attached hereto, constitutes the entire agreement between the Parties with respect to the Processing of Personal Data and supersedes all prior and contemporaneous agreements, representations, and understandings regarding the same.</p>
+
+    <h3>15.7 HIPAA Coordination</h3>
+    <p>Where Controller is also a Covered Entity or Business Associate under HIPAA, the Parties acknowledge that a separate Business Associate Agreement (BAA) may apply. In the event of a conflict between this DPA and any BAA, the provision affording greater protection to Personal Data / PHI shall prevail.</p>
+
+    <!-- ============================================================ -->
+    <!-- ANNEXES -->
+    <!-- ============================================================ -->
+
+    <h2>Annex 1: Details of Processing</h2>
+
+    <div class="annex">
+        <table>
+            <tr>
+                <th>Element</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td><strong>Subject Matter of Processing</strong></td>
+                <td>Provision of AI-powered clinical documentation services, including real-time audio processing, transcription, and clinical note generation.</td>
+            </tr>
+            <tr>
+                <td><strong>Nature of Processing</strong></td>
+                <td>Collection, recording, organisation, structuring, storage, adaptation, retrieval, consultation, use, disclosure by transmission, alignment, combination, restriction, erasure, and destruction of Personal Data in connection with the Services.</td>
+            </tr>
+            <tr>
+                <td><strong>Purpose of Processing</strong></td>
+                <td>To provide AI-generated clinical documentation from clinical encounters; to store and manage clinical notes; to facilitate integration with EHR systems; to provide quality assurance and technical support.</td>
+            </tr>
+            <tr>
+                <td><strong>Duration of Processing</strong></td>
+                <td>For the duration of the Agreement. Audio data is processed ephemerally (seconds to minutes) and immediately deleted after note generation.</td>
+            </tr>
+            <tr>
+                <td><strong>Categories of Data Subjects</strong></td>
+                <td>Patients, healthcare providers, clinical staff.</td>
+            </tr>
+            <tr>
+                <td><strong>Types of Personal Data</strong></td>
+                <td>Patient identifiers, healthcare provider identifiers, account data, usage data.</td>
+            </tr>
+            <tr>
+                <td><strong>Special Category Data</strong></td>
+                <td>Health data (clinical encounter audio, medical histories, diagnoses, symptoms, treatment plans, medications, clinical observations, AI-generated clinical notes), biometric data (voice recordings, temporary), genetic data (if included in clinical discussions).</td>
+            </tr>
+            <tr>
+                <td><strong>Frequency of Transfer</strong></td>
+                <td>Continuous, real-time during active use of the Services.</td>
+            </tr>
+            <tr>
+                <td><strong>Retention Period</strong></td>
+                <td>Audio: immediately deleted after processing. Clinical notes and documentation: duration of the Agreement plus 30 days for deletion. Legal retention exceptions may apply.</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Annex 2: Technical and Organisational Measures</h2>
+
+    <div class="annex">
+        <p>The following measures are implemented by Processor to protect Personal Data in accordance with Article 32 of the UK GDPR / EU GDPR. These measures are subject to continuous improvement and may be updated from time to time, provided the overall level of protection is not materially diminished.</p>
+
+        <h3>A2.1 Encryption</h3>
+        <ul>
+            <li>Data at rest: AES-256 encryption</li>
+            <li>Data in transit: TLS 1.2+</li>
+            <li>Audio streams: End-to-end encryption from capture device to processing server</li>
+            <li>Database encryption: Transparent Data Encryption (TDE) at the storage layer</li>
+            <li>Key management: Centralised key management with key rotation policies</li>
+        </ul>
+
+        <h3>A2.2 Access Controls</h3>
+        <ul>
+            <li>Role-based access control (RBAC)</li>
+            <li>Multi-factor authentication (MFA) for administrative and privileged access</li>
+            <li>Unique user identification for all system access</li>
+            <li>Principle of least privilege</li>
+            <li>Automatic session timeout</li>
+            <li>Quarterly access reviews</li>
+        </ul>
+
+        <h3>A2.3 Network Security</h3>
+        <ul>
+            <li>Firewalls and network segmentation</li>
+            <li>Intrusion detection and prevention systems (IDS/IPS)</li>
+            <li>DDoS protection</li>
+            <li>Virtual private cloud (VPC) isolation for healthcare workloads</li>
+            <li>Web application firewall (WAF)</li>
+        </ul>
+
+        <h3>A2.4 Monitoring and Logging</h3>
+        <ul>
+            <li>Centralised log management (SIEM)</li>
+            <li>Real-time security event monitoring and alerting</li>
+            <li>Comprehensive audit trails for all data access operations</li>
+            <li>Anomaly detection and automated response</li>
+        </ul>
+
+        <h3>A2.5 Data Management</h3>
+        <ul>
+            <li>Automated data backup with encryption</li>
+            <li>Tested disaster recovery procedures</li>
+            <li>Data classification and labelling</li>
+            <li>Secure data disposal and destruction procedures</li>
+            <li>Audio: ephemeral processing with immediate, irrecoverable deletion</li>
+        </ul>
+
+        <h3>A2.6 Physical Security</h3>
+        <ul>
+            <li>SOC 2 Type II-certified (or equivalent) cloud infrastructure providers</li>
+            <li>Physical access controls at data centre facilities</li>
+            <li>Environmental protections (fire suppression, climate control, redundant power)</li>
+        </ul>
+
+        <h3>A2.7 Personnel</h3>
+        <ul>
+            <li>Background checks (subject to applicable law)</li>
+            <li>Confidentiality agreements</li>
+            <li>Regular data protection and security training</li>
+            <li>Defined incident response roles and responsibilities</li>
+        </ul>
+
+        <h3>A2.8 Certifications and Assessments</h3>
+        <ul>
+            <li>SOC 2 Type II audit (annual)</li>
+            <li>Penetration testing (at least annually)</li>
+            <li>Vulnerability assessments (continuous)</li>
+            <li>HIPAA risk assessment (annual, where applicable)</li>
+            <li>Additional certifications as obtained (e.g., ISO 27001, Cyber Essentials Plus)</li>
+        </ul>
+    </div>
+
+    <h2>Annex 3: List of Sub-processors</h2>
+
+    <div class="annex">
+        <p>The following Sub-processors are authorised by Controller as of the Effective Date:</p>
+        <table>
+            <tr>
+                <th>Sub-processor</th>
+                <th>Location</th>
+                <th>Processing Activity</th>
+                <th>Data Processed</th>
+            </tr>
+            <tr>
+                <td>[Cloud Infrastructure Provider]</td>
+                <td>[Country/Region]</td>
+                <td>Cloud hosting, data storage, compute infrastructure</td>
+                <td>All Personal Data stored on the platform</td>
+            </tr>
+            <tr>
+                <td>[AI/ML Processing Provider, if applicable]</td>
+                <td>[Country/Region]</td>
+                <td>AI model inference, natural language processing</td>
+                <td>Clinical encounter data (ephemeral processing)</td>
+            </tr>
+            <tr>
+                <td>[Email/Communication Provider, if applicable]</td>
+                <td>[Country/Region]</td>
+                <td>Transactional email delivery</td>
+                <td>Account data, email addresses</td>
+            </tr>
+        </table>
+        <p><em>This list is updated periodically. The current list is maintained at [URL]. Changes are notified to Controller in accordance with Section 8.3.</em></p>
+    </div>
+
+    <h2>Annex 4: EU Standard Contractual Clauses</h2>
+
+    <div class="annex">
+        <p>Where the Services involve Restricted Transfers of Personal Data from the EU/EEA, the Approved SCCs (Commission Implementing Decision (EU) 2021/914 of 4 June 2021) are incorporated by reference and shall apply as follows:</p>
+        <ul>
+            <li><strong>Module Two</strong> (Controller to Processor) applies where Controller is an EU/EEA-based data controller transferring Personal Data to Processor;</li>
+            <li><strong>Module Three</strong> (Processor to Sub-processor) applies where Processor transfers Personal Data to a Sub-processor located outside the EU/EEA;</li>
+            <li><strong>Clause 7 (Docking clause)</strong>: Included, allowing additional controllers to accede to the SCCs;</li>
+            <li><strong>Clause 9 (Sub-processors)</strong>: Option 2 (General written authorisation) with 30 days' prior notice;</li>
+            <li><strong>Clause 11 (Redress)</strong>: Optional clause not included;</li>
+            <li><strong>Clause 13 (Supervision)</strong>: The competent supervisory authority shall be [the supervisory authority of the EU/EEA Member State in which the Controller is established];</li>
+            <li><strong>Clause 17 (Governing law)</strong>: Option 1, the laws of [EU Member State of Controller's establishment];</li>
+            <li><strong>Clause 18 (Choice of forum and jurisdiction)</strong>: The courts of [EU Member State of Controller's establishment].</li>
+        </ul>
+        <p>The Annexes to the SCCs (Annex I, Annex II, and Annex III) are completed using the information set out in Annexes 1, 2, and 3 of this DPA, respectively.</p>
+    </div>
+
+    <h2>Annex 5: UK International Data Transfer Addendum / UK IDTA</h2>
+
+    <div class="annex">
+        <p>Where the Services involve Restricted Transfers of Personal Data from the United Kingdom, the following provisions apply:</p>
+
+        <h3>Option A: UK Addendum to the EU SCCs</h3>
+        <p>Where the Approved SCCs (Annex 4) are used for EU transfers and the same transfer also involves UK Personal Data, the Approved Addendum (UK International Data Transfer Addendum to the EU Commission Standard Contractual Clauses, Version B1.0, in force 21 March 2022) is incorporated by reference and attached to the Approved SCCs.</p>
+        <ul>
+            <li><strong>Part 1, Table 1:</strong> Parties as identified in this DPA;</li>
+            <li><strong>Part 1, Table 2:</strong> The Approved SCCs referenced in Annex 4, including Module Two and/or Module Three as applicable;</li>
+            <li><strong>Part 1, Table 3:</strong> Completed using the information in Annexes 1, 2, and 3 of this DPA;</li>
+            <li><strong>Part 1, Table 4:</strong> Either Party may terminate the Addendum in accordance with Section 19 of the Approved Addendum;</li>
+            <li><strong>Part 2:</strong> Mandatory Clauses of the Approved Addendum, being the template Addendum B.1.0 issued by the ICO under section 119A(1) DPA 2018.</li>
+        </ul>
+
+        <h3>Option B: UK IDTA (Standalone)</h3>
+        <p>Alternatively, where the UK IDTA is used as a standalone transfer mechanism for UK transfers (without the EU SCCs), the UK IDTA is incorporated by reference and the tables are completed using the information in Annexes 1, 2, and 3 of this DPA. The UK IDTA shall be governed by the laws of England and Wales.</p>
+
+        <p>The Parties shall agree in the Agreement or by separate written instrument which option (A or B) applies to their data transfers.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SIGNATURE BLOCK -->
+    <!-- ============================================================ -->
+
+    <div class="signature-block">
+        <div class="party">
+            <h3>DATA CONTROLLER</h3>
+            <div class="sig-line">Authorised Signature</div>
+            <div class="sig-line">Printed Name</div>
+            <div class="sig-line">Title</div>
+            <div class="sig-line">Date</div>
+        </div>
+        <div class="party">
+            <h3>DATA PROCESSOR<br><small>GATMEDI Ltd (t/a ClinixSummary)</small></h3>
+            <div class="sig-line">Authorised Signature</div>
+            <div class="sig-line">Printed Name</div>
+            <div class="sig-line">Title</div>
+            <div class="sig-line">Date</div>
+        </div>
+    </div>
+
+</main>
+
+</body>
+</html>

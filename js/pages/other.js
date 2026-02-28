@@ -141,7 +141,7 @@ function SecurityPage() {
                     <h2 style="font-family: var(--font-serif); font-size: 36px; margin-bottom: 20px;" data-i18n="security.cta_title">Ready to secure your documentation workflow?</h2>
                     <div class="nav-actions" style="justify-content: center;">
                         <a href="#" class="btn-primary" style="background: #fff; color: var(--text-primary);" onclick="showToast('Trial started!'); return false;" data-i18n="common.start_trial">Start free trial</a>
-                        <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="common.contact_us">Contact our team</a>
+                        <a href="/contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="common.contact_us">Contact our team</a>
                     </div>
                 </div>
             </div>
@@ -487,7 +487,7 @@ function TermsEnterprisePage() {
                 <div style="background: var(--bg-subtle); padding: 30px; border-radius: 12px; margin-top: 40px; border: 1px solid var(--border-subtle); text-align: center;">
                     <h4 style="font-weight: 700; font-size: 20px; margin-bottom: 12px;" data-i18n="terms_enterprise.cta_title">Ready to discuss Enterprise terms?</h4>
                     <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="terms_enterprise.cta_desc">Our team can walk you through licensing, compliance requirements and custom agreements.</p>
-                    <a href="#contact" class="btn-primary" onclick="setTimeout(function(){ var sel = document.getElementById('contact-topic'); if(sel) sel.value='Enterprise Licensing'; }, 200);" data-i18n="terms_enterprise.cta_btn">Contact Enterprise Sales</a>
+                    <a href="/contact" class="btn-primary" onclick="setTimeout(function(){ var sel = document.getElementById('contact-topic'); if(sel) sel.value='Enterprise Licensing'; }, 200);" data-i18n="terms_enterprise.cta_btn">Contact Enterprise Sales</a>
                 </div>
             </div>
         </section>
@@ -720,7 +720,7 @@ function StoryPage() {
                     <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="story.cta_desc">Whether you\u2019re a clinician, a clinic manager or a healthcare innovator, we invite you to be part of our mission to simplify documentation for all.</p>
                     <div class="nav-actions" style="justify-content: center;">
                         <a href="#" class="btn-primary" style="background: var(--text-primary); color: white;" onclick="showToast('Trial started!'); return false;" data-i18n="story.cta_trial">Start free trial</a>
-                        <a href="#contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
+                        <a href="/contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
                     </div>
                 </div>
             </div>
