@@ -172,6 +172,9 @@ function router() {
             I18n.handleNonTranslatedRoute(path);
         }
 
+        // Update document title, meta tags, canonical URL and social cards
+        if (typeof SEO !== 'undefined') SEO.updatePageMeta(path);
+
         window.scrollTo(0, 0);
 
         // Focus management: move focus to main content heading after route change
