@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Associate Agreement (BAA) – ClinixSummary</title>
+    <meta name="description" content="ClinixSummary HIPAA Business Associate Agreement (BAA) governing the use and protection of Protected Health Information." />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <link rel="icon" type="image/png" href="images/logo-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .legal-page {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+        }
+        .legal-page h1 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        .legal-page .doc-meta {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .legal-page h2 {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+        .legal-page h3 {
+            font-family: var(--font-sans);
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        .legal-page p,
+        .legal-page li {
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+        .legal-page ul, .legal-page ol {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+        .legal-page li {
+            margin-bottom: 6px;
+        }
+        .legal-page .section-number {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        .legal-page strong {
+            color: var(--text-primary);
+        }
+        .legal-page .preamble {
+            background: var(--bg-subtle);
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+            border-left: 3px solid var(--accent);
+        }
+        .legal-page .preamble p {
+            margin-bottom: 8px;
+        }
+        .legal-page .signature-block {
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .legal-page .signature-block .party h3 {
+            margin-top: 0;
+            margin-bottom: 24px;
+        }
+        .legal-page .signature-block .sig-line {
+            border-top: 1px solid var(--text-secondary);
+            padding-top: 6px;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .legal-page .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+        .legal-page .back-link:hover {
+            color: var(--accent-hover);
+        }
+        .legal-page .exhibit {
+            background: var(--bg-subtle);
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+        .legal-page .exhibit h3 {
+            margin-top: 0;
+        }
+        @media (max-width: 600px) {
+            .legal-page { padding: 100px 16px 60px; }
+            .legal-page h1 { font-size: 1.5rem; }
+            .legal-page .signature-block { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="legal-page">
+    <a href="index.html" class="back-link">&larr; Back to ClinixSummary</a>
+
+    <h1>Business Associate Agreement</h1>
+    <div class="doc-meta">
+        <strong>Effective Date:</strong> [Date]<br>
+        <strong>Last Updated:</strong> February 2026<br>
+        <strong>Document Reference:</strong> GATMEDI-BAA-2026-001
+    </div>
+
+    <div class="preamble">
+        <p>This Business Associate Agreement ("<strong>BAA</strong>") is entered into by and between the entity identified as the Covered Entity or Business Associate in the applicable Services Agreement ("<strong>Covered Entity</strong>") and <strong>GATMEDI Ltd</strong>, a company incorporated in England and Wales (trading as "<strong>ClinixSummary</strong>"), located at [registered address] ("<strong>Business Associate</strong>"), collectively referred to as the "<strong>Parties</strong>."</p>
+        <p>This BAA supplements and forms part of the Services Agreement (the "<strong>Agreement</strong>") between the Parties under which Business Associate provides AI-powered clinical documentation services to or on behalf of Covered Entity.</p>
+        <p>This BAA is required by the Health Insurance Portability and Accountability Act of 1996 ("<strong>HIPAA</strong>"), the Health Information Technology for Economic and Clinical Health Act ("<strong>HITECH Act</strong>"), and their implementing regulations at 45 CFR Parts 160 and 164 (collectively, the "<strong>HIPAA Rules</strong>").</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 1: DEFINITIONS -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">1.</span> Definitions</h2>
+
+    <p>Capitalized terms used but not otherwise defined in this BAA shall have the meanings assigned to them under the HIPAA Rules. The following terms shall have the meanings set forth below:</p>
+
+    <h3>1.1 Breach</h3>
+    <p>Shall have the meaning given to such term under 45 CFR &sect; 164.402, and includes the unauthorized acquisition, access, use, or disclosure of Protected Health Information that compromises the security or privacy of such information, except where an exclusion under 45 CFR &sect; 164.402 applies.</p>
+
+    <h3>1.2 Business Associate</h3>
+    <p>Shall have the meaning given to such term under 45 CFR &sect; 160.103. For purposes of this BAA, "Business Associate" refers to GATMEDI Ltd (trading as ClinixSummary).</p>
+
+    <h3>1.3 Covered Entity</h3>
+    <p>Shall have the meaning given to such term under 45 CFR &sect; 160.103. For purposes of this BAA, "Covered Entity" refers to the entity that has executed the Services Agreement with Business Associate.</p>
+
+    <h3>1.4 Designated Record Set</h3>
+    <p>Shall have the meaning given to such term under 45 CFR &sect; 164.501.</p>
+
+    <h3>1.5 Electronic Protected Health Information (ePHI)</h3>
+    <p>Shall have the meaning given to such term under 45 CFR &sect; 160.103, limited to the ePHI created, received, maintained, or transmitted by Business Associate on behalf of Covered Entity through the ClinixSummary platform.</p>
+
+    <h3>1.6 Individual</h3>
+    <p>Shall have the meaning given to such term under 45 CFR &sect; 160.103 and shall include a person who qualifies as a personal representative in accordance with 45 CFR &sect; 164.502(g).</p>
+
+    <h3>1.7 Protected Health Information (PHI)</h3>
+    <p>Shall have the meaning given to such term under 45 CFR &sect; 160.103, limited to the PHI created, received, maintained, or transmitted by Business Associate on behalf of Covered Entity.</p>
+
+    <h3>1.8 Required by Law</h3>
+    <p>Shall have the meaning given to such term under 45 CFR &sect; 164.103.</p>
+
+    <h3>1.9 Secretary</h3>
+    <p>Shall mean the Secretary of the U.S. Department of Health and Human Services or his or her designee.</p>
+
+    <h3>1.10 Security Incident</h3>
+    <p>Shall have the meaning given to such term under 45 CFR &sect; 164.304.</p>
+
+    <h3>1.11 Services</h3>
+    <p>Shall mean the AI-powered clinical documentation services provided by Business Associate to Covered Entity under the Agreement, including but not limited to: audio capture and real-time transcription of clinical encounters, AI-generated clinical note generation, clinical documentation storage and management, and related platform functionality.</p>
+
+    <h3>1.12 Subcontractor</h3>
+    <p>Shall have the meaning given to such term under 45 CFR &sect; 160.103.</p>
+
+    <h3>1.13 Unsecured Protected Health Information</h3>
+    <p>Shall have the meaning given to such term under 45 CFR &sect; 164.402.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 2: OBLIGATIONS OF BUSINESS ASSOCIATE -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">2.</span> Obligations of Business Associate</h2>
+
+    <h3>2.1 Limitation on Use and Disclosure</h3>
+    <p>Business Associate shall not use or disclose PHI other than as permitted or required by this BAA, the Agreement, or as Required by Law. Business Associate shall not use or disclose PHI in a manner that would violate Subpart E of 45 CFR Part 164 if done by Covered Entity, except as expressly permitted under Sections 3.2 and 3.3 of this BAA.</p>
+
+    <h3>2.2 Appropriate Safeguards</h3>
+    <p>Business Associate shall implement and maintain appropriate administrative, physical, and technical safeguards as set forth in Section 5, and shall comply with the requirements of Subpart C of 45 CFR Part 164 (the Security Rule) with respect to ePHI, to prevent the use or disclosure of PHI other than as provided for by this BAA.</p>
+
+    <h3>2.3 Minimum Necessary Standard</h3>
+    <p>Business Associate shall limit its use, disclosure, or request of PHI to the minimum necessary to accomplish the intended purpose of such use, disclosure, or request, in accordance with 45 CFR &sect; 164.502(b) and Section 13405(b) of the HITECH Act. To the extent practicable, Business Associate shall use or disclose only a Limited Data Set or de-identified data.</p>
+
+    <h3>2.4 Reporting Obligations</h3>
+    <p>Business Associate shall report to Covered Entity:</p>
+    <ul>
+        <li>Any use or disclosure of PHI not provided for by this BAA of which Business Associate becomes aware, including Breaches of Unsecured PHI as required under 45 CFR &sect; 164.410;</li>
+        <li>Any Security Incident of which Business Associate becomes aware, in accordance with Section 6 of this BAA.</li>
+    </ul>
+
+    <h3>2.5 Subcontractor Compliance</h3>
+    <p>In accordance with 45 CFR &sect; 164.502(e)(1)(ii) and &sect; 164.308(b)(2), Business Associate shall ensure that any Subcontractor that creates, receives, maintains, or transmits PHI on behalf of Business Associate agrees in writing to the same restrictions, conditions, and requirements that apply to Business Associate under this BAA with respect to such PHI. Business Associate shall maintain an up-to-date list of Subcontractors who access PHI, available to Covered Entity upon request.</p>
+
+    <h3>2.6 Access to PHI</h3>
+    <p>Business Associate shall make PHI maintained in a Designated Record Set available to Covered Entity as necessary to satisfy Covered Entity's obligations under 45 CFR &sect; 164.524, and shall do so within fifteen (15) business days of receiving a written request from Covered Entity. If PHI is maintained in electronic form, Business Associate shall provide such information in the electronic form and format requested by Covered Entity, if readily producible, or in a readable alternative electronic form as agreed by the Parties.</p>
+
+    <h3>2.7 Amendment of PHI</h3>
+    <p>Business Associate shall make PHI maintained in a Designated Record Set available to Covered Entity for amendment and shall incorporate any amendments to PHI as directed by Covered Entity pursuant to 45 CFR &sect; 164.526, within fifteen (15) business days of receiving a written request.</p>
+
+    <h3>2.8 Accounting of Disclosures</h3>
+    <p>Business Associate shall document and make available to Covered Entity the information required to provide an accounting of disclosures in accordance with 45 CFR &sect; 164.528. Business Associate shall maintain such records for a period of at least six (6) years from the date of the disclosure.</p>
+
+    <h3>2.9 Availability of Records to HHS</h3>
+    <p>Business Associate shall make its internal practices, books, and records relating to the use and disclosure of PHI available to the Secretary of HHS for purposes of determining Covered Entity's compliance with the HIPAA Rules, subject to applicable legal privileges.</p>
+
+    <h3>2.10 Mitigation</h3>
+    <p>Business Associate shall take commercially reasonable measures to mitigate, to the extent practicable, any harmful effect that is known to Business Associate of a use or disclosure of PHI by Business Associate, its employees, or Subcontractors in violation of this BAA.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 3: PERMITTED USES AND DISCLOSURES -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">3.</span> Permitted Uses and Disclosures of PHI</h2>
+
+    <h3>3.1 Performance of Services</h3>
+    <p>Business Associate may use or disclose PHI solely as necessary to perform its obligations under the Agreement and to provide the Services to Covered Entity, including:</p>
+    <ul>
+        <li>Processing audio recordings of clinical encounters for the purpose of generating clinical documentation (audio is processed in real-time and immediately deleted upon note generation; audio is not stored, retained, or archived);</li>
+        <li>Generating, storing, and managing AI-produced clinical notes, summaries, and related documentation;</li>
+        <li>Providing clinical documentation to Covered Entity through the ClinixSummary platform;</li>
+        <li>Performing quality assurance and error correction on generated clinical documentation at Covered Entity's direction.</li>
+    </ul>
+
+    <h3>3.2 Management and Administration</h3>
+    <p>Business Associate may use PHI for the proper management and administration of Business Associate or to carry out the legal responsibilities of Business Associate, provided that:</p>
+    <ul>
+        <li>Such use is necessary for the proper management and administration of Business Associate;</li>
+        <li>Any disclosure is Required by Law; or</li>
+        <li>Business Associate obtains reasonable assurances from any person or entity to whom it discloses PHI that the recipient will (a) hold such information confidentially, (b) use or further disclose it only as Required by Law or for the purposes for which it was disclosed, and (c) notify Business Associate of any instances of which it becomes aware in which the confidentiality of such information has been breached.</li>
+    </ul>
+
+    <h3>3.3 De-Identification of PHI</h3>
+    <p>Business Associate may use PHI to create de-identified data in accordance with 45 CFR &sect; 164.514(a)-(c), provided that (a) the de-identification meets the requirements of the Expert Determination or Safe Harbor method, and (b) the de-identified data is not re-identified. De-identified data is not subject to the restrictions of this BAA.</p>
+
+    <h3>3.4 Prohibited Uses and Disclosures</h3>
+    <p>Notwithstanding any other provision of this BAA, Business Associate shall not:</p>
+    <ul>
+        <li><strong>Use PHI for AI model training:</strong> Business Associate shall not use PHI, including audio recordings, transcriptions, or clinical notes, to train, fine-tune, improve, or develop any general-purpose or third-party artificial intelligence or machine learning models. Any model improvement activities shall use only de-identified data in accordance with Section 3.3;</li>
+        <li><strong>Sell PHI:</strong> Business Associate shall not directly or indirectly receive remuneration in exchange for PHI, except as permitted under 45 CFR &sect; 164.502(a)(5)(ii) and Section 13405(d) of the HITECH Act;</li>
+        <li><strong>Use PHI for marketing:</strong> Business Associate shall not use or disclose PHI for marketing purposes, as defined under 45 CFR &sect; 164.501, without prior written authorization from the Individual;</li>
+        <li><strong>Use PHI for underwriting:</strong> Business Associate shall not use or disclose genetic information for underwriting purposes in accordance with Section 13405(a) of the HITECH Act.</li>
+    </ul>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 4: OBLIGATIONS OF COVERED ENTITY -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">4.</span> Obligations of Covered Entity</h2>
+
+    <h3>4.1 Notice of Privacy Practices</h3>
+    <p>Covered Entity shall notify Business Associate of any limitation(s) in its Notice of Privacy Practices under 45 CFR &sect; 164.520, to the extent that such limitation may affect Business Associate's use or disclosure of PHI.</p>
+
+    <h3>4.2 Changes in Permission</h3>
+    <p>Covered Entity shall notify Business Associate of any changes in, or revocation of, permission by an Individual to use or disclose PHI, to the extent that such changes may affect Business Associate's permitted uses or disclosures of PHI.</p>
+
+    <h3>4.3 Restrictions on PHI</h3>
+    <p>Covered Entity shall notify Business Associate of any restriction on the use or disclosure of PHI that Covered Entity has agreed to or is required to abide by under 45 CFR &sect; 164.522, to the extent that such restriction may affect Business Associate's use or disclosure of PHI.</p>
+
+    <h3>4.4 Permissible Requests</h3>
+    <p>Covered Entity shall not request Business Associate to use or disclose PHI in any manner that would violate the HIPAA Rules if done by Covered Entity, except as expressly permitted under this BAA.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 5: SAFEGUARDS -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">5.</span> Safeguards</h2>
+
+    <p>Business Associate shall implement and maintain safeguards that reasonably and appropriately protect the confidentiality, integrity, and availability of PHI, including ePHI, that it creates, receives, maintains, or transmits on behalf of Covered Entity. Such safeguards shall include, at a minimum:</p>
+
+    <h3>5.1 Administrative Safeguards</h3>
+    <ul>
+        <li>Designation of a Security Officer and a Privacy Officer responsible for the development and implementation of policies and procedures;</li>
+        <li>Workforce training on HIPAA requirements and the proper handling of PHI;</li>
+        <li>Access management policies including role-based access controls, unique user identification, and periodic access reviews;</li>
+        <li>Documented security policies and procedures, regularly reviewed and updated;</li>
+        <li>Business continuity and disaster recovery plans;</li>
+        <li>Risk analysis and risk management programs conducted at least annually;</li>
+        <li>Sanction policies for workforce members who violate security policies.</li>
+    </ul>
+
+    <h3>5.2 Physical Safeguards</h3>
+    <ul>
+        <li>Use of SOC 2 Type II-certified or equivalent cloud infrastructure providers (e.g., AWS, Google Cloud) with documented physical access controls;</li>
+        <li>Facility access controls, including restricted physical access to data processing areas;</li>
+        <li>Workstation use and security policies for employees who access PHI;</li>
+        <li>Device and media controls governing the receipt and removal of hardware and electronic media containing ePHI.</li>
+    </ul>
+
+    <h3>5.3 Technical Safeguards</h3>
+    <ul>
+        <li><strong>Encryption:</strong> All PHI is encrypted at rest using AES-256 encryption and in transit using TLS 1.2 or higher;</li>
+        <li><strong>Access controls:</strong> Unique user identification, automatic logoff, multi-factor authentication for administrative access, and role-based access controls;</li>
+        <li><strong>Audit controls:</strong> Comprehensive audit logging of all access to systems containing PHI, with logs retained for a minimum of six (6) years;</li>
+        <li><strong>Integrity controls:</strong> Mechanisms to authenticate ePHI and protect against improper alteration or destruction;</li>
+        <li><strong>Transmission security:</strong> All PHI transmitted electronically is encrypted end-to-end;</li>
+        <li><strong>Audio processing:</strong> Clinical encounter audio is processed in real-time within encrypted, ephemeral processing environments and is immediately and irrecoverably deleted upon completion of note generation. No audio recordings are stored at rest.</li>
+    </ul>
+
+    <h3>5.4 AI-Specific Safeguards</h3>
+    <ul>
+        <li>AI models used for clinical documentation are isolated from general-purpose models and do not retain patient-specific PHI after processing;</li>
+        <li>No PHI is used for training, fine-tuning, or improving AI models (model improvement uses only de-identified, aggregated data);</li>
+        <li>AI outputs (generated clinical notes) are treated as PHI and subject to all protections under this BAA;</li>
+        <li>Regular validation and bias testing of AI models to ensure accuracy and safety of clinical documentation;</li>
+        <li>Human review processes are available at Covered Entity's discretion for AI-generated documentation.</li>
+    </ul>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 6: BREACH NOTIFICATION -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">6.</span> Breach Notification and Security Incident Reporting</h2>
+
+    <h3>6.1 Breach Notification</h3>
+    <p>Business Associate shall notify Covered Entity in writing without unreasonable delay and in no event later than <strong>thirty (30) calendar days</strong> after the discovery of a Breach of Unsecured PHI, in accordance with 45 CFR &sect; 164.410. A Breach shall be treated as discovered by Business Associate as of the first day on which such Breach is known or, by exercising reasonable diligence, would have been known to Business Associate, its employee, officer, or agent (other than the person committing the Breach).</p>
+
+    <h3>6.2 Content of Breach Notice</h3>
+    <p>The breach notification shall include, to the extent available:</p>
+    <ul>
+        <li>Identification of each Individual whose Unsecured PHI has been, or is reasonably believed by Business Associate to have been, accessed, acquired, used, or disclosed during the Breach;</li>
+        <li>A brief description of what happened, including the date of the Breach and the date of discovery;</li>
+        <li>A description of the types of Unsecured PHI involved in the Breach (such as full name, date of birth, clinical notes, diagnosis codes);</li>
+        <li>Any steps Individuals should take to protect themselves from potential harm resulting from the Breach;</li>
+        <li>A brief description of what Business Associate is doing to investigate the Breach, mitigate harm to Individuals, and protect against further Breaches.</li>
+    </ul>
+
+    <h3>6.3 Security Incident Reporting</h3>
+    <p>Business Associate shall report to Covered Entity any Security Incident of which it becomes aware within <strong>five (5) business days</strong> of discovery. The Parties acknowledge that unsuccessful Security Incidents (such as pings, port scans, unsuccessful log-in attempts, or denial-of-service attacks that do not result in unauthorized access, use, or disclosure of PHI) occur frequently. Business Associate shall provide a summary report of unsuccessful Security Incidents upon Covered Entity's written request, no more frequently than quarterly.</p>
+
+    <h3>6.4 Cooperation</h3>
+    <p>Business Associate shall cooperate with Covered Entity in the investigation and remediation of any Breach or Security Incident and shall provide Covered Entity with all information reasonably necessary to enable Covered Entity to comply with its notification obligations under 45 CFR Part 164, Subpart D.</p>
+
+    <h3>6.5 Mitigation Costs</h3>
+    <p>To the extent a Breach is caused by the acts or omissions of Business Associate or its Subcontractors, Business Associate shall bear the reasonable and documented costs of (a) the investigation of the Breach, (b) individual notification as required under 45 CFR &sect; 164.404, (c) credit monitoring services for affected Individuals (if determined appropriate), and (d) media notification as required under 45 CFR &sect; 164.406, if applicable.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 7: TERM AND TERMINATION -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">7.</span> Term and Termination</h2>
+
+    <h3>7.1 Term</h3>
+    <p>This BAA shall become effective on the Effective Date and shall remain in effect for the duration of the Agreement, unless earlier terminated as provided herein. This BAA shall automatically terminate upon the expiration or termination of the Agreement.</p>
+
+    <h3>7.2 Termination for Cause</h3>
+    <p>Either Party may terminate this BAA upon thirty (30) days' written notice to the other Party if the other Party materially breaches any provision of this BAA and fails to cure such breach within thirty (30) days of receiving written notice thereof. If cure is not reasonably possible, the non-breaching Party may immediately terminate this BAA upon written notice. If neither termination nor cure is feasible, the non-breaching Party shall report the violation to the Secretary.</p>
+
+    <h3>7.3 Effect of Termination</h3>
+    <p>Upon termination of this BAA for any reason, Business Associate shall:</p>
+    <ul>
+        <li>Cease all uses and disclosures of PHI;</li>
+        <li>Within thirty (30) days, return to Covered Entity or destroy all PHI in Business Associate's possession, including all copies in any form or medium, and provide written certification of such destruction to Covered Entity;</li>
+        <li>If return or destruction is not feasible (for example, due to legal retention requirements), Business Associate shall (a) extend the protections of this BAA to such PHI for as long as it is retained, (b) limit further uses and disclosures of such PHI to those purposes that make the return or destruction infeasible, and (c) notify Covered Entity of the specific reasons that return or destruction is infeasible.</li>
+    </ul>
+
+    <h3>7.4 Audio Data</h3>
+    <p>The Parties acknowledge that audio recordings of clinical encounters are processed in real-time and immediately deleted upon note generation as part of normal service operations. Accordingly, no audio recordings will exist at the time of termination, and the return or destruction obligations under this Section 7 shall apply only to clinical notes, documentation, and other PHI stored on the ClinixSummary platform.</p>
+
+    <h3>7.5 Survival</h3>
+    <p>The obligations of Business Associate under this Section 7 and under Sections 5, 6, and 8 shall survive the termination of this BAA with respect to any PHI retained by Business Associate.</p>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 8: GENERAL PROVISIONS -->
+    <!-- ============================================================ -->
+
+    <h2><span class="section-number">8.</span> General Provisions</h2>
+
+    <h3>8.1 Compliance with HITECH Act</h3>
+    <p>The Parties acknowledge that the HITECH Act and its implementing regulations impose requirements on Business Associates that are equivalent to those imposed on Covered Entities with respect to the Security Rule, certain provisions of the Privacy Rule, and the Breach Notification Rule. Business Associate shall comply with all applicable provisions of the HITECH Act and its implementing regulations.</p>
+
+    <h3>8.2 Regulatory References</h3>
+    <p>Any reference in this BAA to a section of the HIPAA Rules shall mean the section as in effect or as amended and any successor regulations thereto.</p>
+
+    <h3>8.3 Amendment</h3>
+    <p>The Parties agree to take such action as is necessary to amend this BAA from time to time as is necessary for compliance with the requirements of the HIPAA Rules, the HITECH Act, and any other applicable law. This BAA may not be modified or amended except in writing duly signed by authorized representatives of the Parties.</p>
+
+    <h3>8.4 Interpretation</h3>
+    <p>Any ambiguity in this BAA shall be resolved to permit compliance with the HIPAA Rules. In the event of a conflict between the terms of this BAA and the Agreement, the terms of this BAA shall govern with respect to PHI.</p>
+
+    <h3>8.5 No Third-Party Beneficiaries</h3>
+    <p>Nothing express or implied in this BAA is intended to confer, nor shall anything herein confer, upon any person other than the Parties and their respective successors or assigns, any rights, remedies, obligations, or liabilities whatsoever. However, this provision does not limit the rights of Individuals with respect to their PHI under the HIPAA Rules.</p>
+
+    <h3>8.6 Indemnification</h3>
+    <p>Business Associate shall indemnify, defend, and hold harmless Covered Entity from and against any and all claims, losses, liabilities, costs, and other expenses (including reasonable attorneys' fees) arising out of or relating to a breach of this BAA by Business Associate or its Subcontractors, except to the extent caused by Covered Entity's negligence or breach of the Agreement.</p>
+
+    <h3>8.7 Insurance</h3>
+    <p>Business Associate shall maintain cyber liability and professional liability insurance policies with coverage limits reasonably sufficient to cover its obligations under this BAA, including coverage for data breaches involving PHI.</p>
+
+    <h3>8.8 Audit and Compliance Verification</h3>
+    <p>Upon Covered Entity's reasonable written request (not more than once per calendar year, unless a Breach has occurred), Business Associate shall provide Covered Entity with a copy of its most recent:</p>
+    <ul>
+        <li>SOC 2 Type II audit report (or equivalent independent security assessment);</li>
+        <li>HIPAA risk assessment summary;</li>
+        <li>Penetration testing summary report;</li>
+        <li>Any applicable third-party certifications (e.g., HITRUST).</li>
+    </ul>
+    <p>Covered Entity agrees to treat all audit reports and security documentation as Confidential Information. Covered Entity may conduct or commission an independent audit of Business Associate's compliance with this BAA at its own expense, upon sixty (60) days' prior written notice, provided such audit does not unreasonably interfere with Business Associate's operations.</p>
+
+    <h3>8.9 Governing Law</h3>
+    <p>This BAA shall be governed by and construed in accordance with federal law, including the HIPAA Rules and the HITECH Act. To the extent that state law applies, the laws of [state/jurisdiction to be specified in the Agreement] shall govern.</p>
+
+    <h3>8.10 Notices</h3>
+    <p>All notices required or permitted under this BAA shall be in writing and shall be deemed given when delivered personally, sent by confirmed electronic mail, or sent by certified or registered mail (return receipt requested) to the addresses specified in the Agreement or to such other address as a Party may designate by notice to the other Party.</p>
+
+    <h3>8.11 Entire Agreement</h3>
+    <p>This BAA, together with the Agreement and any exhibits attached hereto, constitutes the entire agreement between the Parties with respect to the subject matter hereof and supersedes all prior and contemporaneous agreements, representations, and understandings regarding the same.</p>
+
+    <!-- ============================================================ -->
+    <!-- EXHIBIT A: DESCRIPTION OF SERVICES AND PHI -->
+    <!-- ============================================================ -->
+
+    <h2>Exhibit A: Description of Services and PHI</h2>
+
+    <div class="exhibit">
+        <h3>A.1 Description of Services</h3>
+        <p>Business Associate provides AI-powered clinical documentation services through the ClinixSummary platform, including:</p>
+        <ul>
+            <li>Real-time capture and transcription of clinical encounter audio;</li>
+            <li>AI-powered generation of clinical notes, including SOAP notes, H&P documentation, procedure notes, and other clinical documentation formats;</li>
+            <li>Clinical documentation storage, retrieval, and export;</li>
+            <li>Integration with electronic health record (EHR) systems;</li>
+            <li>Billing code suggestions based on clinical documentation.</li>
+        </ul>
+
+        <h3>A.2 Categories of PHI</h3>
+        <p>The following categories of PHI may be created, received, maintained, or transmitted by Business Associate in connection with the Services:</p>
+        <ul>
+            <li>Patient demographic information (names, dates of birth, contact information, medical record numbers);</li>
+            <li>Clinical encounter audio (temporary; immediately deleted after note generation);</li>
+            <li>Transcriptions and AI-generated clinical notes;</li>
+            <li>Medical histories, diagnoses, treatment plans, and medication lists;</li>
+            <li>Clinical observations, assessments, and plans;</li>
+            <li>Procedure and operative notes;</li>
+            <li>Billing and diagnostic codes (ICD-10, CPT);</li>
+            <li>Provider identification information.</li>
+        </ul>
+
+        <h3>A.3 Categories of Individuals</h3>
+        <p>PHI processed under this BAA relates to:</p>
+        <ul>
+            <li>Patients of the Covered Entity who are the subject of clinical encounters;</li>
+            <li>Healthcare providers and clinical staff (to the extent their information is included in clinical documentation).</li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SIGNATURE BLOCK -->
+    <!-- ============================================================ -->
+
+    <div class="signature-block">
+        <div class="party">
+            <h3>COVERED ENTITY</h3>
+            <div class="sig-line">Authorized Signature</div>
+            <div class="sig-line">Printed Name</div>
+            <div class="sig-line">Title</div>
+            <div class="sig-line">Date</div>
+        </div>
+        <div class="party">
+            <h3>BUSINESS ASSOCIATE<br><small>GATMEDI Ltd (t/a ClinixSummary)</small></h3>
+            <div class="sig-line">Authorized Signature</div>
+            <div class="sig-line">Printed Name</div>
+            <div class="sig-line">Title</div>
+            <div class="sig-line">Date</div>
+        </div>
+    </div>
+
+</main>
+
+</body>
+</html>

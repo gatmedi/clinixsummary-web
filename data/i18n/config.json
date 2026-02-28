@@ -4,7 +4,7 @@
   "storageKey": "clinixsummary-lang",
   "queryParam": "lang",
   "nonTranslatedRoutes": [
-    "#case-studies"
+    "/case-studies"
   ],
   "nonTranslatedBanner": {
     "icon": "translate",

@@ -95,67 +95,68 @@ function calculateSavings() {
 
 const routes = {
     // Home
-    '#home':               HomePage,
-    '#pricing':            HomePage,
-    '#contact':            ContactPage,
-    '':                    HomePage,
+    '/':                   HomePage,
+    '/pricing':            HomePage,
+    '/contact':            ContactPage,
 
     // Meet ClinixSummary
-    '#meticulous-notes':   MeticulousNotesPage,
-    '#proprietary-models': ProprietaryModelsPage,
-    '#kaizen':             KaizenPage,
-    '#security':           SecurityPage,
-    '#languages':          LanguagesPage,
-    '#auto-ambient':       AutoAmbientPage,
-    '#cme-vault':          CMEVaultPage,
-    '#clinix-foundation':  ClinixFoundationPage,
+    '/meticulous-notes':   MeticulousNotesPage,
+    '/proprietary-models': ProprietaryModelsPage,
+    '/kaizen':             KaizenPage,
+    '/security':           SecurityPage,
+    '/languages':          LanguagesPage,
+    '/auto-ambient':       AutoAmbientPage,
+    '/cme-vault':          CMEVaultPage,
+    '/clinix-foundation':  ClinixFoundationPage,
 
     // Solutions
-    '#clinicians':         CliniciansPage,
-    '#organizations':      OrganizationsPage,
-    '#insurers':           InsurersPage,
-    '#government':         GovernmentPage,
-    '#nonprofit':          NonprofitPage,
-    '#integrations':       IntegrationsPage,
+    '/clinicians':         CliniciansPage,
+    '/organizations':      OrganizationsPage,
+    '/insurers':           InsurersPage,
+    '/government':         GovernmentPage,
+    '/nonprofit':          NonprofitPage,
+    '/integrations':       IntegrationsPage,
 
     // Capabilities
-    '#cap-medical':        CapMedicalPage,
-    '#cap-dental':         CapDentalPage,
-    '#cap-psychiatry':     CapPsychiatryPage,
-    '#cap-psychology':     CapPsychologyPage,
-    '#cap-allied-health':  CapAlliedHealthPage,
-    '#cap-midwifery':      CapMidwiferyPage,
-    '#cap-vet':            CapVetPage,
-    '#cap-operative':      CapOperativePage,
-    '#billing-assist':     BillingAssistPage,
-    '#cap-patient-leaflet': CapPatientLeafletPage,
-    '#referrals':          ReferralsPage,
-    '#icd-coding':         ICDCodingPage,
-    '#radiology-assist':   RadiologyAssistPage,
-    '#dermatology-assist': DermatologyAssistPage,
-    '#triage-assist':      TriageAssistPage,
+    '/cap-medical':        CapMedicalPage,
+    '/cap-dental':         CapDentalPage,
+    '/cap-psychiatry':     CapPsychiatryPage,
+    '/cap-psychology':     CapPsychologyPage,
+    '/cap-allied-health':  CapAlliedHealthPage,
+    '/cap-midwifery':      CapMidwiferyPage,
+    '/cap-vet':            CapVetPage,
+    '/cap-operative':      CapOperativePage,
+    '/billing-assist':     BillingAssistPage,
+    '/cap-patient-leaflet': CapPatientLeafletPage,
+    '/referrals':          ReferralsPage,
+    '/icd-coding':         ICDCodingPage,
+    '/radiology-assist':   RadiologyAssistPage,
+    '/dermatology-assist': DermatologyAssistPage,
+    '/triage-assist':      TriageAssistPage,
 
     // Learn
-    '#publications':       PublicationsPage,
-    '#whitepapers':        WhitepapersPage,
-    '#case-studies':       CaseStudiesPage,
-    '#news':               NewsPage,
-    '#blog':               PodcastsPage,
+    '/publications':       PublicationsPage,
+    '/whitepapers':        WhitepapersPage,
+    '/case-studies':       CaseStudiesPage,
+    '/news':               NewsPage,
 
     // Other
-    '#careers':            CareersPage,
-    '#story':              StoryPage,
-    '#privacy-policy':     PrivacyPolicyPage,
-    '#privacy-choices':    PrivacyChoicesPage,
-    '#terms-enterprise':   TermsEnterprisePage,
-    '#usage-policy':       UsagePolicyPage,
-    '#leaflet':            LeafletPage,
-    '#roi-calculator':     HomePage,
+    '/careers':            CareersPage,
+    '/story':              StoryPage,
+    '/privacy-policy':     PrivacyPolicyPage,
+    '/privacy-choices':    PrivacyChoicesPage,
+    '/terms-enterprise':   TermsEnterprisePage,
+    '/usage-policy':       UsagePolicyPage,
+    '/baa':                BAAPage,
+    '/dpa':                DPAPage,
+    '/terms':              TermsPage,
+    '/leaflet':            LeafletPage,
+    '/roi-calculator':     HomePage,
 };
 
 function router() {
-    const hash = window.location.hash || '#home';
-    const pageFn = routes[hash];
+    const path = window.location.pathname || '/';
+    const pageFn = routes[path];
 
     if (pageFn) {
         // Page transition: re-trigger fadeIn animation
@@ -168,21 +169,31 @@ function router() {
         // Apply i18n translations to the newly rendered content
         if (typeof I18n !== 'undefined' && I18n.ready) {
             I18n.translatePage();
-            I18n.handleNonTranslatedRoute(hash);
+            I18n.handleNonTranslatedRoute(path);
         }
 
         window.scrollTo(0, 0);
 
-        if (hash === '#pricing' || hash === '#roi-calculator') {
+        // Focus management: move focus to main content heading after route change
+        requestAnimationFrame(() => {
+            const heading = APP_CONTENT.querySelector('h1, h2, .subpage-title');
+            if (heading) {
+                heading.setAttribute('tabindex', '-1');
+                heading.focus({ preventScroll: true });
+            }
+        });
+
+        if (path === '/pricing' || path === '/roi-calculator') {
              setTimeout(() => {
-                const target = document.querySelector(hash);
+                const sectionId = path.substring(1); // remove leading /
+                const target = document.getElementById(sectionId);
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }, 100);
         }
 
-        if (hash === '#home' || hash === '#pricing' || hash === '#roi-calculator') {
+        if (path === '/' || path === '/pricing' || path === '/roi-calculator') {
             setTimeout(calculateSavings, 10);
         }
 
@@ -192,7 +203,7 @@ function router() {
 
     document.querySelectorAll('.nav-menu a.nav-link').forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === hash) {
+        if (link.getAttribute('href') === path) {
             link.classList.add('active');
         }
     });
@@ -204,7 +215,7 @@ function router() {
             const dropdownItems = item.querySelectorAll('.dropdown-item');
             let isActive = false;
             dropdownItems.forEach(dropLink => {
-                if (dropLink.getAttribute('href') === hash) {
+                if (dropLink.getAttribute('href') === path) {
                     isActive = true;
                 }
             });
@@ -237,7 +248,7 @@ function toggleMobileMenu() {
 mobileToggle.addEventListener('click', toggleMobileMenu);
 
 // Close mobile menu on navigation
-window.addEventListener('hashchange', closeMobileMenu);
+window.addEventListener('popstate', closeMobileMenu);
 
 // Close mobile menu when clicking outside navbar
 document.addEventListener('click', (e) => {
@@ -270,9 +281,31 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
     item.addEventListener('click', closeMobileMenu);
 });
 
+// --- Global Click Interceptor for Internal Links ---
+document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href]');
+    if (!a) return;
+    const href = a.getAttribute('href');
+    // Only intercept internal links (starting with /)
+    if (!href || !href.startsWith('/') || a.target === '_blank') return;
+    // Don't intercept if modifier keys are pressed
+    if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    if (href !== location.pathname) {
+        history.pushState(null, '', href);
+        router();
+    }
+    closeMobileMenu();
+});
+
 // --- Initialize ---
 document.addEventListener('DOMContentLoaded', async () => {
-    await I18n.init();
+    try {
+        await I18n.init();
+    } catch (err) {
+        console.error('i18n initialisation failed:', err);
+        // Fallback: render English content without translations
+    }
     router();
-    window.addEventListener('hashchange', router);
+    window.addEventListener('popstate', router);
 });

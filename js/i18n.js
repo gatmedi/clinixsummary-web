@@ -125,7 +125,7 @@ const I18n = (() => {
         document.querySelectorAll('[data-i18n-html]').forEach(el => {
             const key = el.getAttribute('data-i18n-html');
             const val = t(key);
-            if (val && val !== key) el.innerHTML = val;
+            if (val && val !== key) el.innerHTML = typeof DOMPurify !== 'undefined' ? DOMPurify.sanitize(val) : val;
         });
 
         // placeholders
@@ -182,7 +182,7 @@ const I18n = (() => {
             params.set(_config.queryParam, _locale);
         }
         const qs = params.toString();
-        const newURL = window.location.pathname + (qs ? '?' + qs : '') + window.location.hash;
+        const newURL = window.location.pathname + (qs ? '?' + qs : '');
         window.history.replaceState(null, '', newURL);
     }
 

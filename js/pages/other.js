@@ -141,7 +141,7 @@ function SecurityPage() {
                     <h2 style="font-family: var(--font-serif); font-size: 36px; margin-bottom: 20px;" data-i18n="security.cta_title">Ready to secure your documentation workflow?</h2>
                     <div class="nav-actions" style="justify-content: center;">
                         <a href="#" class="btn-primary" style="background: #fff; color: var(--text-primary);" onclick="showToast('Trial started!'); return false;" data-i18n="common.start_trial">Start free trial</a>
-                        <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="common.contact_us">Contact our team</a>
+                        <a href="/contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="common.contact_us">Contact our team</a>
                     </div>
                 </div>
             </div>
@@ -487,7 +487,7 @@ function TermsEnterprisePage() {
                 <div style="background: var(--bg-subtle); padding: 30px; border-radius: 12px; margin-top: 40px; border: 1px solid var(--border-subtle); text-align: center;">
                     <h4 style="font-weight: 700; font-size: 20px; margin-bottom: 12px;" data-i18n="terms_enterprise.cta_title">Ready to discuss Enterprise terms?</h4>
                     <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="terms_enterprise.cta_desc">Our team can walk you through licensing, compliance requirements and custom agreements.</p>
-                    <a href="#contact" class="btn-primary" onclick="setTimeout(function(){ var sel = document.getElementById('contact-topic'); if(sel) sel.value='Enterprise Licensing'; }, 200);" data-i18n="terms_enterprise.cta_btn">Contact Enterprise Sales</a>
+                    <a href="/contact" class="btn-primary" onclick="setTimeout(function(){ var sel = document.getElementById('contact-topic'); if(sel) sel.value='Enterprise Licensing'; }, 200);" data-i18n="terms_enterprise.cta_btn">Contact Enterprise Sales</a>
                 </div>
             </div>
         </section>
@@ -553,6 +553,209 @@ function UsagePolicyPage() {
                     <div class="text-group" style="border-bottom: none;">
                         <h3 data-i18n="usage_policy.s10_title">10. Reporting Violations</h3>
                         <p data-i18n-html="usage_policy.s10_p1">If you become aware of any misuse of the ClinixSummary platform, please report it to <a href="mailto:compliance@clinixsummary.ai" style="color: var(--accent);">compliance@clinixsummary.ai</a>. Reports are treated confidentially.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function BAAPage() {
+    return `
+        <section class="subpage-container">
+            <div class="page-width">
+                <div class="subpage-header">
+                    <span class="kicker" data-i18n="common.legal">Legal</span>
+                    <h2 class="subpage-title" data-i18n="baa.title">Business Associate Agreement</h2>
+                    <p class="subpage-copy" data-i18n="baa.intro">Last updated: 1 January 2026. This Business Associate Agreement (\u201cBAA\u201d) is entered into between the Covered Entity (\u201cYou\u201d) and GATMEDI Ltd, trading as ClinixSummary (\u201cBusiness Associate\u201d, \u201cwe\u201d, \u201cus\u201d).</p>
+                </div>
+
+                <div style="max-width: 800px;">
+                    <div class="text-group">
+                        <h3 data-i18n="baa.s1_title">1. Definitions</h3>
+                        <p data-i18n-html="baa.s1_p1"><strong>\u201cBusiness Associate\u201d</strong> means GATMEDI Ltd, which creates, receives, maintains or transmits Protected Health Information on behalf of the Covered Entity in connection with the ClinixSummary platform. <strong>\u201cCovered Entity\u201d</strong> means the healthcare provider, health plan or healthcare clearinghouse that enters into this BAA. <strong>\u201cProtected Health Information\u201d (PHI)</strong> means individually identifiable health information as defined under 45 CFR \u00a7 160.103. <strong>\u201cElectronic PHI\u201d (ePHI)</strong> means PHI that is created, received, maintained or transmitted in electronic form.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="baa.s2_title">2. Obligations of Business Associate</h3>
+                        <p data-i18n="baa.s2_p1">Business Associate agrees to: (a) not use or disclose PHI other than as permitted by this BAA or as required by law; (b) implement administrative, physical and technical safeguards to protect ePHI; (c) report any Security Incident or Breach of Unsecured PHI to Covered Entity within 72 hours of discovery; (d) make PHI available to Covered Entity to fulfil data subject access requests; (e) make its internal practices and records relating to PHI available for audit; (f) return or destroy all PHI upon termination where feasible.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="baa.s3_title">3. Permitted Uses and Disclosures</h3>
+                        <p data-i18n="baa.s3_p1">Business Associate may use and disclose PHI solely for the purpose of providing the ClinixSummary clinical documentation service to the Covered Entity, and as required by law. Business Associate shall not use PHI for marketing, sale, or any purpose other than service delivery without prior written consent.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="baa.s4_title">4. Safeguards</h3>
+                        <p data-i18n="baa.s4_p1">Business Associate maintains the following safeguards to protect ePHI: AES-256 encryption at rest; TLS 1.2+ encryption in transit; SOC 2-aligned administrative and technical controls; role-based access controls and audit logging; immediate and permanent deletion of audio recordings upon note generation; regular penetration testing and vulnerability assessments.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="baa.s5_title">5. Breach Notification</h3>
+                        <p data-i18n="baa.s5_p1">Business Associate shall notify the Covered Entity within 72 hours of discovering a Breach of Unsecured PHI. Notification shall include: the nature and extent of the PHI involved; the identity of any unauthorised person who accessed or used the PHI; whether the PHI was actually acquired or viewed; and the corrective actions taken or planned.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="baa.s6_title">6. Term and Termination</h3>
+                        <p data-i18n="baa.s6_p1">This BAA remains in effect for the duration of the underlying service agreement between the parties. Either party may terminate this BAA if the other party materially breaches its obligations and fails to cure the breach within 30 days of written notice. Upon termination, Business Associate shall return or destroy all PHI in its possession. If return or destruction is not feasible, Business Associate shall extend the protections of this BAA to any retained PHI.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="baa.s7_title">7. Return or Destruction of PHI</h3>
+                        <p data-i18n="baa.s7_p1">Upon termination of this BAA, Business Associate shall, at the Covered Entity\u2019s election, return or destroy all PHI received from or created on behalf of the Covered Entity. Business Associate shall retain no copies of PHI except where required by law. Destruction shall be carried out using methods consistent with NIST SP 800-88 guidelines.</p>
+                    </div>
+
+                    <div class="text-group" style="border-bottom: none;">
+                        <h3 data-i18n="baa.s8_title">8. Contact</h3>
+                        <p data-i18n-html="baa.s8_p1">For questions about this BAA or to request execution, contact <a href="mailto:compliance@clinixsummary.ai" style="color: var(--accent);">compliance@clinixsummary.ai</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function DPAPage() {
+    return `
+        <section class="subpage-container">
+            <div class="page-width">
+                <div class="subpage-header">
+                    <span class="kicker" data-i18n="common.legal">Legal</span>
+                    <h2 class="subpage-title" data-i18n="dpa.title">Data Processing Agreement</h2>
+                    <p class="subpage-copy" data-i18n="dpa.intro">Last updated: 1 January 2026. This Data Processing Agreement (\u201cDPA\u201d) forms part of the agreement between GATMEDI Ltd, trading as ClinixSummary (\u201cProcessor\u201d, \u201cwe\u201d, \u201cus\u201d) and the entity using our services (\u201cController\u201d, \u201cYou\u201d), pursuant to the UK GDPR and EU GDPR.</p>
+                </div>
+
+                <div style="max-width: 800px;">
+                    <div class="text-group">
+                        <h3 data-i18n="dpa.s1_title">1. Scope and Purpose of Processing</h3>
+                        <p data-i18n="dpa.s1_p1">The Processor processes personal data on behalf of the Controller solely for the purpose of providing the ClinixSummary AI clinical documentation service. Processing activities include: receiving and processing audio recordings of clinical encounters; generating structured clinical notes, transcripts and codes; storing generated documentation in the Controller\u2019s account; and processing account and billing information.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="dpa.s2_title">2. Types of Personal Data</h3>
+                        <p data-i18n-html="dpa.s2_p1"><strong>Account Information.</strong> Name, email address, professional credentials, organisation name and billing details. <strong>Audio Recordings.</strong> Recordings of clinical encounters, which are immediately and permanently deleted upon note generation. <strong>Clinical Notes.</strong> AI-generated clinical documentation including transcripts, structured notes, codes and referral letters. <strong>Usage Analytics.</strong> Anonymised, non-PHI usage data (feature usage, session duration, error logs).</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="dpa.s3_title">3. Data Subject Categories</h3>
+                        <p data-i18n="dpa.s3_p1">Data subjects include: (a) healthcare professionals who use the ClinixSummary platform; and (b) patients whose clinical encounters are documented through the service. Patient data is processed solely as part of the clinical documentation generated from audio input.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="dpa.s4_title">4. Controller and Processor Obligations</h3>
+                        <p data-i18n="dpa.s4_p1">The Controller shall: ensure a lawful basis for processing; provide clear notice to data subjects; and issue documented instructions for processing. The Processor shall: process personal data only on documented instructions from the Controller; ensure personnel are bound by confidentiality obligations; implement appropriate technical and organisational measures; assist the Controller with data subject rights requests; and delete or return all personal data upon termination.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="dpa.s5_title">5. Sub-processor Management</h3>
+                        <p data-i18n="dpa.s5_p1">The Processor engages sub-processors to assist in providing the service. A current list of sub-processors is available upon request. The Processor shall provide the Controller with at least 30 days\u2019 prior written notice before engaging a new sub-processor. All sub-processors are bound by data protection obligations no less protective than those in this DPA.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="dpa.s6_title">6. International Data Transfers</h3>
+                        <p data-i18n="dpa.s6_p1">Where personal data is transferred outside the UK or EEA, the Processor shall ensure appropriate safeguards are in place, including the use of Standard Contractual Clauses (SCCs) as approved by the European Commission and/or the UK Information Commissioner\u2019s Office. The Processor shall conduct transfer impact assessments where required.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="dpa.s7_title">7. Technical and Organisational Measures</h3>
+                        <p data-i18n="dpa.s7_p1">The Processor maintains the following measures to protect personal data: AES-256 encryption at rest; TLS 1.2+ encryption in transit; role-based access controls with least-privilege principles; comprehensive audit logging of all data access; regular penetration testing and vulnerability assessments; immediate and permanent deletion of audio upon note generation; and incident response procedures.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="dpa.s8_title">8. Data Subject Rights</h3>
+                        <p data-i18n="dpa.s8_p1">The Processor shall assist the Controller in responding to data subject requests including: access, rectification, erasure, restriction of processing, data portability, and objection. The Processor shall respond to Controller instructions regarding data subject requests without undue delay.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="dpa.s9_title">9. Audit Rights</h3>
+                        <p data-i18n="dpa.s9_p1">The Controller has the right to conduct audits of the Processor\u2019s data processing activities, including inspections, to verify compliance with this DPA. Audits shall be conducted no more than once annually, with at least 30 days\u2019 prior written notice. The Processor shall make available all information necessary to demonstrate compliance.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="dpa.s10_title">10. Breach Notification</h3>
+                        <p data-i18n="dpa.s10_p1">The Processor shall notify the Controller without undue delay, and in any event within 72 hours, after becoming aware of a personal data breach. Notification shall include: the nature of the breach; the categories and approximate number of data subjects affected; the likely consequences; and the measures taken or proposed to address the breach.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="dpa.s11_title">11. Term and Duration</h3>
+                        <p data-i18n="dpa.s11_p1">This DPA remains in effect for the duration of the underlying service agreement. Upon termination, the Processor shall, at the Controller\u2019s election, delete or return all personal data and certify deletion in writing, unless retention is required by applicable law.</p>
+                    </div>
+
+                    <div class="text-group" style="border-bottom: none;">
+                        <h3 data-i18n="dpa.s12_title">12. Contact</h3>
+                        <p data-i18n-html="dpa.s12_p1">For questions about this DPA or to request execution, contact our Data Protection Officer at <a href="mailto:dpo@clinixsummary.ai" style="color: var(--accent);">dpo@clinixsummary.ai</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function TermsPage() {
+    return `
+        <section class="subpage-container">
+            <div class="page-width">
+                <div class="subpage-header">
+                    <span class="kicker" data-i18n="common.legal">Legal</span>
+                    <h2 class="subpage-title" data-i18n="terms.title">Terms of Service</h2>
+                    <p class="subpage-copy" data-i18n="terms.intro">Last updated: 1 January 2026. These Terms of Service (\u201cTerms\u201d) govern your use of the ClinixSummary platform and services provided by GATMEDI Ltd (\u201cClinixSummary\u201d, \u201cwe\u201d, \u201cour\u201d, \u201cus\u201d). By accessing or using the service, you agree to be bound by these Terms.</p>
+                </div>
+
+                <div style="max-width: 800px;">
+                    <div class="text-group">
+                        <h3 data-i18n="terms.s1_title">1. Acceptance of Terms</h3>
+                        <p data-i18n="terms.s1_p1">By creating an account or using ClinixSummary, you confirm that you have read, understood and agree to these Terms, our Privacy Policy and our Usage Policy. If you do not agree, you must not use the service. We may update these Terms from time to time; material changes will be communicated at least 30 days in advance.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="terms.s2_title">2. Service Description</h3>
+                        <p data-i18n="terms.s2_p1">ClinixSummary is an AI-assisted clinical documentation platform that generates structured clinical notes, transcripts, codes and referral letters from audio input. The service is designed for use by licensed healthcare professionals. ClinixSummary is not a medical device and does not provide clinical advice, diagnosis or treatment recommendations.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="terms.s3_title">3. Account Registration and Security</h3>
+                        <p data-i18n-html="terms.s3_p1">You must provide accurate and complete information when creating an account. You are responsible for maintaining the confidentiality of your account credentials and for all activity under your account. You must notify us immediately at <a href="mailto:security@clinixsummary.ai" style="color: var(--accent);">security@clinixsummary.ai</a> if you suspect unauthorised access. We reserve the right to suspend accounts that violate these Terms.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="terms.s4_title">4. Subscription Plans and Billing</h3>
+                        <p data-i18n="terms.s4_p1">ClinixSummary operates on a credit-based subscription model. Each plan includes a monthly allocation of credits (1 credit = 10 minutes of audio documentation). Subscriptions renew automatically at the end of each billing period unless cancelled. You may cancel at any time; cancellation takes effect at the end of the current billing period. Unused credits do not roll over. Refunds are not provided for partial billing periods.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="terms.s5_title">5. Acceptable Use</h3>
+                        <p data-i18n="terms.s5_p1">You agree to use ClinixSummary solely for legitimate clinical documentation purposes. You are responsible for: obtaining appropriate patient consent before recording; reviewing and approving all AI-generated outputs before clinical use; ensuring all documentation submitted under your name is accurate and complete. ClinixSummary is a documentation assistance tool, not a substitute for clinical judgement. The treating clinician retains full responsibility for all clinical decisions and documentation.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="terms.s6_title">6. Intellectual Property</h3>
+                        <p data-i18n="terms.s6_p1">You retain all rights, title and interest in your clinical data, transcripts and generated documentation. GATMEDI Ltd retains all intellectual property rights in the ClinixSummary platform, including its algorithms, models, interfaces, designs and documentation. You may not copy, modify, reverse-engineer, decompile or create derivative works of the platform.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="terms.s7_title">7. Limitation of Liability</h3>
+                        <p data-i18n="terms.s7_p1">To the maximum extent permitted by law, GATMEDI\u2019s total aggregate liability for any claims arising from or related to these Terms or the service shall not exceed the fees paid by you in the 12 months preceding the claim. GATMEDI shall not be liable for any indirect, incidental, consequential, special or punitive damages, including loss of profits, data or business opportunity.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="terms.s8_title">8. Disclaimers</h3>
+                        <p data-i18n="terms.s8_p1">The service is provided \u201cas is\u201d and \u201cas available\u201d without warranties of any kind, whether express or implied. ClinixSummary is not a substitute for professional clinical judgement. All AI-generated content is a draft that requires clinician review. GATMEDI does not guarantee uninterrupted, error-free or completely accurate service. GATMEDI is not liable for clinical decisions made based on platform outputs.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="terms.s9_title">9. Termination</h3>
+                        <p data-i18n="terms.s9_p1">You may terminate your account at any time by contacting support or through your account settings. We may suspend or terminate your account if you breach these Terms, with notice where practicable. Upon termination, you may export your data within 30 days, after which all data is permanently deleted.</p>
+                    </div>
+
+                    <div class="text-group">
+                        <h3 data-i18n="terms.s10_title">10. Governing Law</h3>
+                        <p data-i18n="terms.s10_p1">These Terms are governed by and construed in accordance with the laws of England and Wales. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+                    </div>
+
+                    <div class="text-group" style="border-bottom: none;">
+                        <h3 data-i18n="terms.s11_title">11. Contact</h3>
+                        <p data-i18n-html="terms.s11_p1">For questions about these Terms, contact <a href="mailto:legal@clinixsummary.ai" style="color: var(--accent);">legal@clinixsummary.ai</a> or write to: GATMEDI Ltd, Legal Team, United Kingdom.</p>
                     </div>
                 </div>
             </div>
@@ -720,7 +923,7 @@ function StoryPage() {
                     <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="story.cta_desc">Whether you\u2019re a clinician, a clinic manager or a healthcare innovator, we invite you to be part of our mission to simplify documentation for all.</p>
                     <div class="nav-actions" style="justify-content: center;">
                         <a href="#" class="btn-primary" style="background: var(--text-primary); color: white;" onclick="showToast('Trial started!'); return false;" data-i18n="story.cta_trial">Start free trial</a>
-                        <a href="#contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
+                        <a href="/contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
                     </div>
                 </div>
             </div>

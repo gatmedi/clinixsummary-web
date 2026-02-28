@@ -182,7 +182,7 @@ function PublicationsPage() {
                     <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="papers.pub_cta_desc">We\u2019re happy to share full papers, aggregate metrics and connect you with researchers studying ambient AI scribes.</p>
                     <div class="nav-actions" style="justify-content: flex-start; margin-inline-start: 0;">
                         <a href="#" class="btn-primary" onclick="showToast('Publications requested.'); return false;" data-i18n="papers.pub_cta_btn">Request Publications</a>
-                        <a href="#contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
+                        <a href="/contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
                     </div>
                 </div>
             </div>
@@ -264,8 +264,8 @@ function WhitepapersPage() {
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="papers.wp_cta_title">Need a technical deep dive for your team?</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Requesting white papers.'); return false;" data-i18n="papers.wp_cta_btn">Request White Papers</a>
-                        <a href="#security" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="papers.wp_cta_secondary">View Security & Compliance</a>
+                        <a href="/contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Requesting white papers.'); return false;" data-i18n="papers.wp_cta_btn">Request White Papers</a>
+                        <a href="/security" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="papers.wp_cta_secondary">View Security & Compliance</a>
                     </div>
                 </div>
             </div>
@@ -326,7 +326,7 @@ function NewsPage() {
                     <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="news.story_desc">If you\u2019ve used ClinixSummary to transform your practice, we\u2019d love to highlight your success. Get in touch with our marketing team to be featured.</p>
                     <div class="nav-actions" style="justify-content: flex-start; margin-inline-start: 0;">
                         <a href="#" class="btn-primary" onclick="showToast('Story submission form activated.'); return false;" data-i18n="news.story_submit">Submit a story</a>
-                        <a href="#contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
+                        <a href="/contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
                     </div>
                 </div>
             </div>
@@ -484,7 +484,7 @@ function CaseStudiesPage() {
                     <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Join practices worldwide that have transformed their documentation workflow with ClinixSummary.</p>
                     <div class="nav-actions" style="justify-content: center;">
                         <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Starting free trial...'); return false;">Start Free Trial</a>
-                        <a href="#contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Contact Sales</a>
+                        <a href="/contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Contact Sales</a>
                     </div>
                 </div>
             </div>
@@ -492,57 +492,3 @@ function CaseStudiesPage() {
     `;
 }
 
-function PodcastsPage() {
-    return `
-        <section class="subpage-container">
-            <div class="page-width">
-                <div class="subpage-header">
-                    <span class="kicker" data-i18n="podcasts.kicker">Podcasts</span>
-                    <h2 class="subpage-title" data-i18n="podcasts.title">ClinixSummary Podcasts</h2>
-                    <p class="subpage-copy" data-i18n="podcasts.desc">Conversations with clinicians, health tech leaders, and the team building the future of clinical documentation.</p>
-                </div>
-
-                <div style="text-align: center; padding: 60px 40px; background: var(--bg-subtle); border-radius: 12px; border: 1px solid var(--border-subtle); margin-bottom: 60px;">
-                    <span class="material-symbols-rounded" style="font-size: 64px; color: var(--accent); margin-bottom: 20px; display: block;">podcasts</span>
-                    <h3 style="font-family: var(--font-serif); font-size: 28px; margin-bottom: 16px;" data-i18n="podcasts.coming_soon">Coming Soon</h3>
-                    <p style="font-size: 17px; color: var(--text-secondary); max-width: 600px; margin: 0 auto 30px;" data-i18n="podcasts.coming_soon_desc">We\u2019re preparing our first season of podcasts. Subscribe to be notified when episodes launch.</p>
-                    <button class="btn-primary" onclick="showToast('Subscribed! We\\'ll notify you when episodes launch.'); return false;" data-i18n="podcasts.subscribe_btn">Subscribe / Get Notified</button>
-                </div>
-
-                <div class="subpage-header">
-                    <span class="kicker" data-i18n="podcasts.preview_kicker">Preview</span>
-                    <h3 class="section-title" data-i18n="podcasts.preview_title">What\u2019s coming</h3>
-                </div>
-
-                <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                    <div class="card" style="opacity: 0.7;">
-                        <div class="card-icon material-symbols-rounded">mic</div>
-                        <h3 data-i18n="podcasts.ep1_title">Episode 1: Why We Built ClinixSummary</h3>
-                        <p data-i18n="podcasts.ep1_desc">The founding story \u2014 practicing physicians frustrated with documentation burden, building an AI scribe from nights and weekends to a platform serving clinicians worldwide.</p>
-                        <span class="beta-tag" style="margin-top: 12px;" data-i18n="podcasts.coming_soon_badge">Coming Soon</span>
-                    </div>
-                    <div class="card" style="opacity: 0.7;">
-                        <div class="card-icon material-symbols-rounded">sentiment_dissatisfied</div>
-                        <h3 data-i18n="podcasts.ep2_title">Episode 2: The Clinician Burnout Crisis \u2014 And What AI Can Do About It</h3>
-                        <p data-i18n="podcasts.ep2_desc">Evidence on documentation-driven burnout, how ambient AI changes the equation, and perspectives from clinicians who\u2019ve made the switch.</p>
-                        <span class="beta-tag" style="margin-top: 12px;" data-i18n="podcasts.coming_soon_badge">Coming Soon</span>
-                    </div>
-                    <div class="card" style="opacity: 0.7;">
-                        <div class="card-icon material-symbols-rounded">translate</div>
-                        <h3 data-i18n="podcasts.ep3_title">Episode 3: Going Global \u2014 Multilingual Medicine and Documentation</h3>
-                        <p data-i18n="podcasts.ep3_desc">How real-world clinical consultations cross language boundaries, and how ClinixSummary handles multilingual documentation naturally.</p>
-                        <span class="beta-tag" style="margin-top: 12px;" data-i18n="podcasts.coming_soon_badge">Coming Soon</span>
-                    </div>
-                </div>
-
-                <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
-                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="podcasts.cta_title">Stay in the loop</h2>
-                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;" data-i18n="podcasts.cta_desc">Be the first to know when new episodes drop.</p>
-                    <div class="nav-actions" style="justify-content: center;">
-                        <button class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Subscribed! We\\'ll notify you when episodes launch.'); return false;" data-i18n="podcasts.subscribe_btn">Subscribe / Get Notified</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    `;
-}

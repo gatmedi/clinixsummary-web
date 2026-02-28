@@ -56,7 +56,7 @@ function CliniciansPage() {
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="clinicians.cta_title">Start Saving Time and Reclaiming Your Clinical Focus Today.</h2>
                     <div class="nav-actions" style="justify-content: center;">
                         <a href="#" class="btn-primary" style="background: var(--text-primary); color: white;" onclick="showToast('Starting free trial for clinicians.'); return false;" data-i18n="clinicians.cta_trial">Start My Free Trial</a>
-                        <a href="#roi-calculator" class="btn-outline" style="border-color: var(--text-primary); color: var(--text-primary);" data-i18n="clinicians.cta_roi">Calculate My ROI</a>
+                        <a href="/roi-calculator" class="btn-outline" style="border-color: var(--text-primary); color: var(--text-primary);" data-i18n="clinicians.cta_roi">Calculate My ROI</a>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@ function InsurersPage() {
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
                     <h2 style="font-family: var(--font-serif); font-size: 36px; margin-bottom: 20px;" data-i18n="insurers.cta_title">Ready to Transform Your Claims Processing?</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Contacting sales for Insurer Partnership.'); return false;" data-i18n="insurers.cta_button">Request a Strategic Consultation</a>
+                        <a href="/contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Contacting sales for Insurer Partnership.'); return false;" data-i18n="insurers.cta_button">Request a Strategic Consultation</a>
                     </div>
                 </div>
             </div>
@@ -219,7 +219,7 @@ function OrganizationsPage() {
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="orgs.cta_title">Ready to pilot ClinixSummary in your organisation?</h2>
                     <div class="nav-actions" style="justify-content: center;">
                         <a href="#" class="btn-primary" style="background: var(--text-primary); color: white;" onclick="showToast('Sign in to enterprise portal.'); return false;" data-i18n="orgs.cta_signin">Sign in to enterprise portal</a>
-                        <a href="#contact" class="btn-outline" style="border-color: var(--text-primary); color: var(--text-primary);" data-i18n="orgs.cta_sales">Speak to our sales team</a>
+                        <a href="/contact" class="btn-outline" style="border-color: var(--text-primary); color: var(--text-primary);" data-i18n="orgs.cta_sales">Speak to our sales team</a>
                     </div>
                 </div>
             </div>
@@ -281,7 +281,7 @@ function GovernmentPage() {
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="government.cta_title">Ready to modernise government healthcare documentation?</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Contacting government sales team.'); return false;" data-i18n="government.cta_button">Request a Government Consultation</a>
+                        <a href="/contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Contacting government sales team.'); return false;" data-i18n="government.cta_button">Request a Government Consultation</a>
                     </div>
                 </div>
             </div>
@@ -308,7 +308,7 @@ function NonprofitPage() {
                     <div class="text-group" style="border-bottom: none;">
                         <span class="material-symbols-rounded list-item-icon">favorite</span>
                         <h3 data-i18n="nonprofit.foundation_title">Clinix Foundation</h3>
-                        <p data-i18n="nonprofit.foundation_desc">Through the <a href="#clinix-foundation" style="color: var(--accent); text-decoration: underline;">Clinix Foundation</a>, we provide completely free access to ClinixSummary for clinics and practices operating in relief areas and underserved communities. Our goal is to ensure that documentation burden is never a barrier to delivering quality care.</p>
+                        <p data-i18n="nonprofit.foundation_desc">Through the <a href="/clinix-foundation" style="color: var(--accent); text-decoration: underline;">Clinix Foundation</a>, we provide completely free access to ClinixSummary for clinics and practices operating in relief areas and underserved communities. Our goal is to ensure that documentation burden is never a barrier to delivering quality care.</p>
                     </div>
                 </div>
 
@@ -333,8 +333,8 @@ function NonprofitPage() {
                 <div style="background: var(--bg-subtle); color: var(--text-primary); text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px; border: 1px solid var(--border-subtle);">
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="nonprofit.cta_title">Explore non-profit pricing or apply for Clinix Foundation access.</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#clinix-foundation" class="btn-primary" style="background: var(--text-primary); color: white;" data-i18n="nonprofit.cta_foundation">Apply for Clinix Foundation</a>
-                        <a href="#contact" class="btn-outline" style="border-color: var(--text-primary); color: var(--text-primary);" onclick="showToast('Requesting non-profit pricing.'); return false;" data-i18n="nonprofit.cta_pricing">Request Non-profit Pricing</a>
+                        <a href="/clinix-foundation" class="btn-primary" style="background: var(--text-primary); color: white;" data-i18n="nonprofit.cta_foundation">Apply for Clinix Foundation</a>
+                        <a href="/contact" class="btn-outline" style="border-color: var(--text-primary); color: var(--text-primary);" onclick="showToast('Requesting non-profit pricing.'); return false;" data-i18n="nonprofit.cta_pricing">Request Non-profit Pricing</a>
                     </div>
                 </div>
             </div>
@@ -400,8 +400,8 @@ function IntegrationsPage() {
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="integrations.cta_title">Ready to integrate ClinixSummary into your systems?</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Contacting integration team.'); return false;" data-i18n="integrations.cta_button">Talk to Our Integration Team</a>
-                        <a href="#organizations" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="integrations.cta_learn">Learn About Enterprise Plans</a>
+                        <a href="/contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Contacting integration team.'); return false;" data-i18n="integrations.cta_button">Talk to Our Integration Team</a>
+                        <a href="/organizations" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="integrations.cta_learn">Learn About Enterprise Plans</a>
                     </div>
                 </div>
             </div>

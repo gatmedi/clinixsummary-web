@@ -137,12 +137,12 @@ const OutcomesSection = `
                 <div class="card">
                     <div class="card-icon material-symbols-rounded">sentiment_satisfied</div>
                     <h3 data-i18n="outcomes.satisfaction_title">Higher patient satisfaction</h3>
-                    <p data-i18n="outcomes.satisfaction_desc">In one large study, 47% of patients said their doctor spent less time looking at the computer, and 39% said their doctor spent more time speaking directly to them. Clinicians reported an 84% positive effect on patient interactions.<sup style="font-size: 10px; color: var(--accent); cursor: help;" title="Payne et al. (2024). Impact of AI Scribes on Patient-Physician Interaction. JAMIA, 31(4), 812\u2013820.">[1]</sup></p>
+                    <p data-i18n-html="outcomes.satisfaction_desc">In a study of 7,260 physicians across 2.5 million encounters, 47% of patients said their doctor spent less time looking at the computer, and 84% of physicians reported a positive effect on patient communication.<sup style="font-size:10px;color:var(--accent);cursor:help" title="Tierney AA et al. (2024, 2025). NEJM Catalyst Innovations in Care Delivery. doi:10.1056/CAT.23.0404; doi:10.1056/CAT.25.0040">[1]</sup></p>
                 </div>
                 <div class="card">
                     <div class="card-icon material-symbols-rounded">timer</div>
                     <h3 data-i18n="outcomes.cognitive_title">Reduce cognitive overload</h3>
-                    <p data-i18n="outcomes.cognitive_desc">ClinixSummary reduces note-taking time by up to 2 hours per day and lowers the odds of clinician burnout by 74%.<sup style="font-size: 10px; color: var(--accent); cursor: help;" title="Tierney et al. (2024). AI-Assisted Documentation and Clinician Burnout: A Multi-Site Randomised Trial. Ann Intern Med, 180(1), 45\u201353.">[2]</sup> With technology fading into the background, care comes to the foreground.</p>
+                    <p data-i18n-html="outcomes.cognitive_desc">In a multi-site study, clinician burnout decreased from 51.9% to 38.8% after 30 days of AI scribe use (adjusted OR 0.26, P&lt;.001).<sup style="font-size:10px;color:var(--accent);cursor:help" title="Olson KD et al. (2025). Use of Ambient AI Scribes. JAMA Netw Open. 8(10):e2534976. doi:10.1001/jamanetworkopen.2025.34976">[2]</sup> With technology fading into the background, care comes to the foreground.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon material-symbols-rounded">payments</div>
@@ -222,6 +222,45 @@ const CalculatorSection = `
                         <div id="cognitive-load-value" class="result-value" style="color: white; font-family: var(--font-sans); font-size: 24px;" data-i18n="calculator.burnout_value">78% Less Cognitive Load</div>
                         <div class="result-subtext" data-i18n="calculator.burnout_desc">This frees up mental energy, contributing to documented improvement in professional fulfillment.</div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+`;
+
+const WhyClinixSection = `
+    <section style="background: var(--bg-subtle);">
+        <div class="page-width">
+            <div class="section-header">
+                <span class="kicker" data-i18n="why.kicker">Why ClinixSummary?</span>
+                <h2 class="section-title" data-i18n="why.title">What sets us apart.</h2>
+                <p class="section-copy" data-i18n="why.description">Built by clinicians who understand documentation burden firsthand.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">delete_forever</div>
+                    <h3 data-i18n="why.audio_title">Immediate audio deletion</h3>
+                    <p data-i18n="why.audio_desc">Your audio is permanently deleted the moment your note is generated. No recordings stored, ever. Privacy by design, not by policy.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">trending_up</div>
+                    <h3 data-i18n="why.kaizen_title">Weekly model improvement</h3>
+                    <p data-i18n="why.kaizen_desc">Our Kaizen methodology delivers continuous weekly refinement. Your scribe gets smarter every week — not every quarter.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">category</div>
+                    <h3 data-i18n="why.specialties_title">40+ specialties & allied health</h3>
+                    <p data-i18n="why.specialties_desc">From cardiology to physiotherapy, speech therapy to veterinary medicine. One platform covers the full breadth of clinical documentation.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">translate</div>
+                    <h3 data-i18n="why.languages_title">6 languages with code-switching</h3>
+                    <p data-i18n="why.languages_desc">Full multilingual documentation including RTL Arabic. Handle consultations where patients naturally switch between languages.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">savings</div>
+                    <h3 data-i18n="why.pricing_title">40% below the nearest competitor</h3>
+                    <p data-i18n="why.pricing_desc">Transparent credit-based pricing starting from free. Enterprise plans with custom volumes and dedicated support.</p>
                 </div>
             </div>
         </div>
@@ -316,7 +355,7 @@ const PricingSection = `
                             <li data-i18n="pricing.enterprise_f5">Dedicated success manager</li>
                             <li data-i18n="pricing.enterprise_f2">Ambient mode & team workflows</li>
                         </ul>
-                        <a href="#contact" class="btn-primary" style="width: 100%; text-align: center; background-color: var(--accent); color: var(--text-primary);" onclick="setTimeout(function(){ var sel = document.getElementById('contact-topic'); if(sel) sel.value='Enterprise Licensing'; }, 200);" data-i18n="pricing.enterprise_cta">Contact sales</a>
+                        <a href="/contact" class="btn-primary" style="width: 100%; text-align: center; background-color: var(--accent); color: var(--text-primary);" onclick="setTimeout(function(){ var sel = document.getElementById('contact-topic'); if(sel) sel.value='Enterprise Licensing'; }, 200);" data-i18n="pricing.enterprise_cta">Contact sales</a>
                     </div>
                 </div>
             </div>
@@ -351,5 +390,5 @@ function togglePricingPlans() {
 }
 
 function HomePage() {
-    return HeroSection + CoreArchitectureSection + CalculatorSection + CapabilitiesSection + OutcomesSection + PricingSection;
+    return HeroSection + CoreArchitectureSection + CalculatorSection + CapabilitiesSection + OutcomesSection + WhyClinixSection + PricingSection;
 }
