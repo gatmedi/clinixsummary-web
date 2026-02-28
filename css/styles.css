@@ -87,6 +87,12 @@ a {
     outline-offset: 2px;
 }
 
+/* Programmatically-focused elements (e.g. headings after route change) should
+   never show a visible focus ring — they aren't keyboard-reachable. */
+[tabindex="-1"]:focus {
+    outline: none;
+}
+
 .nav-link:focus-visible,
 .dropdown-item:focus-visible,
 .btn-primary:focus-visible,
