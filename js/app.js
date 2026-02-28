@@ -147,6 +147,9 @@ const routes = {
     '/privacy-choices':    PrivacyChoicesPage,
     '/terms-enterprise':   TermsEnterprisePage,
     '/usage-policy':       UsagePolicyPage,
+    '/baa':                BAAPage,
+    '/dpa':                DPAPage,
+    '/terms':              TermsPage,
     '/leaflet':            LeafletPage,
     '/roi-calculator':     HomePage,
 };
