@@ -79,7 +79,10 @@ const I18n = (() => {
 
         // 6. Update meta (delegated to SEO module if available, else basic fallback)
         if (typeof SEO !== 'undefined') {
-            SEO.updatePageMeta(window.location.pathname || '/');
+            const _bp = window.BASEPATH || '';
+            const _raw = window.location.pathname || '/';
+            const _route = (_bp && _raw.startsWith(_bp)) ? (_raw.slice(_bp.length) || '/') : _raw;
+            SEO.updatePageMeta(_route);
         } else {
             const metaTitle = t('meta.title');
             if (metaTitle) document.title = metaTitle;

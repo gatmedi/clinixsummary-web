@@ -5,8 +5,10 @@
     <title>Redirecting…</title>
     <script>
         // GitHub Pages SPA fallback — preserve the path and redirect to index.html
+        // Detect subpath for GitHub Pages project sites
+        var base = location.hostname === 'gatmedi.github.io' ? '/clinixsummary-web/' : '/';
         sessionStorage.setItem('spa-redirect', location.pathname + location.search + location.hash);
-        location.replace('/' + location.search + location.hash);
+        location.replace(base + location.search + location.hash);
     </script>
 </head>
 <body></body>
