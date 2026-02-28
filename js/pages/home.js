@@ -26,7 +26,7 @@ const HeroSection = `
                         </div>
                         <div class="stat-item">
                             <span class="stat-value"><span class="material-symbols-rounded" style="font-size: 22px; vertical-align: middle; color: var(--accent);">verified_user</span> HIPAA</span>
-                            <span class="stat-label" data-i18n="hero.stat_hipaa_label">Compliant</span>
+                            <span class="stat-label" data-i18n="hero.stat_hipaa_label">Ready</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-value"><span class="material-symbols-rounded" style="font-size: 22px; vertical-align: middle; color: var(--accent);">shield</span> SOC 2</span>
@@ -34,7 +34,7 @@ const HeroSection = `
                         </div>
                         <div class="stat-item">
                             <span class="stat-value"><span class="material-symbols-rounded" style="font-size: 22px; vertical-align: middle; color: var(--accent);">privacy_tip</span> GDPR</span>
-                            <span class="stat-label" data-i18n="hero.stat_hipaa_label">Compliant</span>
+                            <span class="stat-label" data-i18n="hero.stat_gdpr_label">Compliant</span>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,6 @@ const HeroSection = `
                             src="images/hero-clinician.jpg"
                             alt="Clinician using tablet for documentation"
                             class="hero-photo"
-                            loading="lazy"
                         />
                     </div>
                 </div>
@@ -299,8 +298,8 @@ const PricingSection = `
                     <p class="plan-period" data-i18n="pricing.pilot_credits">75 credits / month</p>
                     <ul class="plan-features">
                         <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
-                        <li data-i18n="pricing.pilot_f4">Standard specialty access</li>
-                        <li data-i18n="pricing.pilot_f5">Community support</li>
+                        <li data-i18n="pricing.pioneer_f4">All specialty access</li>
+                        <li data-i18n="pricing.pioneer_f5">Email support</li>
                     </ul>
                     <button class="btn-outline" style="width: 100%;" onclick="showToast('Subscribing to Pilot 900.'); return false;" data-i18n="pricing.pilot_cta">Subscribe</button>
                 </div>
@@ -328,8 +327,8 @@ const PricingSection = `
                         <p class="plan-period" data-i18n="pricing.productive_credits">250 credits / month</p>
                         <ul class="plan-features">
                             <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
-                            <li data-i18n="pricing.productive_f4">All specialty access</li>
-                            <li data-i18n="pricing.productive_f5">Priority email support</li>
+                            <li data-i18n="pricing.pioneer_f4">All specialty access</li>
+                            <li data-i18n="pricing.pioneer_f5">Email support</li>
                         </ul>
                         <button class="btn-primary" style="width: 100%;" onclick="showToast('Subscribing to Productive 3000.'); return false;" data-i18n="pricing.productive_cta">Subscribe</button>
                     </div>
@@ -340,8 +339,8 @@ const PricingSection = `
                         <p class="plan-period" data-i18n="pricing.prolific_credits">500 credits / month</p>
                         <ul class="plan-features">
                             <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
-                            <li data-i18n="pricing.prolific_f4">All specialty access</li>
-                            <li data-i18n="pricing.prolific_f3">Dedicated API access</li>
+                            <li data-i18n="pricing.pioneer_f4">All specialty access</li>
+                            <li data-i18n="pricing.pioneer_f5">Email support</li>
                         </ul>
                         <button class="btn-outline" style="width: 100%;" onclick="showToast('Subscribing to Prolific 6000.'); return false;" data-i18n="pricing.prolific_cta">Subscribe</button>
                     </div>

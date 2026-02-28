@@ -15,7 +15,7 @@ function SecurityPage() {
                         <span class="material-symbols-rounded">verified_user</span>
                         <div>
                             <div style="font-size: 15px;">HIPAA</div>
-                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_compliant">Compliant</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_ready">Ready</div>
                         </div>
                     </div>
                     <div class="compliance-badge">

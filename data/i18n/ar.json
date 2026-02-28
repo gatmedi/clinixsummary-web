@@ -91,7 +91,8 @@
     "stat_burnout_label": "إرهاق أقل",
     "stat_hipaa": "HIPAA",
     "stat_hipaa_label": "جاهز",
-    "stat_soc2_label": "مطابق"
+    "stat_soc2_label": "مطابق",
+    "stat_gdpr_label": "متوافق"
   },
   "core": {
     "kicker": "البنية الأساسية للذكاء الاصطناعي",
@@ -543,6 +544,7 @@
     "transcript_desc": "احتفاظ قصير / يتحكم فيه المستخدم",
     "leaflet_open": "فتح النشرة",
     "badge_compliant": "متوافق",
+    "badge_ready": "جاهز",
     "badge_aligned": "مطابق",
     "badge_encryption": "تشفير"
   },

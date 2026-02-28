@@ -96,7 +96,8 @@
     "stat_burnout_label": "Less burnout",
     "stat_hipaa": "HIPAA",
     "stat_hipaa_label": "Ready",
-    "stat_soc2_label": "Aligned"
+    "stat_soc2_label": "Aligned",
+    "stat_gdpr_label": "Compliant"
   },
   "core": {
     "kicker": "The Core AI Architecture",
@@ -522,6 +523,7 @@
     "leaflet_desc": "Available in 6 languages. Designed for clinic walls and waiting rooms.",
     "leaflet_open": "Open Leaflet",
     "badge_compliant": "Compliant",
+    "badge_ready": "Ready",
     "badge_aligned": "Aligned",
     "badge_encryption": "Encryption"
   },

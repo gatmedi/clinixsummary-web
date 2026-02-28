@@ -703,11 +703,11 @@ section {
     line-height: 1.6;
 }
 
-/* Stats aligned left */
+/* Stats centred so the wrapped row (SOC 2 + GDPR) sits below the three above */
 .hero-stats {
     display: flex;
     gap: 32px;
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 32px;
     padding-top: 24px;
     border-top: 1px solid var(--border-subtle);
@@ -715,7 +715,7 @@ section {
 }
 
 .stat-item {
-    text-align: left;
+    text-align: center;
 }
 
 .stat-value {
@@ -1404,7 +1404,7 @@ footer {
 }
 
 [dir="rtl"] .hero-stats {
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 [dir="rtl"] .list-item-icon {

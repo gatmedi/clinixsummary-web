@@ -90,7 +90,8 @@
     "stat_burnout": "74%",
     "stat_burnout_label": "Menos agotamiento",
     "stat_hipaa": "HIPAA",
-    "stat_hipaa_label": "Preparado"
+    "stat_hipaa_label": "Preparado",
+    "stat_gdpr_label": "Conforme"
   },
   "core": {
     "kicker": "La Arquitectura Central de IA",
