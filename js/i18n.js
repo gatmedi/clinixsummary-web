@@ -77,12 +77,16 @@ const I18n = (() => {
         localStorage.setItem(_config.storageKey, _locale);
         updateURLParam();
 
-        // 6. Update meta
-        const metaTitle = t('meta.title');
-        if (metaTitle) document.title = metaTitle;
-        const metaDesc = document.querySelector('meta[name="description"]');
-        const descText = t('meta.description');
-        if (metaDesc && descText) metaDesc.content = descText;
+        // 6. Update meta (delegated to SEO module if available, else basic fallback)
+        if (typeof SEO !== 'undefined') {
+            SEO.updatePageMeta(window.location.pathname || '/');
+        } else {
+            const metaTitle = t('meta.title');
+            if (metaTitle) document.title = metaTitle;
+            const metaDesc = document.querySelector('meta[name="description"]');
+            const descText = t('meta.description');
+            if (metaDesc && descText) metaDesc.content = descText;
+        }
 
         // 7. Translate static chrome
         translatePage();
@@ -203,14 +207,7 @@ const I18n = (() => {
         document.documentElement.dir = _dir;
         updateURLParam();
 
-        // Update meta
-        const metaTitle = t('meta.title');
-        if (metaTitle) document.title = metaTitle;
-        const metaDesc = document.querySelector('meta[name="description"]');
-        const descText = t('meta.description');
-        if (metaDesc && descText) metaDesc.content = descText;
-
-        // Re-render current page via router (triggers translatePage)
+        // Re-render current page via router (triggers translatePage + SEO update)
         if (typeof router === 'function') router();
 
         // Translate static chrome (navbar/footer)
