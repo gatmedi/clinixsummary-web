@@ -54,6 +54,7 @@
   <url><loc>https://clinixsummary.ai/privacy-choices</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://clinixsummary.ai/terms-enterprise</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://clinixsummary.ai/usage-policy</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://clinixsummary.ai/baa.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://clinixsummary.ai/dpa.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/baa</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/dpa</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://clinixsummary.ai/terms</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
 </urlset>
