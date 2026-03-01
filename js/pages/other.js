@@ -12,14 +12,6 @@ function SecurityPage() {
                     <p class="subpage-copy" data-i18n="security.desc">Safeguarding patient data is non\u2011negotiable. ClinixSummary employs industry\u2011standard encryption, strict access controls and immediate audio deletion \u2014 governed by the ClinixQM Quality Management System \u2014 to give you confidence that your practice and your patients are protected.</p>
                 </div>
 
-                <div class="trust-qm-banner">
-                    <img src="images/clinixqm-logo.png" alt="ClinixQM" onerror="this.style.display='none'">
-                    <div>
-                        <div style="font-weight: 600; font-size: 14px;" data-i18n="security.qm_powered">Quality assured by ClinixQM</div>
-                        <a href="https://clinixqm.gacrux.ai/" target="_blank" rel="noopener" style="font-size: 13px;">clinixqm.gacrux.ai <span class="material-symbols-rounded" style="font-size: 14px; vertical-align: middle;">open_in_new</span></a>
-                    </div>
-                </div>
-
                 <!-- Section 2: Compliance Frameworks -->
                 <div class="compliance-badges">
                     <div class="compliance-badge">
@@ -150,16 +142,16 @@ function SecurityPage() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td class="sp-name">OpenAI</td><td data-i18n="security.sp_openai_purpose">LLM inference for clinical note generation</td><td data-i18n="security.sp_openai_data">De-identified clinical text</td><td>USA</td></tr>
-                            <tr><td class="sp-name">ElevenLabs</td><td data-i18n="security.sp_elevenlabs_purpose">Text-to-speech synthesis</td><td data-i18n="security.sp_elevenlabs_data">Non-PHI audio data</td><td>USA / EU</td></tr>
-                            <tr><td class="sp-name">Google (GCP)</td><td data-i18n="security.sp_google_purpose">Cloud infrastructure & speech-to-text</td><td data-i18n="security.sp_google_data">Encrypted clinical data</td><td data-i18n="security.sp_multiregion">Multi-region</td></tr>
-                            <tr><td class="sp-name">Microsoft Azure</td><td data-i18n="security.sp_azure_purpose">Cloud infrastructure & AI services</td><td data-i18n="security.sp_azure_data">Encrypted clinical data</td><td data-i18n="security.sp_multiregion">Multi-region</td></tr>
-                            <tr><td class="sp-name">Stripe</td><td data-i18n="security.sp_stripe_purpose">Payment processing</td><td data-i18n="security.sp_stripe_data">Billing data (no PHI)</td><td>USA</td></tr>
-                            <tr><td class="sp-name">Postmark</td><td data-i18n="security.sp_postmark_purpose">Transactional email delivery</td><td data-i18n="security.sp_postmark_data">Email addresses, notifications (no PHI)</td><td>USA</td></tr>
-                            <tr><td class="sp-name">Apple App Store</td><td data-i18n="security.sp_apple_purpose">iOS app distribution</td><td data-i18n="security.sp_apple_data">App metadata, user account</td><td>USA</td></tr>
-                            <tr><td class="sp-name">Google Play Store</td><td data-i18n="security.sp_gplay_purpose">Android app distribution</td><td data-i18n="security.sp_gplay_data">App metadata, user account</td><td>USA</td></tr>
-                            <tr><td class="sp-name">Sectigo</td><td data-i18n="security.sp_sectigo_purpose">SSL/TLS certificate authority</td><td data-i18n="security.sp_sectigo_data">Domain validation data</td><td>USA / UK</td></tr>
-                            <tr><td class="sp-name">DMARC Digests</td><td data-i18n="security.sp_dmarc_purpose">Email authentication monitoring</td><td data-i18n="security.sp_dmarc_data">Domain & email auth reports (no PHI)</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="images/sp-openai.svg" alt="" class="sp-logo">OpenAI</td><td data-i18n="security.sp_openai_purpose">LLM inference for clinical note generation</td><td data-i18n="security.sp_openai_data">De-identified clinical text</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="images/sp-elevenlabs.svg" alt="" class="sp-logo">ElevenLabs</td><td data-i18n="security.sp_elevenlabs_purpose">Text-to-speech synthesis</td><td data-i18n="security.sp_elevenlabs_data">Non-PHI audio data</td><td>USA / EU</td></tr>
+                            <tr><td class="sp-name"><img src="images/sp-google.svg" alt="" class="sp-logo">Google (GCP)</td><td data-i18n="security.sp_google_purpose">Cloud infrastructure & speech-to-text</td><td data-i18n="security.sp_google_data">Encrypted clinical data</td><td data-i18n="security.sp_multiregion">Multi-region</td></tr>
+                            <tr><td class="sp-name"><img src="images/sp-azure.svg" alt="" class="sp-logo">Microsoft Azure</td><td data-i18n="security.sp_azure_purpose">Cloud infrastructure & AI services</td><td data-i18n="security.sp_azure_data">Encrypted clinical data</td><td data-i18n="security.sp_multiregion">Multi-region</td></tr>
+                            <tr><td class="sp-name"><img src="images/sp-stripe.svg" alt="" class="sp-logo">Stripe</td><td data-i18n="security.sp_stripe_purpose">Payment processing</td><td data-i18n="security.sp_stripe_data">Billing data (no PHI)</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="images/sp-postmark.svg" alt="" class="sp-logo">Postmark</td><td data-i18n="security.sp_postmark_purpose">Transactional email delivery</td><td data-i18n="security.sp_postmark_data">Email addresses, notifications (no PHI)</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="images/sp-apple.svg" alt="" class="sp-logo">Apple App Store</td><td data-i18n="security.sp_apple_purpose">iOS app distribution</td><td data-i18n="security.sp_apple_data">App metadata, user account</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="images/sp-gplay.svg" alt="" class="sp-logo">Google Play Store</td><td data-i18n="security.sp_gplay_purpose">Android app distribution</td><td data-i18n="security.sp_gplay_data">App metadata, user account</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="images/sp-sectigo.svg" alt="" class="sp-logo">Sectigo</td><td data-i18n="security.sp_sectigo_purpose">SSL/TLS certificate authority</td><td data-i18n="security.sp_sectigo_data">Domain validation data</td><td>USA / UK</td></tr>
+                            <tr><td class="sp-name"><img src="images/sp-dmarc.svg" alt="" class="sp-logo">DMARC Digests</td><td data-i18n="security.sp_dmarc_purpose">Email authentication monitoring</td><td data-i18n="security.sp_dmarc_data">Domain & email auth reports (no PHI)</td><td>USA</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -316,6 +308,15 @@ function SecurityPage() {
                         <a href="assets/leaflets/patient-privacy-notice-pt.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Portugu\u00eas</a>
                         <a href="assets/leaflets/patient-privacy-notice-it.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Italiano</a>
                         <a href="assets/leaflets/patient-privacy-notice-ar.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">\u0627\u0644\u0639\u0631\u0628\u064a\u0629</a>
+                    </div>
+                </div>
+
+                <!-- ClinixQM Banner -->
+                <div class="trust-qm-banner" style="margin-top: 60px;">
+                    <img src="images/clinixqm-logo.png" alt="ClinixQM" onerror="this.style.display='none'">
+                    <div>
+                        <div style="font-weight: 600; font-size: 14px;" data-i18n="security.qm_powered">Quality assured by ClinixQM</div>
+                        <a href="https://clinixqm.gacrux.ai/" target="_blank" rel="noopener" style="font-size: 13px;">clinixqm.gacrux.ai <span class="material-symbols-rounded" style="font-size: 14px; vertical-align: middle;">open_in_new</span></a>
                     </div>
                 </div>
 
