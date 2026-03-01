@@ -4,12 +4,23 @@ function SecurityPage() {
     return `
         <section class="subpage-container">
             <div class="page-width">
+
+                <!-- Section 1: Hero -->
                 <div class="subpage-header">
-                    <span class="kicker" data-i18n="security.kicker">Security, Compliance & QMS</span>
-                    <h2 class="subpage-title" data-i18n="security.title">Protecting patient privacy by default.</h2>
-                    <p class="subpage-copy" data-i18n="security.desc">Safeguarding patient data is non\u2011negotiable. ClinixSummary employs industry\u2011standard encryption, strict access controls and immediate audio deletion to give you confidence that your practice and your patients are protected.</p>
+                    <span class="kicker" data-i18n="security.kicker">Trust Center</span>
+                    <h2 class="subpage-title" data-i18n="security.title">Security, privacy and compliance \u2014 verified.</h2>
+                    <p class="subpage-copy" data-i18n="security.desc">Safeguarding patient data is non\u2011negotiable. ClinixSummary employs industry\u2011standard encryption, strict access controls and immediate audio deletion \u2014 governed by the ClinixQM Quality Management System \u2014 to give you confidence that your practice and your patients are protected.</p>
                 </div>
 
+                <div class="trust-qm-banner">
+                    <img src="images/clinixqm-logo.png" alt="ClinixQM" onerror="this.style.display='none'">
+                    <div>
+                        <div style="font-weight: 600; font-size: 14px;" data-i18n="security.qm_powered">Quality assured by ClinixQM</div>
+                        <a href="https://clinixqm.gacrux.ai/" target="_blank" rel="noopener" style="font-size: 13px;">clinixqm.gacrux.ai <span class="material-symbols-rounded" style="font-size: 14px; vertical-align: middle;">open_in_new</span></a>
+                    </div>
+                </div>
+
+                <!-- Section 2: Compliance Frameworks -->
                 <div class="compliance-badges">
                     <div class="compliance-badge">
                         <span class="material-symbols-rounded">verified_user</span>
@@ -39,9 +50,31 @@ function SecurityPage() {
                             <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_encryption">Encryption</div>
                         </div>
                     </div>
+                    <div class="compliance-badge">
+                        <span class="material-symbols-rounded">flag</span>
+                        <div>
+                            <div style="font-size: 15px;">PIPEDA / PHIPA</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_compliant">Compliant</div>
+                        </div>
+                    </div>
+                    <div class="compliance-badge">
+                        <span class="material-symbols-rounded">policy</span>
+                        <div>
+                            <div style="font-size: 15px;">CCPA</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_compliant">Compliant</div>
+                        </div>
+                    </div>
+                    <div class="compliance-badge">
+                        <span class="material-symbols-rounded">domain_verification</span>
+                        <div>
+                            <div style="font-size: 15px;">ISO 27001</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_aligned">Aligned</div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="grid-2" style="margin-top: 48px;">
+                <!-- Section 3: Security Practices -->
+                <div class="grid-3" style="margin-top: 48px;">
                     <div class="text-group">
                         <span class="material-symbols-rounded list-item-icon">lock</span>
                         <h3 data-i18n="security.encryption_title">End\u2011to\u2011end encryption</h3>
@@ -62,10 +95,21 @@ function SecurityPage() {
                         <h3 data-i18n="security.deidentified_title">De-identified training data</h3>
                         <p data-i18n="security.deidentified_desc">Our models are fine\u2011tuned on anonymised, de-identified, non\u2011PHI data and run inference on secure infrastructure. We never use your transcripts to train customer\u2011facing models.</p>
                     </div>
+                    <div class="text-group">
+                        <span class="material-symbols-rounded list-item-icon">bug_report</span>
+                        <h3 data-i18n="security.pentest_title">Penetration testing</h3>
+                        <p data-i18n="security.pentest_desc">Regular third\u2011party penetration tests and vulnerability assessments are conducted against our infrastructure and applications. Findings are triaged, remediated and re\u2011tested on a continuous basis.</p>
+                    </div>
+                    <div class="text-group">
+                        <span class="material-symbols-rounded list-item-icon">emergency_home</span>
+                        <h3 data-i18n="security.incident_title">Incident response</h3>
+                        <p data-i18n="security.incident_desc">A documented incident response plan ensures breach notification within 72 hours as required by GDPR. 24/7 monitoring, alerting and defined escalation playbooks keep response times minimal.</p>
+                    </div>
                 </div>
 
+                <!-- Section 4: ClinixQM Quality Management -->
                 <div class="subpage-header" style="margin-top: 60px;">
-                    <span class="kicker" data-i18n="security.qms_kicker">Clinix Quality Management System</span>
+                    <span class="kicker" data-i18n="security.qms_kicker">ClinixQM Quality Management Process</span>
                     <h3 class="section-title" data-i18n="security.qms_title">Clinix QM: Quality at every layer.</h3>
                     <p class="section-copy" data-i18n="security.qms_desc">The Clinix Quality Management System (Clinix QM) ensures that every output meets clinical standards through systematic review, feedback loops, and continuous improvement protocols.</p>
                 </div>
@@ -88,6 +132,143 @@ function SecurityPage() {
                     </div>
                 </div>
 
+                <!-- Section 5: Sub-Processors -->
+                <div class="subpage-header" style="margin-top: 60px;">
+                    <span class="kicker" data-i18n="security.sp_kicker">Sub-Processor Transparency</span>
+                    <h3 class="section-title" data-i18n="security.sp_title">Our vendors, disclosed.</h3>
+                    <p class="section-copy" data-i18n="security.sp_desc">We believe in full transparency about the third parties that help us deliver our service. Every sub-processor is bound by data protection obligations no less protective than our own. We provide at least 30 days\u2019 written notice before engaging a new sub-processor.</p>
+                </div>
+
+                <div class="subprocessor-wrap">
+                    <table class="subprocessor-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="security.sp_col_name">Sub-Processor</th>
+                                <th data-i18n="security.sp_col_purpose">Purpose</th>
+                                <th data-i18n="security.sp_col_data">Data Processed</th>
+                                <th data-i18n="security.sp_col_location">Location</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="sp-name">OpenAI</td><td data-i18n="security.sp_openai_purpose">LLM inference for clinical note generation</td><td data-i18n="security.sp_openai_data">De-identified clinical text</td><td>USA</td></tr>
+                            <tr><td class="sp-name">ElevenLabs</td><td data-i18n="security.sp_elevenlabs_purpose">Text-to-speech synthesis</td><td data-i18n="security.sp_elevenlabs_data">Non-PHI audio data</td><td>USA / EU</td></tr>
+                            <tr><td class="sp-name">Google (GCP)</td><td data-i18n="security.sp_google_purpose">Cloud infrastructure & speech-to-text</td><td data-i18n="security.sp_google_data">Encrypted clinical data</td><td data-i18n="security.sp_multiregion">Multi-region</td></tr>
+                            <tr><td class="sp-name">Microsoft Azure</td><td data-i18n="security.sp_azure_purpose">Cloud infrastructure & AI services</td><td data-i18n="security.sp_azure_data">Encrypted clinical data</td><td data-i18n="security.sp_multiregion">Multi-region</td></tr>
+                            <tr><td class="sp-name">Stripe</td><td data-i18n="security.sp_stripe_purpose">Payment processing</td><td data-i18n="security.sp_stripe_data">Billing data (no PHI)</td><td>USA</td></tr>
+                            <tr><td class="sp-name">Postmark</td><td data-i18n="security.sp_postmark_purpose">Transactional email delivery</td><td data-i18n="security.sp_postmark_data">Email addresses, notifications (no PHI)</td><td>USA</td></tr>
+                            <tr><td class="sp-name">Apple App Store</td><td data-i18n="security.sp_apple_purpose">iOS app distribution</td><td data-i18n="security.sp_apple_data">App metadata, user account</td><td>USA</td></tr>
+                            <tr><td class="sp-name">Google Play Store</td><td data-i18n="security.sp_gplay_purpose">Android app distribution</td><td data-i18n="security.sp_gplay_data">App metadata, user account</td><td>USA</td></tr>
+                            <tr><td class="sp-name">Sectigo</td><td data-i18n="security.sp_sectigo_purpose">SSL/TLS certificate authority</td><td data-i18n="security.sp_sectigo_data">Domain validation data</td><td>USA / UK</td></tr>
+                            <tr><td class="sp-name">DMARC Digests</td><td data-i18n="security.sp_dmarc_purpose">Email authentication monitoring</td><td data-i18n="security.sp_dmarc_data">Domain & email auth reports (no PHI)</td><td>USA</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-top: 16px;" data-i18n-html="security.sp_note">This list is maintained as part of our <a href="/dpa" style="color: var(--accent);">Data Processing Agreement</a>. We provide at least 30 days\u2019 prior written notice before engaging a new sub-processor.</p>
+
+                <!-- Section 6: Organisational Security -->
+                <div class="subpage-header" style="margin-top: 60px;">
+                    <span class="kicker" data-i18n="security.org_kicker">Organisational Security</span>
+                    <h3 class="section-title" data-i18n="security.org_title">Security is a culture, not just a feature.</h3>
+                </div>
+
+                <div class="grid-3" style="margin-bottom: 40px;">
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">badge</div>
+                        <h3 data-i18n="security.org_employee_title">Employee Security</h3>
+                        <p data-i18n="security.org_employee_desc">All team members undergo background checks and mandatory security awareness training. Access follows the principle of least privilege and is reviewed regularly.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">handshake</div>
+                        <h3 data-i18n="security.org_vendor_title">Vendor Management</h3>
+                        <p data-i18n="security.org_vendor_desc">Every sub-processor undergoes due diligence review before engagement. Contractual data protection obligations, regular reassessment and right-to-audit clauses are standard.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">backup</div>
+                        <h3 data-i18n="security.org_continuity_title">Business Continuity</h3>
+                        <p data-i18n="security.org_continuity_desc">Disaster recovery plans, encrypted backups and uptime monitoring ensure service availability. Infrastructure spans multiple regions for geographic redundancy.</p>
+                    </div>
+                </div>
+
+                <!-- Section 7: Documents & Resources -->
+                <div class="subpage-header" style="margin-top: 60px;">
+                    <span class="kicker" data-i18n="security.docs_kicker">Documents & Resources</span>
+                    <h3 class="section-title" data-i18n="security.docs_title">Everything you need for due diligence.</h3>
+                </div>
+
+                <div class="doc-grid">
+                    <a href="/baa" class="doc-card">
+                        <span class="material-symbols-rounded">description</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_baa">Business Associate Agreement</h4>
+                            <p data-i18n="security.doc_baa_desc">HIPAA BAA for covered entities and business associates.</p>
+                        </div>
+                    </a>
+                    <a href="/dpa" class="doc-card">
+                        <span class="material-symbols-rounded">description</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_dpa">Data Processing Agreement</h4>
+                            <p data-i18n="security.doc_dpa_desc">GDPR-compliant DPA with sub-processor details.</p>
+                        </div>
+                    </a>
+                    <a href="/privacy-policy" class="doc-card">
+                        <span class="material-symbols-rounded">policy</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_privacy">Privacy Policy</h4>
+                            <p data-i18n="security.doc_privacy_desc">How we collect, use and protect your data.</p>
+                        </div>
+                    </a>
+                    <a href="/privacy-choices" class="doc-card">
+                        <span class="material-symbols-rounded">tune</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_choices">Your Privacy Choices</h4>
+                            <p data-i18n="security.doc_choices_desc">Manage consent, data access and deletion requests.</p>
+                        </div>
+                    </a>
+                    <a href="/terms" class="doc-card">
+                        <span class="material-symbols-rounded">gavel</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_terms">Terms of Service</h4>
+                            <p data-i18n="security.doc_terms_desc">Standard terms governing platform usage.</p>
+                        </div>
+                    </a>
+                    <a href="/terms-enterprise" class="doc-card">
+                        <span class="material-symbols-rounded">corporate_fare</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_enterprise">Enterprise Terms</h4>
+                            <p data-i18n="security.doc_enterprise_desc">Additional terms for enterprise and organisational accounts.</p>
+                        </div>
+                    </a>
+                    <a href="/usage-policy" class="doc-card">
+                        <span class="material-symbols-rounded">rule</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_usage">Usage Policy</h4>
+                            <p data-i18n="security.doc_usage_desc">Acceptable use guidelines and restrictions.</p>
+                        </div>
+                    </a>
+                    <a href="docs/whitepapers/security-compliance-specification-2025.pdf" target="_blank" class="doc-card">
+                        <span class="material-symbols-rounded">shield</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_sec_wp">Security & Compliance Whitepaper</h4>
+                            <p data-i18n="security.doc_sec_wp_desc">Technical security specification (PDF).</p>
+                        </div>
+                    </a>
+                    <a href="docs/whitepapers/quality-management-system-qms-2025.pdf" target="_blank" class="doc-card">
+                        <span class="material-symbols-rounded">verified</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_qms_wp">QMS Whitepaper</h4>
+                            <p data-i18n="security.doc_qms_wp_desc">Quality management system methodology (PDF).</p>
+                        </div>
+                    </a>
+                    <a href="docs/whitepapers/clinixsummary-architecture-overview-2025.pdf" target="_blank" class="doc-card">
+                        <span class="material-symbols-rounded">architecture</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_arch_wp">Architecture Overview</h4>
+                            <p data-i18n="security.doc_arch_wp_desc">System architecture and infrastructure design (PDF).</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Section 8: Data Handling -->
                 <div class="subpage-header" style="margin-top: 60px;">
                     <span class="kicker" data-i18n="security.data_kicker">Your Data, Your Rules</span>
                     <h3 class="section-title" data-i18n="security.data_title">Immediate deletion & granular control.</h3>
@@ -111,6 +292,7 @@ function SecurityPage() {
                     </div>
                 </div>
 
+                <!-- Section 9: Clinic Resources -->
                 <div class="subpage-header" style="margin-top: 60px;">
                     <span class="kicker" data-i18n="security.resources_kicker">Clinic Resources</span>
                     <h3 class="section-title" data-i18n="security.resources_title">Patient privacy notice for your practice.</h3>
@@ -129,14 +311,15 @@ function SecurityPage() {
                         <a href="assets/leaflets/patient-privacy-notice-en.pdf" download class="btn-primary" style="text-decoration: none; white-space: nowrap; font-size: 14px;">
                             <span class="material-symbols-rounded" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">download</span> English
                         </a>
-                        <a href="assets/leaflets/patient-privacy-notice-fr.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Français</a>
-                        <a href="assets/leaflets/patient-privacy-notice-es.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Español</a>
-                        <a href="assets/leaflets/patient-privacy-notice-pt.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Português</a>
+                        <a href="assets/leaflets/patient-privacy-notice-fr.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Fran\u00e7ais</a>
+                        <a href="assets/leaflets/patient-privacy-notice-es.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Espa\u00f1ol</a>
+                        <a href="assets/leaflets/patient-privacy-notice-pt.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Portugu\u00eas</a>
                         <a href="assets/leaflets/patient-privacy-notice-it.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Italiano</a>
-                        <a href="assets/leaflets/patient-privacy-notice-ar.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">العربية</a>
+                        <a href="assets/leaflets/patient-privacy-notice-ar.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">\u0627\u0644\u0639\u0631\u0628\u064a\u0629</a>
                     </div>
                 </div>
 
+                <!-- Section 10: CTA -->
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
                     <h2 style="font-family: var(--font-serif); font-size: 36px; margin-bottom: 20px;" data-i18n="security.cta_title">Ready to secure your documentation workflow?</h2>
                     <div class="nav-actions" style="justify-content: center;">
@@ -304,7 +487,7 @@ function PrivacyPolicyPage() {
                     <div class="text-group">
                         <h3 data-i18n="privacy_policy.s3_title">3. Data Sharing & Disclosure</h3>
                         <p data-i18n="privacy_policy.s3_p1">We do not sell personal information. We may share data with: (a) sub-processors who assist in service delivery, under strict data processing agreements; (b) law enforcement or regulators where legally required; (c) professional advisors (legal, audit) under confidentiality obligations.</p>
-                        <p style="margin-top: 10px;" data-i18n="privacy_policy.s3_p2">All sub-processors are contractually required to maintain HIPAA and GDPR-equivalent protections. A current list of sub-processors is available upon request.</p>
+                        <p style="margin-top: 10px;" data-i18n-html="privacy_policy.s3_p2">All sub-processors are contractually required to maintain HIPAA and GDPR-equivalent protections. A current list of sub-processors is published on our <a href="/security" style="color: var(--accent);">Trust Center</a>.</p>
                     </div>
 
                     <div class="text-group">
@@ -649,7 +832,7 @@ function DPAPage() {
 
                     <div class="text-group">
                         <h3 data-i18n="dpa.s5_title">5. Sub-processor Management</h3>
-                        <p data-i18n="dpa.s5_p1">The Processor engages sub-processors to assist in providing the service. A current list of sub-processors is available upon request. The Processor shall provide the Controller with at least 30 days\u2019 prior written notice before engaging a new sub-processor. All sub-processors are bound by data protection obligations no less protective than those in this DPA.</p>
+                        <p data-i18n-html="dpa.s5_p1">The Processor engages sub-processors to assist in providing the service. A current list of sub-processors is published on our <a href="/security" style="color: var(--accent);">Trust Center</a>. The Processor shall provide the Controller with at least 30 days\u2019 prior written notice before engaging a new sub-processor. All sub-processors are bound by data protection obligations no less protective than those in this DPA.</p>
                     </div>
 
                     <div class="text-group">

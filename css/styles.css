@@ -159,6 +159,109 @@ a {
     color: var(--accent);
 }
 
+/* Trust Center – QM Banner */
+.trust-qm-banner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 20px 28px;
+    margin-top: 24px;
+}
+.trust-qm-banner img {
+    height: 40px;
+    width: auto;
+}
+.trust-qm-banner a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+.trust-qm-banner a:hover { text-decoration: underline; }
+
+/* Trust Center – Sub-processor Table */
+.subprocessor-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 32px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+}
+.subprocessor-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 640px;
+}
+.subprocessor-table th {
+    text-align: left;
+    padding: 14px 20px;
+    background: var(--text-primary);
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.subprocessor-table th:first-child { border-radius: 11px 0 0 0; }
+.subprocessor-table th:last-child  { border-radius: 0 11px 0 0; }
+.subprocessor-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+}
+.subprocessor-table tr:nth-child(even) td {
+    background: var(--bg-subtle);
+}
+.subprocessor-table tr:last-child td {
+    border-bottom: none;
+}
+.subprocessor-table .sp-name {
+    font-weight: 600;
+}
+
+/* Trust Center – Document Grid */
+.doc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 32px;
+}
+.doc-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.doc-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(15,62,93,0.08);
+}
+.doc-card .material-symbols-rounded {
+    font-size: 28px;
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+.doc-card-text h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.doc-card-text p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
 /* Beta Badge (for beta pages) */
 .beta-notice {
     display: inline-flex;

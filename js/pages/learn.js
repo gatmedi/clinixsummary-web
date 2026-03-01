@@ -265,7 +265,7 @@ function WhitepapersPage() {
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="papers.wp_cta_title">Need a technical deep dive for your team?</h2>
                     <div class="nav-actions" style="justify-content: center;">
                         <a href="/contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Requesting white papers.'); return false;" data-i18n="papers.wp_cta_btn">Request White Papers</a>
-                        <a href="/security" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="papers.wp_cta_secondary">View Security & Compliance</a>
+                        <a href="/security" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="papers.wp_cta_secondary">View Trust Center</a>
                     </div>
                 </div>
             </div>
