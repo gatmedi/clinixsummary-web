@@ -28,7 +28,7 @@ const SEO = (() => {
         '/meticulous-notes':    { titleKey: 'notes.title',                    descKey: 'notes.desc' },
         '/proprietary-models':  { titleKey: 'models.title',                   descKey: 'models.desc' },
         '/kaizen':              { titleKey: 'kaizen.title',                   descKey: 'kaizen.desc' },
-        '/security':            { titleKey: 'security.title',                 descKey: null, descFallback: 'HIPAA & GDPR compliant. End-to-end encryption, ephemeral audio and de-identified training data.' },
+        '/security':            { titleKey: 'security.title',                 descKey: null, descFallback: 'Trust Center \u2014 HIPAA, GDPR, SOC 2 aligned. Sub-processor transparency, encryption, ephemeral audio, and quality management powered by ClinixQM.' },
         '/languages':           { titleKey: 'lang.title',                     descKey: 'lang.desc' },
         '/auto-ambient':        { titleKey: 'ambient.title',                  descKey: 'ambient.desc' },
         '/cme-vault':           { titleKey: 'cme.title',                      descKey: 'cme.desc' },
