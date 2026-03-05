@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClinixSummary — Missing Links &amp; Dead-End CTAs Audit</title>
+<style>
+  @page { size: A4; margin: 18mm 15mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 11px; color: #1a1a1a; line-height: 1.5; padding: 30px 40px; max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 22px; margin-bottom: 4px; color: #111; }
+  .subtitle { font-size: 13px; color: #555; margin-bottom: 6px; }
+  .date { font-size: 11px; color: #888; margin-bottom: 28px; }
+  h2 { font-size: 15px; margin-top: 30px; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid #111; color: #111; page-break-after: avoid; }
+  h3 { font-size: 12px; margin-top: 18px; margin-bottom: 6px; color: #333; page-break-after: avoid; }
+  p, li { font-size: 11px; line-height: 1.55; }
+  ul { padding-left: 18px; margin-bottom: 10px; }
+  li { margin-bottom: 3px; }
+
+  .badge { display: inline-block; font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.5px; vertical-align: middle; }
+  .badge-critical { background: #dc2626; color: #fff; }
+  .badge-high { background: #ea580c; color: #fff; }
+  .badge-medium { background: #ca8a04; color: #fff; }
+  .badge-low { background: #6b7280; color: #fff; }
+
+  table { width: 100%; border-collapse: collapse; margin-bottom: 14px; font-size: 10.5px; page-break-inside: auto; }
+  thead { background: #f3f4f6; }
+  th { text-align: left; padding: 6px 8px; font-weight: 600; border: 1px solid #d1d5db; font-size: 10px; }
+  td { padding: 5px 8px; border: 1px solid #d1d5db; vertical-align: top; }
+  tr { page-break-inside: avoid; }
+  code { font-family: 'SF Mono', 'Cascadia Code', 'Consolas', monospace; font-size: 10px; background: #f1f5f9; padding: 1px 4px; border-radius: 2px; }
+
+  .summary-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 14px 18px; margin: 18px 0; }
+  .summary-box table { margin-bottom: 0; }
+
+  .action-needed { background: #eff6ff; border-left: 3px solid #2563eb; padding: 8px 12px; margin: 8px 0 14px 0; font-size: 10.5px; }
+  .action-needed strong { color: #1d4ed8; }
+
+  .section-note { font-style: italic; color: #555; margin-bottom: 10px; }
+
+  .toc { margin: 16px 0 24px 0; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin-bottom: 3px; font-size: 11px; }
+  .toc a { color: #2563eb; text-decoration: none; }
+
+  .header-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 2px; }
+  .logo-text { font-size: 10px; color: #888; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+
+  .page-break { page-break-before: always; }
+
+  @media print {
+    body { padding: 0; font-size: 10.5px; }
+    .no-print { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header-bar">
+  <span class="logo-text">GATMEDI &middot; ClinixSummary</span>
+</div>
+<h1>Missing Links &amp; Dead-End CTAs Audit</h1>
+<p class="subtitle">Comprehensive audit of all placeholder buttons, broken links, and non-functional CTAs across the ClinixSummary website.</p>
+<p class="date">Prepared: 5 March 2026 &nbsp;|&nbsp; Repository: clinixsummary-web &nbsp;|&nbsp; Total issues: 39</p>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="summary-box">
+  <h3 style="margin-top:0; margin-bottom:8px;">Executive Summary</h3>
+  <table>
+    <thead><tr><th>Severity</th><th>Count</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge badge-critical">CRITICAL</span></td><td style="text-align:center;"><strong>23</strong></td><td>Console, subscription, and free-trial buttons &mdash; all dead-ends showing only a toast message</td></tr>
+      <tr><td><span class="badge badge-high">HIGH</span></td><td style="text-align:center;"><strong>11</strong></td><td>Feature CTAs with no destination + <code>/contact</code> links blocked by <code>return false</code> + mailto-based contact form</td></tr>
+      <tr><td><span class="badge badge-medium">MEDIUM</span></td><td style="text-align:center;"><strong>3</strong></td><td>Misdirected footer link + orphan route with no navigation link</td></tr>
+      <tr><td><span class="badge badge-low">LOW</span></td><td style="text-align:center;"><strong>2</strong></td><td>Incomplete social media links</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:8px;"><strong>Key requirement:</strong> All forms must be filled online (no <code>mailto:</code> links). Form submissions should be delivered as emails to the team on the backend.</p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <h3>Contents</h3>
+  <ol>
+    <li><a href="#s1">"Go to Console" Buttons (6 locations)</a></li>
+    <li><a href="#s2">Subscription / Pricing Buttons (5 locations)</a></li>
+    <li><a href="#s3">"Start Free Trial" / Signup Buttons (12 locations)</a></li>
+    <li><a href="#s4">Feature-Specific CTAs (4 locations)</a></li>
+    <li><a href="#s5">Broken <code>/contact</code> Links (6 locations)</a></li>
+    <li><a href="#s6">Contact Form &mdash; <code>mailto:</code> Must Become Online Form (1 location)</a></li>
+    <li><a href="#s7">"System Status" Footer Link (1 location)</a></li>
+    <li><a href="#s8">Orphan <code>/leaflet</code> Route (1 location)</a></li>
+    <li><a href="#s9">Social Media Links (1 item)</a></li>
+    <li><a href="#s10">Developer Action Checklist</a></li>
+  </ol>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 1 -->
+<!-- ============================================================ -->
+<h2 id="s1">1. "Go to Console" Buttons &nbsp;<span class="badge badge-critical">CRITICAL</span></h2>
+<p class="section-note">The primary call-to-action across the site. Every instance currently shows a toast message and goes nowhere.</p>
+
+<table>
+  <thead><tr><th style="width:30%">File : Line</th><th style="width:22%">Button Text</th><th style="width:22%">Page</th><th>Current Behaviour</th></tr></thead>
+  <tbody>
+    <tr><td><code>index.html : 285</code></td><td>Go to Console</td><td>Navbar (global)</td><td><code>href="#"</code> + <code>showToast('Opening console...')</code></td></tr>
+    <tr><td><code>js/pages/home.js : 15</code></td><td>Go to Console</td><td>Hero section</td><td><code>onclick="showToast('Opening console...')"</code></td></tr>
+    <tr><td><code>js/pages/meet.js : 162</code></td><td>Try the Console Free</td><td>Proprietary Models</td><td><code>href="#"</code> + <code>showToast('Opening console for a live demo...')</code></td></tr>
+    <tr><td><code>js/pages/meet.js : 242</code></td><td>Try a Sample Note</td><td>Meticulous Notes</td><td><code>href="#"</code> + <code>showToast('Opening console to generate a sample note...')</code></td></tr>
+    <tr><td><code>js/pages/meet.js : 418</code></td><td>Try Multilingual Demo</td><td>Languages</td><td><code>href="#"</code> + <code>showToast('Opening multilingual console demo...')</code></td></tr>
+    <tr><td><code>js/pages/meet.js : 499</code></td><td>Try Auto-Ambient Free</td><td>Auto Ambient Dictate</td><td><code>href="#"</code> + <code>showToast('Launching auto-ambient demo...')</code></td></tr>
+  </tbody>
+</table>
+
+<div class="action-needed">
+  <strong>Developer action:</strong> Replace every <code>href="#"</code> and <code>showToast</code> with the real console URL (e.g. <code>https://console.clinixsummary.ai</code>). Add <code>target="_blank"</code> if the console is a separate app.
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 2 -->
+<!-- ============================================================ -->
+<h2 id="s2">2. Subscription / Pricing Buttons &nbsp;<span class="badge badge-critical">CRITICAL</span></h2>
+<p class="section-note">All five subscription plan buttons on the homepage pricing section are dead-ends.</p>
+
+<table>
+  <thead><tr><th style="width:30%">File : Line</th><th style="width:18%">Plan</th><th style="width:15%">Price</th><th>Current Behaviour</th></tr></thead>
+  <tbody>
+    <tr><td><code>js/pages/home.js : 292</code></td><td>Free</td><td>$0</td><td><code>showToast('Get started with Free plan!')</code></td></tr>
+    <tr><td><code>js/pages/home.js : 304</code></td><td>Pilot</td><td>$900</td><td><code>showToast('Subscribing to Pilot 900.')</code></td></tr>
+    <tr><td><code>js/pages/home.js : 316</code></td><td>Pioneer</td><td>$1,800</td><td><code>showToast('Subscribing to Pioneer 1800.')</code></td></tr>
+    <tr><td><code>js/pages/home.js : 333</code></td><td>Productive</td><td>$3,000</td><td><code>showToast('Subscribing to Productive 3000.')</code></td></tr>
+    <tr><td><code>js/pages/home.js : 345</code></td><td>Prolific</td><td>$6,000</td><td><code>showToast('Subscribing to Prolific 6000.')</code></td></tr>
+  </tbody>
+</table>
+
+<div class="action-needed">
+  <strong>Developer action:</strong> Link each button to the console signup with the plan pre-selected (e.g. <code>https://console.clinixsummary.ai/signup?plan=pilot</code>) or to a Stripe Checkout session. The Enterprise plan (line 357) already links correctly to <code>/contact</code>.
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 3 -->
+<!-- ============================================================ -->
+<h2 id="s3">3. "Start Free Trial" / Signup Buttons &nbsp;<span class="badge badge-critical">CRITICAL</span></h2>
+<p class="section-note">Approximately 12 trial/signup CTAs scattered across nearly every page. All are dead-ends.</p>
+
+<table>
+  <thead><tr><th style="width:30%">File : Line</th><th style="width:22%">Button Text</th><th style="width:20%">Page</th><th>Current Behaviour</th></tr></thead>
+  <tbody>
+    <tr><td><code>js/pages/solutions.js : 58</code></td><td>Start My Free Trial</td><td>Clinicians</td><td><code>href="#"</code> + <code>showToast</code></td></tr>
+    <tr><td><code>js/pages/solutions.js : 221</code></td><td>Sign in to enterprise portal</td><td>Organizations</td><td><code>href="#"</code> + <code>showToast</code></td></tr>
+    <tr><td><code>js/pages/meet.js : 322</code></td><td>Start Free Trial</td><td>Kaizen</td><td><code>href="#"</code> + <code>showToast</code></td></tr>
+    <tr><td><code>js/pages/meet.js : 579</code></td><td>Activate CME Vault</td><td>CME/CPD Vault</td><td><code>href="#"</code> + <code>showToast</code></td></tr>
+    <tr><td><code>js/pages/capabilities.js : 42</code></td><td>Start Free Trial</td><td><strong>Generic template</strong> &mdash; reused by ~14 specialty pages (Medical, Dental, Psychiatry, Psychology, Midwifery, Vet, Operative, Radiology Assist, Dermatology Assist, Triage Assist, ICD Coding, Referrals, etc.)</td><td><code>href="#"</code> + <code>showToast</code></td></tr>
+    <tr><td><code>js/pages/capabilities.js : 345</code></td><td>Start Free Trial</td><td>Allied Health</td><td><code>href="#"</code> + <code>showToast</code></td></tr>
+    <tr><td><code>js/pages/learn.js : 486</code></td><td>Start Free Trial</td><td>Learn (bottom CTA)</td><td><code>href="#"</code> + <code>showToast</code></td></tr>
+    <tr><td><code>js/pages/other.js : 327</code></td><td>Start free trial</td><td>Careers</td><td><code>href="#"</code> + <code>showToast</code></td></tr>
+    <tr><td><code>js/pages/other.js : 1109</code></td><td>Start free trial</td><td>Story</td><td><code>href="#"</code> + <code>showToast</code></td></tr>
+  </tbody>
+</table>
+
+<div class="action-needed">
+  <strong>Developer action:</strong> Replace all with the console signup/trial URL. The generic template at <code>capabilities.js : 42</code> is high-impact &mdash; fixing it once fixes ~14 specialty pages automatically. "Sign in to enterprise portal" should link to the enterprise login. "Activate CME Vault" should link to the CME feature activation in the console.
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 4 -->
+<!-- ============================================================ -->
+<h2 id="s4" class="page-break">4. Feature-Specific CTAs &nbsp;<span class="badge badge-high">HIGH</span></h2>
+<p class="section-note">Buttons that should trigger specific actions (form submissions, applications) but currently do nothing.</p>
+
+<table>
+  <thead><tr><th style="width:30%">File : Line</th><th style="width:22%">Button Text</th><th style="width:20%">Page</th><th>Current Behaviour</th></tr></thead>
+  <tbody>
+    <tr><td><code>js/pages/meet.js : 676</code></td><td>Apply Now</td><td>Clinix Foundation</td><td><code>href="#"</code> + <code>showToast('Opening Clinix Foundation application form...')</code></td></tr>
+    <tr><td><code>js/pages/learn.js : 184</code></td><td>Request Publications</td><td>Publications</td><td><code>href="#"</code> + <code>showToast('Publications requested.')</code></td></tr>
+    <tr><td><code>js/pages/learn.js : 328</code></td><td>Submit a story</td><td>News &amp; Events</td><td><code>href="#"</code> + <code>showToast('Story submission form activated.')</code></td></tr>
+    <tr><td><code>js/pages/learn.js : 267</code></td><td>Request White Papers</td><td>Whitepapers</td><td>Has <code>href="/contact"</code> but <code>return false</code> blocks it</td></tr>
+  </tbody>
+</table>
+
+<div class="action-needed">
+  <strong>Developer action:</strong> Each of these needs either:<br>
+  (a) Its own online form (recommended for "Apply Now" and "Submit a story"), or<br>
+  (b) Navigation to <code>/contact</code> with the topic pre-selected (use the existing pattern from <code>home.js : 357</code> which sets the contact topic via <code>setTimeout</code>).
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 5 -->
+<!-- ============================================================ -->
+<h2 id="s5">5. Broken <code>/contact</code> Links &nbsp;<span class="badge badge-high">HIGH</span></h2>
+<p class="section-note">These buttons have <code>href="/contact"</code> which is correct, but their <code>onclick</code> handler ends with <code>return false;</code> which <strong>cancels the navigation entirely</strong>. The user clicks the button and nothing happens.</p>
+
+<table>
+  <thead><tr><th style="width:30%">File : Line</th><th style="width:28%">Button Text</th><th style="width:18%">Page</th><th>Issue</th></tr></thead>
+  <tbody>
+    <tr><td><code>js/pages/solutions.js : 128</code></td><td>Request a Strategic Consultation</td><td>Insurers</td><td><code>onclick="showToast(...); return false;"</code></td></tr>
+    <tr><td><code>js/pages/solutions.js : 284</code></td><td>Request a Government Consultation</td><td>Government</td><td><code>onclick="showToast(...); return false;"</code></td></tr>
+    <tr><td><code>js/pages/solutions.js : 337</code></td><td>Request Non-profit Pricing</td><td>Non-profit</td><td><code>onclick="showToast(...); return false;"</code></td></tr>
+    <tr><td><code>js/pages/solutions.js : 403</code></td><td>Talk to Our Integration Team</td><td>Integrations</td><td><code>onclick="showToast(...); return false;"</code></td></tr>
+    <tr><td><code>js/pages/capabilities.js : 571</code></td><td>Request Information</td><td>Billing Assistance</td><td><code>onclick="showToast(...); return false;"</code></td></tr>
+    <tr><td><code>js/pages/learn.js : 267</code></td><td>Request White Papers</td><td>Whitepapers</td><td><code>onclick="showToast(...); return false;"</code></td></tr>
+  </tbody>
+</table>
+
+<div class="action-needed">
+  <strong>Developer action:</strong> Remove <code>return false;</code> from each <code>onclick</code> handler (or remove the <code>onclick</code> entirely). The <code>href="/contact"</code> will then work correctly via the SPA router. Optionally, pre-select the contact topic using the existing pattern:<br>
+  <code>onclick="setTimeout(function(){ var sel = document.getElementById('contact-topic'); if(sel) sel.value='...'; }, 200);"</code>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 6 -->
+<!-- ============================================================ -->
+<h2 id="s6">6. Contact Form &mdash; <code>mailto:</code> Must Become Online Form &nbsp;<span class="badge badge-high">HIGH</span></h2>
+<p class="section-note">The contact form currently constructs a <code>mailto:</code> link instead of submitting data to a server. This must be replaced with an online form that submits server-side and delivers the email.</p>
+
+<table>
+  <thead><tr><th style="width:30%">File : Line</th><th>Current Behaviour</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><code>js/pages/other.js : 1014</code></td>
+      <td>The <code>&lt;form id="contact-form"&gt;</code> renders fields for Name, Email, Organisation, Topic (dropdown), and Message.</td>
+    </tr>
+    <tr>
+      <td><code>js/pages/other.js : 1054&ndash;1074</code></td>
+      <td>
+        The <code>submitContactForm()</code> function:<br>
+        &bull; Reads form values<br>
+        &bull; Chooses <code>enterprise@clinixsummary.ai</code> or <code>contact@clinixsummary.ai</code> based on topic<br>
+        &bull; Constructs a <code>mailto:</code> link and opens it via <code>window.location.href</code><br>
+        &bull; This depends on the user having a desktop email client &mdash; fails silently on many mobile devices and webmail-only users
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="action-needed">
+  <strong>Developer action:</strong> Replace the <code>mailto:</code> logic with an actual form submission. Options:<br>
+  &bull; <strong>Formspree / Formcarry / Web3Forms</strong> &mdash; third-party service, no backend needed. Just change the form <code>action</code> attribute and method to <code>POST</code>.<br>
+  &bull; <strong>Custom API endpoint</strong> &mdash; e.g. <code>POST /api/contact</code> that sends the email via SendGrid, SES, or similar.<br>
+  &bull; <strong>Console backend</strong> &mdash; if the console app already has an API, add a contact endpoint there.<br><br>
+  The form should: (1) submit data via AJAX/fetch, (2) show a success confirmation on the page, (3) deliver the email to <code>enterprise@</code> or <code>contact@</code> based on topic.
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 7 -->
+<!-- ============================================================ -->
+<h2 id="s7">7. "System Status" Footer Link &nbsp;<span class="badge badge-medium">MEDIUM</span></h2>
+
+<table>
+  <thead><tr><th style="width:30%">File : Line</th><th>Current Behaviour</th><th>Expected</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><code>index.html : 427</code></td>
+      <td>Footer link "System Status" points to <code>/security</code> (the Trust Center page)</td>
+      <td>Should link to a real status page (e.g. UptimeRobot, Instatus, StatusPage.io, or a custom page)</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="action-needed">
+  <strong>Developer action:</strong> Set up a status monitoring page for the console/platform and update this link. If no status page exists yet, either remove the link or redirect to <code>/contact</code> with a note.
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 8 -->
+<!-- ============================================================ -->
+<h2 id="s8">8. Orphan <code>/leaflet</code> Route &nbsp;<span class="badge badge-medium">MEDIUM</span></h2>
+
+<table>
+  <thead><tr><th style="width:30%">File : Line</th><th>Current Behaviour</th><th>Expected</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><code>js/app.js : 160</code></td>
+      <td>Route <code>/leaflet</code> &rarr; <code>LeafletPage()</code> is defined and renders 6 downloadable Patient Privacy Notice PDFs (EN, FR, ES, PT, IT, AR) from <code>assets/leaflets/</code></td>
+      <td>The page works but <strong>no link anywhere</strong> in the navbar, footer, or any page points to <code>/leaflet</code>. It is completely unreachable by users.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="action-needed">
+  <strong>Developer action:</strong> Add a link to <code>/leaflet</code> in an appropriate location:<br>
+  &bull; Footer under "Terms &amp; policies", or<br>
+  &bull; As a link within the <code>/security</code> (Trust Center) page, or<br>
+  &bull; Under <code>/privacy-policy</code> page content<br>
+  Alternatively, if Patient Privacy Notices should be part of the console app, remove this route from the marketing site.
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 9 -->
+<!-- ============================================================ -->
+<h2 id="s9">9. Social Media Links &nbsp;<span class="badge badge-low">LOW</span></h2>
+
+<table>
+  <thead><tr><th>Currently Linked</th><th>Potentially Missing</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>
+        &bull; Facebook: <code>facebook.com/clinixsummary</code><br>
+        &bull; X (Twitter): <code>x.com/clinixsummary</code><br>
+        &bull; LinkedIn: <code>linkedin.com/company/clinixsummary</code>
+      </td>
+      <td>
+        &bull; Instagram (if account exists)<br>
+        &bull; YouTube (if channel exists)<br>
+        &bull; GitHub (if public repos exist)
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Locations:</strong> Footer (<code>index.html : 316&ndash;320</code>) and Contact page (<code>js/pages/other.js : 1005&ndash;1007</code>)</p>
+
+<div class="action-needed">
+  <strong>Developer action:</strong> Add links for any additional social accounts that exist. Update both the footer and the contact page.
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION 10 — CHECKLIST -->
+<!-- ============================================================ -->
+<h2 id="s10" class="page-break">10. Developer Action Checklist</h2>
+<p class="section-note">Ordered by priority. Check off each item as you implement it.</p>
+
+<table>
+  <thead><tr><th style="width:4%">#</th><th style="width:8%">Priority</th><th style="width:38%">Task</th><th style="width:25%">Files</th><th style="width:25%">Notes</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><span class="badge badge-critical">CRIT</span></td>
+      <td>Define console URL constant and replace all 6 "Go to Console" dead-ends</td>
+      <td><code>index.html</code>,<br><code>js/pages/home.js</code>,<br><code>js/pages/meet.js</code></td>
+      <td>Consider <code>target="_blank"</code> if console is a separate domain</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><span class="badge badge-critical">CRIT</span></td>
+      <td>Wire up 5 subscription plan buttons to checkout/signup</td>
+      <td><code>js/pages/home.js</code><br>lines 292, 304, 316, 333, 345</td>
+      <td>Pass plan identifier as URL param</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><span class="badge badge-critical">CRIT</span></td>
+      <td>Wire up ~12 "Start Free Trial" buttons to signup page</td>
+      <td><code>js/pages/solutions.js</code>,<br><code>js/pages/meet.js</code>,<br><code>js/pages/capabilities.js</code>,<br><code>js/pages/learn.js</code>,<br><code>js/pages/other.js</code></td>
+      <td>Fix the generic template at <code>capabilities.js : 42</code> first &mdash; it covers ~14 pages</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><span class="badge badge-high">HIGH</span></td>
+      <td>Convert contact form from <code>mailto:</code> to online submission</td>
+      <td><code>js/pages/other.js</code><br>lines 1014, 1054&ndash;1074</td>
+      <td>Must submit server-side and deliver email. Add success/error feedback UI.</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><span class="badge badge-high">HIGH</span></td>
+      <td>Fix 6 broken <code>/contact</code> links (remove <code>return false</code>)</td>
+      <td><code>js/pages/solutions.js</code>,<br><code>js/pages/capabilities.js</code>,<br><code>js/pages/learn.js</code></td>
+      <td>Quick fix &mdash; just delete <code>return false;</code> from each onclick</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><span class="badge badge-high">HIGH</span></td>
+      <td>Wire up 4 feature-specific CTAs (Foundation Apply, Publications, Story submission, Whitepapers)</td>
+      <td><code>js/pages/meet.js</code>,<br><code>js/pages/learn.js</code></td>
+      <td>Create online forms or route to <code>/contact</code> with topic pre-selected</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><span class="badge badge-medium">MED</span></td>
+      <td>Fix "System Status" footer link</td>
+      <td><code>index.html : 427</code></td>
+      <td>Point to monitoring/status page</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><span class="badge badge-medium">MED</span></td>
+      <td>Add link to <code>/leaflet</code> page</td>
+      <td><code>index.html</code> (footer)</td>
+      <td>Patient Privacy Notice downloads &mdash; currently unreachable</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><span class="badge badge-low">LOW</span></td>
+      <td>Add missing social media links</td>
+      <td><code>index.html</code>,<br><code>js/pages/other.js</code></td>
+      <td>Instagram, YouTube, GitHub if accounts exist</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 style="margin-top: 22px;">Verification Checklist</h3>
+<ul>
+  <li>Open every page and click every CTA button &mdash; confirm no more <code>showToast</code> dead-ends</li>
+  <li>Verify all pricing buttons navigate to the console with correct plan parameters</li>
+  <li>Verify all <code>/contact</code> links actually navigate (no <code>return false</code> blocking)</li>
+  <li>Submit the contact form and confirm email is received on the backend</li>
+  <li>Check "System Status" footer link goes to a real status page</li>
+  <li>Navigate to <code>/leaflet</code> from at least one link in the UI</li>
+  <li>Test on mobile &mdash; ensure links work after mobile menu toggle</li>
+  <li>Run: <code>grep -rn 'href="#"' js/ index.html</code> &mdash; should return zero results</li>
+  <li>Run: <code>grep -rn 'return false' js/pages/</code> &mdash; should only remain where intentionally needed</li>
+</ul>
+
+<div style="margin-top: 40px; padding-top: 16px; border-top: 1px solid #e2e8f0; font-size: 10px; color: #888; text-align: center;">
+  ClinixSummary Missing Links Audit &middot; Prepared 5 March 2026 &middot; GATMEDI
+</div>
+
+</body>
+</html>
