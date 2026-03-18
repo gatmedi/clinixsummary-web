@@ -159,7 +159,7 @@ function ProprietaryModelsPage() {
                     <h2 style="font-family: var(--font-serif); font-size: 36px; margin-bottom: 16px;" data-i18n="models.cta_title">Experience the difference proprietary models make.</h2>
                     <p style="color: rgba(255,255,255,0.7); font-size: 16px; max-width: 560px; margin: 0 auto 28px;" data-i18n="models.cta_desc">See why health systems, solo practitioners, and allied health professionals trust ClinixSummary's purpose-built AI over generic alternatives.</p>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary); font-weight: 600;" onclick="showToast('Opening console for a live demo...'); return false;" data-i18n="models.cta_primary">Try the Console Free</a>
+                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary); font-weight: 600;" onclick="window.open('${BASE_PATH}/console', '_blank')" data-i18n="models.cta_primary">Try the Console Free</a>
                         <a href="/contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="models.cta_secondary">Request a Technical Briefing</a>
                     </div>
                 </div>
@@ -239,7 +239,7 @@ function MeticulousNotesPage() {
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 16px;" data-i18n="notes.cta_title">See meticulous notes in action.</h2>
                     <p style="color: var(--text-secondary); font-size: 16px; max-width: 520px; margin: 0 auto 28px;" data-i18n="notes.cta_desc">Generate your first clinical note in under 60 seconds — no sign-up required.</p>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#" class="btn-primary" style="background: var(--text-primary); color: white;" onclick="showToast('Opening console to generate a sample note...'); return false;" data-i18n="notes.cta_primary">Try a Sample Note</a>
+                        <a href="#" class="btn-primary" style="background: var(--text-primary); color: white;" onclick="window.open('${BASE_PATH}/console', '_blank')" data-i18n="notes.cta_primary">Try a Sample Note</a>
                         <a href="/contact" class="btn-outline" style="border-color: var(--text-primary); color: var(--text-primary);" data-i18n="notes.cta_secondary">Talk to Clinical Team</a>
                     </div>
                 </div>
@@ -319,7 +319,7 @@ function KaizenPage() {
                     <h2 style="font-family: var(--font-serif); font-size: 36px; margin-bottom: 16px;" data-i18n="kaizen.cta_title">Join the Kai-zen cycle.</h2>
                     <p style="color: rgba(255,255,255,0.7); font-size: 16px; max-width: 520px; margin: 0 auto 28px;" data-i18n="kaizen.cta_desc">Your feedback directly shapes the models. Start using ClinixSummary and become part of the improvement loop that benefits every clinician on the platform.</p>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary); font-weight: 600;" onclick="showToast('Starting your free trial...'); return false;" data-i18n="kaizen.cta_primary">Start Free Trial</a>
+                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary); font-weight: 600;" onclick="window.open('${BASE_PATH}/console', '_blank')" data-i18n="kaizen.cta_primary">Start Free Trial</a>
                         <a href="/contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="kaizen.cta_secondary">Learn More About QA</a>
                     </div>
                 </div>
@@ -415,7 +415,7 @@ function LanguagesPage() {
                     <h2 style="font-family: var(--font-serif); font-size: 36px; margin-bottom: 16px;" data-i18n="lang.cta_title">Document in the language you practise in.</h2>
                     <p style="color: rgba(255,255,255,0.7); font-size: 16px; max-width: 520px; margin: 0 auto 28px;" data-i18n="lang.cta_desc">Try ClinixSummary in your language — or in all of them at once.</p>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary); font-weight: 600;" onclick="showToast('Opening multilingual console demo...'); return false;" data-i18n="lang.cta_primary">Try Multilingual Demo</a>
+                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary); font-weight: 600;" onclick="window.open('${BASE_PATH}/console', '_blank')" data-i18n="lang.cta_primary">Try Multilingual Demo</a>
                         <a href="/contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="lang.cta_secondary">Request a Language</a>
                     </div>
                 </div>
@@ -496,7 +496,7 @@ function AutoAmbientPage() {
                     <h2 style="font-family: var(--font-serif); font-size: 36px; margin-bottom: 16px;" data-i18n="ambient.cta_title">Experience auto-ambient detection.</h2>
                     <p style="color: rgba(255,255,255,0.7); font-size: 16px; max-width: 520px; margin: 0 auto 28px;" data-i18n="ambient.cta_desc">Try all three modes in a single session. Speak naturally and let the system adapt to you.</p>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary); font-weight: 600;" onclick="showToast('Launching auto-ambient demo...'); return false;" data-i18n="ambient.cta_primary">Try Auto-Ambient Free</a>
+                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary); font-weight: 600;" onclick="window.open('${BASE_PATH}/console', '_blank')" data-i18n="ambient.cta_primary">Try Auto-Ambient Free</a>
                         <a href="/contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="ambient.cta_secondary">Schedule a Demo</a>
                     </div>
                 </div>
@@ -576,7 +576,7 @@ function CMEVaultPage() {
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 16px;" data-i18n="cme.cta_title">Turn your documentation into learning.</h2>
                     <p style="color: var(--text-secondary); font-size: 16px; max-width: 520px; margin: 0 auto 28px;" data-i18n="cme.cta_desc">CME Vault is included with every ClinixSummary plan. Start earning credits from the cases you are already documenting.</p>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#" class="btn-primary" style="background: var(--text-primary); color: white;" onclick="showToast('Activating CME Vault on your account...'); return false;" data-i18n="cme.cta_primary">Activate CME Vault</a>
+                        <a href="#" class="btn-primary" style="background: var(--text-primary); color: white;" onclick="window.open('${BASE_PATH}/cpd-vault', '_blank')" data-i18n="cme.cta_primary">Activate CME Vault</a>
                         <a href="/contact" class="btn-outline" style="border-color: var(--text-primary); color: var(--text-primary);" data-i18n="cme.cta_secondary">Learn More</a>
                     </div>
                 </div>
@@ -673,7 +673,7 @@ function ClinixFoundationPage() {
                     <h2 style="font-family: var(--font-serif); font-size: 36px; margin-bottom: 16px;" data-i18n="foundation.cta_title">Apply for Clinix Foundation access.</h2>
                     <p style="color: rgba(255,255,255,0.7); font-size: 16px; max-width: 560px; margin: 0 auto 28px;" data-i18n="foundation.cta_desc">If your organisation serves communities in need and documentation burden is limiting your care delivery, we want to hear from you. Applications are reviewed on a rolling basis.</p>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary); font-weight: 600;" onclick="showToast('Opening Clinix Foundation application form...'); return false;" data-i18n="foundation.cta_primary">Apply Now</a>
+                        <a href="/contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary); font-weight: 600;" data-i18n="foundation.cta_primary">Apply Now</a>
                         <a href="/contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="foundation.cta_secondary">Contact the Foundation Team</a>
                     </div>
                 </div>

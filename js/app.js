@@ -102,7 +102,7 @@ function stripBase(pathname) {
 
 const routes = {
     // Home
-    '/':                   HomePage,
+    '/clinixsummary-web/':                   HomePage,
     '/pricing':            HomePage,
     '/contact':            ContactPage,
 
@@ -164,6 +164,7 @@ const routes = {
 function router() {
     const path = stripBase(window.location.pathname);
     const pageFn = routes[path];
+    
 
     if (pageFn) {
         // Page transition: re-trigger fadeIn animation

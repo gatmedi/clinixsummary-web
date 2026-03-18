@@ -324,7 +324,7 @@ function SecurityPage() {
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
                     <h2 style="font-family: var(--font-serif); font-size: 36px; margin-bottom: 20px;" data-i18n="security.cta_title">Ready to secure your documentation workflow?</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#" class="btn-primary" style="background: #fff; color: var(--text-primary);" onclick="showToast('Trial started!'); return false;" data-i18n="common.start_trial">Start free trial</a>
+                        <a href="#" class="btn-primary" style="background: #fff; color: var(--text-primary);" onclick="window.open('${BASE_PATH}/console', '_blank')" data-i18n="common.start_trial">Start free trial</a>
                         <a href="/contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="common.contact_us">Contact our team</a>
                     </div>
                 </div>
@@ -1011,6 +1011,7 @@ function ContactPage() {
 
                     <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 16px; padding: 36px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
                         <h3 style="font-family: var(--font-serif); font-size: 22px; margin-bottom: 24px;" data-i18n="contact.form_title">Send us a message</h3>
+                        <div class="send-us-msg"></div>
                         <form id="contact-form" onsubmit="submitContactForm(event)">
                             <div class="form-group">
                                 <label for="contact-name" data-i18n="contact.name_label">Full Name *</label>
@@ -1058,6 +1059,12 @@ function submitContactForm(event) {
     var org = document.getElementById('contact-org').value;
     var topic = document.getElementById('contact-topic').value;
     var message = document.getElementById('contact-message').value;
+    var langElement = document.querySelector('.lang-option');
+    var langCode = null;
+
+    if (langElement && langElement.classList.contains('active')) {
+        langCode = langElement.getAttribute('data-lang');
+    }
 
     var recipient = (topic === 'Enterprise Licensing') ? 'enterprise@clinixsummary.ai' : 'contact@clinixsummary.ai';
     var subject = encodeURIComponent('[ClinixSummary] ' + topic);
@@ -1069,8 +1076,109 @@ function submitContactForm(event) {
         'Message:\n' + message
     );
 
-    window.location.href = 'mailto:' + recipient + '?subject=' + subject + '&body=' + body;
-    showToast('Opening your email client...');
+    var payload = {
+        name: name,
+        email: email,
+        subject: subject,
+        organization: org,
+        topic: topic,
+        message: message,
+        body: body,
+        recipient: recipient,
+        lang_code: langCode
+    };
+
+    var submitBtn = document.querySelector('#contact-form button[type="submit"]');
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        var originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = `<span class="spinner" style="margin-right:8px;">⏳</span>Sending...`;
+    }
+
+
+    const msgContainer = document.querySelector('.send-us-msg') || document.querySelector('#contact-form');
+
+    fetch(BASE_PATH+'/api/v2/contact', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+    })
+    .then(response => response.json())
+    .then(data => {
+        
+        const color = data.statusCode === 201 ? '#155724' : '#721c24'; // success=green, danger=red
+        const bg = data.statusCode === 201 ? '#d4edda' : '#f8d7da';
+        const border = data.statusCode === 201 ? '#c3e6cb' : '#f5c6cb';
+        
+        if (data.statusCode == 201) {
+            if (msgContainer) {
+                // Create div for message
+                const div = document.createElement('div');
+                div.className = 'response-msg';
+                div.style.cssText = `
+                    color: ${color};
+                    background-color: ${bg};
+                    border: 1px solid ${border};
+                    padding: 12px 16px;
+                    border-radius: 6px;
+                    margin-bottom: 12px;
+                    font-size: 14px;
+                `;
+                div.textContent = data.message || (data.statusCode === 201 ? "Message sent successfully." : "Something went wrong.");
+                msgContainer.append(div);
+ 
+                ['#contact-name', '#contact-email', '#contact-org', '#contact-topic', '#contact-message'].forEach(selector => {
+                    document.querySelector(selector).value = '';
+                });
+            }
+        } else {
+            const div = document.createElement('div');
+            div.className = 'response-msg';
+            div.style.cssText = `
+                color: ${color};
+                background-color: ${bg};
+                border: 1px solid ${border};
+                padding: 12px 16px;
+                border-radius: 6px;
+                margin-bottom: 12px;
+                font-size: 14px;
+            `;
+            div.textContent = data.message || "Something went wrong.";
+            msgContainer.append(div);
+        }
+
+        setTimeout(() => {
+            document.querySelector('.send-us-msg').innerHTML = '';
+        }, 3000);
+    })
+    .catch(error => {
+        const div = document.createElement('div');
+            div.className = 'response-msg';
+            div.style.cssText = `
+                color: #721c24;
+                background-color: #f8d7da;
+                border: 1px solid #f5c6cb;
+                padding: 12px 16px;
+                border-radius: 6px;
+                margin-bottom: 12px;
+                font-size: 14px;
+            `;
+            div.textContent = "Failed to send message. Please try again.";
+            msgContainer.append(div);
+
+        setTimeout(() => {
+            document.querySelector('.send-us-msg').innerHTML = '';
+        }, 3000);
+    })
+    .finally(() => {
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+        }
+    });
 }
 
 function StoryPage() {
@@ -1106,7 +1214,7 @@ function StoryPage() {
                     <h4 style="font-weight: 700; font-size: 24px; margin-bottom: 15px;" data-i18n="story.cta_title">Join us on the journey</h4>
                     <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="story.cta_desc">Whether you\u2019re a clinician, a clinic manager or a healthcare innovator, we invite you to be part of our mission to simplify documentation for all.</p>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#" class="btn-primary" style="background: var(--text-primary); color: white;" onclick="showToast('Trial started!'); return false;" data-i18n="story.cta_trial">Start free trial</a>
+                        <a href="#" class="btn-primary" style="background: var(--text-primary); color: white;" onclick="window.open('${BASE_PATH}/console', '_blank')" data-i18n="story.cta_trial">Start free trial</a>
                         <a href="/contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
                     </div>
                 </div>
