@@ -576,7 +576,7 @@ function CMEVaultPage() {
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 16px;" data-i18n="cme.cta_title">Turn your documentation into learning.</h2>
                     <p style="color: var(--text-secondary); font-size: 16px; max-width: 520px; margin: 0 auto 28px;" data-i18n="cme.cta_desc">CME Vault is included with every ClinixSummary plan. Start earning credits from the cases you are already documenting.</p>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#" class="btn-primary" style="background: var(--text-primary); color: white;" onclick="window.open('${BASE_PATH}/cpd-vault', '_blank')" data-i18n="cme.cta_primary">Activate CME Vault</a>
+                        <a href="#" class="btn-primary" style="background: var(--text-primary); color: white;" onclick="window.open('https://staging.clinixsummary.ai/cpd-vault', '_blank')" data-i18n="cme.cta_primary">Activate CME Vault</a>
                         <a href="/contact" class="btn-outline" style="border-color: var(--text-primary); color: var(--text-primary);" data-i18n="cme.cta_secondary">Learn More</a>
                     </div>
                 </div>
