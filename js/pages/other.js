@@ -456,7 +456,7 @@ function CareersPage() {
         + '<h4 style="font-weight: 700; font-size: 20px; margin-bottom: 12px;" data-i18n="careers.no_role_title">Don’t see the right role?</h4>'
         + '<p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="careers.no_role_desc">We\u2019re always looking for talented people who are passionate about healthcare and technology. Send us your CV and tell us how you\u2019d like to contribute.</p>'
         // + '<a href="http://192.168.100.200:8000/console" class="btn-outline" data-i18n="careers.start_trial">Start Free Trial</a>'
-        + '<a href="https://staging.clinixsummary.ai/console" class="btn-outline" data-i18n="careers.start_trial">Start Free Trial</a>'
+        + '<a href="https://clinixsummary.ai/console" class="btn-outline" data-i18n="careers.start_trial">Start Free Trial</a>'
         + '</div>'
         + '</div></section>';
 }

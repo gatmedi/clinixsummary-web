@@ -739,7 +739,7 @@ function RadiologyAssistPage() {
             },
         ],
         // ctaHref: '#contact',
-        ctaHref: 'https://staging.clinixsummary.ai/console',
+        ctaHref: 'https://clinixsummary.ai/console',
         ctaTitle: 'Interested in Radiology Assist? Join the beta.',
         ctaLabel: 'Start Free Trial',
     });
@@ -780,7 +780,7 @@ function DermatologyAssistPage() {
             },
         ],
         // ctaHref: '#contact',
-        ctaHref: 'https://staging.clinixsummary.ai/console',
+        ctaHref: 'https://clinixsummary.ai/console',
         ctaTitle: 'Interested in Dermatology Assist? Join the beta.',
         ctaLabel: 'Start Free Trial',
     });
@@ -821,7 +821,7 @@ function TriageAssistPage() {
             },
         ],
         // ctaHref: '#contact',
-        ctaHref: 'https://staging.clinixsummary.ai/console',
+        ctaHref: 'https://clinixsummary.ai/console',
         ctaTitle: 'Interested in Triage Assist? Join the beta.',
         ctaLabel: 'Start Free Trial',
     });
