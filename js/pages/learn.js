@@ -13,22 +13,30 @@ function _formatPaperDate(d) {
 
 function _renderPaperCard(p, ns) {
     const locale  = I18n.locale;
-    const pLang   = p.lang.toLowerCase();
+
+    const pLang = (p.lang || 'en').toLowerCase();
     const native  = (pLang === locale);
-    const summary = native ? p.desc : I18n.t(ns + '.' + p.id + '_summary', p.desc);
+
+    const summary = p.desc;
+
     const dateStr = _formatPaperDate(p.date);
+
     const langName = I18n.t('papers.lang_' + pLang, p.lang);
     const isRtl   = pLang === 'ar';
 
     const provenance = !native ? `
             <p style="color: var(--accent); font-size: 11px; font-weight: 600; margin-bottom: 6px; letter-spacing: 0.02em;">
-                ${I18n.t('papers.summary_label', 'Summary')} \u00b7 ${I18n.t('papers.original_in', 'Original publication in')} ${langName}
+                ${I18n.t('papers.summary_label', 'Summary')} · ${I18n.t('papers.original_in', 'Original publication in')} ${langName}
             </p>` : '';
 
     const expandable = !native ? `
             <details style="margin-top: 8px;">
-                <summary style="font-size: 12px; color: var(--text-secondary); cursor: pointer; user-select: none;">${I18n.t('papers.view_original', 'View original abstract')}</summary>
-                <p style="font-size: 13px; color: var(--text-secondary); margin-top: 8px; padding: 12px; background: var(--bg-subtle); border-radius: 8px; border-inline-start: 3px solid var(--accent);"${isRtl ? ' dir="rtl"' : ''}>${p.desc}</p>
+                <summary style="font-size: 12px; color: var(--text-secondary); cursor: pointer; user-select: none;">
+                    ${I18n.t('papers.view_original', 'View original abstract')}
+                </summary>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-top: 8px; padding: 12px; background: var(--bg-subtle); border-radius: 8px; border-inline-start: 3px solid var(--accent);" ${isRtl ? 'dir="rtl"' : ''}>
+                    ${p.desc}
+                </p>
             </details>` : '';
 
     return `
@@ -37,157 +45,119 @@ function _renderPaperCard(p, ns) {
                 <div class="card-icon material-symbols-rounded" style="margin-bottom: 0;">${p.icon}</div>
                 ${p.lang ? `<span style="background: var(--accent); color: #fff; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; letter-spacing: 0.05em;">${p.lang}</span>` : ''}
             </div>
-            <h3 style="margin-top: 12px;"${isRtl ? ' dir="rtl"' : ''}>${p.title}</h3>
+            <h3 style="margin-top: 12px;" ${isRtl ? 'dir="rtl"' : ''}>${p.title}</h3>
             <p style="color: var(--text-secondary); font-size: 12px; margin-bottom: 8px;">${dateStr}</p>
             ${provenance}
             <p style="flex-grow: 1;">${summary}</p>
             ${expandable}
-            <a href="${p.pdf}" target="_blank" class="btn-outline" style="margin-top: 16px; width: 100%; text-align: center; text-decoration: none; display: block;">${I18n.t('papers.view_pdf', 'View PDF')}</a>
+            <a href="${p.pdf}" target="_blank" class="btn-outline" style="margin-top: 16px; width: 100%; text-align: center; text-decoration: none; display: block;">
+                ${I18n.t('papers.view_pdf', 'View PDF')}
+            </a>
         </div>`;
 }
 
-// ---------------------------------------------------------------------------
-// Publications
-// ---------------------------------------------------------------------------
+async function fetchPublications() {
+    try {
+        const res = await fetch(BASE_PATH + '/api/v2/news?type=publications', {
+            method: 'GET',
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (!res.ok) throw new Error(`Server returned ${res.status}`);
+
+        const data = await res.json();
+        
+        if(data.statusCode == 200) {
+            return data.data;
+        }
+        return [];
+    } catch (err) {
+        console.error(err);
+        return [];
+    }
+}
 
 function PublicationsPage() {
-    const publications = [
-        {
-            id: 'pub_01', lang: 'ES', icon: 'spellcheck', date: { y: 2026, m: 2 },
-            title: 'Terminolog\u00eda M\u00e9dica Estandarizada y Codificaci\u00f3n CIE-10 en Sistemas de Salud Hispanohablantes',
-            desc: 'C\u00f3mo la IA aborda la estandarizaci\u00f3n terminol\u00f3gica y la codificaci\u00f3n CIE-10 en m\u00e1s de 20 pa\u00edses hispanohablantes \u2014 donde un mismo concepto cl\u00ednico recibe nombres distintos.',
-            pdf: 'docs/publications/es-terminologia-codificacion-cie10-2026.pdf'
-        },
-        {
-            id: 'pub_02', lang: 'IT', icon: 'language', date: { y: 2026, m: 1 },
-            title: 'Documentazione Clinica Automatizzata nel Servizio Sanitario Nazionale Italiano',
-            desc: 'Come l\u2019intelligenza artificiale pu\u00f2 trasformare la documentazione clinica nel SSN italiano \u2014 tra liste d\u2019attesa, carenza di personale e Fascicolo Sanitario Elettronico.',
-            pdf: 'docs/publications/it-documentazione-clinica-ssn-2026.pdf'
-        },
-        {
-            id: 'pub_03', lang: 'EN', icon: 'auto_stories', date: { y: 2026, m: 1 },
-            title: 'Setting the Gold Standard: Why Standardised Clinical Documentation Is the Future',
-            desc: 'As healthcare globalises, documentation must be standardised. Just as aviation and nuclear industries adopted standardised documentation to reduce errors and save lives, medicine must follow.',
-            pdf: 'docs/publications/standardised-clinical-documentation-2025.pdf'
-        },
-        {
-            id: 'pub_04', lang: 'AR', icon: 'language', date: { y: 2025, m: 12 },
-            title: '\u0627\u0644\u062a\u0648\u062b\u064a\u0642 \u0627\u0644\u0633\u0631\u064a\u0631\u064a \u0627\u0644\u0630\u0643\u064a \u0641\u064a \u0645\u0646\u0638\u0648\u0645\u0629 \u0627\u0644\u0631\u0639\u0627\u064a\u0629 \u0627\u0644\u0635\u062d\u064a\u0629 \u0627\u0644\u062e\u0644\u064a\u062c\u064a\u0629',
-            desc: '\u0643\u064a\u0641 \u064a\u064f\u062d\u0648\u0651\u0644 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a \u0627\u0644\u062a\u0648\u062b\u064a\u0642 \u0627\u0644\u0633\u0631\u064a\u0631\u064a \u0641\u064a \u0627\u0644\u0645\u0646\u0638\u0648\u0645\u0627\u062a \u0627\u0644\u0635\u062d\u064a\u0629 \u0627\u0644\u062e\u0644\u064a\u062c\u064a\u0629 \u2014 \u0645\u0639\u0627\u0644\u062c\u0629 \u0627\u0644\u062a\u062d\u062f\u064a\u0627\u062a \u0627\u0644\u0641\u0631\u064a\u062f\u0629 \u0644\u0644\u0628\u064a\u0626\u0627\u062a \u0627\u0644\u0633\u0631\u064a\u0631\u064a\u0629 \u0645\u062a\u0639\u062f\u062f\u0629 \u0627\u0644\u0644\u063a\u0627\u062a \u0641\u064a \u062f\u0648\u0644 \u0645\u062c\u0644\u0633 \u0627\u0644\u062a\u0639\u0627\u0648\u0646 \u0627\u0644\u062e\u0644\u064a\u062c\u064a.',
-            pdf: 'docs/publications/ar-clinical-documentation-gulf-2026.pdf'
-        },
-        {
-            id: 'pub_05', lang: 'EN', icon: 'request_quote', date: { y: 2025, m: 12 },
-            title: 'Automated Charge Capture: How AI Documentation Closes the Revenue Gap',
-            desc: 'How ClinixSummary identifies billable procedures, supplies, and interventions from clinical encounters \u2014 reducing charge leakage and improving revenue integrity. Pilot data shows 30% improvement in charge capture.',
-            pdf: 'docs/publications/automated-charge-capture-2025.pdf'
-        },
-        {
-            id: 'pub_06', lang: 'EN', icon: 'school', date: { y: 2025, m: 11 },
-            title: 'The Future of Medical Education: Integrating CME/CPD into the Documentation Workflow',
-            desc: 'How the CME/CPD Vault turns routine clinical documentation into learning opportunities, and the potential to earn continuing education credits through practice.',
-            pdf: 'docs/publications/cme-cpd-documentation-workflow-2025.pdf'
-        },
-        {
-            id: 'pub_07', lang: 'PT', icon: 'language', date: { y: 2025, m: 10 },
-            title: 'Documenta\u00e7\u00e3o Cl\u00ednica por IA no Sistema \u00danico de Sa\u00fade Brasileiro',
-            desc: 'Como a intelig\u00eancia artificial pode transformar a documenta\u00e7\u00e3o cl\u00ednica no maior sistema p\u00fablico de sa\u00fade do mundo \u2014 o SUS brasileiro.',
-            pdf: 'docs/publications/pt-documentacao-clinica-sus-2026.pdf'
-        },
-        {
-            id: 'pub_08', lang: 'EN', icon: 'medical_information', date: { y: 2025, m: 10 },
-            title: 'ICD-10 and CPT Coding Accuracy: How AI Reduces Claim Denials',
-            desc: 'Data on coding errors in manual documentation vs. AI-assisted documentation. How contextual understanding improves coding accuracy and reimbursement.',
-            pdf: 'docs/publications/icd10-cpt-coding-accuracy-2025.pdf'
-        },
-        {
-            id: 'pub_09', lang: 'EN', icon: 'change_circle', date: { y: 2025, m: 9 },
-            title: 'Kai-zen (\u6539\u5584) in Healthcare AI: The Case for Continuous Model Improvement',
-            desc: 'Why static AI models fail in medicine, and how ClinixSummary\u2019s weekly update cycle and clinician feedback loop produce consistently improving outputs.',
-            pdf: 'docs/publications/kaizen-continuous-model-improvement-2025.pdf'
-        },
-        {
-            id: 'pub_10', lang: 'ES', icon: 'language', date: { y: 2025, m: 8 },
-            title: 'Documentaci\u00f3n Cl\u00ednica con IA en la Transformaci\u00f3n Digital de Am\u00e9rica Latina',
-            desc: 'C\u00f3mo la inteligencia artificial est\u00e1 transformando la documentaci\u00f3n cl\u00ednica en los sistemas de salud de Am\u00e9rica Latina \u2014 desde M\u00e9xico hasta Argentina.',
-            pdf: 'docs/publications/es-documentacion-clinica-ia-latam-2026.pdf'
-        },
-        {
-            id: 'pub_11', lang: 'EN', icon: 'graphic_eq', date: { y: 2025, m: 8 },
-            title: 'From Ambient to Operative: Auto-Detection of Clinical Documentation Modes',
-            desc: 'Technical overview of how ClinixSummary automatically detects whether audio is ambient consultation, post-visit dictation, or operative narration \u2014 and adapts accordingly.',
-            pdf: 'docs/publications/auto-detection-documentation-modes-2025.pdf'
-        },
-        {
-            id: 'pub_12', lang: 'EN', icon: 'payments', date: { y: 2025, m: 7 },
-            title: 'The Economics of AI Scribes: ROI Analysis for Healthcare Organizations',
-            desc: 'Hard numbers on cost savings, productivity gains, reimbursement improvements, and reduced coding errors when deploying AI documentation at scale.',
-            pdf: 'docs/publications/economics-of-ai-scribes-roi-2025.pdf'
-        },
-        {
-            id: 'pub_13', lang: 'FR', icon: 'language', date: { y: 2025, m: 6 },
-            title: 'Optimisation de la Documentation Clinique par IA dans les Syst\u00e8mes de Sant\u00e9 Francophones',
-            desc: 'Comment l\u2019intelligence artificielle transforme la documentation clinique dans les \u00e9tablissements de sant\u00e9 francophones \u2014 de la France au Qu\u00e9bec, de la Belgique \u00e0 l\u2019Afrique de l\u2019Ouest.',
-            pdf: 'docs/publications/fr-documentation-clinique-ia-2026.pdf'
-        },
-        {
-            id: 'pub_14', lang: 'EN', icon: 'accessibility_new', date: { y: 2025, m: 6 },
-            title: 'Allied Health Documentation: Why One Model Doesn\u2019t Fit All',
-            desc: 'How physiotherapy, occupational therapy, and speech & language therapy each require fundamentally different documentation models \u2014 and why ClinixSummary built dedicated modules.',
-            pdf: 'docs/publications/allied-health-documentation-2025.pdf'
-        },
-        {
-            id: 'pub_15', lang: 'EN', icon: 'shield', date: { y: 2025, m: 5 },
-            title: 'Privacy by Design: Building Clinical AI Without Compromising Patient Data',
-            desc: 'Our approach to training on de-identified data, HIPAA/GDPR compliance, and why proprietary models are inherently more secure than generic LLM wrappers.',
-            pdf: 'docs/publications/privacy-by-design-clinical-ai-2025.pdf'
-        },
-        {
-            id: 'pub_16', lang: 'EN', icon: 'translate', date: { y: 2025, m: 4 },
-            title: 'Multilingual Clinical Documentation: Bridging Language Barriers in Global Healthcare',
-            desc: 'How ClinixSummary handles multilingual consultations, code-switching, and documentation across 6 languages. Real-world use cases from Dubai to Montreal.',
-            pdf: 'docs/publications/multilingual-clinical-documentation-2025.pdf'
-        },
-        {
-            id: 'pub_17', lang: 'EN', icon: 'psychology', date: { y: 2025, m: 3 },
-            title: 'Contextual Reasoning in Clinical AI: Beyond Transcription',
-            desc: 'Deep dive into how ClinixSummary\u2019s models infer clinical meaning from natural conversation \u2014 not just transcribe words, but understand clinical intent.',
-            pdf: 'docs/publications/contextual-reasoning-clinical-ai-2025.pdf'
-        },
-        {
-            id: 'pub_18', lang: 'EN', icon: 'sentiment_satisfied', date: { y: 2025, m: 2 },
-            title: 'The Burnout Crisis: How AI Scribes Restore Clinical Joy',
-            desc: 'Evidence on clinician burnout driven by documentation burden. How ambient AI documentation reduces cognitive load and gives clinicians back 2+ hours per day.',
-            pdf: 'docs/publications/burnout-crisis-ai-scribes-2025.pdf'
-        }
-    ];
+    document.getElementById('app-content').innerHTML = ``;
 
-    const pubCards = publications.map(p => _renderPaperCard(p, 'papers')).join('');
+    fetchPublications().then(function(response) {
 
-    return `
-        <section class="subpage-container">
-            <div class="page-width">
-                <div class="subpage-header">
-                    <span class="kicker" data-i18n="papers.pub_kicker">Publications</span>
-                    <h2 class="subpage-title" data-i18n="papers.pub_title">Research, evidence, and thought leadership.</h2>
-                    <p class="subpage-copy" data-i18n="papers.pub_desc">ClinixSummary\u2019s design is grounded in evidence and clinical expertise. Explore our publications covering everything from the science of contextual reasoning to the economics of AI documentation at scale.</p>
-                </div>
+        const publications = (response || []).map((item, index) => {
+            let date = { y: 0, m: 0 };
 
-                <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                    ${pubCards}
-                </div>
+            if (item.publish_month) {
+                const parts = item.publish_month.split(' ');
+                const monthNames = [
+                    "January","February","March","April","May","June",
+                    "July","August","September","October","November","December"
+                ];
 
-                <div style="background: var(--bg-subtle); padding: 30px; border-radius: 12px; margin-top: 60px; border: 1px solid var(--border-subtle);">
-                    <h4 style="font-weight: 700; font-size: 18px; margin-bottom: 15px;" data-i18n="papers.pub_cta_title">Want to dig deeper into the research?</h4>
-                    <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="papers.pub_cta_desc">We\u2019re happy to share full papers, aggregate metrics and connect you with researchers studying ambient AI scribes.</p>
-                    <div class="nav-actions" style="justify-content: flex-start; margin-inline-start: 0;">
-                        <a href="#" class="btn-primary" onclick="showToast('Publications requested.'); return false;" data-i18n="papers.pub_cta_btn">Request Publications</a>
-                        <a href="/contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
+                const m = monthNames.indexOf(parts[0]) + 1;
+                const y = parseInt(parts[1]);
+
+                date = { y, m };
+            }
+
+            return {
+                id: 'pub_' + (index + 1),
+                lang: (item.language_code || 'EN').toUpperCase(),
+                icon: 'auto_stories',
+                date: date,
+                title: item.title || '',
+                desc: getSummaryByLang(item),
+                pdf: item.attachment
+            };
+        });
+
+        const pubCards = publications.map(p => _renderPaperCard(p, 'papers')).join('');
+
+        document.getElementById('app-content').innerHTML = `
+            <section class="subpage-container">
+                <div class="page-width">
+                    <div class="subpage-header">
+                        <span class="kicker" data-i18n="papers.pub_kicker">Publications</span>
+                        <h2 class="subpage-title" data-i18n="papers.pub_title">Research, evidence, and thought leadership.</h2>
+                        <p class="subpage-copy" data-i18n="papers.pub_desc">ClinixSummary's design is grounded in evidence and clinical expertise.</p>
+                    </div>
+                    <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                        ${pubCards}
+                    </div>
+                    <div style="background: var(--bg-subtle); padding: 30px; border-radius: 12px; margin-top: 60px; border: 1px solid var(--border-subtle);">
+                        <h4 style="font-weight: 700; font-size: 18px; margin-bottom: 15px;" data-i18n="papers.pub_cta_title">Want to dig deeper into the research?</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="papers.pub_cta_desc">We're happy to share full papers.</p>
+                        <div class="nav-actions" style="justify-content: flex-start; margin-inline-start: 0;">
+                            <a href="/contact" class="btn-primary" data-i18n="papers.pub_cta_btn">Request Publications</a>
+                            <a href="/contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    `;
+            </section>
+        `;
+    });
+}
+
+function getSummaryByLang(item) {
+    const lang = (item.language_code || item.lang || 'en').toLowerCase();
+
+    switch (lang) {
+        case 'es': return item.summary_es;
+        case 'fr': return item.summary_fr;
+        case 'pt': return item.summary_pt;
+        case 'it': return item.summary_it;
+        case 'ar': return item.summary_ar;
+        default: return item.summary_en;
+    }
+}
+
+function getSummaryByLang(item, langCode) {
+    switch (langCode) {
+        case 'es': return item.summary_es;
+        case 'fr': return item.summary_fr;
+        case 'pt': return item.summary_pt;
+        case 'it': return item.summary_it;
+        case 'ar': return item.summary_ar;
+        default: return item.summary_en;
+    }
 }
 
 // ---------------------------------------------------------------------------
@@ -264,7 +234,7 @@ function WhitepapersPage() {
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="papers.wp_cta_title">Need a technical deep dive for your team?</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="/contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Requesting white papers.'); return false;" data-i18n="papers.wp_cta_btn">Request White Papers</a>
+                        <a href="/contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" data-i18n="papers.wp_cta_btn">Request White Papers</a>
                         <a href="/security" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="papers.wp_cta_secondary">View Trust Center</a>
                     </div>
                 </div>
@@ -273,66 +243,163 @@ function WhitepapersPage() {
     `;
 }
 
-function NewsPage() {
-    return `
-        <section class="subpage-container">
-            <div class="page-width">
-                <div class="subpage-header">
-                    <span class="kicker" data-i18n="news.kicker">News & Events</span>
-                    <h2 class="subpage-title" data-i18n="news.title">Latest news & product updates.</h2>
-                    <p class="subpage-copy" data-i18n="news.description">Follow our journey as we expand into new specialties, roll out advanced modules and share major company milestones.</p>
-                </div>
+async function fetchNews() {
+    try {
+        const res = await fetch(BASE_PATH + '/api/v2/news?type=news', {
+            method: 'GET',
+            headers: { 'Accept': 'application/json' }
+        });
 
-                <div style="max-width: 800px;">
-                    <div class="text-group">
-                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q1_2026_kicker">Q1 2026</span>
-                        <h3 data-i18n="news.q1_2026_title">Language Expansion: Arabic with Full RTL Support</h3>
-                        <p data-i18n="news.q1_2026_desc">ClinixSummary now supports Arabic with complete right-to-left interface and documentation support, joining English, French, Spanish, Portuguese, and Italian. This milestone extends our reach to clinicians across the Middle East and North Africa.</p>
-                    </div>
-                    <div class="text-group">
-                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q4_2025_kicker">Q4 2025</span>
-                        <h3 data-i18n="news.q4_2025a_title">Clinix Foundation Initiative Launched</h3>
-                        <p data-i18n="news.q4_2025a_desc">We\u2019re proud to announce the Clinix Foundation \u2014 our programme providing free ClinixSummary access to clinics and practices in relief areas and underserved communities. Applications are now open for humanitarian relief clinics, rural health centres, and NGO-operated medical facilities.</p>
-                    </div>
-                    <div class="text-group">
-                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q4_2025_kicker">Q4 2025</span>
-                        <h3 data-i18n="news.q4_2025b_title">CME/CPD Vault Launch</h3>
-                        <p data-i18n="news.q4_2025b_desc">The CME/CPD Vault is now live, integrating continuing medical education directly into the documentation workflow. Clinicians can now track learning hours and earn credits from their documented clinical encounters.</p>
-                    </div>
-                    <div class="text-group">
-                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q3_2025_kicker">Q3 2025</span>
-                        <h3 data-i18n="news.q3_2025a_title">UK Medical Device Registration Application</h3>
-                        <p data-i18n="news.q3_2025a_desc">ClinixSummary has formally applied for medical device registration in the United Kingdom, demonstrating our commitment to regulatory compliance and clinical safety standards. This marks an important step in our journey toward full regulatory recognition.</p>
-                    </div>
-                    <div class="text-group">
-                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q3_2025_kicker">Q3 2025</span>
-                        <h3 data-i18n="news.q3_2025b_title">Allied Health Modules Released</h3>
-                        <p data-i18n="news.q3_2025b_desc">New dedicated modules for Physiotherapy, Occupational Therapy, and Speech & Language Therapy are now available. Each module features discipline-specific documentation patterns, terminology, and assessment frameworks.</p>
-                    </div>
-                    <div class="text-group">
-                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q2_2025_kicker">Q2 2025</span>
-                        <h3 data-i18n="news.q2_2025_title">Module Updates: Expanded Specialty Coverage</h3>
-                        <p data-i18n="news.q2_2025_desc">Ongoing updates to our specialty modules have expanded coverage to 40+ medical specialties with improved accuracy, expanded terminology recognition, and enhanced language support across all modules.</p>
-                    </div>
-                    <div class="text-group">
-                        <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q1_2025_kicker">Q1 2025</span>
-                        <h3 data-i18n="news.q1_2025_title">ClinixSummary Platform Launch</h3>
-                        <p data-i18n="news.q1_2025_desc">ClinixSummary officially launches as a comprehensive AI medical scribe platform, offering ambient and dictation-based clinical documentation across multiple medical specialties with HIPAA and GDPR compliance from day one.</p>
-                    </div>
-                </div>
+        if (!res.ok) throw new Error(`Server returned ${res.status}`);
 
-                <div style="background: var(--bg-subtle); padding: 30px; border-radius: 12px; margin-top: 60px; border: 1px solid var(--border-subtle);">
-                    <h4 style="font-weight: 700; font-size: 18px; margin-bottom: 15px;" data-i18n="news.story_title">Want to share your story?</h4>
-                    <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="news.story_desc">If you\u2019ve used ClinixSummary to transform your practice, we\u2019d love to highlight your success. Get in touch with our marketing team to be featured.</p>
-                    <div class="nav-actions" style="justify-content: flex-start; margin-inline-start: 0;">
-                        <a href="#" class="btn-primary" onclick="showToast('Story submission form activated.'); return false;" data-i18n="news.story_submit">Submit a story</a>
-                        <a href="/contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    `;
+        const data = await res.json();
+        
+        if (data.statusCode == 200) {
+            return data.data;
+        }
+        return [];
+    } catch (err) {
+        console.error(err);
+        return [];
+    }
 }
+
+function NewsPage() {
+    document.getElementById('app-content').innerHTML = ``;
+
+    fetchNews().then(function(response) {
+
+        const newsItems = (response || []).map((item, index) => {
+            let date = { y: 0, m: 0 };
+
+            if (item.publish_month) {
+                const parts = item.publish_month.split(' ');
+                const monthNames = [
+                    "January","February","March","April","May","June",
+                    "July","August","September","October","November","December"
+                ];
+
+                const m = monthNames.indexOf(parts[0]) + 1;
+                const y = parseInt(parts[1]);
+
+                date = { y, m };
+            }
+
+            return {
+                id: 'news_' + (index + 1),
+                title: item.title || '',
+                desc: getSummaryByLang(item,I18n.locale),
+                date: date
+            };
+        });
+
+        const newsHtml = newsItems.map(n => {
+            const dateStr = _formatPaperDate(n.date);
+
+            return `
+                <div class="text-group">
+                    <span class="kicker" style="color: var(--text-secondary); font-size: 11px;">
+                        ${dateStr}
+                    </span>
+                    <h3>${n.title}</h3>
+                    <p>${n.desc}</p>
+                </div>
+            `;
+        }).join('');
+
+        document.getElementById('app-content').innerHTML = `
+            <section class="subpage-container">
+                <div class="page-width">
+                    <div class="subpage-header">
+                        <span class="kicker" data-i18n="news.kicker">News & Events</span>
+                        <h2 class="subpage-title" data-i18n="news.title">Latest news & product updates.</h2>
+                        <p class="subpage-copy" data-i18n="news.description">
+                            Follow our journey as we expand into new specialties, roll out advanced modules and share major company milestones.
+                        </p>
+                    </div>
+
+                    <div style="max-width: 800px;">
+                        ${newsHtml}
+                    </div>
+
+                    <div style="background: var(--bg-subtle); padding: 30px; border-radius: 12px; margin-top: 60px; border: 1px solid var(--border-subtle);">
+                        <h4 style="font-weight: 700; font-size: 18px; margin-bottom: 15px;" data-i18n="news.story_title">
+                            Want to share your story?
+                        </h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="news.story_desc">
+                            If you’ve used ClinixSummary to transform your practice, we’d love to highlight your success.
+                        </p>
+                        <div class="nav-actions" style="justify-content: flex-start; margin-inline-start: 0;">
+                            <a href="/contact" class="btn-primary" data-i18n="news.story_submit">Submit a story</a>
+                            <a href="/contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        `;
+    });
+}
+
+// function NewsPage() {
+//     return `
+//         <section class="subpage-container">
+//             <div class="page-width">
+//                 <div class="subpage-header">
+//                     <span class="kicker" data-i18n="news.kicker">News & Events</span>
+//                     <h2 class="subpage-title" data-i18n="news.title">Latest news & product updates.</h2>
+//                     <p class="subpage-copy" data-i18n="news.description">Follow our journey as we expand into new specialties, roll out advanced modules and share major company milestones.</p>
+//                 </div>
+
+//                 <div style="max-width: 800px;">
+//                     <div class="text-group">
+//                         <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q1_2026_kicker">Q1 2026</span>
+//                         <h3 data-i18n="news.q1_2026_title">Language Expansion: Arabic with Full RTL Support</h3>
+//                         <p data-i18n="news.q1_2026_desc">ClinixSummary now supports Arabic with complete right-to-left interface and documentation support, joining English, French, Spanish, Portuguese, and Italian. This milestone extends our reach to clinicians across the Middle East and North Africa.</p>
+//                     </div>
+//                     <div class="text-group">
+//                         <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q4_2025_kicker">Q4 2025</span>
+//                         <h3 data-i18n="news.q4_2025a_title">Clinix Foundation Initiative Launched</h3>
+//                         <p data-i18n="news.q4_2025a_desc">We\u2019re proud to announce the Clinix Foundation \u2014 our programme providing free ClinixSummary access to clinics and practices in relief areas and underserved communities. Applications are now open for humanitarian relief clinics, rural health centres, and NGO-operated medical facilities.</p>
+//                     </div>
+//                     <div class="text-group">
+//                         <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q4_2025_kicker">Q4 2025</span>
+//                         <h3 data-i18n="news.q4_2025b_title">CME/CPD Vault Launch</h3>
+//                         <p data-i18n="news.q4_2025b_desc">The CME/CPD Vault is now live, integrating continuing medical education directly into the documentation workflow. Clinicians can now track learning hours and earn credits from their documented clinical encounters.</p>
+//                     </div>
+//                     <div class="text-group">
+//                         <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q3_2025_kicker">Q3 2025</span>
+//                         <h3 data-i18n="news.q3_2025a_title">UK Medical Device Registration Application</h3>
+//                         <p data-i18n="news.q3_2025a_desc">ClinixSummary has formally applied for medical device registration in the United Kingdom, demonstrating our commitment to regulatory compliance and clinical safety standards. This marks an important step in our journey toward full regulatory recognition.</p>
+//                     </div>
+//                     <div class="text-group">
+//                         <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q3_2025_kicker">Q3 2025</span>
+//                         <h3 data-i18n="news.q3_2025b_title">Allied Health Modules Released</h3>
+//                         <p data-i18n="news.q3_2025b_desc">New dedicated modules for Physiotherapy, Occupational Therapy, and Speech & Language Therapy are now available. Each module features discipline-specific documentation patterns, terminology, and assessment frameworks.</p>
+//                     </div>
+//                     <div class="text-group">
+//                         <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q2_2025_kicker">Q2 2025</span>
+//                         <h3 data-i18n="news.q2_2025_title">Module Updates: Expanded Specialty Coverage</h3>
+//                         <p data-i18n="news.q2_2025_desc">Ongoing updates to our specialty modules have expanded coverage to 40+ medical specialties with improved accuracy, expanded terminology recognition, and enhanced language support across all modules.</p>
+//                     </div>
+//                     <div class="text-group">
+//                         <span class="kicker" style="color: var(--text-secondary); font-size: 11px;" data-i18n="news.q1_2025_kicker">Q1 2025</span>
+//                         <h3 data-i18n="news.q1_2025_title">ClinixSummary Platform Launch</h3>
+//                         <p data-i18n="news.q1_2025_desc">ClinixSummary officially launches as a comprehensive AI medical scribe platform, offering ambient and dictation-based clinical documentation across multiple medical specialties with HIPAA and GDPR compliance from day one.</p>
+//                     </div>
+//                 </div>
+
+//                 <div style="background: var(--bg-subtle); padding: 30px; border-radius: 12px; margin-top: 60px; border: 1px solid var(--border-subtle);">
+//                     <h4 style="font-weight: 700; font-size: 18px; margin-bottom: 15px;" data-i18n="news.story_title">Want to share your story?</h4>
+//                     <p style="color: var(--text-secondary); margin-bottom: 20px;" data-i18n="news.story_desc">If you\u2019ve used ClinixSummary to transform your practice, we\u2019d love to highlight your success. Get in touch with our marketing team to be featured.</p>
+//                     <div class="nav-actions" style="justify-content: flex-start; margin-inline-start: 0;">
+//                         <a href="/contact" class="btn-primary" data-i18n="news.story_submit">Submit a story</a>
+//                         <a href="/contact" class="btn-outline" data-i18n="common.contact_us">Contact us</a>
+//                     </div>
+//                 </div>
+//             </div>
+//         </section>
+//     `;
+// }
 
 function CaseStudiesPage() {
     const caseStudies = [
@@ -483,7 +550,7 @@ function CaseStudiesPage() {
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;">Ready to write your own success story?</h2>
                     <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Join practices worldwide that have transformed their documentation workflow with ClinixSummary.</p>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Starting free trial...'); return false;">Start Free Trial</a>
+                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="window.open('${BASE_PATH}/console', '_blank')">Start Free Trial</a>
                         <a href="/contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Contact Sales</a>
                     </div>
                 </div>

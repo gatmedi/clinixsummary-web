@@ -30,7 +30,11 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- Deployment-aware base path (GitHub Pages subpath vs production root) -->
-    <script>window.BASEPATH=location.hostname==='gatmedi.github.io'?'/clinixsummary-web':'';</script>
+    <script>
+        window.BASEPATH=location.hostname==='gatmedi.github.io'?'/clinixsummary-web':'';
+        // const BASE_PATH = "http://192.168.100.200:8000";
+        const BASE_PATH = "https://clinixsummary.ai";
+    </script>
 
     <script type="application/ld+json">
     {
@@ -282,7 +286,8 @@
 
                     <div class="nav-actions">
                         <a href="/cme-vault" class="btn-outline" style="border-color: var(--accent); color: var(--accent);" data-i18n="dropdown.cme_vault">CME/CPD Vault</a>
-                        <a href="#" class="btn-primary" onclick="showToast('Opening console...'); return false;" data-i18n="nav.go_to_console">Go to Console</a>
+                        <!-- <a href="http://192.168.100.200:8000/console" class="btn-primary" target="_blank" data-i18n="nav.go_to_console">Go to Console</a> -->
+                        <a href="https://clinixsummary.ai/console" class="btn-primary" target="_blank" data-i18n="nav.go_to_console">Go to Console</a>
                     </div>
                 </div>
             </div>
@@ -423,8 +428,8 @@
                     <div class="footer-group">
                         <h4 data-i18n="footer.help_security">Help & trust</h4>
                         <ul>
-                            <li><a href="/security" data-i18n="dropdown.compliance">Trust Center</a></li>
-                            <li><a href="/security" data-i18n="footer.availability">System Status</a></li>
+                            <li><a href="/contact" data-i18n="dropdown.compliance">Trust Center</a></li>
+                            <li><a href="/contact" data-i18n="footer.system_status">System Status</a></li>
                             <li><a href="/contact" data-i18n="footer.support_center">Support Center</a></li>
                             <li><a href="/contact" data-i18n="common.contact_us">Contact Us</a></li>
                         </ul>

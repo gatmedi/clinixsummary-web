@@ -39,7 +39,7 @@ function createCapabilityPage(config) {
 
     const ctaPrimary = config.ctaHref
         ? `<a href="${config.ctaHref}" class="btn-primary" style="background: var(--accent); color: var(--text-primary);"${d('cta_label')}>${config.ctaLabel || 'Start Free Trial'}</a>`
-        : `<a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('${config.ctaToast || 'Starting free trial...'}'); return false;"${d('cta_label')}>${config.ctaLabel || 'Start Free Trial'}</a>`;
+        : `<a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="window.open('${BASE_PATH}/console', '_blank')" ${d('cta_label')}>${config.ctaLabel || 'Start Free Trial'}</a>`;
 
     return `
         <section class="subpage-container">
@@ -342,7 +342,7 @@ function CapAlliedHealthPage() {
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="allied.cta_title">Start documenting with purpose-built allied health modules.</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Starting free trial for allied health.'); return false;" data-i18n="allied.cta_label">Start Free Trial</a>
+                        <a href="#" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="window.open('${BASE_PATH}/console', '_blank')" data-i18n="allied.cta_label">Start Free Trial</a>
                         <a href="/contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="common.contact_us">Contact Sales</a>
                     </div>
                 </div>
@@ -568,7 +568,7 @@ function BillingAssistPage() {
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="billing.cta_title">Learn more about Billing Assistance for your organisation.</h2>
                     <div class="nav-actions" style="justify-content: center;">
-                        <a href="/contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" onclick="showToast('Requesting Billing Assistance information.'); return false;" data-i18n="billing.cta_label">Request Information</a>
+                        <a href="/contact" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" data-i18n="billing.cta_label">Request Information</a>
                         <a href="/organizations" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="billing.cta_secondary">Enterprise Plans</a>
                     </div>
                 </div>
@@ -738,9 +738,10 @@ function RadiologyAssistPage() {
                 desc: 'Support for standardised classification systems including BI\u2011RADS, TI\u2011RADS and Lung\u2011RADS, ensuring that reports include the appropriate category assignments and management recommendations.',
             },
         ],
-        ctaHref: '#contact',
+        // ctaHref: '#contact',
+        ctaHref: 'https://clinixsummary.ai/console',
         ctaTitle: 'Interested in Radiology Assist? Join the beta.',
-        ctaLabel: 'Request Beta Access',
+        ctaLabel: 'Start Free Trial',
     });
 }
 
@@ -778,9 +779,10 @@ function DermatologyAssistPage() {
                 desc: 'Index and link clinical photographs to structured notes, enabling longitudinal visual tracking of lesion progression, treatment response and post\u2011procedural outcomes.',
             },
         ],
-        ctaHref: '#contact',
+        // ctaHref: '#contact',
+        ctaHref: 'https://clinixsummary.ai/console',
         ctaTitle: 'Interested in Dermatology Assist? Join the beta.',
-        ctaLabel: 'Request Beta Access',
+        ctaLabel: 'Start Free Trial',
     });
 }
 
@@ -818,9 +820,10 @@ function TriageAssistPage() {
                 desc: 'Generate structured disposition documentation including discharge, admission, transfer or observation recommendations with supporting clinical rationale drawn from the triage assessment.',
             },
         ],
-        ctaHref: '#contact',
+        // ctaHref: '#contact',
+        ctaHref: 'https://clinixsummary.ai/console',
         ctaTitle: 'Interested in Triage Assist? Join the beta.',
-        ctaLabel: 'Request Beta Access',
+        ctaLabel: 'Start Free Trial',
     });
 }
 

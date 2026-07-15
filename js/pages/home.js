@@ -1,5 +1,6 @@
 // --- Home Page Sections ---
 
+
 const HeroSection = `
     <section class="hero">
         <div class="page-width">
@@ -12,7 +13,7 @@ const HeroSection = `
                     <div style="margin-top: 32px; max-width: 400px; background: #fff; padding: 32px; border-radius: 16px; border: 1px solid var(--border-subtle); box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
                         <h3 style="font-family: var(--font-serif); font-size: 20px; margin-bottom: 12px;" data-i18n="hero.try_title">Try it now</h3>
                         <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.5;" data-i18n="hero.try_desc">No sign-up required. Open the console and experience ClinixSummary with a free trial \u2013 start documenting in seconds.</p>
-                        <button class="btn-primary" style="width: 100%; justify-content: center; border-radius: 8px; font-weight: 600; padding: 12px;" onclick="showToast('Opening console...'); return false;" data-i18n="hero.try_cta">Go to Console</button>
+                        <button class="btn-primary" style="width: 100%; justify-content: center; border-radius: 8px; font-weight: 600; padding: 12px;" onclick="window.open('${BASE_PATH}/console', '_blank')" data-i18n="hero.try_cta">Go to Console</button>
                     </div>
 
                     <div class="hero-stats">
@@ -289,7 +290,7 @@ const PricingSection = `
                         <li data-i18n="pricing.free_f3">No credit card required</li>
                         <li style="color: var(--text-secondary); opacity: 0.7;" data-i18n="pricing.free_f4">Limited specialty access</li>
                     </ul>
-                    <button class="btn-outline" style="width: 100%;" onclick="showToast('Get started with Free plan!'); return false;" data-i18n="pricing.free_cta">Get Started</button>
+                    <button class="btn-outline" style="width: 100%;" onclick="location.href='${BASE_PATH}/register?plan=forever-free'; return false;" data-i18n="pricing.free_cta">Get Started</button>
                 </div>
 
                 <div class="pricing-card">
@@ -301,7 +302,7 @@ const PricingSection = `
                         <li data-i18n="pricing.pioneer_f4">All specialty access</li>
                         <li data-i18n="pricing.pioneer_f5">Email support</li>
                     </ul>
-                    <button class="btn-outline" style="width: 100%;" onclick="showToast('Subscribing to Pilot 900.'); return false;" data-i18n="pricing.pilot_cta">Subscribe</button>
+                    <button class="btn-outline" style="width: 100%;" onclick="location.href='${BASE_PATH}/register?plan=pilot-900'; return false;" data-i18n="pricing.pilot_cta">Subscribe</button>
                 </div>
 
                 <div class="pricing-card">
@@ -313,7 +314,7 @@ const PricingSection = `
                         <li data-i18n="pricing.pioneer_f4">All specialty access</li>
                         <li data-i18n="pricing.pioneer_f5">Email support</li>
                     </ul>
-                    <button class="btn-outline" style="width: 100%;" onclick="showToast('Subscribing to Pioneer 1800.'); return false;" data-i18n="pricing.pioneer_cta">Subscribe</button>
+                    <button class="btn-outline" style="width: 100%;" onclick="location.href='${BASE_PATH}/register?plan=pioneer-1800'; return false;" data-i18n="pricing.pioneer_cta">Subscribe</button>
                 </div>
             </div>
 
@@ -330,7 +331,7 @@ const PricingSection = `
                             <li data-i18n="pricing.pioneer_f4">All specialty access</li>
                             <li data-i18n="pricing.pioneer_f5">Email support</li>
                         </ul>
-                        <button class="btn-primary" style="width: 100%;" onclick="showToast('Subscribing to Productive 3000.'); return false;" data-i18n="pricing.productive_cta">Subscribe</button>
+                        <button class="btn-primary" style="width: 100%;" onclick="location.href='${BASE_PATH}/register?plan=productive-3000'; return false;" data-i18n="pricing.productive_cta">Subscribe</button>
                     </div>
 
                     <div class="pricing-card">
@@ -342,7 +343,7 @@ const PricingSection = `
                             <li data-i18n="pricing.pioneer_f4">All specialty access</li>
                             <li data-i18n="pricing.pioneer_f5">Email support</li>
                         </ul>
-                        <button class="btn-outline" style="width: 100%;" onclick="showToast('Subscribing to Prolific 6000.'); return false;" data-i18n="pricing.prolific_cta">Subscribe</button>
+                        <button class="btn-outline" style="width: 100%;" onclick="location.href='${BASE_PATH}/register?plan=prolific-6000'; return false;" data-i18n="pricing.prolific_cta">Subscribe</button>
                     </div>
 
                     <div class="pricing-card">
@@ -372,6 +373,8 @@ const PricingSection = `
         </div>
     </section>
 `;
+
+
 
 function togglePricingPlans() {
     var expanded = document.getElementById('pricing-expanded');

@@ -389,6 +389,7 @@
     "help_security": "Help & trust",
     "availability": "Availability",
     "status": "Status",
+    "system_status": "System Status",
     "support_center": "Support center"
   },
   "common": {
@@ -1187,7 +1188,7 @@
     "f4_title": "Classification Support",
     "f4_desc": "Support for standardised classification systems including BI\u2011RADS, TI\u2011RADS and Lung\u2011RADS, ensuring that reports include the appropriate category assignments and management recommendations.",
     "cta_title": "Interested in Radiology Assist? Join the beta.",
-    "cta_label": "Request Beta Access"
+    "cta_label": "Start Free Trial"
   },
   "dermatology_assist_page": {
     "kicker": "Dermatology Assist",
@@ -1202,7 +1203,7 @@
     "f4_title": "Photographic Documentation Indexing",
     "f4_desc": "Index and link clinical photographs to structured notes, enabling longitudinal visual tracking of lesion progression, treatment response and post\u2011procedural outcomes.",
     "cta_title": "Interested in Dermatology Assist? Join the beta.",
-    "cta_label": "Request Beta Access"
+    "cta_label": "Start Free Trial"
   },
   "triage_assist_page": {
     "kicker": "Triage Assist",
@@ -1217,7 +1218,7 @@
     "f4_title": "Disposition Recommendation Support",
     "f4_desc": "Generate structured disposition documentation including discharge, admission, transfer or observation recommendations with supporting clinical rationale drawn from the triage assessment.",
     "cta_title": "Interested in Triage Assist? Join the beta.",
-    "cta_label": "Request Beta Access"
+    "cta_label": "Start Free Trial"
   },
   "papers": {
     "pub_kicker": "Publications",
