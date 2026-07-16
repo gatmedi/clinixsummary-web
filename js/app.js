@@ -102,7 +102,7 @@ function stripBase(pathname) {
 
 const routes = {
     // Home
-    '/clinixsummary-web/':                   HomePage,
+    '/':                   HomePage,
     '/pricing':            HomePage,
     '/contact':            ContactPage,
 
