@@ -162,7 +162,6 @@ const routes = {
 
     // Help & Support
     '/status':             StatusPage,
-    '/support':            SupportPage,
 };
 
 function router() {
