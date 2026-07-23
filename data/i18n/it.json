@@ -84,7 +84,7 @@
     "description": "ClinixSummary trasforma ogni visita in documentazione strutturata e pronta per la fatturazione – in pochi secondi – così potete dedicare il vostro tempo ai pazienti, non alle pratiche burocratiche.",
     "try_title": "Provalo ora",
     "try_desc": "Nessuna registrazione richiesta. Aprite la console e provate ClinixSummary con una prova gratuita – iniziate a documentare in pochi secondi.",
-    "try_cta": "Vai alla Console",
+    "try_cta": "Provalo ora",
     "stat_time": "2+ ore",
     "stat_time_label": "Risparmiate al giorno",
     "stat_burnout": "74%",
@@ -560,7 +560,7 @@
     "sp_dmarc_purpose": "Monitoraggio dell’autenticazione e-mail",
     "sp_dmarc_data": "Rapporti di autenticazione dominio ed e-mail (no PHI)",
     "sp_multiregion": "Multi-regione",
-    "sp_note": "Questo elenco è mantenuto nell’ambito del nostro <a href=\"/dpa\" style=\"color: var(--accent);\">Accordo sul trattamento dei dati</a>. Forniamo un preavviso scritto di almeno 30 giorni prima di coinvolgere un nuovo sub-responsabile.",
+    "sp_note": "Questo elenco è mantenuto nell’ambito del nostro Accordo sul trattamento dei dati. Forniamo un preavviso scritto di almeno 30 giorni prima di coinvolgere un nuovo sub-responsabile.",
 
     "org_kicker": "Sicurezza organizzativa",
     "org_title": "La sicurezza è una cultura, non solo una funzionalità.",

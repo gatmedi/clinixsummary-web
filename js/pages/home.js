@@ -13,7 +13,7 @@ const HeroSection = `
                     <div style="margin-top: 32px; max-width: 400px; background: #fff; padding: 32px; border-radius: 16px; border: 1px solid var(--border-subtle); box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
                         <h3 style="font-family: var(--font-serif); font-size: 20px; margin-bottom: 12px;" data-i18n="hero.try_title">Try it now</h3>
                         <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.5;" data-i18n="hero.try_desc">No sign-up required. Open the console and experience ClinixSummary with a free trial \u2013 start documenting in seconds.</p>
-                        <button class="btn-primary" style="width: 100%; justify-content: center; border-radius: 8px; font-weight: 600; padding: 12px;" onclick="window.open('${BASE_PATH}/console', '_blank')" data-i18n="hero.try_cta">Go to Console</button>
+                        <button class="btn-primary" style="width: 100%; justify-content: center; border-radius: 8px; font-weight: 600; padding: 12px;" onclick="window.open('${BASE_PATH}/console', '_blank')" data-i18n="hero.try_cta">Try it now</button>
                     </div>
 
                     <div class="hero-stats">

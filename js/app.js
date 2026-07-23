@@ -159,6 +159,10 @@ const routes = {
     '/terms':              TermsPage,
     '/leaflet':            LeafletPage,
     '/roi-calculator':     HomePage,
+
+    // Help & Support
+    '/status':             StatusPage,
+    '/support':            SupportPage,
 };
 
 function router() {

@@ -2749,3 +2749,98 @@ footer {
         margin: 10mm 12mm;
     }
 }
+
+/* ── System Status & Support Center ─────────────────────────────── */
+.status-overall {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 26px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    background: var(--bg-surface);
+    margin-bottom: 32px;
+}
+.status-overall.ok {
+    background: rgba(27, 166, 114, 0.07);
+    border-color: rgba(27, 166, 114, 0.30);
+}
+.status-overall-title {
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--text-primary);
+}
+.status-overall-sub {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: inline-block;
+    background: var(--text-secondary);
+}
+.status-dot.ok   { background: #1BA672; box-shadow: 0 0 0 4px rgba(27, 166, 114, 0.18); }
+.status-dot.warn { background: #E0A030; box-shadow: 0 0 0 4px rgba(224, 160, 48, 0.18); }
+.status-dot.down { background: #E5484D; box-shadow: 0 0 0 4px rgba(229, 72, 77, 0.18); }
+.status-list {
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--bg-surface);
+}
+.status-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 15px 22px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+.status-row:last-child { border-bottom: none; }
+.status-row .svc {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+.status-row .svc .material-symbols-rounded { color: var(--accent); font-size: 22px; }
+.status-row .state {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #128a5e;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.status-incident-empty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 24px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    background: var(--bg-surface);
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+.status-incident-empty .material-symbols-rounded { color: #1BA672; }
+.support-enterprise {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 32px 36px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    background: var(--bg-subtle);
+}
+@media (max-width: 768px) {
+    .support-enterprise { flex-direction: column; align-items: flex-start; }
+    .status-row { padding: 14px 16px; }
+}

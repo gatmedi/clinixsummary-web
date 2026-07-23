@@ -155,7 +155,7 @@ function SecurityPage() {
                         </tbody>
                     </table>
                 </div>
-                <p style="font-size: 13px; color: var(--text-secondary); margin-top: 16px;" data-i18n-html="security.sp_note">This list is maintained as part of our <a href="/dpa" style="color: var(--accent);">Data Processing Agreement</a>. We provide at least 30 days\u2019 prior written notice before engaging a new sub-processor.</p>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-top: 16px;" data-i18n-html="security.sp_note">This list is maintained as part of our Data Processing Agreement. We provide at least 30 days\u2019 prior written notice before engaging a new sub-processor.</p>
 
                 <!-- Section 6: Organisational Security -->
                 <div class="subpage-header" style="margin-top: 60px;">
@@ -188,20 +188,6 @@ function SecurityPage() {
                 </div>
 
                 <div class="doc-grid">
-                    <a href="/baa" class="doc-card">
-                        <span class="material-symbols-rounded">description</span>
-                        <div class="doc-card-text">
-                            <h4 data-i18n="security.doc_baa">Business Associate Agreement</h4>
-                            <p data-i18n="security.doc_baa_desc">HIPAA BAA for covered entities and business associates.</p>
-                        </div>
-                    </a>
-                    <a href="/dpa" class="doc-card">
-                        <span class="material-symbols-rounded">description</span>
-                        <div class="doc-card-text">
-                            <h4 data-i18n="security.doc_dpa">Data Processing Agreement</h4>
-                            <p data-i18n="security.doc_dpa_desc">GDPR-compliant DPA with sub-processor details.</p>
-                        </div>
-                    </a>
                     <a href="/privacy-policy" class="doc-card">
                         <span class="material-symbols-rounded">policy</span>
                         <div class="doc-card-text">
@@ -221,13 +207,6 @@ function SecurityPage() {
                         <div class="doc-card-text">
                             <h4 data-i18n="security.doc_terms">Terms of Service</h4>
                             <p data-i18n="security.doc_terms_desc">Standard terms governing platform usage.</p>
-                        </div>
-                    </a>
-                    <a href="/terms-enterprise" class="doc-card">
-                        <span class="material-symbols-rounded">corporate_fare</span>
-                        <div class="doc-card-text">
-                            <h4 data-i18n="security.doc_enterprise">Enterprise Terms</h4>
-                            <p data-i18n="security.doc_enterprise_desc">Additional terms for enterprise and organisational accounts.</p>
                         </div>
                     </a>
                     <a href="/usage-policy" class="doc-card">
@@ -1264,6 +1243,193 @@ function LeafletPage() {
                         <span class="material-symbols-rounded" style="font-size: 18px; vertical-align: middle; margin-right: 6px; color: var(--accent);">info</span>
                         <span data-i18n="security.resources_desc">Download our printable patient privacy leaflet to display in your waiting room or consultation area. It explains how AI documentation works, what happens to the recording, and reassures patients about their privacy.</span>
                     </p>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function StatusPage() {
+    return `
+        <section class="subpage-container">
+            <div class="page-width">
+                <div class="subpage-header">
+                    <span class="kicker" data-i18n="status.kicker">System Status</span>
+                    <h2 class="subpage-title" data-i18n="status.title">Current service status</h2>
+                    <p class="subpage-copy" data-i18n="status.desc">A live overview of the ClinixSummary services you rely on. If you’re seeing a problem that isn’t reflected here, please let us know so we can look into it.</p>
+                </div>
+
+                <div class="status-overall ok">
+                    <span class="status-dot ok" aria-hidden="true"></span>
+                    <div>
+                        <div class="status-overall-title" data-i18n="status.all_ok_title">All systems operational</div>
+                        <div class="status-overall-sub" data-i18n="status.all_ok_sub">All ClinixSummary services are running normally.</div>
+                    </div>
+                </div>
+
+                <div class="status-list">
+                    <div class="status-row">
+                        <span class="svc"><span class="material-symbols-rounded">terminal</span><span data-i18n="status.svc_console">Documentation Console</span></span>
+                        <span class="state"><span class="status-dot ok" aria-hidden="true"></span><span data-i18n="status.operational">Operational</span></span>
+                    </div>
+                    <div class="status-row">
+                        <span class="svc"><span class="material-symbols-rounded">lock</span><span data-i18n="status.svc_auth">Authentication &amp; Login</span></span>
+                        <span class="state"><span class="status-dot ok" aria-hidden="true"></span><span data-i18n="status.operational">Operational</span></span>
+                    </div>
+                    <div class="status-row">
+                        <span class="svc"><span class="material-symbols-rounded">mic</span><span data-i18n="status.svc_transcription">Transcription &amp; Dictation</span></span>
+                        <span class="state"><span class="status-dot ok" aria-hidden="true"></span><span data-i18n="status.operational">Operational</span></span>
+                    </div>
+                    <div class="status-row">
+                        <span class="svc"><span class="material-symbols-rounded">auto_awesome</span><span data-i18n="status.svc_notes">AI Note Generation</span></span>
+                        <span class="state"><span class="status-dot ok" aria-hidden="true"></span><span data-i18n="status.operational">Operational</span></span>
+                    </div>
+                    <div class="status-row">
+                        <span class="svc"><span class="material-symbols-rounded">credit_card</span><span data-i18n="status.svc_billing">Billing &amp; Subscriptions</span></span>
+                        <span class="state"><span class="status-dot ok" aria-hidden="true"></span><span data-i18n="status.operational">Operational</span></span>
+                    </div>
+                    <div class="status-row">
+                        <span class="svc"><span class="material-symbols-rounded">api</span><span data-i18n="status.svc_api">API &amp; Integrations</span></span>
+                        <span class="state"><span class="status-dot ok" aria-hidden="true"></span><span data-i18n="status.operational">Operational</span></span>
+                    </div>
+                    <div class="status-row">
+                        <span class="svc"><span class="material-symbols-rounded">public</span><span data-i18n="status.svc_website">Website</span></span>
+                        <span class="state"><span class="status-dot ok" aria-hidden="true"></span><span data-i18n="status.operational">Operational</span></span>
+                    </div>
+                </div>
+
+                <div class="subpage-header" style="margin-top: 60px;">
+                    <span class="kicker" data-i18n="status.reliability_kicker">Reliability</span>
+                    <h3 class="section-title" data-i18n="status.reliability_title">Built for uptime you can rely on.</h3>
+                </div>
+                <div class="grid-3" style="margin-bottom: 40px;">
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">timer</div>
+                        <h3 data-i18n="status.rel_uptime_title">99.9% uptime target</h3>
+                        <p data-i18n="status.rel_uptime_desc">Our infrastructure is designed for high availability, with a 99.9% uptime target across core documentation services.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">monitoring</div>
+                        <h3 data-i18n="status.rel_monitoring_title">Continuous monitoring</h3>
+                        <p data-i18n="status.rel_monitoring_desc">Automated monitoring watches our services around the clock so issues are detected and addressed quickly.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">backup</div>
+                        <h3 data-i18n="status.rel_redundancy_title">Redundant infrastructure</h3>
+                        <p data-i18n="status.rel_redundancy_desc">Encrypted backups and multi-region redundancy keep your data safe and your documentation available.</p>
+                    </div>
+                </div>
+
+                <div class="subpage-header" style="margin-top: 60px;">
+                    <span class="kicker" data-i18n="status.incidents_kicker">Incident History</span>
+                    <h3 class="section-title" data-i18n="status.incidents_title">Recent incidents</h3>
+                </div>
+                <div class="status-incident-empty">
+                    <span class="material-symbols-rounded">check_circle</span>
+                    <span data-i18n="status.no_incidents">No incidents reported in the last 90 days.</span>
+                </div>
+
+                <div style="margin-top: 48px; padding: 24px; background: var(--bg-subtle); border-radius: 12px; border: 1px solid var(--border-subtle);">
+                    <p style="font-size: 14px; color: var(--text-secondary); margin: 0;" data-i18n-html="status.report_note">Seeing a problem that isn’t listed here? Email <a href="mailto:support@clinixsummary.ai" style="color: var(--accent);">support@clinixsummary.ai</a> or visit the <a href="/support" style="color: var(--accent);">Support Center</a>.</p>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function SupportPage() {
+    return `
+        <section class="subpage-container">
+            <div class="page-width">
+                <div class="subpage-header">
+                    <span class="kicker" data-i18n="support.kicker">Support Center</span>
+                    <h2 class="subpage-title" data-i18n="support.title">How can we help?</h2>
+                    <p class="subpage-copy" data-i18n="support.desc">Find answers, reach our team, and check the status of ClinixSummary services — so you can get back to what matters: your patients.</p>
+                </div>
+
+                <div class="grid-3" style="margin-bottom: 40px;">
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">mail</div>
+                        <h3 data-i18n="support.contact_title">Contact support</h3>
+                        <p data-i18n="support.contact_desc">Have a question or hit a snag? Our support team typically responds within one business day.</p>
+                        <a href="mailto:support@clinixsummary.ai" style="color: var(--accent); font-weight: 600; font-size: 14px;">support@clinixsummary.ai</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">monitor_heart</div>
+                        <h3 data-i18n="support.status_title">System status</h3>
+                        <p data-i18n="support.status_desc">Check whether all ClinixSummary services are operating normally right now.</p>
+                        <a href="/status" style="color: var(--accent); font-weight: 600; font-size: 14px;"><span data-i18n="support.status_link">View system status</span> →</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">shield</div>
+                        <h3 data-i18n="support.trust_title">Trust &amp; security</h3>
+                        <p data-i18n="support.trust_desc">Review our security posture, compliance and sub-processor transparency in the Trust Center.</p>
+                        <a href="/security" style="color: var(--accent); font-weight: 600; font-size: 14px;"><span data-i18n="support.trust_link">Visit the Trust Center</span> →</a>
+                    </div>
+                </div>
+
+                <div class="subpage-header" style="margin-top: 60px;">
+                    <span class="kicker" data-i18n="support.topics_kicker">Common Topics</span>
+                    <h3 class="section-title" data-i18n="support.topics_title">Browse help by topic.</h3>
+                </div>
+                <div class="doc-grid">
+                    <a href="/contact" onclick="setTimeout(function(){ var sel = document.getElementById('contact-topic'); if(sel) sel.value='Technical Support'; }, 200);" class="doc-card">
+                        <span class="material-symbols-rounded">rocket_launch</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="support.topic_start">Getting started</h4>
+                            <p data-i18n="support.topic_start_desc">Set up your account and create your first note in minutes.</p>
+                        </div>
+                    </a>
+                    <a href="/pricing" class="doc-card">
+                        <span class="material-symbols-rounded">credit_card</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="support.topic_billing">Plans &amp; billing</h4>
+                            <p data-i18n="support.topic_billing_desc">Compare plans, manage your subscription and understand credits.</p>
+                        </div>
+                    </a>
+                    <a href="/integrations" class="doc-card">
+                        <span class="material-symbols-rounded">hub</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="support.topic_integrations">Integrations &amp; exports</h4>
+                            <p data-i18n="support.topic_integrations_desc">Export notes into your EHR/EMR and connect your workflow.</p>
+                        </div>
+                    </a>
+                    <a href="/security" class="doc-card">
+                        <span class="material-symbols-rounded">encrypted</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="support.topic_security">Security &amp; privacy</h4>
+                            <p data-i18n="support.topic_security_desc">How we protect patient data, encryption and compliance.</p>
+                        </div>
+                    </a>
+                    <a href="/cme-vault" class="doc-card">
+                        <span class="material-symbols-rounded">school</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="support.topic_cme">CME/CPD Vault</h4>
+                            <p data-i18n="support.topic_cme_desc">Track your continuing education and professional development.</p>
+                        </div>
+                    </a>
+                    <a href="/contact" onclick="setTimeout(function(){ var sel = document.getElementById('contact-topic'); if(sel) sel.value='Technical Support'; }, 200);" class="doc-card">
+                        <span class="material-symbols-rounded">manage_accounts</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="support.topic_account">Account &amp; access</h4>
+                            <p data-i18n="support.topic_account_desc">Login help, password resets and managing your team.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="support-enterprise" style="margin-top: 60px;">
+                    <div class="support-enterprise-text">
+                        <span class="kicker" data-i18n="support.enterprise_kicker">Enterprise</span>
+                        <h3 style="font-family: var(--font-serif); font-size: 26px; margin: 8px 0 12px;" data-i18n="support.enterprise_title">Dedicated support for organisations.</h3>
+                        <p style="color: var(--text-secondary); font-size: 15px; margin: 0;" data-i18n="support.enterprise_desc">Hospitals, health systems and enterprise customers receive priority support and a dedicated account contact. Reach our enterprise team directly.</p>
+                    </div>
+                    <a href="mailto:enterprise@clinixsummary.ai" class="btn-outline" style="white-space: nowrap;">enterprise@clinixsummary.ai</a>
+                </div>
+
+                <div style="text-align: center; margin-top: 48px; padding: 40px; background: var(--bg-subtle); border-radius: 16px; border: 1px solid var(--border-subtle);">
+                    <h3 style="font-family: var(--font-serif); font-size: 24px; margin-bottom: 8px;" data-i18n="support.cta_title">Still need help?</h3>
+                    <p style="color: var(--text-secondary); font-size: 15px; margin-bottom: 24px;" data-i18n="support.cta_desc">Send us a message and a member of our team will get back to you.</p>
+                    <a href="/contact" onclick="setTimeout(function(){ var sel = document.getElementById('contact-topic'); if(sel) sel.value='Technical Support'; }, 200);" class="btn-primary" style="background-color: var(--accent); color: var(--text-primary);" data-i18n="support.cta_btn">Contact us</a>
                 </div>
             </div>
         </section>
