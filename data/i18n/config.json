@@ -5,8 +5,7 @@
   "queryParam": "lang",
   "nonTranslatedRoutes": [
     "/case-studies",
-    "/status",
-    "/support"
+    "/status"
   ],
   "nonTranslatedBanner": {
     "icon": "translate",
