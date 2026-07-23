@@ -78,6 +78,10 @@ const SEO = (() => {
         '/dpa':                 { titleKey: 'dpa.title',                      descKey: 'dpa.intro' },
         '/terms':               { titleKey: 'terms.title',                    descKey: 'terms.intro' },
         '/leaflet':             { titleKey: 'leaflet.page_title',             descKey: 'leaflet.subtitle' },
+
+        // Help & Support
+        '/status':              { titleKey: 'status.title',  titleFallback: 'System Status',  descKey: 'status.desc',  descFallback: 'Live operational status of ClinixSummary services — console, API, transcription, document generation and integrations.' },
+        '/support':             { titleKey: 'support.title', titleFallback: 'Support Center', descKey: 'support.desc', descFallback: 'Get help with ClinixSummary — contact support, browse common topics, check system status and reach our clinical and enterprise teams.' },
     };
 
     /**
