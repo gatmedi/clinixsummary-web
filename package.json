@@ -1,0 +1,14 @@
+{
+  "name": "clinixsummary-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ClinixSummary marketing site — static SPA + build-time prerender (SSG) for SEO",
+  "type": "module",
+  "scripts": {
+    "prerender": "node build/prerender.mjs",
+    "prerender:check": "node build/verify.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}

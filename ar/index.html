@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-ssg="1"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClinixSummary — البنية التاسيسية للكاتب الطبي بالذكاء الاصطناعي</title>
+    <meta name="description" content="ClinixSummary هو بنية ذكاء اصطناعي تاسيسية للتوثيق السريري والفوترة والمساعدة الطبية المتخصصة.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ClinixSummary — البنية التاسيسية للكاتب الطبي بالذكاء الاصطناعي">
+    <meta property="og:description" content="ClinixSummary هو بنية ذكاء اصطناعي تاسيسية للتوثيق السريري والفوترة والمساعدة الطبية المتخصصة.">
+    <meta property="og:image" content="https://clinixsummary.ai/images/logo-full.png">
+    <meta property="og:url" content="https://clinixsummary.ai/ar/">
+    <meta property="og:site_name" content="ClinixSummary">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ClinixSummary — البنية التاسيسية للكاتب الطبي بالذكاء الاصطناعي">
+    <meta name="twitter:description" content="ClinixSummary هو بنية ذكاء اصطناعي تاسيسية للتوثيق السريري والفوترة والمساعدة الطبية المتخصصة.">
+    <meta name="twitter:image" content="https://clinixsummary.ai/images/logo-full.png">
+
+    <link rel="canonical" href="https://clinixsummary.ai/ar/">
+    <link rel="icon" type="image/png" href="/images/logo-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&amp;family=Tajawal:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Deployment-aware base path (GitHub Pages subpath vs production root) -->
+    <script>
+        window.BASEPATH="/ar";
+        // const BASE_PATH = "http://192.168.100.200:8000";
+        const BASE_PATH = "https://clinixsummary.ai";
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ClinixSummary",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "AI-powered clinical documentation for modern clinicians. Voice in. Meticulous notes out.",
+      "url": "https://clinixsummary.ai",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "0",
+        "highPrice": "49.99",
+        "offerCount": "6"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "GATMEDI",
+        "url": "https://clinixsummary.ai"
+      }
+    }
+    </script>
+<link rel="alternate" hreflang="en" href="https://clinixsummary.ai/"><link rel="alternate" hreflang="fr" href="https://clinixsummary.ai/fr/"><link rel="alternate" hreflang="es" href="https://clinixsummary.ai/es/"><link rel="alternate" hreflang="pt" href="https://clinixsummary.ai/pt/"><link rel="alternate" hreflang="it" href="https://clinixsummary.ai/it/"><link rel="alternate" hreflang="ar" href="https://clinixsummary.ai/ar/"><link rel="alternate" hreflang="x-default" href="https://clinixsummary.ai/"><meta property="og:locale" content="ar_AR"></head>
+<body>
+    <!-- GitHub Pages SPA redirect handler — replays the path saved by 404.html -->
+    <script>!function(){var r=sessionStorage.getItem('spa-redirect');if(r){sessionStorage.removeItem('spa-redirect');history.replaceState(null,'',r);}}();</script>
+
+    <a href="#app-content" class="skip-link">Skip to content</a>
+
+    <div class="header-wrapper">
+        <header class="navbar">
+            <div class="navbar-content"> <!-- NEW CONTAINER FOR ALIGNMENT -->
+                <a href="/ar/" class="logo" id="home-link">
+                    <img src="/images/logo-wings.png" alt="" class="logo-symbol" height="53" width="53">
+                    <img src="/images/logo-footer.png" alt="ClinixSummary" class="logo-wordmark" height="74" width="112">
+                </a>
+
+                <div class="mobile-toggle material-symbols-rounded" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">menu</div>
+
+                <div class="nav-right-group">
+                    <nav class="nav-menu" aria-label="Main navigation">
+
+                        <!-- 1. Meet ClinixSummary (NOW TWO COLUMNS) -->
+                        <div class="nav-item">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.meet_clinixs">تعرف على ClinixSummary</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown wide" role="menu">
+
+                                <!-- Column 1: Core Architecture -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.core_arch">البنية الأساسية</div>
+                                    <a href="/ar/meticulous-notes/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.meticulous_notes">ملاحظات دقيقة</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.meticulous_notes_desc">دقيقة ومفصلة ومنظمة بإحكام</span>
+                                    </a>
+                                    <a href="/ar/proprietary-models/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.proprietary_models">نماذج خاصة</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.proprietary_models_desc">محركات لغوية طبية متخصصة.</span>
+                                    </a>
+                                    <a href="/ar/kaizen/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.kaizen">Kai-zen</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.kaizen_desc">حلقة تعلم مستمر.</span>
+                                    </a>
+                                    <a href="/ar/security/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.security">مركز الثقة</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.security_desc">الأمان والامتثال ونظام إدارة الجودة.</span>
+                                    </a>
+                                </div>
+
+                                <!-- Column 2: Advanced Features & Compliance -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.features_compliance">الميزات والامتثال</div>
+                                    <a href="/ar/languages/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.languages">اللغات</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.languages_desc">دعم متعدد اللغات للممارسة العالمية.</span>
+                                    </a>
+                                    <a href="/ar/auto-ambient/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.auto_ambient">التوثيق المحيطي التلقائي</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.auto_ambient_desc">يكتشف تلقائيا ما اذا كان التسجيل محيطيا ام إملاء.</span>
+                                    </a>
+                                    <a href="/ar/clinix-foundation/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.clinix_foundation">Clinix Foundation</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.clinix_foundation_desc">Non-profit global health initiative.</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Solutions -->
+                        <div class="nav-item">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.solutions">الحلول</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown wide" role="menu">
+                                <!-- Sector Column (Left) -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.sectors">القطاعات</div>
+                                    <a href="/ar/clinicians/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.for_clinicians">للأطباء</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.for_clinicians_desc">الممارسة الفردية والخاصة.</span>
+                                    </a>
+                                    <a href="/ar/organizations/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.for_orgs">للمؤسسات</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.for_orgs_desc">المستشفيات والأنظمة الصحية.</span>
+                                    </a>
+                                    <a href="/ar/insurers/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.insurers">شركات التأمين</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.insurers_desc">شراكة لتسريع البت في المطالبات على مستوى الشبكات.</span>
+                                    </a>
+                                    <a href="/ar/government/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.government">القطاع الحكومي</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.government_desc">القطاع العام والجهات الاتحادية.</span>
+                                    </a>
+                                    <a href="/ar/nonprofit/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.nonprofit">القطاع غير الربحي</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.nonprofit_desc">ClinixFoundation</span>
+                                    </a>
+                                </div>
+                                <!-- Use Case Column (Right) -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.use_cases">حالات الاستخدام</div>
+                                    <a href="/ar/cap-medical/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.by_specialty">حسب التخصص</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.by_specialty_desc">أكثر من ٤٠ تخصصا طبيا وصحيا مساعدا ووحدات مساعدة</span>
+                                    </a>
+                                    <a href="/ar/integrations/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.integrations">التكاملات</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.integrations_desc">تصدير مرن إلى أنظمة EHR و EMR.</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Capabilities (UPDATED: Two column layout with 7+5 items) -->
+                        <div class="nav-item">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.capabilities">القدرات</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown wide" role="menu" style="min-width: 550px;">
+
+                                <!-- Column 1: Core Modules (8 items) -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.specialty_modules">وحدات التخصصات والمهن الصحية المساعدة</div>
+                                    <a href="/ar/cap-medical/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.medical">الطب</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.medical_desc">جميع التخصصات</span>
+                                    </a>
+                                    <a href="/ar/cap-dental/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.dental">طب الأسنان</span>
+                                    </a>
+                                    <a href="/ar/cap-psychiatry/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.psychiatry">الطب النفسي</span>
+                                    </a>
+                                    <a href="/ar/cap-psychology/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.psychology">علم النفس</span>
+                                    </a>
+                                    <a href="/ar/cap-allied-health/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.allied_health">المهن الصحية المساعدة</span>
+                                    </a>
+                                    <a href="/ar/cap-midwifery/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.midwifery">القبالة</span>
+                                    </a>
+                                    <a href="/ar/cap-vet/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.vet_medicine">الطب البيطري</span>
+                                    </a>
+                                    <a href="/ar/cap-operative/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.operational_notes">ملاحظات العمليات</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.operational_notes_desc">للعمليات الجراحية والإجراءات الطبية</span>
+                                    </a>
+                                </div>
+
+                                <!-- Column 2: Workflow & Assist Tools -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.workflow_tools">أدوات سير العمل والمساعدة</div>
+                                    <a href="/ar/cme-vault/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title"><span data-i18n="dropdown.cme_vault">CME/CPD Vault</span> <span class="beta-tag" data-i18n="common.new_badge">جديد</span></span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.cme_vault_desc">التعليم الطبي والتطوير المهني المستمر.</span>
+                                    </a>
+                                    <a href="/ar/billing-assist/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.billing_assist">مساعدة الفوترة</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.billing_assist_desc">للمؤسسات فقط</span>
+                                    </a>
+                                    <a href="/ar/referrals/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.referrals">الإحالات</span>
+                                    </a>
+                                    <a href="/ar/icd-coding/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.icd_coding">ترميز ICD</span>
+                                    </a>
+                                    <a href="/ar/cap-patient-leaflet/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.patient_leaflet">نشرة معلومات المريض</span>
+                                    </a>
+                                    <div class="separator"></div>
+                                    <a href="/ar/radiology-assist/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title"><span data-i18n="dropdown.radiology_assist">مساعد الأشعة</span> <span class="beta-tag" data-i18n="common.beta_badge">تجريبي</span></span>
+                                    </a>
+                                    <a href="/ar/dermatology-assist/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title"><span data-i18n="dropdown.dermatology_assist">مساعد الجلدية</span> <span class="beta-tag" data-i18n="common.beta_badge">تجريبي</span></span>
+                                    </a>
+                                    <a href="/ar/triage-assist/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title"><span data-i18n="dropdown.triage_assist">مساعد الفرز الطبي</span> <span class="beta-tag" data-i18n="common.beta_badge">تجريبي</span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Learn (UPDATED FROM RESOURCES) -->
+                        <div class="nav-item">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.learn">المعرفة</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown" role="menu">
+                                <a href="/ar/publications/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.publications">المنشورات</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.publications_desc">تقارير فنية.</span>
+                                </a>
+                                <a href="/ar/whitepapers/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.whitepapers">الأوراق التقنية</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.whitepapers_desc">المنهجية التقنية.</span>
+                                </a>
+                                <a href="/case-studies/" class="dropdown-item" role="menuitem"><span class="dropdown-title" data-i18n="dropdown.case_studies">دراسات الحالة</span></a>
+                                <a href="/ar/security/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.compliance">مركز الثقة</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.compliance_desc">الأمان والامتثال.</span>
+                                </a>
+                                <div class="separator"></div>
+                                <a href="/ar/news/" class="dropdown-item" role="menuitem"><span class="dropdown-title" data-i18n="dropdown.news_events">الأخبار والفعاليات</span></a>
+                            </div>
+                        </div>
+
+                        <!-- 5. Pricing -->
+                        <div class="nav-item">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.pricing">الأسعار</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown" role="menu">
+                                <a href="/ar/pricing/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.see_pricing">See Pricing</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.see_pricing_desc">Plans from free to enterprise.</span>
+                                </a>
+                                <a href="/ar/roi-calculator/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.roi_calculator">حاسبة العائد على الاستثمار</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.roi_calculator_desc">احسب وفوراتك المالية.</span>
+                                </a>
+                                <div class="separator"></div>
+                                <a href="/ar/contact/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.enterprise_contact">Enterprise</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.plan_enterprise_desc">تراخيص مخصصة بحسب الحجم.</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </nav>
+
+                    <!-- Language Switcher -->
+                    <div id="lang-switcher" class="lang-switcher"><button class="lang-switcher-btn" aria-label="Change language">
+            <span class="material-symbols-rounded" style="font-size:18px;">language</span>
+            <span class="lang-code">AR</span>
+            <span class="material-symbols-rounded" style="font-size:16px;">expand_more</span>
+        </button>
+        <div class="lang-dropdown"><button class="lang-option" data-lang="en">
+                <span class="lang-native">English</span>
+                <span class="lang-english">English</span>
+            </button><button class="lang-option" data-lang="fr">
+                <span class="lang-native">Français</span>
+                <span class="lang-english">French</span>
+            </button><button class="lang-option" data-lang="es">
+                <span class="lang-native">Español</span>
+                <span class="lang-english">Spanish</span>
+            </button><button class="lang-option" data-lang="pt">
+                <span class="lang-native">Português</span>
+                <span class="lang-english">Portuguese</span>
+            </button><button class="lang-option" data-lang="it">
+                <span class="lang-native">Italiano</span>
+                <span class="lang-english">Italian</span>
+            </button><button class="lang-option active" data-lang="ar">
+                <span class="lang-native">العربية</span>
+                <span class="lang-english">Arabic</span>
+            </button></div></div>
+
+                    <div class="nav-actions">
+                        <a href="/ar/cme-vault/" class="btn-outline" style="border-color: var(--accent); color: var(--accent);" data-i18n="dropdown.cme_vault">CME/CPD Vault</a>
+                        <!-- <a href="http://192.168.100.200:8000/console" class="btn-primary" target="_blank" data-i18n="nav.go_to_console">Go to Console</a> -->
+                        <a href="https://clinixsummary.ai/login" class="btn-primary" target="_blank" data-i18n="nav.go_to_console">افتح لوحة التحكم</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <main id="app-content" style="">
+    <section class="hero">
+        <div class="page-width">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <span class="kicker" style="color: #4b88d3;" data-i18n="hero.kicker">كاتب طبي بالذكاء الاصطناعي للأطباء العصريين</span>
+                    <h1 data-i18n="hero.title" tabindex="-1">صوتك يدخل. ملاحظات دقيقة تخرج.</h1>
+                    <p class="hero-subtitle" data-i18n="hero.description">يحول ClinixSummary كل استشارة طبية إلى توثيق منظم وجاهز للفوترة – في ثوان – لتستعيد وقتك لمرضاك بدلا من الأعمال الورقية.</p>
+
+                    <div style="margin-top: 32px; max-width: 400px; background: #fff; padding: 32px; border-radius: 16px; border: 1px solid var(--border-subtle); box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
+                        <h3 style="font-family: var(--font-serif); font-size: 20px; margin-bottom: 12px;" data-i18n="hero.try_title">جربه الآن</h3>
+                        <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.5;" data-i18n="hero.try_desc">لا حاجة للتسجيل. افتح لوحة التحكم وجرب ClinixSummary مع فترة تجريبية مجانية – ابدأ التوثيق في ثوان.</p>
+                        <button class="btn-primary" style="width: 100%; justify-content: center; border-radius: 8px; font-weight: 600; padding: 12px;" onclick="window.open('https://clinixsummary.ai/console', '_blank')" data-i18n="hero.try_cta">جرّبه الآن</button>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-value" data-i18n="hero.stat_time">اكثر من ساعتين</span>
+                            <span class="stat-label" data-i18n="hero.stat_time_label">توفير يومي</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" data-i18n="hero.stat_burnout">٧٤٪</span>
+                            <span class="stat-label" data-i18n="hero.stat_burnout_label">إرهاق أقل</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value"><span class="material-symbols-rounded" style="font-size: 22px; vertical-align: middle; color: var(--accent);">verified_user</span> HIPAA</span>
+                            <span class="stat-label" data-i18n="hero.stat_hipaa_label">جاهز</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value"><span class="material-symbols-rounded" style="font-size: 22px; vertical-align: middle; color: var(--accent);">shield</span> SOC 2</span>
+                            <span class="stat-label" data-i18n="hero.stat_soc2_label">مطابق</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value"><span class="material-symbols-rounded" style="font-size: 22px; vertical-align: middle; color: var(--accent);">privacy_tip</span> GDPR</span>
+                            <span class="stat-label" data-i18n="hero.stat_gdpr_label">متوافق</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-container">
+                     <div class="hero-image-wrapper">
+                        <img src="/images/hero-clinician.jpg" alt="Clinician using tablet for documentation" class="hero-photo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="page-width">
+            <div class="section-header">
+                <span class="kicker" data-i18n="core.kicker">البنية الأساسية للذكاء الاصطناعي</span>
+                <h2 class="section-title" data-i18n="core.title">مبني على فلسفة Kai-zen والاستدلال السياقي.</h2>
+                <p class="section-copy" data-i18n="core.description">مستوحى من مبدأ Kai-zen ("التغيير نحو الأفضل")، يخضع ClinixSummary لتحسين مستمر من خلال المراجعة السريرية الدقيقة وضمان الجودة. خلال كل جلسة، تستخدم وحداتنا الاستدلال السياقي لإنشاء ملاحظات منظمة تتناسب مع التخصص ونوع الزيارة.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">neurology</div>
+                    <h3 data-i18n="core.llm_title">النماذج اللغوية السريرية (النواة)</h3>
+                    <p data-i18n="core.llm_desc">مضبوطة بدقة على كميات هائلة من البيانات السريرية مجهولة الهوية لضمان دقة متناهية وصحة المصطلحات عبر جميع التخصصات الطبية والسرديات السريرية المعقدة.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">trending_up</div>
+                    <h3 data-i18n="core.efficiency_title">كفاءة مدمجة</h3>
+                    <p data-i18n="core.efficiency_desc">تلغي بنيتنا عالية الأداء والمرنة الحاجة إلى فرق كتاب طبيين مكلفة، وتقدم دقة رائدة في القطاع بجزء بسيط من التكلفة التشغيلية التقليدية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roi-calculator" style="padding-top: 48px; padding-bottom: 48px;">
+        <div class="page-width">
+            <div class="section-header" style="text-align: center; margin-left: auto; margin-right: auto; margin-bottom: 40px;">
+                <span class="kicker" data-i18n="calculator.kicker">توقعات القيمة</span>
+                <h2 class="section-title" data-i18n="calculator.title">احسب عائد الاستثمار السنوي.</h2>
+                <p class="section-copy" style="margin-left: auto; margin-right: auto;" data-i18n="calculator.description">اطلع بدقة على مقدار الوقت والمال الذي يوفره لك ClinixSummary بناء على مقاييس ممارستك.</p>
+            </div>
+
+            <div class="calculator-container">
+                <div>
+                    <div class="calculator-input-group">
+                        <label for="annual-salary" data-i18n="calculator.salary_label">متوسط الراتب السنوي لكل طبيب (بالدولار الأمريكي)</label>
+                        <span id="annual-salary-display" class="slider-display">‏٢٥٠٬٠٠٠&nbsp;US$</span>
+                        <input type="range" id="annual-salary" value="250000" min="50000" max="500000" step="10000" oninput="updateDisplay(this); calculateSavings();">
+                    </div>
+
+                    <div class="calculator-input-group">
+                        <label for="num-clinicians" data-i18n="calculator.clinicians_label">عدد الأطباء</label>
+                        <span id="num-clinicians-display" class="slider-display">١ طبيب</span>
+                        <input type="range" id="num-clinicians" value="1" min="1" max="50" step="1" oninput="updateDisplay(this); calculateSavings();">
+                    </div>
+
+                    <div class="calculator-input-group">
+                        <label for="work-days" data-i18n="calculator.workdays_label">متوسط أيام العمل في السنة (لكل طبيب)</label>
+                        <span id="work-days-display" class="slider-display">٢٥٠ يوم</span>
+                        <input type="range" id="work-days" value="250" min="150" max="300" step="5" oninput="updateDisplay(this); calculateSavings();">
+                    </div>
+
+                    <div class="calculator-input-group">
+                        <label for="daily-minutes-saved" data-i18n="calculator.minutes_label">الدقائق الموفرة يوميا (أثر ClinixSummary)</label>
+                        <div class="fixed-value" data-i18n="calculator.minutes_value">١٢٠ دقيقة (ساعتان — تقدير القطاع)</div>
+                        <input type="hidden" id="daily-minutes-saved" value="120">
+                    </div>
+
+                    <p class="result-subtext" style="color: var(--text-primary); font-weight: 500;" data-i18n="calculator.workday_note">*تستند الحسابات إلى يوم عمل مدته ٨ ساعات.</p>
+                </div>
+
+                <div class="calculator-results">
+                    <div class="calculator-result-item">
+                        <span class="material-symbols-rounded result-icon">beach_access</span>
+                        <div class="result-label" data-i18n="calculator.time_saved_label">إجمالي الوقت الموفر سنويا</div>
+                        <div id="annual-hours-saved" class="result-value">٥٠٠ ساعة</div>
+                        <div class="result-subtext" data-i18n="calculator.time_saved_desc">اي ما يعادل ٦٣ يوما إضافيا من العمل مستعادا للفريق.</div>
+                    </div>
+
+                    <div class="calculator-result-item">
+                        <span class="material-symbols-rounded result-icon">currency_exchange</span>
+                        <div class="result-label" data-i18n="calculator.money_saved_label">إجمالي الوفورات المالية السنوية</div>
+                        <div id="monetary-savings" class="result-value">‏٦٢٬٥٠٠&nbsp;US$</div>
+                        <div class="result-subtext" data-i18n="calculator.money_saved_desc">استعد هذه القيمة بالتركيز على المهام المدرة للإيرادات.</div>
+                    </div>
+
+                    <div class="calculator-result-item">
+                        <span class="material-symbols-rounded result-icon">handshake</span>
+                        <div class="result-label" data-i18n="calculator.patient_focus_label">التركيز على المريض</div>
+                        <div id="patient-centric-value" class="result-value" data-i18n="calculator.patient_focus_value">تركيز أكبر على المريض بنسبة ٩٠٪</div>
+                        <div class="result-subtext" data-i18n="calculator.patient_focus_desc">يفيد الأطباء بدرجات أعلى بشكل ملحوظ في مشاركة المرضى ورضاهم.</div>
+                    </div>
+
+                    <div class="calculator-result-item" style="border-bottom: none;">
+                        <div class="result-label" data-i18n="calculator.burnout_label">الإرهاق والعبء الذهني</div>
+                        <span class="material-symbols-rounded result-icon" style="font-size: 36px !important; color: white !important;">sentiment_satisfied</span>
+                        <div id="cognitive-load-value" class="result-value" style="color: white; font-family: var(--font-sans); font-size: 24px;" data-i18n="calculator.burnout_value">عبء ذهني أقل بنسبة ٧٨٪</div>
+                        <div class="result-subtext" data-i18n="calculator.burnout_desc">يحرر هذا الطاقة الذهنية، مما يساهم في تحسن موثق في الرضا المهني.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--bg-subtle);">
+        <div class="page-width">
+            <div class="section-header">
+                <span class="kicker" data-i18n="capabilities.kicker">القدرات</span>
+                <h2 class="section-title" data-i18n="capabilities.title">المعيار الذهبي للتوثيق السريري.</h2>
+                <p class="section-copy" data-i18n="capabilities.description">يضع ClinixSummary المعيار الذهبي للتوثيق السريري. من الرعاية الأولية إلى جراحة العظام والجلدية وطب الأطفال وما بعدها – نلتقط تفاصيل الطب الواقعي مع توحيد البنية لاستمرارية الرعاية والترميز والفوترة.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">mic</div>
+                    <h3 data-i18n="capabilities.transcription_title">تفريغ صوتي بمستوى سريري</h3>
+                    <p data-i18n="capabilities.transcription_desc">تعرف عالي الدقة على المصطلحات الطبية والاختصارات والمختصرات – حتى مع اللهجات وضوضاء الخلفية الواقعية.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">description</div>
+                    <h3 data-i18n="capabilities.notes_title">ملاحظات وخطابات منظمة</h3>
+                    <p data-i18n="capabilities.notes_desc">مخرجات جاهزة للنسخ أو الإرسال: ملاحظات وخطابات إحالة وتعليمات للمرضى في ثوان.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">medical_information</div>
+                    <h3 data-i18n="capabilities.coding_title">ترميز ICD‑10 و CPT</h3>
+                    <p data-i18n="capabilities.coding_desc">إنشاء رموز تدعم مطالبات أدق واستفسارات أقل وتحليلات أفضل.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">headphones</div>
+                    <h3 data-i18n="capabilities.ambient_title">التسجيل المحيطي وما بعد الزيارة</h3>
+                    <p data-i18n="capabilities.ambient_desc">سجل الاستشارات بشكل محيطي أو عبر الإملاء السريع – أيهما يناسب استشارتك أكثر.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">neurology</div>
+                    <h3 data-i18n="capabilities.reasoning_title">محرك الاستدلال السياقي</h3>
+                    <p data-i18n="capabilities.reasoning_desc">تستنتج وحداتنا المتقدمة السياق وتنتج توثيقا سريريا مفيدا وقابلا للفوترة عند نقطة الرعاية بما في ذلك التشخيص التفريقي.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">gavel</div>
+                    <h3 data-i18n="capabilities.legal_title">جاهز للتوثيق القانوني الطبي والتعويض</h3>
+                    <p data-i18n="capabilities.legal_desc">يقلل التوثيق الدقيق والمتقن من مخاطر سوء الممارسة الطبية ويحسن دقة التعويضات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="page-width">
+            <div class="section-header">
+                <span class="kicker" data-i18n="outcomes.kicker">النتائج والفوائد</span>
+                <h2 class="section-title" data-i18n="outcomes.title">أثر فوري قابل للقياس</h2>
+                <p class="section-copy" data-i18n="outcomes.description">يقدم ClinixSummary توثيقا بالمعيار الذهبي يحسن تجربة المريض ويختصر وقت التوثيق بشكل كبير ويعزز دقة التعويضات.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">sentiment_satisfied</div>
+                    <h3 data-i18n="outcomes.satisfaction_title">رضا أعلى للمرضى</h3>
+                    <p data-i18n-html="outcomes.satisfaction_desc">في دراسة شملت ٧٬٢٦٠ طبيبا وأكثر من ٢٫٥ مليون استشارة، قال ٤٧٪ من المرضى إن طبيبهم أمضى وقتا أقل في النظر إلى الحاسوب، وأفاد ٨٤٪ من الأطباء بتأثير إيجابي على التواصل مع المرضى.<sup style="font-size:10px;color:var(--accent);cursor:help" title="Tierney AA et al. (2024, 2025). NEJM Catalyst. doi:10.1056/CAT.23.0404">[١]</sup></p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">timer</div>
+                    <h3 data-i18n="outcomes.cognitive_title">تقليل العبء الذهني</h3>
+                    <p data-i18n-html="outcomes.cognitive_desc">في دراسة متعددة المراكز، انخفض إرهاق الأطباء من ٥١٫٩٪ إلى ٣٨٫٨٪ بعد ٣٠ يوما من استخدام الكاتب الطبي بالذكاء الاصطناعي (OR ٠٫٢٦، P&lt;٠٫٠٠١).<sup style="font-size:10px;color:var(--accent);cursor:help" title="Olson KD et al. (2025). JAMA Netw Open. 8(10):e2534976">[٢]</sup> مع تراجع التكنولوجيا إلى الخلفية، تعود الرعاية إلى الواجهة.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">payments</div>
+                    <h3 data-i18n="outcomes.revenue_title">مطالبات أدق وإيرادات أعلى</h3>
+                    <p data-i18n="outcomes.revenue_desc">الملاحظات الدقيقة تعني أخطاء ترميز أقل ورفضا أقل وتقديما أسرع وتعويضات أقوى.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--bg-subtle);">
+        <div class="page-width">
+            <div class="section-header">
+                <span class="kicker" data-i18n="why.kicker">لماذا ClinixSummary؟</span>
+                <h2 class="section-title" data-i18n="why.title">ما يميزنا.</h2>
+                <p class="section-copy" data-i18n="why.description">بناه أطباء يفهمون عبء التوثيق من تجربة مباشرة.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">delete_forever</div>
+                    <h3 data-i18n="why.audio_title">حذف فوري للتسجيل الصوتي</h3>
+                    <p data-i18n="why.audio_desc">يحذف تسجيلك الصوتي نهائيا فور إنشاء ملاحظتك. لا تسجيلات محفوظة على الإطلاق. خصوصية مدمجة بالتصميم وليس بالسياسة.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">trending_up</div>
+                    <h3 data-i18n="why.kaizen_title">تحسين أسبوعي للنماذج</h3>
+                    <p data-i18n="why.kaizen_desc">تقدم منهجية Kaizen لدينا تحسينا أسبوعيا مستمرا. يصبح كاتبك الطبي أذكى كل أسبوع — وليس كل ربع سنة.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">category</div>
+                    <h3 data-i18n="why.specialties_title">أكثر من ٤٠ تخصصا والمهن الصحية المساعدة</h3>
+                    <p data-i18n="why.specialties_desc">من أمراض القلب إلى العلاج الطبيعي ومن علاج النطق إلى الطب البيطري. منصة واحدة تغطي كامل نطاق التوثيق السريري.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">translate</div>
+                    <h3 data-i18n="why.languages_title">٦ لغات مع تبديل اللغة التلقائي</h3>
+                    <p data-i18n="why.languages_desc">توثيق متعدد اللغات بالكامل بما في ذلك العربية. تعامل مع الاستشارات التي ينتقل فيها المرضى بين اللغات بشكل طبيعي.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">savings</div>
+                    <h3 data-i18n="why.pricing_title">أقل بنسبة ٤٠٪ من أقرب منافس</h3>
+                    <p data-i18n="why.pricing_desc">أسعار شفافة قائمة على الأرصدة تبدأ من المجاني. خطط مؤسسية بأرصدة مخصصة ودعم متخصص.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section" id="pricing" style="padding-top: 96px;">
+        <div class="page-width">
+            <div class="section-header" style="text-align: center; margin-left: auto; margin-right: auto;">
+                <span class="kicker" data-i18n="pricing.kicker">الأسعار</span>
+                <h2 class="section-title" data-i18n="pricing.title">خطط شفافة لكل ممارسة طبية.</h2>
+                <p class="section-copy" style="margin-left: auto; margin-right: auto;" data-i18n="pricing.description">اختر خطة تتوافق مع حجم استشاراتك وتوثيقك. تتضمن جميع الخطط الوصول إلى نفس محرك الذكاء الاصطناعي الأساسي – أنت تدفع فقط مقابل الاستخدام.</p>
+                <div style="margin-top: 20px; padding: 12px 24px; background: rgba(59, 197, 214, 0.1); border-radius: 8px; display: inline-block;">
+                    <span style="font-size: 15px; font-weight: 600; color: var(--text-primary);" data-i18n="pricing.credit_explainer">١ رصيد = ١٠ دقائق من التوثيق الصوتي</span>
+                </div>
+            </div>
+
+            <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+
+                <div class="pricing-card">
+                    <div class="plan-name">Forever Free</div>
+                    <div class="plan-price"><span data-i18n="pricing.free_price">$٠</span> <span data-i18n="pricing.per_month">/شهريا</span></div>
+                    <p class="plan-period" data-i18n="pricing.free_credits">٢٥ رصيدا / شهريا</p>
+                    <ul class="plan-features">
+                        <li data-i18n="pricing.free_f1">وصول كامل إلى لوحة التحكم</li>
+                        <li data-i18n="pricing.free_f3">لا حاجة لبطاقة ائتمان</li>
+                        <li style="color: var(--text-secondary); opacity: 0.7;" data-i18n="pricing.free_f4">وصول محدود للتخصصات</li>
+                    </ul>
+                    <button class="btn-outline" style="width: 100%;" onclick="location.href='https://clinixsummary.ai/register?plan=forever-free'; return false;" data-i18n="pricing.free_cta">ابدأ الآن</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-name">Pilot 900</div>
+                    <div class="plan-price"><span data-i18n="pricing.pilot_price">$٩٫٩٩</span> <span data-i18n="pricing.per_month">/شهريا</span></div>
+                    <p class="plan-period" data-i18n="pricing.pilot_credits">٧٥ رصيدا / شهريا</p>
+                    <ul class="plan-features">
+                        <li data-i18n="pricing.cancel_anytime">إلغاء في أي وقت</li>
+                        <li data-i18n="pricing.pioneer_f4">وصول لجميع التخصصات</li>
+                        <li data-i18n="pricing.pioneer_f5">دعم بالبريد الإلكتروني</li>
+                    </ul>
+                    <button class="btn-outline" style="width: 100%;" onclick="location.href='https://clinixsummary.ai/register?plan=pilot-900'; return false;" data-i18n="pricing.pilot_cta">اشترك</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-name">Pioneer 1800</div>
+                    <div class="plan-price"><span data-i18n="pricing.pioneer_price">$١٨٫٩٩</span> <span data-i18n="pricing.per_month">/شهريا</span></div>
+                    <p class="plan-period" data-i18n="pricing.pioneer_credits">١٥٠ رصيدا / شهريا</p>
+                    <ul class="plan-features">
+                        <li data-i18n="pricing.cancel_anytime">إلغاء في أي وقت</li>
+                        <li data-i18n="pricing.pioneer_f4">وصول لجميع التخصصات</li>
+                        <li data-i18n="pricing.pioneer_f5">دعم بالبريد الإلكتروني</li>
+                    </ul>
+                    <button class="btn-outline" style="width: 100%;" onclick="location.href='https://clinixsummary.ai/register?plan=pioneer-1800'; return false;" data-i18n="pricing.pioneer_cta">اشترك</button>
+                </div>
+            </div>
+
+            <div id="pricing-expanded" style="display: none;">
+                <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top: 24px;">
+
+                    <div class="pricing-card featured" style="border-color: #4b88d3;">
+                        <div style="margin-bottom: 8px;"><span class="beta-tag" style="background: #E8F5FF; color: #4b88d3; font-weight: 700;" data-i18n="pricing.most_popular">الأكثر شعبية</span></div>
+                        <div class="plan-name">Productive 3000</div>
+                        <div class="plan-price"><span data-i18n="pricing.productive_price">$٢٩٫٩٩</span> <span data-i18n="pricing.per_month">/شهريا</span></div>
+                        <p class="plan-period" data-i18n="pricing.productive_credits">٢٥٠ رصيدا / شهريا</p>
+                        <ul class="plan-features">
+                            <li data-i18n="pricing.cancel_anytime">إلغاء في أي وقت</li>
+                            <li data-i18n="pricing.pioneer_f4">وصول لجميع التخصصات</li>
+                            <li data-i18n="pricing.pioneer_f5">دعم بالبريد الإلكتروني</li>
+                        </ul>
+                        <button class="btn-primary" style="width: 100%;" onclick="location.href='https://clinixsummary.ai/register?plan=productive-3000'; return false;" data-i18n="pricing.productive_cta">اشترك</button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="plan-name">Prolific 6000</div>
+                        <div class="plan-price"><span data-i18n="pricing.prolific_price">$٤٩٫٩٩</span> <span data-i18n="pricing.per_month">/شهريا</span></div>
+                        <p class="plan-period" data-i18n="pricing.prolific_credits">٥٠٠ رصيدا / شهريا</p>
+                        <ul class="plan-features">
+                            <li data-i18n="pricing.cancel_anytime">إلغاء في أي وقت</li>
+                            <li data-i18n="pricing.pioneer_f4">وصول لجميع التخصصات</li>
+                            <li data-i18n="pricing.pioneer_f5">دعم بالبريد الإلكتروني</li>
+                        </ul>
+                        <button class="btn-outline" style="width: 100%;" onclick="location.href='https://clinixsummary.ai/register?plan=prolific-6000'; return false;" data-i18n="pricing.prolific_cta">اشترك</button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="plan-name">Plan Enterprise</div>
+                        <div class="plan-price" data-i18n="pricing.custom_price">مخصص</div>
+                        <p class="plan-period" data-i18n="pricing.enterprise_credits">أرصدة مخصصة</p>
+                        <ul class="plan-features">
+                            <li data-i18n="pricing.enterprise_f4">تكاملات مخصصة ودعم النشر والتشغيل</li>
+                            <li data-i18n="pricing.enterprise_f5">مدير نجاح مخصص</li>
+                            <li data-i18n="pricing.enterprise_f2">الوضع المحيطي وسير عمل الفريق</li>
+                        </ul>
+                        <a href="/ar/contact/" class="btn-primary" style="width: 100%; text-align: center; background-color: var(--accent); color: var(--text-primary);" onclick="setTimeout(function(){ var sel = document.getElementById('contact-topic'); if(sel) sel.value='Enterprise Licensing'; }, 200);" data-i18n="pricing.enterprise_cta">تواصل مع المبيعات</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 32px;">
+                <button id="pricing-toggle" class="btn-outline" style="padding: 12px 32px; font-size: 15px; display: inline-flex; align-items: center; gap: 8px;" onclick="togglePricingPlans()">
+                    <span id="pricing-toggle-text" data-i18n="pricing.see_all_plans">عرض جميع الخطط</span>
+                    <span id="pricing-toggle-icon" class="material-symbols-rounded" style="font-size: 20px; transition: transform 0.3s;">expand_more</span>
+                </button>
+            </div>
+
+            <div style="text-align: center; margin-top: 24px; font-size: 14px; color: var(--text-secondary);" data-i18n="pricing.enterprise_question">تبحث عن تراخيص للمؤسسات أو المنظمات؟</div>
+        </div>
+    </section>
+</main>
+
+    <!-- QUALITY ASSURANCE STAMP -->
+    <div style="background: var(--bg-subtle); padding: 12px 0; font-size: 11px; text-align: center; color: var(--text-secondary); border-top: 1px solid var(--border-subtle);">
+        <div class="page-width" data-i18n="common.qms_stamp">معتمد من عملية إدارة الجودة ClinixQM</div>
+    </div>
+
+    <footer>
+        <div class="page-width">
+            <div class="footer-layout">
+
+                <div class="footer-brand-col">
+                    <div style="margin-bottom: 40px;">
+                        <a href="/ar/" class="footer-logo">
+                            <img src="/images/logo-wings.png" alt="" class="logo-symbol footer-symbol" height="53" width="53" loading="lazy">
+                            <img src="/images/logo-footer.png" alt="ClinixSummary" class="logo-wordmark" height="74" width="112" loading="lazy">
+                        </a>
+                    </div>
+
+                    <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-end;">
+                        <h4 style="font-size: 14px; color: #fff; margin-bottom: 4px; letter-spacing: 0.05em;">BY GATMEDI</h4>
+                        <p style="font-size: 11px; color: rgba(255,255,255,0.5); margin-bottom: 16px;">© 2026 GATMEDI</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/clinixsummary" target="_blank" rel="noopener">f</a>
+                            <a href="https://x.com/clinixsummary" target="_blank" rel="noopener">𝕏</a>
+                            <a href="https://www.linkedin.com/company/clinixsummary" target="_blank" rel="noopener">in</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4 data-i18n="nav.meet_clinixs">تعرف على ClinixSummary</h4>
+                        <ul>
+                            <li><a href="/ar/proprietary-models/" data-i18n="dropdown.proprietary_models">نماذج خاصة</a></li>
+                            <li><a href="/ar/meticulous-notes/" data-i18n="dropdown.meticulous_notes">ملاحظات دقيقة</a></li>
+                            <li><a href="/ar/clinix-foundation/" data-i18n="dropdown.clinix_foundation">Clinix Foundation</a></li>
+                            <li><a href="/ar/kaizen/" data-i18n="dropdown.kaizen">Kai-zen</a></li>
+                            <li><a href="/ar/languages/" data-i18n="dropdown.languages">اللغات</a></li>
+                            <li><a href="/ar/auto-ambient/" data-i18n="dropdown.auto_ambient">التوثيق المحيطي التلقائي</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h4 data-i18n="footer.company">الشركة</h4>
+                        <ul>
+                            <li><a href="/ar/story/" data-i18n="footer.story">قصتنا</a></li>
+                            <li><a href="/ar/publications/" data-i18n="dropdown.publications">المنشورات</a></li>
+                            <li><a href="/ar/contact/" data-i18n="common.contact_us">تواصل معنا</a></li>
+                            <li><a href="/ar/careers/" data-i18n="footer.careers">الوظائف</a></li>
+                            <li><a href="/ar/news/" data-i18n="dropdown.news_events">الأخبار والفعاليات</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4 data-i18n="nav.solutions">الحلول</h4>
+                        <ul>
+                            <li><a href="/ar/clinicians/" data-i18n="dropdown.for_clinicians">للأطباء</a></li>
+                            <li><a href="/ar/organizations/" data-i18n="dropdown.for_orgs">للمؤسسات</a></li>
+                            <li><a href="/ar/insurers/" data-i18n="dropdown.insurers">شركات التأمين</a></li>
+                            <li><a href="/ar/government/" data-i18n="dropdown.government">القطاع الحكومي</a></li>
+                            <li><a href="/ar/nonprofit/" data-i18n="dropdown.nonprofit">القطاع غير الربحي</a></li>
+                            <li><a href="/ar/cap-medical/" data-i18n="dropdown.by_specialty">حسب التخصص</a></li>
+                            <li><a href="/ar/integrations/" data-i18n="dropdown.integrations">التكاملات</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4 data-i18n="nav.capabilities">القدرات</h4>
+                        <ul>
+                            <li><a href="/ar/cap-medical/" data-i18n="dropdown.medical">الطب</a></li>
+                            <li><a href="/ar/cap-dental/" data-i18n="dropdown.dental">طب الأسنان</a></li>
+                            <li><a href="/ar/cap-psychiatry/" data-i18n="dropdown.psychiatry">الطب النفسي</a></li>
+                            <li><a href="/ar/cap-psychology/" data-i18n="dropdown.psychology">علم النفس</a></li>
+                            <li><a href="/ar/cap-allied-health/" data-i18n="footer.occ_therapy">العلاج الوظيفي</a></li>
+                            <li><a href="/ar/cap-allied-health/" data-i18n="footer.speech_lang">علاج النطق واللغة</a></li>
+                            <li><a href="/ar/cap-allied-health/" data-i18n="footer.physio">العلاج الطبيعي</a></li>
+                            <li><a href="/ar/cap-allied-health/" data-i18n="footer.nutritional">العلاج الغذائي</a></li>
+                            <li><a href="/ar/cap-midwifery/" data-i18n="dropdown.midwifery">القبالة</a></li>
+                            <li><a href="/ar/cap-vet/" data-i18n="dropdown.vet_medicine">الطب البيطري</a></li>
+                            <li><a href="/ar/cap-operative/" data-i18n="dropdown.operational_notes">ملاحظات العمليات</a></li>
+                            <li><a href="/ar/cme-vault/" data-i18n="dropdown.cme_vault">CME/CPD Vault</a></li>
+                            <li><a href="/ar/billing-assist/" data-i18n="dropdown.billing_assist">مساعدة الفوترة</a></li>
+                            <li><a href="/ar/referrals/" data-i18n="dropdown.referrals">الإحالات</a></li>
+                            <li><a href="/ar/icd-coding/" data-i18n="dropdown.icd_coding">ترميز ICD</a></li>
+                            <li><a href="/ar/cap-patient-leaflet/" data-i18n="dropdown.patient_leaflet">نشرة معلومات المريض</a></li>
+                            <li><a href="/ar/radiology-assist/"><span data-i18n="dropdown.radiology_assist">مساعد الأشعة</span> Beta</a></li>
+                            <li><a href="/ar/dermatology-assist/"><span data-i18n="dropdown.dermatology_assist">مساعد الجلدية</span> Beta</a></li>
+                            <li><a href="/ar/triage-assist/"><span data-i18n="dropdown.triage_assist">مساعد الفرز الطبي</span> Beta</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h4 data-i18n="nav.learn">المعرفة</h4>
+                        <ul>
+                            <li><a href="/ar/publications/" data-i18n="dropdown.publications">المنشورات</a></li>
+                            <li><a href="/ar/whitepapers/" data-i18n="dropdown.whitepapers">الأوراق التقنية</a></li>
+                            <li><a href="/case-studies/" data-i18n="dropdown.case_studies">دراسات الحالة</a></li>
+                            <li><a href="/ar/news/" data-i18n="dropdown.news_events">الأخبار والفعاليات</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4 data-i18n="nav.pricing">الأسعار</h4>
+                        <ul>
+                            <li><a href="/ar/pricing/" data-i18n="dropdown.see_pricing">See Pricing</a></li>
+                            <li><a href="/ar/roi-calculator/" data-i18n="dropdown.roi_calculator">حاسبة العائد على الاستثمار</a></li>
+                            <li><a href="/ar/contact/" data-i18n="dropdown.enterprise_contact">Enterprise</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4 data-i18n="footer.terms_policies">الشروط والسياسات</h4>
+                        <ul>
+                            <li><a href="/ar/privacy-choices/" data-i18n="footer.privacy_choices">خيارات الخصوصية</a></li>
+                            <li><a href="/ar/privacy-policy/" data-i18n="footer.privacy_policy">سياسة الخصوصية</a></li>
+                            <li><a href="/ar/usage-policy/" data-i18n="footer.usage_policy">سياسة الاستخدام</a></li>
+                            <li><a href="/ar/terms/" data-i18n="footer.terms">شروط الخدمة</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h4 data-i18n="footer.help_security">المساعدة والثقة</h4>
+                        <ul>
+                            <li><a href="/ar/security/" data-i18n="dropdown.compliance">مركز الثقة</a></li>
+                            <li><a href="/status/" data-i18n="footer.system_status">حالة النظام</a></li>
+                            <li><a href="/ar/contact/" data-i18n="common.contact_us">تواصل معنا</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.4/purify.min.js" integrity="sha512-wKv5WSKk06JEAfIhv1IO/2IiPrfbUoFDMGMjkumP7FrTVECN+ISKNFpdYLjDWYLR1fAyVqv02VNVsFDZPqMEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/pages/home.js"></script>
+    <script src="/js/pages/meet.js"></script>
+    <script src="/js/pages/solutions.js"></script>
+    <script src="/js/pages/capabilities.js"></script>
+    <script src="/js/pages/learn.js"></script>
+    <script src="/js/pages/other.js"></script>
+    <script src="/js/seo.js"></script>
+    <script src="/js/app.js"></script>
+
+
+</body></html>
