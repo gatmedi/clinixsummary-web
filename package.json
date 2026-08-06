@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "prerender": "node build/prerender.mjs",
-    "prerender:check": "node build/verify.mjs"
+    "prerender:check": "node build/verify.mjs",
+    "sitemap": "node build/sitemap.mjs",
+    "og-card": "node build/og-card.mjs",
+    "build:all": "node build/og-card.mjs && node build/prerender.mjs && node build/sitemap.mjs && node build/verify.mjs"
   },
   "devDependencies": {
     "playwright": "^1.49.0"

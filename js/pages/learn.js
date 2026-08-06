@@ -116,7 +116,7 @@ function PublicationsPage() {
                 <div class="page-width">
                     <div class="subpage-header">
                         <span class="kicker" data-i18n="papers.pub_kicker">Publications</span>
-                        <h2 class="subpage-title" data-i18n="papers.pub_title">Research, evidence, and thought leadership.</h2>
+                        <h1 class="subpage-title" data-i18n="papers.pub_title">Research, evidence, and thought leadership.</h1>
                         <p class="subpage-copy" data-i18n="papers.pub_desc">ClinixSummary's design is grounded in evidence and clinical expertise.</p>
                     </div>
                     <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
@@ -223,7 +223,7 @@ function WhitepapersPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="papers.wp_kicker">White Papers</span>
-                    <h2 class="subpage-title" data-i18n="papers.wp_title">Technical methodology and deep dives.</h2>
+                    <h1 class="subpage-title" data-i18n="papers.wp_title">Technical methodology and deep dives.</h1>
                     <p class="subpage-copy" data-i18n="papers.wp_desc">Our white papers provide detailed technical documentation for CTOs, IT leaders, and compliance officers. Explore the architecture, methodology, and security framework behind ClinixSummary.</p>
                 </div>
 
@@ -312,7 +312,7 @@ function NewsPage() {
                 <div class="page-width">
                     <div class="subpage-header">
                         <span class="kicker" data-i18n="news.kicker">News & Events</span>
-                        <h2 class="subpage-title" data-i18n="news.title">Latest news & product updates.</h2>
+                        <h1 class="subpage-title" data-i18n="news.title">Latest news & product updates.</h1>
                         <p class="subpage-copy" data-i18n="news.description">
                             Follow our journey as we expand into new specialties, roll out advanced modules and share major company milestones.
                         </p>
@@ -346,7 +346,7 @@ function NewsPage() {
 //             <div class="page-width">
 //                 <div class="subpage-header">
 //                     <span class="kicker" data-i18n="news.kicker">News & Events</span>
-//                     <h2 class="subpage-title" data-i18n="news.title">Latest news & product updates.</h2>
+//                     <h1 class="subpage-title" data-i18n="news.title">Latest news & product updates.</h1>
 //                     <p class="subpage-copy" data-i18n="news.description">Follow our journey as we expand into new specialties, roll out advanced modules and share major company milestones.</p>
 //                 </div>
 
@@ -540,7 +540,7 @@ function CaseStudiesPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker">Case Studies</span>
-                    <h2 class="subpage-title">Real results from real practices.</h2>
+                    <h1 class="subpage-title">Real results from real practices.</h1>
                     <p class="subpage-copy">See how clinicians and organisations across specialties and settings are using ClinixSummary to transform documentation workflows, improve billing accuracy and enhance patient care.</p>
                 </div>
 

@@ -46,7 +46,7 @@ function createCapabilityPage(config) {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker"${d('kicker')}>${config.kicker}</span>
-                    <h2 class="subpage-title"${d('title')}>${config.title}</h2>
+                    <h1 class="subpage-title"${d('title')}>${config.title}</h1>
                     <p class="subpage-copy"${d('description')}>${config.description}</p>
                 </div>
 
@@ -243,7 +243,7 @@ function CapAlliedHealthPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="allied.kicker">Allied Health</span>
-                    <h2 class="subpage-title" data-i18n="allied.title">Purpose-Built Documentation for Allied Health Professionals.</h2>
+                    <h1 class="subpage-title" data-i18n="allied.title">Purpose-Built Documentation for Allied Health Professionals.</h1>
                     <p class="subpage-copy" data-i18n="allied.desc">Allied health documentation is fundamentally different from physician notes \u2014 different terminology, assessment frameworks, outcome measures and regulatory expectations. ClinixSummary has dedicated modules for each allied health discipline, so your notes reflect the way you actually practise.</p>
                 </div>
 
@@ -489,7 +489,7 @@ function BillingAssistPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="billing.kicker">Billing Assistance</span>
-                    <h2 class="subpage-title" data-i18n="billing.title">Intelligent Billing Assistance for Healthcare Organisations.</h2>
+                    <h1 class="subpage-title" data-i18n="billing.title">Intelligent Billing Assistance for Healthcare Organisations.</h1>
                     <p class="subpage-copy" data-i18n="billing.desc">ClinixSummary\u2019s Billing Assistance module \u2014 available exclusively for organisation and enterprise accounts \u2014 captures the clinical activities, procedures and services performed during every encounter and maps them to your organisation\u2019s own CPT code library. The result: fewer coding errors, eliminated missed charges and faster claims submission.</p>
                 </div>
 

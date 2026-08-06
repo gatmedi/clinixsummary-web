@@ -18,7 +18,7 @@ function ProprietaryModelsPage() {
                 <!-- Header -->
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="models.kicker">Proprietary Clinical Models</span>
-                    <h2 class="subpage-title" data-i18n="models.title">The most clinically fine-tuned AI models in healthcare documentation.</h2>
+                    <h1 class="subpage-title" data-i18n="models.title">The most clinically fine-tuned AI models in healthcare documentation.</h1>
                     <p class="subpage-copy" data-i18n="models.desc">ClinixSummary is powered by proprietary large language models built exclusively for clinical documentation. Trained on hundreds of thousands of hours of de-identified clinical audio spanning 40+ specialties and allied health, these models do not guess — they understand.</p>
                 </div>
 
@@ -181,7 +181,7 @@ function MeticulousNotesPage() {
                 <!-- Header -->
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="notes.kicker">Meticulous Notes</span>
-                    <h2 class="subpage-title" data-i18n="notes.title">Clinical documentation that meets the highest standard — every time.</h2>
+                    <h1 class="subpage-title" data-i18n="notes.title">Clinical documentation that meets the highest standard — every time.</h1>
                     <p class="subpage-copy" data-i18n="notes.desc">ClinixSummary does not produce drafts. Every note is clinically precise, perfectly structured, and audit-ready from the moment it is generated. Three pillars underpin every document we produce.</p>
                 </div>
 
@@ -261,7 +261,7 @@ function KaizenPage() {
                 <!-- Header -->
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="kaizen.kicker">Kai-zen (&#25913;&#21892;)</span>
-                    <h2 class="subpage-title" data-i18n="kaizen.title">Continuous incremental improvement. Every single week.</h2>
+                    <h1 class="subpage-title" data-i18n="kaizen.title">Continuous incremental improvement. Every single week.</h1>
                     <p class="subpage-copy" data-i18n="kaizen.desc">Kai-zen &#8212; the Japanese principle of "change for the better" &#8212; is not a marketing concept for us. It is our engineering methodology. ClinixSummary's models improve every week through a disciplined cycle of clinician feedback, quality review, and model refinement.</p>
                 </div>
 
@@ -341,7 +341,7 @@ function LanguagesPage() {
                 <!-- Header -->
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="lang.kicker">Languages</span>
-                    <h2 class="subpage-title" data-i18n="lang.title">Six languages. Full RTL support. Real multilingual consultations.</h2>
+                    <h1 class="subpage-title" data-i18n="lang.title">Six languages. Full RTL support. Real multilingual consultations.</h1>
                     <p class="subpage-copy" data-i18n="lang.desc">ClinixSummary supports clinical documentation in six languages — including full right-to-left Arabic support. But language support is more than translation. Our models understand how clinicians actually speak: mixing languages, switching mid-sentence, and using terminology from multiple linguistic traditions in a single encounter.</p>
                 </div>
 
@@ -438,7 +438,7 @@ function AutoAmbientPage() {
                 <!-- Header -->
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="ambient.kicker">Auto-Ambient Detection</span>
-                    <h2 class="subpage-title" data-i18n="ambient.title">No buttons. No modes. Just speak naturally.</h2>
+                    <h1 class="subpage-title" data-i18n="ambient.title">No buttons. No modes. Just speak naturally.</h1>
                     <p class="subpage-copy" data-i18n="ambient.desc">ClinixSummary automatically detects the type of audio it is receiving and adapts its processing pipeline accordingly. Whether you are in a live patient conversation, dictating a post-visit summary, or narrating a surgical procedure — the system knows, and it responds correctly. No manual mode switching required.</p>
                 </div>
 
@@ -518,7 +518,7 @@ function CMEVaultPage() {
                 <!-- Header -->
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="cme.kicker">CME Vault</span>
-                    <h2 class="subpage-title" data-i18n="cme.title">Continuing medical education, integrated into your documentation workflow.</h2>
+                    <h1 class="subpage-title" data-i18n="cme.title">Continuing medical education, integrated into your documentation workflow.</h1>
                     <p class="subpage-copy" data-i18n="cme.desc">CME Vault turns your daily clinical documentation into a continuous learning engine. Review cases you have documented, access curated educational content, stay current with clinical guidelines, and track your learning hours — all without leaving the platform you already use every day.</p>
                 </div>
 
@@ -598,7 +598,7 @@ function ClinixFoundationPage() {
                 <!-- Header -->
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="foundation.kicker">Clinix Foundation</span>
-                    <h2 class="subpage-title" data-i18n="foundation.title">Free clinical documentation for those who need it most.</h2>
+                    <h1 class="subpage-title" data-i18n="foundation.title">Free clinical documentation for those who need it most.</h1>
                     <p class="subpage-copy" data-i18n="foundation.desc">The Clinix Foundation is ClinixSummary's initiative to provide free access to our full clinical documentation platform for clinics operating in relief areas, underserved communities, and resource-limited settings. Because documentation burden should never be a barrier to delivering care where it is needed most.</p>
                 </div>
 

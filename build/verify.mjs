@@ -87,7 +87,53 @@ for (const route of CFG.routes) {
         if (new RegExp(`href="${r}"`).test(html)) { problems.push(`${label}: un-prefixed internal link href="${r}"`); break; }
       }
     }
+
+    // 8. exactly one <h1> inside the rendered content
+    const h1Count = (appContent.match(/<h1[\s>]/g) || []).length;
+    if (h1Count !== 1) problems.push(`${label}: ${h1Count} <h1> in #app-content (want exactly 1)`);
+
+    // 9. structured data scoping
+    const swAppCount = (html.match(/"@type":\s*"SoftwareApplication"/g) || []).length;
+    if (route === '/' && swAppCount !== 1) problems.push(`${label}: SoftwareApplication JSON-LD count ${swAppCount} on homepage (want 1)`);
+    if (route !== '/' && swAppCount !== 0) problems.push(`${label}: SoftwareApplication JSON-LD leaked onto non-home page`);
+    if (!/"@type":\s*"Organization"/.test(html)) problems.push(`${label}: missing Organization JSON-LD`);
+    const isMedical = CFG.medicalRoutes.includes(route);
+    const hasMedical = /"@type":\s*"MedicalWebPage"/.test(html);
+    if (isMedical && !hasMedical) problems.push(`${label}: missing MedicalWebPage JSON-LD`);
+    if (!isMedical && hasMedical) problems.push(`${label}: unexpected MedicalWebPage JSON-LD`);
+
+    // 10. og:image absolute + card
+    if (!html.includes(`property="og:image" content="${CFG.origin}${CFG.ogImage}"`)) {
+      problems.push(`${label}: og:image is not the absolute share card`);
+    }
   }
+}
+
+// ── sitemap.xml validation ─────────────────────────────────────────────
+{
+  const smPath = path.join(ROOT, 'sitemap.xml');
+  if (!existsSync(smPath)) problems.push('sitemap.xml: MISSING');
+  else {
+    const sm = await readFile(smPath, 'utf8');
+    const locs = [...sm.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
+    const locSet = new Set(locs);
+    if (locSet.size !== locs.length) problems.push('sitemap.xml: duplicate <loc> entries');
+    for (const route of CFG.routes) {
+      if (CFG.aliasRoutes[route]) {
+        for (const l of CFG.locales) {
+          if (locSet.has(CFG.origin + prefix(l) + trail(route))) problems.push(`sitemap.xml: alias route ${route} must not be listed`);
+        }
+        continue;
+      }
+      for (const l of routeLocales(route)) {
+        const u = CFG.origin + prefix(l) + trail(route);
+        if (!locSet.has(u)) problems.push(`sitemap.xml: missing ${u}`);
+        locSet.delete(u);
+      }
+    }
+    for (const extra of locSet) problems.push(`sitemap.xml: unexpected URL ${extra}`);
+  }
+  if (!existsSync(path.join(ROOT, 'images', 'og-card.png'))) problems.push('images/og-card.png: MISSING');
 }
 
 console.log(`Verified ${checked} generated pages.`);

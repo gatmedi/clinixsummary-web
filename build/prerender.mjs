@@ -182,6 +182,59 @@ async function renderOne(browser, base, locale, route) {
       a.setAttribute('href', prefix(loc) + trail(clean));
     });
 
+    // ── og:image → absolute branded share card (+ dimensions) ──
+    const ogImgUrl = ORIGIN + cfg.ogImage;
+    setMeta('meta[property="og:image"]', ogImgUrl);
+    setMeta('meta[name="twitter:image"]', ogImgUrl);
+    for (const [prop, val] of [['og:image:width', '1200'], ['og:image:height', '630']]) {
+      let el = head.querySelector(`meta[property="${prop}"]`);
+      if (!el) { el = document.createElement('meta'); el.setAttribute('property', prop); head.appendChild(el); }
+      el.content = val;
+    }
+
+    // ── structured data ──
+    // The shell ships one SoftwareApplication JSON-LD; scope it to the homepage
+    // only (it was duplicated on all ~45 URLs — a diluting signal), and give
+    // every page an Organization node; capability pages additionally get a
+    // localized MedicalWebPage node.
+    const ldBlocks = [...document.querySelectorAll('script[type="application/ld+json"]')];
+    for (const s of ldBlocks) {
+      try {
+        const data = JSON.parse(s.textContent);
+        if (data['@type'] === 'SoftwareApplication' && route !== '/') s.remove();
+      } catch { /* leave unparseable blocks alone */ }
+    }
+    const addLd = (obj) => {
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify(obj);
+      head.appendChild(s);
+    };
+    addLd({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'GATMEDI',
+      legalName: 'Gacrux Advanced Technologies in Medicine Ltd',
+      url: ORIGIN,
+      logo: ORIGIN + '/images/logo-full.png',
+      brand: { '@type': 'Brand', name: 'ClinixSummary' },
+      sameAs: [
+        'https://apps.apple.com/us/app/clinixsummary/id6740857768',
+        'https://play.google.com/store/apps/details?id=com.gacrux.clinixsummaryai'
+      ]
+    });
+    if (cfg.medicalRoutes.includes(route)) {
+      const descEl = head.querySelector('meta[name="description"]');
+      addLd({
+        '@context': 'https://schema.org',
+        '@type': 'MedicalWebPage',
+        name: document.title,
+        description: descEl ? descEl.content : '',
+        url: canonicalUrl,
+        inLanguage: locale
+      });
+    }
+
     // ── SSG marker (switcher navigates between locale URLs on SSG pages) ──
     document.documentElement.setAttribute('data-ssg', '1');
     document.documentElement.removeAttribute('data-app-ready');
