@@ -23,6 +23,7 @@ const I18n = (() => {
     let _config = {};
     let _dictionaries = {};   // { en: {…}, fr: {…}, … }
     let _ready = false;
+    let _pathLocale = null;   // locale encoded in the URL path prefix (SSG pages)
     const _basePath = (() => {
         const s = document.querySelector('script[src*="i18n.js"]');
         if (!s) return '';
@@ -51,12 +52,17 @@ const I18n = (() => {
             loadJSON(_basePath + 'data/i18n/config.json')
         ]);
 
-        // 2. Determine locale  (URL ?lang= → localStorage → browser → default)
+        // 2. Determine locale  (URL path prefix → ?lang= → localStorage → browser → default)
+        // Prerendered locale pages (/fr/…, /ar/…) declare their locale via
+        // window.BASEPATH — the path prefix always wins so the served content,
+        // canonical URL and applied language can never disagree.
+        const bp = window.BASEPATH || '';
+        _pathLocale = (/^\/[a-z]{2}$/.test(bp) && _locales[bp.slice(1)]) ? bp.slice(1) : null;
         const params = new URLSearchParams(window.location.search);
         const fromURL = params.get(_config.queryParam);
         const fromStorage = localStorage.getItem(_config.storageKey);
         const fromBrowser = (navigator.language || '').slice(0, 2);
-        const candidate = fromURL || fromStorage || fromBrowser || _config.defaultLocale;
+        const candidate = _pathLocale || fromURL || fromStorage || fromBrowser || _config.defaultLocale;
         _locale = _locales[candidate] ? candidate : _config.defaultLocale;
 
         // 3. Load dictionaries (always load English as fallback, plus selected)
@@ -183,7 +189,9 @@ const I18n = (() => {
     /* ── URL management ──────────────────────────────────── */
     function updateURLParam() {
         const params = new URLSearchParams(window.location.search);
-        if (_locale === _config.defaultLocale) {
+        if (_pathLocale || _locale === _config.defaultLocale) {
+            // Locale-prefixed URLs already encode the language — a ?lang=
+            // duplicate would create parallel URLs for the same content.
             params.delete(_config.queryParam);
         } else {
             params.set(_config.queryParam, _locale);
@@ -196,6 +204,26 @@ const I18n = (() => {
     /* ── language switching ──────────────────────────────── */
     async function switchLanguage(code) {
         if (!_locales[code] || code === _locale) return;
+
+        // On prerendered (SSG) pages every language lives at its own URL
+        // (/fr/…, /ar/… with English at the root), so switching language is a
+        // navigation — that keeps the visible content, <html lang/dir>, the
+        // canonical URL and hreflang all consistent. English-only routes keep
+        // the legacy in-place switch (they have no locale URLs).
+        if (document.documentElement.hasAttribute('data-ssg')) {
+            const bp = window.BASEPATH || '';
+            let route = window.location.pathname;
+            if (bp && route.startsWith(bp)) route = route.slice(bp.length) || '/';
+            if (route.length > 1 && route.endsWith('/')) route = route.slice(0, -1);
+            const nonTranslated = _config.nonTranslatedRoutes || [];
+            if (!nonTranslated.includes(route)) {
+                localStorage.setItem(_config.storageKey, code);
+                const prefix = code === _config.defaultLocale ? '' : '/' + code;
+                window.location.href = prefix + (route === '/' ? '/' : route + '/');
+                return;
+            }
+        }
+
         _locale = code;
         _dir = _locales[code].dir;
         localStorage.setItem(_config.storageKey, _locale);

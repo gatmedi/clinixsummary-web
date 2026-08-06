@@ -1,0 +1,22 @@
+{
+  "origin": "https://clinixsummary.ai",
+  "defaultLocale": "en",
+  "locales": ["en", "fr", "es", "pt", "it", "ar"],
+  "ogLocales": { "en": "en_US", "fr": "fr_FR", "es": "es_ES", "pt": "pt_BR", "it": "it_IT", "ar": "ar_AR" },
+  "nonTranslatedRoutes": ["/case-studies", "/status"],
+  "aliasRoutes": { "/pricing": "/", "/roi-calculator": "/" },
+  "routes": [
+    "/", "/pricing", "/contact",
+    "/meticulous-notes", "/proprietary-models", "/kaizen", "/security", "/languages",
+    "/auto-ambient", "/cme-vault", "/clinix-foundation",
+    "/clinicians", "/organizations", "/insurers", "/government", "/nonprofit", "/integrations",
+    "/cap-medical", "/cap-dental", "/cap-psychiatry", "/cap-psychology", "/cap-allied-health",
+    "/cap-midwifery", "/cap-vet", "/cap-operative", "/billing-assist", "/cap-patient-leaflet",
+    "/referrals", "/icd-coding", "/radiology-assist", "/dermatology-assist", "/triage-assist",
+    "/publications", "/whitepapers", "/case-studies", "/news",
+    "/careers", "/story",
+    "/privacy-policy", "/privacy-choices", "/terms-enterprise", "/usage-policy",
+    "/baa", "/dpa", "/terms", "/leaflet", "/roi-calculator",
+    "/status"
+  ]
+}

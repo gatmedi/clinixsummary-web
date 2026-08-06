@@ -130,9 +130,9 @@ const SEO = (() => {
         var metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) metaDesc.content = desc;
 
-        // --- Canonical URL ---
+        // --- Canonical URL (trailing-slash form matches the prerendered files) ---
         var canonical = document.querySelector('link[rel="canonical"]');
-        if (canonical) canonical.href = ORIGIN + (path === '/' ? '/' : path);
+        if (canonical) canonical.href = ORIGIN + (path === '/' ? '/' : path + '/');
 
         // --- Open Graph ---
         var ogTitle = document.querySelector('meta[property="og:title"]');
@@ -142,7 +142,7 @@ const SEO = (() => {
         if (ogDesc) ogDesc.content = desc;
 
         var ogUrl = document.querySelector('meta[property="og:url"]');
-        if (ogUrl) ogUrl.content = ORIGIN + (path === '/' ? '/' : path);
+        if (ogUrl) ogUrl.content = ORIGIN + (path === '/' ? '/' : path + '/');
 
         // --- Twitter Card ---
         var twTitle = document.querySelector('meta[name="twitter:title"]');

@@ -94,8 +94,12 @@ function calculateSavings() {
 // --- Path helpers (GitHub Pages subpath awareness) ---
 function stripBase(pathname) {
     const bp = window.BASEPATH || '';
-    const raw = pathname || '/';
-    return (bp && raw.startsWith(bp)) ? (raw.slice(bp.length) || '/') : raw;
+    let raw = pathname || '/';
+    if (bp && raw.startsWith(bp)) raw = raw.slice(bp.length) || '/';
+    // Normalise trailing slash — prerendered pages are served as <slug>/index.html,
+    // so /pricing/ must resolve to the same route as /pricing.
+    if (raw.length > 1 && raw.endsWith('/')) raw = raw.slice(0, -1) || '/';
+    return raw;
 }
 
 // --- Router Implementation ---
@@ -306,8 +310,11 @@ document.addEventListener('click', (e) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey) return;
     e.preventDefault();
     const bp = window.BASEPATH || '';
-    if (href !== stripBase(location.pathname)) {
-        history.pushState(null, '', bp + href);
+    // Prerendered pages carry locale-prefixed hrefs (e.g. /fr/pricing/) which
+    // already include the base path — don't prefix those twice.
+    const target = (bp && (href === bp || href.startsWith(bp + '/'))) ? href : bp + href;
+    if (stripBase(target) !== stripBase(location.pathname)) {
+        history.pushState(null, '', target);
         router();
     }
     closeMobileMenu();
@@ -323,4 +330,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     router();
     window.addEventListener('popstate', router);
+    // Signal (used by the SSG prerenderer and any diagnostics) that the app
+    // has fully booted and rendered its first route.
+    document.documentElement.setAttribute('data-app-ready', '1');
 });
