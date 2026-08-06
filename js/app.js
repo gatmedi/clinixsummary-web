@@ -170,6 +170,14 @@ const routes = {
 
     // Help & Support
     '/status':             StatusPage,
+
+    // Compare (EN-only)
+    '/compare':                    ComparePage,
+    '/clinixsummary-vs-heidi':     CompareHeidiPage,
+    '/clinixsummary-vs-freed':     CompareFreedPage,
+    '/clinixsummary-vs-nabla':     CompareNablaPage,
+    '/clinixsummary-vs-suki':      CompareSukiPage,
+    '/clinixsummary-vs-deepscribe': CompareDeepscribePage,
 };
 
 function router() {

@@ -406,7 +406,8 @@
     "support_center": "Centro assistenza",
     "baa": "Accordo di associato d’affari",
     "dpa": "Accordo sul trattamento dei dati",
-    "terms": "Condizioni di servizio"
+    "terms": "Condizioni di servizio",
+    "compare": "Confronta gli AI Scribe"
   },
   "common": {
     "contact_us": "Contattateci",
@@ -609,7 +610,17 @@
     "leaflet_title": "Informativa sulla privacy del paziente — Foglio stampabile",
     "leaflet_desc": "Disponibile in 6 lingue. Progettato per pareti di studi medici e sale d’attesa.",
     "leaflet_open": "Apri volantino",
-    "cta_title": "Pronti a proteggere il vostro flusso documentale?"
+    "cta_title": "Pronti a proteggere il vostro flusso documentale?",
+    "badge_class1": "Registrato in classe I",
+    "mhra_kicker": "Regolamentazione dei dispositivi medici",
+    "mhra_title": "Registrato presso l'MHRA. Con marcatura UKCA.",
+    "mhra_desc": "ClinixSummary è registrato presso la Medicines and Healthcare products Regulatory Agency (MHRA) del Regno Unito come dispositivo medico di classe I e reca la marcatura UKCA. Un software di documentazione clinica all'altezza degli standard normativi a cui è tenuto il tuo studio.",
+    "mhra_f1_title": "Registrazione MHRA",
+    "mhra_f1_desc": "Registrato come dispositivo medico presso l'autorità di regolamentazione del Regno Unito, con gli obblighi che tale registrazione comporta: vigilanza, tracciabilità e sorveglianza post-commercializzazione.",
+    "mhra_f2_title": "Marcatura UKCA",
+    "mhra_f2_desc": "La marcatura UKCA dichiara la conformità alle Medical Devices Regulations del Regno Unito per un dispositivo di classe I, coprendo i requisiti di sicurezza, prestazioni ed etichettatura.",
+    "mhra_f3_title": "Governato da ClinixQM",
+    "mhra_f3_desc": "Il nostro sistema di gestione della qualità è alla base della registrazione: processi documentati per la gestione del rischio, il controllo delle modifiche, la gestione degli incidenti e il miglioramento continuo."
   },
   "contact": {
     "kicker": "Contattateci",

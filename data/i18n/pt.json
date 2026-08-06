@@ -406,7 +406,8 @@
     "support_center": "Central de suporte",
     "baa": "Contrato de associado comercial",
     "dpa": "Acordo de processamento de dados",
-    "terms": "Termos de servico"
+    "terms": "Termos de servico",
+    "compare": "Comparar escribas de IA"
   },
   "common": {
     "contact_us": "Fale conosco",
@@ -609,7 +610,17 @@
     "leaflet_title": "Aviso de Privacidade do Paciente — Folheto Imprimível",
     "leaflet_desc": "Disponível em 6 idiomas. Concebido para paredes de consultórios e salas de espera.",
     "leaflet_open": "Abrir folheto",
-    "cta_title": "Pronto para proteger o seu fluxo de documentação?"
+    "cta_title": "Pronto para proteger o seu fluxo de documentação?",
+    "badge_class1": "Registrado como classe I",
+    "mhra_kicker": "Regulamentação de dispositivos médicos",
+    "mhra_title": "Registrado junto à MHRA. Com marcação UKCA.",
+    "mhra_desc": "O ClinixSummary está registrado junto à agência reguladora de medicamentos e produtos de saúde do Reino Unido (Medicines and Healthcare products Regulatory Agency — MHRA) como dispositivo médico de classe I e possui a marcação UKCA. Software de documentação clínica que atende ao padrão regulatório exigido da sua prática clínica.",
+    "mhra_f1_title": "Registro na MHRA",
+    "mhra_f1_desc": "Registrado como dispositivo médico junto ao regulador do Reino Unido, com as obrigações que esse registro acarreta — vigilância, rastreabilidade e monitoramento pós-mercado.",
+    "mhra_f2_title": "Marcação UKCA",
+    "mhra_f2_desc": "A marcação UKCA declara a conformidade com a regulamentação de dispositivos médicos do Reino Unido (UK Medical Devices Regulations) aplicável a um dispositivo de classe I — abrangendo requisitos de segurança, desempenho e rotulagem.",
+    "mhra_f3_title": "Regido pelo ClinixQM",
+    "mhra_f3_desc": "Nosso sistema de gestão da qualidade sustenta o registro — processos documentados de gestão de riscos, controle de mudanças, tratamento de incidentes e melhoria contínua."
   },
   "contact": {
     "kicker": "Entre em contato",
