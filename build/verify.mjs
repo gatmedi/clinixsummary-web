@@ -106,6 +106,16 @@ for (const route of CFG.routes) {
     if (!html.includes(`property="og:image" content="${CFG.origin}${CFG.ogImage}"`)) {
       problems.push(`${label}: og:image is not the absolute share card`);
     }
+
+    // 11. FAQPage JSON-LD present (with 4 Q&As) exactly on faqRoutes
+    const isFaqRoute = (CFG.faqRoutes || []).includes(route);
+    const hasFaqLd = /"@type":"FAQPage"/.test(html);
+    if (isFaqRoute && !hasFaqLd) problems.push(`${label}: missing FAQPage JSON-LD`);
+    if (!isFaqRoute && hasFaqLd) problems.push(`${label}: unexpected FAQPage JSON-LD`);
+    if (isFaqRoute) {
+      const qCount = (html.match(/"@type":"Question"/g) || []).length;
+      if (qCount !== 4) problems.push(`${label}: FAQPage has ${qCount} questions (want 4)`);
+    }
   }
 }
 

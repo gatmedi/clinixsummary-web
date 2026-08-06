@@ -234,6 +234,22 @@ async function renderOne(browser, base, locale, route) {
         inLanguage: locale
       });
     }
+    // FAQPage JSON-LD harvested from the rendered (already localized) DOM —
+    // question/answer pairs are marked with data-faq-q / data-faq-a.
+    if ((cfg.faqRoutes || []).includes(route)) {
+      const qs = [...document.querySelectorAll('[data-faq-q]')];
+      const faqs = qs.map(q => {
+        const a = q.parentElement.querySelector('[data-faq-a]');
+        return a ? {
+          '@type': 'Question',
+          name: q.textContent.trim(),
+          acceptedAnswer: { '@type': 'Answer', text: a.textContent.trim() }
+        } : null;
+      }).filter(Boolean);
+      if (faqs.length) {
+        addLd({ '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: locale, mainEntity: faqs });
+      }
+    }
 
     // ── SSG marker (switcher navigates between locale URLs on SSG pages) ──
     document.documentElement.setAttribute('data-ssg', '1');

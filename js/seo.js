@@ -25,12 +25,12 @@ const SEO = (() => {
         '/contact':             { titleKey: 'contact.title',                  descKey: 'contact.desc' },
 
         // Meet ClinixSummary
-        '/ai-clinical-notes':    { titleKey: 'notes.title',                    descKey: 'notes.desc' },
+        '/ai-clinical-notes':    { titleKey: 'notes.seo_title',                    descKey: 'notes.seo_desc' },
         '/proprietary-models':  { titleKey: 'models.title',                   descKey: 'models.desc' },
         '/kaizen':              { titleKey: 'kaizen.title',                   descKey: 'kaizen.desc' },
         '/security':            { titleKey: 'security.title',                 descKey: null, descFallback: 'Trust Center \u2014 HIPAA, GDPR, SOC 2 aligned. Sub-processor transparency, encryption, ephemeral audio, and quality management powered by ClinixQM.' },
-        '/multilingual-ai-scribe':           { titleKey: 'lang.title',                     descKey: 'lang.desc' },
-        '/ambient-ai-scribe':        { titleKey: 'ambient.title',                  descKey: 'ambient.desc' },
+        '/multilingual-ai-scribe':           { titleKey: 'lang.seo_title',                     descKey: 'lang.seo_desc' },
+        '/ambient-ai-scribe':        { titleKey: 'ambient.seo_title',                  descKey: 'ambient.seo_desc' },
         '/cme-vault':           { titleKey: 'cme.title',                      descKey: 'cme.desc' },
         '/clinix-foundation':   { titleKey: 'foundation.title',               descKey: 'foundation.desc' },
 
@@ -43,13 +43,17 @@ const SEO = (() => {
         '/integrations':        { titleKey: 'integrations.title',             descKey: 'integrations.description' },
 
         // Capabilities
-        '/ai-medical-scribe':         { titleKey: 'cap_medical.title',              descKey: 'cap_medical.description' },
+        '/ai-medical-scribe':         { titleKey: 'cap_medical.seo_title',              descKey: 'cap_medical.seo_desc' },
         '/dental-ai-scribe':          { titleKey: 'cap_dental.title',               descKey: 'cap_dental.description' },
         '/psychiatry-ai-scribe':      { titleKey: 'cap_psychiatry.title',           descKey: 'cap_psychiatry.description' },
         '/psychology-ai-scribe':      { titleKey: 'cap_psychology.title',           descKey: 'cap_psychology.description' },
         '/allied-health-ai-scribe':   { titleKey: 'allied.title',                   descKey: 'allied.desc' },
+        '/physiotherapy-ai-scribe': { titleKey: 'physio_page.seo_title',    descKey: 'physio_page.seo_desc' },
+        '/occupational-therapy-ai-scribe': { titleKey: 'ot_page.seo_title', descKey: 'ot_page.seo_desc' },
+        '/speech-therapy-ai-scribe': { titleKey: 'slt_page.seo_title',      descKey: 'slt_page.seo_desc' },
+        '/nutrition-ai-scribe':     { titleKey: 'nutrition_page.seo_title', descKey: 'nutrition_page.seo_desc' },
         '/midwifery-ai-scribe':       { titleKey: 'cap_midwifery.title',            descKey: 'cap_midwifery.description' },
-        '/veterinary-ai-scribe':             { titleKey: 'cap_vet.title',                  descKey: 'cap_vet.description' },
+        '/veterinary-ai-scribe':             { titleKey: 'cap_vet.seo_title',                  descKey: 'cap_vet.seo_desc' },
         '/operative-note-ai':       { titleKey: 'cap_operative.title',            descKey: 'cap_operative.description' },
         '/medical-billing-ai':      { titleKey: 'billing.title',                  descKey: 'billing.desc' },
         '/patient-leaflet-generator': { titleKey: 'cap_leaflet.title',              descKey: 'cap_leaflet.description' },

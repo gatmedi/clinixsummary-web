@@ -110,6 +110,28 @@ function CapMedicalPage() {
                 <p class="section-copy" data-i18n="cap_medical.extra_desc">Whether you practise family medicine, cardiology, gastroenterology, pulmonology, endocrinology, rheumatology, nephrology, haematology, oncology, ENT, urology, ophthalmology, emergency medicine, or any other discipline \u2014 ClinixSummary adapts to your clinical language and documentation requirements.</p>
             </div>
         `,
+        extraContent: `
+            <div>
+                <h2 class="section-title" data-i18n="cap_medical.faq_title">The AI medical scribe, answered</h2>
+                <div class="grid-2">
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="cap_medical.faq1_q" data-faq-q>What is an AI medical scribe?</h3>
+                    <p class="section-copy" data-i18n="cap_medical.faq1_a" data-faq-a>An AI medical scribe listens to your dictation or consultation and writes the clinical note for you — history, examination, impression and plan — so you document in seconds instead of minutes, without a human scribe in the room.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="cap_medical.faq2_q" data-faq-q>Is ClinixSummary secure and compliant?</h3>
+                    <p class="section-copy" data-i18n="cap_medical.faq2_a" data-faq-a>Yes. ClinixSummary is HIPAA and GDPR aligned, audio is processed ephemerally, and the product is registered with the MHRA in the United Kingdom as a Class I medical device (UKCA marked).</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="cap_medical.faq3_q" data-faq-q>Which specialties does it support?</h3>
+                    <p class="section-copy" data-i18n="cap_medical.faq3_a" data-faq-a>Thirteen dedicated consoles cover general medicine, dental, psychiatry, psychology, physiotherapy, occupational therapy, speech and language therapy, midwifery, nutrition, veterinary medicine, radiology, dermatology and triage.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="cap_medical.faq4_q" data-faq-q>Which languages does it work in?</h3>
+                    <p class="section-copy" data-i18n="cap_medical.faq4_a" data-faq-a>Notes can be generated in English, Spanish, Portuguese, Italian, French and Arabic — including a bilingual English–Arabic mode where the patient leaflet is produced in both languages.</p>
+                </div>
+                </div>
+            </div>`,
         ctaTitle: 'Start documenting smarter across every specialty.',
         ctaToast: 'Starting free trial for medical specialties.',
         ctaLabel: 'Start Free Trial',
@@ -423,6 +445,28 @@ function CapVetPage() {
                 desc: 'Export notes in formats compatible with major veterinary practice management systems, streamlining record\u2011keeping and billing workflows.',
             },
         ],
+        extraContent: `
+            <div>
+                <h2 class="section-title" data-i18n="cap_vet.faq_title">Veterinary documentation, answered</h2>
+                <div class="grid-2">
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="cap_vet.faq1_q" data-faq-q>Does it understand veterinary terminology and species differences?</h3>
+                    <p class="section-copy" data-i18n="cap_vet.faq1_a" data-faq-a>Yes — the veterinary console is purpose-built: species-specific anatomy, breed predispositions, dosing conventions and diagnostic terminology for canine, feline, equine and exotic patients.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="cap_vet.faq2_q" data-faq-q>Can it write surgical and anaesthesia records?</h3>
+                    <p class="section-copy" data-i18n="cap_vet.faq2_a" data-faq-a>Yes. Structured surgical reports, anaesthesia records, treatment notes and discharge summaries are generated to veterinary practice standards.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="cap_vet.faq3_q" data-faq-q>What about client communication?</h3>
+                    <p class="section-copy" data-i18n="cap_vet.faq3_a" data-faq-a>Client-facing summaries, treatment estimates and post-visit instructions are produced in plain language, improving compliance and client satisfaction.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="cap_vet.faq4_q" data-faq-q>Does it fit my practice management system?</h3>
+                    <p class="section-copy" data-i18n="cap_vet.faq4_a" data-faq-a>Notes export in formats compatible with major veterinary practice management systems, keeping record-keeping and billing streamlined.</p>
+                </div>
+                </div>
+            </div>`,
         ctaTitle: 'Upgrade your veterinary documentation today.',
         ctaToast: 'Starting free trial for veterinary.',
         ctaLabel: 'Start Free Trial',
@@ -887,5 +931,338 @@ function ICDCodingPage() {
         ctaTitle: 'Start coding with confidence.',
         ctaToast: 'Starting free trial with ICD-10 coding.',
         ctaLabel: 'Start Free Trial',
+    });
+}
+
+
+// ---------------------------------------------------------------------------
+// Physiotherapy (dedicated console page - SEO PR4)
+// ---------------------------------------------------------------------------
+
+function PhysioPage() {
+    return createCapabilityPage({
+        ns: "physio_page",
+        kicker: "Physiotherapy",
+        title: "The AI Scribe Built for Physiotherapists.",
+        description: "Physiotherapy documentation lives on measurements \u2014 range of motion, strength grades, functional tests, outcome measures. ClinixSummary's dedicated physiotherapy console captures them from your spoken assessment and structures them into treatment plans and progress notes that meet payer and regulatory standards, so you finish your notes before your patient reaches the car park.",
+        features: [
+            {
+                icon: "accessibility_new",
+                title: "ROM, Strength & Special Tests",
+                desc: "Speak your findings naturally \u2014 range-of-motion measurements, manual muscle testing grades, ligament and special tests \u2014 and they land as structured, comparable data in the note.",
+            },
+            {
+                icon: "assignment",
+                title: "Assessment to Treatment Plan",
+                desc: "Your clinical reasoning becomes a documented plan: goals, interventions, exercise prescription and progression criteria, written the way physiotherapists actually practise.",
+            },
+            {
+                icon: "trending_up",
+                title: "Progress & Discharge Notes",
+                desc: "Serial visits stay consistent: prior measures carry context, progress is charted against goals, and discharge summaries write themselves from the treatment history.",
+            },
+            {
+                icon: "verified",
+                title: "Payer-Ready Structure",
+                desc: "Notes carry the functional evidence, outcome measures and medical-necessity language that insurers and regulators expect \u2014 without you typing a word of it.",
+            }
+        ],
+        extraContent: `
+            <div style="margin-bottom: 60px;">
+                <h2 class="section-title" data-i18n="physio_page.ns_title">What a generated physiotherapy note includes</h2>
+                <div class="grid-3">
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="physio_page.ns_i1">Subjective history, mechanism of injury and functional limitations</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="physio_page.ns_i2">Objective findings: ROM, MMT grades, special tests, palpation, gait and movement analysis</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="physio_page.ns_i3">Clinical impression with evidence-based reasoning</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="physio_page.ns_i4">Treatment performed and patient response within the session</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="physio_page.ns_i5">Exercise prescription with sets, reps, load and progression criteria</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="physio_page.ns_i6">Outcome measures, goals, safety-netting and follow-up plan</p>
+                </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="section-title" data-i18n="physio_page.faq_title">Physiotherapy documentation, answered</h2>
+                <div class="grid-2">
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="physio_page.faq1_q" data-faq-q>Does ClinixSummary understand physiotherapy terminology?</h3>
+                    <p class="section-copy" data-i18n="physio_page.faq1_a" data-faq-a>Yes. The physiotherapy console is purpose-built: it recognises ROM conventions, MMT grading, special test names, outcome measures such as the LEFS or Oswestry, and exercise prescription language — it is not a general medical scribe with physio labels.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="physio_page.faq2_q" data-faq-q>Can I use it for both initial assessments and follow-up visits?</h3>
+                    <p class="section-copy" data-i18n="physio_page.faq2_a" data-faq-a>Yes. Initial assessments generate a full subjective/objective examination with impression and plan; follow-ups produce progress notes that track change against goals and prior measures.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="physio_page.faq3_q" data-faq-q>Does it work for physical therapists in the US as well as physiotherapists?</h3>
+                    <p class="section-copy" data-i18n="physio_page.faq3_a" data-faq-a>Yes. The console handles both physiotherapy and physical therapy conventions, including US payer-oriented documentation with medical-necessity language and CPT code suggestions.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="physio_page.faq4_q" data-faq-q>How long does a note take?</h3>
+                    <p class="section-copy" data-i18n="physio_page.faq4_a" data-faq-a>Seconds after you finish speaking. Dictate during or after the session; the structured note, exercise plan and any selected extras — referral letters, patient handouts, coding suggestions — arrive together.</p>
+                </div>
+                </div>
+            </div>`,
+        ctaTitle: "Finish your physio notes before the patient leaves.",
+        ctaToast: "Starting free trial.",
+        ctaLabel: "Start Free Trial",
+    });
+}
+
+// ---------------------------------------------------------------------------
+// Occupational Therapy (dedicated console page - SEO PR4)
+// ---------------------------------------------------------------------------
+
+function OTPage() {
+    return createCapabilityPage({
+        ns: "ot_page",
+        kicker: "Occupational Therapy",
+        title: "Occupational Therapy Notes, Structured Around Function.",
+        description: "Occupational therapy documentation is about occupation and function \u2014 ADLs, IADLs, cognition, environment, participation. ClinixSummary's dedicated OT console turns your spoken assessment into structured, goal-oriented notes that capture functional performance the way OTs reason about it.",
+        features: [
+            {
+                icon: "self_care",
+                title: "Function-First Structure",
+                desc: "ADL and IADL performance, assistance levels, cognitive and perceptual findings, and environmental factors are captured as structured findings \u2014 not buried in free text.",
+            },
+            {
+                icon: "flag",
+                title: "Goal-Oriented Plans",
+                desc: "Client-centred goals, graded interventions, equipment recommendations and home programmes are documented in the occupation-focused language your profession expects.",
+            },
+            {
+                icon: "checklist",
+                title: "Assessment Tools Recognised",
+                desc: "Standardised measures \u2014 COPM, MoCA, FIM-style scoring and more \u2014 are recognised from your narration and recorded with their scores and interpretation.",
+            },
+            {
+                icon: "diversity_3",
+                title: "Across Settings",
+                desc: "Hand therapy, neuro rehab, paediatrics, mental health or community practice: the console adapts its structure to the setting you describe.",
+            }
+        ],
+        extraContent: `
+            <div style="margin-bottom: 60px;">
+                <h2 class="section-title" data-i18n="ot_page.ns_title">What a generated OT note includes</h2>
+                <div class="grid-3">
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="ot_page.ns_i1">Occupational profile and reason for referral</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="ot_page.ns_i2">Functional performance: ADLs, IADLs, assistance levels and safety</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="ot_page.ns_i3">Cognitive, perceptual and psychosocial observations</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="ot_page.ns_i4">Standardised assessment scores and interpretation</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="ot_page.ns_i5">Client-centred goals and graded intervention plan</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="ot_page.ns_i6">Equipment, adaptations, home programme and follow-up</p>
+                </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="section-title" data-i18n="ot_page.faq_title">Occupational therapy documentation, answered</h2>
+                <div class="grid-2">
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="ot_page.faq1_q" data-faq-q>Is this a general scribe with OT labels?</h3>
+                    <p class="section-copy" data-i18n="ot_page.faq1_a" data-faq-a>No — it is a dedicated occupational therapy console. It structures notes around occupation and function: performance in daily activities, assistance levels, participation and environment, with the clinical reasoning OTs actually use.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="ot_page.faq2_q" data-faq-q>Can it document standardised assessments?</h3>
+                    <p class="section-copy" data-i18n="ot_page.faq2_a" data-faq-a>Yes. Mention the tool and scores in your narration — COPM, MoCA and similar — and they are recorded with scores, context and interpretation in the structured note.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="ot_page.faq3_q" data-faq-q>Does it support paediatric and neuro settings?</h3>
+                    <p class="section-copy" data-i18n="ot_page.faq3_a" data-faq-a>Yes. The console adapts to the setting you describe — paediatrics, neurological rehabilitation, hand therapy, mental health or community practice — and structures the note accordingly.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="ot_page.faq4_q" data-faq-q>What about referral letters and patient materials?</h3>
+                    <p class="section-copy" data-i18n="ot_page.faq4_a" data-faq-a>Selected modules generate professional referral letters, plain-language patient handouts, follow-up plans and coding suggestions alongside the clinical note.</p>
+                </div>
+                </div>
+            </div>`,
+        ctaTitle: "Document function, not paperwork.",
+        ctaToast: "Starting free trial.",
+        ctaLabel: "Start Free Trial",
+    });
+}
+
+// ---------------------------------------------------------------------------
+// Speech & Language Therapy (dedicated console page - SEO PR4)
+// ---------------------------------------------------------------------------
+
+function SLTPage() {
+    return createCapabilityPage({
+        ns: "slt_page",
+        kicker: "Speech & Language Therapy",
+        title: "Speech & Language Therapy Notes That Speak Your Language.",
+        description: "From dysphagia assessments to language sampling, SLT documentation is uniquely specialised. ClinixSummary's dedicated speech and language therapy console understands the terminology of communication and swallowing \u2014 and turns your spoken session summary into a structured clinical note in seconds.",
+        features: [
+            {
+                icon: "record_voice_over",
+                title: "Swallowing & Dysphagia",
+                desc: "Bedside and instrumental findings, consistencies and IDDSI levels, aspiration risk and safe-swallow recommendations are structured into clear, defensible documentation.",
+            },
+            {
+                icon: "graphic_eq",
+                title: "Speech, Language & Voice",
+                desc: "Articulation, phonology, expressive and receptive language, voice quality and fluency observations are captured with the precision your discipline demands.",
+            },
+            {
+                icon: "child_care",
+                title: "Paediatric & Adult Caseloads",
+                desc: "Early language development, school-age communication, acquired neurological disorders, head and neck rehabilitation \u2014 the console adapts to the caseload you describe.",
+            },
+            {
+                icon: "track_changes",
+                title: "Therapy Goals & Outcomes",
+                desc: "SMART goals, session performance against targets, cueing levels and outcome measures are documented consistently across the episode of care.",
+            }
+        ],
+        extraContent: `
+            <div style="margin-bottom: 60px;">
+                <h2 class="section-title" data-i18n="slt_page.ns_title">What a generated SLT note includes</h2>
+                <div class="grid-3">
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="slt_page.ns_i1">Case history and presenting communication or swallowing concern</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="slt_page.ns_i2">Assessment findings: speech, language, voice, fluency or dysphagia specifics</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="slt_page.ns_i3">Clinical impression and evidence-based reasoning</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="slt_page.ns_i4">Session activities, cueing levels and patient response</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="slt_page.ns_i5">SMART goals with measurable targets</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="slt_page.ns_i6">Recommendations, safety advice and follow-up plan</p>
+                </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="section-title" data-i18n="slt_page.faq_title">SLT documentation, answered</h2>
+                <div class="grid-2">
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="slt_page.faq1_q" data-faq-q>Does it understand dysphagia terminology?</h3>
+                    <p class="section-copy" data-i18n="slt_page.faq1_a" data-faq-a>Yes — including IDDSI levels, penetration-aspiration observations, bedside and instrumental assessment language, and safe-swallow recommendations, structured into clear clinical documentation.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="slt_page.faq2_q" data-faq-q>Is it suitable for paediatric speech therapy?</h3>
+                    <p class="section-copy" data-i18n="slt_page.faq2_a" data-faq-a>Yes. The console handles developmental caseloads — early language, articulation and phonology, school-age communication — alongside adult and acquired disorders.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="slt_page.faq3_q" data-faq-q>Do American SLPs and British SLTs both fit?</h3>
+                    <p class="section-copy" data-i18n="slt_page.faq3_a" data-faq-a>Yes. The console follows the conventions you use, whether you practise as a speech-language pathologist or a speech and language therapist, and adapts terminology accordingly.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="slt_page.faq4_q" data-faq-q>Can it produce parent- or patient-friendly summaries?</h3>
+                    <p class="section-copy" data-i18n="slt_page.faq4_a" data-faq-a>Yes. The patient information leaflet module generates plain-language summaries and home practice guidance alongside the clinical note.</p>
+                </div>
+                </div>
+            </div>`,
+        ctaTitle: "Spend your sessions on communication, not keyboards.",
+        ctaToast: "Starting free trial.",
+        ctaLabel: "Start Free Trial",
+    });
+}
+
+// ---------------------------------------------------------------------------
+// Nutritional Therapy (dedicated console page - SEO PR4)
+// ---------------------------------------------------------------------------
+
+function NutritionPage() {
+    return createCapabilityPage({
+        ns: "nutrition_page",
+        kicker: "Nutritional Therapy",
+        title: "ADIME Notes for Nutrition Professionals. Automatically.",
+        description: "Dietitians and nutrition professionals document in a structure all their own \u2014 ADIME. ClinixSummary's dedicated nutritional therapy console captures your consultation and writes the Assessment, Diagnosis, Intervention, Monitoring & Evaluation note for you, with PES statements where the evidence supports them.",
+        features: [
+            {
+                icon: "restaurant",
+                title: "True ADIME Structure",
+                desc: "Assessment, Diagnosis, Intervention, Monitoring & Evaluation \u2014 the note follows the nutrition care process, with PES-style diagnoses where the encounter supports them.",
+            },
+            {
+                icon: "monitoring",
+                title: "Complete Nutrition Assessment",
+                desc: "Intake history, anthropometrics, labs, medications, supplements, allergies and intolerances, and barriers to change are captured and stated explicitly \u2014 including allergy status.",
+            },
+            {
+                icon: "health_and_safety",
+                title: "Safety Built In",
+                desc: "Allergen avoidance, drug\u2013nutrient interactions and refeeding risk are flagged in the education and safety sections, with red flags documented for follow-up.",
+            },
+            {
+                icon: "menu_book",
+                title: "Patient Education Materials",
+                desc: "Plain-language dietary advice and patient handouts are generated alongside the clinical note \u2014 practical, personalised and ready to share.",
+            }
+        ],
+        extraContent: `
+            <div style="margin-bottom: 60px;">
+                <h2 class="section-title" data-i18n="nutrition_page.ns_title">What a generated nutrition note includes</h2>
+                <div class="grid-3">
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="nutrition_page.ns_i1">Assessment: nutrition history, intake, anthropometrics, labs, medications and supplements</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="nutrition_page.ns_i2">Explicit allergy and intolerance status</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="nutrition_page.ns_i3">Nutrition diagnosis, PES-style where supported</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="nutrition_page.ns_i4">Intervention: counselling, meal planning, behaviour change and supplementation</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="nutrition_page.ns_i5">Monitoring & evaluation with outcome measures and adherence tracking</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <p class="section-copy" data-i18n="nutrition_page.ns_i6">Education, agreed goals and red-flag safety-netting</p>
+                </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="section-title" data-i18n="nutrition_page.faq_title">Nutrition documentation, answered</h2>
+                <div class="grid-2">
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="nutrition_page.faq1_q" data-faq-q>Does it really follow the ADIME format?</h3>
+                    <p class="section-copy" data-i18n="nutrition_page.faq1_a" data-faq-a>Yes — the nutritional therapy console is built around the nutrition care process: Assessment, Diagnosis (PES-style where supported), Intervention, and Monitoring & Evaluation, plus education and agreed goals.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="nutrition_page.faq2_q" data-faq-q>How does it handle food allergies and intolerances?</h3>
+                    <p class="section-copy" data-i18n="nutrition_page.faq2_a" data-faq-a>Allergy and intolerance status is stated explicitly in every note, and the education section carries allergen-avoidance advice and relevant drug–nutrient interaction warnings.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="nutrition_page.faq3_q" data-faq-q>Is it suitable for clinical dietitians in hospitals?</h3>
+                    <p class="section-copy" data-i18n="nutrition_page.faq3_a" data-faq-a>Yes. The console documents refeeding risk, biochemical context and medical complexity alongside community and private-practice consultations.</p>
+                </div>
+                <div class="text-group" style="border-bottom: none;">
+                    <h3 data-i18n="nutrition_page.faq4_q" data-faq-q>Can my patients get a take-home summary?</h3>
+                    <p class="section-copy" data-i18n="nutrition_page.faq4_a" data-faq-a>Yes. The patient information leaflet module produces a plain-language handout of the dietary advice and agreed goals, ready to print or send.</p>
+                </div>
+                </div>
+            </div>`,
+        ctaTitle: "Write the ADIME note while you say goodbye.",
+        ctaToast: "Starting free trial.",
+        ctaLabel: "Start Free Trial",
     });
 }
