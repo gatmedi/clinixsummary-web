@@ -7,19 +7,19 @@
   "aliasRoutes": { "/pricing": "/", "/roi-calculator": "/" },
   "ogImage": "/images/og-card.png",
   "medicalRoutes": [
-    "/cap-medical", "/cap-dental", "/cap-psychiatry", "/cap-psychology",
-    "/cap-allied-health", "/cap-midwifery", "/cap-vet", "/cap-operative",
-    "/billing-assist", "/cap-patient-leaflet", "/referrals", "/icd-coding",
-    "/radiology-assist", "/dermatology-assist", "/triage-assist"
+    "/ai-medical-scribe", "/dental-ai-scribe", "/psychiatry-ai-scribe", "/psychology-ai-scribe",
+    "/allied-health-ai-scribe", "/midwifery-ai-scribe", "/veterinary-ai-scribe", "/operative-note-ai",
+    "/medical-billing-ai", "/patient-leaflet-generator", "/referral-letter-ai", "/icd-coding",
+    "/radiology-ai", "/dermatology-ai", "/medical-triage-ai"
   ],
   "routes": [
     "/", "/pricing", "/contact",
-    "/meticulous-notes", "/proprietary-models", "/kaizen", "/security", "/languages",
-    "/auto-ambient", "/cme-vault", "/clinix-foundation",
+    "/ai-clinical-notes", "/proprietary-models", "/kaizen", "/security", "/multilingual-ai-scribe",
+    "/ambient-ai-scribe", "/cme-vault", "/clinix-foundation",
     "/clinicians", "/organizations", "/insurers", "/government", "/nonprofit", "/integrations",
-    "/cap-medical", "/cap-dental", "/cap-psychiatry", "/cap-psychology", "/cap-allied-health",
-    "/cap-midwifery", "/cap-vet", "/cap-operative", "/billing-assist", "/cap-patient-leaflet",
-    "/referrals", "/icd-coding", "/radiology-assist", "/dermatology-assist", "/triage-assist",
+    "/ai-medical-scribe", "/dental-ai-scribe", "/psychiatry-ai-scribe", "/psychology-ai-scribe", "/allied-health-ai-scribe",
+    "/midwifery-ai-scribe", "/veterinary-ai-scribe", "/operative-note-ai", "/medical-billing-ai", "/patient-leaflet-generator",
+    "/referral-letter-ai", "/icd-coding", "/radiology-ai", "/dermatology-ai", "/medical-triage-ai",
     "/publications", "/whitepapers", "/case-studies", "/news",
     "/careers", "/story",
     "/privacy-policy", "/privacy-choices", "/terms-enterprise", "/usage-policy",
