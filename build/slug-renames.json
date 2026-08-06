@@ -1,0 +1,19 @@
+{
+  "/cap-medical": "/ai-medical-scribe",
+  "/cap-dental": "/dental-ai-scribe",
+  "/cap-psychiatry": "/psychiatry-ai-scribe",
+  "/cap-psychology": "/psychology-ai-scribe",
+  "/cap-allied-health": "/allied-health-ai-scribe",
+  "/cap-midwifery": "/midwifery-ai-scribe",
+  "/cap-vet": "/veterinary-ai-scribe",
+  "/cap-operative": "/operative-note-ai",
+  "/billing-assist": "/medical-billing-ai",
+  "/cap-patient-leaflet": "/patient-leaflet-generator",
+  "/referrals": "/referral-letter-ai",
+  "/radiology-assist": "/radiology-ai",
+  "/dermatology-assist": "/dermatology-ai",
+  "/triage-assist": "/medical-triage-ai",
+  "/meticulous-notes": "/ai-clinical-notes",
+  "/auto-ambient": "/ambient-ai-scribe",
+  "/languages": "/multilingual-ai-scribe"
+}
