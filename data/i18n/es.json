@@ -406,7 +406,8 @@
     "support_center": "Centro de soporte",
     "baa": "Acuerdo de asociado comercial",
     "dpa": "Acuerdo de procesamiento de datos",
-    "terms": "Condiciones del servicio"
+    "terms": "Condiciones del servicio",
+    "compare": "Comparar escribas de IA"
   },
   "common": {
     "contact_us": "Contáctenos",
@@ -609,7 +610,17 @@
     "leaflet_title": "Aviso de privacidad del paciente — Folleto imprimible",
     "leaflet_desc": "Disponible en 6 idiomas. Diseñado para paredes de consultorios y salas de espera.",
     "leaflet_open": "Abrir folleto",
-    "cta_title": "¿Listo para asegurar su flujo de documentación?"
+    "cta_title": "¿Listo para asegurar su flujo de documentación?",
+    "badge_class1": "Registrado como clase I",
+    "mhra_kicker": "Normativa de productos sanitarios",
+    "mhra_title": "Registrado ante la MHRA. Con marcado UKCA.",
+    "mhra_desc": "ClinixSummary está registrado ante la Medicines and Healthcare products Regulatory Agency (MHRA) del Reino Unido como producto sanitario de clase I y cuenta con el marcado UKCA. Software de documentación clínica que cumple el nivel de exigencia regulatoria al que está sujeta su práctica clínica.",
+    "mhra_f1_title": "Registro ante la MHRA",
+    "mhra_f1_desc": "Registrado como producto sanitario ante el regulador del Reino Unido, con las obligaciones que dicho registro conlleva: vigilancia, trazabilidad y seguimiento poscomercialización.",
+    "mhra_f2_title": "Marcado UKCA",
+    "mhra_f2_desc": "El marcado UKCA declara la conformidad con la normativa británica de productos sanitarios (UK Medical Devices Regulations) para un producto de clase I, y abarca los requisitos de seguridad, funcionamiento y etiquetado.",
+    "mhra_f3_title": "Regido por ClinixQM",
+    "mhra_f3_desc": "Nuestro sistema de gestión de la calidad sustenta el registro: procesos documentados para la gestión de riesgos, el control de cambios, la gestión de incidentes y la mejora continua."
   },
   "contact": {
     "kicker": "Contáctenos",

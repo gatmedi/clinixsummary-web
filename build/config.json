@@ -19,7 +19,13 @@
   },
   "nonTranslatedRoutes": [
     "/case-studies",
-    "/status"
+    "/status",
+    "/compare",
+    "/clinixsummary-vs-heidi",
+    "/clinixsummary-vs-freed",
+    "/clinixsummary-vs-nabla",
+    "/clinixsummary-vs-suki",
+    "/clinixsummary-vs-deepscribe"
   ],
   "aliasRoutes": {
     "/pricing": "/",
@@ -99,7 +105,13 @@
     "/terms",
     "/leaflet",
     "/roi-calculator",
-    "/status"
+    "/status",
+    "/compare",
+    "/clinixsummary-vs-heidi",
+    "/clinixsummary-vs-freed",
+    "/clinixsummary-vs-nabla",
+    "/clinixsummary-vs-suki",
+    "/clinixsummary-vs-deepscribe"
   ],
   "faqRoutes": [
     "/physiotherapy-ai-scribe",
@@ -107,6 +119,12 @@
     "/speech-therapy-ai-scribe",
     "/nutrition-ai-scribe",
     "/veterinary-ai-scribe",
-    "/ai-medical-scribe"
+    "/ai-medical-scribe",
+    "/compare",
+    "/clinixsummary-vs-heidi",
+    "/clinixsummary-vs-freed",
+    "/clinixsummary-vs-nabla",
+    "/clinixsummary-vs-suki",
+    "/clinixsummary-vs-deepscribe"
   ]
 }

@@ -394,7 +394,8 @@
     "availability": "Availability",
     "status": "Status",
     "system_status": "System Status",
-    "support_center": "Support center"
+    "support_center": "Support center",
+    "compare": "Compare AI Scribes"
   },
   "common": {
     "contact_us": "Contact us",
@@ -596,7 +597,17 @@
     "leaflet_title": "Patient Privacy Notice — Printable Leaflet",
     "leaflet_desc": "Available in 6 languages. Designed for clinic walls and waiting rooms.",
     "leaflet_open": "Open Leaflet",
-    "cta_title": "Ready to secure your documentation workflow?"
+    "cta_title": "Ready to secure your documentation workflow?",
+    "badge_class1": "Class I registered",
+    "mhra_kicker": "Medical Device Regulation",
+    "mhra_title": "Registered with the MHRA. UKCA marked.",
+    "mhra_desc": "ClinixSummary is registered with the UK Medicines and Healthcare products Regulatory Agency (MHRA) as a Class I medical device and carries UKCA marking. Clinical documentation software that meets the regulatory bar your practice is held to.",
+    "mhra_f1_title": "MHRA registration",
+    "mhra_f1_desc": "Registered as a medical device with the UK regulator, with the obligations that registration carries — vigilance, traceability and post‑market surveillance.",
+    "mhra_f2_title": "UKCA marking",
+    "mhra_f2_desc": "The UKCA mark declares conformity with the UK Medical Devices Regulations for a Class I device — covering safety, performance and labelling requirements.",
+    "mhra_f3_title": "Governed by ClinixQM",
+    "mhra_f3_desc": "Our quality management system underpins the registration — documented processes for risk, change control, incident handling and continuous improvement."
   },
   "contact": {
     "kicker": "Get in Touch",

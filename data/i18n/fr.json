@@ -406,7 +406,8 @@
     "support_center": "Centre d'assistance",
     "baa": "Contrat de sous-traitance (BAA)",
     "dpa": "Accord de traitement des données",
-    "terms": "Conditions d’utilisation"
+    "terms": "Conditions d’utilisation",
+    "compare": "Comparer les scribes IA"
   },
   "common": {
     "contact_us": "Nous contacter",
@@ -609,7 +610,17 @@
     "leaflet_title": "Avis de confidentialité patient — Feuillet imprimable",
     "leaflet_desc": "Disponible en 6 langues. Conçu pour les murs de cabinet et les salles d’attente.",
     "leaflet_open": "Ouvrir le dépliant",
-    "cta_title": "Prêt à sécuriser votre flux de documentation ?"
+    "cta_title": "Prêt à sécuriser votre flux de documentation ?",
+    "badge_class1": "Enregistrement classe I",
+    "mhra_kicker": "Réglementation des dispositifs médicaux",
+    "mhra_title": "Enregistré auprès de la MHRA. Marquage UKCA.",
+    "mhra_desc": "ClinixSummary est enregistré auprès de l'agence britannique de réglementation des médicaments et des produits de santé (Medicines and Healthcare products Regulatory Agency, MHRA) en tant que dispositif médical de classe I et porte le marquage UKCA. Un logiciel de documentation clinique à la hauteur des exigences réglementaires qui s'imposent à votre cabinet.",
+    "mhra_f1_title": "Enregistrement auprès de la MHRA",
+    "mhra_f1_desc": "Enregistré comme dispositif médical auprès de l'autorité de réglementation britannique, avec les obligations qui découlent de cet enregistrement : vigilance, traçabilité et surveillance après commercialisation.",
+    "mhra_f2_title": "Marquage UKCA",
+    "mhra_f2_desc": "Le marquage UKCA matérialise la déclaration de conformité aux UK Medical Devices Regulations pour un dispositif de classe I — il couvre les exigences de sécurité, de performance et d'étiquetage.",
+    "mhra_f3_title": "Encadré par ClinixQM",
+    "mhra_f3_desc": "Notre système de management de la qualité sous-tend cet enregistrement : des processus documentés pour la gestion des risques, la maîtrise des modifications, le traitement des incidents et l'amélioration continue."
   },
   "contact": {
     "kicker": "Contactez-nous",

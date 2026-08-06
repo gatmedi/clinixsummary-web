@@ -84,7 +84,13 @@ const SEO = (() => {
         '/leaflet':             { titleKey: 'leaflet.page_title',             descKey: 'leaflet.subtitle' },
 
         // Help & Support
-        '/status':              { titleKey: 'status.title',  titleFallback: 'System Status',  descKey: 'status.desc',  descFallback: 'Live operational status of ClinixSummary services — console, API, transcription, document generation and integrations.' },
+                '/compare':                     { titleKey: null, titleFallback: 'Compare AI Medical Scribes - ClinixSummary vs Alternatives', descKey: null, descFallback: 'Side-by-side comparisons of ClinixSummary with Heidi, Freed, Nabla, Suki and DeepScribe: specialty coverage, note languages, pricing, compliance and platforms.' },
+        '/clinixsummary-vs-heidi':      { titleKey: null, titleFallback: 'ClinixSummary vs Heidi Health - AI Medical Scribe Comparison', descKey: null, descFallback: 'Heidi Health vs ClinixSummary compared: veterinary and allied-health coverage, note languages, pricing, MHRA/UKCA regulation and platforms. Verified from public sources.' },
+        '/clinixsummary-vs-freed':      { titleKey: null, titleFallback: 'ClinixSummary vs Freed - AI Medical Scribe Comparison', descKey: null, descFallback: 'Freed vs ClinixSummary compared: specialty coverage, note languages, pricing, compliance and platforms. Verified from public sources.' },
+        '/clinixsummary-vs-nabla':      { titleKey: null, titleFallback: 'ClinixSummary vs Nabla - AI Medical Scribe Comparison', descKey: null, descFallback: 'Nabla vs ClinixSummary compared: multilingual notes, pricing transparency, compliance certifications, MHRA/UKCA regulation and platforms.' },
+        '/clinixsummary-vs-suki':       { titleKey: null, titleFallback: 'ClinixSummary vs Suki - AI Medical Scribe Comparison', descKey: null, descFallback: 'Suki vs ClinixSummary compared: self-serve vs sales-led pricing, specialty coverage, note languages, compliance and platforms.' },
+        '/clinixsummary-vs-deepscribe': { titleKey: null, titleFallback: 'ClinixSummary vs DeepScribe - AI Medical Scribe Comparison', descKey: null, descFallback: 'DeepScribe vs ClinixSummary compared: specialty focus, note languages, pricing access, Android availability and MHRA/UKCA regulation.' },
+'/status':              { titleKey: 'status.title',  titleFallback: 'System Status',  descKey: 'status.desc',  descFallback: 'Live operational status of ClinixSummary services — console, API, transcription, document generation and integrations.' },
     };
 
     /**
