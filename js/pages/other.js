@@ -8,7 +8,7 @@ function SecurityPage() {
                 <!-- Section 1: Hero -->
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="security.kicker">Trust Center</span>
-                    <h2 class="subpage-title" data-i18n="security.title">Security, privacy and compliance \u2014 verified.</h2>
+                    <h1 class="subpage-title" data-i18n="security.title">Security, privacy and compliance \u2014 verified.</h1>
                     <p class="subpage-copy" data-i18n="security.desc">Safeguarding patient data is non\u2011negotiable. ClinixSummary employs industry\u2011standard encryption, strict access controls and immediate audio deletion \u2014 governed by the ClinixQM Quality Management System \u2014 to give you confidence that your practice and your patients are protected.</p>
                 </div>
 
@@ -418,7 +418,7 @@ function CareersPage() {
     return '<section class="subpage-container"><div class="page-width">'
         + '<div class="subpage-header">'
         + '<span class="kicker" data-i18n="careers.kicker">Join Us</span>'
-        + '<h2 class="subpage-title" data-i18n="careers.title">Build the future of clinical documentation.</h2>'
+        + '<h1 class="subpage-title" data-i18n="careers.title">Build the future of clinical documentation.</h1>'
         + '<p class="subpage-copy" data-i18n="careers.desc">ClinixSummary is a small, global team of clinicians, engineers and designers on a mission to give healthcare professionals their time back. We work remotely, ship weekly, and believe the best ideas come from people who care deeply about the problem.</p>'
         + '</div>'
         + '<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; justify-content: center;">'
@@ -446,7 +446,7 @@ function PrivacyPolicyPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="common.legal">Legal</span>
-                    <h2 class="subpage-title" data-i18n="privacy_policy.title">Privacy Policy</h2>
+                    <h1 class="subpage-title" data-i18n="privacy_policy.title">Privacy Policy</h1>
                     <p class="subpage-copy" data-i18n="privacy_policy.intro">Last updated: 1 January 2026. This Privacy Policy explains how GATMEDI Ltd (\u201cClinixSummary\u201d, \u201cwe\u201d, \u201cour\u201d, \u201cus\u201d) collects, uses, discloses and safeguards personal information when you use our platform and services.</p>
                 </div>
 
@@ -529,7 +529,7 @@ function PrivacyChoicesPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="common.legal">Legal</span>
-                    <h2 class="subpage-title" data-i18n="privacy_choices.title">Privacy Choices</h2>
+                    <h1 class="subpage-title" data-i18n="privacy_choices.title">Privacy Choices</h1>
                     <p class="subpage-copy" data-i18n="privacy_choices.intro">You have control over how your data is collected and used. This page explains the privacy choices available to you as a ClinixSummary user.</p>
                 </div>
 
@@ -587,7 +587,7 @@ function TermsEnterprisePage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="common.legal">Legal</span>
-                    <h2 class="subpage-title" data-i18n="terms_enterprise.title">Terms of Service: Enterprise</h2>
+                    <h1 class="subpage-title" data-i18n="terms_enterprise.title">Terms of Service: Enterprise</h1>
                     <p class="subpage-copy" data-i18n="terms_enterprise.intro">Last updated: 1 January 2026. These Enterprise Terms of Service (\u201cTerms\u201d) govern the use of ClinixSummary by organisations, health systems and enterprise accounts.</p>
                 </div>
 
@@ -664,7 +664,7 @@ function UsagePolicyPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="common.legal">Legal</span>
-                    <h2 class="subpage-title" data-i18n="usage_policy.title">Usage Policy</h2>
+                    <h1 class="subpage-title" data-i18n="usage_policy.title">Usage Policy</h1>
                     <p class="subpage-copy" data-i18n="usage_policy.intro">Last updated: 1 January 2026. This Usage Policy sets out the acceptable and prohibited uses of the ClinixSummary platform and services.</p>
                 </div>
 
@@ -730,7 +730,7 @@ function BAAPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="common.legal">Legal</span>
-                    <h2 class="subpage-title" data-i18n="baa.title">Business Associate Agreement</h2>
+                    <h1 class="subpage-title" data-i18n="baa.title">Business Associate Agreement</h1>
                     <p class="subpage-copy" data-i18n="baa.intro">Last updated: 1 January 2026. This Business Associate Agreement (\u201cBAA\u201d) is entered into between the Covered Entity (\u201cYou\u201d) and GATMEDI Ltd, trading as ClinixSummary (\u201cBusiness Associate\u201d, \u201cwe\u201d, \u201cus\u201d).</p>
                 </div>
 
@@ -786,7 +786,7 @@ function DPAPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="common.legal">Legal</span>
-                    <h2 class="subpage-title" data-i18n="dpa.title">Data Processing Agreement</h2>
+                    <h1 class="subpage-title" data-i18n="dpa.title">Data Processing Agreement</h1>
                     <p class="subpage-copy" data-i18n="dpa.intro">Last updated: 1 January 2026. This Data Processing Agreement (\u201cDPA\u201d) forms part of the agreement between GATMEDI Ltd, trading as ClinixSummary (\u201cProcessor\u201d, \u201cwe\u201d, \u201cus\u201d) and the entity using our services (\u201cController\u201d, \u201cYou\u201d), pursuant to the UK GDPR and EU GDPR.</p>
                 </div>
 
@@ -862,7 +862,7 @@ function TermsPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="common.legal">Legal</span>
-                    <h2 class="subpage-title" data-i18n="terms.title">Terms of Service</h2>
+                    <h1 class="subpage-title" data-i18n="terms.title">Terms of Service</h1>
                     <p class="subpage-copy" data-i18n="terms.intro">Last updated: 1 January 2026. These Terms of Service (\u201cTerms\u201d) govern your use of the ClinixSummary platform and services provided by GATMEDI Ltd (\u201cClinixSummary\u201d, \u201cwe\u201d, \u201cour\u201d, \u201cus\u201d). By accessing or using the service, you agree to be bound by these Terms.</p>
                 </div>
 
@@ -933,7 +933,7 @@ function ContactPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="contact.kicker">Get in Touch</span>
-                    <h2 class="subpage-title" data-i18n="contact.title">Let\u2019s talk about your documentation needs.</h2>
+                    <h1 class="subpage-title" data-i18n="contact.title">Let\u2019s talk about your documentation needs.</h1>
                     <p class="subpage-copy" data-i18n="contact.desc">Whether you\u2019re a solo clinician exploring AI documentation or a health system looking for enterprise deployment, we\u2019re here to help.</p>
                 </div>
 
@@ -1167,7 +1167,7 @@ function StoryPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="story.kicker">Our Mission</span>
-                    <h2 class="subpage-title" data-i18n="story.title">Putting clinicians & patients first.</h2>
+                    <h1 class="subpage-title" data-i18n="story.title">Putting clinicians & patients first.</h1>
                     <p class="subpage-copy" data-i18n="story.description">ClinixSummary exists to let healthcare professionals devote their full attention to those who matter most \u2013 their patients. We believe that documentation should empower care, not hinder it.</p>
                 </div>
 
@@ -1228,7 +1228,7 @@ function LeafletPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="security.resources_kicker">Clinic Resources</span>
-                    <h2 class="subpage-title" data-i18n="leaflet.page_title">Patient Privacy Notice</h2>
+                    <h1 class="subpage-title" data-i18n="leaflet.page_title">Patient Privacy Notice</h1>
                     <p class="subpage-copy" data-i18n="leaflet.subtitle">A printable leaflet for your waiting room or consultation area.</p>
                 </div>
 
@@ -1255,7 +1255,7 @@ function StatusPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="status.kicker">System Status</span>
-                    <h2 class="subpage-title" data-i18n="status.title">Current service status</h2>
+                    <h1 class="subpage-title" data-i18n="status.title">Current service status</h1>
                     <p class="subpage-copy" data-i18n="status.desc">A live overview of the ClinixSummary services you rely on. If you’re seeing a problem that isn’t reflected here, please let us know so we can look into it.</p>
                 </div>
 

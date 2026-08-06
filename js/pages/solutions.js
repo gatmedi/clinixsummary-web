@@ -6,7 +6,7 @@ function CliniciansPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="clinicians.kicker">For Private & Solo Practice</span>
-                    <h2 class="subpage-title" data-i18n="clinicians.title">Reclaim Your Practice: Focused Care, Zero Paperwork.</h2>
+                    <h1 class="subpage-title" data-i18n="clinicians.title">Reclaim Your Practice: Focused Care, Zero Paperwork.</h1>
                     <p class="subpage-copy" data-i18n="clinicians.description">ClinixSummary is your dedicated partner against administrative fatigue. Designed for the clinician who values patient time above all else, our AI scribe allows you to focus 100% on the consultation while ensuring your documentation, coding, and billing are immaculate.</p>
                 </div>
 
@@ -70,7 +70,7 @@ function InsurersPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="insurers.kicker">For Insurance & Payer Organizations</span>
-                    <h2 class="subpage-title" data-i18n="insurers.title">Drive Utilization Efficiency and Reduce Claims Complexity.</h2>
+                    <h1 class="subpage-title" data-i18n="insurers.title">Drive Utilization Efficiency and Reduce Claims Complexity.</h1>
                     <p class="subpage-copy" data-i18n="insurers.description">ClinixSummary offers a powerful partnership to major payers. By ensuring provider documentation is standardized, verifiable, and precise at the source, we reduce manual review, minimize disputes, and accelerate the transition to value-based care models.</p>
                 </div>
 
@@ -139,7 +139,7 @@ function OrganizationsPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="orgs.kicker">For Organisations</span>
-                    <h2 class="subpage-title" data-i18n="orgs.title">Unlock productivity & satisfaction across your practice.</h2>
+                    <h1 class="subpage-title" data-i18n="orgs.title">Unlock productivity & satisfaction across your practice.</h1>
                     <p class="subpage-copy" data-i18n="orgs.description">ClinixSummary delivers measurable outcomes for clinics, groups and health systems. Our fine\u2011tuned AI saves hours per clinician, boosts patient satisfaction and reduces denied claims \u2013 all while integrating seamlessly into your existing workflows.</p>
                 </div>
 
@@ -233,7 +233,7 @@ function GovernmentPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="government.kicker">Public Sector & Federal Healthcare</span>
-                    <h2 class="subpage-title" data-i18n="government.title">Clinical Documentation for Government Healthcare Systems.</h2>
+                    <h1 class="subpage-title" data-i18n="government.title">Clinical Documentation for Government Healthcare Systems.</h1>
                     <p class="subpage-copy" data-i18n="government.description">ClinixSummary meets the rigorous documentation standards of government healthcare. From VA hospitals and military medicine to public health systems, we deliver compliant, efficient, and standardised clinical documentation at scale.</p>
                 </div>
 
@@ -295,7 +295,7 @@ function NonprofitPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="nonprofit.kicker">For Non-profit Organisations</span>
-                    <h2 class="subpage-title" data-i18n="nonprofit.title">Empowering Non-profit Healthcare with AI Documentation.</h2>
+                    <h1 class="subpage-title" data-i18n="nonprofit.title">Empowering Non-profit Healthcare with AI Documentation.</h1>
                     <p class="subpage-copy" data-i18n="nonprofit.description">Non-profit healthcare organisations face the same documentation challenges as commercial providers \u2014 often with fewer resources. ClinixSummary offers special pricing and dedicated support for qualifying non-profit organisations, and free access through the Clinix Foundation for those serving underserved communities.</p>
                 </div>
 
@@ -348,7 +348,7 @@ function IntegrationsPage() {
             <div class="page-width">
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="integrations.kicker">Organisation Feature</span>
-                    <h2 class="subpage-title" data-i18n="integrations.title">Seamless Integration into Your EHR & EMR Systems.</h2>
+                    <h1 class="subpage-title" data-i18n="integrations.title">Seamless Integration into Your EHR & EMR Systems.</h1>
                     <p class="subpage-copy" data-i18n="integrations.description">ClinixSummary integrates directly into your organisation's web-based EHR and EMR systems. Tailored to your specific workflows, our integration layer ensures that AI-generated documentation flows seamlessly into your existing clinical infrastructure.</p>
                 </div>
 
