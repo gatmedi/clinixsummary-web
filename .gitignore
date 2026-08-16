@@ -2,3 +2,7 @@ node_modules/
 scripts/
 PLAN.md
 build/.cache/
+
+# Working files that must never reach the site root (12MB video nearly shipped 2026-08-16)
+hero-tmp.mp4
+*.mp4
