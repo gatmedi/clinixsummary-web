@@ -81,6 +81,7 @@ const I18n = (() => {
 
         // 5. Persist
         localStorage.setItem(_config.storageKey, _locale);
+        persistLocaleCookie(_locale);
         updateURLParam();
 
         // 6. Update meta (delegated to SEO module if available, else basic fallback)
@@ -202,6 +203,33 @@ const I18n = (() => {
     }
 
     /* ── language switching ──────────────────────────────── */
+
+    /**
+     * Mirror the chosen locale into a cookie the web console can read.
+     *
+     * This site persists to localStorage, which is invisible to Laravel. So a
+     * visitor could read every page here in French, click through to the console,
+     * and land in English - because the console's t() reads a session value that
+     * nothing had ever seeded. This cookie is the bridge.
+     *
+     * Set on the apex domain so it reaches the console, which Laravel serves from
+     * the same host. SameSite=Lax is right: it is a preference, not a credential,
+     * and it has to survive a top-level navigation from here to /console. Laravel
+     * excepts this name from cookie encryption, because a static page has no way
+     * to encrypt anything.
+     */
+    function persistLocaleCookie(code) {
+        try {
+            if (!code) return;
+            var oneYear = 60 * 60 * 24 * 365;
+            var secure  = window.location.protocol === 'https:' ? '; Secure' : '';
+            document.cookie = 'cs_locale=' + encodeURIComponent(code)
+                + '; Max-Age=' + oneYear + '; Path=/; SameSite=Lax' + secure;
+        } catch (e) {
+            // A blocked cookie must never stop the page translating.
+        }
+    }
+
     async function switchLanguage(code) {
         if (!_locales[code] || code === _locale) return;
 
@@ -218,6 +246,7 @@ const I18n = (() => {
             const nonTranslated = _config.nonTranslatedRoutes || [];
             if (!nonTranslated.includes(route)) {
                 localStorage.setItem(_config.storageKey, code);
+                persistLocaleCookie(code);
                 const prefix = code === _config.defaultLocale ? '' : '/' + code;
                 window.location.href = prefix + (route === '/' ? '/' : route + '/');
                 return;
@@ -227,6 +256,7 @@ const I18n = (() => {
         _locale = code;
         _dir = _locales[code].dir;
         localStorage.setItem(_config.storageKey, _locale);
+        persistLocaleCookie(_locale);
 
         // Load dictionary if not cached
         if (!_dictionaries[_locale]) {
