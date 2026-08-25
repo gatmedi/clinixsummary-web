@@ -499,6 +499,117 @@ Day 2   Ward round. Wound clean, mobilising, bloods normalising.
 <section class="alt">
   <div class="wrap">
     <div class="sec-head">
+      <div class="eyebrow">Prepared for United Doctors Hospital, Jeddah</div>
+      <h2>What it costs, and what has to be true for it to pay</h2>
+      <p class="lede">The arithmetic below is deliberately shown rather than summarised. Every input is
+        yours to change &mdash; the case should survive you disagreeing with our numbers and substituting
+        your own.</p>
+    </div>
+
+    <div class="doc">
+      <div class="doc-bar">Licence <span class="tag">USD 40 per seat / month</span></div>
+      <div class="doc-body tbl-scroll">
+        <table>
+          <thead><tr><th>Seats</th><th>Per month</th><th>Per year</th><th>Per clinician, per working day</th></tr></thead>
+          <tbody>
+            <tr><td class="code">25</td><td>SAR 3,750</td><td>SAR 45,000</td><td class="why">SAR 6.82</td></tr>
+            <tr><td class="code">50</td><td>SAR 7,500</td><td>SAR 90,000</td><td class="why">SAR 6.82</td></tr>
+            <tr><td class="code">100</td><td>SAR 15,000</td><td>SAR 180,000</td><td class="why">SAR 6.82</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="doc-body" style="border-top:1px solid var(--border-subtle);padding-top:14px;font-size:.88rem;color:var(--text-secondary)">
+        USD 40 &times; 3.75 = <strong>SAR 150 per seat per month</strong>, at the riyal's long-standing peg
+        to the dollar. Working day assumes 22 days a month.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-head">
+        <div class="step-num">1</div><h3>The number that matters</h3>
+        <div class="step-note">Cost per patient encounter</div>
+      </div>
+      <div class="callout">
+        A clinician seeing <strong>20 patients a day over 22 days</strong> records about 440 encounters a
+        month. At SAR 150 a seat, the software costs
+        <strong>SAR 0.34 per encounter</strong> &mdash; and each of those encounters produces a note, the
+        letters it generates, the diagnosis and procedure codes, a draft claim and the patient's own
+        summary. That is the figure to hold against everything below.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-head">
+        <div class="step-num">2</div><h3>Break-even, three ways</h3>
+        <div class="step-note">What each seat has to return to cover SAR 150 a month</div>
+      </div>
+      <div class="doc">
+        <div class="doc-bar">Break-even thresholds <span class="tag">Per clinician, per month</span></div>
+        <div class="doc-body tbl-scroll">
+          <table>
+            <thead><tr><th>Route</th><th>Break-even needs</th><th>In context</th></tr></thead>
+            <tbody>
+              <tr><td>Captured billing</td><td class="code">SAR 150</td>
+                  <td class="why">Roughly one otherwise-missed laboratory panel a month, or a fraction of a single
+                      missed imaging study or bed day. Not a change in what you charge &mdash; a change in what
+                      reaches the claim.</td></tr>
+              <tr><td>Avoided denials</td><td class="code">~1 claim</td>
+                  <td class="why">One documentation-related rejection prevented per clinician per month.
+                      Denials also cost staff time to rework, which this line does not count.</td></tr>
+              <tr><td>Time returned</td><td class="code">~35 min</td>
+                  <td class="why">If documentation takes 35 minutes less across a whole month &mdash; about 1.6 minutes
+                      a working day &mdash; the seat has paid for itself. That figure assumes clinician time at
+                      SAR 260 an hour; substitute your own and it moves.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>Any one of the three covers it on its own.</strong> The case does not depend on all three
+        landing, and it does not depend on the largest of them landing. That is the point of showing
+        break-even rather than a projection: the question becomes whether you believe <em>one</em> of these
+        is achievable, not whether you believe a forecast.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-head">
+        <div class="step-num">3</div><h3>Capacity, if the time saving is real</h3>
+        <div class="step-note">The upside, stated separately</div>
+      </div>
+      <div class="doc">
+        <div class="doc-bar">Time returned to clinical work <span class="tag">Illustrative at 50 seats</span></div>
+        <div class="doc-body tbl-scroll">
+          <table>
+            <thead><tr><th>If documentation falls by</th><th>Per clinician / month</th><th>Across 50 seats</th><th>Equivalent to</th></tr></thead>
+            <tbody>
+              <tr><td class="code">10 min/day</td><td>3.7 hours</td><td>183 hours</td><td class="why">~23 additional clinic days a month</td></tr>
+              <tr><td class="code">20 min/day</td><td>7.3 hours</td><td>367 hours</td><td class="why">~46 additional clinic days a month</td></tr>
+              <tr><td class="code">30 min/day</td><td>11.0 hours</td><td>550 hours</td><td class="why">~69 additional clinic days a month</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="callout amber">
+        <strong>Deliberately not converted into money.</strong> Turning clinician hours into riyals means
+        assuming a salary figure and assuming the freed time is refilled with billable work. Both are your
+        assumptions to make, not ours &mdash; and a business case that quietly makes them for you is the
+        kind that falls apart in the second meeting.
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      Encounter volumes, tariffs and denial rates above are placeholders chosen to show the method. Replace
+      them with United Doctors Hospital's own figures and the arithmetic holds or it does not &mdash; that
+      is what it is for. Currency converted at the pegged rate of SAR 3.75 to USD 1.
+    </div>
+  </div>
+</section>
+
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
       <div class="eyebrow">Why it matters at scale</div>
       <h2>What an institution gets from this</h2>
     </div>
