@@ -369,6 +369,110 @@ any cut, blister or area that does not heal.</pre>
 <section>
   <div class="wrap">
     <div class="sec-head">
+      <div class="eyebrow">Automated billing</div>
+      <h2>An inpatient stay, priced from the record</h2>
+      <p class="lede">Outpatient coding is one line. An admission is thirty, spread over several days and
+        several people, and it is where money is actually lost &mdash; not to fraud, but to items nobody
+        wrote down. The same documentation that produces the notes produces the bill.</p>
+    </div>
+
+    <div class="callout">
+      <strong>The codes are yours, not ours.</strong> A hospital uploads the charge catalogue it already
+      bills from &mdash; its own item codes, descriptions and tariffs. Documentation is matched against
+      <em>that</em> catalogue, and mapped on to whichever classification the payer requires: ICD-10-AM and
+      ACHI where those are mandated, CPT elsewhere, and the national scheme where one exists &mdash; in
+      Saudi Arabia, submission through NPHIES. Nothing is re-keyed into a second system.
+    </div>
+
+    <div class="step">
+      <div class="step-head">
+        <div class="step-num">1</div><h3>The admission</h3>
+        <div class="step-note">Three days, four clinicians, one record</div>
+      </div>
+      <div class="doc">
+        <div class="doc-bar">Inpatient episode <span class="tag">Summary</span></div>
+<pre class="doc-body">34-year-old man, admitted via Emergency with 18 hours of right iliac
+fossa pain, guarding and a temperature of 38.4&deg;C.
+
+Day 0   ED assessment. Bloods: WCC 16.2, CRP 88.
+        CT abdomen and pelvis with IV contrast &mdash; appendicitis with
+        localised free fluid, no perforation.
+        Laparoscopic appendicectomy, general anaesthesia, 47 minutes.
+        Findings: acutely inflamed appendix, localised peritonitis.
+        Specimen to histopathology.
+Day 1   Ward round. Apyrexial, tolerating diet. IV co-amoxiclav
+        continued. Analgesia stepped down to oral.
+Day 2   Ward round. Wound clean, mobilising, bloods normalising.
+        Discharged with 5 days oral antibiotics. GP letter issued.
+        Histology: acute suppurative appendicitis. Wound review 7 days.</pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-head">
+        <div class="step-num">2</div><h3>The claim it produces</h3>
+        <div class="step-note">Every line traced to the record</div>
+      </div>
+      <div class="doc">
+        <div class="doc-bar">Draft claim &mdash; episode #A-40118 <span class="tag">For clinician sign-off</span></div>
+        <div class="doc-body tbl-scroll">
+          <table>
+            <thead><tr><th>Charge code</th><th>Item</th><th>Qty</th><th>Evidence in the record</th></tr></thead>
+            <tbody>
+              <tr><td class="code">EMR-0210</td><td>Emergency assessment, high acuity</td><td>1</td>
+                  <td class="why">ED attendance, guarding and pyrexia documented on arrival</td></tr>
+              <tr><td class="code">RAD-3155</td><td>CT abdomen &amp; pelvis, with IV contrast</td><td>1</td>
+                  <td class="why">CT report present in the record</td></tr>
+              <tr><td class="code">THE-0472</td><td>Laparoscopic appendicectomy</td><td>1</td>
+                  <td class="why">Operation note, laparoscopic approach, findings recorded</td></tr>
+              <tr><td class="code">ANA-1100</td><td>General anaesthesia, 30&ndash;60 min band</td><td>1</td>
+                  <td class="why">Anaesthetic time 47 minutes documented</td></tr>
+              <tr><td class="code">BED-0301</td><td>Surgical ward bed day</td><td>2</td>
+                  <td class="why">Ward rounds documented on day 1 and day 2</td></tr>
+              <tr><td class="code">LAB-0044</td><td>Full blood count &amp; CRP</td><td>2</td>
+                  <td class="why">Bloods on admission and on day 2</td></tr>
+              <tr><td class="code">PAT-0820</td><td>Histopathology, surgical specimen</td><td>1</td>
+                  <td class="why">Specimen sent; report returned day 2</td></tr>
+              <tr><td class="code">PHA-2071</td><td>Co-amoxiclav IV, per dose</td><td>5</td>
+                  <td class="why">IV antibiotics from admission to day 2</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="doc-body" style="border-top:1px solid var(--border-subtle);padding-top:15px">
+          <strong>Diagnosis:</strong> Acute appendicitis with localised peritonitis &nbsp;&middot;&nbsp;
+          <strong>Procedure:</strong> Appendicectomy, laparoscopic &nbsp;&middot;&nbsp;
+          <strong>Length of stay:</strong> 2 nights, consistent with the procedure and the documented recovery
+        </div>
+      </div>
+    </div>
+
+    <div class="grid3" style="margin-top:34px">
+      <div class="card"><h3>Nothing quietly dropped</h3>
+        <p>The second set of bloods, the fifth antibiotic dose, the second ward day. These are not disputed
+        items &mdash; they are items nobody got round to entering. Reading them from the record is how they
+        stop being written off.</p></div>
+      <div class="card"><h3>Nothing invented either</h3>
+        <p>A line is proposed only where something in the record supports it, and it arrives with that
+        evidence attached. An item with nothing behind it is never suggested, so review means confirming a
+        short list rather than auditing a long one.</p></div>
+      <div class="card"><h3>A stay that defends itself</h3>
+        <p>The commonest inpatient rejection is a length of stay the notes do not justify. Here the bed days
+        and the clinical entries supporting them come from the same source, so they cannot drift apart.</p></div>
+    </div>
+
+    <div class="callout amber">
+      <strong>It is a draft, and it stays a draft.</strong> The claim is prepared for the responsible
+      clinician or coder to review and sign. Nothing is submitted automatically. The saving is not in
+      removing the human &mdash; it is in giving them a complete, evidenced list to approve instead of a
+      blank form to reconstruct from memory at the end of the week.
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
       <div class="eyebrow">Chosen per encounter</div>
       <h2>Outputs are selected, not assumed</h2>
       <p class="lede">The clinician ticks what this visit needs before recording. Everything else stays
