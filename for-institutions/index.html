@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Unlisted. Not in the nav, not in the sitemap, not in config.json routes.
+     noindex/nofollow so it stays out of search results even if the URL is shared. -->
+<meta name="robots" content="noindex, nofollow">
+<title>ClinixSummary — one consultation, every document</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg-paper:#FCFCF9; --bg-surface:#FFFFFF; --text-primary:#09263a;
+  --text-secondary:#526675; --accent:#3BC5D6; --accent-hover:#2DAAB9;
+  --border-subtle:#E6E6E6; --bg-subtle:#F2F2F0;
+  --font-serif:'Merriweather',Georgia,serif; --font-sans:'Inter',system-ui,sans-serif;
+  --page:1180px;
+  --amber:#B26A00; --green:#0E7C5A;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg-paper);color:var(--text-primary);
+  font-family:var(--font-sans);font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--page);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--font-serif);line-height:1.22;margin:0}
+h1{font-size:clamp(2.1rem,4.6vw,3.4rem);font-weight:900;letter-spacing:-.02em}
+h2{font-size:clamp(1.5rem,2.7vw,2.15rem);font-weight:900;letter-spacing:-.015em}
+h3{font-size:1.12rem;font-weight:700}
+p{margin:0 0 1rem}
+.lede{font-size:1.2rem;color:var(--text-secondary);max-width:64ch}
+.eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent-hover);margin-bottom:.7rem}
+
+/* ---------- hero ---------- */
+header.hero{padding:84px 0 60px;border-bottom:1px solid var(--border-subtle);background:var(--bg-surface)}
+.brand{display:flex;align-items:center;gap:10px;margin-bottom:34px;font-weight:700;letter-spacing:-.01em}
+.brand .dot{width:11px;height:11px;border-radius:50%;background:var(--accent)}
+.hero h1{max-width:19ch;margin-bottom:1.1rem}
+.badge-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+.badge{font-size:.79rem;font-weight:600;padding:6px 13px;border-radius:100px;
+  background:var(--bg-subtle);color:var(--text-secondary);border:1px solid var(--border-subtle)}
+
+/* ---------- sections ---------- */
+section{padding:66px 0;border-bottom:1px solid var(--border-subtle)}
+section.alt{background:var(--bg-surface)}
+.sec-head{max-width:70ch;margin-bottom:38px}
+.sec-head h2{margin-bottom:.6rem}
+
+/* ---------- pipeline ---------- */
+.pipeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:30px}
+.pipe{background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:11px;
+  padding:16px 15px;position:relative}
+.pipe .n{font-size:.7rem;font-weight:700;color:var(--accent-hover);letter-spacing:.1em}
+.pipe .t{font-weight:650;margin-top:5px;font-size:.95rem;line-height:1.35}
+.pipe .s{font-size:.82rem;color:var(--text-secondary);margin-top:5px;line-height:1.45}
+
+/* ---------- step blocks ---------- */
+.step{margin-top:44px}
+.step-head{display:flex;align-items:baseline;gap:13px;margin-bottom:14px;flex-wrap:wrap}
+.step-num{flex:none;width:31px;height:31px;border-radius:50%;background:var(--text-primary);
+  color:#fff;font-size:.85rem;font-weight:700;display:grid;place-items:center;font-family:var(--font-sans)}
+.step-head h3{margin:0}
+.step-note{font-size:.88rem;color:var(--text-secondary);margin-left:auto}
+
+.doc{background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:12px;overflow:hidden}
+.doc-bar{display:flex;align-items:center;gap:9px;padding:11px 17px;background:var(--bg-subtle);
+  border-bottom:1px solid var(--border-subtle);font-size:.8rem;font-weight:650;color:var(--text-secondary)}
+.doc-bar .tag{margin-left:auto;font-weight:600;color:var(--accent-hover)}
+.doc-body{padding:20px 22px;font-size:.93rem}
+pre.doc-body{margin:0;white-space:pre-wrap;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  font-size:.845rem;line-height:1.72;color:var(--text-primary);overflow-x:auto}
+.speech{font-style:italic;color:var(--text-primary);line-height:1.75}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:880px){.two{grid-template-columns:1fr}}
+
+/* ---------- coding table ---------- */
+.tbl-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:540px}
+th,td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--border-subtle);vertical-align:top}
+th{font-size:.73rem;text-transform:uppercase;letter-spacing:.09em;color:var(--text-secondary);font-weight:700}
+td.code{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:600;white-space:nowrap}
+td.why{color:var(--text-secondary);font-size:.86rem}
+
+/* ---------- callout ---------- */
+.callout{border-left:3px solid var(--accent);background:var(--bg-surface);
+  padding:17px 21px;border-radius:0 10px 10px 0;margin-top:22px}
+.callout strong{color:var(--text-primary)}
+.callout.amber{border-left-color:var(--amber)}
+
+/* ---------- benefits ---------- */
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:16px;margin-top:8px}
+.card{background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:12px;padding:22px}
+.card h3{margin-bottom:.45rem}
+.card p{font-size:.92rem;color:var(--text-secondary);margin:0}
+
+/* ---------- modules ---------- */
+.mods{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.mod{background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:9px;
+  padding:9px 15px;font-size:.9rem;font-weight:600}
+.mod span{display:block;font-size:.78rem;font-weight:400;color:var(--text-secondary);margin-top:2px}
+
+footer{padding:48px 0 70px;font-size:.87rem;color:var(--text-secondary)}
+footer a{color:var(--accent-hover)}
+.disclaimer{font-size:.83rem;color:var(--text-secondary);background:var(--bg-subtle);
+  border:1px solid var(--border-subtle);border-radius:9px;padding:13px 17px;margin-top:26px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> ClinixSummary</div>
+    <div class="eyebrow">For hospitals, groups and insurers</div>
+    <h1>One consultation. Every document it should produce.</h1>
+    <p class="lede">A clinician speaks for forty seconds. What comes back is the clinical note in
+      <em>your</em> format, the letters that visit generates, the diagnosis and procedure codes, and the
+      patient's own summary — all from the same recording, all consistent with one another.</p>
+    <div class="badge-row">
+      <span class="badge">UKCA marked · MHRA Class I</span>
+      <span class="badge">Six languages</span>
+      <span class="badge">Your own templates</span>
+      <span class="badge">Web, iOS and Android</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The shape of it</div>
+      <h2>Documentation is not one document</h2>
+      <p class="lede">A single encounter has to become several artefacts, each written for a different
+        reader. Today they are written separately, at different times, and drift apart. Here they are
+        produced together from one source, so they cannot disagree.</p>
+    </div>
+    <div class="pipeline">
+      <div class="pipe"><div class="n">01</div><div class="t">The clinician speaks</div>
+        <div class="s">Ambient or dictated. No template chosen, no forms filled.</div></div>
+      <div class="pipe"><div class="n">02</div><div class="t">The clinical note</div>
+        <div class="s">Structured, in the house format the department already uses.</div></div>
+      <div class="pipe"><div class="n">03</div><div class="t">Correspondence</div>
+        <div class="s">Referral and discharge letters, on your letterhead, in Word.</div></div>
+      <div class="pipe"><div class="n">04</div><div class="t">Coding</div>
+        <div class="s">ICD-10 diagnoses and CPT service codes, with the line that supports each.</div></div>
+      <div class="pipe"><div class="n">05</div><div class="t">The patient's copy</div>
+        <div class="s">The same visit in plain language, for them to take home.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Worked example</div>
+      <h2>A routine diabetes review, end to end</h2>
+      <p class="lede">Nothing below is edited for effect. This is what one recording produces, in the
+        order it produces it.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-head">
+        <div class="step-num">1</div><h3>What the clinician actually said</h3>
+        <div class="step-note">41 seconds · no structure, no headings</div>
+      </div>
+      <div class="doc">
+        <div class="doc-bar">Recording <span class="tag">Verbatim</span></div>
+        <div class="doc-body speech">
+          “Right — Margaret Doyle, sixty-two, back for her three-month diabetes review. She's on metformin
+          one gram twice daily, we added empagliflozin ten milligrams in March. Last HbA1c was sixty-eight,
+          today it's fifty-eight, so that's come down nicely. She's been getting pins and needles in both
+          feet, about two months now, worse at night. No ulcers, pedal pulses present, but monofilament
+          shows reduced sensation both sides to the mid-foot. BP today one forty-two over eighty-eight,
+          she's on ramipril five. Retinal screening was January, no retinopathy. Plan — continue current
+          therapy, start amitriptyline ten at night for the neuropathic symptoms, increase the ramipril to
+          ten, bloods again in three months, refer to podiatry for ongoing foot care, review three months.”
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-head">
+        <div class="step-num">2</div><h3>The clinical note, in the department's own format</h3>
+        <div class="step-note">Their proforma — not ours</div>
+      </div>
+      <div class="doc">
+        <div class="doc-bar">Diabetes Annual Review <span class="tag">Institution template</span></div>
+<pre class="doc-body">PATIENT              Margaret Doyle          DOB 14-Mar-1964
+REVIEW TYPE          3-month follow-up       Seen by  Dr A. Whitfield
+
+GLYCAEMIC CONTROL
+  HbA1c (today)      58 mmol/mol
+  HbA1c (previous)   68 mmol/mol             Direction  Improving
+  Current therapy    Metformin 1 g BD
+                     Empagliflozin 10 mg OD (added March)
+
+CARDIOVASCULAR
+  Blood pressure     142/88 mmHg
+  Antihypertensive   Ramipril 5 mg OD
+
+FOOT ASSESSMENT
+  Symptoms           Bilateral paraesthesia, 2 months, worse at night
+  Ulceration         None
+  Pedal pulses       Present
+  Monofilament       Reduced sensation bilaterally to mid-foot
+  Risk category      Increased — new sensory loss
+
+RETINAL SCREENING    January 2026 — no retinopathy
+
+IMPRESSION
+  Type 2 diabetes, improving glycaemic control.
+  New bilateral peripheral sensory neuropathy.
+  Hypertension above target.
+
+PLAN
+  1. Continue metformin and empagliflozin at current doses
+  2. Commence amitriptyline 10 mg nocte — neuropathic symptoms
+  3. Increase ramipril 5 mg → 10 mg OD
+  4. Repeat HbA1c, U&E and lipids in 3 months
+  5. Refer to podiatry — ongoing foot surveillance
+  6. Clinical review in 3 months</pre>
+      </div>
+      <div class="callout">
+        <strong>The template is theirs.</strong> A department uploads the Word proformas it already uses.
+        The system reads them — including their tables — and writes into that structure. Fields the
+        clinician did not mention are left blank rather than filled with a plausible default, because a
+        blank field is a true record and an invented one is not.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-head">
+        <div class="step-num">3</div><h3>The correspondence that visit generates</h3>
+        <div class="step-note">Downloadable as Word, on your letterhead</div>
+      </div>
+      <div class="two">
+        <div class="doc">
+          <div class="doc-bar">Referral <span class="tag">Podiatry</span></div>
+<pre class="doc-body">Dear Podiatry Team,
+
+RE: Margaret Doyle, DOB 14-Mar-1964
+
+Thank you for accepting this referral for foot
+surveillance.
+
+Mrs Doyle has type 2 diabetes and reports a
+two-month history of bilateral paraesthesia,
+worse at night. On examination today there is
+no ulceration and pedal pulses are present, but
+monofilament testing demonstrates reduced
+sensation bilaterally to the mid-foot. She is
+therefore newly at increased risk.
+
+I have commenced amitriptyline 10 mg nocte for
+symptomatic relief and would be grateful for
+your assessment and ongoing foot care.
+
+Kind regards</pre>
+        </div>
+        <div class="doc">
+          <div class="doc-bar">Update <span class="tag">General Practitioner</span></div>
+<pre class="doc-body">Dear Dr Nakamura,
+
+RE: Margaret Doyle, DOB 14-Mar-1964
+
+I reviewed Mrs Doyle in clinic today.
+
+Her HbA1c has improved from 68 to 58 mmol/mol
+on metformin and empagliflozin, which we will
+continue unchanged.
+
+Two new issues. She has developed bilateral
+peripheral sensory neuropathy — amitriptyline
+10 mg nocte started, and I have referred her to
+podiatry. Her blood pressure remains above
+target at 142/88, so I have increased ramipril
+to 10 mg daily.
+
+Bloods in three months, and I will see her
+again at the same interval.
+
+Kind regards</pre>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>Both letters are written from the finished note, not from the recording.</strong> That is
+        deliberate: it is what makes the letter and the record agree. A letter that contradicts the note it
+        came from is worse than no letter at all.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-head">
+        <div class="step-num">4</div><h3>Coding, with the evidence for each code</h3>
+        <div class="step-note">ICD-10 and CPT</div>
+      </div>
+      <div class="doc">
+        <div class="doc-bar">Coding <span class="tag">Auto-generated</span></div>
+        <div class="doc-body tbl-scroll">
+          <table>
+            <thead><tr><th>Code</th><th>Set</th><th>Description</th><th>Supported by</th></tr></thead>
+            <tbody>
+              <tr><td class="code">E11.42</td><td>ICD-10</td>
+                  <td>Type 2 diabetes mellitus with diabetic polyneuropathy</td>
+                  <td class="why">Bilateral paraesthesia with reduced monofilament sensation, documented on examination</td></tr>
+              <tr><td class="code">I10</td><td>ICD-10</td>
+                  <td>Essential (primary) hypertension</td>
+                  <td class="why">142/88 recorded; ramipril dose increased at this visit</td></tr>
+              <tr><td class="code">99214</td><td>CPT</td>
+                  <td>Office visit, established patient, moderate complexity</td>
+                  <td class="why">Two chronic conditions, one with progression, plus prescription drug management</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>The fourth column is the point.</strong> Most denials are not disputes about the care — they
+        are disputes about whether the record supports the code. Because the codes are derived from the note
+        rather than chosen alongside it, every code arrives with the line that justifies it, and a code with
+        nothing behind it does not get suggested.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-head">
+        <div class="step-num">5</div><h3>What the patient takes home</h3>
+        <div class="step-note">Same visit, plain language</div>
+      </div>
+      <div class="doc">
+        <div class="doc-bar">Patient summary <span class="tag">Reading age ~11</span></div>
+<pre class="doc-body">Your diabetes review — 25 August 2026
+
+How things are going
+Your blood sugar control has improved since your last visit. The
+long-term blood test (HbA1c) has come down from 68 to 58, which is
+good progress. We are keeping your current tablets the same.
+
+Something new we found
+You told us about pins and needles in both feet. Testing today showed
+the nerves in your feet are less sensitive than they should be. This
+is a common complication of diabetes and it is important we look
+after your feet carefully from now on.
+
+What we changed today
+• A new tablet, amitriptyline 10 mg, at night — this helps with the
+  pins and needles
+• Your blood pressure tablet, ramipril, goes up from 5 mg to 10 mg
+• You will be seen by the foot clinic (podiatry)
+
+What happens next
+Blood tests in three months, and an appointment with us at the same
+time. Please check your feet daily and tell us straight away about
+any cut, blister or area that does not heal.</pre>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      Illustrative example. The patient, clinician and encounter are fictional; the coding is shown to
+      demonstrate the output format. Codes produced in service are always reviewed by the clinician before
+      they are used for billing.
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Chosen per encounter</div>
+      <h2>Outputs are selected, not assumed</h2>
+      <p class="lede">The clinician ticks what this visit needs before recording. Everything else stays
+        out of the way.</p>
+    </div>
+    <div class="mods">
+      <div class="mod">ICD-10 coding<span>Diagnosis codes with evidence</span></div>
+      <div class="mod">CPT coding<span>Service and procedure codes</span></div>
+      <div class="mod">Referral letter<span>To the receiving clinician</span></div>
+      <div class="mod">Operative note<span>Procedure record</span></div>
+      <div class="mod">Abbreviated note<span>Short-form summary</span></div>
+      <div class="mod">Follow-up plan<span>What happens next, and when</span></div>
+      <div class="mod">Patient info leaflet<span>The visit in plain language</span></div>
+    </div>
+    <div class="callout">
+      <strong>Institutions add their own.</strong> Upload the letters and proformas a department already
+      uses and they become the options on that department's screen — named the way the department names
+      them. A clinician picks who a letter is for; which version of it to write is worked out from what
+      they dictated.
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why it matters at scale</div>
+      <h2>What an institution gets from this</h2>
+    </div>
+    <div class="grid3">
+      <div class="card"><h3>Comprehensive documentation</h3>
+        <p>Every encounter produces a full record rather than the shortest note that will do at the end of
+        a long clinic. Completeness stops depending on how tired the clinician is.</p></div>
+      <div class="card"><h3>Correct codes, first time</h3>
+        <p>Codes are derived from the documentation and arrive with the line that supports them, so coding
+        and record cannot drift apart.</p></div>
+      <div class="card"><h3>Fewer denials</h3>
+        <p>Most rejections turn on documentation that does not support the claim. When both come from one
+        source, that gap closes before the claim is submitted.</p></div>
+      <div class="card"><h3>Faster claims</h3>
+        <p>Coding is ready when the note is, not days later after a separate review cycle — so submission
+        is not waiting on a second pass.</p></div>
+      <div class="card"><h3>Medicolegal defensibility</h3>
+        <p>Contemporaneous, structured, and consistent across the note, the letters and the codes. The
+        clinician reviews and signs off before anything is used.</p></div>
+      <div class="card"><h3>Patients who understand</h3>
+        <p>Every visit can produce a plain-language summary of what was found, what changed and what
+        happens next — without anyone writing it twice.</p></div>
+      <div class="card"><h3>Correspondence that keeps up</h3>
+        <p>Referral and discharge letters are produced with the note rather than in a backlog, and go out
+        as Word documents on your letterhead.</p></div>
+      <div class="card"><h3>Departmental consistency</h3>
+        <p>A department's own proformas become the house format for everyone in it, so records look the
+        same whoever wrote them.</p></div>
+      <div class="card"><h3>Six languages</h3>
+        <p>Clinicians work in the language they think in; the patient summary can be produced in the
+        language the patient reads.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>ClinixSummary</strong> — UKCA marked, MHRA Class I.
+       <a href="https://clinixsummary.ai/">clinixsummary.ai</a></p>
+    <p style="margin:0">This page is unlisted and intended for discussion in a meeting. It is not linked
+       from the site and is excluded from search engines.</p>
+  </div>
+</footer>
+
+</body>
+</html>
