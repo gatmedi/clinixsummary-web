@@ -170,49 +170,49 @@ function WhitepapersPage() {
             id: 'wp_01', lang: 'AR', icon: 'neurology', date: { y: 2025, m: 11 },
             title: '\u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a \u0648\u0645\u0639\u0627\u0644\u062c\u0629 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0637\u0628\u064a\u0629',
             desc: '\u0627\u0644\u062a\u0639\u0642\u064a\u062f \u0627\u0644\u0635\u0631\u0641\u064a \u0648\u0645\u0639\u0627\u0644\u062c\u0629 \u0627\u0644\u0644\u0647\u062c\u0627\u062a \u0648\u0627\u0644\u062a\u0628\u062f\u064a\u0644 \u0628\u064a\u0646 \u0627\u0644\u0644\u063a\u0627\u062a \u0641\u064a \u0627\u0644\u0628\u064a\u0626\u0627\u062a \u0627\u0644\u0633\u0631\u064a\u0631\u064a\u0629 \u0627\u0644\u062e\u0644\u064a\u062c\u064a\u0629 \u0648\u0627\u0644\u0645\u0635\u0631\u064a\u0629 \u0648\u0627\u0644\u0634\u0627\u0645\u064a\u0629 \u0648\u0627\u0644\u0645\u063a\u0627\u0631\u0628\u064a\u0629.',
-            pdf: 'docs/whitepapers/ar-arabic-nlp-medical-2026.pdf'
+            pdf: '/docs/whitepapers/ar-arabic-nlp-medical-2026.pdf'
         },
         {
             id: 'wp_02', lang: 'FR', icon: 'policy', date: { y: 2025, m: 9 },
             title: 'Cadre de Conformit\u00e9 RGPD pour la Documentation Clinique Automatis\u00e9e',
             desc: 'Analyse approfondie des exigences du RGPD appliqu\u00e9es \u00e0 la documentation clinique par IA \u2014 obligations du responsable de traitement, AIPD, droits des patients et r\u00f4le de la CNIL.',
-            pdf: 'docs/whitepapers/fr-conformite-rgpd-documentation-2026.pdf'
+            pdf: '/docs/whitepapers/fr-conformite-rgpd-documentation-2026.pdf'
         },
         {
             id: 'wp_03', lang: 'EN', icon: 'graphic_eq', date: { y: 2025, m: 8 },
             title: 'Ambient Audio Processing: From Sound to Structured Note',
             desc: 'How raw audio becomes a structured clinical document \u2014 speaker diarisation, medical NER, section classification, and note assembly.',
-            pdf: 'docs/whitepapers/ambient-audio-processing-2025.pdf'
+            pdf: '/docs/whitepapers/ambient-audio-processing-2025.pdf'
         },
         {
             id: 'wp_04', lang: 'EN', icon: 'verified', date: { y: 2025, m: 7 },
             title: 'Quality Management System (QMS): How Clinix QM Works',
             desc: 'The QA review process, feedback incorporation, model versioning, output monitoring, and continuous improvement protocols.',
-            pdf: 'docs/whitepapers/quality-management-system-qms-2025.pdf'
+            pdf: '/docs/whitepapers/quality-management-system-qms-2025.pdf'
         },
         {
             id: 'wp_05', lang: 'EN', icon: 'security', date: { y: 2025, m: 6 },
             title: 'Security & Compliance Technical Specification',
             desc: 'Encryption standards, access controls, audit logging, and HIPAA/GDPR technical implementation details for compliance officers and CTOs.',
-            pdf: 'docs/whitepapers/security-compliance-specification-2025.pdf'
+            pdf: '/docs/whitepapers/security-compliance-specification-2025.pdf'
         },
         {
             id: 'wp_06', lang: 'EN', icon: 'integration_instructions', date: { y: 2025, m: 5 },
             title: 'Integration Framework: Connecting to EHR/EMR Systems',
             desc: 'API specifications, data formats, FHIR compatibility, and deployment models (cloud/hybrid) for seamless EHR integration.',
-            pdf: 'docs/whitepapers/integration-framework-ehr-emr-2025.pdf'
+            pdf: '/docs/whitepapers/integration-framework-ehr-emr-2025.pdf'
         },
         {
             id: 'wp_07', lang: 'EN', icon: 'model_training', date: { y: 2025, m: 4 },
             title: 'Clinical Model Training Methodology',
             desc: 'Data sourcing from de-identified sources, training pipeline, specialty-specific fine-tuning, evaluation metrics, and quality assurance processes.',
-            pdf: 'docs/whitepapers/clinical-model-training-methodology-2025.pdf'
+            pdf: '/docs/whitepapers/clinical-model-training-methodology-2025.pdf'
         },
         {
             id: 'wp_08', lang: 'EN', icon: 'architecture', date: { y: 2025, m: 3 },
             title: 'ClinixSummary Architecture: A Technical Overview',
             desc: 'System architecture, model pipeline, audio processing, NLP layers, and output generation. A comprehensive look at how ClinixSummary transforms clinical audio into structured documentation.',
-            pdf: 'docs/whitepapers/clinixsummary-architecture-overview-2025.pdf'
+            pdf: '/docs/whitepapers/clinixsummary-architecture-overview-2025.pdf'
         }
     ];
 
