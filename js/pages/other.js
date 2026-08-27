@@ -171,7 +171,7 @@ function SecurityPage() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td class="sp-name"><img src="/images/sp-openai.svg" alt="" class="sp-logo">OpenAI</td><td data-i18n="security.sp_openai_purpose">Inference compute — processing of transcripts and clinical context</td><td data-i18n="security.sp_openai_data">De-identified clinical text</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-openai.svg" alt="" class="sp-logo">OpenAI</td><td data-i18n="security.sp_openai_purpose">Transcript and speech inference for clinical context</td><td data-i18n="security.sp_openai_data">De-identified clinical text</td><td>USA</td></tr>
                             <tr><td class="sp-name"><img src="/images/sp-claude.svg" alt="" class="sp-logo">Anthropic (Claude)</td><td data-i18n="security.sp_claude_purpose">Security &amp; live system monitoring</td><td data-i18n="security.sp_claude_data">System logs &amp; operational telemetry (no PHI)</td><td>USA</td></tr>
                             <tr><td class="sp-name"><img src="/images/sp-google.svg" alt="" class="sp-logo">Google (GCP)</td><td data-i18n="security.sp_google_purpose">Cloud infrastructure</td><td data-i18n="security.sp_google_data">Encrypted clinical data</td><td data-i18n="security.sp_multiregion">Multi-region</td></tr>
                             <tr><td class="sp-name"><img src="/images/sp-azure.svg" alt="" class="sp-logo">Microsoft Azure</td><td data-i18n="security.sp_azure_purpose">Cloud infrastructure, AI services & speech-to-text</td><td data-i18n="security.sp_azure_data">Encrypted clinical data</td><td data-i18n="security.sp_multiregion">Multi-region</td></tr>

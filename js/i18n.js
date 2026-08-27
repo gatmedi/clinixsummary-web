@@ -39,7 +39,10 @@ const I18n = (() => {
     }
 
     async function loadJSON(url) {
-        const resp = await fetch(url);
+        // cache: 'no-cache' = revalidate with the server every time (ETag ->
+        // 304 when unchanged). Without it a browser can hold a dictionary for
+        // weeks, and a wording change stays invisible to returning visitors.
+        const resp = await fetch(url, { cache: 'no-cache' });
         if (!resp.ok) throw new Error(`Failed to load ${url}`);
         return resp.json();
     }

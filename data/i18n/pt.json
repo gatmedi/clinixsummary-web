@@ -529,7 +529,7 @@
     "sp_col_purpose": "Finalidade",
     "sp_col_data": "Dados processados",
     "sp_col_location": "Localização",
-    "sp_openai_purpose": "Computação de inferência — processamento de transcrições e contexto clínico",
+    "sp_openai_purpose": "Inferência sobre transcrições e fala para o contexto clínico",
     "sp_openai_data": "Texto clínico desidentificado",
     "sp_claude_purpose": "Segurança e monitoramento do sistema em tempo real",
     "sp_claude_data": "Logs do sistema e telemetria operacional (sem PHI)",
