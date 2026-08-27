@@ -529,7 +529,7 @@
     "sp_col_purpose": "Purpose",
     "sp_col_data": "Data Processed",
     "sp_col_location": "Location",
-    "sp_openai_purpose": "Inference compute — processing of transcripts and clinical context",
+    "sp_openai_purpose": "Transcript and speech inference for clinical context",
     "sp_openai_data": "De-identified clinical text",
     "sp_claude_purpose": "Security & live system monitoring",
     "sp_claude_data": "System logs & operational telemetry (no PHI)",

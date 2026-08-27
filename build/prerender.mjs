@@ -14,8 +14,9 @@
  */
 import { createServer } from 'node:http';
 import { readFile, writeFile, mkdir, stat } from 'node:fs/promises';
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
 
@@ -287,6 +288,32 @@ for (const route of CFG.routes) {
 
 console.log(`Prerendering ${targets.length} pages …`);
 let done = 0;
+
+// -- cache-busting ------------------------------------------------------------
+// nginx serves /js and /css with a 30-day max-age, and pages referenced them
+// without any version - so a fixed template kept serving its OLD behaviour to
+// returning visitors for up to a month. Stamp every same-origin js/css
+// reference with a short content hash: the URL changes exactly when the file
+// does, and the 30-day cache becomes a feature instead of a trap.
+const assetHashes = new Map();
+function hashFor(rel) {
+  if (!assetHashes.has(rel)) {
+    try {
+      const buf = readFileSync(path.join(ROOT, rel));
+      assetHashes.set(rel, createHash('sha1').update(buf).digest('hex').slice(0, 10));
+    } catch (e) {
+      assetHashes.set(rel, null); // missing file: leave the URL alone
+    }
+  }
+  return assetHashes.get(rel);
+}
+function versionAssets(html) {
+  return html.replace(/(src|href)="(\/(?:js|css)\/[^"?#]+\.(?:js|css))"/g, (m, attr, p) => {
+    const h = hashFor(p.slice(1));
+    return h ? attr + '="' + p + '?v=' + h + '"' : m;
+  });
+}
+
 const failures = [];
 const CONCURRENCY = 4;
 const queue = [...targets];
@@ -296,7 +323,7 @@ async function worker() {
     if (!next) return;
     const { route, locale } = next;
     try {
-      const html = await renderOne(browser, base, locale, route);
+      const html = versionAssets(await renderOne(browser, base, locale, route));
       const outDir = path.join(ROOT, ...(locale === CFG.defaultLocale ? [] : [locale]), ...(route === '/' ? [] : route.slice(1).split('/')));
       await mkdir(outDir, { recursive: true });
       await writeFile(path.join(outDir, 'index.html'), html, 'utf8');
