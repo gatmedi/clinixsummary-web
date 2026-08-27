@@ -43,7 +43,7 @@ const HeroSection = `
                 <div class="hero-image-container">
                      <div class="hero-image-wrapper">
                         <img
-                            src="images/hero-clinician.jpg"
+                            src="/images/hero-clinician.jpg"
                             alt="Clinician using tablet for documentation"
                             class="hero-photo"
                         />

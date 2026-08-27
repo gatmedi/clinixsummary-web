@@ -171,15 +171,15 @@ function SecurityPage() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td class="sp-name"><img src="images/sp-openai.svg" alt="" class="sp-logo">OpenAI</td><td data-i18n="security.sp_openai_purpose">LLM inference for clinical note generation</td><td data-i18n="security.sp_openai_data">De-identified clinical text</td><td>USA</td></tr>
-                            <tr><td class="sp-name"><img src="images/sp-google.svg" alt="" class="sp-logo">Google (GCP)</td><td data-i18n="security.sp_google_purpose">Cloud infrastructure</td><td data-i18n="security.sp_google_data">Encrypted clinical data</td><td data-i18n="security.sp_multiregion">Multi-region</td></tr>
-                            <tr><td class="sp-name"><img src="images/sp-azure.svg" alt="" class="sp-logo">Microsoft Azure</td><td data-i18n="security.sp_azure_purpose">Cloud infrastructure, AI services & speech-to-text</td><td data-i18n="security.sp_azure_data">Encrypted clinical data</td><td data-i18n="security.sp_multiregion">Multi-region</td></tr>
-                            <tr><td class="sp-name"><img src="images/sp-stripe.svg" alt="" class="sp-logo">Stripe</td><td data-i18n="security.sp_stripe_purpose">Payment processing</td><td data-i18n="security.sp_stripe_data">Billing data (no PHI)</td><td>USA</td></tr>
-                            <tr><td class="sp-name"><img src="images/sp-postmark.svg" alt="" class="sp-logo">Postmark</td><td data-i18n="security.sp_postmark_purpose">Transactional email delivery</td><td data-i18n="security.sp_postmark_data">Email addresses, notifications (no PHI)</td><td>USA</td></tr>
-                            <tr><td class="sp-name"><img src="images/sp-apple.svg" alt="" class="sp-logo">Apple App Store</td><td data-i18n="security.sp_apple_purpose">iOS app distribution</td><td data-i18n="security.sp_apple_data">App metadata, user account</td><td>USA</td></tr>
-                            <tr><td class="sp-name"><img src="images/sp-gplay.svg" alt="" class="sp-logo">Google Play Store</td><td data-i18n="security.sp_gplay_purpose">Android app distribution</td><td data-i18n="security.sp_gplay_data">App metadata, user account</td><td>USA</td></tr>
-                            <tr><td class="sp-name"><img src="images/sp-sectigo.svg" alt="" class="sp-logo">Sectigo</td><td data-i18n="security.sp_sectigo_purpose">SSL/TLS certificate authority</td><td data-i18n="security.sp_sectigo_data">Domain validation data</td><td>USA / UK</td></tr>
-                            <tr><td class="sp-name"><img src="images/sp-dmarc.svg" alt="" class="sp-logo">DMARC Digests</td><td data-i18n="security.sp_dmarc_purpose">Email authentication monitoring</td><td data-i18n="security.sp_dmarc_data">Domain & email auth reports (no PHI)</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-openai.svg" alt="" class="sp-logo">OpenAI</td><td data-i18n="security.sp_openai_purpose">LLM inference for clinical note generation</td><td data-i18n="security.sp_openai_data">De-identified clinical text</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-google.svg" alt="" class="sp-logo">Google (GCP)</td><td data-i18n="security.sp_google_purpose">Cloud infrastructure</td><td data-i18n="security.sp_google_data">Encrypted clinical data</td><td data-i18n="security.sp_multiregion">Multi-region</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-azure.svg" alt="" class="sp-logo">Microsoft Azure</td><td data-i18n="security.sp_azure_purpose">Cloud infrastructure, AI services & speech-to-text</td><td data-i18n="security.sp_azure_data">Encrypted clinical data</td><td data-i18n="security.sp_multiregion">Multi-region</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-stripe.svg" alt="" class="sp-logo">Stripe</td><td data-i18n="security.sp_stripe_purpose">Payment processing</td><td data-i18n="security.sp_stripe_data">Billing data (no PHI)</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-postmark.svg" alt="" class="sp-logo">Postmark</td><td data-i18n="security.sp_postmark_purpose">Transactional email delivery</td><td data-i18n="security.sp_postmark_data">Email addresses, notifications (no PHI)</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-apple.svg" alt="" class="sp-logo">Apple App Store</td><td data-i18n="security.sp_apple_purpose">iOS app distribution</td><td data-i18n="security.sp_apple_data">App metadata, user account</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-gplay.svg" alt="" class="sp-logo">Google Play Store</td><td data-i18n="security.sp_gplay_purpose">Android app distribution</td><td data-i18n="security.sp_gplay_data">App metadata, user account</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-sectigo.svg" alt="" class="sp-logo">Sectigo</td><td data-i18n="security.sp_sectigo_purpose">SSL/TLS certificate authority</td><td data-i18n="security.sp_sectigo_data">Domain validation data</td><td>USA / UK</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-dmarc.svg" alt="" class="sp-logo">DMARC Digests</td><td data-i18n="security.sp_dmarc_purpose">Email authentication monitoring</td><td data-i18n="security.sp_dmarc_data">Domain & email auth reports (no PHI)</td><td>USA</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -244,21 +244,21 @@ function SecurityPage() {
                             <p data-i18n="security.doc_usage_desc">Acceptable use guidelines and restrictions.</p>
                         </div>
                     </a>
-                    <a href="docs/whitepapers/security-compliance-specification-2025.pdf" target="_blank" class="doc-card">
+                    <a href="/docs/whitepapers/security-compliance-specification-2025.pdf" target="_blank" class="doc-card">
                         <span class="material-symbols-rounded">shield</span>
                         <div class="doc-card-text">
                             <h4 data-i18n="security.doc_sec_wp">Security & Compliance Whitepaper</h4>
                             <p data-i18n="security.doc_sec_wp_desc">Technical security specification (PDF).</p>
                         </div>
                     </a>
-                    <a href="docs/whitepapers/quality-management-system-qms-2025.pdf" target="_blank" class="doc-card">
+                    <a href="/docs/whitepapers/quality-management-system-qms-2025.pdf" target="_blank" class="doc-card">
                         <span class="material-symbols-rounded">verified</span>
                         <div class="doc-card-text">
                             <h4 data-i18n="security.doc_qms_wp">QMS Whitepaper</h4>
                             <p data-i18n="security.doc_qms_wp_desc">Quality management system methodology (PDF).</p>
                         </div>
                     </a>
-                    <a href="docs/whitepapers/clinixsummary-architecture-overview-2025.pdf" target="_blank" class="doc-card">
+                    <a href="/docs/whitepapers/clinixsummary-architecture-overview-2025.pdf" target="_blank" class="doc-card">
                         <span class="material-symbols-rounded">architecture</span>
                         <div class="doc-card-text">
                             <h4 data-i18n="security.doc_arch_wp">Architecture Overview</h4>
@@ -320,7 +320,7 @@ function SecurityPage() {
 
                 <!-- ClinixQM Banner -->
                 <div class="trust-qm-banner" style="margin-top: 60px;">
-                    <img src="images/clinixqm-logo.png" alt="ClinixQM" onerror="this.style.display='none'">
+                    <img src="/images/clinixqm-logo.png" alt="ClinixQM" onerror="this.style.display='none'">
                     <div>
                         <div style="font-weight: 600; font-size: 14px;" data-i18n="security.qm_powered">Quality assured by ClinixQM</div>
                         <a href="https://clinixqm.gacrux.ai/" target="_blank" rel="noopener" style="font-size: 13px;">clinixqm.gacrux.ai <span class="material-symbols-rounded" style="font-size: 14px; vertical-align: middle;">open_in_new</span></a>
