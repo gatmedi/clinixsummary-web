@@ -1,15 +1,8 @@
 {
   "_comment": "Version-controlled crawler policy (SEO/GEO spec CRAWLER-001). robots.txt is GENERATED from this file by build/robots.mjs - never hand-edit robots.txt. Policy owner: GATMEDI. Decided 2026-08-31 by the owner: search/retrieval AND training crawlers are all allowed on public routes (D1: do not block GPTBot/ClaudeBot). Revisit before major releases.",
   "sitemap": "https://clinixsummary.ai/sitemap.xml",
-  "disallow_for_all": [
-    "/login",
-    "/register",
-    "/console",
-    "/v2/",
-    "/admin",
-    "/api/"
-  ],
-  "_disallow_note": "Crawl hygiene only, NOT security: these are the application surfaces, kept out of crawl budgets. The real indexation control is the X-Robots-Tag: noindex header the platform sends on these paths, and the real access control is authentication. Never list a path here as a substitute for either.",
+  "disallow_for_all": [],
+  "_disallow_note": "EMPTY ON PURPOSE (spec ROB-003, fixed 2026-08-31): the application surfaces (/login, /register, /console, /v2/, /admin, /api/) were briefly Disallowed here, but several of those URLs are already in search indexes, and a Disallow stops crawlers from ever fetching them - so they can never observe the X-Robots-Tag: noindex header that de-indexes them. They stay CRAWLABLE until Search Console shows them gone from the index; only then may they return here as crawl hygiene. The real indexation control is the noindex header the platform sends on these paths, and the real access control is authentication. Never list a path here as a substitute for either.",
   "managed_bots": {
     "Googlebot": { "policy": "allow", "purpose": "Google Search index (also feeds Google generative Search)" },
     "Bingbot": { "policy": "allow", "purpose": "Bing index (feeds Copilot grounding)" },

@@ -1,0 +1,23 @@
+name: Crawler policy check
+
+# SEO/GEO spec CRAWLER-005: the deployed robots.txt must be a faithful build
+# artifact of build/crawler-policy.json. This fails any change where the two
+# have drifted (hand-edited robots.txt, or a policy edit without regenerating).
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  robots-check:
+    name: robots.txt matches crawler-policy.json
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node build/robots.mjs --check
