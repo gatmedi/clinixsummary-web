@@ -1,0 +1,24 @@
+{
+  "_comment": "Version-controlled crawler policy (SEO/GEO spec CRAWLER-001). robots.txt is GENERATED from this file by build/robots.mjs - never hand-edit robots.txt. Policy owner: GATMEDI. Decided 2026-08-31 by the owner: search/retrieval AND training crawlers are all allowed on public routes (D1: do not block GPTBot/ClaudeBot). Revisit before major releases.",
+  "sitemap": "https://clinixsummary.ai/sitemap.xml",
+  "disallow_for_all": [
+    "/login",
+    "/register",
+    "/console",
+    "/v2/",
+    "/admin",
+    "/api/"
+  ],
+  "_disallow_note": "Crawl hygiene only, NOT security: these are the application surfaces, kept out of crawl budgets. The real indexation control is the X-Robots-Tag: noindex header the platform sends on these paths, and the real access control is authentication. Never list a path here as a substitute for either.",
+  "managed_bots": {
+    "Googlebot": { "policy": "allow", "purpose": "Google Search index (also feeds Google generative Search)" },
+    "Bingbot": { "policy": "allow", "purpose": "Bing index (feeds Copilot grounding)" },
+    "OAI-SearchBot": { "policy": "allow", "purpose": "ChatGPT Search discovery/citation" },
+    "GPTBot": { "policy": "allow", "purpose": "OpenAI model training - owner decision 2026-08-31: allow" },
+    "Claude-SearchBot": { "policy": "allow", "purpose": "Claude search indexing" },
+    "Claude-User": { "policy": "allow", "purpose": "User-directed Claude retrieval" },
+    "ClaudeBot": { "policy": "allow", "purpose": "Anthropic model training - owner decision 2026-08-31: allow" },
+    "PerplexityBot": { "policy": "allow", "purpose": "Perplexity search indexing" },
+    "Perplexity-User": { "policy": "allow", "purpose": "User-requested Perplexity fetch" }
+  }
+}
