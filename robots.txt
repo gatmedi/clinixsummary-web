@@ -1,3 +1,15 @@
+# GENERATED from build/crawler-policy.json - do not hand-edit.
+# Policy: all managed search/retrieval/training crawlers allowed on public
+# routes (owner decision 2026-08-31). Application surfaces disallowed as
+# crawl hygiene; their real controls are X-Robots-Tag + authentication.
+
+# Allowed (identical treatment via the * group): Googlebot, Bingbot, OAI-SearchBot, GPTBot, Claude-SearchBot, Claude-User, ClaudeBot, PerplexityBot, Perplexity-User
 User-agent: *
-Allow: /
+Disallow: /login
+Disallow: /register
+Disallow: /console
+Disallow: /v2/
+Disallow: /admin
+Disallow: /api/
+
 Sitemap: https://clinixsummary.ai/sitemap.xml
