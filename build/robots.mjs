@@ -59,7 +59,9 @@ const output = lines.join('\n');
 const target = path.join(ROOT, 'robots.txt');
 
 if (process.argv.includes('--check')) {
-    const current = await readFile(target, 'utf8');
+    // Normalize newlines: Windows/autocrlf checkouts materialize the committed
+    // file with CRLF, which is not a policy drift.
+    const current = (await readFile(target, 'utf8')).replace(/\r\n/g, '\n');
     if (current !== output) {
         console.error('robots.txt DOES NOT match crawler-policy.json - run: node build/robots.mjs');
         process.exit(1);

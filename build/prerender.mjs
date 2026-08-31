@@ -22,6 +22,9 @@ import { chromium } from 'playwright';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CFG = JSON.parse(await readFile(path.join(ROOT, 'build', 'config.json'), 'utf8'));
+// Canonical product facts (plan 2.3): the entity graph and offers are built
+// from this file, and verify.mjs fails the build if pages disagree with it.
+const FACTS = JSON.parse(await readFile(path.join(ROOT, 'data', 'facts.json'), 'utf8'));
 
 // The pristine SPA shell. Root index.html is OVERWRITTEN by the generated EN
 // homepage, so the canonical shell source lives in shell.html (committed).
@@ -120,7 +123,7 @@ async function renderOne(browser, base, locale, route) {
   // One settle frame for post-render tweaks (focus handling, banners).
   await page.waitForTimeout(150);
 
-  const html = await page.evaluate(({ cfg, locale, route, bp, aliasTarget, locList }) => {
+  const html = await page.evaluate(({ cfg, facts, locale, route, bp, aliasTarget, locList }) => {
     const ORIGIN = cfg.origin;
     const trail = (r) => (r === '/' ? '/' : r + '/');
     const prefix = (loc) => (loc === cfg.defaultLocale ? '' : '/' + loc);
@@ -138,9 +141,11 @@ async function renderOne(browser, base, locale, route) {
     const canonicalUrl = ORIGIN + prefix(locale) + trail(canonicalRoute);
     setLink('canonical', canonicalUrl);
 
-    // ── hreflang cluster (only for translated routes; aliases none) ──
+    // ── hreflang cluster (only for translated routes; aliases none; noindex
+    // routes none - alternates on a noindexed page contradict the meta tag) ──
     head.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => el.remove());
-    if (!aliasTarget && locList.length > 1) {
+    const routeIsNoindex = (((cfg.routeMeta || {})[route]) || {}).robots === 'noindex';
+    if (!aliasTarget && !routeIsNoindex && locList.length > 1) {
       for (const loc of locList) {
         const link = document.createElement('link');
         link.rel = 'alternate'; link.hreflang = loc === 'pt' ? 'pt' : loc;
@@ -193,48 +198,102 @@ async function renderOne(browser, base, locale, route) {
       el.content = val;
     }
 
-    // ── structured data ──
-    // The shell ships one SoftwareApplication JSON-LD; scope it to the homepage
-    // only (it was duplicated on all ~45 URLs — a diluting signal), and give
-    // every page an Organization node; capability pages additionally get a
-    // localized MedicalWebPage node.
-    const ldBlocks = [...document.querySelectorAll('script[type="application/ld+json"]')];
-    for (const s of ldBlocks) {
+    // ── structured data: one @graph per page with stable entity @ids ──
+    // (plan 2.2 / spec DEVSEO-016..018, SCHEMA-001..005). The Organization is
+    // declared ONCE per page under its stable @id; every other node references
+    // it. The shell's hand-written SoftwareApplication block is absorbed into
+    // the graph on the homepage (enriched from the facts store) and dropped
+    // everywhere else (it used to duplicate across ~45 URLs — a diluting
+    // signal). @ids are permanent anchors: the software @id points at the
+    // category page even while the full node still renders on the homepage
+    // (Phase 3 moves the node; the @id must never change with it).
+    const descEl = head.querySelector('meta[name="description"]');
+    const pageDesc = descEl ? descEl.content : '';
+    let shellSoftware = null;
+    for (const s of [...document.querySelectorAll('script[type="application/ld+json"]')]) {
       try {
         const data = JSON.parse(s.textContent);
-        if (data['@type'] === 'SoftwareApplication' && route !== '/') s.remove();
+        if (data['@type'] === 'SoftwareApplication') { shellSoftware = data; s.remove(); }
       } catch { /* leave unparseable blocks alone */ }
     }
-    const addLd = (obj) => {
-      const s = document.createElement('script');
-      s.type = 'application/ld+json';
-      s.textContent = JSON.stringify(obj);
-      head.appendChild(s);
-    };
-    addLd({
-      '@context': 'https://schema.org',
+
+    const graph = [];
+    graph.push({
       '@type': 'Organization',
-      name: 'GATMEDI',
-      legalName: 'Gacrux Advanced Technologies in Medicine Ltd',
+      '@id': facts.entityIds.organization,
+      name: facts.org.name,
+      legalName: facts.org.legalName,
       url: ORIGIN,
-      logo: ORIGIN + '/images/logo-full.png',
-      brand: { '@type': 'Brand', name: 'ClinixSummary' },
-      sameAs: [
-        'https://apps.apple.com/us/app/clinixsummary/id6740857768',
-        'https://play.google.com/store/apps/details?id=com.gacrux.clinixsummaryai'
-      ]
+      logo: ORIGIN + facts.org.logo,
+      brand: { '@type': 'Brand', name: facts.product.name },
+      sameAs: facts.org.sameAs
     });
+    graph.push({
+      '@type': 'WebSite',
+      '@id': facts.entityIds.website,
+      name: facts.product.name,
+      url: ORIGIN + '/',
+      publisher: { '@id': facts.entityIds.organization },
+      inLanguage: locale
+    });
+
+    if (route === '/' && shellSoftware) {
+      graph.push(Object.assign({}, shellSoftware, {
+        '@context': undefined,
+        '@id': facts.entityIds.software,
+        name: facts.product.name,
+        operatingSystem: facts.product.platforms.join(', '),
+        // Localized: the shell's English description diluted the locale pages.
+        description: pageDesc || shellSoftware.description,
+        inLanguage: locale,
+        url: ORIGIN + '/',
+        offers: {
+          '@type': 'AggregateOffer',
+          priceCurrency: facts.pricing.currency,
+          lowPrice: String(facts.pricing.lowPrice),
+          highPrice: String(facts.pricing.highPrice),
+          offerCount: String(facts.pricing.offerCount)
+        },
+        provider: { '@id': facts.entityIds.organization }
+      }));
+    }
+
     if (cfg.medicalRoutes.includes(route)) {
-      const descEl = head.querySelector('meta[name="description"]');
-      addLd({
-        '@context': 'https://schema.org',
+      graph.push({
         '@type': 'MedicalWebPage',
         name: document.title,
-        description: descEl ? descEl.content : '',
+        description: pageDesc,
         url: canonicalUrl,
-        inLanguage: locale
+        inLanguage: locale,
+        isPartOf: { '@id': facts.entityIds.website },
+        about: { '@id': facts.entityIds.software }
       });
     }
+
+    // BreadcrumbList driven by the manifest's routeMeta.breadcrumb parent
+    // (SCHEMA-005: only real hierarchies). Hub names come from localized
+    // breadcrumbLabels; the leaf name is the page's own localized title with
+    // the " – ClinixSummary" suffix stripped.
+    const meta = (cfg.routeMeta || {})[route] || {};
+    if (meta.breadcrumb) {
+      const labels = cfg.breadcrumbLabels || {};
+      const pick = (key) => (labels[key] || {})[locale] || (labels[key] || {}).en || key;
+      const parent = meta.breadcrumb;
+      const parentLocale = cfg.nonTranslatedRoutes.includes(parent) ? cfg.defaultLocale : locale;
+      // Anchored to seo.js's actual " – ClinixSummary" END suffix (en dash) -
+      // a first-occurrence strip would truncate any future title that happens
+      // to contain a separator + "ClinixSummary" mid-string.
+      const leafName = document.title.replace(/\s*[–—|-]\s*ClinixSummary\s*$/, '').trim() || document.title;
+      graph.push({
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: pick('home'), item: ORIGIN + prefix(locale) + '/' },
+          { '@type': 'ListItem', position: 2, name: pick(parent), item: ORIGIN + prefix(parentLocale) + trail(parent) },
+          { '@type': 'ListItem', position: 3, name: leafName, item: canonicalUrl }
+        ]
+      });
+    }
+
     // FAQPage JSON-LD harvested from the rendered (already localized) DOM —
     // question/answer pairs are marked with data-faq-q / data-faq-a.
     if ((cfg.faqRoutes || []).includes(route)) {
@@ -248,8 +307,21 @@ async function renderOne(browser, base, locale, route) {
         } : null;
       }).filter(Boolean);
       if (faqs.length) {
-        addLd({ '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: locale, mainEntity: faqs });
+        graph.push({ '@type': 'FAQPage', inLanguage: locale, mainEntity: faqs });
       }
+    }
+
+    const ld = document.createElement('script');
+    ld.type = 'application/ld+json';
+    ld.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
+    head.appendChild(ld);
+
+    // Manifest-driven robots (plan 2.1): a route opts into noindex in
+    // routeMeta; nothing uses it today but the machinery is manifest-owned.
+    if (meta.robots === 'noindex') {
+      let robotsEl = head.querySelector('meta[name="robots"]');
+      if (!robotsEl) { robotsEl = document.createElement('meta'); robotsEl.name = 'robots'; head.appendChild(robotsEl); }
+      robotsEl.content = 'noindex, nofollow';
     }
 
     // ── SSG marker (switcher navigates between locale URLs on SSG pages) ──
@@ -267,7 +339,7 @@ async function renderOne(browser, base, locale, route) {
     }
 
     return '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
-  }, { cfg: CFG, locale, route, bp, aliasTarget: CFG.aliasRoutes[route] || null, locList: routeLocales(route) });
+  }, { cfg: CFG, facts: FACTS, locale, route, bp, aliasTarget: CFG.aliasRoutes[route] || null, locList: routeLocales(route) });
 
   await ctx.close();
   return html;

@@ -21,3 +21,10 @@ jobs:
         with:
           node-version: 22
       - run: node build/robots.mjs --check
+      # Honest-lastmod guard: the content-hash store MUST live in git. A fresh
+      # checkout without it would re-stamp all 296 lastmod dates to the build
+      # date - exactly the dishonest signal the store exists to prevent - and
+      # verify.mjs cannot catch that because build:all regenerates the store
+      # right before verify runs.
+      - name: content-hash store is committed
+        run: git ls-files --error-unmatch build/content-hashes.json

@@ -126,5 +126,46 @@
     "/clinixsummary-vs-nabla",
     "/clinixsummary-vs-suki",
     "/clinixsummary-vs-deepscribe"
-  ]
+  ],
+  "_routeMeta_note": "Manifest v2 (plan 2.1 / spec DEVSEO-001). Per-route optional fields: breadcrumb = the PARENT route (only where a real hierarchy exists - spec SCHEMA-005 forbids invented ones), robots = 'noindex' opt-in (prerender injects the meta tag; nothing uses it today but the machinery is manifest-driven now), primaryIntent = documentation for content phases. schemaTypes stays encoded as the existing medicalRoutes/faqRoutes membership lists - same information, single source.",
+  "routeMeta": {
+    "/dental-ai-scribe": { "breadcrumb": "/ai-medical-scribe" },
+    "/psychiatry-ai-scribe": { "breadcrumb": "/ai-medical-scribe" },
+    "/psychology-ai-scribe": { "breadcrumb": "/ai-medical-scribe" },
+    "/allied-health-ai-scribe": { "breadcrumb": "/ai-medical-scribe" },
+    "/physiotherapy-ai-scribe": { "breadcrumb": "/ai-medical-scribe" },
+    "/occupational-therapy-ai-scribe": { "breadcrumb": "/ai-medical-scribe" },
+    "/speech-therapy-ai-scribe": { "breadcrumb": "/ai-medical-scribe" },
+    "/nutrition-ai-scribe": { "breadcrumb": "/ai-medical-scribe" },
+    "/midwifery-ai-scribe": { "breadcrumb": "/ai-medical-scribe" },
+    "/veterinary-ai-scribe": { "breadcrumb": "/ai-medical-scribe" },
+    "/operative-note-ai": { "breadcrumb": "/ai-medical-scribe" },
+    "/medical-billing-ai": { "breadcrumb": "/ai-medical-scribe" },
+    "/patient-leaflet-generator": { "breadcrumb": "/ai-medical-scribe" },
+    "/referral-letter-ai": { "breadcrumb": "/ai-medical-scribe" },
+    "/icd-coding": { "breadcrumb": "/ai-medical-scribe" },
+    "/radiology-ai": { "breadcrumb": "/ai-medical-scribe" },
+    "/dermatology-ai": { "breadcrumb": "/ai-medical-scribe" },
+    "/medical-triage-ai": { "breadcrumb": "/ai-medical-scribe" },
+    "/ai-medical-scribe": { "primaryIntent": "category owner: what an AI medical scribe is + why ClinixSummary" },
+    "/clinixsummary-vs-heidi": { "breadcrumb": "/compare" },
+    "/clinixsummary-vs-freed": { "breadcrumb": "/compare" },
+    "/clinixsummary-vs-nabla": { "breadcrumb": "/compare" },
+    "/clinixsummary-vs-suki": { "breadcrumb": "/compare" },
+    "/clinixsummary-vs-deepscribe": { "breadcrumb": "/compare" }
+  },
+  "_breadcrumbLabels_note": "Localized names for breadcrumb HUB crumbs (Home + the two parents). Leaf crumb names come from each page's own localized title at render time, so only hubs need labels here.",
+  "breadcrumbLabels": {
+    "home": { "en": "Home", "fr": "Accueil", "es": "Inicio", "pt": "Início", "it": "Home", "ar": "الرئيسية" },
+    "/ai-medical-scribe": { "en": "AI Medical Scribe", "fr": "Scribe médical IA", "es": "Escriba médico IA", "pt": "Escriba médico de IA", "it": "Scriba medico IA", "ar": "الكاتب الطبي بالذكاء الاصطناعي" },
+    "/compare": { "en": "Comparisons", "fr": "Comparisons", "es": "Comparisons", "pt": "Comparisons", "it": "Comparisons", "ar": "Comparisons" }
+  },
+  "_staticPages_note": "Hand-built pages OUTSIDE the prerender manifest, now under management (closes the 'noindex is hand-built off-manifest' audit gap): verify.mjs asserts each file exists and carries exactly this robots directive.",
+  "staticPages": {
+    "for-institutions/index.html": "noindex, nofollow",
+    "baa.html": "noindex, nofollow",
+    "dpa.html": "noindex, nofollow"
+  },
+  "_apiContentRoutes_note": "Routes whose body content is baked from the LIVE platform API at prerender time (nondeterministic between builds). The honest-lastmod hash covers only their <head> so CMS/network state at build time cannot fake a content change.",
+  "apiContentRoutes": ["/publications", "/news"]
 }
