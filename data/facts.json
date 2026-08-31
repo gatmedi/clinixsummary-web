@@ -1,0 +1,74 @@
+{
+  "_comment": "Canonical product-fact store (SEO/GEO plan Phase 2.3; spec ENTITY/DEVGEO-008). Single source of truth for facts that appear in structured data and (progressively, Phases 3-5) in page copy. build/prerender.mjs consumes it for the entity graph and offers; build/verify.mjs FAILS the build when the rendered site disagrees with this file. Every fact here is either site-stated (extracted 2026-08-31) or owner-approved (pricing = live Stripe retail plans, decision D5). Change a fact here first; never let a page and this file drift apart.",
+  "reviewedAt": "2026-08-31",
+  "product": {
+    "name": "ClinixSummary",
+    "siteTitle": "ClinixSummary – The AI Medical Scribe Foundation",
+    "category": "AI medical scribe",
+    "url": "https://clinixsummary.ai",
+    "tagline": "Voice in. Meticulous notes out.",
+    "platforms": ["Web", "iOS", "Android"],
+    "noteLanguages": ["en", "es", "pt", "it", "fr", "ar"],
+    "consoleCount": 13,
+    "specialtyClaim": "40+"
+  },
+  "org": {
+    "name": "GATMEDI",
+    "legalName": "Gacrux Advanced Technologies in Medicine Ltd",
+    "country": "GB",
+    "logo": "/images/logo-full.png",
+    "_sameas_note": "App-store listings + the social profiles linked in the site footer. Spec ENTITY alignment: sameAs must list the profiles the site itself claims - nothing else.",
+    "sameAs": [
+      "https://apps.apple.com/us/app/clinixsummary/id6740857768",
+      "https://play.google.com/store/apps/details?id=com.gacrux.clinixsummaryai",
+      "https://www.facebook.com/clinixsummary",
+      "https://x.com/clinixsummary",
+      "https://www.linkedin.com/company/clinixsummary"
+    ]
+  },
+  "pricing": {
+    "_source": "Live Stripe retail plans (owner decision D5, 2026-08-31: these are public). The 2026-08-31 feasibility audit found the site advertised Pioneer at $18.99 while Stripe charges $19.99 - this file carries what is ACTUALLY charged, and verify.mjs keeps the pages honest.",
+    "currency": "USD",
+    "plans": [
+      { "name": "Forever Free", "pricePerMonth": 0, "creditsPerMonth": 25 },
+      { "name": "Pilot 900", "pricePerMonth": 9.99, "creditsPerMonth": 75 },
+      { "name": "Pioneer 1800", "pricePerMonth": 19.99, "creditsPerMonth": 150 },
+      { "name": "Productive 3000", "pricePerMonth": 29.99, "creditsPerMonth": 250 },
+      { "name": "Prolific 6000", "pricePerMonth": 49.99, "creditsPerMonth": 500 }
+    ],
+    "enterprise": "custom",
+    "lowPrice": 0,
+    "highPrice": 49.99,
+    "offerCount": 5,
+    "_offercount_note": "5 = the priced retail plans. The Enterprise card is custom-quoted, not an offer with a price, so it does not count (the old hardcoded shell value said 6).",
+    "retiredPriceStrings": ["$18.99"]
+  },
+  "entityIds": {
+    "organization": "https://clinixsummary.ai/#organization",
+    "website": "https://clinixsummary.ai/#website",
+    "software": "https://clinixsummary.ai/ai-medical-scribe/#software",
+    "_note": "Stable graph anchors (spec DEVSEO-016..018). The software @id is anchored to the category page even while the full node still renders on the homepage - Phase 3 moves the node; the @id never changes."
+  },
+  "compliance": [
+    {
+      "claim": "Registered with the UK MHRA as a Class I medical device, UKCA marked",
+      "reviewedAt": "2026-08-31",
+      "shownOn": ["/security/", "/ai-medical-scribe/", "comparison pages"]
+    },
+    {
+      "claim": "HIPAA and GDPR aligned; PIPEDA/PHIPA and CCPA requirements met",
+      "reviewedAt": "2026-08-31",
+      "shownOn": ["/security/", "/"]
+    },
+    {
+      "claim": "SOC 2 aligned; ISO 27001 aligned (ALIGNED, not certified - the /leaflet badges overstate this; flagged to owner 2026-08-31)",
+      "reviewedAt": "2026-08-31",
+      "shownOn": ["/security/", "/"]
+    },
+    {
+      "claim": "TLS 1.2+ in transit, AES-256 at rest; audio deleted permanently once the note is generated",
+      "reviewedAt": "2026-08-31",
+      "shownOn": ["/security/"]
+    }
+  ]
+}

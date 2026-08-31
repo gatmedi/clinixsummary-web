@@ -307,7 +307,7 @@ const PricingSection = `
 
                 <div class="pricing-card">
                     <div class="plan-name">Pioneer 1800</div>
-                    <div class="plan-price"><span data-i18n="pricing.pioneer_price">$18.99</span> <span data-i18n="pricing.per_month">/mo</span></div>
+                    <div class="plan-price"><span data-i18n="pricing.pioneer_price">$19.99</span> <span data-i18n="pricing.per_month">/mo</span></div>
                     <p class="plan-period" data-i18n="pricing.pioneer_credits">150 credits / month</p>
                     <ul class="plan-features">
                         <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
