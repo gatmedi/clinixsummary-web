@@ -24,8 +24,10 @@ const policy = JSON.parse(await readFile(path.join(ROOT, 'build', 'crawler-polic
 const lines = [];
 lines.push('# GENERATED from build/crawler-policy.json - do not hand-edit.');
 lines.push('# Policy: all managed search/retrieval/training crawlers allowed on public');
-lines.push('# routes (owner decision 2026-08-31). Application surfaces disallowed as');
-lines.push('# crawl hygiene; their real controls are X-Robots-Tag + authentication.');
+lines.push('# routes (owner decision 2026-08-31). Application surfaces are deliberately');
+lines.push('# NOT disallowed (spec ROB-003): they carry X-Robots-Tag noindex, and a');
+lines.push('# Disallow would stop crawlers from ever seeing that header, freezing the');
+lines.push('# already-indexed app URLs in the index. Revisit after de-indexing completes.');
 lines.push('');
 
 const blocked = Object.entries(policy.managed_bots).filter(([, v]) => v.policy === 'block');
@@ -34,7 +36,13 @@ const allowedNames = Object.entries(policy.managed_bots)
 
 lines.push('# Allowed (identical treatment via the * group): ' + allowedNames.join(', '));
 lines.push('User-agent: *');
-for (const d of policy.disallow_for_all) lines.push('Disallow: ' + d);
+if (policy.disallow_for_all.length === 0) {
+    // A UA group must contain at least one rule; an empty Disallow value
+    // is the standard way to say "allow everything".
+    lines.push('Disallow:');
+} else {
+    for (const d of policy.disallow_for_all) lines.push('Disallow: ' + d);
+}
 lines.push('');
 
 for (const [bot, cfg] of blocked) {
