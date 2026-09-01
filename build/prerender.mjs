@@ -228,25 +228,30 @@ async function renderOne(browser, base, locale, route) {
       brand: { '@type': 'Brand', name: facts.product.name },
       sameAs: facts.org.sameAs
     });
-    graph.push({
+    graph.push(Object.assign({
       '@type': 'WebSite',
       '@id': facts.entityIds.website,
       name: facts.product.name,
       url: ORIGIN + '/',
       publisher: { '@id': facts.entityIds.organization },
       inLanguage: locale
-    });
+    // The homepage keeps a REFERENCE to the software entity (Phase 3 moved
+    // the full node to the category page that owns the @id anchor).
+    }, route === '/' ? { about: { '@id': facts.entityIds.software } } : {}));
 
-    if (route === '/' && shellSoftware) {
+    // Full SoftwareApplication on the category-owner page (spec Phase C):
+    // the @id anchor /ai-medical-scribe/#software finally lives where it
+    // points. Seeded from the shell block, enriched from the facts store.
+    if (route === '/ai-medical-scribe' && shellSoftware) {
       graph.push(Object.assign({}, shellSoftware, {
         '@context': undefined,
         '@id': facts.entityIds.software,
         name: facts.product.name,
         operatingSystem: facts.product.platforms.join(', '),
-        // Localized: the shell's English description diluted the locale pages.
+        // Localized: a single English description would dilute locale pages.
         description: pageDesc || shellSoftware.description,
         inLanguage: locale,
-        url: ORIGIN + '/',
+        url: ORIGIN + '/ai-medical-scribe/',
         offers: {
           '@type': 'AggregateOffer',
           priceCurrency: facts.pricing.currency,

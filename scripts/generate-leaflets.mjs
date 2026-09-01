@@ -10,7 +10,7 @@
  *  - Large enough for elderly patients in a waiting room
  *  - Key-facts strip for visual variety
  */
-import { readFileSync, writeFileSync, mkdirSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
@@ -18,7 +18,11 @@ import { execSync } from 'child_process';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 
-const CHROME_PATH = '/root/.cache/ms-playwright/chromium-1194/chrome-linux/chrome';
+// Resolve the repo's own Playwright Chromium (works on any OS/machine).
+// The old hardcoded Linux cache path silently failed everywhere else,
+// leaving stale PDFs while the script still printed its success banner.
+import { chromium } from 'playwright';
+const CHROME_PATH = process.env.CHROME_PATH || chromium.executablePath();
 const OUTPUT_DIR = resolve(ROOT, 'assets/leaflets');
 const TMP_DIR = resolve(ROOT, 'scripts/.tmp-leaflets');
 const LOGO_PATH = resolve(ROOT, 'images/logo-wings.png');
@@ -243,6 +247,7 @@ function buildHTML(dict, code) {
 mkdirSync(OUTPUT_DIR, { recursive: true });
 mkdirSync(TMP_DIR, { recursive: true });
 
+let failures = 0;
 for (const lang of LANGS) {
     const dict = loadDict(lang.code);
     const html = buildHTML(dict, lang.code);
@@ -263,8 +268,13 @@ for (const lang of LANGS) {
         console.log(`  ✓ ${lang.name} (${lang.code})`);
     } catch (err) {
         console.error(`  ✗ ${lang.name} failed:`, err.stderr?.toString()?.slice(0, 200) || err.message);
+        failures++;
     }
 }
 
-execSync(`rm -rf "${TMP_DIR}"`);
+rmSync(TMP_DIR, { recursive: true, force: true });
+if (failures) {
+    console.error(`\n  ${failures} leaflet(s) FAILED - the PDFs on disk are stale.`);
+    process.exit(1);
+}
 console.log('\n  All 6 leaflet PDFs generated → assets/leaflets/');
