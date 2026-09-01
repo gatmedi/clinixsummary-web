@@ -107,7 +107,7 @@ function stripBase(pathname) {
 const routes = {
     // Home
     '/':                   HomePage,
-    '/pricing':            HomePage,
+    '/pricing':            PricingPage,
     '/contact':            ContactPage,
 
     // Meet ClinixSummary
@@ -213,7 +213,10 @@ function router() {
             }
         });
 
-        if (path === '/pricing' || path === '/roi-calculator') {
+        if (path === '/pricing') {
+            initPricingCurrency();
+        }
+        if (path === '/roi-calculator') {
              setTimeout(() => {
                 const sectionId = path.substring(1); // remove leading /
                 const target = document.getElementById(sectionId);
@@ -223,7 +226,7 @@ function router() {
             }, 100);
         }
 
-        if (path === '/' || path === '/pricing' || path === '/roi-calculator') {
+        if (path === '/' || path === '/roi-calculator') {
             setTimeout(calculateSavings, 10);
         }
 

@@ -41,7 +41,18 @@
     "highPrice": 49.99,
     "offerCount": 5,
     "_offercount_note": "5 = the priced retail plans. The Enterprise card is custom-quoted, not an offer with a price, so it does not count (the old hardcoded shell value said 6).",
-    "retiredPriceStrings": ["$18.99"]
+    "retiredPriceStrings": ["$18.99"],
+    "_regional_note": "Owner decisions 2026-09-01: regional pricing in these 11 currencies; EUR and TRY deliberately stay USD (EU until OSS VAT registration). Amounts are FX-derived (rates of 2026-09-01), rounded DOWN to charm points, and are EXACTLY the currency_options set on the live Stripe retail Prices - this table, the platform plan_prices rows and Stripe must never diverge.",
+    "regional": {
+      "ratesDate": "2026-09-01",
+      "symbols": { "USD": "$", "GBP": "£", "CAD": "CA$", "AUD": "A$", "NZD": "NZ$", "INR": "₹", "OMR": "OMR ", "KWD": "KWD ", "QAR": "QAR ", "SAR": "SAR ", "AED": "AED ", "BHD": "BHD " },
+      "plans": {
+        "Pilot 900": { "USD": 9.99, "GBP": 6.99, "CAD": 12.99, "AUD": 12.99, "NZD": 15.99, "INR": 949, "OMR": 3.79, "KWD": 2.99, "QAR": 35.99, "SAR": 36.99, "AED": 35.99, "BHD": 3.69 },
+        "Pioneer 1800": { "USD": 19.99, "GBP": 13.99, "CAD": 26.99, "AUD": 26.99, "NZD": 32.99, "INR": 1899, "OMR": 7.59, "KWD": 6.09, "QAR": 71.99, "SAR": 73.99, "AED": 72.99, "BHD": 7.49 },
+        "Productive 3000": { "USD": 29.99, "GBP": 21.99, "CAD": 40.99, "AUD": 40.99, "NZD": 49.99, "INR": 2849, "OMR": 11.49, "KWD": 9.19, "QAR": 108.99, "SAR": 111.99, "AED": 109.99, "BHD": 11.19 },
+        "Prolific 6000": { "USD": 49.99, "GBP": 35.99, "CAD": 68.99, "AUD": 68.99, "NZD": 83.99, "INR": 4749, "OMR": 19.19, "KWD": 15.39, "QAR": 180.99, "SAR": 186.99, "AED": 182.99, "BHD": 18.79 }
+      }
+    }
   },
   "entityIds": {
     "organization": "https://clinixsummary.ai/#organization",

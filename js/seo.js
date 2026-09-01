@@ -20,7 +20,7 @@ const SEO = (() => {
     // When a key is null the corresponding *Fallback string is used instead.
     const META = {
         '/':                    { titleKey: 'meta.title',                     descKey: 'meta.description' },
-        '/pricing':             { titleKey: 'pricing.title',                  descKey: 'pricing.description' },
+        '/pricing':             { titleKey: 'pricing.seo_title',              descKey: 'pricing.seo_desc', titleFallback: 'Pricing – Free Plan & Transparent Credit Plans', descFallback: 'ClinixSummary pricing: start free with 25 monthly credits, no credit card, then transparent credit-based AI medical scribe plans from $9.99/month. Pay in 12 currencies. Cancel anytime.' },
         '/roi-calculator':      { titleKey: 'calculator.title',               descKey: 'calculator.description' },
         '/contact':             { titleKey: 'contact.title',                  descKey: 'contact.desc' },
 

@@ -296,7 +296,7 @@ const PricingSection = `
 
                 <div class="pricing-card">
                     <div class="plan-name">Pilot 900</div>
-                    <div class="plan-price"><span data-i18n="pricing.pilot_price">$9.99</span> <span data-i18n="pricing.per_month">/mo</span></div>
+                    <div class="plan-price"><span data-i18n="pricing.pilot_price" data-price-plan="Pilot 900">$9.99</span> <span data-i18n="pricing.per_month">/mo</span></div>
                     <p class="plan-period" data-i18n="pricing.pilot_credits">75 credits / month</p>
                     <ul class="plan-features">
                         <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
@@ -308,7 +308,7 @@ const PricingSection = `
 
                 <div class="pricing-card">
                     <div class="plan-name">Pioneer 1800</div>
-                    <div class="plan-price"><span data-i18n="pricing.pioneer_price">$19.99</span> <span data-i18n="pricing.per_month">/mo</span></div>
+                    <div class="plan-price"><span data-i18n="pricing.pioneer_price" data-price-plan="Pioneer 1800">$19.99</span> <span data-i18n="pricing.per_month">/mo</span></div>
                     <p class="plan-period" data-i18n="pricing.pioneer_credits">150 credits / month</p>
                     <ul class="plan-features">
                         <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
@@ -325,7 +325,7 @@ const PricingSection = `
                     <div class="pricing-card featured" style="border-color: #4b88d3;">
                         <div style="margin-bottom: 8px;"><span class="beta-tag" style="background: #E8F5FF; color: #4b88d3; font-weight: 700;" data-i18n="pricing.most_popular">Most Popular</span></div>
                         <div class="plan-name">Productive 3000</div>
-                        <div class="plan-price"><span data-i18n="pricing.productive_price">$29.99</span> <span data-i18n="pricing.per_month">/mo</span></div>
+                        <div class="plan-price"><span data-i18n="pricing.productive_price" data-price-plan="Productive 3000">$29.99</span> <span data-i18n="pricing.per_month">/mo</span></div>
                         <p class="plan-period" data-i18n="pricing.productive_credits">250 credits / month</p>
                         <ul class="plan-features">
                             <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
@@ -337,7 +337,7 @@ const PricingSection = `
 
                     <div class="pricing-card">
                         <div class="plan-name">Prolific 6000</div>
-                        <div class="plan-price"><span data-i18n="pricing.prolific_price">$49.99</span> <span data-i18n="pricing.per_month">/mo</span></div>
+                        <div class="plan-price"><span data-i18n="pricing.prolific_price" data-price-plan="Prolific 6000">$49.99</span> <span data-i18n="pricing.per_month">/mo</span></div>
                         <p class="plan-period" data-i18n="pricing.prolific_credits">500 credits / month</p>
                         <ul class="plan-features">
                             <li data-i18n="pricing.cancel_anytime">Cancel anytime</li>
@@ -394,4 +394,88 @@ function togglePricingPlans() {
 
 function HomePage() {
     return HeroSection + CoreArchitectureSection + CalculatorSection + CapabilitiesSection + OutcomesSection + WhyClinixSection + PricingSection;
+}
+
+
+// ---------------------------------------------------------------------------
+// /pricing/ - dedicated page (SEO/GEO plan Phase 4.1; spec PAGE-PRICE-001..005)
+// Reuses the homepage PricingSection (same i18n keys, USD defaults) and adds
+// a pricing-led header, a regional currency picker, FAQs and contextual
+// links. The picker swaps amounts from data/facts.json (single source, also
+// mirrored in Stripe currency_options and the platform plan_prices rows) -
+// display and charge can never diverge. Deterministic SSG: the picker
+// defaults to USD (no geo guess at build OR runtime), so the crawled HTML
+// always shows USD.
+// ---------------------------------------------------------------------------
+
+function PricingPage() {
+    return `
+        <section class="subpage-container" style="padding-bottom: 0;">
+            <div class="page-width">
+                <div class="subpage-header" style="margin-bottom: 0;">
+                    <span class="kicker" data-i18n="pricing.kicker">Pricing</span>
+                    <h1 class="subpage-title" data-i18n="pricing.h1">ClinixSummary pricing</h1>
+                    <p class="subpage-copy" data-i18n-html="pricing.h1_sub">Start free - no credit card, no sign-up to try the console. Transparent credit-based plans, cancel anytime. The same <a href="/ai-medical-scribe">AI medical scribe</a> on every plan.</p>
+                    <div style="margin-top: 24px; display: inline-flex; align-items: center; gap: 10px;">
+                        <label for="pricing-currency" data-i18n="pricing.currency_label" style="font-weight: 600;">Currency</label>
+                        <select id="pricing-currency" style="padding: 8px 12px; border: 1px solid var(--border-subtle); border-radius: 8px; font-size: 15px;">
+                            <option value="USD" selected>USD $</option>
+                        </select>
+                        <span class="fs-8" data-i18n="pricing.currency_note" style="font-size: 13px; color: var(--text-secondary);">Billed in your selected currency at checkout.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        ${PricingSection}
+        <section class="subpage-container" style="padding-top: 40px;">
+            <div class="page-width">
+                <div>
+                    <h2 class="section-title" data-i18n="pricing.faq_title">Pricing, answered</h2>
+                    <div class="grid-2">
+                    <div class="text-group" style="border-bottom: none;">
+                        <h3 data-i18n="pricing.faq1_q" data-faq-q>How do credits work?</h3>
+                        <p class="section-copy" data-i18n="pricing.faq1_a" data-faq-a>1 credit covers 10 minutes of audio documentation. Every plan renews its credits monthly - the Forever Free plan includes 25 credits a month, and paid plans range from 75 to 500 credits a month.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <h3 data-i18n="pricing.faq2_q" data-faq-q>Is there really a free plan?</h3>
+                        <p class="section-copy" data-i18n="pricing.faq2_a" data-faq-a>Yes. Forever Free gives you full access to the console with 25 credits a month, no credit card required - and you can try the console before creating an account at all.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <h3 data-i18n="pricing.faq3_q" data-faq-q>Can I pay in my local currency?</h3>
+                        <p class="section-copy" data-i18n="pricing.faq3_a" data-faq-a>Yes - alongside US dollars, plans can be billed in British pounds, Canadian, Australian and New Zealand dollars, Indian rupees, and the currencies of the UAE, Saudi Arabia, Qatar, Oman, Kuwait and Bahrain. Pick your currency at checkout.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <h3 data-i18n="pricing.faq4_q" data-faq-q>Can I cancel anytime?</h3>
+                        <p class="section-copy" data-i18n="pricing.faq4_a" data-faq-a>Yes. Plans are monthly and you can cancel anytime from the console; your plan simply runs to the end of the paid period. Enterprise plans with custom volumes and dedicated support are also available.</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function initPricingCurrency() {
+    var picker = document.getElementById('pricing-currency');
+    if (!picker || picker.dataset.ready) { return; }
+    picker.dataset.ready = '1';
+    fetch(BASE_PATH + '/data/facts.json', { cache: 'no-cache' })
+        .then(function (r) { return r.json(); })
+        .then(function (facts) {
+            var regional = facts && facts.pricing && facts.pricing.regional;
+            if (!regional) { return; }
+            var currencies = Object.keys(regional.symbols);
+            picker.innerHTML = currencies.map(function (c) {
+                return '<option value="' + c + '"' + (c === 'USD' ? ' selected' : '') + '>' + c + ' ' + regional.symbols[c].trim() + '</option>';
+            }).join('');
+            picker.addEventListener('change', function () {
+                var ccy = picker.value;
+                document.querySelectorAll('[data-price-plan]').forEach(function (el) {
+                    var plan = regional.plans[el.getAttribute('data-price-plan')];
+                    if (!plan || plan[ccy] === undefined) { return; }
+                    el.textContent = (regional.symbols[ccy] || '') + plan[ccy];
+                });
+            });
+        })
+        .catch(function () { /* picker stays USD-only */ });
 }
