@@ -189,14 +189,14 @@
     "h1": "Precios de ClinixSummary",
     "h1_sub": "Empiece gratis: sin tarjeta de crédito y sin registrarse para probar la consola. Planes transparentes por créditos; cancele cuando quiera. El mismo <a href=\"/ai-medical-scribe\">escriba médico con IA</a> en todos los planes.",
     "currency_label": "Moneda",
-    "currency_note": "Se le factura en la moneda que elija al momento del pago.",
+    "currency_note": "Detectada según su región; puede cambiarla.",
     "faq_title": "Precios: sus dudas, resueltas",
     "faq1_q": "¿Cómo funcionan los créditos?",
     "faq1_a": "1 crédito cubre 10 minutos de documentación en audio. Todos los planes renuevan sus créditos cada mes: el plan Forever Free incluye 25 créditos al mes y los planes de pago van de 75 a 500 créditos al mes.",
     "faq2_q": "¿De verdad hay un plan gratuito?",
     "faq2_a": "Sí. Forever Free le da acceso completo a la consola con 25 créditos al mes, sin tarjeta de crédito; y puede probar la consola incluso antes de crear una cuenta.",
-    "faq3_q": "¿Puedo pagar en mi moneda local?",
-    "faq3_a": "Sí: además de dólares estadounidenses, los planes pueden facturarse en libras esterlinas, dólares canadienses, australianos y neozelandeses, rupias indias y las monedas de Emiratos Árabes Unidos, Arabia Saudita, Qatar, Omán, Kuwait y Baréin. Elija su moneda al momento del pago.",
+    "faq3_q": "¿En qué moneda se me cobrará?",
+    "faq3_a": "En la moneda de su región, detectada automáticamente: los precios se muestran y se cobran en esa moneda al momento del pago (12 monedas compatibles); en el resto del mundo, en dólares estadounidenses.",
     "faq4_q": "¿Puedo cancelar cuando quiera?",
     "faq4_a": "Sí. Los planes son mensuales y puede cancelarlos cuando quiera desde la consola; su plan simplemente sigue activo hasta el final del periodo pagado. También hay planes para empresas, con volúmenes a medida y soporte dedicado.",
     "kicker": "Precios",
@@ -414,6 +414,7 @@
     "compare": "Comparar asistentes con IA"
   },
   "common": {
+    "related_title": "Explore más del escriba médico con IA",
     "contact_us": "Contáctenos",
     "start_trial": "Iniciar prueba gratis",
     "get_started": "Comenzar",
@@ -1303,6 +1304,7 @@
     "cta_label": "Iniciar prueba gratuita"
   },
   "papers": {
+    "read_online": "Leer en línea",
     "pub_kicker": "Publicaciones",
     "pub_title": "Investigación, evidencia y análisis de fondo.",
     "pub_desc": "El diseño de ClinixSummary se apoya en la evidencia y en la experiencia clínica. Explore nuestras publicaciones: de la ciencia del razonamiento contextual a la economía de la documentación con IA a gran escala.",

@@ -32,6 +32,32 @@
     <script>
         window.BASEPATH="/fr";
         const BASE_PATH = "https://clinixsummary.ai";
+        /* First-visit language auto-detection (owner request 2026-09-01):
+           visitors whose browser language is one of the site's locales land on
+           their language automatically. Fires at most ONCE ever (flag), never
+           on locale-prefixed URLs, never once a language choice is stored,
+           never during prerender (local-port guard), and never for search
+           crawlers (they render as en-US, which never triggers a redirect -
+           hreflang discovery is unaffected). EN-only and off-manifest routes
+           are excluded. */
+        (function () {
+            try {
+                if (location.port) return; /* prerender serves from a local port; production has none */
+                if (window.BASEPATH) return;
+                var p = location.pathname;
+                if (/^\/(fr|es|pt|it|ar)(\/|$)/.test(p)) return;
+                if (localStorage.getItem('clinixsummary-lang') || localStorage.getItem('clinixsummary-lang-suggested')) return;
+                var lang = (navigator.language || '').slice(0, 2).toLowerCase();
+                if (!{ fr: 1, es: 1, pt: 1, it: 1, ar: 1 }[lang]) return;
+                if (p.indexOf('.') > -1) return;
+                var skip = ['/case-studies', '/status', '/compare', '/clinixsummary-vs-', '/for-institutions'];
+                for (var i = 0; i < skip.length; i++) { if (p.indexOf(skip[i]) === 0) return; }
+                if (/^\/whitepapers\/./.test(p)) return; /* EN-only article landings; the hub itself is translated */
+                localStorage.setItem('clinixsummary-lang-suggested', '1');
+                localStorage.setItem('clinixsummary-lang', lang);
+                location.replace('/' + lang + (p === '/' ? '/' : p) + location.search + location.hash);
+            } catch (e) { /* never block the page over language detection */ }
+        })();
     </script>
 
     
@@ -507,15 +533,15 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.4/purify.min.js" integrity="sha512-wKv5WSKk06JEAfIhv1IO/2IiPrfbUoFDMGMjkumP7FrTVECN+ISKNFpdYLjDWYLR1fAyVqv02VNVsFDZPqMEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/i18n.js?v=16cc2f5674"></script>
-    <script src="/js/pages/home.js?v=0935f4cfa1"></script>
+    <script src="/js/pages/home.js?v=7ac7ba6ce0"></script>
     <script src="/js/pages/meet.js?v=9a081aafe0"></script>
     <script src="/js/pages/solutions.js?v=5c8d1f44c1"></script>
-    <script src="/js/pages/capabilities.js?v=2f4d8a56da"></script>
-    <script src="/js/pages/learn.js?v=ddfe5e1734"></script>
+    <script src="/js/pages/capabilities.js?v=c3a8da9204"></script>
+    <script src="/js/pages/learn.js?v=7517c3e3ff"></script>
     <script src="/js/pages/other.js?v=15a1efebda"></script>
-    <script src="/js/pages/compare.js?v=7f09611b38"></script>
-    <script src="/js/seo.js?v=b29687effa"></script>
-    <script src="/js/app.js?v=8f90cea91e"></script>
+    <script src="/js/pages/compare.js?v=ab2ba7fd43"></script>
+    <script src="/js/seo.js?v=b2dc564895"></script>
+    <script src="/js/app.js?v=a277ee502c"></script>
 
 
 </body></html>

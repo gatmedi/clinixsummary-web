@@ -299,6 +299,48 @@ async function renderOne(browser, base, locale, route) {
       });
     }
 
+    // Comparison pages carry a machine-readable verification date (plan 4.5):
+    // dateModified = the "facts last verified" month from the facts store.
+    if (route === '/compare' || route.indexOf('/clinixsummary-vs-') === 0) {
+      graph.push({
+        '@type': 'WebPage',
+        name: document.title,
+        url: canonicalUrl,
+        inLanguage: locale,
+        isPartOf: { '@id': facts.entityIds.website },
+        dateModified: facts.comparisons.factsVerifiedISO
+      });
+    }
+
+    // Whitepaper landing pages (Phase 5, spec PAGE-WP/CITE): a ScholarlyArticle
+    // node harvested from the rendered page's data-wp-* markers, authored by
+    // the facts-store authors, with the PDF as the encoded child asset.
+    if (route.indexOf('/whitepapers/') === 0) {
+      const wp = document.querySelector('[data-wp-title]');
+      if (wp) {
+        graph.push({
+          '@type': 'ScholarlyArticle',
+          headline: wp.getAttribute('data-wp-title'),
+          description: pageDesc,
+          inLanguage: wp.getAttribute('data-wp-inlang') || 'en',
+          datePublished: wp.getAttribute('data-wp-date'),
+          author: facts.whitepapers.authors.map(a => ({
+            '@type': 'Person', name: a.name, honorificPrefix: a.honorificPrefix
+          })),
+          publisher: { '@id': facts.entityIds.organization },
+          isPartOf: { '@id': facts.entityIds.website },
+          about: { '@id': facts.entityIds.software },
+          url: canonicalUrl,
+          mainEntityOfPage: canonicalUrl,
+          encoding: {
+            '@type': 'MediaObject',
+            contentUrl: ORIGIN + wp.getAttribute('data-wp-pdf'),
+            encodingFormat: 'application/pdf'
+          }
+        });
+      }
+    }
+
     // FAQPage JSON-LD harvested from the rendered (already localized) DOM —
     // question/answer pairs are marked with data-faq-q / data-faq-a.
     if ((cfg.faqRoutes || []).includes(route)) {

@@ -54,6 +54,18 @@
       }
     }
   },
+  "comparisons": {
+    "factsVerified": "August 2026",
+    "factsVerifiedISO": "2026-08",
+    "_note": "When re-verifying competitor facts, bump COMPARE_VERIFIED in js/pages/compare.js AND this pair together - the prerenderer emits factsVerifiedISO as dateModified on the comparison pages' WebPage node."
+  },
+  "whitepapers": {
+    "_note": "Authors for the whitepaper landing pages (owner-provided 2026-09-01). Emitted as schema.org Person nodes on every /whitepapers/<slug>/ ScholarlyArticle.",
+    "authors": [
+      { "name": "Youssef Ghaly", "honorificPrefix": "Dr" },
+      { "name": "Mostafa Helmy", "honorificPrefix": "Dr" }
+    ]
+  },
   "entityIds": {
     "organization": "https://clinixsummary.ai/#organization",
     "website": "https://clinixsummary.ai/#website",

@@ -421,7 +421,7 @@ function PricingPage() {
                         <select id="pricing-currency" style="padding: 8px 12px; border: 1px solid var(--border-subtle); border-radius: 8px; font-size: 15px;">
                             <option value="USD" selected>USD $</option>
                         </select>
-                        <span class="fs-8" data-i18n="pricing.currency_note" style="font-size: 13px; color: var(--text-secondary);">Billed in your selected currency at checkout.</span>
+                        <span class="fs-8" data-i18n="pricing.currency_note" style="font-size: 13px; color: var(--text-secondary);">Detected from your region — you can change it.</span>
                     </div>
                 </div>
             </div>
@@ -441,8 +441,8 @@ function PricingPage() {
                         <p class="section-copy" data-i18n="pricing.faq2_a" data-faq-a>Yes. Forever Free gives you full access to the console with 25 credits a month, no credit card required - and you can try the console before creating an account at all.</p>
                     </div>
                     <div class="text-group" style="border-bottom: none;">
-                        <h3 data-i18n="pricing.faq3_q" data-faq-q>Can I pay in my local currency?</h3>
-                        <p class="section-copy" data-i18n="pricing.faq3_a" data-faq-a>Yes - alongside US dollars, plans can be billed in British pounds, Canadian, Australian and New Zealand dollars, Indian rupees, and the currencies of the UAE, Saudi Arabia, Qatar, Oman, Kuwait and Bahrain. Pick your currency at checkout.</p>
+                        <h3 data-i18n="pricing.faq3_q" data-faq-q>Which currency will I be billed in?</h3>
+                        <p class="section-copy" data-i18n="pricing.faq3_a" data-faq-a>Your region's currency, detected automatically - prices display and bill in it at checkout across 12 supported currencies; everywhere else you are billed in US dollars.</p>
                     </div>
                     <div class="text-group" style="border-bottom: none;">
                         <h3 data-i18n="pricing.faq4_q" data-faq-q>Can I cancel anytime?</h3>
@@ -455,9 +455,36 @@ function PricingPage() {
     `;
 }
 
+// Region detection (owner request 2026-09-01): the visitor's currency is
+// derived from the browser's own region signal (IANA timezone) - no IP is
+// sent anywhere, no third-party call, GDPR-clean, and crawlers (which render
+// from US/UTC environments) keep seeing deterministic USD. The picker remains
+// as a manual override because any region signal is occasionally wrong.
+function detectRegionalCurrency() {
+    try {
+        if (location.port) { return null; } // prerender serves from a local port; production has none
+        var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || '');
+        if (tz === 'Europe/London') { return 'GBP'; }
+        if (/^Australia\//.test(tz)) { return 'AUD'; }
+        if (tz === 'Pacific/Auckland' || tz === 'Pacific/Chatham') { return 'NZD'; }
+        if (tz === 'Asia/Kolkata' || tz === 'Asia/Calcutta') { return 'INR'; }
+        if (tz === 'Asia/Dubai') { return 'AED'; }
+        if (tz === 'Asia/Riyadh') { return 'SAR'; }
+        if (tz === 'Asia/Qatar') { return 'QAR'; }
+        if (tz === 'Asia/Muscat') { return 'OMR'; }
+        if (tz === 'Asia/Kuwait') { return 'KWD'; }
+        if (tz === 'Asia/Bahrain') { return 'BHD'; }
+        if (/^America\/(Toronto|Montreal|Vancouver|Edmonton|Winnipeg|Halifax|St_Johns|Regina|Moncton|Whitehorse|Yellowknife|Iqaluit|Dawson|Creston|Fort_Nelson|Glace_Bay|Goose_Bay|Inuvik|Rankin_Inlet|Resolute|Thunder_Bay|Cambridge_Bay|Dawson_Creek|Swift_Current|Blanc-Sablon|Atikokan)$/.test(tz)) { return 'CAD'; }
+        return null;
+    } catch (e) { return null; }
+}
+
 function initPricingCurrency() {
     var picker = document.getElementById('pricing-currency');
     if (!picker || picker.dataset.ready) { return; }
+    // Hermetic prerender: skip entirely at build time (local port) so the
+    // baked pages never depend on network state - USD stays the crawled truth.
+    if (location.port) { return; }
     picker.dataset.ready = '1';
     fetch(BASE_PATH + '/data/facts.json', { cache: 'no-cache' })
         .then(function (r) { return r.json(); })
@@ -468,14 +495,19 @@ function initPricingCurrency() {
             picker.innerHTML = currencies.map(function (c) {
                 return '<option value="' + c + '"' + (c === 'USD' ? ' selected' : '') + '>' + c + ' ' + regional.symbols[c].trim() + '</option>';
             }).join('');
-            picker.addEventListener('change', function () {
-                var ccy = picker.value;
+            var applyCurrency = function (ccy) {
                 document.querySelectorAll('[data-price-plan]').forEach(function (el) {
                     var plan = regional.plans[el.getAttribute('data-price-plan')];
                     if (!plan || plan[ccy] === undefined) { return; }
                     el.textContent = (regional.symbols[ccy] || '') + plan[ccy];
                 });
-            });
+            };
+            picker.addEventListener('change', function () { applyCurrency(picker.value); });
+            var detected = detectRegionalCurrency();
+            if (detected && regional.symbols[detected]) {
+                picker.value = detected;
+                applyCurrency(detected);
+            }
         })
-        .catch(function () { /* picker stays USD-only */ });
+        .catch(function () { /* pricing stays USD */ });
 }

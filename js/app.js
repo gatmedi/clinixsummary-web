@@ -108,6 +108,14 @@ const routes = {
     // Home
     '/':                   HomePage,
     '/pricing':            PricingPage,
+    '/whitepapers/arabic-medical-nlp': () => WhitepaperArticlePage('arabic-medical-nlp'),
+    '/whitepapers/gdpr-clinical-documentation': () => WhitepaperArticlePage('gdpr-clinical-documentation'),
+    '/whitepapers/ambient-audio-processing': () => WhitepaperArticlePage('ambient-audio-processing'),
+    '/whitepapers/quality-management-system': () => WhitepaperArticlePage('quality-management-system'),
+    '/whitepapers/security-compliance-specification': () => WhitepaperArticlePage('security-compliance-specification'),
+    '/whitepapers/ehr-integration-framework': () => WhitepaperArticlePage('ehr-integration-framework'),
+    '/whitepapers/clinical-model-training': () => WhitepaperArticlePage('clinical-model-training'),
+    '/whitepapers/architecture-overview': () => WhitepaperArticlePage('architecture-overview'),
     '/contact':            ContactPage,
 
     // Meet ClinixSummary

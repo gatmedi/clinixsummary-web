@@ -189,14 +189,14 @@
     "h1": "ClinixSummary pricing",
     "h1_sub": "Start free - no credit card, no sign-up to try the console. Transparent credit-based plans, cancel anytime. The same <a href=\"/ai-medical-scribe\">AI medical scribe</a> on every plan.",
     "currency_label": "Currency",
-    "currency_note": "Billed in your selected currency at checkout.",
+    "currency_note": "Detected from your region — you can change it.",
     "faq_title": "Pricing, answered",
     "faq1_q": "How do credits work?",
     "faq1_a": "1 credit covers 10 minutes of audio documentation. Every plan renews its credits monthly - the Forever Free plan includes 25 credits a month, and paid plans range from 75 to 500 credits a month.",
     "faq2_q": "Is there really a free plan?",
     "faq2_a": "Yes. Forever Free gives you full access to the console with 25 credits a month, no credit card required - and you can try the console before creating an account at all.",
-    "faq3_q": "Can I pay in my local currency?",
-    "faq3_a": "Yes - alongside US dollars, plans can be billed in British pounds, Canadian, Australian and New Zealand dollars, Indian rupees, and the currencies of the UAE, Saudi Arabia, Qatar, Oman, Kuwait and Bahrain. Pick your currency at checkout.",
+    "faq3_q": "Which currency will I be billed in?",
+    "faq3_a": "Your region's currency, detected automatically - prices display and bill in it at checkout across 12 supported currencies; everywhere else you are billed in US dollars.",
     "faq4_q": "Can I cancel anytime?",
     "faq4_a": "Yes. Plans are monthly and you can cancel anytime from the console; your plan simply runs to the end of the paid period. Enterprise plans with custom volumes and dedicated support are also available.",
     "kicker": "Pricing",
@@ -414,6 +414,7 @@
     "compare": "Compare AI Scribes"
   },
   "common": {
+    "related_title": "Explore the AI medical scribe further",
     "contact_us": "Contact us",
     "start_trial": "Start free trial",
     "get_started": "Get Started",
@@ -1303,6 +1304,7 @@
     "cta_label": "Start Free Trial"
   },
   "papers": {
+    "read_online": "Read online",
     "pub_kicker": "Publications",
     "pub_title": "Research, evidence, and thought leadership.",
     "pub_desc": "ClinixSummary’s design is grounded in evidence and clinical expertise. Explore our publications covering everything from the science of contextual reasoning to the economics of AI documentation at scale.",

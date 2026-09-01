@@ -245,6 +245,34 @@ for (const route of CFG.routes) {
   }
 }
 
+// ── TPL-SPEC-001 duplication guardrail (plan 4.4) — WARNING ONLY ────────
+// Specialty pages must differentiate; identical body paragraphs across two
+// specialty pages are the doorway-page smell the spec warns about. Warns
+// (does not fail) so genuine shared boilerplate can be reviewed, not blocked.
+{
+    const paraOwner = new Map();
+    const dupes = [];
+    for (const route of CFG.medicalRoutes) {
+        const fp = fileFor(CFG.defaultLocale, route);
+        if (!existsSync(fp)) continue;
+        const html = await readFile(fp, 'utf8');
+        const main = (html.match(/<main id="app-content"[^>]*>([\s\S]*?)<\/main>/) || [])[1] || '';
+        for (const [, text] of main.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)) {
+            const norm = text.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+            if (norm.length < 80) continue;
+            if (paraOwner.has(norm) && paraOwner.get(norm) !== route) {
+                dupes.push(`"${norm.slice(0, 70)}..." on ${paraOwner.get(norm)} AND ${route}`);
+            } else {
+                paraOwner.set(norm, route);
+            }
+        }
+    }
+    if (dupes.length) {
+        console.warn(`WARN TPL-SPEC-001: ${dupes.length} identical paragraph(s) across specialty pages:`);
+        for (const d of dupes.slice(0, 10)) console.warn('  ~ ' + d);
+    }
+}
+
 // ── hand-built static pages under management (manifest v2) ──────────────
 for (const [rel, wantRobots] of Object.entries(CFG.staticPages || {})) {
   const fp = path.join(ROOT, ...rel.split('/'));
