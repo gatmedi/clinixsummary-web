@@ -22,7 +22,7 @@ const HeroSection = `
                             <span class="stat-label" data-i18n="hero.stat_time_label">Saved daily</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-value" data-i18n="hero.stat_burnout">74%</span>
+                            <span class="stat-value" data-i18n="hero.stat_burnout">25%</span>
                             <span class="stat-label" data-i18n="hero.stat_burnout_label">Less burnout</span>
                         </div>
                         <div class="stat-item">
