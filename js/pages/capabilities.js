@@ -74,68 +74,182 @@ function createCapabilityPage(config) {
 // 1. Medical Specialties
 // ---------------------------------------------------------------------------
 
+// Category-owner page (SEO/GEO plan Phase 3; spec PAGE-AMS-001..005).
+// Custom layout, not the helper: the spec's H2 architecture is
+// what-is / how-it-works / outputs / specialty coverage (ONE module) /
+// languages / security / integrations / pricing / comparisons / FAQ,
+// with contextual links throughout (§9.2). The 40+ specialties claim is
+// substantiated here: 13 dedicated consoles PLUS the Medical console's
+// free-text specialty field (you type your discipline), which is why
+// coverage is not limited to a preset list.
 function CapMedicalPage() {
-    return createCapabilityPage({
-        ns: 'cap_medical',
-        kicker: 'Medical Specialties',
-        title: 'All Medical Specialties. One Platform.',
-        description:
-            'ClinixSummary supports 40+ specialties \u2014 from primary care to cardiology, neurology, orthopaedics, dermatology, paediatrics and beyond. Every module is fine\u2011tuned for the terminology, workflows and documentation standards that define your discipline.',
-        features: [
-            {
-                icon: 'tune',
-                title: 'Specialty-Tuned Models',
-                desc: 'Each specialty runs on a dedicated model layer trained on de\u2011identified clinical data specific to that discipline \u2014 ensuring the right terminology, structure and clinical nuance every time.',
-            },
-            {
-                icon: 'description',
-                title: 'Structured SOAP Notes',
-                desc: 'Automatically generate fully structured SOAP notes that match the conventions of your specialty. Subjective, Objective, Assessment and Plan sections are populated with clinically relevant detail.',
-            },
-            {
-                icon: 'medical_information',
-                title: 'ICD-10 & CPT Coding',
-                desc: 'Our AI maps clinical narratives to the most accurate ICD\u201110 and CPT codes, reducing under\u2011coding and claim denials while supporting cleaner revenue cycles.',
-            },
-            {
-                icon: 'output',
-                title: 'Multi-format Output',
-                desc: 'Export documentation as SOAP notes, referral letters, patient instructions or custom templates \u2014 formatted and ready for your EHR, fax or patient portal.',
-            },
-        ],
-        extraContent: `
-            <div class="subpage-header" style="margin-top: 20px;">
-                <span class="kicker" data-i18n="cap_medical.extra_kicker">Breadth & Depth</span>
-                <h3 class="section-title" data-i18n="cap_medical.extra_title">One engine. Dozens of specialties.</h3>
-                <p class="section-copy" data-i18n="cap_medical.extra_desc">Whether you practise family medicine, cardiology, gastroenterology, pulmonology, endocrinology, rheumatology, nephrology, haematology, oncology, ENT, urology, ophthalmology, emergency medicine, or any other discipline \u2014 ClinixSummary adapts to your clinical language and documentation requirements.</p>
+    const consoleLinks = [
+        ['/dental-ai-scribe', 'dropdown.dental', 'Dental'],
+        ['/psychiatry-ai-scribe', 'dropdown.psychiatry', 'Psychiatry'],
+        ['/psychology-ai-scribe', 'dropdown.psychology', 'Psychology'],
+        ['/physiotherapy-ai-scribe', 'dropdown.physio', 'Physiotherapy'],
+        ['/occupational-therapy-ai-scribe', 'dropdown.ot', 'Occupational Therapy'],
+        ['/speech-therapy-ai-scribe', 'dropdown.slt', 'Speech & Language Therapy'],
+        ['/nutrition-ai-scribe', 'dropdown.nutrition', 'Nutritional Therapy'],
+        ['/midwifery-ai-scribe', 'dropdown.midwifery', 'Midwifery'],
+        ['/veterinary-ai-scribe', 'dropdown.vet_medicine', 'Veterinary'],
+        ['/radiology-ai', 'dropdown.radiology_assist', 'Radiology Assist'],
+        ['/dermatology-ai', 'dropdown.dermatology_assist', 'Dermatology Assist'],
+        ['/medical-triage-ai', 'dropdown.triage_assist', 'Triage Assist'],
+        ['/allied-health-ai-scribe', 'dropdown.allied_health', 'Allied Health'],
+    ].map(([href, key, label]) =>
+        `<a href="${href}" class="dropdown-item" style="border: 1px solid var(--border-subtle); border-radius: 8px;"><span class="dropdown-title" data-i18n="${key}">${label}</span></a>`
+    ).join('');
+
+    return `
+        <section class="subpage-container">
+            <div class="page-width">
+                <div class="subpage-header">
+                    <span class="kicker" data-i18n="cap_medical.kicker">AI Medical Scribe</span>
+                    <h1 class="subpage-title" data-i18n="cap_medical.title">AI Medical Scribe for Doctors and Healthcare Professionals</h1>
+                    <p class="subpage-copy" data-i18n="cap_medical.description">ClinixSummary is an AI medical scribe: you speak — dictating or recording the consultation — and it writes the structured clinical note for you: history, examination, impression and plan. Every note is presented for your review and approval before it enters the record. Voice in. Meticulous notes out.</p>
+                </div>
+
+                <!-- What is an AI medical scribe -->
+                <div class="grid-2" style="margin-bottom: 60px;">
+                    <div class="text-group" style="border-bottom: none;">
+                        <h2 class="section-title" data-i18n="cap_medical.whatis_title">What is an AI medical scribe?</h2>
+                        <p class="section-copy" data-i18n-html="cap_medical.whatis_desc">An AI medical scribe listens to a consultation or dictation and produces the clinical documentation a clinician would otherwise type — in seconds, without a human scribe in the room. It replaces the typing, never the judgement: the clinician reviews and approves every note. See <a href="/compare">how ClinixSummary compares</a> to other AI scribes.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <h2 class="section-title" data-i18n="cap_medical.who_title">Built for the way clinicians work</h2>
+                        <p class="section-copy" data-i18n-html="cap_medical.who_desc">Doctors, dentists, therapists, midwives and veterinary teams use ClinixSummary on the web console or the <a href="/clinicians">iOS and Android apps</a> — in clinic, on ward rounds or on home visits. Notes arrive structured for your workflow, with <a href="/integrations">flexible exports into EHR and EMR systems</a>.</p>
+                    </div>
+                </div>
+
+                <!-- How it works -->
+                <h2 class="section-title" data-i18n="cap_medical.how_title">How it works</h2>
+                <div class="grid-4" style="margin-bottom: 60px;">
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">mic</div>
+                        <h3 data-i18n="cap_medical.how1_title">1. Speak</h3>
+                        <p data-i18n="cap_medical.how1_desc">Dictate after the visit or record the consultation as it happens — with ambient capture that lets you pause and resume around interruptions.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">neurology</div>
+                        <h3 data-i18n="cap_medical.how2_title">2. AI writes the note</h3>
+                        <p data-i18n="cap_medical.how2_desc">Specialty-tuned models transcribe the audio and structure it into the sections your discipline expects, using the right clinical terminology.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">rate_review</div>
+                        <h3 data-i18n="cap_medical.how3_title">3. Review &amp; approve</h3>
+                        <p data-i18n="cap_medical.how3_desc">The note is presented for your review. Edit anything, approve it, and it is ready for the record — the clinician stays in control of every word.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">output</div>
+                        <h3 data-i18n="cap_medical.how4_title">4. Export</h3>
+                        <p data-i18n="cap_medical.how4_desc">Copy or export the note and its extras — referral letters, patient leaflets, coding suggestions — into your EHR, fax or patient portal.</p>
+                    </div>
+                </div>
+
+                <!-- Outputs -->
+                <h2 class="section-title" data-i18n="cap_medical.out_title">What it writes for you</h2>
+                <div class="grid-3" style="margin-bottom: 60px;">
+                    <div class="text-group" style="border-bottom: none;">
+                        <span class="material-symbols-rounded list-item-icon">description</span>
+                        <h3 data-i18n="cap_medical.out1_title">Structured clinical notes</h3>
+                        <p class="section-copy" data-i18n="cap_medical.out1_desc">SOAP and specialty-specific formats with history, examination, impression and plan — written to the conventions of your discipline.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <span class="material-symbols-rounded list-item-icon">send</span>
+                        <h3 data-i18n="cap_medical.out2_title">Referral letters</h3>
+                        <p class="section-copy" data-i18n-html="cap_medical.out2_desc">Structured, specialty-aware <a href="/referral-letter-ai">referral letters</a> generated from the encounter — no separate dictation.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <span class="material-symbols-rounded list-item-icon">contact_page</span>
+                        <h3 data-i18n="cap_medical.out3_title">Patient leaflets</h3>
+                        <p class="section-copy" data-i18n-html="cap_medical.out3_desc">Plain-language <a href="/patient-leaflet-generator">patient information leaflets</a> so patients leave knowing their diagnosis, plan and next steps.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <span class="material-symbols-rounded list-item-icon">medical_information</span>
+                        <h3 data-i18n="cap_medical.out4_title">Coding suggestions</h3>
+                        <p class="section-copy" data-i18n-html="cap_medical.out4_desc"><a href="/icd-coding">ICD-10</a> and <a href="/medical-billing-ai">billing code</a> suggestions from the clinical narrative — always for clinician review before submission.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <span class="material-symbols-rounded list-item-icon">surgical</span>
+                        <h3 data-i18n="cap_medical.out5_title">Operative notes</h3>
+                        <p class="section-copy" data-i18n-html="cap_medical.out5_desc">Dictated surgical narration becomes a structured <a href="/operative-note-ai">operative report</a> with findings, steps and post-operative orders.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <span class="material-symbols-rounded list-item-icon">translate</span>
+                        <h3 data-i18n="cap_medical.out6_title">Six note languages</h3>
+                        <p class="section-copy" data-i18n-html="cap_medical.out6_desc">Notes in English, Spanish, Portuguese, Italian, French and Arabic — with <a href="/multilingual-ai-scribe">automatic language detection</a> when patients switch mid-consultation.</p>
+                    </div>
+                </div>
+
+                <!-- Specialty coverage: ONE module -->
+                <div class="subpage-header" style="margin-bottom: 32px;">
+                    <span class="kicker" data-i18n="cap_medical.spec_kicker">Specialty Coverage</span>
+                    <h2 class="section-title" data-i18n="cap_medical.spec_title">40+ specialties. Thirteen dedicated consoles. One scribe.</h2>
+                    <p class="section-copy" data-i18n="cap_medical.spec_desc">Thirteen dedicated consoles cover general medicine, dental, psychiatry, psychology, physiotherapy, occupational therapy, speech and language therapy, midwifery, nutrition, veterinary medicine, radiology, dermatology and triage. And the Medical console is not limited to a list: you type your specialty — cardiology, nephrology, paediatrics, any discipline — and the documentation adapts to its terminology and conventions. That is how one scribe serves 40+ specialties.</p>
+                </div>
+                <div class="grid-4" style="margin-bottom: 60px;">
+                    ${consoleLinks}
+                </div>
+
+                <!-- Security / Pricing / Comparisons / Evidence -->
+                <div class="grid-4" style="margin-bottom: 60px;">
+                    <div class="text-group" style="border-bottom: none;">
+                        <span class="material-symbols-rounded list-item-icon">verified_user</span>
+                        <h2 class="section-title" style="font-size: 22px;" data-i18n="cap_medical.sec_title">Security &amp; compliance</h2>
+                        <p class="section-copy" data-i18n-html="cap_medical.sec_desc">Registered with the MHRA as a Class I medical device (UKCA marked). HIPAA and GDPR aligned, TLS 1.2+ and AES-256 encryption, and audio is permanently deleted once your note is generated. Visit the <a href="/security">Trust Center</a>.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <span class="material-symbols-rounded list-item-icon">savings</span>
+                        <h2 class="section-title" style="font-size: 22px;" data-i18n="cap_medical.price_title">Simple pricing</h2>
+                        <p class="section-copy" data-i18n-html="cap_medical.price_desc">Start free — no credit card, no sign-up to try the console — with transparent credit-based plans from $9.99/month. See <a href="/pricing">plans and pricing</a>.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <span class="material-symbols-rounded list-item-icon">compare_arrows</span>
+                        <h2 class="section-title" style="font-size: 22px;" data-i18n="cap_medical.comp_title">How it compares</h2>
+                        <p class="section-copy" data-i18n-html="cap_medical.comp_desc">Weigh ClinixSummary against <a href="/clinixsummary-vs-heidi">Heidi</a>, <a href="/clinixsummary-vs-freed">Freed</a>, <a href="/clinixsummary-vs-nabla">Nabla</a>, <a href="/clinixsummary-vs-suki">Suki</a> and <a href="/clinixsummary-vs-deepscribe">DeepScribe</a> — fact-checked <a href="/compare">comparisons</a> with sources.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <span class="material-symbols-rounded list-item-icon">science</span>
+                        <h2 class="section-title" style="font-size: 22px;" data-i18n="cap_medical.ev_title">The evidence</h2>
+                        <p class="section-copy" data-i18n-html="cap_medical.ev_desc">Independent studies and our own <a href="/whitepapers">research whitepapers</a> on AI scribes in clinical practice — plus <a href="/publications">publications</a> and press coverage.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div>
+                    <h2 class="section-title" data-i18n="cap_medical.faq_title">The AI medical scribe, answered</h2>
+                    <div class="grid-2">
+                    <div class="text-group" style="border-bottom: none;">
+                        <h3 data-i18n="cap_medical.faq1_q" data-faq-q>What is an AI medical scribe?</h3>
+                        <p class="section-copy" data-i18n="cap_medical.faq1_a" data-faq-a>An AI medical scribe listens to your dictation or consultation and writes the clinical note for you — history, examination, impression and plan — so you document in seconds instead of minutes, without a human scribe in the room.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <h3 data-i18n="cap_medical.faq2_q" data-faq-q>Is ClinixSummary secure and compliant?</h3>
+                        <p class="section-copy" data-i18n="cap_medical.faq2_a" data-faq-a>Yes. ClinixSummary is HIPAA and GDPR aligned, audio is processed ephemerally, and the product is registered with the MHRA in the United Kingdom as a Class I medical device (UKCA marked).</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <h3 data-i18n="cap_medical.faq3_q" data-faq-q>Which specialties does it support?</h3>
+                        <p class="section-copy" data-i18n="cap_medical.faq3_a" data-faq-a>Thirteen dedicated consoles cover general medicine, dental, psychiatry, psychology, physiotherapy, occupational therapy, speech and language therapy, midwifery, nutrition, veterinary medicine, radiology, dermatology and triage — and in the Medical console you simply type your specialty, so any medical discipline is supported, with 40+ specialties in active use.</p>
+                    </div>
+                    <div class="text-group" style="border-bottom: none;">
+                        <h3 data-i18n="cap_medical.faq4_q" data-faq-q>Which languages does it work in?</h3>
+                        <p class="section-copy" data-i18n="cap_medical.faq4_a" data-faq-a>Notes can be generated in English, Spanish, Portuguese, Italian, French and Arabic — including a bilingual English–Arabic mode where the patient leaflet is produced in both languages.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
+                    <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="cap_medical.cta_title">Try the AI medical scribe on your next consultation.</h2>
+                    <div class="nav-actions" style="justify-content: center;">
+                        <a href="${BASE_PATH}/console" target="_blank" rel="noopener" class="btn-primary" style="background: var(--accent); color: var(--text-primary);" data-i18n="cap_medical.cta_label">Start Free Trial</a>
+                        <a href="/contact" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="common.contact_sales">Contact Sales</a>
+                    </div>
+                </div>
             </div>
-        `,
-        extraContent: `
-            <div>
-                <h2 class="section-title" data-i18n="cap_medical.faq_title">The AI medical scribe, answered</h2>
-                <div class="grid-2">
-                <div class="text-group" style="border-bottom: none;">
-                    <h3 data-i18n="cap_medical.faq1_q" data-faq-q>What is an AI medical scribe?</h3>
-                    <p class="section-copy" data-i18n="cap_medical.faq1_a" data-faq-a>An AI medical scribe listens to your dictation or consultation and writes the clinical note for you — history, examination, impression and plan — so you document in seconds instead of minutes, without a human scribe in the room.</p>
-                </div>
-                <div class="text-group" style="border-bottom: none;">
-                    <h3 data-i18n="cap_medical.faq2_q" data-faq-q>Is ClinixSummary secure and compliant?</h3>
-                    <p class="section-copy" data-i18n="cap_medical.faq2_a" data-faq-a>Yes. ClinixSummary is HIPAA and GDPR aligned, audio is processed ephemerally, and the product is registered with the MHRA in the United Kingdom as a Class I medical device (UKCA marked).</p>
-                </div>
-                <div class="text-group" style="border-bottom: none;">
-                    <h3 data-i18n="cap_medical.faq3_q" data-faq-q>Which specialties does it support?</h3>
-                    <p class="section-copy" data-i18n="cap_medical.faq3_a" data-faq-a>Thirteen dedicated consoles cover general medicine, dental, psychiatry, psychology, physiotherapy, occupational therapy, speech and language therapy, midwifery, nutrition, veterinary medicine, radiology, dermatology and triage.</p>
-                </div>
-                <div class="text-group" style="border-bottom: none;">
-                    <h3 data-i18n="cap_medical.faq4_q" data-faq-q>Which languages does it work in?</h3>
-                    <p class="section-copy" data-i18n="cap_medical.faq4_a" data-faq-a>Notes can be generated in English, Spanish, Portuguese, Italian, French and Arabic — including a bilingual English–Arabic mode where the patient leaflet is produced in both languages.</p>
-                </div>
-                </div>
-            </div>`,
-        ctaTitle: 'Start documenting smarter across every specialty.',
-        ctaToast: 'Starting free trial for medical specialties.',
-        ctaLabel: 'Start Free Trial',
-    });
+        </section>
+    `;
 }
 
 // ---------------------------------------------------------------------------

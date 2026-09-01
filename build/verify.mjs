@@ -113,10 +113,12 @@ for (const route of CFG.routes) {
     const h1Count = (appContent.match(/<h1[\s>]/g) || []).length;
     if (h1Count !== 1) problems.push(`${label}: ${h1Count} <h1> in #app-content (want exactly 1)`);
 
-    // 9. structured data scoping
+    // 9. structured data scoping - the full SoftwareApplication node lives on
+    // the category-owner page (Phase 3); everywhere else references its @id.
+    const SW_HOME = '/ai-medical-scribe';
     const swAppCount = (html.match(/"@type":\s*"SoftwareApplication"/g) || []).length;
-    if (route === '/' && swAppCount !== 1) problems.push(`${label}: SoftwareApplication JSON-LD count ${swAppCount} on homepage (want 1)`);
-    if (route !== '/' && swAppCount !== 0) problems.push(`${label}: SoftwareApplication JSON-LD leaked onto non-home page`);
+    if (route === SW_HOME && swAppCount !== 1) problems.push(`${label}: SoftwareApplication JSON-LD count ${swAppCount} on the category page (want 1)`);
+    if (route !== SW_HOME && swAppCount !== 0) problems.push(`${label}: SoftwareApplication JSON-LD leaked off the category page`);
     if (!/"@type":\s*"Organization"/.test(html)) problems.push(`${label}: missing Organization JSON-LD`);
     const isMedical = CFG.medicalRoutes.includes(route);
     const hasMedical = /"@type":\s*"MedicalWebPage"/.test(html);
@@ -172,8 +174,8 @@ for (const route of CFG.routes) {
         if ((sites[0].publisher || {})['@id'] !== FACTS.entityIds.organization) problems.push(`${label}: WebSite publisher does not reference #organization`);
       }
       const sw = graph.find(n => n['@type'] === 'SoftwareApplication');
-      if (route === '/') {
-        if (!sw) problems.push(`${label}: homepage graph lacks SoftwareApplication`);
+      if (route === '/ai-medical-scribe') {
+        if (!sw) problems.push(`${label}: category page graph lacks SoftwareApplication`);
         else {
           if (sw['@id'] !== FACTS.entityIds.software) problems.push(`${label}: software @id "${sw['@id']}"`);
           const o = sw.offers || {};
@@ -185,6 +187,10 @@ for (const route of CFG.routes) {
           }
           if ((sw.provider || {})['@id'] !== FACTS.entityIds.organization) problems.push(`${label}: software provider does not reference #organization`);
         }
+      }
+      if (route === '/' && sites.length === 1
+        && ((sites[0].about || {})['@id'] !== FACTS.entityIds.software)) {
+        problems.push(`${label}: homepage WebSite.about must reference the software @id (Phase 3 moved the full node)`);
       }
       const med = graph.find(n => n['@type'] === 'MedicalWebPage');
       if (med) {

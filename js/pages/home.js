@@ -22,7 +22,7 @@ const HeroSection = `
                             <span class="stat-label" data-i18n="hero.stat_time_label">Saved daily</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-value" data-i18n="hero.stat_burnout">74%</span>
+                            <span class="stat-value" data-i18n="hero.stat_burnout">25%</span>
                             <span class="stat-label" data-i18n="hero.stat_burnout_label">Less burnout</span>
                         </div>
                         <div class="stat-item">
@@ -251,6 +251,7 @@ const WhyClinixSection = `
                     <div class="card-icon material-symbols-rounded">category</div>
                     <h3 data-i18n="why.specialties_title">40+ specialties & allied health</h3>
                     <p data-i18n="why.specialties_desc">From cardiology to physiotherapy, speech therapy to veterinary medicine. One platform covers the full breadth of clinical documentation.</p>
+                    <a href="/ai-medical-scribe" style="font-weight: 600; color: var(--accent-dark, var(--accent));" data-i18n="why.specialties_link">Explore the AI medical scribe</a>
                 </div>
                 <div class="card">
                     <div class="card-icon material-symbols-rounded">translate</div>
