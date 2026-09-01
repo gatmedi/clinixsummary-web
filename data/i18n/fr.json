@@ -189,14 +189,14 @@
     "h1": "Les tarifs ClinixSummary",
     "h1_sub": "Commencez gratuitement — sans carte bancaire, et sans inscription pour essayer la console. Des forfaits transparents, par crédits, résiliables à tout moment. Le même <a href=\"/ai-medical-scribe\">scribe médical IA</a>, quel que soit le forfait.",
     "currency_label": "Devise",
-    "currency_note": "Facturation dans la devise choisie au moment du paiement.",
+    "currency_note": "Détectée selon votre région — modifiable à tout moment.",
     "faq_title": "Les tarifs, en questions",
     "faq1_q": "Comment fonctionnent les crédits ?",
     "faq1_a": "1 crédit couvre 10 minutes d’audio documenté. Chaque forfait renouvelle ses crédits tous les mois : le forfait Forever Free comprend 25 crédits par mois, et les forfaits payants vont de 75 à 500 crédits par mois.",
     "faq2_q": "Y a-t-il vraiment un forfait gratuit ?",
     "faq2_a": "Oui. Forever Free vous donne un accès complet à la console avec 25 crédits par mois, sans carte bancaire — et vous pouvez même essayer la console avant de créer le moindre compte.",
-    "faq3_q": "Puis-je payer dans ma devise locale ?",
-    "faq3_a": "Oui — outre le dollar américain, les forfaits peuvent être facturés en livres sterling, en dollars canadiens, australiens et néo-zélandais, en roupies indiennes, ainsi que dans les devises des Émirats arabes unis, de l’Arabie saoudite, du Qatar, d’Oman, du Koweït et de Bahreïn. Choisissez votre devise au moment du paiement.",
+    "faq3_q": "Dans quelle devise serai-je facturé ?",
+    "faq3_a": "Dans la devise de votre région, détectée automatiquement : les tarifs s'affichent et sont facturés dans cette devise au moment du paiement (12 devises prises en charge) ; partout ailleurs, la facturation est en dollars américains.",
     "faq4_q": "Puis-je résilier à tout moment ?",
     "faq4_a": "Oui. Les forfaits sont mensuels et résiliables à tout moment depuis la console ; votre forfait court simplement jusqu’à la fin de la période déjà réglée. Des forfaits Entreprise, avec volumes sur mesure et assistance dédiée, sont également proposés.",
     "kicker": "Tarifs",
@@ -414,6 +414,7 @@
     "compare": "Comparatif des assistants IA"
   },
   "common": {
+    "related_title": "Explorer davantage le scribe médical IA",
     "contact_us": "Nous contacter",
     "start_trial": "Essayer gratuitement",
     "get_started": "Démarrer",
@@ -1303,6 +1304,7 @@
     "cta_label": "Commencer l'essai gratuit"
   },
   "papers": {
+    "read_online": "Lire en ligne",
     "pub_kicker": "Publications",
     "pub_title": "Recherche, données probantes et analyses de fond.",
     "pub_desc": "ClinixSummary s'appuie sur des données probantes et sur l'expertise clinique. Parcourez nos publications, de la science du raisonnement contextuel à l'économie de la documentation clinique par IA à grande échelle.",

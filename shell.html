@@ -33,6 +33,32 @@
     <script>
         window.BASEPATH=location.hostname==='gatmedi.github.io'?'/clinixsummary-web':'';
         const BASE_PATH = "https://clinixsummary.ai";
+        /* First-visit language auto-detection (owner request 2026-09-01):
+           visitors whose browser language is one of the site's locales land on
+           their language automatically. Fires at most ONCE ever (flag), never
+           on locale-prefixed URLs, never once a language choice is stored,
+           never during prerender (local-port guard), and never for search
+           crawlers (they render as en-US, which never triggers a redirect -
+           hreflang discovery is unaffected). EN-only and off-manifest routes
+           are excluded. */
+        (function () {
+            try {
+                if (location.port) return; /* prerender serves from a local port; production has none */
+                if (window.BASEPATH) return;
+                var p = location.pathname;
+                if (/^\/(fr|es|pt|it|ar)(\/|$)/.test(p)) return;
+                if (localStorage.getItem('clinixsummary-lang') || localStorage.getItem('clinixsummary-lang-suggested')) return;
+                var lang = (navigator.language || '').slice(0, 2).toLowerCase();
+                if (!{ fr: 1, es: 1, pt: 1, it: 1, ar: 1 }[lang]) return;
+                if (p.indexOf('.') > -1) return;
+                var skip = ['/case-studies', '/status', '/compare', '/clinixsummary-vs-', '/for-institutions'];
+                for (var i = 0; i < skip.length; i++) { if (p.indexOf(skip[i]) === 0) return; }
+                if (/^\/whitepapers\/./.test(p)) return; /* EN-only article landings; the hub itself is translated */
+                localStorage.setItem('clinixsummary-lang-suggested', '1');
+                localStorage.setItem('clinixsummary-lang', lang);
+                location.replace('/' + lang + (p === '/' ? '/' : p) + location.search + location.hash);
+            } catch (e) { /* never block the page over language detection */ }
+        })();
     </script>
 
     <script type="application/ld+json">

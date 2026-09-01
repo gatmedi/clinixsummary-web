@@ -32,10 +32,36 @@
     <script>
         window.BASEPATH="/pt";
         const BASE_PATH = "https://clinixsummary.ai";
+        /* First-visit language auto-detection (owner request 2026-09-01):
+           visitors whose browser language is one of the site's locales land on
+           their language automatically. Fires at most ONCE ever (flag), never
+           on locale-prefixed URLs, never once a language choice is stored,
+           never during prerender (local-port guard), and never for search
+           crawlers (they render as en-US, which never triggers a redirect -
+           hreflang discovery is unaffected). EN-only and off-manifest routes
+           are excluded. */
+        (function () {
+            try {
+                if (location.port) return; /* prerender serves from a local port; production has none */
+                if (window.BASEPATH) return;
+                var p = location.pathname;
+                if (/^\/(fr|es|pt|it|ar)(\/|$)/.test(p)) return;
+                if (localStorage.getItem('clinixsummary-lang') || localStorage.getItem('clinixsummary-lang-suggested')) return;
+                var lang = (navigator.language || '').slice(0, 2).toLowerCase();
+                if (!{ fr: 1, es: 1, pt: 1, it: 1, ar: 1 }[lang]) return;
+                if (p.indexOf('.') > -1) return;
+                var skip = ['/case-studies', '/status', '/compare', '/clinixsummary-vs-', '/for-institutions'];
+                for (var i = 0; i < skip.length; i++) { if (p.indexOf(skip[i]) === 0) return; }
+                if (/^\/whitepapers\/./.test(p)) return; /* EN-only article landings; the hub itself is translated */
+                localStorage.setItem('clinixsummary-lang-suggested', '1');
+                localStorage.setItem('clinixsummary-lang', lang);
+                location.replace('/' + lang + (p === '/' ? '/' : p) + location.search + location.hash);
+            } catch (e) { /* never block the page over language detection */ }
+        })();
     </script>
 
     
-<link rel="alternate" hreflang="en" href="https://clinixsummary.ai/pricing/"><link rel="alternate" hreflang="fr" href="https://clinixsummary.ai/fr/pricing/"><link rel="alternate" hreflang="es" href="https://clinixsummary.ai/es/pricing/"><link rel="alternate" hreflang="pt" href="https://clinixsummary.ai/pt/pricing/"><link rel="alternate" hreflang="it" href="https://clinixsummary.ai/it/pricing/"><link rel="alternate" hreflang="ar" href="https://clinixsummary.ai/ar/pricing/"><link rel="alternate" hreflang="x-default" href="https://clinixsummary.ai/pricing/"><meta property="og:locale" content="pt_BR"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://clinixsummary.ai/#organization","name":"GATMEDI","legalName":"Gacrux Advanced Technologies in Medicine Ltd","url":"https://clinixsummary.ai","logo":"https://clinixsummary.ai/images/logo-full.png","brand":{"@type":"Brand","name":"ClinixSummary"},"sameAs":["https://apps.apple.com/us/app/clinixsummary/id6740857768","https://play.google.com/store/apps/details?id=com.gacrux.clinixsummaryai","https://www.facebook.com/clinixsummary","https://x.com/clinixsummary","https://www.linkedin.com/company/clinixsummary"]},{"@type":"WebSite","@id":"https://clinixsummary.ai/#website","name":"ClinixSummary","url":"https://clinixsummary.ai/","publisher":{"@id":"https://clinixsummary.ai/#organization"},"inLanguage":"pt"},{"@type":"FAQPage","inLanguage":"pt","mainEntity":[{"@type":"Question","name":"Como funcionam os créditos?","acceptedAnswer":{"@type":"Answer","text":"1 crédito equivale a 10 minutos de áudio documentado. Todos os planos renovam os créditos mensalmente — o plano Forever Free (gratuito para sempre) inclui 25 créditos por mês, e os planos pagos vão de 75 a 500 créditos por mês."}},{"@type":"Question","name":"Existe mesmo um plano gratuito?","acceptedAnswer":{"@type":"Answer","text":"Sim. O Forever Free dá acesso completo ao console com 25 créditos por mês, sem precisar de cartão de crédito — e você pode testar o console antes mesmo de criar uma conta."}},{"@type":"Question","name":"Posso pagar na minha moeda local?","acceptedAnswer":{"@type":"Answer","text":"Sim — além do dólar americano, os planos podem ser cobrados em libras esterlinas, dólares canadenses, australianos e neozelandeses, rupias indianas e nas moedas dos Emirados Árabes Unidos, da Arábia Saudita, do Catar, de Omã, do Kuwait e do Bahrein. É só escolher a moeda ao finalizar a compra."}},{"@type":"Question","name":"Posso cancelar quando quiser?","acceptedAnswer":{"@type":"Answer","text":"Sim. Os planos são mensais e você pode cancelar quando quiser direto no console; o plano simplesmente segue ativo até o fim do período já pago. Também há planos corporativos, com volume sob medida e suporte dedicado."}}]}]}</script></head>
+<link rel="alternate" hreflang="en" href="https://clinixsummary.ai/pricing/"><link rel="alternate" hreflang="fr" href="https://clinixsummary.ai/fr/pricing/"><link rel="alternate" hreflang="es" href="https://clinixsummary.ai/es/pricing/"><link rel="alternate" hreflang="pt" href="https://clinixsummary.ai/pt/pricing/"><link rel="alternate" hreflang="it" href="https://clinixsummary.ai/it/pricing/"><link rel="alternate" hreflang="ar" href="https://clinixsummary.ai/ar/pricing/"><link rel="alternate" hreflang="x-default" href="https://clinixsummary.ai/pricing/"><meta property="og:locale" content="pt_BR"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://clinixsummary.ai/#organization","name":"GATMEDI","legalName":"Gacrux Advanced Technologies in Medicine Ltd","url":"https://clinixsummary.ai","logo":"https://clinixsummary.ai/images/logo-full.png","brand":{"@type":"Brand","name":"ClinixSummary"},"sameAs":["https://apps.apple.com/us/app/clinixsummary/id6740857768","https://play.google.com/store/apps/details?id=com.gacrux.clinixsummaryai","https://www.facebook.com/clinixsummary","https://x.com/clinixsummary","https://www.linkedin.com/company/clinixsummary"]},{"@type":"WebSite","@id":"https://clinixsummary.ai/#website","name":"ClinixSummary","url":"https://clinixsummary.ai/","publisher":{"@id":"https://clinixsummary.ai/#organization"},"inLanguage":"pt"},{"@type":"FAQPage","inLanguage":"pt","mainEntity":[{"@type":"Question","name":"Como funcionam os créditos?","acceptedAnswer":{"@type":"Answer","text":"1 crédito equivale a 10 minutos de áudio documentado. Todos os planos renovam os créditos mensalmente — o plano Forever Free (gratuito para sempre) inclui 25 créditos por mês, e os planos pagos vão de 75 a 500 créditos por mês."}},{"@type":"Question","name":"Existe mesmo um plano gratuito?","acceptedAnswer":{"@type":"Answer","text":"Sim. O Forever Free dá acesso completo ao console com 25 créditos por mês, sem precisar de cartão de crédito — e você pode testar o console antes mesmo de criar uma conta."}},{"@type":"Question","name":"Em qual moeda serei cobrado?","acceptedAnswer":{"@type":"Answer","text":"Na moeda da sua região, detectada automaticamente: os preços são exibidos e cobrados nessa moeda ao finalizar a compra (12 moedas suportadas); no restante do mundo, em dólares americanos."}},{"@type":"Question","name":"Posso cancelar quando quiser?","acceptedAnswer":{"@type":"Answer","text":"Sim. Os planos são mensais e você pode cancelar quando quiser direto no console; o plano simplesmente segue ativo até o fim do período já pago. Também há planos corporativos, com volume sob medida e suporte dedicado."}}]}]}</script></head>
 <body>
     <!-- GitHub Pages SPA redirect handler — replays the path saved by 404.html -->
     <script>!function(){var r=sessionStorage.getItem('spa-redirect');if(r){sessionStorage.removeItem('spa-redirect');history.replaceState(null,'',r);}}();</script>
@@ -314,10 +340,10 @@
                     <p class="subpage-copy" data-i18n-html="pricing.h1_sub">Comece grátis — sem cartão de crédito e sem cadastro para testar o console. Planos transparentes por créditos, com cancelamento a qualquer momento. O mesmo <a href="/pt/ai-medical-scribe/">escriba médico com IA</a> em todos os planos.</p>
                     <div style="margin-top: 24px; display: inline-flex; align-items: center; gap: 10px;">
                         <label for="pricing-currency" data-i18n="pricing.currency_label" style="font-weight: 600;">Moeda</label>
-                        <select id="pricing-currency" style="padding: 8px 12px; border: 1px solid var(--border-subtle); border-radius: 8px; font-size: 15px;" data-ready="1">
+                        <select id="pricing-currency" style="padding: 8px 12px; border: 1px solid var(--border-subtle); border-radius: 8px; font-size: 15px;">
                             <option value="USD" selected="">USD $</option>
                         </select>
-                        <span class="fs-8" data-i18n="pricing.currency_note" style="font-size: 13px; color: var(--text-secondary);">A cobrança é feita na moeda que você escolher ao finalizar a compra.</span>
+                        <span class="fs-8" data-i18n="pricing.currency_note" style="font-size: 13px; color: var(--text-secondary);">Detectada pela sua região — você pode alterá-la.</span>
                     </div>
                 </div>
             </div>
@@ -440,8 +466,8 @@
                         <p class="section-copy" data-i18n="pricing.faq2_a" data-faq-a="">Sim. O Forever Free dá acesso completo ao console com 25 créditos por mês, sem precisar de cartão de crédito — e você pode testar o console antes mesmo de criar uma conta.</p>
                     </div>
                     <div class="text-group" style="border-bottom: none;">
-                        <h3 data-i18n="pricing.faq3_q" data-faq-q="">Posso pagar na minha moeda local?</h3>
-                        <p class="section-copy" data-i18n="pricing.faq3_a" data-faq-a="">Sim — além do dólar americano, os planos podem ser cobrados em libras esterlinas, dólares canadenses, australianos e neozelandeses, rupias indianas e nas moedas dos Emirados Árabes Unidos, da Arábia Saudita, do Catar, de Omã, do Kuwait e do Bahrein. É só escolher a moeda ao finalizar a compra.</p>
+                        <h3 data-i18n="pricing.faq3_q" data-faq-q="">Em qual moeda serei cobrado?</h3>
+                        <p class="section-copy" data-i18n="pricing.faq3_a" data-faq-a="">Na moeda da sua região, detectada automaticamente: os preços são exibidos e cobrados nessa moeda ao finalizar a compra (12 moedas suportadas); no restante do mundo, em dólares americanos.</p>
                     </div>
                     <div class="text-group" style="border-bottom: none;">
                         <h3 data-i18n="pricing.faq4_q" data-faq-q="">Posso cancelar quando quiser?</h3>
@@ -595,15 +621,15 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.4/purify.min.js" integrity="sha512-wKv5WSKk06JEAfIhv1IO/2IiPrfbUoFDMGMjkumP7FrTVECN+ISKNFpdYLjDWYLR1fAyVqv02VNVsFDZPqMEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/i18n.js?v=16cc2f5674"></script>
-    <script src="/js/pages/home.js?v=0935f4cfa1"></script>
+    <script src="/js/pages/home.js?v=7ac7ba6ce0"></script>
     <script src="/js/pages/meet.js?v=9a081aafe0"></script>
     <script src="/js/pages/solutions.js?v=5c8d1f44c1"></script>
-    <script src="/js/pages/capabilities.js?v=2f4d8a56da"></script>
-    <script src="/js/pages/learn.js?v=ddfe5e1734"></script>
+    <script src="/js/pages/capabilities.js?v=c3a8da9204"></script>
+    <script src="/js/pages/learn.js?v=7517c3e3ff"></script>
     <script src="/js/pages/other.js?v=15a1efebda"></script>
-    <script src="/js/pages/compare.js?v=7f09611b38"></script>
-    <script src="/js/seo.js?v=b29687effa"></script>
-    <script src="/js/app.js?v=8f90cea91e"></script>
+    <script src="/js/pages/compare.js?v=ab2ba7fd43"></script>
+    <script src="/js/seo.js?v=b2dc564895"></script>
+    <script src="/js/app.js?v=a277ee502c"></script>
 
 
 </body></html>

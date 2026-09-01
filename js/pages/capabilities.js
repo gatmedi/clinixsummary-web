@@ -12,6 +12,72 @@
  *                                         feature grid and before the CTA
  * @returns {string} Full subpage HTML
  */
+
+// ---------------------------------------------------------------------------
+// Related-capability mesh (SEO/GEO plan 4.4, spec §9.2 / LINK rules).
+// Every child capability page links UP to the category owner and ACROSS to
+// 2-3 clinically adjacent siblings. Labels reuse each target page's own
+// localized kicker key, so no new translations are needed.
+// ---------------------------------------------------------------------------
+const CAP_ROUTE_NS = {
+    '/dental-ai-scribe': 'cap_dental',
+    '/psychiatry-ai-scribe': 'cap_psychiatry',
+    '/psychology-ai-scribe': 'cap_psychology',
+    '/physiotherapy-ai-scribe': 'physio_page',
+    '/occupational-therapy-ai-scribe': 'ot_page',
+    '/speech-therapy-ai-scribe': 'slt_page',
+    '/nutrition-ai-scribe': 'nutrition_page',
+    '/midwifery-ai-scribe': 'cap_midwifery',
+    '/veterinary-ai-scribe': 'cap_vet',
+    '/operative-note-ai': 'cap_operative',
+    '/medical-billing-ai': 'billing',
+    '/patient-leaflet-generator': 'cap_leaflet',
+    '/referral-letter-ai': 'referrals_page',
+    '/icd-coding': 'icd_page',
+    '/radiology-ai': 'radiology_assist_page',
+    '/dermatology-ai': 'dermatology_assist_page',
+    '/medical-triage-ai': 'triage_assist_page',
+};
+
+const CAP_SIBLINGS = {
+    cap_dental: ['/operative-note-ai', '/patient-leaflet-generator', '/medical-billing-ai'],
+    cap_psychiatry: ['/psychology-ai-scribe', '/referral-letter-ai', '/patient-leaflet-generator'],
+    cap_psychology: ['/psychiatry-ai-scribe', '/speech-therapy-ai-scribe', '/patient-leaflet-generator'],
+    physio_page: ['/occupational-therapy-ai-scribe', '/speech-therapy-ai-scribe', '/nutrition-ai-scribe'],
+    ot_page: ['/physiotherapy-ai-scribe', '/speech-therapy-ai-scribe', '/nutrition-ai-scribe'],
+    slt_page: ['/occupational-therapy-ai-scribe', '/physiotherapy-ai-scribe', '/psychology-ai-scribe'],
+    nutrition_page: ['/physiotherapy-ai-scribe', '/patient-leaflet-generator', '/icd-coding'],
+    cap_midwifery: ['/nutrition-ai-scribe', '/patient-leaflet-generator', '/referral-letter-ai'],
+    cap_vet: ['/operative-note-ai', '/medical-billing-ai', '/patient-leaflet-generator'],
+    cap_operative: ['/icd-coding', '/medical-billing-ai', '/referral-letter-ai'],
+    billing: ['/icd-coding', '/operative-note-ai', '/referral-letter-ai'],
+    cap_leaflet: ['/referral-letter-ai', '/icd-coding', '/psychiatry-ai-scribe'],
+    referrals_page: ['/patient-leaflet-generator', '/icd-coding', '/psychiatry-ai-scribe'],
+    icd_page: ['/medical-billing-ai', '/operative-note-ai', '/referral-letter-ai'],
+    radiology_assist_page: ['/dermatology-ai', '/medical-triage-ai', '/operative-note-ai'],
+    dermatology_assist_page: ['/radiology-ai', '/medical-triage-ai', '/patient-leaflet-generator'],
+    triage_assist_page: ['/radiology-ai', '/dermatology-ai', '/referral-letter-ai'],
+    allied: ['/physiotherapy-ai-scribe', '/occupational-therapy-ai-scribe', '/speech-therapy-ai-scribe'],
+};
+
+function relatedBlockFor(ns) {
+    const siblings = CAP_SIBLINGS[ns];
+    if (!siblings) { return ''; }
+    const links = [['/ai-medical-scribe', 'cap_medical.kicker', 'AI Medical Scribe']]
+        .concat(siblings.map((route) => {
+            const targetNs = CAP_ROUTE_NS[route];
+            return [route, targetNs + '.kicker', route.slice(1)];
+        }))
+        .map(([href, key, label]) =>
+            `<a href="${href}" class="dropdown-item" style="border: 1px solid var(--border-subtle); border-radius: 8px;"><span class="dropdown-title" data-i18n="${key}">${label}</span></a>`
+        ).join('');
+    return `
+            <div style="margin-top: 60px;">
+                <h2 class="section-title" data-i18n="common.related_title">Explore the AI medical scribe further</h2>
+                <div class="grid-4">${links}</div>
+            </div>`;
+}
+
 function createCapabilityPage(config) {
     const ns = config.ns;
     const d = (key) => ns ? ` data-i18n="${ns}.${key}"` : '';
@@ -57,6 +123,8 @@ function createCapabilityPage(config) {
                 </div>
 
                 ${config.extraContent || ''}
+
+                ${relatedBlockFor(ns)}
 
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;"${d('cta_title')}>${config.ctaTitle || 'Ready to transform your documentation?'}</h2>
@@ -474,6 +542,8 @@ function CapAlliedHealthPage() {
                     </div>
                 </div>
 
+                ${relatedBlockFor('allied')}
+
                 <!-- CTA -->
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
                     <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;" data-i18n="allied.cta_title">Start documenting with purpose-built allied health modules.</h2>
@@ -721,6 +791,8 @@ function BillingAssistPage() {
                         </div>
                     </div>
                 </div>
+
+                ${relatedBlockFor('billing')}
 
                 <!-- CTA -->
                 <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">

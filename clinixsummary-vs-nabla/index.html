@@ -32,10 +32,36 @@
     <script>
         window.BASEPATH="";
         const BASE_PATH = "https://clinixsummary.ai";
+        /* First-visit language auto-detection (owner request 2026-09-01):
+           visitors whose browser language is one of the site's locales land on
+           their language automatically. Fires at most ONCE ever (flag), never
+           on locale-prefixed URLs, never once a language choice is stored,
+           never during prerender (local-port guard), and never for search
+           crawlers (they render as en-US, which never triggers a redirect -
+           hreflang discovery is unaffected). EN-only and off-manifest routes
+           are excluded. */
+        (function () {
+            try {
+                if (location.port) return; /* prerender serves from a local port; production has none */
+                if (window.BASEPATH) return;
+                var p = location.pathname;
+                if (/^\/(fr|es|pt|it|ar)(\/|$)/.test(p)) return;
+                if (localStorage.getItem('clinixsummary-lang') || localStorage.getItem('clinixsummary-lang-suggested')) return;
+                var lang = (navigator.language || '').slice(0, 2).toLowerCase();
+                if (!{ fr: 1, es: 1, pt: 1, it: 1, ar: 1 }[lang]) return;
+                if (p.indexOf('.') > -1) return;
+                var skip = ['/case-studies', '/status', '/compare', '/clinixsummary-vs-', '/for-institutions'];
+                for (var i = 0; i < skip.length; i++) { if (p.indexOf(skip[i]) === 0) return; }
+                if (/^\/whitepapers\/./.test(p)) return; /* EN-only article landings; the hub itself is translated */
+                localStorage.setItem('clinixsummary-lang-suggested', '1');
+                localStorage.setItem('clinixsummary-lang', lang);
+                location.replace('/' + lang + (p === '/' ? '/' : p) + location.search + location.hash);
+            } catch (e) { /* never block the page over language detection */ }
+        })();
     </script>
 
     
-<meta property="og:locale" content="en_US"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://clinixsummary.ai/#organization","name":"GATMEDI","legalName":"Gacrux Advanced Technologies in Medicine Ltd","url":"https://clinixsummary.ai","logo":"https://clinixsummary.ai/images/logo-full.png","brand":{"@type":"Brand","name":"ClinixSummary"},"sameAs":["https://apps.apple.com/us/app/clinixsummary/id6740857768","https://play.google.com/store/apps/details?id=com.gacrux.clinixsummaryai","https://www.facebook.com/clinixsummary","https://x.com/clinixsummary","https://www.linkedin.com/company/clinixsummary"]},{"@type":"WebSite","@id":"https://clinixsummary.ai/#website","name":"ClinixSummary","url":"https://clinixsummary.ai/","publisher":{"@id":"https://clinixsummary.ai/#organization"},"inLanguage":"en"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://clinixsummary.ai/"},{"@type":"ListItem","position":2,"name":"Comparisons","item":"https://clinixsummary.ai/compare/"},{"@type":"ListItem","position":3,"name":"ClinixSummary vs Nabla - AI Medical Scribe Comparison","item":"https://clinixsummary.ai/clinixsummary-vs-nabla/"}]},{"@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"Is ClinixSummary a Nabla alternative?","acceptedAnswer":{"@type":"Answer","text":"Yes. Both are multilingual and cover disciplines beyond human medicine. The practical differences are pricing transparency (ClinixSummary publishes its tiers; Nabla publishes no pricing), discipline-native note structures, and medical-device registration (MHRA Class I, UKCA marked)."}},{"@type":"Question","name":"How do the language capabilities differ?","acceptedAnswer":{"@type":"Answer","text":"Nabla supports 35+ languages including four Arabic dialects. ClinixSummary generates the complete note and all modules natively in six languages — including full Arabic output and a bilingual English–Arabic patient leaflet mode."}},{"@type":"Question","name":"Which has the stronger compliance certifications?","acceptedAnswer":{"@type":"Answer","text":"Nabla states SOC 2 Type II and ISO 27001 certifications, plus HIPAA and GDPR compliance. ClinixSummary is HIPAA and GDPR aligned and is additionally registered with the MHRA as a Class I medical device (UKCA marked); Nabla's public compliance materials did not state a medical-device registration as of August 2026."}},{"@type":"Question","name":"Can I just sign up and try both?","acceptedAnswer":{"@type":"Answer","text":"Both offer a free way to start. ClinixSummary additionally publishes its full pricing, so you can evaluate total cost without a sales conversation."}}]}]}</script></head>
+<meta property="og:locale" content="en_US"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://clinixsummary.ai/#organization","name":"GATMEDI","legalName":"Gacrux Advanced Technologies in Medicine Ltd","url":"https://clinixsummary.ai","logo":"https://clinixsummary.ai/images/logo-full.png","brand":{"@type":"Brand","name":"ClinixSummary"},"sameAs":["https://apps.apple.com/us/app/clinixsummary/id6740857768","https://play.google.com/store/apps/details?id=com.gacrux.clinixsummaryai","https://www.facebook.com/clinixsummary","https://x.com/clinixsummary","https://www.linkedin.com/company/clinixsummary"]},{"@type":"WebSite","@id":"https://clinixsummary.ai/#website","name":"ClinixSummary","url":"https://clinixsummary.ai/","publisher":{"@id":"https://clinixsummary.ai/#organization"},"inLanguage":"en"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://clinixsummary.ai/"},{"@type":"ListItem","position":2,"name":"Comparisons","item":"https://clinixsummary.ai/compare/"},{"@type":"ListItem","position":3,"name":"ClinixSummary vs Nabla - AI Medical Scribe Comparison","item":"https://clinixsummary.ai/clinixsummary-vs-nabla/"}]},{"@type":"WebPage","name":"ClinixSummary vs Nabla - AI Medical Scribe Comparison – ClinixSummary","url":"https://clinixsummary.ai/clinixsummary-vs-nabla/","inLanguage":"en","isPartOf":{"@id":"https://clinixsummary.ai/#website"},"dateModified":"2026-08"},{"@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"Is ClinixSummary a Nabla alternative?","acceptedAnswer":{"@type":"Answer","text":"Yes. Both are multilingual and cover disciplines beyond human medicine. The practical differences are pricing transparency (ClinixSummary publishes its tiers; Nabla publishes no pricing), discipline-native note structures, and medical-device registration (MHRA Class I, UKCA marked)."}},{"@type":"Question","name":"How do the language capabilities differ?","acceptedAnswer":{"@type":"Answer","text":"Nabla supports 35+ languages including four Arabic dialects. ClinixSummary generates the complete note and all modules natively in six languages — including full Arabic output and a bilingual English–Arabic patient leaflet mode."}},{"@type":"Question","name":"Which has the stronger compliance certifications?","acceptedAnswer":{"@type":"Answer","text":"Nabla states SOC 2 Type II and ISO 27001 certifications, plus HIPAA and GDPR compliance. ClinixSummary is HIPAA and GDPR aligned and is additionally registered with the MHRA as a Class I medical device (UKCA marked); Nabla's public compliance materials did not state a medical-device registration as of August 2026."}},{"@type":"Question","name":"Can I just sign up and try both?","acceptedAnswer":{"@type":"Answer","text":"Both offer a free way to start. ClinixSummary additionally publishes its full pricing, so you can evaluate total cost without a sales conversation."}}]}]}</script></head>
 <body>
     <!-- GitHub Pages SPA redirect handler — replays the path saved by 404.html -->
     <script>!function(){var r=sessionStorage.getItem('spa-redirect');if(r){sessionStorage.removeItem('spa-redirect');history.replaceState(null,'',r);}}();</script>
@@ -552,15 +578,15 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.4/purify.min.js" integrity="sha512-wKv5WSKk06JEAfIhv1IO/2IiPrfbUoFDMGMjkumP7FrTVECN+ISKNFpdYLjDWYLR1fAyVqv02VNVsFDZPqMEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/i18n.js?v=16cc2f5674"></script>
-    <script src="/js/pages/home.js?v=0935f4cfa1"></script>
+    <script src="/js/pages/home.js?v=7ac7ba6ce0"></script>
     <script src="/js/pages/meet.js?v=9a081aafe0"></script>
     <script src="/js/pages/solutions.js?v=5c8d1f44c1"></script>
-    <script src="/js/pages/capabilities.js?v=2f4d8a56da"></script>
-    <script src="/js/pages/learn.js?v=ddfe5e1734"></script>
+    <script src="/js/pages/capabilities.js?v=c3a8da9204"></script>
+    <script src="/js/pages/learn.js?v=7517c3e3ff"></script>
     <script src="/js/pages/other.js?v=15a1efebda"></script>
-    <script src="/js/pages/compare.js?v=7f09611b38"></script>
-    <script src="/js/seo.js?v=b29687effa"></script>
-    <script src="/js/app.js?v=8f90cea91e"></script>
+    <script src="/js/pages/compare.js?v=ab2ba7fd43"></script>
+    <script src="/js/seo.js?v=b2dc564895"></script>
+    <script src="/js/app.js?v=a277ee502c"></script>
 
 
 </body></html>

@@ -7,9 +7,12 @@
  * disclaimer rendered on each page. Non-disparaging, nominative use only.
  */
 
-// NOTE: 'August 2026' also appears literally inside COMPARE_DATA strings —
-// when bumping COMPARE_VERIFIED, update those strings in the same commit.
+// SINGLE source for the verification date (plan 4.5): the display string,
+// the in-data "as of" phrases (via AS_OF below) and the machine-readable
+// dateModified in facts.json (comparisons.factsVerifiedISO - keep in sync
+// when re-verifying) all derive from this pair.
 const COMPARE_VERIFIED = 'August 2026';
+const AS_OF = `as of ${COMPARE_VERIFIED}`;
 
 const COMPARE_CS_FACTS = {
     verticals: '13 dedicated consoles, including veterinary, physiotherapy, occupational therapy, speech & language and nutrition',
@@ -167,7 +170,7 @@ const COMPARE_DATA = {
       ],
       [
         "Registered as a medical device",
-        "ClinixSummary is registered with the MHRA as a Class I medical device and carries UKCA marking — a registration Heidi's public compliance materials did not state as of August 2026."
+        "ClinixSummary is registered with the MHRA as a Class I medical device and carries UKCA marking — a registration Heidi's public compliance materials did not state " + AS_OF + "."
       ]
     ],
     "faqs": [
@@ -177,7 +180,7 @@ const COMPARE_DATA = {
       ],
       [
         "Which is cheaper?",
-        "Both publish pricing and offer a free plan. Heidi's US Clinician tier is listed at $150/month ($110/month billed annually) as of August 2026; ClinixSummary publishes a free plan and its self-serve tiers on its pricing page. Always check both pricing pages for current figures."
+        "Both publish pricing and offer a free plan. Heidi's US Clinician tier is listed at $150/month ($110/month billed annually) " + AS_OF + "; ClinixSummary publishes a free plan and its self-serve tiers on its pricing page. Always check both pricing pages for current figures."
       ],
       [
         "Do both cover veterinary and physiotherapy?",
@@ -212,7 +215,7 @@ const COMPARE_DATA = {
       ],
       [
         "Registered as a medical device",
-        "ClinixSummary is registered with the MHRA as a Class I medical device and carries UKCA marking — a registration Freed's public compliance materials did not state as of August 2026."
+        "ClinixSummary is registered with the MHRA as a Class I medical device and carries UKCA marking — a registration Freed's public compliance materials did not state " + AS_OF + "."
       ]
     ],
     "faqs": [
@@ -257,7 +260,7 @@ const COMPARE_DATA = {
       ],
       [
         "Registered as a medical device",
-        "ClinixSummary is registered with the MHRA as a Class I medical device and carries UKCA marking — a registration Nabla's public compliance materials did not state as of August 2026."
+        "ClinixSummary is registered with the MHRA as a Class I medical device and carries UKCA marking — a registration Nabla's public compliance materials did not state " + AS_OF + "."
       ]
     ],
     "faqs": [
@@ -271,7 +274,7 @@ const COMPARE_DATA = {
       ],
       [
         "Which has the stronger compliance certifications?",
-        "Nabla states SOC 2 Type II and ISO 27001 certifications, plus HIPAA and GDPR compliance. ClinixSummary is HIPAA and GDPR aligned and is additionally registered with the MHRA as a Class I medical device (UKCA marked); Nabla's public compliance materials did not state a medical-device registration as of August 2026."
+        "Nabla states SOC 2 Type II and ISO 27001 certifications, plus HIPAA and GDPR compliance. ClinixSummary is HIPAA and GDPR aligned and is additionally registered with the MHRA as a Class I medical device (UKCA marked); Nabla's public compliance materials did not state a medical-device registration " + AS_OF + "."
       ],
       [
         "Can I just sign up and try both?",
