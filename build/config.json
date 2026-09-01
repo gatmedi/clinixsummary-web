@@ -28,7 +28,6 @@
     "/clinixsummary-vs-deepscribe"
   ],
   "aliasRoutes": {
-    "/pricing": "/",
     "/roi-calculator": "/"
   },
   "ogImage": "/images/og-card.png",
@@ -114,6 +113,7 @@
     "/clinixsummary-vs-deepscribe"
   ],
   "faqRoutes": [
+    "/pricing",
     "/physiotherapy-ai-scribe",
     "/occupational-therapy-ai-scribe",
     "/speech-therapy-ai-scribe",

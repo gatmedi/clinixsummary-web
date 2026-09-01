@@ -1,26 +1,26 @@
 {
   "https://clinixsummary.ai/": {
-    "hash": "18a60853ba871baf4636daabdef1433025802559",
+    "hash": "296eb1faedeb4bbe63398498f74a637055d8f539",
     "lastmod": "2026-09-01"
   },
   "https://clinixsummary.ai/fr/": {
-    "hash": "4100f55e736bfa2b422b4097dbea5b6078001ee0",
+    "hash": "5452312e666b08d8e969242e2e286c3f9a3ab53f",
     "lastmod": "2026-09-01"
   },
   "https://clinixsummary.ai/es/": {
-    "hash": "85a4cae8ffe434954b73d89285e02f75d44dc3ed",
+    "hash": "f6f48cda3f4dba2ca35330ee250386ffddfd75af",
     "lastmod": "2026-09-01"
   },
   "https://clinixsummary.ai/pt/": {
-    "hash": "2cbf636fc42e2c2e3dd4d1183834b793185181ca",
+    "hash": "660e7b3f2f9c0517bb8d8ceffdf38b9478b9082a",
     "lastmod": "2026-09-01"
   },
   "https://clinixsummary.ai/it/": {
-    "hash": "fe450110efa23a5af33eb916980d343d53864b36",
+    "hash": "169fb60a3458a41d1fafceee00146c9b705ba4d2",
     "lastmod": "2026-09-01"
   },
   "https://clinixsummary.ai/ar/": {
-    "hash": "d4f36497fb03c133c77e946c6819a6a10019a4e2",
+    "hash": "bb3f836dc2ae87b3cea71da902c68876e427a745",
     "lastmod": "2026-09-01"
   },
   "https://clinixsummary.ai/contact/": {
@@ -1181,6 +1181,30 @@
   },
   "https://clinixsummary.ai/clinixsummary-vs-deepscribe/": {
     "hash": "5e9b0818006ff7329d0ffe524c1f6b9408f47b71",
+    "lastmod": "2026-09-01"
+  },
+  "https://clinixsummary.ai/pricing/": {
+    "hash": "050bac0b11eff406c076af6b5578e6df2fedf4b5",
+    "lastmod": "2026-09-01"
+  },
+  "https://clinixsummary.ai/fr/pricing/": {
+    "hash": "9c43715dc0e607a95711a4a2ffa6e8d2e5157c74",
+    "lastmod": "2026-09-01"
+  },
+  "https://clinixsummary.ai/es/pricing/": {
+    "hash": "53d17895c87942f6e341cab3dc1b7e0a92055ef1",
+    "lastmod": "2026-09-01"
+  },
+  "https://clinixsummary.ai/pt/pricing/": {
+    "hash": "c9b53bf2df7955055bc5ee44a4a03dca32026e70",
+    "lastmod": "2026-09-01"
+  },
+  "https://clinixsummary.ai/it/pricing/": {
+    "hash": "2b47cdce34121c5581120967f47daa9b882bcb48",
+    "lastmod": "2026-09-01"
+  },
+  "https://clinixsummary.ai/ar/pricing/": {
+    "hash": "07fb5aee5a74e49022129b9e793c981c139db86f",
     "lastmod": "2026-09-01"
   }
 }
