@@ -418,8 +418,20 @@ const assetHashes = new Map();
 function hashFor(rel) {
   if (!assetHashes.has(rel)) {
     try {
-      const buf = readFileSync(path.join(ROOT, rel));
-      assetHashes.set(rel, createHash('sha1').update(buf).digest('hex').slice(0, 10));
+      // Hash NORMALISED text, not raw bytes. Only .js and .css ever reach here
+      // (see the regex in versionAssets), so reading as utf8 is safe.
+      //
+      // Hashing the raw buffer made the build non-reproducible ACROSS PLATFORMS:
+      // this repo has no .gitattributes pinning eol=lf, so a Windows checkout
+      // holds CRLF where a Linux one holds LF, and byte-identical source then
+      // stamped different ?v= values. Symptom (2026-09-07): rebuilding on Linux
+      // changed the stamps on all ~316 pages for one set of assets, rebuilding
+      // on Windows changed a *disjoint* set, and neither matched what was
+      // committed. Beyond breaking the reproducibility gate, it meant a deploy
+      // built on a different machine churned every asset URL and needlessly
+      // busted the 30-day cache this stamping exists to make safe.
+      const text = readFileSync(path.join(ROOT, rel), 'utf8').replace(/\r\n/g, '\n');
+      assetHashes.set(rel, createHash('sha1').update(text).digest('hex').slice(0, 10));
     } catch (e) {
       assetHashes.set(rel, null); // missing file: leave the URL alone
     }
