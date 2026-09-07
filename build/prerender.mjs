@@ -324,6 +324,14 @@ async function renderOne(browser, base, locale, route) {
           description: pageDesc,
           inLanguage: wp.getAttribute('data-wp-inlang') || 'en',
           datePublished: wp.getAttribute('data-wp-date'),
+          // AUTHORED (WP_ARTICLES.modified), never derived from the content hash.
+          // sitemap.mjs computes lastmod by hashing the generated HTML, so writing
+          // a hash-derived date back into the page would change the file after it
+          // was hashed and report drift on the very next build. datePublished stays
+          // YYYY-MM because that is the precision we actually have for the papers —
+          // padding it to a day would fabricate precision, which is the opposite of
+          // what the honest-lastmod work was for.
+          dateModified: wp.getAttribute('data-wp-modified'),
           author: facts.whitepapers.authors.map(a => ({
             '@type': 'Person', name: a.name, honorificPrefix: a.honorificPrefix
           })),
