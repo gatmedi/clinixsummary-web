@@ -1,0 +1,22 @@
+# The build writes LF. Without this a Windows checkout gets CRLF, and every
+# hash computed over on-disk bytes shifts - which is exactly how the ?v=
+# cache-busters became platform-dependent (see build/prerender.mjs hashFor).
+* text=auto eol=lf
+
+# Binaries must never be line-ending converted. autocrlf currently inflates
+# fonts/Parastoo*.woff2 in a Windows working tree (297452 -> 298902 bytes);
+# the bytes in git are correct and match production. NEVER run
+# `git add --renormalize` from a Windows checkout - it would commit the
+# mangled copy and break Arabic rendering site-wide.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.svg text eol=lf
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.pdf binary
