@@ -30,7 +30,11 @@
  *   21. no production dependency on llms.txt — not in any generated page,
  *       not in robots.txt or sitemap.xml, and no such file at the root
  *       (GEO-CI-010). A policy gate: remove it deliberately if we ever
- *       decide to adopt llms.txt, rather than letting it drift in.
+ *       decide to adopt llms.txt, rather than letting it drift in;
+ *   22. every data-evidence-id resolves to an approved compliance record in
+ *       data/facts.json, that record is inside its review cycle, and the
+ *       review date shown on the page matches the store (GEO-CI-005 /
+ *       CITE-003 / CITE-007).
  * Exits non-zero with a full report if anything fails.
  */
 import { readFile } from 'node:fs/promises';
@@ -279,6 +283,40 @@ for (const route of CFG.routes) {
         if (plan.pricePerMonth === 0) continue;
         const priceStr = '$' + plan.pricePerMonth;
         if (!appContent.includes(priceStr)) problems.push(`${label}: does not show ${plan.name} at ${priceStr}`);
+      }
+    }
+
+    // 22. GEO-CI-005 / CITE-003 / CITE-007: every trust-sensitive claim block
+    // references an approved, non-expired evidence record, and the review date
+    // it displays matches the store.
+    //
+    // The date is authored in data/facts.json but RENDERED as a literal in the
+    // page template, so without the drift half of this check the two separate
+    // silently and the page goes on asserting a review that never happened -
+    // which is worse than showing no date at all, because it looks diligent.
+    const evidenceIds = [...html.matchAll(/data-evidence-id="([^"]+)"/g)].map((m) => m[1]);
+    if (evidenceIds.length) {
+      const records = new Map((FACTS.compliance || []).map((c) => [c.id, c]));
+      const cycle = FACTS.complianceReviewCycleMonths || 12;
+      const now = new Date();
+      const referenced = [];
+      for (const id of new Set(evidenceIds)) {
+        const rec = records.get(id);
+        if (!rec) {
+          problems.push(`${label}: data-evidence-id="${id}" resolves to no record in facts.json compliance[]`);
+          continue;
+        }
+        referenced.push(rec);
+        const expires = new Date(rec.reviewedAt + 'T00:00:00Z');
+        expires.setUTCMonth(expires.getUTCMonth() + cycle);
+        if (expires < now) {
+          problems.push(`${label}: evidence "${id}" last reviewed ${rec.reviewedAt}, past its ${cycle}-month review cycle — re-review the claim or remove it`);
+        }
+      }
+      const shown = (html.match(/class="evidence-meta"[\s\S]{0,400}?<time datetime="(\d{4}-\d{2}-\d{2})"/) || [])[1];
+      const newest = referenced.map((r) => r.reviewedAt).sort().pop();
+      if (shown && newest && shown !== newest) {
+        problems.push(`${label}: displays "last reviewed ${shown}" but facts.json says ${newest}`);
       }
     }
 

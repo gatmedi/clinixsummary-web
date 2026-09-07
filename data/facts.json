@@ -7,8 +7,19 @@
     "category": "AI medical scribe",
     "url": "https://clinixsummary.ai",
     "tagline": "Voice in. Meticulous notes out.",
-    "platforms": ["Web", "iOS", "Android"],
-    "noteLanguages": ["en", "es", "pt", "it", "fr", "ar"],
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "noteLanguages": [
+      "en",
+      "es",
+      "pt",
+      "it",
+      "fr",
+      "ar"
+    ],
     "consoleCount": 13,
     "specialtyClaim": "40+"
   },
@@ -30,27 +41,114 @@
     "_source": "Live Stripe retail plans (owner decision D5, 2026-08-31: these are public). The 2026-08-31 feasibility audit found the site advertised Pioneer at $18.99 while Stripe charges $19.99 - this file carries what is ACTUALLY charged, and verify.mjs keeps the pages honest.",
     "currency": "USD",
     "plans": [
-      { "name": "Forever Free", "pricePerMonth": 0, "creditsPerMonth": 25 },
-      { "name": "Pilot 900", "pricePerMonth": 9.99, "creditsPerMonth": 75 },
-      { "name": "Pioneer 1800", "pricePerMonth": 19.99, "creditsPerMonth": 150 },
-      { "name": "Productive 3000", "pricePerMonth": 29.99, "creditsPerMonth": 250 },
-      { "name": "Prolific 6000", "pricePerMonth": 49.99, "creditsPerMonth": 500 }
+      {
+        "name": "Forever Free",
+        "pricePerMonth": 0,
+        "creditsPerMonth": 25
+      },
+      {
+        "name": "Pilot 900",
+        "pricePerMonth": 9.99,
+        "creditsPerMonth": 75
+      },
+      {
+        "name": "Pioneer 1800",
+        "pricePerMonth": 19.99,
+        "creditsPerMonth": 150
+      },
+      {
+        "name": "Productive 3000",
+        "pricePerMonth": 29.99,
+        "creditsPerMonth": 250
+      },
+      {
+        "name": "Prolific 6000",
+        "pricePerMonth": 49.99,
+        "creditsPerMonth": 500
+      }
     ],
     "enterprise": "custom",
     "lowPrice": 0,
     "highPrice": 49.99,
     "offerCount": 5,
     "_offercount_note": "5 = the priced retail plans. The Enterprise card is custom-quoted, not an offer with a price, so it does not count (the old hardcoded shell value said 6).",
-    "retiredPriceStrings": ["$18.99"],
+    "retiredPriceStrings": [
+      "$18.99"
+    ],
     "_regional_note": "Owner decisions 2026-09-01: regional pricing in these 11 currencies; EUR and TRY deliberately stay USD (EU until OSS VAT registration). Amounts are FX-derived (rates of 2026-09-01), rounded DOWN to charm points, and are EXACTLY the currency_options set on the live Stripe retail Prices - this table, the platform plan_prices rows and Stripe must never diverge.",
     "regional": {
       "ratesDate": "2026-09-01",
-      "symbols": { "USD": "$", "GBP": "£", "CAD": "CA$", "AUD": "A$", "NZD": "NZ$", "INR": "₹", "OMR": "OMR ", "KWD": "KWD ", "QAR": "QAR ", "SAR": "SAR ", "AED": "AED ", "BHD": "BHD " },
+      "symbols": {
+        "USD": "$",
+        "GBP": "£",
+        "CAD": "CA$",
+        "AUD": "A$",
+        "NZD": "NZ$",
+        "INR": "₹",
+        "OMR": "OMR ",
+        "KWD": "KWD ",
+        "QAR": "QAR ",
+        "SAR": "SAR ",
+        "AED": "AED ",
+        "BHD": "BHD "
+      },
       "plans": {
-        "Pilot 900": { "USD": 9.99, "GBP": 6.99, "CAD": 12.99, "AUD": 12.99, "NZD": 15.99, "INR": 949, "OMR": 3.79, "KWD": 2.99, "QAR": 35.99, "SAR": 36.99, "AED": 35.99, "BHD": 3.69 },
-        "Pioneer 1800": { "USD": 19.99, "GBP": 13.99, "CAD": 26.99, "AUD": 26.99, "NZD": 32.99, "INR": 1899, "OMR": 7.59, "KWD": 6.09, "QAR": 71.99, "SAR": 73.99, "AED": 72.99, "BHD": 7.49 },
-        "Productive 3000": { "USD": 29.99, "GBP": 21.99, "CAD": 40.99, "AUD": 40.99, "NZD": 49.99, "INR": 2849, "OMR": 11.49, "KWD": 9.19, "QAR": 108.99, "SAR": 111.99, "AED": 109.99, "BHD": 11.19 },
-        "Prolific 6000": { "USD": 49.99, "GBP": 35.99, "CAD": 68.99, "AUD": 68.99, "NZD": 83.99, "INR": 4749, "OMR": 19.19, "KWD": 15.39, "QAR": 180.99, "SAR": 186.99, "AED": 182.99, "BHD": 18.79 }
+        "Pilot 900": {
+          "USD": 9.99,
+          "GBP": 6.99,
+          "CAD": 12.99,
+          "AUD": 12.99,
+          "NZD": 15.99,
+          "INR": 949,
+          "OMR": 3.79,
+          "KWD": 2.99,
+          "QAR": 35.99,
+          "SAR": 36.99,
+          "AED": 35.99,
+          "BHD": 3.69
+        },
+        "Pioneer 1800": {
+          "USD": 19.99,
+          "GBP": 13.99,
+          "CAD": 26.99,
+          "AUD": 26.99,
+          "NZD": 32.99,
+          "INR": 1899,
+          "OMR": 7.59,
+          "KWD": 6.09,
+          "QAR": 71.99,
+          "SAR": 73.99,
+          "AED": 72.99,
+          "BHD": 7.49
+        },
+        "Productive 3000": {
+          "USD": 29.99,
+          "GBP": 21.99,
+          "CAD": 40.99,
+          "AUD": 40.99,
+          "NZD": 49.99,
+          "INR": 2849,
+          "OMR": 11.49,
+          "KWD": 9.19,
+          "QAR": 108.99,
+          "SAR": 111.99,
+          "AED": 109.99,
+          "BHD": 11.19
+        },
+        "Prolific 6000": {
+          "USD": 49.99,
+          "GBP": 35.99,
+          "CAD": 68.99,
+          "AUD": 68.99,
+          "NZD": 83.99,
+          "INR": 4749,
+          "OMR": 19.19,
+          "KWD": 15.39,
+          "QAR": 180.99,
+          "SAR": 186.99,
+          "AED": 182.99,
+          "BHD": 18.79
+        }
       }
     }
   },
@@ -62,8 +160,14 @@
   "whitepapers": {
     "_note": "Authors for the whitepaper landing pages (owner-provided 2026-09-01). Emitted as schema.org Person nodes on every /whitepapers/<slug>/ ScholarlyArticle.",
     "authors": [
-      { "name": "Youssef Ghaly", "honorificPrefix": "Dr" },
-      { "name": "Mostafa Helmy", "honorificPrefix": "Dr" }
+      {
+        "name": "Youssef Ghaly",
+        "honorificPrefix": "Dr"
+      },
+      {
+        "name": "Mostafa Helmy",
+        "honorificPrefix": "Dr"
+      }
     ]
   },
   "entityIds": {
@@ -74,24 +178,45 @@
   },
   "compliance": [
     {
+      "id": "mhra-class-i",
       "claim": "Registered with the UK MHRA as a Class I medical device, UKCA marked",
       "reviewedAt": "2026-08-31",
-      "shownOn": ["/security/", "/ai-medical-scribe/", "comparison pages"]
+      "shownOn": [
+        "/security/",
+        "/ai-medical-scribe/",
+        "comparison pages"
+      ],
+      "sourceUrl": null
     },
     {
+      "id": "privacy-frameworks",
       "claim": "HIPAA and GDPR aligned; PIPEDA/PHIPA and CCPA requirements met",
       "reviewedAt": "2026-08-31",
-      "shownOn": ["/security/", "/"]
+      "shownOn": [
+        "/security/",
+        "/"
+      ],
+      "sourceUrl": null
     },
     {
-      "claim": "SOC 2 aligned; ISO 27001 aligned (ALIGNED, not certified - the /leaflet badges overstate this; flagged to owner 2026-08-31)",
+      "id": "soc2-iso27001",
+      "claim": "SOC 2 aligned; ISO 27001 aligned. ALIGNED, not certified - the badges say exactly \"Aligned\" and must never be widened to \"certified\" (owner decision 2026-09-07, verified live on /security/ and the homepage in all six locales).",
       "reviewedAt": "2026-08-31",
-      "shownOn": ["/security/", "/"]
+      "shownOn": [
+        "/security/",
+        "/"
+      ],
+      "sourceUrl": null
     },
     {
+      "id": "encryption-retention",
       "claim": "TLS 1.2+ in transit, AES-256 at rest; audio deleted permanently once the note is generated",
       "reviewedAt": "2026-08-31",
-      "shownOn": ["/security/"]
+      "shownOn": [
+        "/security/"
+      ],
+      "sourceUrl": null
     }
-  ]
+  ],
+  "complianceReviewCycleMonths": 12
 }
