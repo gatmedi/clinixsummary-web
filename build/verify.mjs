@@ -21,7 +21,11 @@
  *       strings are gone) — the $18.99-vs-Stripe-$19.99 class of bug;
  *   18. hand-built staticPages carry their declared robots directive;
  *   19. sitemap lastmod dates are valid, never in the future, and
- *       build/content-hashes.json matches the generated output.
+ *       build/content-hashes.json matches the generated output;
+ *   20. research landings (/whitepapers/<slug>) carry exactly one
+ *       ScholarlyArticle with an author, a datePublished and an AUTHORED
+ *       dateModified that neither precedes publication nor sits in the
+ *       future (GEO-CI-008 / PAGE-RES-001).
  * Exits non-zero with a full report if anything fails.
  */
 import { readFile } from 'node:fs/promises';
@@ -228,6 +232,30 @@ for (const route of CFG.routes) {
       if (new RegExp(`href="(?:/(?:${CFG.locales.join('|')}))?${escapeRe(old)}(?:/|")`).test(html)) {
         problems.push(`${label}: internal link to retired slug ${old}`);
         break;
+      }
+    }
+
+    // 20. GEO-CI-008 / PAGE-RES-001: research landings carry a complete
+    // ScholarlyArticle. dateModified must be present, not precede publication
+    // and not be in the future. It is AUTHORED (WP_ARTICLES.modified), never
+    // derived from the content hash — see the note in build/prerender.mjs.
+    if (route.startsWith('/whitepapers/') && Array.isArray(graph)) {
+      const arts = graph.filter(n => n['@type'] === 'ScholarlyArticle');
+      if (arts.length !== 1) {
+        problems.push(`${label}: ${arts.length} ScholarlyArticle nodes (want exactly 1)`);
+      } else {
+        const a = arts[0];
+        if (!Array.isArray(a.author) || a.author.length === 0) problems.push(`${label}: ScholarlyArticle has no author`);
+        if (!a.datePublished) problems.push(`${label}: ScholarlyArticle missing datePublished`);
+        if (!a.dateModified) problems.push(`${label}: ScholarlyArticle missing dateModified`);
+        if (a.datePublished && a.dateModified) {
+          // Dates carry mixed precision (published YYYY-MM, modified YYYY-MM-DD),
+          // so pad before comparing or a same-month pair sorts wrongly.
+          const pad = (d) => (d.length === 7 ? d + '-01' : d);
+          const today = new Date().toISOString().slice(0, 10);
+          if (pad(a.dateModified) < pad(a.datePublished)) problems.push(`${label}: dateModified ${a.dateModified} precedes datePublished ${a.datePublished}`);
+          if (pad(a.dateModified) > today) problems.push(`${label}: dateModified ${a.dateModified} is in the future`);
+        }
       }
     }
 

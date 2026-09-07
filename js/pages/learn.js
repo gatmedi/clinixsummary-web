@@ -599,6 +599,8 @@ const WP_ARTICLES = [
         ],
         "pdf": "/docs/whitepapers/ar-arabic-nlp-medical-2026.pdf",
         "date": "2025-11",
+
+        "modified": "2026-09-01",
         "paperLang": "ar",
         "icon": "neurology"
     },
@@ -638,6 +640,8 @@ const WP_ARTICLES = [
         ],
         "pdf": "/docs/whitepapers/fr-conformite-rgpd-documentation-2026.pdf",
         "date": "2025-09",
+
+        "modified": "2026-09-01",
         "paperLang": "fr",
         "icon": "policy"
     },
@@ -681,6 +685,8 @@ const WP_ARTICLES = [
         ],
         "pdf": "/docs/whitepapers/ambient-audio-processing-2025.pdf",
         "date": "2025-08",
+
+        "modified": "2026-09-01",
         "paperLang": "en",
         "icon": "graphic_eq"
     },
@@ -724,6 +730,8 @@ const WP_ARTICLES = [
         ],
         "pdf": "/docs/whitepapers/quality-management-system-qms-2025.pdf",
         "date": "2025-07",
+
+        "modified": "2026-09-01",
         "paperLang": "en",
         "icon": "verified"
     },
@@ -767,6 +775,8 @@ const WP_ARTICLES = [
         ],
         "pdf": "/docs/whitepapers/security-compliance-specification-2025.pdf",
         "date": "2025-06",
+
+        "modified": "2026-09-01",
         "paperLang": "en",
         "icon": "security"
     },
@@ -806,6 +816,8 @@ const WP_ARTICLES = [
         ],
         "pdf": "/docs/whitepapers/integration-framework-ehr-emr-2025.pdf",
         "date": "2025-05",
+
+        "modified": "2026-09-01",
         "paperLang": "en",
         "icon": "integration_instructions"
     },
@@ -849,6 +861,8 @@ const WP_ARTICLES = [
         ],
         "pdf": "/docs/whitepapers/clinical-model-training-methodology-2025.pdf",
         "date": "2025-04",
+
+        "modified": "2026-09-01",
         "paperLang": "en",
         "icon": "model_training"
     },
@@ -892,6 +906,8 @@ const WP_ARTICLES = [
         ],
         "pdf": "/docs/whitepapers/clinixsummary-architecture-overview-2025.pdf",
         "date": "2025-03",
+
+        "modified": "2026-09-01",
         "paperLang": "en",
         "icon": "architecture"
     }
@@ -919,7 +935,7 @@ function WhitepaperArticlePage(slug) {
     return `
         <section class="subpage-container">
             <div class="page-width">
-                <div data-wp-title="${a.title.replace(/"/g, '&quot;')}" data-wp-date="${a.date}" data-wp-pdf="${a.pdf}" data-wp-inlang="${a.paperLang}" hidden></div>
+                <div data-wp-title="${a.title.replace(/"/g, '&quot;')}" data-wp-date="${a.date}" data-wp-modified="${a.modified}" data-wp-pdf="${a.pdf}" data-wp-inlang="${a.paperLang}" hidden></div>
                 <p style="margin-bottom: 16px;"><a href="/whitepapers" style="font-weight: 600;">&larr; All whitepapers</a></p>
                 <div class="subpage-header" style="margin-bottom: 32px;">
                     <span class="kicker">Whitepaper</span>
