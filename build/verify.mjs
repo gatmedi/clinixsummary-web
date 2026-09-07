@@ -17,15 +17,20 @@
  *   14. BreadcrumbList exactly on routes with a routeMeta.breadcrumb parent;
  *   15. robots directive matches the manifest (no stray noindex);
  *   16. no internal link points at a retired slug (build/slug-renames.json);
- *   17. rendered pricing agrees with data/facts.json (and retired price
- *       strings are gone) — the $18.99-vs-Stripe-$19.99 class of bug;
+ *   17. rendered pricing on BOTH the homepage and /pricing/ agrees with
+ *       data/facts.json (and retired price strings are gone) — the
+ *       $18.99-vs-Stripe-$19.99 class of bug (GEO-CI-004);
  *   18. hand-built staticPages carry their declared robots directive;
  *   19. sitemap lastmod dates are valid, never in the future, and
  *       build/content-hashes.json matches the generated output;
  *   20. research landings (/whitepapers/<slug>) carry exactly one
  *       ScholarlyArticle with an author, a datePublished and an AUTHORED
  *       dateModified that neither precedes publication nor sits in the
- *       future (GEO-CI-008 / PAGE-RES-001).
+ *       future (GEO-CI-008 / PAGE-RES-001);
+ *   21. no production dependency on llms.txt — not in any generated page,
+ *       not in robots.txt or sitemap.xml, and no such file at the root
+ *       (GEO-CI-010). A policy gate: remove it deliberately if we ever
+ *       decide to adopt llms.txt, rather than letting it drift in.
  * Exits non-zero with a full report if anything fails.
  */
 import { readFile } from 'node:fs/promises';
@@ -259,13 +264,27 @@ for (const route of CFG.routes) {
       }
     }
 
-    // 17. rendered pricing agrees with the facts store (homepage carries the cards)
-    if (route === '/') {
+    // 17. rendered pricing agrees with the facts store (GEO-CI-004).
+    // Both pages that carry plan cards are checked. The gate was written in
+    // Phase 2, when the homepage was the only one — /pricing/ arrived two
+    // commits later in Phase 4.1 and nobody widened this, so the dedicated
+    // pricing page has been unguarded against exactly the $18.99-vs-$19.99
+    // drift this exists to catch. Explicit allowlist, not "any route with a
+    // price": /ai-medical-scribe carries a single "from" price and would fail
+    // four plans out of five, and /roi-calculator is an alias of / that would
+    // be picked up implicitly rather than deliberately.
+    const PRICE_PAGES = ['/', '/pricing'];
+    if (PRICE_PAGES.includes(route)) {
       for (const plan of FACTS.pricing.plans) {
         if (plan.pricePerMonth === 0) continue;
         const priceStr = '$' + plan.pricePerMonth;
-        if (!appContent.includes(priceStr)) problems.push(`${label}: homepage does not show ${plan.name} at ${priceStr}`);
+        if (!appContent.includes(priceStr)) problems.push(`${label}: does not show ${plan.name} at ${priceStr}`);
       }
+    }
+
+    // 21. GEO-CI-010: no production dependency on llms.txt, per page.
+    if (html.includes('llms.txt')) {
+      problems.push(`${label}: references llms.txt (GEO-CI-010 — see the note at the one-shot check below)`);
     }
     for (const retired of (FACTS.pricing.retiredPriceStrings || [])) {
       if (html.includes(retired)) problems.push(`${label}: retired price string "${retired}" still on the page`);
@@ -368,6 +387,26 @@ for (const [rel, wantRobots] of Object.entries(CFG.staticPages || {})) {
     }
   }
   if (!existsSync(path.join(ROOT, 'images', 'og-card.png'))) problems.push('images/og-card.png: MISSING');
+}
+
+// ── 21. GEO-CI-010: no production dependency on llms.txt ────────────────
+// THIS IS A POLICY GATE, NOT A BUG DETECTOR. llms.txt is an unratified
+// proposal that no major crawler consumes, and the spec is explicit that no
+// production requirement may depend on it. Crawler policy for this site lives
+// in build/crawler-policy.json and is emitted to robots.txt by build/robots.mjs.
+// If the ecosystem changes and we decide to adopt it, REMOVE this check
+// deliberately as part of that decision - do not let the file drift in
+// unnoticed, and do not delete the check to make a red build go away.
+{
+  for (const f of ['robots.txt', 'sitemap.xml']) {
+    const p = path.join(ROOT, f);
+    if (existsSync(p) && (await readFile(p, 'utf8')).includes('llms.txt')) {
+      problems.push(`${f}: references llms.txt (GEO-CI-010: no production dependency on llms.txt)`);
+    }
+  }
+  if (existsSync(path.join(ROOT, 'llms.txt'))) {
+    problems.push('llms.txt exists at the site root (GEO-CI-010) — it is unratified and unconsumed; crawler policy belongs in build/crawler-policy.json');
+  }
 }
 
 console.log(`Verified ${checked} generated pages.`);
