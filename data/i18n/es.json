@@ -624,7 +624,8 @@
     "mhra_f2_title": "Marcado UKCA",
     "mhra_f2_desc": "El marcado UKCA declara la conformidad con las UK Medical Devices Regulations para un dispositivo de clase I, y cubre los requisitos de seguridad, desempeño y etiquetado.",
     "mhra_f3_title": "Regido por ClinixQM",
-    "mhra_f3_desc": "Nuestro sistema de gestión de calidad sustenta el registro: procesos documentados de gestión de riesgos, control de cambios, manejo de incidentes y mejora continua."
+    "mhra_f3_desc": "Nuestro sistema de gestión de calidad sustenta el registro: procesos documentados de gestión de riesgos, control de cambios, manejo de incidentes y mejora continua.",
+    "evidence_reviewed": "Última revisión"
   },
   "contact": {
     "kicker": "Contáctenos",
