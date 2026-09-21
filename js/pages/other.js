@@ -312,14 +312,14 @@ function SecurityPage() {
                         </div>
                     </div>
                     <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <a href="assets/leaflets/patient-privacy-notice-en.pdf" download class="btn-primary" style="text-decoration: none; white-space: nowrap; font-size: 14px;">
+                        <a href="/assets/leaflets/patient-privacy-notice-en.pdf" download class="btn-primary" style="text-decoration: none; white-space: nowrap; font-size: 14px;">
                             <span class="material-symbols-rounded" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">download</span> English
                         </a>
-                        <a href="assets/leaflets/patient-privacy-notice-fr.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Fran\u00e7ais</a>
-                        <a href="assets/leaflets/patient-privacy-notice-es.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Espa\u00f1ol</a>
-                        <a href="assets/leaflets/patient-privacy-notice-pt.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Portugu\u00eas</a>
-                        <a href="assets/leaflets/patient-privacy-notice-it.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Italiano</a>
-                        <a href="assets/leaflets/patient-privacy-notice-ar.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">\u0627\u0644\u0639\u0631\u0628\u064a\u0629</a>
+                        <a href="/assets/leaflets/patient-privacy-notice-fr.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Fran\u00e7ais</a>
+                        <a href="/assets/leaflets/patient-privacy-notice-es.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Espa\u00f1ol</a>
+                        <a href="/assets/leaflets/patient-privacy-notice-pt.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Portugu\u00eas</a>
+                        <a href="/assets/leaflets/patient-privacy-notice-it.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Italiano</a>
+                        <a href="/assets/leaflets/patient-privacy-notice-ar.pdf" download class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">\u0627\u0644\u0639\u0631\u0628\u064a\u0629</a>
                     </div>
                 </div>
 
@@ -1246,7 +1246,7 @@ function LeafletPage() {
     ];
 
     const cards = langs.map(l => `
-        <a href="assets/leaflets/patient-privacy-notice-${l.code}.pdf" download class="card" style="text-decoration: none; display: flex; align-items: center; gap: 16px; cursor: pointer;">
+        <a href="/assets/leaflets/patient-privacy-notice-${l.code}.pdf" download class="card" style="text-decoration: none; display: flex; align-items: center; gap: 16px; cursor: pointer;">
             <span class="material-symbols-rounded" style="font-size: 36px; color: var(--accent);">download</span>
             <div>
                 <h3 style="margin-bottom: 2px;">${l.native}</h3>
