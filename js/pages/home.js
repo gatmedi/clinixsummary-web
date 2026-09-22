@@ -416,13 +416,6 @@ function PricingPage() {
                     <span class="kicker" data-i18n="pricing.kicker">Pricing</span>
                     <h1 class="subpage-title" data-i18n="pricing.h1">ClinixSummary pricing</h1>
                     <p class="subpage-copy" data-i18n-html="pricing.h1_sub">Start free - no credit card, no sign-up to try the console. Transparent credit-based plans, cancel anytime. The same <a href="/ai-medical-scribe">AI medical scribe</a> on every plan.</p>
-                    <div style="margin-top: 24px; display: inline-flex; align-items: center; gap: 10px;">
-                        <label for="pricing-currency" data-i18n="pricing.currency_label" style="font-weight: 600;">Currency</label>
-                        <select id="pricing-currency" style="padding: 8px 12px; border: 1px solid var(--border-subtle); border-radius: 8px; font-size: 15px;">
-                            <option value="USD" selected>USD $</option>
-                        </select>
-                        <span class="fs-8" data-i18n="pricing.currency_note" style="font-size: 13px; color: var(--text-secondary);">Detected from your region — you can change it.</span>
-                    </div>
                 </div>
             </div>
         </section>
@@ -479,35 +472,89 @@ function detectRegionalCurrency() {
     } catch (e) { return null; }
 }
 
+// How much a price is worth is a business decision; how it is WRITTEN is a
+// locale convention, and Intl.NumberFormat already knows every one of them from
+// CLDR. Hand-rolling it produced three wrong answers in twelve:
+//
+//   INR 1899  ->  we wrote  Rs1899     correct: Rs 1,899.00  (no separator at all)
+//   KWD 2.99  ->  we wrote  KWD 2.99   correct: KWD 2.990    (three-decimal currency)
+//   BHD/OMR       same three-decimal fault
+//
+// and on the Arabic pages it wrote a Latin code where the riyal has its own
+// Arabic form. The dinar cases are the ones that matter commercially: a price
+// shown to two decimals in a three-decimal currency is a different number from
+// the one the invoice will carry.
+//
+// The PAGE's language decides the separators and the symbol's placement; the
+// DETECTED currency decides which symbol. Those two are independent here - a
+// French-language page can be read from Riyadh - and Intl composes them
+// correctly, which a lookup table cannot.
+function formatPrice(amount, currency) {
+    var locale = document.documentElement.lang || 'en';
+
+    try {
+        return new Intl.NumberFormat(locale, {
+            style: 'currency',
+            currency: currency,
+        }).format(amount);
+    } catch (e) {
+        // 🔴 THE FALLBACK MUST NOT REINTRODUCE THE FAULT. `currency + ' ' + amount`
+        // prints "KWD 2.99" - the exact two-decimals-in-a-three-decimal-currency
+        // error this function exists to prevent.
+        //
+        // The realistic failure here is a malformed lang attribute, not a
+        // missing currency: Intl.NumberFormat('en_US') throws where 'en' does
+        // not. So try English before giving up, and the decimals stay right.
+        try {
+            return new Intl.NumberFormat('en', {
+                style: 'currency',
+                currency: currency,
+            }).format(amount);
+        } catch (e2) {
+            return currency + ' ' + amount;
+        }
+    }
+}
+
+// The fetched price table, kept for the life of the tab. A client-side
+// navigation back to /pricing must re-apply the currency to the NEW elements,
+// so the guard cannot live on the document - only the network call is cached.
+var _regionalPricing = null;
+
 function initPricingCurrency() {
-    var picker = document.getElementById('pricing-currency');
-    if (!picker || picker.dataset.ready) { return; }
     // Hermetic prerender: skip entirely at build time (local port) so the
     // baked pages never depend on network state - USD stays the crawled truth.
     if (location.port) { return; }
-    picker.dataset.ready = '1';
+
+    if (!document.querySelector('[data-price-plan]')) { return; }
+
+    var applyRegionalPricing = function (regional) {
+        if (!regional || !regional.plans) { return; }
+
+        // The region decides, and nothing on the page says otherwise. A visitor
+        // reading from Riyadh sees riyals; one reading from London sees pounds.
+        // That is the whole of the rule.
+        var detected = detectRegionalCurrency();
+        var pilot = regional.plans['Pilot 900'] || {};
+        var currency = (detected && pilot[detected] !== undefined) ? detected : 'USD';
+
+        document.querySelectorAll('[data-price-plan]').forEach(function (el) {
+            var plan = regional.plans[el.getAttribute('data-price-plan')];
+            if (!plan || plan[currency] === undefined) { return; }
+            el.textContent = formatPrice(plan[currency], currency);
+        });
+    };
+
+    if (_regionalPricing) {
+        applyRegionalPricing(_regionalPricing);
+        return;
+    }
+
     fetch(BASE_PATH + '/data/facts.json', { cache: 'no-cache' })
         .then(function (r) { return r.json(); })
         .then(function (facts) {
-            var regional = facts && facts.pricing && facts.pricing.regional;
-            if (!regional) { return; }
-            var currencies = Object.keys(regional.symbols);
-            picker.innerHTML = currencies.map(function (c) {
-                return '<option value="' + c + '"' + (c === 'USD' ? ' selected' : '') + '>' + c + ' ' + regional.symbols[c].trim() + '</option>';
-            }).join('');
-            var applyCurrency = function (ccy) {
-                document.querySelectorAll('[data-price-plan]').forEach(function (el) {
-                    var plan = regional.plans[el.getAttribute('data-price-plan')];
-                    if (!plan || plan[ccy] === undefined) { return; }
-                    el.textContent = (regional.symbols[ccy] || '') + plan[ccy];
-                });
-            };
-            picker.addEventListener('change', function () { applyCurrency(picker.value); });
-            var detected = detectRegionalCurrency();
-            if (detected && regional.symbols[detected]) {
-                picker.value = detected;
-                applyCurrency(detected);
-            }
+            _regionalPricing = facts && facts.pricing && facts.pricing.regional;
+            applyRegionalPricing(_regionalPricing);
         })
         .catch(function () { /* pricing stays USD */ });
 }
