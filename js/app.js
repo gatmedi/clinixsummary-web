@@ -221,9 +221,12 @@ function router() {
             }
         });
 
-        if (path === '/pricing') {
-            initPricingCurrency();
-        }
+        // 🔴 NOT just '/pricing'. The HOME PAGE carries the same four plan
+        // cards, and this only ever ran on /pricing - so every visitor who saw
+        // the prices on the homepage saw them in US dollars regardless of where
+        // they were reading from. initPricingCurrency() now returns immediately
+        // when a page has no price elements, so asking on every page is free.
+        initPricingCurrency();
         if (path === '/roi-calculator') {
              setTimeout(() => {
                 const sectionId = path.substring(1); // remove leading /
