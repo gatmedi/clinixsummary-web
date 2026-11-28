@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="pt-PT" dir="ltr" data-ssg="1"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança, privacidade e conformidade — verificadas. – ClinixSummary</title>
+    <meta name="description" content="Trust Center — HIPAA, GDPR, SOC 2 aligned. Sub-processor transparency, encryption, ephemeral audio, and quality management powered by ClinixQM.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Segurança, privacidade e conformidade — verificadas. – ClinixSummary">
+    <meta property="og:description" content="Trust Center — HIPAA, GDPR, SOC 2 aligned. Sub-processor transparency, encryption, ephemeral audio, and quality management powered by ClinixQM.">
+    <meta property="og:image" content="https://clinixsummary.ai/images/og-card.png">
+    <meta property="og:url" content="https://clinixsummary.ai/pt-pt/security/">
+    <meta property="og:site_name" content="ClinixSummary">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Segurança, privacidade e conformidade — verificadas. – ClinixSummary">
+    <meta name="twitter:description" content="Trust Center — HIPAA, GDPR, SOC 2 aligned. Sub-processor transparency, encryption, ephemeral audio, and quality management powered by ClinixQM.">
+    <meta name="twitter:image" content="https://clinixsummary.ai/images/og-card.png">
+
+    <link rel="canonical" href="https://clinixsummary.ai/pt-pt/security/">
+    <link rel="icon" type="image/png" href="/images/logo-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&amp;family=Tajawal:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css?v=bfb304e476">
+
+    <!-- Deployment-aware base path (GitHub Pages subpath vs production root) -->
+    <script>
+        window.BASEPATH="/pt-pt";
+        const BASE_PATH = "https://clinixsummary.ai";
+        /* First-visit language auto-detection (owner request 2026-09-01):
+           visitors whose browser language is one of the site's locales land on
+           their language automatically. Fires at most ONCE ever (flag), never
+           on locale-prefixed URLs, never once a language choice is stored,
+           never during prerender (local-port guard), and never for search
+           crawlers (they render as en-US, which never triggers a redirect -
+           hreflang discovery is unaffected). EN-only and off-manifest routes
+           are excluded. */
+        (function () {
+            try {
+                if (location.port) return; /* prerender serves from a local port; production has none */
+                if (window.BASEPATH) return;
+                var p = location.pathname;
+                if (/^\/(fr|fr-ca|es|es-es|pt|pt-pt|it|ar)(\/|$)/.test(p)) return;
+                if (localStorage.getItem('clinixsummary-lang') || localStorage.getItem('clinixsummary-lang-suggested')) return;
+                /* A regional page where the browser names that region
+                   (pt-PT, es-ES, fr-CA); otherwise the language's own page. */
+                var full = (navigator.language || '').toLowerCase();
+                var lang = { 'pt-pt': 1, 'es-es': 1, 'fr-ca': 1 }[full] ? full : full.slice(0, 2);
+                if (!{ fr: 1, 'fr-ca': 1, es: 1, 'es-es': 1, pt: 1, 'pt-pt': 1, it: 1, ar: 1 }[lang]) return;
+                if (p.indexOf('.') > -1) return;
+                var skip = ['/case-studies', '/status', '/compare', '/clinixsummary-vs-', '/for-institutions'];
+                for (var i = 0; i < skip.length; i++) { if (p.indexOf(skip[i]) === 0) return; }
+                if (/^\/whitepapers\/./.test(p)) return; /* EN-only article landings; the hub itself is translated */
+                localStorage.setItem('clinixsummary-lang-suggested', '1');
+                localStorage.setItem('clinixsummary-lang', lang);
+                location.replace('/' + lang + (p === '/' ? '/' : p) + location.search + location.hash);
+            } catch (e) { /* never block the page over language detection */ }
+        })();
+    </script>
+
+    
+<link rel="alternate" hreflang="en" href="https://clinixsummary.ai/security/"><link rel="alternate" hreflang="fr" href="https://clinixsummary.ai/fr/security/"><link rel="alternate" hreflang="fr-CA" href="https://clinixsummary.ai/fr-ca/security/"><link rel="alternate" hreflang="es" href="https://clinixsummary.ai/es/security/"><link rel="alternate" hreflang="es-ES" href="https://clinixsummary.ai/es-es/security/"><link rel="alternate" hreflang="pt" href="https://clinixsummary.ai/pt/security/"><link rel="alternate" hreflang="pt-PT" href="https://clinixsummary.ai/pt-pt/security/"><link rel="alternate" hreflang="it" href="https://clinixsummary.ai/it/security/"><link rel="alternate" hreflang="ar" href="https://clinixsummary.ai/ar/security/"><link rel="alternate" hreflang="x-default" href="https://clinixsummary.ai/security/"><meta property="og:locale" content="pt_PT"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://clinixsummary.ai/#organization","name":"GATMEDI","legalName":"Gacrux Advanced Technologies in Medicine Ltd","url":"https://clinixsummary.ai","logo":"https://clinixsummary.ai/images/logo-full.png","brand":{"@type":"Brand","name":"ClinixSummary"},"sameAs":["https://apps.apple.com/us/app/clinixsummary/id6740857768","https://play.google.com/store/apps/details?id=com.gacrux.clinixsummaryai","https://www.facebook.com/clinixsummary","https://x.com/clinixsummary","https://www.linkedin.com/company/clinixsummary"]},{"@type":"WebSite","@id":"https://clinixsummary.ai/#website","name":"ClinixSummary","url":"https://clinixsummary.ai/","publisher":{"@id":"https://clinixsummary.ai/#organization"},"inLanguage":"pt-PT"}]}</script></head>
+<body>
+    <!-- GitHub Pages SPA redirect handler — replays the path saved by 404.html -->
+    <script>!function(){var r=sessionStorage.getItem('spa-redirect');if(r){sessionStorage.removeItem('spa-redirect');history.replaceState(null,'',r);}}();</script>
+
+    <a href="#app-content" class="skip-link">Skip to content</a>
+
+    <div class="header-wrapper">
+        <header class="navbar">
+            <div class="navbar-content"> <!-- NEW CONTAINER FOR ALIGNMENT -->
+                <a href="/pt-pt/" class="logo" id="home-link">
+                    <img src="/images/logo-wings.png" alt="" class="logo-symbol" height="53" width="53">
+                    <img src="/images/logo-footer.png" alt="ClinixSummary" class="logo-wordmark" height="74" width="112">
+                </a>
+
+                <div class="mobile-toggle material-symbols-rounded" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">menu</div>
+
+                <div class="nav-right-group">
+                    <nav class="nav-menu" aria-label="Main navigation">
+
+                        <!-- 1. Meet ClinixSummary (NOW TWO COLUMNS) -->
+                        <div class="nav-item">
+                            <div class="nav-link active" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.meet_clinixs">Conheça o ClinixSummary</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown wide" role="menu">
+
+                                <!-- Column 1: Core Architecture -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.core_arch">Arquitetura central</div>
+                                    <a href="/pt-pt/ai-clinical-notes/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.meticulous_notes">Notas meticulosas</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.meticulous_notes_desc">Precisas, detalhadas e bem estruturadas</span>
+                                    </a>
+                                    <a href="/pt-pt/proprietary-models/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.proprietary_models">Modelos proprietários</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.proprietary_models_desc">Motores de linguagem médica especializados.</span>
+                                    </a>
+                                    <a href="/pt-pt/kaizen/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.kaizen">Kai-zen</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.kaizen_desc">Ciclo de aprendizagem contínua.</span>
+                                    </a>
+                                    <a href="/pt-pt/security/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.security">Centro de confiança</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.security_desc">Segurança, conformidade e SGQ.</span>
+                                    </a>
+                                </div>
+
+                                <!-- Column 2: Advanced Features & Compliance -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.features_compliance">Funcionalidades e conformidade</div>
+                                    <a href="/pt-pt/multilingual-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.languages">Idiomas</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.languages_desc">Vários idiomas, para atender em qualquer país.</span>
+                                    </a>
+                                    <a href="/pt-pt/ambient-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.auto_ambient">Captura automática</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.auto_ambient_desc">Reconhece sozinho se é escuta ambiente ou ditado</span>
+                                    </a>
+                                    <a href="/pt-pt/clinix-foundation/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.clinix_foundation">Clinix Foundation</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.clinix_foundation_desc">Iniciativa global de saúde sem fins lucrativos.</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Solutions -->
+                        <div class="nav-item">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.solutions">Soluções</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown wide" role="menu">
+                                <!-- Sector Column (Left) -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.sectors">Setores</div>
+                                    <a href="/pt-pt/clinicians/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.for_clinicians">Para profissionais de saúde</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.for_clinicians_desc">Consultório próprio e clínicas privadas.</span>
+                                    </a>
+                                    <a href="/pt-pt/organizations/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.for_orgs">Para organizações</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.for_orgs_desc">Hospitais e redes de saúde.</span>
+                                    </a>
+                                    <a href="/pt-pt/insurers/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.insurers">Seguradoras de saúde</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.insurers_desc">Rede convencionada com análise de pedidos mais rápida</span>
+                                    </a>
+                                    <a href="/pt-pt/government/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.government">Governo</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.government_desc">Setor público e esfera federal.</span>
+                                    </a>
+                                    <a href="/pt-pt/nonprofit/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.nonprofit">Sem fins lucrativos</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.nonprofit_desc">ClinixFoundation</span>
+                                    </a>
+                                </div>
+                                <!-- Use Case Column (Right) -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.use_cases">Casos de utilização</div>
+                                    <a href="/pt-pt/ai-medical-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.by_specialty">Por especialidade</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.by_specialty_desc">Mais de 40 especialidades médicas e áreas multiprofissionais, além dos módulos de apoio</span>
+                                    </a>
+                                    <a href="/pt-pt/integrations/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.integrations">Integrações</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.integrations_desc">Exportação flexível para o seu processo clínico eletrónico (EHR/EMR).</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Capabilities (UPDATED: Two column layout with 7+5 items) -->
+                        <div class="nav-item">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.capabilities">Funcionalidades</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown wide" role="menu" style="min-width: 550px;">
+
+                                <!-- Column 1: Core Modules (8 items) -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.specialty_modules">Módulos por especialidade e área multiprofissional</div>
+                                    <a href="/pt-pt/ai-medical-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.medical">Escriba médico com IA</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.medical_desc">Todas as especialidades</span>
+                                    </a>
+                                    <a href="/pt-pt/dental-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.dental">Medicina dentária</span>
+                                    </a>
+                                    <a href="/pt-pt/psychiatry-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.psychiatry">Psiquiatria</span>
+                                    </a>
+                                    <a href="/pt-pt/psychology-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.psychology">Psicologia</span>
+                                    </a>
+                                    <a href="/pt-pt/allied-health-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.allied_health">Saúde multiprofissional</span>
+                                    </a>
+                                    <a href="/pt-pt/physiotherapy-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.physio">Fisioterapia</span>
+                                    </a>
+                                    <a href="/pt-pt/occupational-therapy-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.ot">Terapia ocupacional</span>
+                                    </a>
+                                    <a href="/pt-pt/speech-therapy-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.slt">Terapia da fala</span>
+                                    </a>
+                                    <a href="/pt-pt/nutrition-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.nutrition">Nutrição clínica</span>
+                                    </a>
+                                    <a href="/pt-pt/midwifery-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.midwifery">Saúde materna e obstétrica</span>
+                                    </a>
+                                    <a href="/pt-pt/veterinary-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.vet_medicine">Medicina veterinária</span>
+                                    </a>
+                                    <a href="/pt-pt/operative-note-ai/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.operational_notes">Relato operatório</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.operational_notes_desc">Para cirurgias e procedimentos</span>
+                                    </a>
+                                </div>
+
+                                <!-- Column 2: Workflow & Assist Tools -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.workflow_tools">Ferramentas de fluxo e apoio</div>
+                                    <a href="/pt-pt/cme-vault/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title"><span data-i18n="dropdown.cme_vault">Acervo de desenvolvimento profissional</span> <span class="beta-tag" data-i18n="common.new_badge">Novo</span></span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.cme_vault_desc">Aprendizagem médica e desenvolvimento profissional.</span>
+                                    </a>
+                                    <a href="/pt-pt/medical-billing-ai/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.billing_assist">Assistente de faturação</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.billing_assist_desc">Somente para organizações</span>
+                                    </a>
+                                    <a href="/pt-pt/referral-letter-ai/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.referrals">Referenciações</span>
+                                    </a>
+                                    <a href="/pt-pt/icd-coding/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.icd_coding">Codificação CID</span>
+                                    </a>
+                                    <a href="/pt-pt/patient-leaflet-generator/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.patient_leaflet">Folheto para o doente</span>
+                                    </a>
+                                    <div class="separator"></div>
+                                    <a href="/pt-pt/radiology-ai/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title"><span data-i18n="dropdown.radiology_assist">Assistente de radiologia</span> <span class="beta-tag" data-i18n="common.beta_badge">Beta</span></span>
+                                    </a>
+                                    <a href="/pt-pt/dermatology-ai/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title"><span data-i18n="dropdown.dermatology_assist">Assistente de dermatologia</span> <span class="beta-tag" data-i18n="common.beta_badge">Beta</span></span>
+                                    </a>
+                                    <a href="/pt-pt/medical-triage-ai/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title"><span data-i18n="dropdown.triage_assist">Assistente de triagem</span> <span class="beta-tag" data-i18n="common.beta_badge">Beta</span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Learn (UPDATED FROM RESOURCES) -->
+                        <div class="nav-item">
+                            <div class="nav-link active" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.learn">Conteúdos</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown" role="menu">
+                                <a href="/pt-pt/publications/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.publications">Publicações</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.publications_desc">Relatórios técnicos.</span>
+                                </a>
+                                <a href="/pt-pt/whitepapers/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.whitepapers">Whitepapers</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.whitepapers_desc">Metodologia técnica.</span>
+                                </a>
+                                <a href="/case-studies/" class="dropdown-item" role="menuitem"><span class="dropdown-title" data-i18n="dropdown.case_studies">Casos de sucesso</span></a>
+                                <a href="/pt-pt/security/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.compliance">Central de confiança</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.compliance_desc">Segurança e conformidade.</span>
+                                </a>
+                                <div class="separator"></div>
+                                <a href="/pt-pt/news/" class="dropdown-item" role="menuitem"><span class="dropdown-title" data-i18n="dropdown.news_events">Notícias e eventos</span></a>
+                            </div>
+                        </div>
+
+                        <!-- 5. Pricing -->
+                        <div class="nav-item">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.pricing">Planos</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown" role="menu">
+                                <a href="/pt-pt/pricing/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.see_pricing">Ver planos</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.see_pricing_desc">Do plano gratuito ao empresarial.</span>
+                                </a>
+                                <a href="/pt-pt/roi-calculator/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.roi_calculator">Calculadora de ROI</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.roi_calculator_desc">Calcule quanto poupa.</span>
+                                </a>
+                                <div class="separator"></div>
+                                <a href="/pt-pt/contact/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.enterprise_contact">Empresarial</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.plan_enterprise_desc">Licenciamento por volume à medida.</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </nav>
+
+                    <!-- Language Switcher -->
+                    <div id="lang-switcher" class="lang-switcher"><button class="lang-switcher-btn" aria-label="Change language">
+            <span class="material-symbols-rounded" style="font-size:18px;">language</span>
+            <span class="lang-code">PT-PT</span>
+            <span class="material-symbols-rounded" style="font-size:16px;">expand_more</span>
+        </button>
+        <div class="lang-dropdown"><button class="lang-option" data-lang="en">
+                <span class="lang-native">English</span>
+                <span class="lang-english">English</span>
+            </button><button class="lang-option" data-lang="fr">
+                <span class="lang-native">Français (France)</span>
+                <span class="lang-english">French (France)</span>
+            </button><button class="lang-option" data-lang="fr-ca">
+                <span class="lang-native">Français (Canada)</span>
+                <span class="lang-english">French (Canada)</span>
+            </button><button class="lang-option" data-lang="es">
+                <span class="lang-native">Español (Latinoamérica)</span>
+                <span class="lang-english">Spanish (Latin America)</span>
+            </button><button class="lang-option" data-lang="es-es">
+                <span class="lang-native">Español (España)</span>
+                <span class="lang-english">Spanish (Spain)</span>
+            </button><button class="lang-option" data-lang="pt">
+                <span class="lang-native">Português (Brasil)</span>
+                <span class="lang-english">Portuguese (Brazil)</span>
+            </button><button class="lang-option active" data-lang="pt-pt">
+                <span class="lang-native">Português (Portugal)</span>
+                <span class="lang-english">Portuguese (Portugal)</span>
+            </button><button class="lang-option" data-lang="it">
+                <span class="lang-native">Italiano</span>
+                <span class="lang-english">Italian</span>
+            </button><button class="lang-option" data-lang="ar">
+                <span class="lang-native">العربية</span>
+                <span class="lang-english">Arabic</span>
+            </button></div></div>
+
+                    <div class="nav-actions">
+                        <a href="/pt-pt/cme-vault/" class="btn-outline" style="border-color: var(--accent); color: var(--accent);" data-i18n="dropdown.cme_vault">Acervo de desenvolvimento profissional</a>
+                        <a href="https://clinixsummary.ai/login" class="nav-link" target="_blank" data-i18n="nav.go_to_console">Aceder à consola</a>
+                        <a href="https://clinixsummary.ai/register" class="btn-primary" target="_blank" data-i18n="common.start_trial">Começar teste grátis</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <main id="app-content" style="">
+        <section class="subpage-container">
+            <div class="page-width">
+
+                <!-- Section 1: Hero -->
+                <div class="subpage-header">
+                    <span class="kicker" data-i18n="security.kicker">Centro de Confiança</span>
+                    <h1 class="subpage-title" data-i18n="security.title" tabindex="-1">Segurança, privacidade e conformidade — verificadas.</h1>
+                    <p class="subpage-copy" data-i18n="security.desc">Proteger os dados do doente não é negociável. O ClinixSummary usa encriptação padrão do setor, controlos de acesso rigorosos e eliminação imediata do áudio — tudo sob a governação do sistema de gestão da qualidade ClinixQM — para que tenha a tranquilidade de que o seu consultório e os seus doentes estão protegidos.</p>
+                </div>
+
+                <!-- Section 2: Compliance Frameworks -->
+                <div class="compliance-badges">
+                    <div class="compliance-badge" data-evidence-id="privacy-frameworks">
+                        <span class="material-symbols-rounded">verified_user</span>
+                        <div>
+                            <div style="font-size: 15px;">HIPAA</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_ready">Pronto</div>
+                        </div>
+                    </div>
+                    <div class="compliance-badge" data-evidence-id="soc2-iso27001">
+                        <span class="material-symbols-rounded">shield</span>
+                        <div>
+                            <div style="font-size: 15px;">SOC 2</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_aligned">Alinhado</div>
+                        </div>
+                    </div>
+                    <div class="compliance-badge" data-evidence-id="mhra-class-i">
+                        <span class="material-symbols-rounded">medical_services</span>
+                        <div>
+                            <div style="font-size: 15px;">MHRA · UKCA</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_class1">Registado como Classe I</div>
+                        </div>
+                    </div>
+                    <div class="compliance-badge" data-evidence-id="privacy-frameworks">
+                        <span class="material-symbols-rounded">privacy_tip</span>
+                        <div>
+                            <div style="font-size: 15px;">GDPR</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_compliant">Em conformidade</div>
+                        </div>
+                    </div>
+                    <div class="compliance-badge" data-evidence-id="encryption-retention">
+                        <span class="material-symbols-rounded">encrypted</span>
+                        <div>
+                            <div style="font-size: 15px;">AES-256</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_encryption">Encriptação</div>
+                        </div>
+                    </div>
+                    <div class="compliance-badge" data-evidence-id="privacy-frameworks">
+                        <span class="material-symbols-rounded">flag</span>
+                        <div>
+                            <div style="font-size: 15px;">PIPEDA / PHIPA</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_compliant">Em conformidade</div>
+                        </div>
+                    </div>
+                    <div class="compliance-badge" data-evidence-id="privacy-frameworks">
+                        <span class="material-symbols-rounded">policy</span>
+                        <div>
+                            <div style="font-size: 15px;">CCPA</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_compliant">Em conformidade</div>
+                        </div>
+                    </div>
+                    <div class="compliance-badge" data-evidence-id="soc2-iso27001">
+                        <span class="material-symbols-rounded">domain_verification</span>
+                        <div>
+                            <div style="font-size: 15px;">ISO 27001</div>
+                            <div style="font-size: 11px; color: var(--text-secondary); font-weight: 400;" data-i18n="security.badge_aligned">Alinhado</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="evidence-meta" style="font-size: 12px; color: var(--text-secondary); margin-top: 12px;">
+                    <span data-i18n="security.evidence_reviewed">Última revisão</span>:
+                    <time datetime="2026-08-31">31 August 2026</time>
+                </p>
+
+                <!-- Section 2b: Medical Device Regulation (MHRA / UKCA) -->
+                <div style="margin: 60px 0;">
+                    <span class="kicker" data-i18n="security.mhra_kicker">Regulamentação de dispositivos médicos</span>
+                    <h2 class="section-title" data-i18n="security.mhra_title">Registado na MHRA. Com marcação UKCA.</h2>
+                    <p class="section-copy" style="max-width: 780px; margin-bottom: 32px;" data-i18n="security.mhra_desc">O ClinixSummary está registado na MHRA (Medicines and Healthcare products Regulatory Agency, a agência reguladora de medicamentos e produtos de saúde do Reino Unido) como dispositivo médico de Classe I e ostenta a marcação UKCA. Um software de documentação clínica que cumpre o mesmo nível de exigência regulamentar que é pedido à sua prática clínica.</p>
+                    <div class="grid-3">
+                        <div class="text-group" style="border-bottom: none;">
+                            <h3 data-i18n="security.mhra_f1_title">Registo na MHRA</h3>
+                            <p class="section-copy" data-i18n="security.mhra_f1_desc">Registado como dispositivo médico junto do regulador do Reino Unido, com as obrigações que esse registo implica: vigilância, rastreabilidade e monitorização pós-comercialização.</p>
+                        </div>
+                        <div class="text-group" style="border-bottom: none;">
+                            <h3 data-i18n="security.mhra_f2_title">Marcação UKCA</h3>
+                            <p class="section-copy" data-i18n="security.mhra_f2_desc">A marcação UKCA declara a conformidade com o UK Medical Devices Regulations aplicável a um dispositivo de Classe I, abrangendo requisitos de segurança, desempenho e rotulagem.</p>
+                        </div>
+                        <div class="text-group" style="border-bottom: none;">
+                            <h3 data-i18n="security.mhra_f3_title">Sob a governação do ClinixQM</h3>
+                            <p class="section-copy" data-i18n="security.mhra_f3_desc">O nosso sistema de gestão da qualidade sustenta o registo: processos documentados de gestão de riscos, controlo de alterações, tratamento de incidentes e melhoria contínua.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Section 3: Security Practices -->
+                <div class="grid-3" style="margin-top: 48px;">
+                    <div class="text-group">
+                        <span class="material-symbols-rounded list-item-icon">lock</span>
+                        <h3 data-i18n="security.encryption_title">Encriptação de ponta a ponta</h3>
+                        <p data-i18n="security.encryption_desc">Todos os dados são encriptados em trânsito com TLS 1.2+ e em repouso com AES-256. São padrões de nível bancário: gravações de voz, transcrições e metadados permanecem sempre confidenciais.</p>
+                    </div>
+                    <div class="text-group">
+                        <span class="material-symbols-rounded list-item-icon">cleaning_services</span>
+                        <h3 data-i18n="security.ephemeral_title">Áudio efémero e controlo dos dados</h3>
+                        <p data-i18n="security.ephemeral_desc">Não armazenamos gravações de áudio. Assim que a nota é gerada, a gravação é eliminada de forma imediata e permanente. As transcrições continuam sob o seu controlo e pode removê-las quando quiser.</p>
+                    </div>
+                    <div class="text-group">
+                        <span class="material-symbols-rounded list-item-icon">gavel</span>
+                        <h3 data-i18n="security.compliance_title">Conformidade com HIPAA e GDPR</h3>
+                        <p data-i18n="security.compliance_desc">O ClinixSummary cumpre os requisitos da HIPAA, do GDPR, da PIPEDA/PHIPA, da CCPA e de outras normas de privacidade em vigor no mundo. Assinamos Acordos de Parceiro Comercial (BAAs) e mantemos um alinhamento regulamentar completo.</p>
+                    </div>
+                    <div class="text-group">
+                        <span class="material-symbols-rounded list-item-icon">auto_fix</span>
+                        <h3 data-i18n="security.deidentified_title">Dados de treino desidentificados</h3>
+                        <p data-i18n="security.deidentified_desc">Os nossos modelos são ajustados com dados anonimizados, desidentificados e sem PHI, e a inferência corre em infraestrutura segura. Nunca usamos as suas transcrições para treinar modelos destinados a clientes.</p>
+                    </div>
+                    <div class="text-group">
+                        <span class="material-symbols-rounded list-item-icon">bug_report</span>
+                        <h3 data-i18n="security.pentest_title">Testes de intrusão</h3>
+                        <p data-i18n="security.pentest_desc">A nossa infraestrutura e as nossas aplicações são regularmente submetidas a testes de intrusão e avaliações de vulnerabilidade conduzidos por empresas independentes. As falhas encontradas são priorizadas, corrigidas e novamente testadas de forma contínua.</p>
+                    </div>
+                    <div class="text-group">
+                        <span class="material-symbols-rounded list-item-icon">emergency_home</span>
+                        <h3 data-i18n="security.incident_title">Resposta a incidentes</h3>
+                        <p data-i18n="security.incident_desc">Um plano documentado de resposta a incidentes garante a notificação de violações no prazo de 72 horas, conforme exige o GDPR. Monitorização e alertas 24/7, com fluxos de escalonamento definidos, mantêm o tempo de resposta no mínimo.</p>
+                    </div>
+                </div>
+
+                <!-- Section 4: ClinixQM Quality Management -->
+                <div class="subpage-header" style="margin-top: 60px;">
+                    <span class="kicker" data-i18n="security.qms_kicker">Processo de gestão da qualidade ClinixQM</span>
+                    <h3 class="section-title" data-i18n="security.qms_title">ClinixQM: qualidade em todas as camadas.</h3>
+                    <p class="section-copy" data-i18n="security.qms_desc">O processo de gestão da qualidade ClinixQM produz resultados que cumprem as normas clínicas, por meio de revisão sistemática, ciclos de feedback e protocolos de melhoria contínua.</p>
+                </div>
+
+                <div class="grid-3" style="margin-bottom: 40px;">
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">fact_check</div>
+                        <h3 data-i18n="security.qa_title">Revisões de qualidade clínica</h3>
+                        <p data-i18n="security.qa_desc">Uma equipa dedicada de garantia da qualidade revê manualmente e com regularidade as saídas dos modelos, comparando-as com as normas de documentação clínica para assegurar precisão e completude.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">admin_panel_settings</div>
+                        <h3 data-i18n="security.rbac_title">Controlos de acesso por perfil</h3>
+                        <p data-i18n="security.rbac_desc">Permissões granulares garantem que apenas pessoas autorizadas acedem a dados de doentes, com pista de auditoria completa de cada ação realizada no sistema.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">verified</div>
+                        <h3 data-i18n="security.cert_title">Certificações de conformidade</h3>
+                        <p data-i18n="security.cert_desc">Processos de certificação em curso e auditorias independentes garantem que o ClinixSummary cumpre e supera os parâmetros de segurança e conformidade do setor da saúde.</p>
+                    </div>
+                </div>
+
+                <!-- Section 5: Sub-Processors -->
+                <div class="subpage-header" style="margin-top: 60px;">
+                    <span class="kicker" data-i18n="security.sp_kicker">Transparência sobre subprocessadores</span>
+                    <h3 class="section-title" data-i18n="security.sp_title">Nossos fornecedores, declarados.</h3>
+                    <p class="section-copy" data-i18n="security.sp_desc">Acreditamos na transparência total sobre os terceiros que nos ajudam a prestar o serviço. Todos os subprocessadores estão sujeitos a obrigações de proteção de dados não menos rigorosas do que as nossas. Avisamos por escrito com pelo menos 30 dias de antecedência antes de contratar um novo subprocessador.</p>
+                </div>
+
+                <div class="subprocessor-wrap">
+                    <table class="subprocessor-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="security.sp_col_name">Subprocessador</th>
+                                <th data-i18n="security.sp_col_purpose">Finalidade</th>
+                                <th data-i18n="security.sp_col_data">Dados processados</th>
+                                <th data-i18n="security.sp_col_location">Localização</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="sp-name"><img src="/images/sp-openai.svg" alt="" class="sp-logo">OpenAI</td><td data-i18n="security.sp_openai_purpose">Inferência sobre transcrições e fala para o contexto clínico</td><td data-i18n="security.sp_openai_data">Texto clínico desidentificado</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-claude.svg" alt="" class="sp-logo">Anthropic (Claude)</td><td data-i18n="security.sp_claude_purpose">Segurança e monitorização do sistema em tempo real</td><td data-i18n="security.sp_claude_data">Logs do sistema e telemetria operacional (sem PHI)</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-google.svg" alt="" class="sp-logo">Google (GCP)</td><td data-i18n="security.sp_google_purpose">Infraestrutura na nuvem</td><td data-i18n="security.sp_google_data">Dados clínicos encriptados</td><td data-i18n="security.sp_multiregion">Multirregião</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-azure.svg" alt="" class="sp-logo">Microsoft Azure</td><td data-i18n="security.sp_azure_purpose">Infraestrutura na nuvem, serviços de IA e conversão de voz em texto</td><td data-i18n="security.sp_azure_data">Dados clínicos encriptados</td><td data-i18n="security.sp_multiregion">Multirregião</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-stripe.svg" alt="" class="sp-logo">Stripe</td><td data-i18n="security.sp_stripe_purpose">Processamento de pagamentos</td><td data-i18n="security.sp_stripe_data">Dados de faturação (sem PHI)</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-postmark.svg" alt="" class="sp-logo">Postmark</td><td data-i18n="security.sp_postmark_purpose">Envio de e-mails transacionais</td><td data-i18n="security.sp_postmark_data">Endereços de e-mail e notificações (sem PHI)</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-apple.svg" alt="" class="sp-logo">Apple App Store</td><td data-i18n="security.sp_apple_purpose">Distribuição da aplicação para iOS</td><td data-i18n="security.sp_apple_data">Metadados da aplicação, conta do utilizador</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-gplay.svg" alt="" class="sp-logo">Google Play Store</td><td data-i18n="security.sp_gplay_purpose">Distribuição da aplicação para Android</td><td data-i18n="security.sp_gplay_data">Metadados da aplicação, conta do utilizador</td><td>USA</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-sectigo.svg" alt="" class="sp-logo">Sectigo</td><td data-i18n="security.sp_sectigo_purpose">Autoridade certificadora SSL/TLS</td><td data-i18n="security.sp_sectigo_data">Dados de validação de domínio</td><td>USA / UK</td></tr>
+                            <tr><td class="sp-name"><img src="/images/sp-dmarc.svg" alt="" class="sp-logo">DMARC Digests</td><td data-i18n="security.sp_dmarc_purpose">Monitorização de autenticação de e-mail</td><td data-i18n="security.sp_dmarc_data">Relatórios de autenticação de domínio e e-mail (sem PHI)</td><td>USA</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-top: 16px;" data-i18n-html="security.sp_note">Esta lista faz parte do nosso Acordo de Processamento de Dados. Avisamos por escrito com pelo menos 30 dias de antecedência antes de contratar um novo subprocessador.</p>
+
+                <!-- Section 6: Organisational Security -->
+                <div class="subpage-header" style="margin-top: 60px;">
+                    <span class="kicker" data-i18n="security.org_kicker">Segurança organizacional</span>
+                    <h3 class="section-title" data-i18n="security.org_title">Segurança é cultura, não só funcionalidade.</h3>
+                </div>
+
+                <div class="grid-3" style="margin-bottom: 40px;">
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">badge</div>
+                        <h3 data-i18n="security.org_employee_title">Segurança da equipa</h3>
+                        <p data-i18n="security.org_employee_desc">Todos os membros da equipa passam por verificação de antecedentes e formação obrigatória de sensibilização para a segurança. O acesso segue o princípio do menor privilégio e é revisto periodicamente.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">handshake</div>
+                        <h3 data-i18n="security.org_vendor_title">Gestão de fornecedores</h3>
+                        <p data-i18n="security.org_vendor_desc">Todos os subprocessadores passam por due diligence antes da contratação. Obrigações contratuais de proteção de dados, reavaliação periódica e cláusulas de direito de auditoria são a norma.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon material-symbols-rounded">backup</div>
+                        <h3 data-i18n="security.org_continuity_title">Continuidade de negócio</h3>
+                        <p data-i18n="security.org_continuity_desc">Planos de recuperação de desastres, cópias de segurança encriptadas e monitorização da disponibilidade mantêm o serviço a funcionar. A infraestrutura está distribuída por várias regiões para redundância geográfica.</p>
+                    </div>
+                </div>
+
+                <!-- Section 7: Documents & Resources -->
+                <div class="subpage-header" style="margin-top: 60px;">
+                    <span class="kicker" data-i18n="security.docs_kicker">Documentos e materiais</span>
+                    <h3 class="section-title" data-i18n="security.docs_title">Tudo o que a sua due diligence precisa.</h3>
+                </div>
+
+                <div class="doc-grid">
+                    <a href="/pt-pt/privacy-policy/" class="doc-card">
+                        <span class="material-symbols-rounded">policy</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_privacy">Política de Privacidade</h4>
+                            <p data-i18n="security.doc_privacy_desc">Como recolhemos, utilizamos e protegemos os seus dados.</p>
+                        </div>
+                    </a>
+                    <a href="/pt-pt/privacy-choices/" class="doc-card">
+                        <span class="material-symbols-rounded">tune</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_choices">As suas opções de privacidade</h4>
+                            <p data-i18n="security.doc_choices_desc">Gira o consentimento, o acesso aos dados e os pedidos de eliminação.</p>
+                        </div>
+                    </a>
+                    <a href="/pt-pt/terms/" class="doc-card">
+                        <span class="material-symbols-rounded">gavel</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_terms">Termos de Serviço</h4>
+                            <p data-i18n="security.doc_terms_desc">Termos padrão que regem a utilização da plataforma.</p>
+                        </div>
+                    </a>
+                    <a href="/pt-pt/usage-policy/" class="doc-card">
+                        <span class="material-symbols-rounded">rule</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_usage">Política de Utilização</h4>
+                            <p data-i18n="security.doc_usage_desc">Diretrizes de utilização aceitável e restrições.</p>
+                        </div>
+                    </a>
+                    <a href="/docs/whitepapers/security-compliance-specification-2025.pdf" target="_blank" class="doc-card">
+                        <span class="material-symbols-rounded">shield</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_sec_wp">Whitepaper de segurança e conformidade</h4>
+                            <p data-i18n="security.doc_sec_wp_desc">Especificação técnica de segurança (PDF).</p>
+                        </div>
+                    </a>
+                    <a href="/docs/whitepapers/quality-management-system-qms-2025.pdf" target="_blank" class="doc-card">
+                        <span class="material-symbols-rounded">verified</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_qms_wp">Whitepaper do SGQ</h4>
+                            <p data-i18n="security.doc_qms_wp_desc">Metodologia do sistema de gestão da qualidade (PDF).</p>
+                        </div>
+                    </a>
+                    <a href="/docs/whitepapers/clinixsummary-architecture-overview-2025.pdf" target="_blank" class="doc-card">
+                        <span class="material-symbols-rounded">architecture</span>
+                        <div class="doc-card-text">
+                            <h4 data-i18n="security.doc_arch_wp">Visão geral da arquitetura</h4>
+                            <p data-i18n="security.doc_arch_wp_desc">Arquitetura do sistema e desenho da infraestrutura (PDF).</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Section 8: Data Handling -->
+                <div class="subpage-header" style="margin-top: 60px;">
+                    <span class="kicker" data-i18n="security.data_kicker">Os seus dados, as suas regras</span>
+                    <h3 class="section-title" data-i18n="security.data_title">Eliminação imediata e controlo granular.</h3>
+                    <div class="grid-4" style="margin-top: 30px;">
+                        <div class="text-group" style="border: none;">
+                            <h4 style="font-weight: 600; font-size: 16px;" data-i18n="security.audio_title">Retenção de áudio</h4>
+                            <p data-i18n="security.audio_desc">Eliminado após a geração da nota</p>
+                        </div>
+                        <div class="text-group" style="border: none;">
+                            <h4 style="font-weight: 600; font-size: 16px;" data-i18n="security.transcript_title">Armazenamento de transcrições</h4>
+                            <p data-i18n="security.transcript_desc">Retenção curta / controlada pelo utilizador</p>
+                        </div>
+                        <div class="text-group" style="border: none;">
+                            <h4 style="font-weight: 600; font-size: 16px;" data-i18n="security.deletion_title">Eliminação pelo utilizador</h4>
+                            <p data-i18n="security.deletion_desc">Exportação e eliminação definitiva quando quiser</p>
+                        </div>
+                        <div class="text-group" style="border: none;">
+                            <h4 style="font-weight: 600; font-size: 16px;" data-i18n="security.audit_title">Pistas de auditoria</h4>
+                            <p data-i18n="security.audit_desc">Registo completo de atividades para governação</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 9: Clinic Resources -->
+                <div class="subpage-header" style="margin-top: 60px;">
+                    <span class="kicker" data-i18n="security.resources_kicker">Materiais para o consultório</span>
+                    <h3 class="section-title" data-i18n="security.resources_title">Aviso de privacidade para os seus doentes.</h3>
+                    <p class="section-copy" data-i18n="security.resources_desc">Transfira o nosso folheto informativo de privacidade para o doente, pronto a imprimir e a afixar na sala de espera ou no consultório. Explica como funciona a documentação com IA, o que acontece à gravação e tranquiliza o doente quanto à sua privacidade.</p>
+                </div>
+
+                <div style="background: var(--bg-subtle); padding: 30px; border-radius: 12px; margin-bottom: 60px; border: 1px solid var(--border-subtle);">
+                    <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px;">
+                        <span class="material-symbols-rounded" style="font-size: 48px; color: var(--accent);">description</span>
+                        <div style="flex: 1; min-width: 250px;">
+                            <h4 style="font-weight: 700; font-size: 16px; margin-bottom: 6px;" data-i18n="security.leaflet_title">Aviso de privacidade do doente — folheto para imprimir</h4>
+                            <p style="color: var(--text-secondary); font-size: 14px; margin: 0;" data-i18n="security.leaflet_desc">Disponível em 6 idiomas. Pensado para paredes de consultório e salas de espera.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <a href="/assets/leaflets/patient-privacy-notice-en.pdf" download="" class="btn-primary" style="text-decoration: none; white-space: nowrap; font-size: 14px;">
+                            <span class="material-symbols-rounded" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">download</span> English
+                        </a>
+                        <a href="/assets/leaflets/patient-privacy-notice-fr.pdf" download="" class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Français</a>
+                        <a href="/assets/leaflets/patient-privacy-notice-es.pdf" download="" class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Español</a>
+                        <a href="/assets/leaflets/patient-privacy-notice-pt.pdf" download="" class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Português</a>
+                        <a href="/assets/leaflets/patient-privacy-notice-it.pdf" download="" class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">Italiano</a>
+                        <a href="/assets/leaflets/patient-privacy-notice-ar.pdf" download="" class="btn-outline" style="text-decoration: none; white-space: nowrap; font-size: 14px;">العربية</a>
+                    </div>
+                </div>
+
+                <!-- ClinixQM Banner -->
+                <div class="trust-qm-banner" style="margin-top: 60px;">
+                    <img src="/images/clinixqm-logo.png" alt="ClinixQM" onerror="this.style.display='none'">
+                    <div>
+                        <div style="font-weight: 600; font-size: 14px;" data-i18n="security.qm_powered">Qualidade garantida pelo ClinixQM</div>
+                        <a href="https://clinixqm.gacrux.ai/" target="_blank" rel="noopener" style="font-size: 13px;">clinixqm.gacrux.ai <span class="material-symbols-rounded" style="font-size: 14px; vertical-align: middle;">open_in_new</span></a>
+                    </div>
+                </div>
+
+                <!-- Section 10: CTA -->
+                <div style="background: var(--text-primary); color: #fff; text-align: center; padding: 40px; border-radius: 12px; margin-top: 60px;">
+                    <h2 style="font-family: var(--font-serif); font-size: 36px; margin-bottom: 20px;" data-i18n="security.cta_title">Pronto para proteger o seu fluxo de documentação?</h2>
+                    <div class="nav-actions" style="justify-content: center;">
+                        <a href="#" class="btn-primary" style="background: #fff; color: var(--text-primary);" onclick="window.open('https://clinixsummary.ai/console', '_blank')" data-i18n="common.start_trial">Começar teste grátis</a>
+                        <a href="/pt-pt/contact/" class="btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;" data-i18n="common.contact_us">Fale connosco</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- QUALITY ASSURANCE STAMP -->
+    <div style="background: var(--bg-subtle); padding: 12px 0; font-size: 11px; text-align: center; color: var(--text-secondary); border-top: 1px solid var(--border-subtle);">
+        <div class="page-width" data-i18n="common.qms_stamp">Garantido pelo processo de gestão da qualidade ClinixQM</div>
+    </div>
+
+    <footer>
+        <div class="page-width">
+            <div class="footer-layout">
+
+                <div class="footer-brand-col">
+                    <div style="margin-bottom: 40px;">
+                        <a href="/pt-pt/" class="footer-logo">
+                            <img src="/images/logo-wings.png" alt="" class="logo-symbol footer-symbol" height="53" width="53" loading="lazy">
+                            <img src="/images/logo-footer.png" alt="ClinixSummary" class="logo-wordmark" height="74" width="112" loading="lazy">
+                        </a>
+                    </div>
+
+                    <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-end;">
+                        <h4 style="font-size: 14px; color: #fff; margin-bottom: 4px; letter-spacing: 0.05em;">BY GATMEDI</h4>
+                        <p style="font-size: 11px; color: rgba(255,255,255,0.5); margin-bottom: 16px;">© 2026 GATMEDI</p>
+                        <p style="font-size: 11px; color: rgba(255,255,255,0.5); margin: -12px 0 16px;"><span dir="ltr">(ClinixSummary is a product of Gacrux Advanced Technologies in Medicine Ltd.)</span></p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/clinixsummary" target="_blank" rel="noopener">f</a>
+                            <a href="https://x.com/clinixsummary" target="_blank" rel="noopener">𝕏</a>
+                            <a href="https://www.linkedin.com/company/clinixsummary" target="_blank" rel="noopener">in</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4 data-i18n="nav.meet_clinixs">Conheça o ClinixSummary</h4>
+                        <ul>
+                            <li><a href="/pt-pt/proprietary-models/" data-i18n="dropdown.proprietary_models">Modelos proprietários</a></li>
+                            <li><a href="/pt-pt/ai-clinical-notes/" data-i18n="dropdown.meticulous_notes">Notas meticulosas</a></li>
+                            <li><a href="/pt-pt/clinix-foundation/" data-i18n="dropdown.clinix_foundation">Clinix Foundation</a></li>
+                            <li><a href="/pt-pt/kaizen/" data-i18n="dropdown.kaizen">Kai-zen</a></li>
+                            <li><a href="/pt-pt/multilingual-ai-scribe/" data-i18n="dropdown.languages">Idiomas</a></li>
+                            <li><a href="/pt-pt/ambient-ai-scribe/" data-i18n="dropdown.auto_ambient">Captura automática</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h4 data-i18n="footer.company">Empresa</h4>
+                        <ul>
+                            <li><a href="/pt-pt/story/" data-i18n="footer.story">A nossa história</a></li>
+                            <li><a href="/pt-pt/publications/" data-i18n="dropdown.publications">Publicações</a></li>
+                            <li><a href="/pt-pt/contact/" data-i18n="common.contact_us">Fale connosco</a></li>
+                            <li><a href="/pt-pt/careers/" data-i18n="footer.careers">Trabalhe connosco</a></li>
+                            <li><a href="/pt-pt/news/" data-i18n="dropdown.news_events">Notícias e eventos</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4 data-i18n="nav.solutions">Soluções</h4>
+                        <ul>
+                            <li><a href="/pt-pt/clinicians/" data-i18n="dropdown.for_clinicians">Para profissionais de saúde</a></li>
+                            <li><a href="/pt-pt/organizations/" data-i18n="dropdown.for_orgs">Para organizações</a></li>
+                            <li><a href="/pt-pt/insurers/" data-i18n="dropdown.insurers">Seguradoras de saúde</a></li>
+                            <li><a href="/pt-pt/government/" data-i18n="dropdown.government">Governo</a></li>
+                            <li><a href="/pt-pt/nonprofit/" data-i18n="dropdown.nonprofit">Sem fins lucrativos</a></li>
+                            <li><a href="/pt-pt/ai-medical-scribe/" data-i18n="dropdown.by_specialty">Por especialidade</a></li>
+                            <li><a href="/pt-pt/integrations/" data-i18n="dropdown.integrations">Integrações</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4 data-i18n="nav.capabilities">Funcionalidades</h4>
+                        <ul>
+                            <li><a href="/pt-pt/ai-medical-scribe/" data-i18n="dropdown.medical">Escriba médico com IA</a></li>
+                            <li><a href="/pt-pt/dental-ai-scribe/" data-i18n="dropdown.dental">Medicina dentária</a></li>
+                            <li><a href="/pt-pt/psychiatry-ai-scribe/" data-i18n="dropdown.psychiatry">Psiquiatria</a></li>
+                            <li><a href="/pt-pt/psychology-ai-scribe/" data-i18n="dropdown.psychology">Psicologia</a></li>
+                            <li><a href="/pt-pt/allied-health-ai-scribe/" data-i18n="footer.occ_therapy">Terapia ocupacional</a></li>
+                            <li><a href="/pt-pt/speech-therapy-ai-scribe/" data-i18n="footer.speech_lang">Terapia da fala</a></li>
+                            <li><a href="/pt-pt/physiotherapy-ai-scribe/" data-i18n="footer.physio">Fisioterapia</a></li>
+                            <li><a href="/pt-pt/nutrition-ai-scribe/" data-i18n="footer.nutritional">Nutrição clínica</a></li>
+                            <li><a href="/compare/" data-i18n="footer.compare">Comparar assistentes de IA</a></li>
+                            <li><a href="/pt-pt/midwifery-ai-scribe/" data-i18n="dropdown.midwifery">Saúde materna e obstétrica</a></li>
+                            <li><a href="/pt-pt/veterinary-ai-scribe/" data-i18n="dropdown.vet_medicine">Medicina veterinária</a></li>
+                            <li><a href="/pt-pt/operative-note-ai/" data-i18n="dropdown.operational_notes">Relato operatório</a></li>
+                            <li><a href="/pt-pt/cme-vault/" data-i18n="dropdown.cme_vault">Acervo de desenvolvimento profissional</a></li>
+                            <li><a href="/pt-pt/medical-billing-ai/" data-i18n="dropdown.billing_assist">Assistente de faturação</a></li>
+                            <li><a href="/pt-pt/referral-letter-ai/" data-i18n="dropdown.referrals">Referenciações</a></li>
+                            <li><a href="/pt-pt/icd-coding/" data-i18n="dropdown.icd_coding">Codificação CID</a></li>
+                            <li><a href="/pt-pt/patient-leaflet-generator/" data-i18n="dropdown.patient_leaflet">Folheto para o doente</a></li>
+                            <li><a href="/pt-pt/radiology-ai/"><span data-i18n="dropdown.radiology_assist">Assistente de radiologia</span> Beta</a></li>
+                            <li><a href="/pt-pt/dermatology-ai/"><span data-i18n="dropdown.dermatology_assist">Assistente de dermatologia</span> Beta</a></li>
+                            <li><a href="/pt-pt/medical-triage-ai/"><span data-i18n="dropdown.triage_assist">Assistente de triagem</span> Beta</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h4 data-i18n="nav.learn">Conteúdos</h4>
+                        <ul>
+                            <li><a href="/pt-pt/publications/" data-i18n="dropdown.publications">Publicações</a></li>
+                            <li><a href="/pt-pt/whitepapers/" data-i18n="dropdown.whitepapers">Whitepapers</a></li>
+                            <li><a href="/case-studies/" data-i18n="dropdown.case_studies">Casos de sucesso</a></li>
+                            <li><a href="/pt-pt/news/" data-i18n="dropdown.news_events">Notícias e eventos</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4 data-i18n="nav.pricing">Planos</h4>
+                        <ul>
+                            <li><a href="/pt-pt/pricing/" data-i18n="dropdown.see_pricing">Ver planos</a></li>
+                            <li><a href="/pt-pt/roi-calculator/" data-i18n="dropdown.roi_calculator">Calculadora de ROI</a></li>
+                            <li><a href="/pt-pt/contact/" data-i18n="dropdown.enterprise_contact">Empresarial</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4 data-i18n="footer.terms_policies">Termos e políticas</h4>
+                        <ul>
+                            <li><a href="/pt-pt/privacy-choices/" data-i18n="footer.privacy_choices">Preferências de privacidade</a></li>
+                            <li><a href="/pt-pt/privacy-policy/" data-i18n="footer.privacy_policy">Política de Privacidade</a></li>
+                            <li><a href="/pt-pt/usage-policy/" data-i18n="footer.usage_policy">Política de Utilização</a></li>
+                            <li><a href="/pt-pt/terms/" data-i18n="footer.terms">Termos de Serviço</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h4 data-i18n="footer.help_security">Ajuda e confiança</h4>
+                        <ul>
+                            <li><a href="/pt-pt/security/" data-i18n="dropdown.compliance">Central de confiança</a></li>
+                            <li><a href="/status/" data-i18n="footer.system_status">Estado do sistema</a></li>
+                            <li><a href="/pt-pt/contact/" data-i18n="common.contact_us">Fale connosco</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.4/purify.min.js" integrity="sha512-wKv5WSKk06JEAfIhv1IO/2IiPrfbUoFDMGMjkumP7FrTVECN+ISKNFpdYLjDWYLR1fAyVqv02VNVsFDZPqMEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/i18n.js?v=812895c82c"></script>
+    <script src="/js/pages/home.js?v=d382f05aaa"></script>
+    <script src="/js/pages/meet.js?v=c0205aa5ba"></script>
+    <script src="/js/pages/solutions.js?v=5649c0ac0b"></script>
+    <script src="/js/pages/capabilities.js?v=d49faeda9c"></script>
+    <script src="/js/pages/learn.js?v=8ea04623dc"></script>
+    <script src="/js/pages/other.js?v=b753930773"></script>
+    <script src="/js/pages/compare.js?v=013f5a5bad"></script>
+    <script src="/js/seo.js?v=b2dc564895"></script>
+    <script src="/js/app.js?v=20f5de4568"></script>
+
+
+</body></html>

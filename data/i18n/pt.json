@@ -178,8 +178,8 @@
     "specialties_title": "Mais de 40 especialidades e áreas multiprofissionais",
     "specialties_desc": "Da cardiologia à fisioterapia, da fonoaudiologia à medicina veterinária. Uma única plataforma dá conta de toda a documentação clínica.",
     "specialties_link": "Conheça o escriba médico com IA",
-    "languages_title": "6 idiomas, com troca de idioma no meio da frase",
-    "languages_desc": "Documentação multilíngue completa, inclusive árabe da direita para a esquerda. Dá conta de consultas em que o paciente troca de idioma naturalmente.",
+    "languages_title": "Mais de 160 idiomas falados, 6 idiomas de nota",
+    "languages_desc": "Fale em qualquer um dos mais de 160 idiomas e variantes regionais reconhecidos. Notas em seis idiomas e 11 variantes regionais, inclusive árabe da direita para a esquerda, mesmo quando o paciente troca de idioma no meio da consulta.",
     "pricing_title": "40% abaixo do concorrente mais próximo",
     "pricing_desc": "Preço transparente por créditos, com plano gratuito para começar. Planos corporativos com volume sob medida e suporte dedicado."
   },
@@ -429,8 +429,8 @@
   },
   "lang": {
     "kicker": "Idiomas",
-    "title": "Seis idiomas. RTL completo. Consultas multilíngues de verdade.",
-    "desc": "O ClinixSummary documenta em seis idiomas — inclusive árabe, com escrita completa da direita para a esquerda. Mas suporte a idiomas é mais do que tradução. Nossos modelos entendem como o profissional fala de verdade: misturando idiomas, trocando no meio da frase e usando termos de mais de uma tradição linguística no mesmo atendimento.",
+    "title": "Mais de 160 idiomas falados. Seis idiomas de nota. 11 variantes regionais.",
+    "desc": "O ClinixSummary reconhece automaticamente mais de 160 idiomas falados e variantes regionais, e documenta em seis idiomas com 11 variantes regionais — inclusive árabe, com escrita completa da direita para a esquerda. Mas suporte a idiomas é mais do que tradução. Nossos modelos entendem como o profissional fala de verdade: misturando idiomas, trocando no meio da frase e usando termos de mais de uma tradição linguística no mesmo atendimento.",
     "en_title": "English",
     "en_desc": "Full support across all varieties — American, British, Australian, South African, Indian, and Caribbean English. Medical terminology, colloquialisms, and regional abbreviations are all understood.",
     "fr_title": "Français",

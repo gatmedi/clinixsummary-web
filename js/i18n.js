@@ -60,11 +60,12 @@ const I18n = (() => {
         // window.BASEPATH — the path prefix always wins so the served content,
         // canonical URL and applied language can never disagree.
         const bp = window.BASEPATH || '';
-        _pathLocale = (/^\/[a-z]{2}$/.test(bp) && _locales[bp.slice(1)]) ? bp.slice(1) : null;
+        // Two letters, or a regional locale (/pt-pt, /es-es, /fr-ca).
+        _pathLocale = (/^\/[a-z]{2}(-[a-z0-9]{2,3})?$/.test(bp) && _locales[bp.slice(1)]) ? bp.slice(1) : null;
         const params = new URLSearchParams(window.location.search);
         const fromURL = params.get(_config.queryParam);
         const fromStorage = localStorage.getItem(_config.storageKey);
-        const fromBrowser = (navigator.language || '').slice(0, 2);
+        const fromBrowser = matchBrowserLocale();
         const candidate = _pathLocale || fromURL || fromStorage || fromBrowser || _config.defaultLocale;
         _locale = _locales[candidate] ? candidate : _config.defaultLocale;
 
@@ -79,7 +80,7 @@ const I18n = (() => {
 
         // 4. Apply direction & lang
         _dir = _locales[_locale].dir;
-        document.documentElement.lang = _locale;
+        document.documentElement.lang = htmlLang(_locale);
         document.documentElement.dir = _dir;
 
         // 5. Persist
@@ -190,6 +191,33 @@ const I18n = (() => {
         }
     }
 
+    /* ── regional locales ────────────────────────────────── */
+
+    /** <html lang>: a regional locale carries its BCP-47 tag (pt-PT, es-ES, fr-CA). */
+    function htmlLang(code) {
+        return (_locales[code] && _locales[code].lang) || code;
+    }
+
+    /** The family a regional locale belongs to: 'pt-pt' -> 'pt'. A family is its own. */
+    function familyOf(code) {
+        return (_locales[code] && _locales[code].family) || code;
+    }
+
+    /**
+     * The site locale for this browser: an exact regional match first
+     * (pt-PT -> pt-pt, es-ES -> es-es, fr-CA -> fr-ca), then the language.
+     */
+    function matchBrowserLocale() {
+        const tags = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']);
+        for (const raw of tags) {
+            const tag = String(raw || '').toLowerCase();
+            if (_locales[tag]) return tag;
+            const primary = tag.slice(0, 2);
+            if (_locales[primary]) return primary;
+        }
+        return '';
+    }
+
     /* ── URL management ──────────────────────────────────── */
     function updateURLParam() {
         const params = new URLSearchParams(window.location.search);
@@ -226,7 +254,11 @@ const I18n = (() => {
             if (!code) return;
             var oneYear = 60 * 60 * 24 * 365;
             var secure  = window.location.protocol === 'https:' ? '; Secure' : '';
-            document.cookie = 'cs_locale=' + encodeURIComponent(code)
+            // The console's own code for this page's language AND region, so a
+            // visitor reading Portuguese from Portugal lands in European
+            // Portuguese there too ('pt' here is Brazil; 'es' is Latin America).
+            var info = _locales[code] || {};
+            document.cookie = 'cs_locale=' + encodeURIComponent(info.console || code)
                 + '; Max-Age=' + oneYear + '; Path=/; SameSite=Lax' + secure;
         } catch (e) {
             // A blocked cookie must never stop the page translating.
@@ -267,7 +299,7 @@ const I18n = (() => {
         }
 
         // Update document
-        document.documentElement.lang = _locale;
+        document.documentElement.lang = htmlLang(_locale);
         document.documentElement.dir = _dir;
         updateURLParam();
 
@@ -288,7 +320,7 @@ const I18n = (() => {
 
         let html = `<button class="lang-switcher-btn" aria-label="Change language">
             <span class="material-symbols-rounded" style="font-size:18px;">language</span>
-            <span class="lang-code">${_locale.toUpperCase()}</span>
+            <span class="lang-code">${htmlLang(_locale).toUpperCase()}</span>
             <span class="material-symbols-rounded" style="font-size:16px;">expand_more</span>
         </button>
         <div class="lang-dropdown">`;
@@ -331,7 +363,7 @@ const I18n = (() => {
         const container = document.getElementById('lang-switcher');
         if (!container) return;
         const codeEl = container.querySelector('.lang-code');
-        if (codeEl) codeEl.textContent = _locale.toUpperCase();
+        if (codeEl) codeEl.textContent = htmlLang(_locale).toUpperCase();
 
         container.querySelectorAll('.lang-option').forEach(opt => {
             opt.classList.toggle('active', opt.getAttribute('data-lang') === _locale);
@@ -346,6 +378,8 @@ const I18n = (() => {
         handleNonTranslatedRoute,
         switchLanguage,
         get locale() { return _locale; },
+        /** The language family: 'pt' on /pt-pt/. For data keyed by language, not region. */
+        get family() { return familyOf(_locale); },
         get dir() { return _dir; },
         get locales() { return _locales; },
         get ready() { return _ready; }

@@ -20,6 +20,21 @@
       "fr",
       "ar"
     ],
+    "noteRegionalVariants": [
+      "en-GB",
+      "en-US",
+      "en-CA",
+      "pt-BR",
+      "pt-PT",
+      "es-ES",
+      "es-419",
+      "fr-FR",
+      "fr-CA",
+      "it",
+      "ar"
+    ],
+    "spokenLanguagesClaim": "160+",
+    "_languages_note": "Owner-verified 2026-11-27: 160+ recognised spoken languages and regional variants; six note languages in 11 regional variants. The marketing site itself is published in nine locales (build/config.json).",
     "consoleCount": 13,
     "specialtyClaim": "40+"
   },

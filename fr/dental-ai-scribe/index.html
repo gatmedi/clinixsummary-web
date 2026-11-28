@@ -45,10 +45,13 @@
                 if (location.port) return; /* prerender serves from a local port; production has none */
                 if (window.BASEPATH) return;
                 var p = location.pathname;
-                if (/^\/(fr|es|pt|it|ar)(\/|$)/.test(p)) return;
+                if (/^\/(fr|fr-ca|es|es-es|pt|pt-pt|it|ar)(\/|$)/.test(p)) return;
                 if (localStorage.getItem('clinixsummary-lang') || localStorage.getItem('clinixsummary-lang-suggested')) return;
-                var lang = (navigator.language || '').slice(0, 2).toLowerCase();
-                if (!{ fr: 1, es: 1, pt: 1, it: 1, ar: 1 }[lang]) return;
+                /* A regional page where the browser names that region
+                   (pt-PT, es-ES, fr-CA); otherwise the language's own page. */
+                var full = (navigator.language || '').toLowerCase();
+                var lang = { 'pt-pt': 1, 'es-es': 1, 'fr-ca': 1 }[full] ? full : full.slice(0, 2);
+                if (!{ fr: 1, 'fr-ca': 1, es: 1, 'es-es': 1, pt: 1, 'pt-pt': 1, it: 1, ar: 1 }[lang]) return;
                 if (p.indexOf('.') > -1) return;
                 var skip = ['/case-studies', '/status', '/compare', '/clinixsummary-vs-', '/for-institutions'];
                 for (var i = 0; i < skip.length; i++) { if (p.indexOf(skip[i]) === 0) return; }
@@ -61,7 +64,7 @@
     </script>
 
     
-<link rel="alternate" hreflang="en" href="https://clinixsummary.ai/dental-ai-scribe/"><link rel="alternate" hreflang="fr" href="https://clinixsummary.ai/fr/dental-ai-scribe/"><link rel="alternate" hreflang="es" href="https://clinixsummary.ai/es/dental-ai-scribe/"><link rel="alternate" hreflang="pt" href="https://clinixsummary.ai/pt/dental-ai-scribe/"><link rel="alternate" hreflang="it" href="https://clinixsummary.ai/it/dental-ai-scribe/"><link rel="alternate" hreflang="ar" href="https://clinixsummary.ai/ar/dental-ai-scribe/"><link rel="alternate" hreflang="x-default" href="https://clinixsummary.ai/dental-ai-scribe/"><meta property="og:locale" content="fr_FR"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://clinixsummary.ai/#organization","name":"GATMEDI","legalName":"Gacrux Advanced Technologies in Medicine Ltd","url":"https://clinixsummary.ai","logo":"https://clinixsummary.ai/images/logo-full.png","brand":{"@type":"Brand","name":"ClinixSummary"},"sameAs":["https://apps.apple.com/us/app/clinixsummary/id6740857768","https://play.google.com/store/apps/details?id=com.gacrux.clinixsummaryai","https://www.facebook.com/clinixsummary","https://x.com/clinixsummary","https://www.linkedin.com/company/clinixsummary"]},{"@type":"WebSite","@id":"https://clinixsummary.ai/#website","name":"ClinixSummary","url":"https://clinixsummary.ai/","publisher":{"@id":"https://clinixsummary.ai/#organization"},"inLanguage":"fr"},{"@type":"MedicalWebPage","name":"La documentation au cabinet dentaire, repensée. – ClinixSummary","description":"ClinixSummary connaît l'odontologie. Des soins conservateurs à l'endodontie en passant par le bilan parodontal, notre IA retient le détail clinique qui compte…","url":"https://clinixsummary.ai/fr/dental-ai-scribe/","inLanguage":"fr","isPartOf":{"@id":"https://clinixsummary.ai/#website"},"about":{"@id":"https://clinixsummary.ai/ai-medical-scribe/#software"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://clinixsummary.ai/fr/"},{"@type":"ListItem","position":2,"name":"Scribe médical IA","item":"https://clinixsummary.ai/fr/ai-medical-scribe/"},{"@type":"ListItem","position":3,"name":"La documentation au cabinet dentaire, repensée.","item":"https://clinixsummary.ai/fr/dental-ai-scribe/"}]}]}</script></head>
+<link rel="alternate" hreflang="en" href="https://clinixsummary.ai/dental-ai-scribe/"><link rel="alternate" hreflang="fr" href="https://clinixsummary.ai/fr/dental-ai-scribe/"><link rel="alternate" hreflang="fr-CA" href="https://clinixsummary.ai/fr-ca/dental-ai-scribe/"><link rel="alternate" hreflang="es" href="https://clinixsummary.ai/es/dental-ai-scribe/"><link rel="alternate" hreflang="es-ES" href="https://clinixsummary.ai/es-es/dental-ai-scribe/"><link rel="alternate" hreflang="pt" href="https://clinixsummary.ai/pt/dental-ai-scribe/"><link rel="alternate" hreflang="pt-PT" href="https://clinixsummary.ai/pt-pt/dental-ai-scribe/"><link rel="alternate" hreflang="it" href="https://clinixsummary.ai/it/dental-ai-scribe/"><link rel="alternate" hreflang="ar" href="https://clinixsummary.ai/ar/dental-ai-scribe/"><link rel="alternate" hreflang="x-default" href="https://clinixsummary.ai/dental-ai-scribe/"><meta property="og:locale" content="fr_FR"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://clinixsummary.ai/#organization","name":"GATMEDI","legalName":"Gacrux Advanced Technologies in Medicine Ltd","url":"https://clinixsummary.ai","logo":"https://clinixsummary.ai/images/logo-full.png","brand":{"@type":"Brand","name":"ClinixSummary"},"sameAs":["https://apps.apple.com/us/app/clinixsummary/id6740857768","https://play.google.com/store/apps/details?id=com.gacrux.clinixsummaryai","https://www.facebook.com/clinixsummary","https://x.com/clinixsummary","https://www.linkedin.com/company/clinixsummary"]},{"@type":"WebSite","@id":"https://clinixsummary.ai/#website","name":"ClinixSummary","url":"https://clinixsummary.ai/","publisher":{"@id":"https://clinixsummary.ai/#organization"},"inLanguage":"fr"},{"@type":"MedicalWebPage","name":"La documentation au cabinet dentaire, repensée. – ClinixSummary","description":"ClinixSummary connaît l'odontologie. Des soins conservateurs à l'endodontie en passant par le bilan parodontal, notre IA retient le détail clinique qui compte…","url":"https://clinixsummary.ai/fr/dental-ai-scribe/","inLanguage":"fr","isPartOf":{"@id":"https://clinixsummary.ai/#website"},"about":{"@id":"https://clinixsummary.ai/ai-medical-scribe/#software"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://clinixsummary.ai/fr/"},{"@type":"ListItem","position":2,"name":"Scribe médical IA","item":"https://clinixsummary.ai/fr/ai-medical-scribe/"},{"@type":"ListItem","position":3,"name":"La documentation au cabinet dentaire, repensée.","item":"https://clinixsummary.ai/fr/dental-ai-scribe/"}]}]}</script></head>
 <body>
     <!-- GitHub Pages SPA redirect handler — replays the path saved by 404.html -->
     <script>!function(){var r=sessionStorage.getItem('spa-redirect');if(r){sessionStorage.removeItem('spa-redirect');history.replaceState(null,'',r);}}();</script>
@@ -305,14 +308,23 @@
                 <span class="lang-native">English</span>
                 <span class="lang-english">English</span>
             </button><button class="lang-option active" data-lang="fr">
-                <span class="lang-native">Français</span>
-                <span class="lang-english">French</span>
+                <span class="lang-native">Français (France)</span>
+                <span class="lang-english">French (France)</span>
+            </button><button class="lang-option" data-lang="fr-ca">
+                <span class="lang-native">Français (Canada)</span>
+                <span class="lang-english">French (Canada)</span>
             </button><button class="lang-option" data-lang="es">
-                <span class="lang-native">Español</span>
-                <span class="lang-english">Spanish</span>
+                <span class="lang-native">Español (Latinoamérica)</span>
+                <span class="lang-english">Spanish (Latin America)</span>
+            </button><button class="lang-option" data-lang="es-es">
+                <span class="lang-native">Español (España)</span>
+                <span class="lang-english">Spanish (Spain)</span>
             </button><button class="lang-option" data-lang="pt">
-                <span class="lang-native">Português</span>
-                <span class="lang-english">Portuguese</span>
+                <span class="lang-native">Português (Brasil)</span>
+                <span class="lang-english">Portuguese (Brazil)</span>
+            </button><button class="lang-option" data-lang="pt-pt">
+                <span class="lang-native">Português (Portugal)</span>
+                <span class="lang-english">Portuguese (Portugal)</span>
             </button><button class="lang-option" data-lang="it">
                 <span class="lang-native">Italiano</span>
                 <span class="lang-english">Italian</span>
@@ -527,12 +539,12 @@
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.4/purify.min.js" integrity="sha512-wKv5WSKk06JEAfIhv1IO/2IiPrfbUoFDMGMjkumP7FrTVECN+ISKNFpdYLjDWYLR1fAyVqv02VNVsFDZPqMEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/js/i18n.js?v=79ef85da3f"></script>
-    <script src="/js/pages/home.js?v=cd66f2ae0f"></script>
-    <script src="/js/pages/meet.js?v=48583bf312"></script>
+    <script src="/js/i18n.js?v=812895c82c"></script>
+    <script src="/js/pages/home.js?v=d382f05aaa"></script>
+    <script src="/js/pages/meet.js?v=c0205aa5ba"></script>
     <script src="/js/pages/solutions.js?v=5649c0ac0b"></script>
     <script src="/js/pages/capabilities.js?v=d49faeda9c"></script>
-    <script src="/js/pages/learn.js?v=e63d668b6a"></script>
+    <script src="/js/pages/learn.js?v=8ea04623dc"></script>
     <script src="/js/pages/other.js?v=b753930773"></script>
     <script src="/js/pages/compare.js?v=013f5a5bad"></script>
     <script src="/js/seo.js?v=b2dc564895"></script>

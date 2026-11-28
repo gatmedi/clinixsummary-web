@@ -178,8 +178,8 @@
     "specialties_title": "Más de 40 especialidades y áreas de la salud",
     "specialties_desc": "De cardiología a fisioterapia, de fonoaudiología a medicina veterinaria. Una sola plataforma cubre toda la documentación clínica.",
     "specialties_link": "Conozca el escriba médico con IA",
-    "languages_title": "6 idiomas, incluso mezclados",
-    "languages_desc": "Documentación multilingüe completa, con árabe de derecha a izquierda. Atienda consultas en las que el paciente cambia de idioma sin avisar.",
+    "languages_title": "Más de 160 idiomas hablados, 6 idiomas de nota",
+    "languages_desc": "Hable en cualquiera de los más de 160 idiomas y variantes regionales reconocidos. Notas en seis idiomas y 11 variantes regionales, con árabe de derecha a izquierda, incluso cuando el paciente cambia de idioma sin avisar.",
     "pricing_title": "40% por debajo del competidor más cercano",
     "pricing_desc": "Precios transparentes por créditos, desde la versión gratuita. Planes empresariales con volúmenes a la medida y soporte dedicado."
   },
@@ -429,8 +429,8 @@
   },
   "lang": {
     "kicker": "Idiomas",
-    "title": "Seis idiomas. Árabe de derecha a izquierda. Consultas realmente multilingües.",
-    "desc": "ClinixSummary documenta en seis idiomas, con soporte completo de escritura de derecha a izquierda para el árabe. Pero esto va mucho más allá de traducir: nuestros modelos entienden cómo hablan de verdad los médicos, mezclando idiomas, cambiando a mitad de una frase y usando terminología de varias tradiciones lingüísticas en una sola consulta.",
+    "title": "Más de 160 idiomas hablados. Seis idiomas de nota. 11 variantes regionales.",
+    "desc": "ClinixSummary reconoce automáticamente más de 160 idiomas hablados y variantes regionales, y documenta en seis idiomas con 11 variantes regionales, con soporte completo de escritura de derecha a izquierda para el árabe. Pero esto va mucho más allá de traducir: nuestros modelos entienden cómo hablan de verdad los médicos, mezclando idiomas, cambiando a mitad de una frase y usando terminología de varias tradiciones lingüísticas en una sola consulta.",
     "en_title": "English",
     "en_desc": "Full support across all varieties — American, British, Australian, South African, Indian, and Caribbean English. Medical terminology, colloquialisms, and regional abbreviations are all understood.",
     "fr_title": "Français",

@@ -255,8 +255,8 @@ const WhyClinixSection = `
                 </div>
                 <div class="card">
                     <div class="card-icon material-symbols-rounded">translate</div>
-                    <h3 data-i18n="why.languages_title">6 languages with code-switching</h3>
-                    <p data-i18n="why.languages_desc">Full multilingual documentation including RTL Arabic. Handle consultations where patients naturally switch between languages.</p>
+                    <h3 data-i18n="why.languages_title">160+ spoken languages, 6 note languages</h3>
+                    <p data-i18n="why.languages_desc">Speak in any of 160+ recognised languages and regional variants. Notes in six languages across 11 regional variants, including right-to-left Arabic — even when the patient switches language mid-consultation.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon material-symbols-rounded">savings</div>

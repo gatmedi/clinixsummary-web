@@ -12,7 +12,7 @@ function _formatPaperDate(d) {
 }
 
 function _renderPaperCard(p, ns) {
-    const locale  = I18n.locale;
+    const locale  = I18n.family;
 
     const pLang = (p.lang || 'en').toLowerCase();
     const native  = (pLang === locale);
@@ -277,7 +277,7 @@ function NewsPage() {
             return {
                 id: 'news_' + (index + 1),
                 title: item.title || '',
-                desc: getSummaryByLang(item,I18n.locale),
+                desc: getSummaryByLang(item,I18n.family),
                 date: date
             };
         });

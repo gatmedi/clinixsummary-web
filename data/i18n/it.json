@@ -178,8 +178,8 @@
     "specialties_title": "Oltre 40 specialità e professioni sanitarie",
     "specialties_desc": "Dalla cardiologia alla fisioterapia, dalla logopedia alla medicina veterinaria. Un'unica piattaforma copre tutta la documentazione clinica.",
     "specialties_link": "Scopra lo scriba medico IA",
-    "languages_title": "Sei lingue, anche nella stessa frase",
-    "languages_desc": "Documentazione multilingue completa, arabo con scrittura da destra a sinistra compreso. Gestisce le visite in cui il paziente passa spontaneamente da una lingua all'altra.",
+    "languages_title": "Oltre 160 lingue parlate, 6 lingue per le note",
+    "languages_desc": "Parli in una delle oltre 160 lingue e varianti regionali riconosciute. Note in sei lingue e 11 varianti regionali, arabo con scrittura da destra a sinistra compreso, anche quando il paziente cambia lingua a metà visita.",
     "pricing_title": "40% in meno del concorrente più vicino",
     "pricing_desc": "Prezzi trasparenti a crediti, si parte dalla versione gratuita. Per le organizzazioni, piani con volumi su misura e supporto dedicato."
   },
@@ -429,8 +429,8 @@
   },
   "lang": {
     "kicker": "Lingue",
-    "title": "Sei lingue. Supporto RTL completo. Visite davvero multilingue.",
-    "desc": "ClinixSummary documenta la visita in sei lingue, arabo compreso, con pieno supporto della scrittura da destra a sinistra. Ma il supporto linguistico non è una traduzione: i nostri modelli riconoscono il modo in cui i medici parlano davvero, mescolando le lingue, cambiandole a metà frase e usando termini che arrivano da tradizioni diverse nel giro della stessa visita.",
+    "title": "Oltre 160 lingue parlate. Sei lingue per le note. 11 varianti regionali.",
+    "desc": "ClinixSummary riconosce automaticamente oltre 160 lingue parlate e varianti regionali e documenta la visita in sei lingue e 11 varianti regionali, arabo compreso, con pieno supporto della scrittura da destra a sinistra. Ma il supporto linguistico non è una traduzione: i nostri modelli riconoscono il modo in cui i medici parlano davvero, mescolando le lingue, cambiandole a metà frase e usando termini che arrivano da tradizioni diverse nel giro della stessa visita.",
     "en_title": "English",
     "en_desc": "Full support across all varieties — American, British, Australian, South African, Indian, and Caribbean English. Medical terminology, colloquialisms, and regional abbreviations are all understood.",
     "fr_title": "Français",
