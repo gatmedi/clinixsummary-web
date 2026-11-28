@@ -178,8 +178,8 @@
     "specialties_title": "Plus de 40 spécialités, paramédical compris",
     "specialties_desc": "De la cardiologie à la kinésithérapie, de l'orthophonie à la médecine vétérinaire : une seule plateforme couvre toute l'étendue de la documentation clinique.",
     "specialties_link": "Découvrir le scribe médical IA",
-    "languages_title": "6 langues, changements de langue compris",
-    "languages_desc": "Documentation multilingue complète, arabe et écriture de droite à gauche inclus. De quoi suivre les consultations où le patient passe naturellement d'une langue à l'autre.",
+    "languages_title": "Plus de 160 langues parlées, 6 langues de rédaction",
+    "languages_desc": "Parlez dans l'une des plus de 160 langues et variantes régionales reconnues. Comptes rendus en six langues et 11 variantes régionales, arabe et écriture de droite à gauche inclus, même quand le patient change de langue en pleine consultation.",
     "pricing_title": "40 % en dessous du concurrent le plus proche",
     "pricing_desc": "Une tarification transparente, par crédits, dès la formule gratuite. Offres entreprise avec volumes sur mesure et accompagnement dédié."
   },
@@ -429,8 +429,8 @@
   },
   "lang": {
     "kicker": "Langues",
-    "title": "Six langues. Écriture de droite à gauche prise en charge. De vraies consultations multilingues.",
-    "desc": "ClinixSummary rédige vos comptes rendus dans six langues, dont l'arabe avec une prise en charge complète de l'écriture de droite à gauche. Mais gérer les langues ne se résume pas à traduire. Nos modèles comprennent la façon dont les praticiens s'expriment vraiment : ils mêlent les langues, changent en pleine phrase et empruntent leur terminologie à plusieurs traditions linguistiques au cours d'une même consultation.",
+    "title": "Plus de 160 langues parlées. Six langues de rédaction. 11 variantes régionales.",
+    "desc": "ClinixSummary reconnaît automatiquement plus de 160 langues parlées et variantes régionales, et rédige vos comptes rendus dans six langues déclinées en 11 variantes régionales, dont l'arabe avec une prise en charge complète de l'écriture de droite à gauche. Mais gérer les langues ne se résume pas à traduire. Nos modèles comprennent la façon dont les praticiens s'expriment vraiment : ils mêlent les langues, changent en pleine phrase et empruntent leur terminologie à plusieurs traditions linguistiques au cours d'une même consultation.",
     "en_title": "English",
     "en_desc": "Full support across all varieties — American, British, Australian, South African, Indian, and Caribbean English. Medical terminology, colloquialisms, and regional abbreviations are all understood.",
     "fr_title": "Français",

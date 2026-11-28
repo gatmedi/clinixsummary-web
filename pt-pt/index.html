@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="pt-PT" dir="ltr" data-ssg="1"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClinixSummary – A base de IA para documentação clínica</title>
+    <meta name="description" content="O ClinixSummary é a arquitetura de IA que sustenta a documentação clínica, a faturação e o apoio especializado aos cuidados médicos.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ClinixSummary – A base de IA para documentação clínica">
+    <meta property="og:description" content="O ClinixSummary é a arquitetura de IA que sustenta a documentação clínica, a faturação e o apoio especializado aos cuidados médicos.">
+    <meta property="og:image" content="https://clinixsummary.ai/images/og-card.png">
+    <meta property="og:url" content="https://clinixsummary.ai/pt-pt/">
+    <meta property="og:site_name" content="ClinixSummary">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ClinixSummary – A base de IA para documentação clínica">
+    <meta name="twitter:description" content="O ClinixSummary é a arquitetura de IA que sustenta a documentação clínica, a faturação e o apoio especializado aos cuidados médicos.">
+    <meta name="twitter:image" content="https://clinixsummary.ai/images/og-card.png">
+
+    <link rel="canonical" href="https://clinixsummary.ai/pt-pt/">
+    <link rel="icon" type="image/png" href="/images/logo-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&amp;family=Tajawal:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css?v=bfb304e476">
+
+    <!-- Deployment-aware base path (GitHub Pages subpath vs production root) -->
+    <script>
+        window.BASEPATH="/pt-pt";
+        const BASE_PATH = "https://clinixsummary.ai";
+        /* First-visit language auto-detection (owner request 2026-09-01):
+           visitors whose browser language is one of the site's locales land on
+           their language automatically. Fires at most ONCE ever (flag), never
+           on locale-prefixed URLs, never once a language choice is stored,
+           never during prerender (local-port guard), and never for search
+           crawlers (they render as en-US, which never triggers a redirect -
+           hreflang discovery is unaffected). EN-only and off-manifest routes
+           are excluded. */
+        (function () {
+            try {
+                if (location.port) return; /* prerender serves from a local port; production has none */
+                if (window.BASEPATH) return;
+                var p = location.pathname;
+                if (/^\/(fr|fr-ca|es|es-es|pt|pt-pt|it|ar)(\/|$)/.test(p)) return;
+                if (localStorage.getItem('clinixsummary-lang') || localStorage.getItem('clinixsummary-lang-suggested')) return;
+                /* A regional page where the browser names that region
+                   (pt-PT, es-ES, fr-CA); otherwise the language's own page. */
+                var full = (navigator.language || '').toLowerCase();
+                var lang = { 'pt-pt': 1, 'es-es': 1, 'fr-ca': 1 }[full] ? full : full.slice(0, 2);
+                if (!{ fr: 1, 'fr-ca': 1, es: 1, 'es-es': 1, pt: 1, 'pt-pt': 1, it: 1, ar: 1 }[lang]) return;
+                if (p.indexOf('.') > -1) return;
+                var skip = ['/case-studies', '/status', '/compare', '/clinixsummary-vs-', '/for-institutions'];
+                for (var i = 0; i < skip.length; i++) { if (p.indexOf(skip[i]) === 0) return; }
+                if (/^\/whitepapers\/./.test(p)) return; /* EN-only article landings; the hub itself is translated */
+                localStorage.setItem('clinixsummary-lang-suggested', '1');
+                localStorage.setItem('clinixsummary-lang', lang);
+                location.replace('/' + lang + (p === '/' ? '/' : p) + location.search + location.hash);
+            } catch (e) { /* never block the page over language detection */ }
+        })();
+    </script>
+
+    
+<link rel="alternate" hreflang="en" href="https://clinixsummary.ai/"><link rel="alternate" hreflang="fr" href="https://clinixsummary.ai/fr/"><link rel="alternate" hreflang="fr-CA" href="https://clinixsummary.ai/fr-ca/"><link rel="alternate" hreflang="es" href="https://clinixsummary.ai/es/"><link rel="alternate" hreflang="es-ES" href="https://clinixsummary.ai/es-es/"><link rel="alternate" hreflang="pt" href="https://clinixsummary.ai/pt/"><link rel="alternate" hreflang="pt-PT" href="https://clinixsummary.ai/pt-pt/"><link rel="alternate" hreflang="it" href="https://clinixsummary.ai/it/"><link rel="alternate" hreflang="ar" href="https://clinixsummary.ai/ar/"><link rel="alternate" hreflang="x-default" href="https://clinixsummary.ai/"><meta property="og:locale" content="pt_PT"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://clinixsummary.ai/#organization","name":"GATMEDI","legalName":"Gacrux Advanced Technologies in Medicine Ltd","url":"https://clinixsummary.ai","logo":"https://clinixsummary.ai/images/logo-full.png","brand":{"@type":"Brand","name":"ClinixSummary"},"sameAs":["https://apps.apple.com/us/app/clinixsummary/id6740857768","https://play.google.com/store/apps/details?id=com.gacrux.clinixsummaryai","https://www.facebook.com/clinixsummary","https://x.com/clinixsummary","https://www.linkedin.com/company/clinixsummary"]},{"@type":"WebSite","@id":"https://clinixsummary.ai/#website","name":"ClinixSummary","url":"https://clinixsummary.ai/","publisher":{"@id":"https://clinixsummary.ai/#organization"},"inLanguage":"pt-PT","about":{"@id":"https://clinixsummary.ai/ai-medical-scribe/#software"}}]}</script></head>
+<body>
+    <!-- GitHub Pages SPA redirect handler — replays the path saved by 404.html -->
+    <script>!function(){var r=sessionStorage.getItem('spa-redirect');if(r){sessionStorage.removeItem('spa-redirect');history.replaceState(null,'',r);}}();</script>
+
+    <a href="#app-content" class="skip-link">Skip to content</a>
+
+    <div class="header-wrapper">
+        <header class="navbar">
+            <div class="navbar-content"> <!-- NEW CONTAINER FOR ALIGNMENT -->
+                <a href="/pt-pt/" class="logo" id="home-link">
+                    <img src="/images/logo-wings.png" alt="" class="logo-symbol" height="53" width="53">
+                    <img src="/images/logo-footer.png" alt="ClinixSummary" class="logo-wordmark" height="74" width="112">
+                </a>
+
+                <div class="mobile-toggle material-symbols-rounded" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">menu</div>
+
+                <div class="nav-right-group">
+                    <nav class="nav-menu" aria-label="Main navigation">
+
+                        <!-- 1. Meet ClinixSummary (NOW TWO COLUMNS) -->
+                        <div class="nav-item">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.meet_clinixs">Conheça o ClinixSummary</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown wide" role="menu">
+
+                                <!-- Column 1: Core Architecture -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.core_arch">Arquitetura central</div>
+                                    <a href="/pt-pt/ai-clinical-notes/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.meticulous_notes">Notas meticulosas</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.meticulous_notes_desc">Precisas, detalhadas e bem estruturadas</span>
+                                    </a>
+                                    <a href="/pt-pt/proprietary-models/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.proprietary_models">Modelos proprietários</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.proprietary_models_desc">Motores de linguagem médica especializados.</span>
+                                    </a>
+                                    <a href="/pt-pt/kaizen/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.kaizen">Kai-zen</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.kaizen_desc">Ciclo de aprendizagem contínua.</span>
+                                    </a>
+                                    <a href="/pt-pt/security/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.security">Centro de confiança</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.security_desc">Segurança, conformidade e SGQ.</span>
+                                    </a>
+                                </div>
+
+                                <!-- Column 2: Advanced Features & Compliance -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.features_compliance">Funcionalidades e conformidade</div>
+                                    <a href="/pt-pt/multilingual-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.languages">Idiomas</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.languages_desc">Vários idiomas, para atender em qualquer país.</span>
+                                    </a>
+                                    <a href="/pt-pt/ambient-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.auto_ambient">Captura automática</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.auto_ambient_desc">Reconhece sozinho se é escuta ambiente ou ditado</span>
+                                    </a>
+                                    <a href="/pt-pt/clinix-foundation/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.clinix_foundation">Clinix Foundation</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.clinix_foundation_desc">Iniciativa global de saúde sem fins lucrativos.</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Solutions -->
+                        <div class="nav-item">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.solutions">Soluções</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown wide" role="menu">
+                                <!-- Sector Column (Left) -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.sectors">Setores</div>
+                                    <a href="/pt-pt/clinicians/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.for_clinicians">Para profissionais de saúde</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.for_clinicians_desc">Consultório próprio e clínicas privadas.</span>
+                                    </a>
+                                    <a href="/pt-pt/organizations/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.for_orgs">Para organizações</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.for_orgs_desc">Hospitais e redes de saúde.</span>
+                                    </a>
+                                    <a href="/pt-pt/insurers/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.insurers">Seguradoras de saúde</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.insurers_desc">Rede convencionada com análise de pedidos mais rápida</span>
+                                    </a>
+                                    <a href="/pt-pt/government/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.government">Governo</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.government_desc">Setor público e esfera federal.</span>
+                                    </a>
+                                    <a href="/pt-pt/nonprofit/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.nonprofit">Sem fins lucrativos</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.nonprofit_desc">ClinixFoundation</span>
+                                    </a>
+                                </div>
+                                <!-- Use Case Column (Right) -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.use_cases">Casos de utilização</div>
+                                    <a href="/pt-pt/ai-medical-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.by_specialty">Por especialidade</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.by_specialty_desc">Mais de 40 especialidades médicas e áreas multiprofissionais, além dos módulos de apoio</span>
+                                    </a>
+                                    <a href="/pt-pt/integrations/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.integrations">Integrações</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.integrations_desc">Exportação flexível para o seu processo clínico eletrónico (EHR/EMR).</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Capabilities (UPDATED: Two column layout with 7+5 items) -->
+                        <div class="nav-item">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.capabilities">Funcionalidades</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown wide" role="menu" style="min-width: 550px;">
+
+                                <!-- Column 1: Core Modules (8 items) -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.specialty_modules">Módulos por especialidade e área multiprofissional</div>
+                                    <a href="/pt-pt/ai-medical-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.medical">Escriba médico com IA</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.medical_desc">Todas as especialidades</span>
+                                    </a>
+                                    <a href="/pt-pt/dental-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.dental">Medicina dentária</span>
+                                    </a>
+                                    <a href="/pt-pt/psychiatry-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.psychiatry">Psiquiatria</span>
+                                    </a>
+                                    <a href="/pt-pt/psychology-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.psychology">Psicologia</span>
+                                    </a>
+                                    <a href="/pt-pt/allied-health-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.allied_health">Saúde multiprofissional</span>
+                                    </a>
+                                    <a href="/pt-pt/physiotherapy-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.physio">Fisioterapia</span>
+                                    </a>
+                                    <a href="/pt-pt/occupational-therapy-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.ot">Terapia ocupacional</span>
+                                    </a>
+                                    <a href="/pt-pt/speech-therapy-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.slt">Terapia da fala</span>
+                                    </a>
+                                    <a href="/pt-pt/nutrition-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.nutrition">Nutrição clínica</span>
+                                    </a>
+                                    <a href="/pt-pt/midwifery-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.midwifery">Saúde materna e obstétrica</span>
+                                    </a>
+                                    <a href="/pt-pt/veterinary-ai-scribe/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.vet_medicine">Medicina veterinária</span>
+                                    </a>
+                                    <a href="/pt-pt/operative-note-ai/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.operational_notes">Relato operatório</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.operational_notes_desc">Para cirurgias e procedimentos</span>
+                                    </a>
+                                </div>
+
+                                <!-- Column 2: Workflow & Assist Tools -->
+                                <div>
+                                    <div class="dropdown-col-header" data-i18n="dropdown.workflow_tools">Ferramentas de fluxo e apoio</div>
+                                    <a href="/pt-pt/cme-vault/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title"><span data-i18n="dropdown.cme_vault">Acervo de desenvolvimento profissional</span> <span class="beta-tag" data-i18n="common.new_badge">Novo</span></span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.cme_vault_desc">Aprendizagem médica e desenvolvimento profissional.</span>
+                                    </a>
+                                    <a href="/pt-pt/medical-billing-ai/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.billing_assist">Assistente de faturação</span>
+                                        <span class="dropdown-desc" data-i18n="dropdown.billing_assist_desc">Somente para organizações</span>
+                                    </a>
+                                    <a href="/pt-pt/referral-letter-ai/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.referrals">Referenciações</span>
+                                    </a>
+                                    <a href="/pt-pt/icd-coding/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.icd_coding">Codificação CID</span>
+                                    </a>
+                                    <a href="/pt-pt/patient-leaflet-generator/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title" data-i18n="dropdown.patient_leaflet">Folheto para o doente</span>
+                                    </a>
+                                    <div class="separator"></div>
+                                    <a href="/pt-pt/radiology-ai/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title"><span data-i18n="dropdown.radiology_assist">Assistente de radiologia</span> <span class="beta-tag" data-i18n="common.beta_badge">Beta</span></span>
+                                    </a>
+                                    <a href="/pt-pt/dermatology-ai/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title"><span data-i18n="dropdown.dermatology_assist">Assistente de dermatologia</span> <span class="beta-tag" data-i18n="common.beta_badge">Beta</span></span>
+                                    </a>
+                                    <a href="/pt-pt/medical-triage-ai/" class="dropdown-item" role="menuitem">
+                                        <span class="dropdown-title"><span data-i18n="dropdown.triage_assist">Assistente de triagem</span> <span class="beta-tag" data-i18n="common.beta_badge">Beta</span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Learn (UPDATED FROM RESOURCES) -->
+                        <div class="nav-item">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.learn">Conteúdos</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown" role="menu">
+                                <a href="/pt-pt/publications/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.publications">Publicações</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.publications_desc">Relatórios técnicos.</span>
+                                </a>
+                                <a href="/pt-pt/whitepapers/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.whitepapers">Whitepapers</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.whitepapers_desc">Metodologia técnica.</span>
+                                </a>
+                                <a href="/case-studies/" class="dropdown-item" role="menuitem"><span class="dropdown-title" data-i18n="dropdown.case_studies">Casos de sucesso</span></a>
+                                <a href="/pt-pt/security/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.compliance">Central de confiança</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.compliance_desc">Segurança e conformidade.</span>
+                                </a>
+                                <div class="separator"></div>
+                                <a href="/pt-pt/news/" class="dropdown-item" role="menuitem"><span class="dropdown-title" data-i18n="dropdown.news_events">Notícias e eventos</span></a>
+                            </div>
+                        </div>
+
+                        <!-- 5. Pricing -->
+                        <div class="nav-item">
+                            <div class="nav-link" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.pricing">Planos</span> <span class="material-symbols-rounded">expand_more</span></div>
+                            <div class="dropdown" role="menu">
+                                <a href="/pt-pt/pricing/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.see_pricing">Ver planos</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.see_pricing_desc">Do plano gratuito ao empresarial.</span>
+                                </a>
+                                <a href="/pt-pt/roi-calculator/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.roi_calculator">Calculadora de ROI</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.roi_calculator_desc">Calcule quanto poupa.</span>
+                                </a>
+                                <div class="separator"></div>
+                                <a href="/pt-pt/contact/" class="dropdown-item" role="menuitem">
+                                    <span class="dropdown-title" data-i18n="dropdown.enterprise_contact">Empresarial</span>
+                                    <span class="dropdown-desc" data-i18n="dropdown.plan_enterprise_desc">Licenciamento por volume à medida.</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </nav>
+
+                    <!-- Language Switcher -->
+                    <div id="lang-switcher" class="lang-switcher"><button class="lang-switcher-btn" aria-label="Change language">
+            <span class="material-symbols-rounded" style="font-size:18px;">language</span>
+            <span class="lang-code">PT-PT</span>
+            <span class="material-symbols-rounded" style="font-size:16px;">expand_more</span>
+        </button>
+        <div class="lang-dropdown"><button class="lang-option" data-lang="en">
+                <span class="lang-native">English</span>
+                <span class="lang-english">English</span>
+            </button><button class="lang-option" data-lang="fr">
+                <span class="lang-native">Français (France)</span>
+                <span class="lang-english">French (France)</span>
+            </button><button class="lang-option" data-lang="fr-ca">
+                <span class="lang-native">Français (Canada)</span>
+                <span class="lang-english">French (Canada)</span>
+            </button><button class="lang-option" data-lang="es">
+                <span class="lang-native">Español (Latinoamérica)</span>
+                <span class="lang-english">Spanish (Latin America)</span>
+            </button><button class="lang-option" data-lang="es-es">
+                <span class="lang-native">Español (España)</span>
+                <span class="lang-english">Spanish (Spain)</span>
+            </button><button class="lang-option" data-lang="pt">
+                <span class="lang-native">Português (Brasil)</span>
+                <span class="lang-english">Portuguese (Brazil)</span>
+            </button><button class="lang-option active" data-lang="pt-pt">
+                <span class="lang-native">Português (Portugal)</span>
+                <span class="lang-english">Portuguese (Portugal)</span>
+            </button><button class="lang-option" data-lang="it">
+                <span class="lang-native">Italiano</span>
+                <span class="lang-english">Italian</span>
+            </button><button class="lang-option" data-lang="ar">
+                <span class="lang-native">العربية</span>
+                <span class="lang-english">Arabic</span>
+            </button></div></div>
+
+                    <div class="nav-actions">
+                        <a href="/pt-pt/cme-vault/" class="btn-outline" style="border-color: var(--accent); color: var(--accent);" data-i18n="dropdown.cme_vault">Acervo de desenvolvimento profissional</a>
+                        <a href="https://clinixsummary.ai/login" class="nav-link" target="_blank" data-i18n="nav.go_to_console">Aceder à consola</a>
+                        <a href="https://clinixsummary.ai/register" class="btn-primary" target="_blank" data-i18n="common.start_trial">Começar teste grátis</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <main id="app-content" style="">
+    <section class="hero">
+        <div class="page-width">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <span class="kicker" style="color: #4b88d3;" data-i18n="hero.kicker">Assistente de documentação clínica com IA, para a medicina de hoje</span>
+                    <h1 data-i18n="hero.title" tabindex="-1">Fale. A nota fica pronta.</h1>
+                    <p class="hero-subtitle" data-i18n="hero.description">O ClinixSummary transforma cada consulta em documentação estruturada e pronta para a faturação – em segundos. O seu tempo volta para o doente, não para a papelada.</p>
+
+                    <div style="margin-top: 32px; max-width: 400px; background: #fff; padding: 32px; border-radius: 16px; border: 1px solid var(--border-subtle); box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
+                        <h3 style="font-family: var(--font-serif); font-size: 20px; margin-bottom: 12px;" data-i18n="hero.try_title">Experimente já</h3>
+                        <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.5;" data-i18n="hero.try_desc">Não precisa de criar conta. Abra a consola e experimente o ClinixSummary gratuitamente – comece a documentar em segundos.</p>
+                        <button class="btn-primary" style="width: 100%; justify-content: center; border-radius: 8px; font-weight: 600; padding: 12px;" onclick="window.open('https://clinixsummary.ai/console', '_blank')" data-i18n="hero.try_cta">Experimente já</button>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-value" data-i18n="hero.stat_time">2+ h</span>
+                            <span class="stat-label" data-i18n="hero.stat_time_label">Poupadas por dia</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" data-i18n="hero.stat_burnout">25%</span>
+                            <span class="stat-label" data-i18n="hero.stat_burnout_label">Menos esgotamento</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value"><span class="material-symbols-rounded" style="font-size: 22px; vertical-align: middle; color: var(--accent);">verified_user</span> HIPAA</span>
+                            <span class="stat-label" data-i18n="hero.stat_hipaa_label">Preparado</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value"><span class="material-symbols-rounded" style="font-size: 22px; vertical-align: middle; color: var(--accent);">shield</span> SOC 2</span>
+                            <span class="stat-label" data-i18n="hero.stat_soc2_label">Alinhado</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value"><span class="material-symbols-rounded" style="font-size: 22px; vertical-align: middle; color: var(--accent);">privacy_tip</span> GDPR</span>
+                            <span class="stat-label" data-i18n="hero.stat_gdpr_label">Em conformidade</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-container">
+                     <div class="hero-image-wrapper">
+                        <img src="/images/hero-clinician.jpg" alt="Clinician using tablet for documentation" class="hero-photo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="page-width">
+            <div class="section-header">
+                <span class="kicker" data-i18n="core.kicker">A arquitetura central de IA</span>
+                <h2 class="section-title" data-i18n="core.title">Kaizen e raciocínio contextual na base de tudo.</h2>
+                <p class="section-copy" data-i18n="core.description">Inspirado no Kaizen (“mudar para melhor”), o ClinixSummary é aperfeiçoado sem parar, com revisão clínica criteriosa e controlo de qualidade. Em cada sessão, os nossos módulos usam raciocínio contextual para gerar notas estruturadas à medida da especialidade e do tipo de consulta.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">neurology</div>
+                    <h3 data-i18n="core.llm_title">LLMs clínicos (o núcleo)</h3>
+                    <p data-i18n="core.llm_desc">Ajustados com um enorme volume de dados clínicos desidentificados, para garantir precisão cirúrgica e exatidão terminológica em todas as especialidades médicas e nas narrativas clínicas mais complexas.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">trending_up</div>
+                    <h3 data-i18n="core.efficiency_title">Eficiência de fábrica</h3>
+                    <p data-i18n="core.efficiency_desc">A nossa arquitetura é enxuta e de alto desempenho: dispensa equipas dispendiosas de transcritores humanos e oferece uma precisão líder de mercado por uma fração do custo operacional tradicional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roi-calculator" style="padding-top: 48px; padding-bottom: 48px;">
+        <div class="page-width">
+            <div class="section-header" style="text-align: center; margin-left: auto; margin-right: auto; margin-bottom: 40px;">
+                <span class="kicker" data-i18n="calculator.kicker">Projeção de valor</span>
+                <h2 class="section-title" data-i18n="calculator.title">Calcule o seu ROI anual.</h2>
+                <p class="section-copy" style="margin-left: auto; margin-right: auto;" data-i18n="calculator.description">Veja quanto tempo e quanto dinheiro o ClinixSummary devolve ao seu consultório, a partir dos seus próprios números.</p>
+            </div>
+
+            <div class="calculator-container">
+                <div>
+                    <div class="calculator-input-group">
+                        <label for="annual-salary" data-i18n="calculator.salary_label">Salário anual mediano por profissional (USD)</label>
+                        <span id="annual-salary-display" class="slider-display">250&nbsp;000&nbsp;US$</span>
+                        <input type="range" id="annual-salary" value="250000" min="50000" max="500000" step="10000" oninput="updateDisplay(this); calculateSavings();">
+                    </div>
+
+                    <div class="calculator-input-group">
+                        <label for="num-clinicians" data-i18n="calculator.clinicians_label">Número de profissionais</label>
+                        <span id="num-clinicians-display" class="slider-display">1 profissional</span>
+                        <input type="range" id="num-clinicians" value="1" min="1" max="50" step="1" oninput="updateDisplay(this); calculateSavings();">
+                    </div>
+
+                    <div class="calculator-input-group">
+                        <label for="work-days" data-i18n="calculator.workdays_label">Dias úteis por ano (mediana, por profissional)</label>
+                        <span id="work-days-display" class="slider-display">250 dias</span>
+                        <input type="range" id="work-days" value="250" min="150" max="300" step="5" oninput="updateDisplay(this); calculateSavings();">
+                    </div>
+
+                    <div class="calculator-input-group">
+                        <label for="daily-minutes-saved" data-i18n="calculator.minutes_label">Minutos poupados por dia (impacto do ClinixSummary)</label>
+                        <div class="fixed-value" data-i18n="calculator.minutes_value">120 minutos (2 horas – estimativa do setor)</div>
+                        <input type="hidden" id="daily-minutes-saved" value="120">
+                    </div>
+
+                    <p class="result-subtext" style="color: var(--text-primary); font-weight: 500;" data-i18n="calculator.workday_note">*Cálculo baseado num dia de trabalho de 8 horas.</p>
+                </div>
+
+                <div class="calculator-results">
+                    <div class="calculator-result-item">
+                        <span class="material-symbols-rounded result-icon">beach_access</span>
+                        <div class="result-label" data-i18n="calculator.time_saved_label">Tempo total poupado por ano</div>
+                        <div id="annual-hours-saved" class="result-value">500 h</div>
+                        <div class="result-subtext" data-i18n="calculator.time_saved_desc">Equivale a 63 dias úteis a mais para a equipa.</div>
+                    </div>
+
+                    <div class="calculator-result-item">
+                        <span class="material-symbols-rounded result-icon">currency_exchange</span>
+                        <div class="result-label" data-i18n="calculator.money_saved_label">Poupança total por ano</div>
+                        <div id="monetary-savings" class="result-value">62&nbsp;500&nbsp;US$</div>
+                        <div class="result-subtext" data-i18n="calculator.money_saved_desc">Canalize esse valor para atividades que geram receita.</div>
+                    </div>
+
+                    <div class="calculator-result-item">
+                        <span class="material-symbols-rounded result-icon">handshake</span>
+                        <div class="result-label" data-i18n="calculator.patient_focus_label">Foco no doente</div>
+                        <div id="patient-centric-value" class="result-value" data-i18n="calculator.patient_focus_value">90% mais foco no doente</div>
+                        <div class="result-subtext" data-i18n="calculator.patient_focus_desc">Os profissionais referem índices bem mais elevados de envolvimento e satisfação dos doentes.</div>
+                    </div>
+
+                    <div class="calculator-result-item" style="border-bottom: none;">
+                        <div class="result-label" data-i18n="calculator.burnout_label">Burnout e carga cognitiva</div>
+                        <span class="material-symbols-rounded result-icon" style="font-size: 36px !important; color: white !important;">sentiment_satisfied</span>
+                        <div id="cognitive-load-value" class="result-value" style="color: white; font-family: var(--font-sans); font-size: 24px;" data-i18n="calculator.burnout_value">78% menos carga cognitiva</div>
+                        <div class="result-subtext" data-i18n="calculator.burnout_desc">Sobra energia mental, o que contribui para a melhoria documentada na realização profissional.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--bg-subtle);">
+        <div class="page-width">
+            <div class="section-header">
+                <span class="kicker" data-i18n="capabilities.kicker">Funcionalidades</span>
+                <h2 class="section-title" data-i18n="capabilities.title">O padrão de ouro da documentação clínica.</h2>
+                <p class="section-copy" data-i18n="capabilities.description">O ClinixSummary define o padrão de ouro da documentação clínica. Dos cuidados de saúde primários à ortopedia, dermatologia, pediatria e muito mais – captamos as nuances da medicina real e uniformizamos a estrutura para a continuidade dos cuidados, a codificação e a faturação.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">mic</div>
+                    <h3 data-i18n="capabilities.transcription_title">Transcrição de nível clínico</h3>
+                    <p data-i18n="capabilities.transcription_desc">Alta precisão no reconhecimento de terminologia médica, siglas e abreviaturas – mesmo com sotaque e o ruído de fundo de um consultório movimentado.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">description</div>
+                    <h3 data-i18n="capabilities.notes_title">Notas e cartas estruturadas</h3>
+                    <p data-i18n="capabilities.notes_desc">Saídas prontas a colar ou enviar: notas, cartas de referenciação e folhetos informativos para o doente em segundos.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">medical_information</div>
+                    <h3 data-i18n="capabilities.coding_title">Codificação CID‑10 e CPT</h3>
+                    <p data-i18n="capabilities.coding_desc">Gere códigos que sustentam pedidos de reembolso mais precisos, menos contestações e melhores indicadores.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">headphones</div>
+                    <h3 data-i18n="capabilities.ambient_title">Escuta ambiente e captura pós‑consulta</h3>
+                    <p data-i18n="capabilities.ambient_desc">Grave a consulta por escuta ambiente ou por ditado rápido – como fizer mais sentido para a sua prática.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">neurology</div>
+                    <h3 data-i18n="capabilities.reasoning_title">Motor de raciocínio contextual</h3>
+                    <p data-i18n="capabilities.reasoning_desc">Os nossos módulos avançados inferem o contexto e geram documentação clinicamente útil e faturável no local da consulta, incluindo diagnóstico diferencial.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">gavel</div>
+                    <h3 data-i18n="capabilities.legal_title">Proteção médico‑legal e reembolso</h3>
+                    <p data-i18n="capabilities.legal_desc">Uma documentação precisa e meticulosa reduz o risco de litígio por erro médico e melhora a exatidão do reembolso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="page-width">
+            <div class="section-header">
+                <span class="kicker" data-i18n="outcomes.kicker">Resultados e benefícios</span>
+                <h2 class="section-title" data-i18n="outcomes.title">Impacto mensurável desde o primeiro dia</h2>
+                <p class="section-copy" data-i18n="outcomes.description">O ClinixSummary oferece documentação de padrão de ouro: melhora a consulta, reduz drasticamente o tempo gasto a documentar e aumenta a exatidão do reembolso.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">sentiment_satisfied</div>
+                    <h3 data-i18n="outcomes.satisfaction_title">Doente mais satisfeito</h3>
+                    <p data-i18n-html="outcomes.satisfaction_desc">Num estudo com 7.260 médicos e 2,5 milhões de consultas, 47% dos doentes disseram que o médico passou menos tempo a olhar para o computador, e 84% dos médicos referiram um efeito positivo na comunicação com o doente.<sup style="font-size:10px;color:var(--accent);cursor:help" title="Tierney AA et al. (2024, 2025). NEJM Catalyst Innovations in Care Delivery. doi:10.1056/CAT.23.0404; doi:10.1056/CAT.25.0040">[1]</sup></p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">timer</div>
+                    <h3 data-i18n="outcomes.cognitive_title">Menos sobrecarga cognitiva</h3>
+                    <p data-i18n-html="outcomes.cognitive_desc">Num estudo multicêntrico, o esgotamento profissional desceu de 51,9% para 38,8% após 30 dias de utilização de um assistente de documentação com IA (OR ajustado 0,26, P&lt;0,001).<sup style="font-size:10px;color:var(--accent);cursor:help" title="Olson KD et al. (2025). Use of Ambient AI Scribes. JAMA Netw Open. 8(10):e2534976. doi:10.1001/jamanetworkopen.2025.34976">[2]</sup> Com a tecnologia em segundo plano, os cuidados voltam ao primeiro.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">payments</div>
+                    <h3 data-i18n="outcomes.revenue_title">Pedidos mais precisos, receita mais sólida</h3>
+                    <p data-i18n="outcomes.revenue_desc">Uma nota bem feita significa menos erros de codificação, menos recusas, envio mais rápido e reembolso mais consistente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--bg-subtle);">
+        <div class="page-width">
+            <div class="section-header">
+                <span class="kicker" data-i18n="why.kicker">Por que o ClinixSummary?</span>
+                <h2 class="section-title" data-i18n="why.title">O que nos diferencia.</h2>
+                <p class="section-copy" data-i18n="why.description">Criado por médicos que conhecem o peso da documentação por experiência própria.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">delete_forever</div>
+                    <h3 data-i18n="why.audio_title">Áudio apagado de imediato</h3>
+                    <p data-i18n="why.audio_desc">O áudio é apagado definitivamente no instante em que a nota é gerada. Nenhuma gravação fica armazenada, nunca. Privacidade na conceção do sistema, não numa cláusula de política.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">trending_up</div>
+                    <h3 data-i18n="why.kaizen_title">Modelos melhores todas as semanas</h3>
+                    <p data-i18n="why.kaizen_desc">A nossa metodologia Kaizen mantém o aperfeiçoamento contínuo, semana após semana. O seu assistente evolui todas as semanas — não a cada trimestre.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">category</div>
+                    <h3 data-i18n="why.specialties_title">Mais de 40 especialidades e áreas multiprofissionais</h3>
+                    <p data-i18n="why.specialties_desc">Da cardiologia à fisioterapia, da terapia da fala à medicina veterinária. Uma única plataforma trata de toda a documentação clínica.</p>
+                    <a href="/pt-pt/ai-medical-scribe/" style="font-weight: 600; color: var(--accent-dark, var(--accent));" data-i18n="why.specialties_link">Conheça o escriba médico com IA</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">translate</div>
+                    <h3 data-i18n="why.languages_title">Mais de 160 línguas faladas, 6 línguas de nota</h3>
+                    <p data-i18n="why.languages_desc">Fale em qualquer uma das mais de 160 línguas e variantes regionais reconhecidas. Notas em seis línguas e 11 variantes regionais, incluindo árabe da direita para a esquerda, mesmo quando o doente muda de língua a meio da consulta.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon material-symbols-rounded">savings</div>
+                    <h3 data-i18n="why.pricing_title">40% abaixo do concorrente mais próximo</h3>
+                    <p data-i18n="why.pricing_desc">Preço transparente por créditos, com plano gratuito para começar. Planos empresariais com volume à medida e apoio dedicado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section" id="pricing" style="padding-top: 96px;">
+        <div class="page-width">
+            <div class="section-header" style="text-align: center; margin-left: auto; margin-right: auto;">
+                <span class="kicker" data-i18n="pricing.kicker">Preços</span>
+                <h2 class="section-title" data-i18n="pricing.title">Planos transparentes para consultórios de qualquer dimensão.</h2>
+                <p class="section-copy" style="margin-left: auto; margin-right: auto;" data-i18n="pricing.description">Escolha o plano de acordo com o seu volume de consultas e de documentação. Todos dão acesso ao mesmo motor de IA – paga apenas pelo que utiliza.</p>
+                <div style="margin-top: 20px; padding: 12px 24px; background: rgba(59, 197, 214, 0.1); border-radius: 8px; display: inline-block;">
+                    <span style="font-size: 15px; font-weight: 600; color: var(--text-primary);" data-i18n="pricing.credit_explainer">1 crédito = 10 minutos de áudio documentado</span>
+                </div>
+            </div>
+
+            <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+
+                <div class="pricing-card">
+                    <div class="plan-name">Forever Free</div>
+                    <div class="plan-price"><span data-i18n="pricing.free_price">$0</span> <span data-i18n="pricing.per_month">/mês</span></div>
+                    <p class="plan-period" data-i18n="pricing.free_credits">25 créditos / mês</p>
+                    <ul class="plan-features">
+                        <li data-i18n="pricing.free_f1">Acesso completo à consola</li>
+                        <li data-i18n="pricing.free_f3">Sem cartão de crédito</li>
+                        <li style="color: var(--text-secondary); opacity: 0.7;" data-i18n="pricing.free_f4">Acesso limitado a especialidades</li>
+                    </ul>
+                    <button class="btn-outline" style="width: 100%;" onclick="location.href='https://clinixsummary.ai/register?plan=forever-free'; return false;" data-i18n="pricing.free_cta">Começar agora</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-name">Pilot 900</div>
+                    <div class="plan-price"><span data-i18n="pricing.pilot_price" data-price-plan="Pilot 900">$9.99</span> <span data-i18n="pricing.per_month">/mês</span></div>
+                    <p class="plan-period" data-i18n="pricing.pilot_credits">75 créditos / mês</p>
+                    <ul class="plan-features">
+                        <li data-i18n="pricing.cancel_anytime">Cancele quando quiser</li>
+                        <li data-i18n="pricing.pioneer_f4">Todas as especialidades</li>
+                        <li data-i18n="pricing.pioneer_f5">Apoio por e-mail</li>
+                    </ul>
+                    <button class="btn-outline" style="width: 100%;" onclick="location.href='https://clinixsummary.ai/register?plan=pilot-900'; return false;" data-i18n="pricing.pilot_cta">Subscrever</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-name">Pioneer 1800</div>
+                    <div class="plan-price"><span data-i18n="pricing.pioneer_price" data-price-plan="Pioneer 1800">$19.99</span> <span data-i18n="pricing.per_month">/mês</span></div>
+                    <p class="plan-period" data-i18n="pricing.pioneer_credits">150 créditos / mês</p>
+                    <ul class="plan-features">
+                        <li data-i18n="pricing.cancel_anytime">Cancele quando quiser</li>
+                        <li data-i18n="pricing.pioneer_f4">Todas as especialidades</li>
+                        <li data-i18n="pricing.pioneer_f5">Apoio por e-mail</li>
+                    </ul>
+                    <button class="btn-outline" style="width: 100%;" onclick="location.href='https://clinixsummary.ai/register?plan=pioneer-1800'; return false;" data-i18n="pricing.pioneer_cta">Subscrever</button>
+                </div>
+            </div>
+
+            <div id="pricing-expanded" style="display: none;">
+                <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top: 24px;">
+
+                    <div class="pricing-card featured" style="border-color: #4b88d3;">
+                        <div style="margin-bottom: 8px;"><span class="beta-tag" style="background: #E8F5FF; color: #4b88d3; font-weight: 700;" data-i18n="pricing.most_popular">Mais popular</span></div>
+                        <div class="plan-name">Productive 3000</div>
+                        <div class="plan-price"><span data-i18n="pricing.productive_price" data-price-plan="Productive 3000">$29.99</span> <span data-i18n="pricing.per_month">/mês</span></div>
+                        <p class="plan-period" data-i18n="pricing.productive_credits">250 créditos / mês</p>
+                        <ul class="plan-features">
+                            <li data-i18n="pricing.cancel_anytime">Cancele quando quiser</li>
+                            <li data-i18n="pricing.pioneer_f4">Todas as especialidades</li>
+                            <li data-i18n="pricing.pioneer_f5">Apoio por e-mail</li>
+                        </ul>
+                        <button class="btn-primary" style="width: 100%;" onclick="location.href='https://clinixsummary.ai/register?plan=productive-3000'; return false;" data-i18n="pricing.productive_cta">Subscrever</button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="plan-name">Prolific 6000</div>
+                        <div class="plan-price"><span data-i18n="pricing.prolific_price" data-price-plan="Prolific 6000">$49.99</span> <span data-i18n="pricing.per_month">/mês</span></div>
+                        <p class="plan-period" data-i18n="pricing.prolific_credits">500 créditos / mês</p>
+                        <ul class="plan-features">
+                            <li data-i18n="pricing.cancel_anytime">Cancele quando quiser</li>
+                            <li data-i18n="pricing.pioneer_f4">Todas as especialidades</li>
+                            <li data-i18n="pricing.pioneer_f5">Apoio por e-mail</li>
+                        </ul>
+                        <button class="btn-outline" style="width: 100%;" onclick="location.href='https://clinixsummary.ai/register?plan=prolific-6000'; return false;" data-i18n="pricing.prolific_cta">Subscrever</button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="plan-name">Plan Enterprise</div>
+                        <div class="plan-price" data-i18n="pricing.custom_price">Sob consulta</div>
+                        <p class="plan-period" data-i18n="pricing.enterprise_credits">Créditos à medida</p>
+                        <ul class="plan-features">
+                            <li data-i18n="pricing.enterprise_f4">Integrações à medida e apoio na implementação</li>
+                            <li data-i18n="pricing.enterprise_f5">Gestor de sucesso dedicado</li>
+                            <li data-i18n="pricing.enterprise_f2">Modo ambiente e fluxos para equipas</li>
+                        </ul>
+                        <a href="/pt-pt/contact/" class="btn-primary" style="width: 100%; text-align: center; background-color: var(--accent); color: var(--text-primary);" onclick="setTimeout(function(){ var sel = document.getElementById('contact-topic'); if(sel) sel.value='Enterprise Licensing'; }, 200);" data-i18n="pricing.enterprise_cta">Contactar vendas</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 32px;">
+                <button id="pricing-toggle" class="btn-outline" style="padding: 12px 32px; font-size: 15px; display: inline-flex; align-items: center; gap: 8px;" onclick="togglePricingPlans()">
+                    <span id="pricing-toggle-text" data-i18n="pricing.see_all_plans">Ver todos os planos</span>
+                    <span id="pricing-toggle-icon" class="material-symbols-rounded" style="font-size: 20px; transition: transform 0.3s;">expand_more</span>
+                </button>
+            </div>
+
+            <div style="text-align: center; margin-top: 24px; font-size: 14px; color: var(--text-secondary);" data-i18n="pricing.enterprise_question">Precisa de licenciamento empresarial ou para toda a organização?</div>
+        </div>
+    </section>
+</main>
+
+    <!-- QUALITY ASSURANCE STAMP -->
+    <div style="background: var(--bg-subtle); padding: 12px 0; font-size: 11px; text-align: center; color: var(--text-secondary); border-top: 1px solid var(--border-subtle);">
+        <div class="page-width" data-i18n="common.qms_stamp">Garantido pelo processo de gestão da qualidade ClinixQM</div>
+    </div>
+
+    <footer>
+        <div class="page-width">
+            <div class="footer-layout">
+
+                <div class="footer-brand-col">
+                    <div style="margin-bottom: 40px;">
+                        <a href="/pt-pt/" class="footer-logo">
+                            <img src="/images/logo-wings.png" alt="" class="logo-symbol footer-symbol" height="53" width="53" loading="lazy">
+                            <img src="/images/logo-footer.png" alt="ClinixSummary" class="logo-wordmark" height="74" width="112" loading="lazy">
+                        </a>
+                    </div>
+
+                    <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-end;">
+                        <h4 style="font-size: 14px; color: #fff; margin-bottom: 4px; letter-spacing: 0.05em;">BY GATMEDI</h4>
+                        <p style="font-size: 11px; color: rgba(255,255,255,0.5); margin-bottom: 16px;">© 2026 GATMEDI</p>
+                        <p style="font-size: 11px; color: rgba(255,255,255,0.5); margin: -12px 0 16px;"><span dir="ltr">(ClinixSummary is a product of Gacrux Advanced Technologies in Medicine Ltd.)</span></p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/clinixsummary" target="_blank" rel="noopener">f</a>
+                            <a href="https://x.com/clinixsummary" target="_blank" rel="noopener">𝕏</a>
+                            <a href="https://www.linkedin.com/company/clinixsummary" target="_blank" rel="noopener">in</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4 data-i18n="nav.meet_clinixs">Conheça o ClinixSummary</h4>
+                        <ul>
+                            <li><a href="/pt-pt/proprietary-models/" data-i18n="dropdown.proprietary_models">Modelos proprietários</a></li>
+                            <li><a href="/pt-pt/ai-clinical-notes/" data-i18n="dropdown.meticulous_notes">Notas meticulosas</a></li>
+                            <li><a href="/pt-pt/clinix-foundation/" data-i18n="dropdown.clinix_foundation">Clinix Foundation</a></li>
+                            <li><a href="/pt-pt/kaizen/" data-i18n="dropdown.kaizen">Kai-zen</a></li>
+                            <li><a href="/pt-pt/multilingual-ai-scribe/" data-i18n="dropdown.languages">Idiomas</a></li>
+                            <li><a href="/pt-pt/ambient-ai-scribe/" data-i18n="dropdown.auto_ambient">Captura automática</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h4 data-i18n="footer.company">Empresa</h4>
+                        <ul>
+                            <li><a href="/pt-pt/story/" data-i18n="footer.story">A nossa história</a></li>
+                            <li><a href="/pt-pt/publications/" data-i18n="dropdown.publications">Publicações</a></li>
+                            <li><a href="/pt-pt/contact/" data-i18n="common.contact_us">Fale connosco</a></li>
+                            <li><a href="/pt-pt/careers/" data-i18n="footer.careers">Trabalhe connosco</a></li>
+                            <li><a href="/pt-pt/news/" data-i18n="dropdown.news_events">Notícias e eventos</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4 data-i18n="nav.solutions">Soluções</h4>
+                        <ul>
+                            <li><a href="/pt-pt/clinicians/" data-i18n="dropdown.for_clinicians">Para profissionais de saúde</a></li>
+                            <li><a href="/pt-pt/organizations/" data-i18n="dropdown.for_orgs">Para organizações</a></li>
+                            <li><a href="/pt-pt/insurers/" data-i18n="dropdown.insurers">Seguradoras de saúde</a></li>
+                            <li><a href="/pt-pt/government/" data-i18n="dropdown.government">Governo</a></li>
+                            <li><a href="/pt-pt/nonprofit/" data-i18n="dropdown.nonprofit">Sem fins lucrativos</a></li>
+                            <li><a href="/pt-pt/ai-medical-scribe/" data-i18n="dropdown.by_specialty">Por especialidade</a></li>
+                            <li><a href="/pt-pt/integrations/" data-i18n="dropdown.integrations">Integrações</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4 data-i18n="nav.capabilities">Funcionalidades</h4>
+                        <ul>
+                            <li><a href="/pt-pt/ai-medical-scribe/" data-i18n="dropdown.medical">Escriba médico com IA</a></li>
+                            <li><a href="/pt-pt/dental-ai-scribe/" data-i18n="dropdown.dental">Medicina dentária</a></li>
+                            <li><a href="/pt-pt/psychiatry-ai-scribe/" data-i18n="dropdown.psychiatry">Psiquiatria</a></li>
+                            <li><a href="/pt-pt/psychology-ai-scribe/" data-i18n="dropdown.psychology">Psicologia</a></li>
+                            <li><a href="/pt-pt/allied-health-ai-scribe/" data-i18n="footer.occ_therapy">Terapia ocupacional</a></li>
+                            <li><a href="/pt-pt/speech-therapy-ai-scribe/" data-i18n="footer.speech_lang">Terapia da fala</a></li>
+                            <li><a href="/pt-pt/physiotherapy-ai-scribe/" data-i18n="footer.physio">Fisioterapia</a></li>
+                            <li><a href="/pt-pt/nutrition-ai-scribe/" data-i18n="footer.nutritional">Nutrição clínica</a></li>
+                            <li><a href="/compare/" data-i18n="footer.compare">Comparar assistentes de IA</a></li>
+                            <li><a href="/pt-pt/midwifery-ai-scribe/" data-i18n="dropdown.midwifery">Saúde materna e obstétrica</a></li>
+                            <li><a href="/pt-pt/veterinary-ai-scribe/" data-i18n="dropdown.vet_medicine">Medicina veterinária</a></li>
+                            <li><a href="/pt-pt/operative-note-ai/" data-i18n="dropdown.operational_notes">Relato operatório</a></li>
+                            <li><a href="/pt-pt/cme-vault/" data-i18n="dropdown.cme_vault">Acervo de desenvolvimento profissional</a></li>
+                            <li><a href="/pt-pt/medical-billing-ai/" data-i18n="dropdown.billing_assist">Assistente de faturação</a></li>
+                            <li><a href="/pt-pt/referral-letter-ai/" data-i18n="dropdown.referrals">Referenciações</a></li>
+                            <li><a href="/pt-pt/icd-coding/" data-i18n="dropdown.icd_coding">Codificação CID</a></li>
+                            <li><a href="/pt-pt/patient-leaflet-generator/" data-i18n="dropdown.patient_leaflet">Folheto para o doente</a></li>
+                            <li><a href="/pt-pt/radiology-ai/"><span data-i18n="dropdown.radiology_assist">Assistente de radiologia</span> Beta</a></li>
+                            <li><a href="/pt-pt/dermatology-ai/"><span data-i18n="dropdown.dermatology_assist">Assistente de dermatologia</span> Beta</a></li>
+                            <li><a href="/pt-pt/medical-triage-ai/"><span data-i18n="dropdown.triage_assist">Assistente de triagem</span> Beta</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h4 data-i18n="nav.learn">Conteúdos</h4>
+                        <ul>
+                            <li><a href="/pt-pt/publications/" data-i18n="dropdown.publications">Publicações</a></li>
+                            <li><a href="/pt-pt/whitepapers/" data-i18n="dropdown.whitepapers">Whitepapers</a></li>
+                            <li><a href="/case-studies/" data-i18n="dropdown.case_studies">Casos de sucesso</a></li>
+                            <li><a href="/pt-pt/news/" data-i18n="dropdown.news_events">Notícias e eventos</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4 data-i18n="nav.pricing">Planos</h4>
+                        <ul>
+                            <li><a href="/pt-pt/pricing/" data-i18n="dropdown.see_pricing">Ver planos</a></li>
+                            <li><a href="/pt-pt/roi-calculator/" data-i18n="dropdown.roi_calculator">Calculadora de ROI</a></li>
+                            <li><a href="/pt-pt/contact/" data-i18n="dropdown.enterprise_contact">Empresarial</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col-stack">
+                    <div class="footer-group">
+                        <h4 data-i18n="footer.terms_policies">Termos e políticas</h4>
+                        <ul>
+                            <li><a href="/pt-pt/privacy-choices/" data-i18n="footer.privacy_choices">Preferências de privacidade</a></li>
+                            <li><a href="/pt-pt/privacy-policy/" data-i18n="footer.privacy_policy">Política de Privacidade</a></li>
+                            <li><a href="/pt-pt/usage-policy/" data-i18n="footer.usage_policy">Política de Utilização</a></li>
+                            <li><a href="/pt-pt/terms/" data-i18n="footer.terms">Termos de Serviço</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h4 data-i18n="footer.help_security">Ajuda e confiança</h4>
+                        <ul>
+                            <li><a href="/pt-pt/security/" data-i18n="dropdown.compliance">Central de confiança</a></li>
+                            <li><a href="/status/" data-i18n="footer.system_status">Estado do sistema</a></li>
+                            <li><a href="/pt-pt/contact/" data-i18n="common.contact_us">Fale connosco</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.4/purify.min.js" integrity="sha512-wKv5WSKk06JEAfIhv1IO/2IiPrfbUoFDMGMjkumP7FrTVECN+ISKNFpdYLjDWYLR1fAyVqv02VNVsFDZPqMEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/i18n.js?v=812895c82c"></script>
+    <script src="/js/pages/home.js?v=d382f05aaa"></script>
+    <script src="/js/pages/meet.js?v=c0205aa5ba"></script>
+    <script src="/js/pages/solutions.js?v=5649c0ac0b"></script>
+    <script src="/js/pages/capabilities.js?v=d49faeda9c"></script>
+    <script src="/js/pages/learn.js?v=8ea04623dc"></script>
+    <script src="/js/pages/other.js?v=b753930773"></script>
+    <script src="/js/pages/compare.js?v=013f5a5bad"></script>
+    <script src="/js/seo.js?v=b2dc564895"></script>
+    <script src="/js/app.js?v=20f5de4568"></script>
+
+
+</body></html>

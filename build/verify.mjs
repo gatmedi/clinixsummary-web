@@ -90,7 +90,7 @@ for (const route of CFG.routes) {
     if (aliasTarget || routeIsNoindex || CFG.nonTranslatedRoutes.includes(route)) {
       if (hreflangs.length) problems.push(`${label}: unexpected hreflang cluster on ${aliasTarget ? 'alias' : 'EN-only'} route`);
     } else {
-      const want = new Map(CFG.locales.map(l => [l, CFG.origin + prefix(l) + trail(route)]));
+      const want = new Map(CFG.locales.map(l => [(CFG.hreflang || {})[l] || l, CFG.origin + prefix(l) + trail(route)]));
       want.set('x-default', CFG.origin + trail(route));
       for (const [, lang, href] of hreflangs) {
         if (!want.has(lang)) problems.push(`${label}: stray hreflang ${lang}`);
@@ -102,7 +102,8 @@ for (const route of CFG.routes) {
 
     // 4. lang / dir
     const langAttr = (html.match(/<html[^>]*\blang="([^"]+)"/) || [])[1];
-    if (langAttr !== locale) problems.push(`${label}: <html lang="${langAttr}"> ≠ ${locale}`);
+    const wantLang = (CFG.htmlLang || {})[locale] || locale;
+    if (langAttr !== wantLang) problems.push(`${label}: <html lang="${langAttr}"> ≠ ${wantLang}`);
     const dir = (html.match(/<html[^>]*\bdir="([^"]+)"/) || [])[1];
     const wantDir = locale === 'ar' ? 'rtl' : 'ltr';
     if (dir !== wantDir) problems.push(`${label}: dir="${dir}" ≠ ${wantDir}`);

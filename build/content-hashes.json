@@ -1,1242 +1,1830 @@
 {
   "https://clinixsummary.ai/": {
-    "hash": "99dcfcb451727ac7b60a25d7eff8301e906fa5cd",
-    "lastmod": "2026-11-27"
+    "hash": "da789c41c7a36f22c751a0e17f155d1eb6569878",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/": {
-    "hash": "5cb58e3606503fb70a2ff9e94bf92d1a6a59231c",
-    "lastmod": "2026-11-27"
+    "hash": "2fdded9233f279a38112a0fe01119565bdf2e7aa",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/": {
-    "hash": "7ac0dca92ab93320d451445b97f46a5a7668be84",
-    "lastmod": "2026-11-27"
+    "hash": "3612f2e3912010855396552b9b0e610c23fd1ae2",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/": {
-    "hash": "7706935b59139ed59a264affb0c5eb093d623510",
-    "lastmod": "2026-11-27"
+    "hash": "f6028b1e9ab3bf4faf0e156733e04926b5c0e95e",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/": {
-    "hash": "43ef58d2780c4d6c42467f3a18c2a685fc20225a",
-    "lastmod": "2026-11-27"
+    "hash": "27e9f36325fbc53f9a3277791e24912bb2d2c241",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/": {
-    "hash": "0c8674867d49264dc347e1ea8cdd2e10825141e5",
-    "lastmod": "2026-11-27"
+    "hash": "ce259c9231b9da9b5e2ecda20117290709b02c62",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/contact/": {
-    "hash": "466b37e8f60c37a59531affd7313bed28382a34d",
-    "lastmod": "2026-11-27"
+    "hash": "05024f7a6150120bc5df2df241cc0a9928df6eaa",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/contact/": {
-    "hash": "7d3cb363c3d4855b7d1c416d141aefefccd1d8ef",
-    "lastmod": "2026-11-27"
+    "hash": "d605e5ddb9fb731952ab6657da09c311c069baf6",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/contact/": {
-    "hash": "6b7acc75f81feae0ab11b12f75297fc9f592fff4",
-    "lastmod": "2026-11-27"
+    "hash": "cf32acfb3c6493b72d789aefaec116dc261a3370",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/contact/": {
-    "hash": "fec1059c667992ae04a815591e012694b1e99acc",
-    "lastmod": "2026-11-27"
+    "hash": "6da78d3941077d844a1f0e94f9c6f70d0fa3bedb",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/contact/": {
-    "hash": "fb0df7b0f07b498af8a30e94d4517fff55c2106b",
-    "lastmod": "2026-11-27"
+    "hash": "438c3b3b15a47f21b348f6301d3caafd943e1fd0",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/contact/": {
-    "hash": "4f6e05b098b8992fb9c94f59f2746ce3554c0e56",
-    "lastmod": "2026-11-27"
+    "hash": "d7f0ceca8f891aadc051d5c4039d5b35f74e9790",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ai-clinical-notes/": {
-    "hash": "b4803bec55113529fd30e420c1e3cc1a24fb4271",
-    "lastmod": "2026-11-27"
+    "hash": "086cb804ca69c9d0b18c3e9e7cbd6f150f0718ca",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/ai-clinical-notes/": {
-    "hash": "d2ed924427f8ce7484804e89b4860d0892566c3f",
-    "lastmod": "2026-11-27"
+    "hash": "b6211bb94310242f488334ea846d3dec356b65bf",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/ai-clinical-notes/": {
-    "hash": "32650809551328fcd0af5c26ed459fc0fcf00a2e",
-    "lastmod": "2026-11-27"
+    "hash": "8ad86b429601056864e13d4de6d98b6a1e1ff355",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/ai-clinical-notes/": {
-    "hash": "f67b91fb92d3df3046242e8ad6d58d26cf5f25e7",
-    "lastmod": "2026-11-27"
+    "hash": "902e51cf41dd15e79558177f665749c7f8220e42",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/ai-clinical-notes/": {
-    "hash": "8d5315080c632a628844a391e669e28862201756",
-    "lastmod": "2026-11-27"
+    "hash": "e5b43888224d46fa003b7a4adbfa28d81cc93e3d",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/ai-clinical-notes/": {
-    "hash": "c230705becf17eb795a4de106c47a74576f217a6",
-    "lastmod": "2026-11-27"
+    "hash": "3544f9d73eb00d72d01e9cb98ec5399eee3f8799",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/proprietary-models/": {
-    "hash": "7b025038df691587baf48e3295ac8b424e170f0e",
-    "lastmod": "2026-11-27"
+    "hash": "f2825cef0f9dd08d09ddb07cb36ed884f4264637",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/proprietary-models/": {
-    "hash": "4b6ce72305fc01bd247ba0d0eadd0f85817b64bd",
-    "lastmod": "2026-11-27"
+    "hash": "eee8ef32559517ee4c8eed5097ad342e00e4f4df",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/proprietary-models/": {
-    "hash": "e7cca79a53fe7ed4533f66efdda2ecbae280364d",
-    "lastmod": "2026-11-27"
+    "hash": "6293ee51c083ee81bcf5d18a7f21e28bdfb57914",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/proprietary-models/": {
-    "hash": "c08965b9016659f61e2973f066546de65a3da44c",
-    "lastmod": "2026-11-27"
+    "hash": "45a1c3c043f7d3be4d823bbd251e636639dd4b94",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/proprietary-models/": {
-    "hash": "2901b0bfc950e5b28a7893b2f56d0176f16066ab",
-    "lastmod": "2026-11-27"
+    "hash": "031455a8bfd435895b25975f9239fd05ebaf97a1",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/proprietary-models/": {
-    "hash": "72a7e1c111352bcce6758ff1e409c4e2ddfdada6",
-    "lastmod": "2026-11-27"
+    "hash": "bda4a62a17aaa0deb1ca38112a8984fb994ee9e2",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/kaizen/": {
-    "hash": "70980d87199584ffa220cea8565d18737b14d4f5",
-    "lastmod": "2026-11-27"
+    "hash": "89b79dd4cd9c9f199b9c9b6a59c6cf2dde5d6906",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/kaizen/": {
-    "hash": "6ec138ea70d9689c94530af0d44a434156fc3279",
-    "lastmod": "2026-11-27"
+    "hash": "1b5f927c64679c147e30c9d01d69ca7973fa5bcb",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/kaizen/": {
-    "hash": "d7bf62111b9f4dc76ba65751787bc2a65709c20b",
-    "lastmod": "2026-11-27"
+    "hash": "ff403743d8d34d054be3e2488a69ce49c603a66d",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/kaizen/": {
-    "hash": "189241d22ac746e158c2cb47432661e3ecc363fb",
-    "lastmod": "2026-11-27"
+    "hash": "c8824abfc49d1f38655a2b756de1f9174f347eab",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/kaizen/": {
-    "hash": "c461b5f9a3bf6025183a67d5ab3c463142955950",
-    "lastmod": "2026-11-27"
+    "hash": "c40bf8604add7199f5a6154bb6badf84b9b6db2d",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/kaizen/": {
-    "hash": "68d2ab6362c76123bdf09f571093b7325a22d8b4",
-    "lastmod": "2026-11-27"
+    "hash": "df1f8650e40437a94a561e6ef6acb776d33967c9",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/security/": {
-    "hash": "1750e545c42d179996e90d7f01b5be8d210207c3",
-    "lastmod": "2026-11-27"
+    "hash": "69b9c27428b7257c6ba931837dbfe55047151e46",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/security/": {
-    "hash": "6019a4258a2ff3c6fa265cb7bfa7fb4be3782c10",
-    "lastmod": "2026-11-27"
+    "hash": "17d3d827095eb1a54dd81743efa8645fb87932ef",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/security/": {
-    "hash": "49e738eee43a50e3880a4ec5131f1f5d5eeb6ee1",
-    "lastmod": "2026-11-27"
+    "hash": "4c40dbf0b260c151400e24d8dc5f553189dc55f7",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/security/": {
-    "hash": "3846161b689f81fa708eaea9689daeedc4049d48",
-    "lastmod": "2026-11-27"
+    "hash": "ad9f032dd4a999a5b7cb2b7aeefbc6fe31539940",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/security/": {
-    "hash": "51e70092eecc6f227f9dfcc8503fe1b4f5ced5dc",
-    "lastmod": "2026-11-27"
+    "hash": "50b6229f8a9a6f95e47c3d813ca44e0d8add6f39",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/security/": {
-    "hash": "827728836a20693426208058231d7977a7a7d786",
-    "lastmod": "2026-11-27"
+    "hash": "c7263560fef40dfad62b81bceb054afda7d95bcf",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/multilingual-ai-scribe/": {
-    "hash": "43af48c10650a40147104ee5b42e45e4c9ba48ec",
-    "lastmod": "2026-11-27"
+    "hash": "a25e4ce0510d7fc6429f0f2e29c5fd0915e34986",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/multilingual-ai-scribe/": {
-    "hash": "5eacbebddd8f84d79a637a7d068afe85ce8b0963",
-    "lastmod": "2026-11-27"
+    "hash": "11c05fe67d539b9b90831f35479f311f1c0a6e54",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/multilingual-ai-scribe/": {
-    "hash": "c2111c11f64d8f30f7e9e8875a741e857911a16b",
-    "lastmod": "2026-11-27"
+    "hash": "9f538307b80e73ef1f56bf0a76a7b0518ceed145",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/multilingual-ai-scribe/": {
-    "hash": "5853d2e69483ed90cf46121108ebcafaa11ae744",
-    "lastmod": "2026-11-27"
+    "hash": "a2d8991b210317216270249abff021fc763d4de8",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/multilingual-ai-scribe/": {
-    "hash": "638e8f36a06dd29de04a7457f59b3128ba13fffb",
-    "lastmod": "2026-11-27"
+    "hash": "23ec375d59b701493bb60ff4c3384918cbf977a0",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/multilingual-ai-scribe/": {
-    "hash": "77d4fed9d08a92a4ce47424c14d0619049edc97a",
-    "lastmod": "2026-11-27"
+    "hash": "2bfdec982d74f8ebcb60a398e02b8f9521bf9a00",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ambient-ai-scribe/": {
-    "hash": "dfd6060ecf122780f97fcb8776e249de9d99a9e3",
-    "lastmod": "2026-11-27"
+    "hash": "686464c5b199bbfee67bfe04effed2ac2d8f85f7",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/ambient-ai-scribe/": {
-    "hash": "fe6ee259eca95913f3122f797f80d2ad29ede946",
-    "lastmod": "2026-11-27"
+    "hash": "bb0fa1c777f615567ee024260499ab25c1e9bfce",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/ambient-ai-scribe/": {
-    "hash": "5246f67cffbdbc1b0ddfefec2e7c99c48eedf8c4",
-    "lastmod": "2026-11-27"
+    "hash": "a8e3f000bb514200eea86a1df88e991a3041a171",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/ambient-ai-scribe/": {
-    "hash": "31d4537acf4b00ed424730db514443666bf02793",
-    "lastmod": "2026-11-27"
+    "hash": "ac1810ecc4387dcd825c678541d55a3b7ce61bbe",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/ambient-ai-scribe/": {
-    "hash": "93e3cca01d261f2b50f5971fe30f8001e4bb2777",
-    "lastmod": "2026-11-27"
+    "hash": "42c316789b870fd167dcf7b6c669a520ace6aa57",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/ambient-ai-scribe/": {
-    "hash": "6da427dde4f3ebc25a908b6e8359fdd3210255e6",
-    "lastmod": "2026-11-27"
+    "hash": "d65095965ee41ff2580f74c3be012587c4d935f7",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/cme-vault/": {
-    "hash": "1b7ab7e85aa155fa2536cf3703abe250527d552c",
-    "lastmod": "2026-11-27"
+    "hash": "1fb4882992324c360e9ed1bc21aa9068444473e3",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/cme-vault/": {
-    "hash": "80767ca3dea44a2e3620e31486001f4a6547faaa",
-    "lastmod": "2026-11-27"
+    "hash": "2a9346c2f38f3dbf6604ce7fcee2622f3611878c",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/cme-vault/": {
-    "hash": "a9a2fe869dc1de3235e89b3c1f0a9a2d0d3e2992",
-    "lastmod": "2026-11-27"
+    "hash": "d5cf44a1469b9b8cc48feff6171586eeb4792cb5",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/cme-vault/": {
-    "hash": "1574ca08c5261bb0fa6043a163c8e7dccbde42b9",
-    "lastmod": "2026-11-27"
+    "hash": "7d805aa57212851821d26eeff3e9b831c27bc1e6",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/cme-vault/": {
-    "hash": "d2b60f89ad65dd7128f91becddfce903861ae52a",
-    "lastmod": "2026-11-27"
+    "hash": "2f55fd9a6ace76f72973f1d3baca7f02a3015c2b",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/cme-vault/": {
-    "hash": "d1130b34759fa7f7ffdef2d6f152d69792b1bc67",
-    "lastmod": "2026-11-27"
+    "hash": "1ed67050304a3ede1c7d8166f4f1b5d1c99dc362",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/clinix-foundation/": {
-    "hash": "a68f1a16177118ffcafc05f1e4340ee06def166b",
-    "lastmod": "2026-11-27"
+    "hash": "5f3b79cbfa840adc108f5de6d6d6f66193bfd6cf",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/clinix-foundation/": {
-    "hash": "7539b8c3323000ef2c20f6a7e331c4275d25c225",
-    "lastmod": "2026-11-27"
+    "hash": "6181e47d16cd2eae44e6bc1190466550536462bb",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/clinix-foundation/": {
-    "hash": "a905f8678a3d6dd0fdd7bfd1903db32b6b8e86fa",
-    "lastmod": "2026-11-27"
+    "hash": "7e76bf0851dfe0d65f8041179ff5fe3d79564680",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/clinix-foundation/": {
-    "hash": "d6513a1b5181933faa6be055055287c03bf31da5",
-    "lastmod": "2026-11-27"
+    "hash": "c8dee0657b0e97eb66f1c80fe0c81f8811b6ccb6",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/clinix-foundation/": {
-    "hash": "e1746160568ceee5dcd066d36d126c7ef1ddf01b",
-    "lastmod": "2026-11-27"
+    "hash": "ac956eb31116533167c3300fbd175af5984db811",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/clinix-foundation/": {
-    "hash": "fc407bbdc7aced8fa730206e2f48f769a18c983e",
-    "lastmod": "2026-11-27"
+    "hash": "1b6d5da982120f4266c1532388d5360c443b7604",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/clinicians/": {
-    "hash": "5af4d58d3960062baf1116d3403f82fb346512b2",
-    "lastmod": "2026-11-27"
+    "hash": "8652788d83e7fb7bac217e94a7e2e29feac12770",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/clinicians/": {
-    "hash": "fadcf173b60446e83e4161e8e7a4b16886ec23f2",
-    "lastmod": "2026-11-27"
+    "hash": "5dface82fd0909ca7279c98a3fd9679422579fb2",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/clinicians/": {
-    "hash": "72518e488a5bf785dbbe718be8085ab07f254c15",
-    "lastmod": "2026-11-27"
+    "hash": "0755c508eead5779f4169c2007f73333b9059c90",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/clinicians/": {
-    "hash": "57e65a4c9589822cc493719f8325b09ea8831344",
-    "lastmod": "2026-11-27"
+    "hash": "e27cbe664db610bf76050b1bbf66bbc26ef7adbd",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/clinicians/": {
-    "hash": "1d868acca924198fea4b0c7b327166ae7863d7cf",
-    "lastmod": "2026-11-27"
+    "hash": "282ab07fdfacdbf4cefe718b51248caff86ad2f8",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/clinicians/": {
-    "hash": "b6b014b0df865c3539583bd6a919f6504ec03d2c",
-    "lastmod": "2026-11-27"
+    "hash": "aba425a2fc120269c6c131bf336e43cb9ee27e22",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/organizations/": {
-    "hash": "5604570800abcfe1d881747d0174a4e3aba2c956",
-    "lastmod": "2026-11-27"
+    "hash": "54e6dd4827dfcc237ce04abff4084f46287875a1",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/organizations/": {
-    "hash": "716c0bfb072873ccd1d6128eda253b89d5a99129",
-    "lastmod": "2026-11-27"
+    "hash": "0ca4a056c658dc96386fab37a0b155bf30ada6ef",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/organizations/": {
-    "hash": "5ed7777165355b2c81c4d2169632de58dc0142e4",
-    "lastmod": "2026-11-27"
+    "hash": "501ac63e07e465bdc21817c378250b9945ec6fb6",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/organizations/": {
-    "hash": "7be88e5ec749dc9214dc8060827d3b351457c2b5",
-    "lastmod": "2026-11-27"
+    "hash": "fba64860e1c2b4d7d6d6a5efeccb74044d24ee35",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/organizations/": {
-    "hash": "bf5900f8af7c2e5d71bd910d0923b7f908ee6a82",
-    "lastmod": "2026-11-27"
+    "hash": "403c009b4313e5c5d5b5ea1bd6638245eb8dfed2",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/organizations/": {
-    "hash": "0032158fbfc8f2331e2eeac41c1629e362a5f380",
-    "lastmod": "2026-11-27"
+    "hash": "da531c1f05e541aa8ad562ac6e2b30b7834d0362",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/insurers/": {
-    "hash": "2308971914f6989ed66fdde7f5f10bed263b5b67",
-    "lastmod": "2026-11-27"
+    "hash": "80049e764e5e524f3d2b75b9648fc66294749a09",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/insurers/": {
-    "hash": "98b627f5084991f8bffff88d74836b6cada841d6",
-    "lastmod": "2026-11-27"
+    "hash": "39aead8f670e253a3c699faa81f7957b7d0fde15",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/insurers/": {
-    "hash": "648297e7b2f1159fcf4e28f2755753bcb9157143",
-    "lastmod": "2026-11-27"
+    "hash": "99fa947ac2a9478f949d7637ff9b511365e337d1",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/insurers/": {
-    "hash": "5407cc9a43deb6b8cc063b147efa9209131aa98d",
-    "lastmod": "2026-11-27"
+    "hash": "70bd0c016208d64b1037d5452e1097d6a1e8dcd7",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/insurers/": {
-    "hash": "e5551360e3f65267e7a04520bffeb57b5914292f",
-    "lastmod": "2026-11-27"
+    "hash": "0dee58e29387d0875896217499344500efe4010a",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/insurers/": {
-    "hash": "d23a04745eac2fc80f16104e5672abbf762b7bce",
-    "lastmod": "2026-11-27"
+    "hash": "cb8406d4cf99e0effb5a9afa77dd121d17b8697f",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/government/": {
-    "hash": "308c551cc1175979e2f9ab80b03e2c48dba88b4b",
-    "lastmod": "2026-11-27"
+    "hash": "eab92252f43a999d8dd55266cac9a5dea66bf8aa",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/government/": {
-    "hash": "ee79d627884b46e00f63d5c4603d5b8afe203993",
-    "lastmod": "2026-11-27"
+    "hash": "9c6affa86fb0c8df6bc57561336a33d9bb6b73a1",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/government/": {
-    "hash": "c818170efd263280ee7ab395542bcddd81116ea8",
-    "lastmod": "2026-11-27"
+    "hash": "edbf43b7f92b88982511c55726465b40b685f78b",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/government/": {
-    "hash": "5fd290a8706f2e5c68b832a8142ce1784c9a7c1f",
-    "lastmod": "2026-11-27"
+    "hash": "093447221326cceb57f00193784ce63f50c30e4d",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/government/": {
-    "hash": "6eea5b4a3473bcb5b7e009d87dac33d9e6daa1d5",
-    "lastmod": "2026-11-27"
+    "hash": "e4ad73ba855f85b8628e52a96a5333bf68387f54",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/government/": {
-    "hash": "a4c48621f257509f6f418de44f5a61e2d29d0293",
-    "lastmod": "2026-11-27"
+    "hash": "d5490205c5fd9c9144622dbe4451a8086ca49e20",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/nonprofit/": {
-    "hash": "55f5c0ce4ec7eb35af258bab69dd21d4215bea0c",
-    "lastmod": "2026-11-27"
+    "hash": "a1cd216602716b15f1c66950d02cd1695b698271",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/nonprofit/": {
-    "hash": "bba08d4f254124be18651aabd4ac51cfcf14bd46",
-    "lastmod": "2026-11-27"
+    "hash": "b4d14de97799724b0aa048e625130a22ab93fe20",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/nonprofit/": {
-    "hash": "ed5a2e589c444584fe3663dcf366a1eaa3302410",
-    "lastmod": "2026-11-27"
+    "hash": "7f62c8b66072f322374d8ed468b7f77a7a24425a",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/nonprofit/": {
-    "hash": "11805d502b6fb95e5e42ee09a43714acf1b119cb",
-    "lastmod": "2026-11-27"
+    "hash": "9044c2c2d7ab6936ab57ce7a21fffa7f493acd8c",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/nonprofit/": {
-    "hash": "6c278dde63d14b7a67598c31c0a248e6546e1706",
-    "lastmod": "2026-11-27"
+    "hash": "46c3ee8aa7a1f75da9a394d4a4a60a5c95fd0f5c",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/nonprofit/": {
-    "hash": "e705be96146a7041ca1a60ce2b8b19ad11c13977",
-    "lastmod": "2026-11-27"
+    "hash": "6e487ce3213d1d14995f853b2d462fdb2a5454cd",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/integrations/": {
-    "hash": "f9a4f4b24f5a333d38391f9586673cc5b9cc800d",
-    "lastmod": "2026-11-27"
+    "hash": "ed9e8d9b7aea274638ace72806cfe9234561c273",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/integrations/": {
-    "hash": "8ff1db7db5618e0ffbe285fbd6f8766f2685b8b0",
-    "lastmod": "2026-11-27"
+    "hash": "2639738e3c6b2476d9a747113ee5ca5adb52478f",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/integrations/": {
-    "hash": "8bad5a0bc7a14201290911074425344c6404c7fd",
-    "lastmod": "2026-11-27"
+    "hash": "1a8e29584ec628b5491e12735433ae6abfa45808",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/integrations/": {
-    "hash": "ba9337671c9f75b1a47836d6680da118ddef2348",
-    "lastmod": "2026-11-27"
+    "hash": "072c63f3cbebcc827b6a2fefe68a91fb2e9d2114",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/integrations/": {
-    "hash": "b7927129d0e9b6b5dcfa41e9817982fbabd8e71a",
-    "lastmod": "2026-11-27"
+    "hash": "204f273e6699de284e4aad6c9b308823377a3f17",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/integrations/": {
-    "hash": "80fa005058adb9b7fbde12684609d6722564babc",
-    "lastmod": "2026-11-27"
+    "hash": "63e6aecc8e8644de269c4790ca8ef124a5d003b7",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ai-medical-scribe/": {
-    "hash": "0a82024230f8bba9e7085e99f19c1dd537cf0037",
-    "lastmod": "2026-11-27"
+    "hash": "386d492a8e3f78072eecf07c9a6e7705af6f6c7f",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/ai-medical-scribe/": {
-    "hash": "83f2878b4d5f9329006251cb160f63128e8d8181",
-    "lastmod": "2026-11-27"
+    "hash": "ef81180e7b1d2ffe81ec188cf62952c614e17630",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/ai-medical-scribe/": {
-    "hash": "fa0d898ac7548a68c2533dd90afdabb16f1e6a6d",
-    "lastmod": "2026-11-27"
+    "hash": "cf6461075a762f603882084240e4a560a3083eb2",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/ai-medical-scribe/": {
-    "hash": "397a2c249a9f1d1f85e3e12e460ecbf0426293b8",
-    "lastmod": "2026-11-27"
+    "hash": "efe5f31cdffa4baffb3e9b4d127d0c1a82b1e17f",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/ai-medical-scribe/": {
-    "hash": "38ee178f9ecca690b2583d847695ccf9045726ab",
-    "lastmod": "2026-11-27"
+    "hash": "ad28a875d0fc9305c750f79a003ea434dde67dec",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/ai-medical-scribe/": {
-    "hash": "4a6d2442d3bbfb81e5aaa1e5ac9cf87fcabfc22f",
-    "lastmod": "2026-11-27"
+    "hash": "ad94e2866e5754a6290dd527241330f3a351ad0f",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/dental-ai-scribe/": {
-    "hash": "11206b7201c01d7e7277b0ab99ed447bab6cbab7",
-    "lastmod": "2026-11-27"
+    "hash": "e6b34a733511e3b542bbb6216a4a662bee20ab75",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/dental-ai-scribe/": {
-    "hash": "d8681e737b95e59d302712808dd814fe1c1926b9",
-    "lastmod": "2026-11-27"
+    "hash": "ec26c80dba0ec3bc28a09d198eabb80c268d6374",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/dental-ai-scribe/": {
-    "hash": "0199b52c4812d8c5d981f9f68c2b24b41809a025",
-    "lastmod": "2026-11-27"
+    "hash": "9f2a0249fd3a537c606cbf4e3d176f2c1cd0b69e",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/dental-ai-scribe/": {
-    "hash": "018ffcee0bcf4a2414a0f56a6984ce83ca01b16a",
-    "lastmod": "2026-11-27"
+    "hash": "35036db4ae3bdd1038ba170f163043b29c34444b",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/dental-ai-scribe/": {
-    "hash": "6d5f612919059cced6326ed666954be2257631a1",
-    "lastmod": "2026-11-27"
+    "hash": "9f22004da6c3dc1b35cf0bd82a27ae7a553adbd2",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/dental-ai-scribe/": {
-    "hash": "33fdbd3bdc6ef6142a76961f7f246489d98e67d3",
-    "lastmod": "2026-11-27"
+    "hash": "33c5788be16991be2b2b7ae0e2a0e86567568c4b",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/psychiatry-ai-scribe/": {
-    "hash": "314c582a405a21e25fc1fb7af825a834291ee0b7",
-    "lastmod": "2026-11-27"
+    "hash": "23a78f9ae392408f3e7ac47d01711de6a428e8f0",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/psychiatry-ai-scribe/": {
-    "hash": "24bad2dc29e175ced24411d21f0a983a155b84e9",
-    "lastmod": "2026-11-27"
+    "hash": "f26c9a72838c73b07b47e25743a4520ac8811da1",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/psychiatry-ai-scribe/": {
-    "hash": "da5f29d31ec35a47e2bcf59a4ff753172793c295",
-    "lastmod": "2026-11-27"
+    "hash": "7d7808777a19faa9dd16990bf24b16626aa35b91",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/psychiatry-ai-scribe/": {
-    "hash": "0cc8c89c72406a91f4ffce489a1813441f6f4221",
-    "lastmod": "2026-11-27"
+    "hash": "7a20dfa421e9b7e73ff5ababc50dad633df7a409",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/psychiatry-ai-scribe/": {
-    "hash": "b0c9bc93acd87febe2e1464596005b773d325eb0",
-    "lastmod": "2026-11-27"
+    "hash": "94d68fffe5f2948bba0905516ee136317f7c0317",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/psychiatry-ai-scribe/": {
-    "hash": "8dae0da3ad8f0061b4a4b4876a69539eee5db026",
-    "lastmod": "2026-11-27"
+    "hash": "67513155fddf155d4dc14443e90e7c3d4254f17d",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/psychology-ai-scribe/": {
-    "hash": "6812d8349a8737f2c97e42ca378a00fb13089c69",
-    "lastmod": "2026-11-27"
+    "hash": "080a03ef08afeaeaa57090621f00d85bfab472c8",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/psychology-ai-scribe/": {
-    "hash": "197a7c61ab40df771ae2a1d070eff06a1b7fc8bb",
-    "lastmod": "2026-11-27"
+    "hash": "865c4bd2c47e31fda479b674fb6e2a4c71e220c3",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/psychology-ai-scribe/": {
-    "hash": "5955e05fb1dd096b26a8c12d6f5f1cb04ad333fc",
-    "lastmod": "2026-11-27"
+    "hash": "37a03cf03175d7808ccda1db2bd4b6c3307608c6",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/psychology-ai-scribe/": {
-    "hash": "426654cc93ad8f08b37a39c1ffcf582d54cc861d",
-    "lastmod": "2026-11-27"
+    "hash": "e55a4acd9492dad7825bd794de88e17b9d05fa22",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/psychology-ai-scribe/": {
-    "hash": "a29d4c92c42f5e8d27c8873e67baf875405e6c4a",
-    "lastmod": "2026-11-27"
+    "hash": "3dd34c10b14ed5c321946b723a858ca782132257",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/psychology-ai-scribe/": {
-    "hash": "d04e3bf5f6ecd2ccae716969fb3702493d6dd26f",
-    "lastmod": "2026-11-27"
+    "hash": "faa9b56f86fa524ba738e9d0d7e4a6a5dfa5266e",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/allied-health-ai-scribe/": {
-    "hash": "01a4e121838ef63da4ca1bd465d61c3f8b8de0fe",
-    "lastmod": "2026-11-27"
+    "hash": "26565c4406b490109838926534b90540bbc8de3a",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/allied-health-ai-scribe/": {
-    "hash": "f92815c870fe09dec99c4bc6a5879626caa2ae8a",
-    "lastmod": "2026-11-27"
+    "hash": "fbfd04fcf5b68aec0ecf877655dbc3862356134d",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/allied-health-ai-scribe/": {
-    "hash": "a253b279927d09bc70215e68336a690a0dda6ef1",
-    "lastmod": "2026-11-27"
+    "hash": "c30a65069f1c7f0ff287a603d09a2231273acabd",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/allied-health-ai-scribe/": {
-    "hash": "62eeddc50ea470774d277af4fcdecc6610a2743e",
-    "lastmod": "2026-11-27"
+    "hash": "2d89b4108b33bd970674211dde238cb0bb4a039d",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/allied-health-ai-scribe/": {
-    "hash": "58573829cdb936fc0a1bad950b2c52304ecf31af",
-    "lastmod": "2026-11-27"
+    "hash": "6bce44cbd653863565d53676c0241423f2ba9972",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/allied-health-ai-scribe/": {
-    "hash": "04cc868e4a0ebf5dc0142c2188f0432d187a5fe5",
-    "lastmod": "2026-11-27"
+    "hash": "aa1377f633ffdbb40d0415fb23347547993d77d8",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/physiotherapy-ai-scribe/": {
-    "hash": "0c2491635b4159e43dc7404e23e76b66d2707eb3",
-    "lastmod": "2026-11-27"
+    "hash": "2e2562b6a6d6da9bf3e4a568c82025830960afd5",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/physiotherapy-ai-scribe/": {
-    "hash": "a2476a904eced7b6821130ea46e2c6d46e2bb6cb",
-    "lastmod": "2026-11-27"
+    "hash": "e18de9de82374f22eaf0ce9f216558501642f581",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/physiotherapy-ai-scribe/": {
-    "hash": "7395c5437c47bd7aebeb10e62d358fa8a0c68fd0",
-    "lastmod": "2026-11-27"
+    "hash": "6f0658e29db847650e8c3367eca8999cf78b9574",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/physiotherapy-ai-scribe/": {
-    "hash": "f15cff60f4e5c018d95decb29455b4da9b989099",
-    "lastmod": "2026-11-27"
+    "hash": "a32f3bdf51088530a6e376e82782584de6189bbe",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/physiotherapy-ai-scribe/": {
-    "hash": "88d9011c9afabaa08cf106eb38f1fa926d80acc2",
-    "lastmod": "2026-11-27"
+    "hash": "40fd8908e15f060af7c4d1eddea689eb7a475aea",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/physiotherapy-ai-scribe/": {
-    "hash": "428e7e3f29c55c55e25a49766660bfcf140eb32b",
-    "lastmod": "2026-11-27"
+    "hash": "0ea5771d7ec1198be37808a010185693aeae4adf",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/occupational-therapy-ai-scribe/": {
-    "hash": "62a7f37f1fd46adc4a32105962c68057d5b8c8cd",
-    "lastmod": "2026-11-27"
+    "hash": "ec8944b7349bb50174050c3779ce960c9b484797",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/occupational-therapy-ai-scribe/": {
-    "hash": "5aabeda348ff22ddcf7bde1a55d309dc384ba926",
-    "lastmod": "2026-11-27"
+    "hash": "7cba8ae55a1a33a9e45ff137c49ef84358072544",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/occupational-therapy-ai-scribe/": {
-    "hash": "eb6cbb800aa797e7c907d5ecd2a328c15eb50b0a",
-    "lastmod": "2026-11-27"
+    "hash": "9b7a22000b0dd81b7a48567abea525215d3991c3",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/occupational-therapy-ai-scribe/": {
-    "hash": "5565fcb8f29dd5a165a12890048144a517cb3746",
-    "lastmod": "2026-11-27"
+    "hash": "2ae0e07a8d4128f56cace74269b5adbd4a7daf1b",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/occupational-therapy-ai-scribe/": {
-    "hash": "bf6a8d09b8779819356dc2ff8661489d53a5b47f",
-    "lastmod": "2026-11-27"
+    "hash": "2f96eee22103afff09030db948db66a712986c4e",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/occupational-therapy-ai-scribe/": {
-    "hash": "fb916563f4e945dcabd7505c12a79cd1161637aa",
-    "lastmod": "2026-11-27"
+    "hash": "955a173a5d53fbe1a01a9a27543fa6e02fb7c50e",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/speech-therapy-ai-scribe/": {
-    "hash": "d086c35558ca383b9ce0ac407dd741cda9749f12",
-    "lastmod": "2026-11-27"
+    "hash": "7c60714994df157bac873ff7ecd5a55a7a8a190e",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/speech-therapy-ai-scribe/": {
-    "hash": "a5317acc6abe944ecef05dea090915cfa1195d08",
-    "lastmod": "2026-11-27"
+    "hash": "2af6ef0c382c0a434d98a4e2b6ea5f827788533d",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/speech-therapy-ai-scribe/": {
-    "hash": "1cbb35a290bfd1952c831ca91991b3dfcab1b342",
-    "lastmod": "2026-11-27"
+    "hash": "a19fce1a2c4c209ca0286201d887c432ca93b1d9",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/speech-therapy-ai-scribe/": {
-    "hash": "6cf20ba05197b2e23537ca829bacadf2f8b7162a",
-    "lastmod": "2026-11-27"
+    "hash": "32c143bbda93af9186346d253a94209aaae52a43",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/speech-therapy-ai-scribe/": {
-    "hash": "a24be8d9fd5420ad3854b1b6590375eb398e998d",
-    "lastmod": "2026-11-27"
+    "hash": "355e9230ea35ddd1cc2515c95a86b2e21867ff89",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/speech-therapy-ai-scribe/": {
-    "hash": "3b79ec62ea8a7103131317283db287b90124787f",
-    "lastmod": "2026-11-27"
+    "hash": "ba806c126b1d406d33c70e4273630e2fae12c557",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/nutrition-ai-scribe/": {
-    "hash": "e567f564f3061e9a4d4124fe996f5a53fe9afd16",
-    "lastmod": "2026-11-27"
+    "hash": "742a1b3665ddd672ca14bb0c8eb4ebed43918d98",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/nutrition-ai-scribe/": {
-    "hash": "883abde69b47e7ab0304f3280c5b5eb1fbcb6f2b",
-    "lastmod": "2026-11-27"
+    "hash": "9d5f8014278d19e61df9c536065ea8c4f89a92eb",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/nutrition-ai-scribe/": {
-    "hash": "ef21c7313db5ae996444fe123cb6304d70a36193",
-    "lastmod": "2026-11-27"
+    "hash": "653d810f794e9a4f41ebc42b4639615033b1ef5a",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/nutrition-ai-scribe/": {
-    "hash": "c174cc9b82d8f96279742443c8a72e3c00964481",
-    "lastmod": "2026-11-27"
+    "hash": "e4c7ab675cf5ed3c0dea8a5ad86f4281a21f467e",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/nutrition-ai-scribe/": {
-    "hash": "a52a22d2bda73baf8b1443f7b77d807cf85dcb00",
-    "lastmod": "2026-11-27"
+    "hash": "5a312b9ad47fe58dc6080fef1bb3ea46417afff9",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/nutrition-ai-scribe/": {
-    "hash": "cc8042e50abfc355b462f08c9adba9f0a87ae179",
-    "lastmod": "2026-11-27"
+    "hash": "2771406b8b2326d69cc6b74bacb174d98df8d3a2",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/midwifery-ai-scribe/": {
-    "hash": "68dec1b02f957109921ac49237a659ba8534443d",
-    "lastmod": "2026-11-27"
+    "hash": "e8fef02cd828f6ac65770371da17d95af1ded08f",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/midwifery-ai-scribe/": {
-    "hash": "4ae77863d85247c6225f898b3eab490d62bc239c",
-    "lastmod": "2026-11-27"
+    "hash": "a50c2bd0921171b253c12c1893646b4d5014dba7",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/midwifery-ai-scribe/": {
-    "hash": "549045a3d14ea882392d0b7acfe98871a675742a",
-    "lastmod": "2026-11-27"
+    "hash": "bad5268de5e8e8ef590a7cb2670a35884dd2098b",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/midwifery-ai-scribe/": {
-    "hash": "44e419c5b054cc4f594a517040cb2c98344b7c2b",
-    "lastmod": "2026-11-27"
+    "hash": "3c641ac4749828c3ec396316adfeecb410b0e675",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/midwifery-ai-scribe/": {
-    "hash": "edc54f12313faf79c742ea17bee1a07a5d65e5e4",
-    "lastmod": "2026-11-27"
+    "hash": "163c2cc2ae23c1147c3fee9e8597ab73d26b2b35",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/midwifery-ai-scribe/": {
-    "hash": "249722f090a90fe8e14c1f213a8fb9c1428fe502",
-    "lastmod": "2026-11-27"
+    "hash": "82eaab5d8d3429f04dfaf418a46c356f8264ae00",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/veterinary-ai-scribe/": {
-    "hash": "eeb06fbad803dbad85fbc3316fed2f11948b82c2",
-    "lastmod": "2026-11-27"
+    "hash": "915ed73ddce65e144dcd9c25d88701880f56881c",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/veterinary-ai-scribe/": {
-    "hash": "5e28a887a1ace162524daae3c2fc564239d31909",
-    "lastmod": "2026-11-27"
+    "hash": "e5af6fe63825c0b0044e95e2f7b8fdf8a2819cd5",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/veterinary-ai-scribe/": {
-    "hash": "0ee8338d20fb27d597583f4eb46497eae40eb465",
-    "lastmod": "2026-11-27"
+    "hash": "9d75a621d8448d2516adea937c3c062f813401bb",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/veterinary-ai-scribe/": {
-    "hash": "9e52d777c959fccf03e62799034390353d4dcdf6",
-    "lastmod": "2026-11-27"
+    "hash": "8723e83b683c4654518570f31a23ddcf50e49789",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/veterinary-ai-scribe/": {
-    "hash": "e2b0a808a6d6171dcdc732f3391713940c7b6301",
-    "lastmod": "2026-11-27"
+    "hash": "152e8be0d06a46f1ec85d83bf8a1926d9a066ba9",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/veterinary-ai-scribe/": {
-    "hash": "0369109ec35a503e1eb86c4880bf0d208d4763ae",
-    "lastmod": "2026-11-27"
+    "hash": "e686d2dc913bdebf0bf84ff73f7c7e45e277c3d8",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/operative-note-ai/": {
-    "hash": "2a2b6261c759628e9dfffb119fc858f6445cb0de",
-    "lastmod": "2026-11-27"
+    "hash": "01c89dc8061adaa9f9f5a0366852bc948d5e5ded",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/operative-note-ai/": {
-    "hash": "fa4d0885907eb46767ff0f4caed38cacc597a9c3",
-    "lastmod": "2026-11-27"
+    "hash": "c009f63afde4e0bc349f85260496aefaf0d2ac96",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/operative-note-ai/": {
-    "hash": "9c3fcf1ee051ca48ae2cd2865e27b5aacd04d39e",
-    "lastmod": "2026-11-27"
+    "hash": "f9d99baa1ac84461eb9b7b99f269c1f9465f4af4",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/operative-note-ai/": {
-    "hash": "976d7832d0db9a8c77404c588c07edb097c100d5",
-    "lastmod": "2026-11-27"
+    "hash": "194876bee80f70e8da4f78002d3a8c565fb07c07",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/operative-note-ai/": {
-    "hash": "e11f2b6401fbeb12702e6c472e1c04d6217571b7",
-    "lastmod": "2026-11-27"
+    "hash": "6d1886e05e1f867aae8bca00af90613a4cd5e59a",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/operative-note-ai/": {
-    "hash": "e1d3ef8de25a2c5413e2d8b6dc25400f813757fd",
-    "lastmod": "2026-11-27"
+    "hash": "2f2240d274ae8116b0b8a690f426543015c06447",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/medical-billing-ai/": {
-    "hash": "312c6a60d89982e67d5e7833bfbc45e4fa988db4",
-    "lastmod": "2026-11-27"
+    "hash": "a3b1d5da84d7bd1d1b5b4fb0aade4b0e34d892b3",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/medical-billing-ai/": {
-    "hash": "f4e4cfa798775e43f2e466838e8fa613f40cfbd7",
-    "lastmod": "2026-11-27"
+    "hash": "0520ffdf119af10ca7b3172a73a1d275c65069d7",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/medical-billing-ai/": {
-    "hash": "30943c795bce2a3be07db05d430ba8a4998d827e",
-    "lastmod": "2026-11-27"
+    "hash": "bcf7918f6c9daed0dc29223f855a846990236f3f",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/medical-billing-ai/": {
-    "hash": "1d35bd06d343dbcc8cefd3bfdebc77c16f8dbd52",
-    "lastmod": "2026-11-27"
+    "hash": "0b8c3d7e11f95fce3a3de6c61a0a8f9604e5587c",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/medical-billing-ai/": {
-    "hash": "46edb64aca5c1c53d8ff35c75e1f21dd3ec64b2a",
-    "lastmod": "2026-11-27"
+    "hash": "fb8e71db7325a6e4f5a22d40494d18a604b068f5",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/medical-billing-ai/": {
-    "hash": "775adb4e59fde93fc6a9d8cdd230a338d9a31696",
-    "lastmod": "2026-11-27"
+    "hash": "89461048b951ae5b0b4f9f4bd435edaeea3976c6",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/patient-leaflet-generator/": {
-    "hash": "c333d369495c64f05c730ac8ffa743f798e16f71",
-    "lastmod": "2026-11-27"
+    "hash": "42042f5fc29b3bb5b478eb6992c400db92ff9351",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/patient-leaflet-generator/": {
-    "hash": "3bb51995706e02eefd8761f2f1f7649b23b2e733",
-    "lastmod": "2026-11-27"
+    "hash": "02bb2ff1a9ee65bbda3497b0f35852fce7a44b58",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/patient-leaflet-generator/": {
-    "hash": "85bb76a1a0ae51c95f5d1631127440406fc22bd0",
-    "lastmod": "2026-11-27"
+    "hash": "e787725a3476999dc5869139202486cf0d06f352",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/patient-leaflet-generator/": {
-    "hash": "b4d491cb2e51b1f2148a1792de1bfd16d78f47b2",
-    "lastmod": "2026-11-27"
+    "hash": "51f4b1144407c52a6d4c00bfb7088e1559e339e3",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/patient-leaflet-generator/": {
-    "hash": "67be53483479882ed5c8c8720111ff745656b2b9",
-    "lastmod": "2026-11-27"
+    "hash": "45397a2fa0809486384dda8ff38b5c4214c3ed9c",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/patient-leaflet-generator/": {
-    "hash": "f6f48508c43388cfde8fd7dbd811c5940e9a251d",
-    "lastmod": "2026-11-27"
+    "hash": "a30996581fa3981696cd99579107b749df66f9d8",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/referral-letter-ai/": {
-    "hash": "76e278d47ef7eebd17f7fb623c8c5721fd43dcea",
-    "lastmod": "2026-11-27"
+    "hash": "ab4c42c1822325c7b1583657ffb3799b19542fd2",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/referral-letter-ai/": {
-    "hash": "685225a07c68c8605e1689ac9d04ba7231c3f81c",
-    "lastmod": "2026-11-27"
+    "hash": "371c83af78e1064d2105ad2e65572d1517fa6d8f",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/referral-letter-ai/": {
-    "hash": "3f48ac731a383cf599302b64f962b76fca1d6b4b",
-    "lastmod": "2026-11-27"
+    "hash": "fb117e6c31af160f07508a228cdb77bc31febe4b",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/referral-letter-ai/": {
-    "hash": "3892a2e7e326f7f252f3d4e149246f888cb033e2",
-    "lastmod": "2026-11-27"
+    "hash": "0d618a3dcec5fc87154b5d5cad5aabe6285c6cac",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/referral-letter-ai/": {
-    "hash": "ce7b2bd343db209e0f96edea9756eeaa5df43b14",
-    "lastmod": "2026-11-27"
+    "hash": "a198f1204f9d70f5af4ba76fd7f957594a12fc29",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/referral-letter-ai/": {
-    "hash": "4db0d91248be7f134232001cfc114189a36b6bd1",
-    "lastmod": "2026-11-27"
+    "hash": "0579327ad9329016b112a5405ec522b3b23670d3",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/icd-coding/": {
-    "hash": "ea81cd7403c35cc7b69d116af3f77914d72fa60e",
-    "lastmod": "2026-11-27"
+    "hash": "4e2e2fd4a5d376f2faf047795cae4ad50853cdb0",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/icd-coding/": {
-    "hash": "77b2822f702dd9ab5f11abc16777e068958d772a",
-    "lastmod": "2026-11-27"
+    "hash": "97828fbe1d83aacd311fa98a4a23a0ed18c4de84",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/icd-coding/": {
-    "hash": "a5518e66e8036a8d3675ffa4b8414b398ba154ba",
-    "lastmod": "2026-11-27"
+    "hash": "6b6105b3ae08ceeda9c258e94994d4dfe46e9368",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/icd-coding/": {
-    "hash": "0631a0a97fbf3bd8a02744cbf53796fc7a7d6d93",
-    "lastmod": "2026-11-27"
+    "hash": "6ec5d10b2415a3c52858fa31a488198f13c0e407",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/icd-coding/": {
-    "hash": "2032092224cf37c823a2b52451f63c7a82776cb4",
-    "lastmod": "2026-11-27"
+    "hash": "81a52376d4b3aa20beaba9ac3396e0dede4ef990",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/icd-coding/": {
-    "hash": "a9f245c8f9dae52b5f33d28c736ffc30e9b362b1",
-    "lastmod": "2026-11-27"
+    "hash": "b111880ace28b713b85c35fe90f2f1b43b91ed91",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/radiology-ai/": {
-    "hash": "b81972ac0d74717e5562c263250ad1cc18155f07",
-    "lastmod": "2026-11-27"
+    "hash": "df3dadc9450401919d1b0dfc8337763d3e0664ea",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/radiology-ai/": {
-    "hash": "2c905ffef2fb9092b1354ea5515399ac2d52de40",
-    "lastmod": "2026-11-27"
+    "hash": "3e51091ae099c651b1caa5a87b897b1671e3ace7",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/radiology-ai/": {
-    "hash": "c312d24a117d58be5be3c94044275273cca691f0",
-    "lastmod": "2026-11-27"
+    "hash": "5e86071c79dd9355951a423e33983c232d7698b3",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/radiology-ai/": {
-    "hash": "77cd26770356f6fe094d466b21709d98829f0457",
-    "lastmod": "2026-11-27"
+    "hash": "79dc1abe03c71a2df1730f091add8acbb901e9aa",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/radiology-ai/": {
-    "hash": "f73321fd93b6abb4e152603057fae6a55a79b7ad",
-    "lastmod": "2026-11-27"
+    "hash": "2ed4ed411d04bbb1b2a7318e6d0fb7db6325d12a",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/radiology-ai/": {
-    "hash": "5e4c582dcf247bbfc5875e3323783160a3ea1a04",
-    "lastmod": "2026-11-27"
+    "hash": "08a53613b41996131e1bfe4dd22275210f1bf895",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/dermatology-ai/": {
-    "hash": "72c99ea35d637359796338acb582a1b10df7585b",
-    "lastmod": "2026-11-27"
+    "hash": "3973f7fbeba33ac7c24cd24d4e54305ad01798bc",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/dermatology-ai/": {
-    "hash": "8170e9bf291e0d96f549abaa4e0192c598ddb7d0",
-    "lastmod": "2026-11-27"
+    "hash": "2b0f6c7c29e53cbcc0b3b0017b2f98b57ca4f307",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/dermatology-ai/": {
-    "hash": "cdeec59cdfaa03fbcec3b601ddb26d50b381d769",
-    "lastmod": "2026-11-27"
+    "hash": "8c79582bcdc45a05b9a102cd39f9c98ab2f2c226",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/dermatology-ai/": {
-    "hash": "e1331e5f50fc279ed5095f86253a5a6f121522f5",
-    "lastmod": "2026-11-27"
+    "hash": "c4b6f8e573a2498dc26d9417cb40cabd93478778",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/dermatology-ai/": {
-    "hash": "7ec67ff1bc5de98c3ae393c440cbef7c9168e1eb",
-    "lastmod": "2026-11-27"
+    "hash": "d4b27fc759e883b8f6209c4ba0ce30540c00af8c",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/dermatology-ai/": {
-    "hash": "36bc8e794cfd21db8b7178d861b4127b38084024",
-    "lastmod": "2026-11-27"
+    "hash": "51c1eecfb98f22e5e8f8ab5547a6c0f72109414f",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/medical-triage-ai/": {
-    "hash": "20c70655a564e869f395b572c6f3eb442cd3b030",
-    "lastmod": "2026-11-27"
+    "hash": "9d1c4c4bfa9208133748d28367a1871a7eb7f716",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/medical-triage-ai/": {
-    "hash": "72109f1f7d6f6d7b000924c0a5854d5ceea70896",
-    "lastmod": "2026-11-27"
+    "hash": "35cc6977e794ff6255e1732f8658624ce1c4dfd2",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/medical-triage-ai/": {
-    "hash": "4fd62fea18c5b95f0366b82b5432b9a6bc344fc4",
-    "lastmod": "2026-11-27"
+    "hash": "302de9b885d3ad9c6f4a9d08314ee47617e4f91e",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/medical-triage-ai/": {
-    "hash": "18d6bb8acf96fd0ec944459dd761c04aeef4dae2",
-    "lastmod": "2026-11-27"
+    "hash": "880d38bf9c0c5b51dd439bdfd6248cc7d0427431",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/medical-triage-ai/": {
-    "hash": "7733ea0693c845dd6e2a042f8383547266eeb697",
-    "lastmod": "2026-11-27"
+    "hash": "d410a3f6c78dbc8065d8e04bf1c45cc382ba258c",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/medical-triage-ai/": {
-    "hash": "49499cd1bb8bccaccc55f2fd60a05505d8d621be",
-    "lastmod": "2026-11-27"
+    "hash": "63dbe351e23dd4ea213dbe5cc4b0697aa2d9d042",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/publications/": {
-    "hash": "547b712216cdb90c76a2e61fd9a14d32d7f15555",
-    "lastmod": "2026-09-01"
+    "hash": "8d7c35eb47bddad07e4bd2fe66e8dac76fa5e853",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/publications/": {
-    "hash": "4ca4ec1953b73bf146997b5092806f30e21658d5",
-    "lastmod": "2026-09-01"
+    "hash": "eadcf74b2eb893ca0a48442e9755b43724eda7a6",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/publications/": {
-    "hash": "a59018c44ce4aa2bf45adaaac8994cd6e9731414",
-    "lastmod": "2026-09-01"
+    "hash": "f534e4864ba11bb282de3fab55ddda24f6b0af19",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/publications/": {
-    "hash": "9fe4a7a7fc4afc0d8819906d453c680a65088072",
-    "lastmod": "2026-09-01"
+    "hash": "7c35085a8286d5b20305ad687414e207331190f8",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/publications/": {
-    "hash": "2ef7cc7cb8662a751e61766f6102982888741bc8",
-    "lastmod": "2026-09-01"
+    "hash": "cc6b5d8c80c345f697c51142945c0d03f8ab99dd",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/publications/": {
-    "hash": "f7459ba5565c3ff4453c67b90556cf936cc11c58",
-    "lastmod": "2026-09-01"
+    "hash": "d489820fc9248bd26dfeff5f8ceea941d38b7910",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/whitepapers/": {
-    "hash": "c0365e90b37a791d34138fc270512a9ebb8587fb",
-    "lastmod": "2026-11-27"
+    "hash": "c74000e070c61f83d6e316b3774b0f4c19ae9745",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/whitepapers/": {
-    "hash": "3f354bf790fd076b936491b4a85b1326e499f036",
-    "lastmod": "2026-11-27"
+    "hash": "415fa49e44eff76cc028df1ffd0fa53bc9646549",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/whitepapers/": {
-    "hash": "8fba425b2c7105d6b99eedad46f029be6b822b22",
-    "lastmod": "2026-11-27"
+    "hash": "b1068f7a0d8ace810bb10efcd5fb3d69dffdbfb5",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/whitepapers/": {
-    "hash": "7a42813d7469432ccb723991666f614be640816a",
-    "lastmod": "2026-11-27"
+    "hash": "4785bf780df5829d3a19f0719d711a4d823b9f30",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/whitepapers/": {
-    "hash": "d0747a04c7874bfbce6138c80e2ecb6f7778680b",
-    "lastmod": "2026-11-27"
+    "hash": "9c46753eb49dee99a27784faef04da9466801cc1",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/whitepapers/": {
-    "hash": "56b32a67bcae9bf1411e469c3c95c76fbd1eac7a",
-    "lastmod": "2026-11-27"
+    "hash": "a488706196cdac5b2f0d51047fa04b224dd9bf5b",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/case-studies/": {
-    "hash": "6d642c454ae9c45254d850e07dabe6e7407c37a7",
-    "lastmod": "2026-11-27"
+    "hash": "050141ed47fdc5f983e6e4f300728aee61c89753",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/news/": {
-    "hash": "570f3cd2fd4f6b2389314bfa476c57963f9622b9",
-    "lastmod": "2026-09-01"
+    "hash": "0b89fc96dd6c272ce3fde886cf2c1e4249d484e4",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/news/": {
-    "hash": "1281eebc2deefda6c2f2a691491de1885fc908a2",
-    "lastmod": "2026-09-01"
+    "hash": "42831b9f5926affcd8e713a787b14f3b66798e35",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/news/": {
-    "hash": "3be5a1b93a27da4a0252f0f08a400692979467ad",
-    "lastmod": "2026-09-01"
+    "hash": "0c12bc031acf6cf678720c2a97b049616787d4b0",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/news/": {
-    "hash": "f8c252ce9634eb9894a5e78305e6fd18c402b2f1",
-    "lastmod": "2026-09-01"
+    "hash": "c19f85aa6767f6393e7e9abf21bb20f593cc9b30",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/news/": {
-    "hash": "ee7ee9d6736e1753ff247d891956840341b985a4",
-    "lastmod": "2026-09-01"
+    "hash": "14c3e4cfd8208471882f8fd946bd56f473cfc9f7",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/news/": {
-    "hash": "032373e75f2ed2649d768c80193143aba7fbe83b",
-    "lastmod": "2026-09-01"
+    "hash": "d3b58f2f7cab01d8da4396b8e4ca8250f832ad2d",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/careers/": {
-    "hash": "0ca3d79f84c7453e8bba4fb79ecd20164e3d9878",
-    "lastmod": "2026-11-27"
+    "hash": "3599547c850b6a857f8edef29342e5fb827c19e2",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/careers/": {
-    "hash": "7ea6c1065bfce791b345d471c759f9e4f1a4c70b",
-    "lastmod": "2026-11-27"
+    "hash": "368d615901a33835ec2074adc793995fc338e66e",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/careers/": {
-    "hash": "f5f48b6c45674ff9a9e29f834b65ac90100cd363",
-    "lastmod": "2026-11-27"
+    "hash": "5b2f1507ddf51396becd7863c3aa968f685f4ab0",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/careers/": {
-    "hash": "58fc64da13bd4200930239eedea7c4f92469c9e4",
-    "lastmod": "2026-11-27"
+    "hash": "e123c1461558ec35e7106fdd6aed2625ef948d5a",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/careers/": {
-    "hash": "aa7bc6437f28ec711f46a2b152b361c02570cfbc",
-    "lastmod": "2026-11-27"
+    "hash": "a5b771b16634f78793ff86b6fba525ee4138491b",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/careers/": {
-    "hash": "e606caa2357b963b6c053a0a08762f0529fcb4ff",
-    "lastmod": "2026-11-27"
+    "hash": "8062082403925a26ad1fca9f03d7abe5592559f7",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/story/": {
-    "hash": "562bfd1463af70c39f99c4d065fdbef4277a33ff",
-    "lastmod": "2026-11-27"
+    "hash": "d11d34b34aa3a009050780d9b37b14e82d18e09b",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/story/": {
-    "hash": "85416bea222c9b8305715f5576537291e78161e7",
-    "lastmod": "2026-11-27"
+    "hash": "6d3cb6690ac493e19cc06ec713b00381e61b8d90",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/story/": {
-    "hash": "8161b9b04da52d3f96bc949bf3a011aff3ce2f42",
-    "lastmod": "2026-11-27"
+    "hash": "417c43d4f9ca1bacb1be83181d77344281d317bd",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/story/": {
-    "hash": "0a7ca6cb990ec888fa99eb7bf46f535092c6e85c",
-    "lastmod": "2026-11-27"
+    "hash": "7c022ebc6f0c0eac7bb4d2c8f16be701f25fcba6",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/story/": {
-    "hash": "9035c6db2eb912bd9c87642521a8e58b038e809e",
-    "lastmod": "2026-11-27"
+    "hash": "7582b2b1f4baa1774c2b9c7816d34b3322b51f9f",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/story/": {
-    "hash": "38d98b752cde9285e62f29900bba329fda2327af",
-    "lastmod": "2026-11-27"
+    "hash": "c18ebe40d45d741238b912087766bbe672c24a94",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/privacy-policy/": {
-    "hash": "ef9ea32df4ad8049168bf9913ca0f5d6c6eb2851",
-    "lastmod": "2026-11-27"
+    "hash": "842094b24d1f461cf469edb4ba38dafe0ef3ff8f",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/privacy-policy/": {
-    "hash": "d77ddf82eb76bd17b04bf6a460a3c68fce7edd4a",
-    "lastmod": "2026-11-27"
+    "hash": "2a4075a5b955844f7852874b67ef7254fd0518e8",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/privacy-policy/": {
-    "hash": "044186752872a6be2046299b15b2b5bb5c786dac",
-    "lastmod": "2026-11-27"
+    "hash": "d3fb1f3628d4563c7011e0760e5e62f976f55e36",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/privacy-policy/": {
-    "hash": "bb532b9afe02614aa61578ff884f9ac3e93fee80",
-    "lastmod": "2026-11-27"
+    "hash": "7ac46dde2b1007abde6ca94a90a6c96097aaaf2c",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/privacy-policy/": {
-    "hash": "2c352886664ec28fdb6a93e01531583f51e48e7b",
-    "lastmod": "2026-11-27"
+    "hash": "9aa9607f061257ada7dc2daaa452b962c8cf397b",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/privacy-policy/": {
-    "hash": "acd6072487c50c972b5fdb8e90682b7d403f5bc6",
-    "lastmod": "2026-11-27"
+    "hash": "d0c32bfe9d7c8488825d4498a5c826ee7396d603",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/privacy-choices/": {
-    "hash": "20bd4f8fe649299e2e43f4c1b2fb66189a621fb9",
-    "lastmod": "2026-11-27"
+    "hash": "9f79a94ebadc8f69a51aa4f7c588498db8fbdd6c",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/privacy-choices/": {
-    "hash": "b7e8200dfc1a4f98fc5c789f63f163ca314e4cbe",
-    "lastmod": "2026-11-27"
+    "hash": "957bcfa549308d006bdb3ed64cf02f4cba637de6",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/privacy-choices/": {
-    "hash": "2e7e7e220144fae0bf4ba6efaa463f2020175f2c",
-    "lastmod": "2026-11-27"
+    "hash": "7872514ec436804f6ef0c17171a8c0cf00d84404",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/privacy-choices/": {
-    "hash": "f537fb0942a34fa7051499170437e22adf4c4d74",
-    "lastmod": "2026-11-27"
+    "hash": "badb9a68e79b4cc7a51861d93db32a9c2152ea24",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/privacy-choices/": {
-    "hash": "c8960ae1bc161bd5b6b80fd655b79547cb7f720d",
-    "lastmod": "2026-11-27"
+    "hash": "855fe191cb31ae7b6bedf8d408669db374cac213",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/privacy-choices/": {
-    "hash": "7b2b1f468be9370126aada4cbff15a31c46ce217",
-    "lastmod": "2026-11-27"
+    "hash": "7fd75b9175a1f77fc8fa6d7b832fcec3909eb3cf",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/terms-enterprise/": {
-    "hash": "628aa7f7d0cdfd44da3a9eb6a3eb298f88347ea6",
-    "lastmod": "2026-11-27"
+    "hash": "888cd8bd88147f2798fbe202b7c3b62d7483fffd",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/terms-enterprise/": {
-    "hash": "901a19ff3f09aeacc91aa4696480171a9b4e6d80",
-    "lastmod": "2026-11-27"
+    "hash": "909eb553a88bdb6e67d0e3195789bb4603c4e7bd",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/terms-enterprise/": {
-    "hash": "d428a361ab6f3f116cfb3b1da32b9b1a8200a8ea",
-    "lastmod": "2026-11-27"
+    "hash": "3266ffd9fe42cd19888a730bf789a90f774adf12",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/terms-enterprise/": {
-    "hash": "5e6164abb63ea579afd30c9e4eadd3aa7817a1c8",
-    "lastmod": "2026-11-27"
+    "hash": "bd43236f3499b8693a1dff3a7f108cffd063f03f",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/terms-enterprise/": {
-    "hash": "9138d9a902850076751773bceb5a8b839b4ea3ac",
-    "lastmod": "2026-11-27"
+    "hash": "3ec5c63734f4bb52b1f6a04bfc1be81bcfcbd0bd",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/terms-enterprise/": {
-    "hash": "0e933e0a1937669153c70b6126607fedab61b974",
-    "lastmod": "2026-11-27"
+    "hash": "bdeae5c85a19e06957a4d6edf822bc984f0df5a1",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/usage-policy/": {
-    "hash": "655f49b0b1571dc1438f7c3cc4c62743f961c0c5",
-    "lastmod": "2026-11-27"
+    "hash": "3cc5c886432b20e642de75555630131c6c5058ba",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/usage-policy/": {
-    "hash": "3ec7c3193011de889f47e930102029b2f0ce6f16",
-    "lastmod": "2026-11-27"
+    "hash": "63c42fc577d9744452b74cdd20fa87b355df2dd4",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/usage-policy/": {
-    "hash": "69196fb24cda29ef9e5579fa414d799dbe972ca2",
-    "lastmod": "2026-11-27"
+    "hash": "b7fa975e390d834a9b981e43d37f67b31db2a1d6",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/usage-policy/": {
-    "hash": "67ba2f6f6c5ebe3272df726eafc45cf4780b7500",
-    "lastmod": "2026-11-27"
+    "hash": "df34a2656e2019d44ada096223eca0e641e855ad",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/usage-policy/": {
-    "hash": "e4d1795ab0eec467270d58530ccf4a1ac7838db3",
-    "lastmod": "2026-11-27"
+    "hash": "8350eebb6a5777f517076e494af72ef6b2d6e12e",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/usage-policy/": {
-    "hash": "a1d03700ba67562434b7038313fc63372d827cab",
-    "lastmod": "2026-11-27"
+    "hash": "487d0036bc5d5ecca40e6fe1c204f0afe7c18536",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/baa/": {
-    "hash": "31ba92205e8ed29f2d4740211c6b1c675d03b34a",
-    "lastmod": "2026-11-27"
+    "hash": "62ac796326825f332c1c55739df21a41235ecf87",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/baa/": {
-    "hash": "db315c5fabb0ffcb4b33840d2c46a19bfadcecac",
-    "lastmod": "2026-11-27"
+    "hash": "cce16d7113172d2d7de897c68d76e295fe573cb5",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/baa/": {
-    "hash": "9a127f3752f4ca51a04bf779c35340f28a0afe9c",
-    "lastmod": "2026-11-27"
+    "hash": "d3b24b3184a92e33c8b1157b09801829d19b32cc",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/baa/": {
-    "hash": "05257f2f7f1d0d3db4fdbd352af7b72c9a1bdde1",
-    "lastmod": "2026-11-27"
+    "hash": "5451424aedaac36c242aefca533acc33cf34584b",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/baa/": {
-    "hash": "b53adaf7ae4b5ea82ede0830a30f84fac6f5e672",
-    "lastmod": "2026-11-27"
+    "hash": "0e69ea9d6b6495f1855923411059e259a114f750",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/baa/": {
-    "hash": "a699520cbe53e8ac3d4335d0e4840e1090fb5023",
-    "lastmod": "2026-11-27"
+    "hash": "45c44346ec30553899ddafb9bb886d305d9ab4ac",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/dpa/": {
-    "hash": "f7df8c4bbe752871485da5931e6636074178d1c7",
-    "lastmod": "2026-11-27"
+    "hash": "5f5fd593d6c65421c7b0dba09198e76a268a2fcc",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/dpa/": {
-    "hash": "38e03ada72774d27555412976ae6d41f83782d04",
-    "lastmod": "2026-11-27"
+    "hash": "64fe5496fd4503aa7926230ab1f2e7febc410fed",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/dpa/": {
-    "hash": "7626235133c7573e81d1b7e38281987a45b297b6",
-    "lastmod": "2026-11-27"
+    "hash": "94cdb6d14266ab992dd7ec14428e7091e132fa6f",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/dpa/": {
-    "hash": "20d5ba8349c280077dd873bad0ffe17958cf362e",
-    "lastmod": "2026-11-27"
+    "hash": "c1129bb82ad75bf47c80b72321b9d0b8a000a174",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/dpa/": {
-    "hash": "a5fd153f42fbdea5084b5203c81a3b0261a8bc05",
-    "lastmod": "2026-11-27"
+    "hash": "c44b15049acbec21acf2f6b5bd7acc0b37cdc7e1",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/dpa/": {
-    "hash": "b255772183cc1fdaf4cb373c8f56fe60a9fd729b",
-    "lastmod": "2026-11-27"
+    "hash": "68b9bb036e884ad7316294dc34959be2ffd67d7c",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/terms/": {
-    "hash": "6f6fc1834671b93ae310df47b065bdefb400e601",
-    "lastmod": "2026-11-27"
+    "hash": "134f10e4f9ebde6d06852eb9a2e0d9c630af1ae7",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/terms/": {
-    "hash": "180a9f6fb1f4ba0f35475d986ad01bec77a76005",
-    "lastmod": "2026-11-27"
+    "hash": "2086a93c932b40deb4f0e16fdf8f89758da1f2e7",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/terms/": {
-    "hash": "2a8b5b7beaa8efbef60d57198538e5f6d7de515a",
-    "lastmod": "2026-11-27"
+    "hash": "dd9fa24db1a375e36b917f18ea90f8818af04a9c",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/terms/": {
-    "hash": "e91628637ee078921576fd97244e16664cd1d34a",
-    "lastmod": "2026-11-27"
+    "hash": "9661ab20dd9f795c6da7f9e59f0f8d4b9a6aca3d",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/terms/": {
-    "hash": "a16bbe07003cdab924b31f19506e8cc84d57853f",
-    "lastmod": "2026-11-27"
+    "hash": "29d020aeddfcf4f3680cc218ff328e1313a8aa9e",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/terms/": {
-    "hash": "c80b8e6278db30529f962c3beb0bed6d223d1c48",
-    "lastmod": "2026-11-27"
+    "hash": "15d9929dc0493be12a64d900aa6774cdf30628db",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/leaflet/": {
-    "hash": "85253b4032194d3a291052dfa2fb50ff3f4f007e",
-    "lastmod": "2026-11-27"
+    "hash": "c9897bfd56c8464c271e1163dfdd0e1948e8a0ce",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/leaflet/": {
-    "hash": "6c0fa2a4202d9a05c1f9d0a8598d743c99254d9c",
-    "lastmod": "2026-11-27"
+    "hash": "dac6b4a9156e06090a55f128520d916d45ae654c",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/leaflet/": {
-    "hash": "2f067fc244ffd2b59681a23caa0b608c574f479a",
-    "lastmod": "2026-11-27"
+    "hash": "76bea8c4113225a03ef7b7448d7dbb6f0058f07c",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/leaflet/": {
-    "hash": "98ebcd139af0ae1bb6fa749c263c59e82853e818",
-    "lastmod": "2026-11-27"
+    "hash": "8c647e65d878908ac6acd0d4e3aab3de52adce5c",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/leaflet/": {
-    "hash": "8054d3780a0f3aa8c21ffb8c9fcfc2d42cf55895",
-    "lastmod": "2026-11-27"
+    "hash": "8fbcedfa1f62ed53275c00294b57ba755213e29d",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/leaflet/": {
-    "hash": "f5eec309af4df7e820a0053155738ee48884efca",
-    "lastmod": "2026-11-27"
+    "hash": "e9bfbeea0b3a37b1f0f0719e2600a3e26e8066ae",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/status/": {
-    "hash": "bd78cb1a30017636e5d4a0b0728b0e7a62e13629",
-    "lastmod": "2026-11-27"
+    "hash": "add1ad3de49906f690934951dbc74b1216b687ba",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/compare/": {
-    "hash": "b3c0a3208cc37fdf220e20dd8af3a1217097ea22",
-    "lastmod": "2026-11-27"
+    "hash": "15dbe9a4cf52b0acae9f1ccba2fa9dff266493aa",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/clinixsummary-vs-heidi/": {
-    "hash": "1e1d8c642da8b5268efbec17cb14cb9a41b3057d",
-    "lastmod": "2026-11-27"
+    "hash": "f89ec5b15bc3a766f311bd663629ae3260445791",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/clinixsummary-vs-freed/": {
-    "hash": "2abcbc1c4e89e5d8b81398b9b87e9d3c5da113dc",
-    "lastmod": "2026-11-27"
+    "hash": "f76be9370cb8377f34b49b58e079e228eb1a3209",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/clinixsummary-vs-nabla/": {
-    "hash": "8cd80d5e5accfbcbbf3c2809c8c186268c182d10",
-    "lastmod": "2026-11-27"
+    "hash": "db70783754ca0fa78b8b654f12fa002c57304da1",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/clinixsummary-vs-suki/": {
-    "hash": "871e733fc101f128c75372d96236b1ea2c0baa7d",
-    "lastmod": "2026-11-27"
+    "hash": "34dfe225ebfc528ab8e62cb383fd4239e0435ad3",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/clinixsummary-vs-deepscribe/": {
-    "hash": "99596d75309e1758660cc10322902284f0b49414",
-    "lastmod": "2026-11-27"
+    "hash": "6b6859a1bc16e9b1d32747f404c3b1f49d8197aa",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pricing/": {
-    "hash": "b5822536907926e8260b88c6caf71e0f5244a0f4",
-    "lastmod": "2026-11-27"
+    "hash": "5ee4e99e502d6f8474a65a959ce0f9321796b592",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/fr/pricing/": {
-    "hash": "eb5c7586791815fe25f0455a55c44ee7435046e3",
-    "lastmod": "2026-11-27"
+    "hash": "f5d1703a47c84e89eddc32a16fd595855bdba0ce",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/es/pricing/": {
-    "hash": "e1402666f01a71be34688e343b8954e6f5ce0314",
-    "lastmod": "2026-11-27"
+    "hash": "cbba6dbbfcfaac2164c082fbb44a14c436d6efcf",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/pt/pricing/": {
-    "hash": "13530098debbadf50f528575f7f35118857dc663",
-    "lastmod": "2026-11-27"
+    "hash": "c63247bb6c3cc3312c4edcaf01f8317a9741bdc7",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/it/pricing/": {
-    "hash": "10ba93fc249376e5e66caff0af9ef1afa4914d8e",
-    "lastmod": "2026-11-27"
+    "hash": "a7e727620d81b26036e94dbf4592f26186c7e11d",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/ar/pricing/": {
-    "hash": "b0cc67b7073a6399454bda7b3ec0937aef4fafbb",
-    "lastmod": "2026-11-27"
+    "hash": "9fe000eacfd982f090e9cd73d8bc5cb8f402f743",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/whitepapers/arabic-medical-nlp/": {
-    "hash": "892f03dca8ef878783a57b00d4db4468330b6720",
-    "lastmod": "2026-11-27"
+    "hash": "eb3faa85f70f59d03dc3fba15a7cf5eac2e389cd",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/whitepapers/gdpr-clinical-documentation/": {
-    "hash": "614d5c11b55bd62a138da71d991e9c39547a26f0",
-    "lastmod": "2026-11-27"
+    "hash": "0e188a10f555924e46b0c90a1ab85612e75a1022",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/whitepapers/ambient-audio-processing/": {
-    "hash": "8ee4214ec3ccf4471c2ea6f502dda3625eaa8337",
-    "lastmod": "2026-11-27"
+    "hash": "c70ee31b4a4ab2c4449448e215a5a68eebd35302",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/whitepapers/quality-management-system/": {
-    "hash": "2bc394775f14063879b82d25b56fbf0ceffdc054",
-    "lastmod": "2026-11-27"
+    "hash": "6d970da356dde60d50820fd11e468db94f2e6e97",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/whitepapers/security-compliance-specification/": {
-    "hash": "5702573fb8605e690cc7cee511d0c753d7fe6168",
-    "lastmod": "2026-11-27"
+    "hash": "35e0ecc6760764677c0f0c3f06690744f2892da8",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/whitepapers/ehr-integration-framework/": {
-    "hash": "a183788a2990357bd88bde521ec5ff7f4cba966f",
-    "lastmod": "2026-11-27"
+    "hash": "1fc75b8b37732f7fbde83fc6cc9ca0d6956f3261",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/whitepapers/clinical-model-training/": {
-    "hash": "93fde9a59fd47e37b689157bd631ccda60f9e161",
-    "lastmod": "2026-11-27"
+    "hash": "cffb9218b96b1b7a5b8f2220245a517b5e339f91",
+    "lastmod": "2026-11-28"
   },
   "https://clinixsummary.ai/whitepapers/architecture-overview/": {
-    "hash": "0d7d103cd3d93932f0b82cbec39c49b0425665ff",
-    "lastmod": "2026-11-27"
+    "hash": "a239cf20295e4b1ebe6a37a169e2ec91de7b45d0",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/": {
+    "hash": "9c914a65f362add008d8d0daeb236052ff8c77f7",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/": {
+    "hash": "dcf8dacd77686f09e54bdfe175c13139890564c1",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/": {
+    "hash": "41661be9176dc204be3361338edd614af49136ba",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/pricing/": {
+    "hash": "492779667cd4bd2a7aa0085c91088b809f1b3004",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/pricing/": {
+    "hash": "9f7119fc132bdd832968250b8abe93846fa0e192",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/pricing/": {
+    "hash": "d4180cbe0fa5a2099603218ef3f6757592e4aaf2",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/contact/": {
+    "hash": "002ef6e29a85c20b01fe4abb962b2e28cc07272a",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/contact/": {
+    "hash": "ba9b675baa7a5400c02b01ecd7a4fe8109f90dfc",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/contact/": {
+    "hash": "cd83b7db1877e1650131a48cb0cd3935142bcc0a",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/ai-clinical-notes/": {
+    "hash": "dcb606dc0c3c93988d2271a6fc494fc1e4c03a68",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/ai-clinical-notes/": {
+    "hash": "10937d3a4381f73805d9a180dd456c123a64d266",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/ai-clinical-notes/": {
+    "hash": "e52fe511ac3d8f7ebfc65b5fdddf7c7add6cf4ee",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/proprietary-models/": {
+    "hash": "3456d77916ad941259ba2c2ec5bb7e9a966963a8",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/proprietary-models/": {
+    "hash": "f66af3bb5a5e38260d5f92b57503ba0f66761a11",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/proprietary-models/": {
+    "hash": "8a1a3e5440f532b7a8d4734ddeb740116765912c",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/kaizen/": {
+    "hash": "79e3adb61456361e3335e6770e7e2e83d7561d1e",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/kaizen/": {
+    "hash": "046af99f354d8deabf9d9f7d46a7c1aae4907e39",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/kaizen/": {
+    "hash": "d9eedda928ccde2d9704bdcdf178fd9b5de31d76",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/security/": {
+    "hash": "c97cad21a4fe2a7fe5d1bdf0661841d6acaa6fd0",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/security/": {
+    "hash": "6b3e03cb6885b1dccb191adfd4f27507237bb973",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/security/": {
+    "hash": "5253013456eaeefe3f20f7d0e5d66dc0de27c51d",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/multilingual-ai-scribe/": {
+    "hash": "12e178d60bef71165aac02c6a3f01d5b6bcef04e",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/multilingual-ai-scribe/": {
+    "hash": "b6ce09ee631468711d1e7087cc91d148cde9a7cb",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/multilingual-ai-scribe/": {
+    "hash": "6a3cda21a1090942f6a394eb4a483290cb475ff8",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/ambient-ai-scribe/": {
+    "hash": "dcb57a91c0caf28b138ce95cb0ee1b7d470cd712",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/ambient-ai-scribe/": {
+    "hash": "416a501bada0d962a690d5e132d6cca630b10169",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/ambient-ai-scribe/": {
+    "hash": "ebcbb54061030e36be7ec5e39849c833ee739454",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/cme-vault/": {
+    "hash": "f62dcb4cbc6c3068be6db8e95afed6811ec7fe52",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/cme-vault/": {
+    "hash": "52435cc59ecaa457d267c5ed355c1a0a95bf2ddc",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/cme-vault/": {
+    "hash": "abf15d502928539f160a3f8b8fe272ca7eac19eb",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/clinix-foundation/": {
+    "hash": "62b9c64c6923c96e4c555b157c39ba7bcb96ca64",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/clinix-foundation/": {
+    "hash": "92e565a6643727a61e66ff6512ae03ea9b890d54",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/clinix-foundation/": {
+    "hash": "a09051ba6ef4d9618573837738f6838221c1af6e",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/clinicians/": {
+    "hash": "f5af53208bf8cfdc433b603aaf6f154fb1bdfdc5",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/clinicians/": {
+    "hash": "24f1577062ff4c05d42a858da7634178c684fe71",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/clinicians/": {
+    "hash": "bfc3757e26457672b68d7449c98048bdffc2106d",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/organizations/": {
+    "hash": "8a63028ea76ad4fc4a3967f5d6f704d9680d5254",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/organizations/": {
+    "hash": "32b46d979dad0db5354486244253dae306125509",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/organizations/": {
+    "hash": "bd0d8c0fcaa25bb37865cf77a33f07a3aa2cc9df",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/insurers/": {
+    "hash": "cf27e0d0ca296d338002601141145da59e9edbac",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/insurers/": {
+    "hash": "08871099b68101a537d8829ee72c5a0594379cf6",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/insurers/": {
+    "hash": "fecc64d2698b849e4b19292c328c8a127e4ec53f",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/government/": {
+    "hash": "be46372cdfd01b0965bee9ea62dfec2c83633482",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/government/": {
+    "hash": "cb8020d38b34332e5780db0d3fda63c201a60cee",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/government/": {
+    "hash": "c5af33430b712eb4575edbb9d7f87e56e802e7a1",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/nonprofit/": {
+    "hash": "8b8c7058ebe65caa75e7270cb32615e80e86920c",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/nonprofit/": {
+    "hash": "639280745fb2b479e3e325b094d05b2edada4a6e",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/nonprofit/": {
+    "hash": "7d1f9c9cfbd1f808950eed1b061f7044afc1b005",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/integrations/": {
+    "hash": "c2aa3d89e0fd77430046e590b397ba1d6b553afe",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/integrations/": {
+    "hash": "049f48002c53f2825f70735be98a163d2dff0169",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/integrations/": {
+    "hash": "4606f810b513a220611923e91d2b9d9ecf8429db",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/ai-medical-scribe/": {
+    "hash": "032acff7918b0fafb061bbe8b71967f52a3e2900",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/ai-medical-scribe/": {
+    "hash": "76989b817905b7577f73b6bdd56c75e05f673b5e",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/ai-medical-scribe/": {
+    "hash": "4c400ab5ba1ab763d7f84f0ad91711a525efa3f7",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/dental-ai-scribe/": {
+    "hash": "c519552e6367c4ac7c89821c44dbaa8636218feb",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/dental-ai-scribe/": {
+    "hash": "29b7eaaa9157af6bbc532fcce7b86be589cd21aa",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/dental-ai-scribe/": {
+    "hash": "1d9bd3a5b4f5b757458ff6218d9a584f79048bfb",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/psychiatry-ai-scribe/": {
+    "hash": "394896cde28f7cee485732629375ce02ff7bb5eb",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/psychiatry-ai-scribe/": {
+    "hash": "486703bb884161ae054aa85194ffef6b6a711c63",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/psychiatry-ai-scribe/": {
+    "hash": "a20ddc6d1ccf8e613d22899fa3ab8f26e63dbbf3",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/psychology-ai-scribe/": {
+    "hash": "424a74f526ebc98995a3e5320d34eb00b0b1e05e",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/psychology-ai-scribe/": {
+    "hash": "33f1e473a6586668c0c1a0d91e33c16fd24ccde7",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/psychology-ai-scribe/": {
+    "hash": "1bdcffefaeef93edc08896c472f770a8882b114a",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/allied-health-ai-scribe/": {
+    "hash": "d0ca66827738d5efd2c48162042ef013c32ebbf2",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/allied-health-ai-scribe/": {
+    "hash": "dfc9bbc646fa87644cd48df000ee5ad33aa2777a",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/allied-health-ai-scribe/": {
+    "hash": "6197accadbfd196aed64685889b72149b1844217",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/physiotherapy-ai-scribe/": {
+    "hash": "9eaff37acc5a9cb8feff809e958eecd1961a1b3a",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/physiotherapy-ai-scribe/": {
+    "hash": "feaf6d3ed871bc7f90de386732468991513690ce",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/physiotherapy-ai-scribe/": {
+    "hash": "977928daa5d6af1b3a4ee987da642f7225884d36",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/occupational-therapy-ai-scribe/": {
+    "hash": "1c4edc2b76def1b667bb65fb7b6a45df81009f1c",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/occupational-therapy-ai-scribe/": {
+    "hash": "91e935c6027b8200de4e5d53d0223c8009d1edee",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/occupational-therapy-ai-scribe/": {
+    "hash": "1b877e7787975ea607dbf3967d8b5daeb81ba408",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/speech-therapy-ai-scribe/": {
+    "hash": "785e4f05f8ac10c501f8775ac7a06b3dad1b5bc5",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/speech-therapy-ai-scribe/": {
+    "hash": "cc7383a8ccb5beeb7dc36ba4b60a671940ce964c",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/speech-therapy-ai-scribe/": {
+    "hash": "c2d3db30d64ee35a071b70b947c96c6f20aab150",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/nutrition-ai-scribe/": {
+    "hash": "ed2ebb4220d7e69e1fb3611d2f1647e538ca1b0a",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/nutrition-ai-scribe/": {
+    "hash": "00e7b2550e9aae9750c99802550013384c2a5450",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/nutrition-ai-scribe/": {
+    "hash": "45439b7573f909cc9894c21f7b5d2496519b09fa",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/midwifery-ai-scribe/": {
+    "hash": "2bcec6be4e20761df97e8cc09a24129dbbcf581c",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/midwifery-ai-scribe/": {
+    "hash": "1d602e2f42751daa612f42a3d648f3fe2e96b273",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/midwifery-ai-scribe/": {
+    "hash": "1571c69ee2e397019aaad76bc2e28a940aea0293",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/veterinary-ai-scribe/": {
+    "hash": "0ec6cfb7399e69d4c1ceb266973caba8f9b529f4",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/veterinary-ai-scribe/": {
+    "hash": "db96d32513c63945ca9bdd1850135a0832b2583b",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/veterinary-ai-scribe/": {
+    "hash": "5f6725acf48d5dc583b2fd07838a673e7f848888",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/operative-note-ai/": {
+    "hash": "ba5483e6a902815e6af1d32bb6d313400b8dfc88",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/operative-note-ai/": {
+    "hash": "5a65dbec78983aa289a0c03d64adee227ac10069",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/operative-note-ai/": {
+    "hash": "1354484ea9e7e4969ddf54219b23a62b55f382ce",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/medical-billing-ai/": {
+    "hash": "079b3d51010e05e9017fa138713ca03448fe922b",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/medical-billing-ai/": {
+    "hash": "3ec10e3701e7e50b62836b49287ec24bc227ae01",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/medical-billing-ai/": {
+    "hash": "ba1e4807f8f4486e24f4f8e19dff3af5312fdd38",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/patient-leaflet-generator/": {
+    "hash": "74a4c72da17e6fb9f89ef4d3ea4c910e000443c3",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/patient-leaflet-generator/": {
+    "hash": "f1f4a808d4d82f7210309b4595aba4efc8a0fa8b",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/patient-leaflet-generator/": {
+    "hash": "fdf703d9de7ae59d25f949d9d45d84e007c70ee7",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/referral-letter-ai/": {
+    "hash": "cbfcf5771e3ff2f3bdc4f8d68b5028522707e2e9",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/referral-letter-ai/": {
+    "hash": "754d4cb8feb1e25db79a689b5ac33f13c6a489a9",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/referral-letter-ai/": {
+    "hash": "03e61873e9d1aba4d8a39fa8747f771319f6fe07",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/icd-coding/": {
+    "hash": "db44f087b542cfe555f8567537e7f8b2438e16b1",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/icd-coding/": {
+    "hash": "3471ac07ba80d020833c372db596413368025813",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/icd-coding/": {
+    "hash": "6ad776b69cde7bccb720122a66b107eb87878213",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/radiology-ai/": {
+    "hash": "3af48b5df0cb5440f1a1ed6ab377a90c815f890e",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/radiology-ai/": {
+    "hash": "cae5d6f468c713dad8a1b6c8aafe81557f204abb",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/radiology-ai/": {
+    "hash": "3679580937cd3755f0b956d2e0f2664cf06f9358",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/dermatology-ai/": {
+    "hash": "61b82aa044c672b3d463ad8e896b229263691233",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/dermatology-ai/": {
+    "hash": "d79d037d6c2b9216fb6f7d81f2ac88c89637f671",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/dermatology-ai/": {
+    "hash": "4e77944fd4fb133ca6aeb9783bc88ec14b3c62a2",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/medical-triage-ai/": {
+    "hash": "738f1a799685e1b56b744760f24a455faf64ae3b",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/medical-triage-ai/": {
+    "hash": "94007a32f2d722eddda801a2fadbf5eb5c9ccfaf",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/medical-triage-ai/": {
+    "hash": "91107b7978c9e8c57fd1cf2ebdfcf16c3b3daa63",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/publications/": {
+    "hash": "ed6aa63bce25ec22663bfeaa0869427bdb17df67",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/publications/": {
+    "hash": "3436ce30ac97d82e52218902540ee67d5e7eeb4f",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/publications/": {
+    "hash": "9b9f59979600c206e3ecc953cc4ce3a90581a436",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/whitepapers/": {
+    "hash": "6aea364c840393a5d9c18287bab8eadbabf9788e",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/whitepapers/": {
+    "hash": "65c0bebee9ab5772527542f14e2fdd4a7cdee26b",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/whitepapers/": {
+    "hash": "b77ffb432cc900671c5bc43a5a18b9a80d4ce398",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/news/": {
+    "hash": "7ef7d0b398f61b24a5d97ed5e55de1dbe523973a",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/news/": {
+    "hash": "f2292bc6297f85487040169130addf1d2d3589d7",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/news/": {
+    "hash": "26592e1f18e49fd6b54291b1d57265bec5caad52",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/careers/": {
+    "hash": "2e4d4aab49a68a60971610332f885318ba706059",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/careers/": {
+    "hash": "46a6ff7a87cb2db0dc9257ec152d3c549f68ba2f",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/careers/": {
+    "hash": "fba7ebfdac3c06711255ff93622ed4da2cd52080",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/story/": {
+    "hash": "2551074e2fb0e7779def29b2983af1503d58ff8a",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/story/": {
+    "hash": "6139b47eca21f76e00955b85ecb2f6a221d098fd",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/story/": {
+    "hash": "fec84b5e743cc32681a1900d43845baf9fa19ea1",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/privacy-policy/": {
+    "hash": "cf6eecbd412842c11e96f166c129f8794042d6f5",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/privacy-policy/": {
+    "hash": "253026d5508410a7dc16d4e9b1d179f9ae7de598",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/privacy-policy/": {
+    "hash": "f6639290f31664df65ed2c2a32f05d757f9aa0db",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/privacy-choices/": {
+    "hash": "89b1b543f569a8d71be6d99a967984c9b4102b10",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/privacy-choices/": {
+    "hash": "d262971263cb03249145172d421425b8831f9a55",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/privacy-choices/": {
+    "hash": "ee8f9db9e01d0078cb409ae957d2f053cbfabb7f",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/terms-enterprise/": {
+    "hash": "976b05775e238c09509ae86bc97f3c22fb119dee",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/terms-enterprise/": {
+    "hash": "88e0ddb7fa93ea8d8d67d542d2f7822403422ffd",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/terms-enterprise/": {
+    "hash": "d09578b25501a9821921524727c767916c7b5d3e",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/usage-policy/": {
+    "hash": "3e3b87269fd840e8dcdcc9d58d22a0c9cffc9d38",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/usage-policy/": {
+    "hash": "17dc167311815ad546577724d2a1ed1a84433790",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/usage-policy/": {
+    "hash": "6001512cd054ca9837af697f844f3861000ee1a9",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/baa/": {
+    "hash": "194a32d787ea6fc081fa9037aab0475ef11ac2e8",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/baa/": {
+    "hash": "407b2848930bfe6988b495545b0cb3426d6d8ed0",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/baa/": {
+    "hash": "50892c0ddeafc750cf28c82a19c8c2778b671cb7",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/dpa/": {
+    "hash": "62d3c8098144493fc332f4a3c4e2918f522e7809",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/dpa/": {
+    "hash": "b05d954e758b2f4d7d3a7885b82d08574701dd24",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/dpa/": {
+    "hash": "85b4524548abccb609078d9f064d95d66d63f224",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/terms/": {
+    "hash": "04a903f4f02e2b95b13aa29f32b2a5f0fb00e3f3",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/terms/": {
+    "hash": "0941ce8671c8cb403993c3d55c18f3e37a722e00",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/terms/": {
+    "hash": "30c22396659dd398cccc80c7e042d39ddc24d73e",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/fr-ca/leaflet/": {
+    "hash": "fdc7ef835c0351fc5658e92bd8b6f0ea4e888ec7",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/es-es/leaflet/": {
+    "hash": "3d4d3114ce6414d563d8d42a32b1fa109576dc72",
+    "lastmod": "2026-11-28"
+  },
+  "https://clinixsummary.ai/pt-pt/leaflet/": {
+    "hash": "905deb1797c3518b74a16393060a8cda03062e07",
+    "lastmod": "2026-11-28"
   }
 }

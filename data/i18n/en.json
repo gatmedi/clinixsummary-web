@@ -178,8 +178,8 @@
     "specialties_title": "40+ specialties & allied health",
     "specialties_desc": "From cardiology to physiotherapy, speech therapy to veterinary medicine. One platform covers the full breadth of clinical documentation.",
     "specialties_link": "Explore the AI medical scribe",
-    "languages_title": "6 languages with code-switching",
-    "languages_desc": "Full multilingual documentation including RTL Arabic. Handle consultations where patients naturally switch between languages.",
+    "languages_title": "160+ spoken languages, 6 note languages",
+    "languages_desc": "Speak in any of 160+ recognised languages and regional variants. Notes in six languages across 11 regional variants, including right-to-left Arabic — even when the patient switches language mid-consultation.",
     "pricing_title": "40% below the nearest competitor",
     "pricing_desc": "Transparent credit-based pricing starting from free. Enterprise plans with custom volumes and dedicated support."
   },
@@ -429,8 +429,8 @@
   },
   "lang": {
     "kicker": "Languages",
-    "title": "Six languages. Full RTL support. Real multilingual consultations.",
-    "desc": "ClinixSummary supports clinical documentation in six languages — including full right-to-left Arabic support. But language support is more than translation. Our models understand how clinicians actually speak: mixing languages, switching mid-sentence, and using terminology from multiple linguistic traditions in a single encounter.",
+    "title": "160+ spoken languages. Six note languages. 11 regional variants.",
+    "desc": "ClinixSummary recognises more than 160 spoken languages and regional variants automatically, and writes clinical documentation in six languages across 11 regional variants — including full right-to-left Arabic support. But language support is more than translation. Our models understand how clinicians actually speak: mixing languages, switching mid-sentence, and using terminology from multiple linguistic traditions in a single encounter.",
     "en_title": "English",
     "en_desc": "Full support across all varieties — American, British, Australian, South African, Indian, and Caribbean English. Medical terminology, colloquialisms, and regional abbreviations are all understood.",
     "fr_title": "Français",

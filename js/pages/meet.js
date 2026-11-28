@@ -341,8 +341,8 @@ function LanguagesPage() {
                 <!-- Header -->
                 <div class="subpage-header">
                     <span class="kicker" data-i18n="lang.kicker">Languages</span>
-                    <h1 class="subpage-title" data-i18n="lang.title">Six languages. Full RTL support. Real multilingual consultations.</h1>
-                    <p class="subpage-copy" data-i18n="lang.desc">ClinixSummary supports clinical documentation in six languages — including full right-to-left Arabic support. But language support is more than translation. Our models understand how clinicians actually speak: mixing languages, switching mid-sentence, and using terminology from multiple linguistic traditions in a single encounter.</p>
+                    <h1 class="subpage-title" data-i18n="lang.title">160+ spoken languages. Six note languages. 11 regional variants.</h1>
+                    <p class="subpage-copy" data-i18n="lang.desc">ClinixSummary recognises more than 160 spoken languages and regional variants automatically, and writes clinical documentation in six languages across 11 regional variants — including full right-to-left Arabic support. But language support is more than translation. Our models understand how clinicians actually speak: mixing languages, switching mid-sentence, and using terminology from multiple linguistic traditions in a single encounter.</p>
                 </div>
 
                 <!-- Language Grid -->

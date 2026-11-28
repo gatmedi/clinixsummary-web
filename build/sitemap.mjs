@@ -92,7 +92,7 @@ for (const route of CFG.routes) {
     lines.push(`    <loc>${loc}</loc>`);
     if (!enOnly) {
       for (const alt of CFG.locales) {
-        lines.push(`    <xhtml:link rel="alternate" hreflang="${alt}" href="${url(alt, route)}"/>`);
+        lines.push(`    <xhtml:link rel="alternate" hreflang="${(CFG.hreflang || {})[alt] || alt}" href="${url(alt, route)}"/>`);
       }
       lines.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${url(CFG.defaultLocale, route)}"/>`);
     }

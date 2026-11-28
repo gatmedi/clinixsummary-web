@@ -148,7 +148,7 @@ async function renderOne(browser, base, locale, route) {
     if (!aliasTarget && !routeIsNoindex && locList.length > 1) {
       for (const loc of locList) {
         const link = document.createElement('link');
-        link.rel = 'alternate'; link.hreflang = loc === 'pt' ? 'pt' : loc;
+        link.rel = 'alternate'; link.hreflang = (cfg.hreflang || {})[loc] || loc;
         link.href = ORIGIN + prefix(loc) + trail(route);
         head.appendChild(link);
       }
@@ -234,7 +234,7 @@ async function renderOne(browser, base, locale, route) {
       name: facts.product.name,
       url: ORIGIN + '/',
       publisher: { '@id': facts.entityIds.organization },
-      inLanguage: locale
+      inLanguage: (cfg.htmlLang || {})[locale] || locale
     // The homepage keeps a REFERENCE to the software entity (Phase 3 moved
     // the full node to the category page that owns the @id anchor).
     }, route === '/' ? { about: { '@id': facts.entityIds.software } } : {}));
@@ -250,7 +250,7 @@ async function renderOne(browser, base, locale, route) {
         operatingSystem: facts.product.platforms.join(', '),
         // Localized: a single English description would dilute locale pages.
         description: pageDesc || shellSoftware.description,
-        inLanguage: locale,
+        inLanguage: (cfg.htmlLang || {})[locale] || locale,
         url: ORIGIN + '/ai-medical-scribe/',
         offers: {
           '@type': 'AggregateOffer',
@@ -269,7 +269,7 @@ async function renderOne(browser, base, locale, route) {
         name: document.title,
         description: pageDesc,
         url: canonicalUrl,
-        inLanguage: locale,
+        inLanguage: (cfg.htmlLang || {})[locale] || locale,
         isPartOf: { '@id': facts.entityIds.website },
         about: { '@id': facts.entityIds.software }
       });
@@ -282,7 +282,8 @@ async function renderOne(browser, base, locale, route) {
     const meta = (cfg.routeMeta || {})[route] || {};
     if (meta.breadcrumb) {
       const labels = cfg.breadcrumbLabels || {};
-      const pick = (key) => (labels[key] || {})[locale] || (labels[key] || {}).en || key;
+      const family = (cfg.localeFamilies || {})[locale] || locale;
+      const pick = (key) => (labels[key] || {})[locale] || (labels[key] || {})[family] || (labels[key] || {}).en || key;
       const parent = meta.breadcrumb;
       const parentLocale = cfg.nonTranslatedRoutes.includes(parent) ? cfg.defaultLocale : locale;
       // Anchored to seo.js's actual " – ClinixSummary" END suffix (en dash) -
@@ -306,7 +307,7 @@ async function renderOne(browser, base, locale, route) {
         '@type': 'WebPage',
         name: document.title,
         url: canonicalUrl,
-        inLanguage: locale,
+        inLanguage: (cfg.htmlLang || {})[locale] || locale,
         isPartOf: { '@id': facts.entityIds.website },
         dateModified: facts.comparisons.factsVerifiedISO
       });
@@ -362,7 +363,7 @@ async function renderOne(browser, base, locale, route) {
         } : null;
       }).filter(Boolean);
       if (faqs.length) {
-        graph.push({ '@type': 'FAQPage', inLanguage: locale, mainEntity: faqs });
+        graph.push({ '@type': 'FAQPage', inLanguage: (cfg.htmlLang || {})[locale] || locale, mainEntity: faqs });
       }
     }
 
